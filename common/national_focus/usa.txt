@@ -8249,26 +8249,4 @@ focus_tree = {
 			unlock_decision_tooltip = USA_triumph_over_war_and_money
 		}
 	}
-
-
-	focus = {
-		id = USA_butlers_salvation
-		x = 28
-		y = 10
-		cost = 5
-		ai_will_do = {
-			factor = 2
-		}
-		available = {
-			has_government = neutrality
-			has_country_leader = { ruling_only = yes character = USA_Smedly_Butler }
-		}
-
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
-		search_filters = {FOCUS_FILTER_INDUSTRY FOCUS_FILTER_STABILITY FOCUS_FILTER_USA_CONGRESS}
-		completion_reward = {
-		}
-	}
 }
