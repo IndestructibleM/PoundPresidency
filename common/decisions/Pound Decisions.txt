@@ -1,0 +1,604 @@
+USA_balance_of_power_category = {
+	USA_work_with_technocrats = {
+	name = "Work with Technocrats"
+	days_re_enable = 100
+    allowed = { 
+		tag = USA
+	}
+	ai_will_do = {
+       	factor = 80
+    }
+	modifier = {
+		research_speed_factor = 0.2
+		production_factory_efficiency_gain_factor = 0.10
+		production_speed_supply_node_factor = 0.2
+	}
+	days_remove = 80
+	cost = 50
+    complete_effect = {
+		add_popularity = { ideology = neutrality popularity = 0.04 }
+		add_stability = -0.01
+		add_power_balance_value = {
+			id = USA_power_balance
+			value = -0.15
+			tooltip_side = "-15 balance of power value"
+		}
+	}
+	}
+	
+	USA_work_with_syndicalists = {
+	name = "Work with Syndicalists"
+	days_re_enable = 100
+    allowed = { 
+		tag = USA
+	}
+	ai_will_do = {
+       	factor = 80
+    }
+	modifier = {
+		industrial_capacity_factory = 0.2
+		industrial_capacity_dockyard = 0.2
+		army_morale_factor = 0.15
+	}
+	days_remove = 80
+	cost = 50
+    complete_effect = {
+		add_popularity = { ideology = communism popularity = 0.04 }
+		add_stability = -0.01
+		add_power_balance_value = {
+			id = USA_power_balance
+			value = 0.15
+			tooltip_side = "+15 balance of power value"
+		}
+	}
+	}
+	
+	USA_empower_pound_loyalists = {
+	name = "Empower Pound Loyalists"
+	days_re_enable = 100
+    allowed = { 
+		tag = USA
+	}
+	ai_will_do = {
+       	factor = 80
+    }
+	modifier = {
+		consumer_goods_factor = -0.1
+		political_power_cost = -0.1
+	}
+	days_remove = 80
+	cost = 50
+    complete_effect = {
+		add_popularity = { ideology = fascism popularity = 0.03 }
+		if = {
+			limit = {
+				power_balance_value = {
+				id = USA_power_balance
+				value > 0.05
+				}
+			}
+			add_stability = 0.01
+			add_power_balance_value = {
+			id = USA_power_balance
+			value = -0.15
+			tooltip_side = "-15 balance of power value"
+			}
+		}
+		if = {
+			limit = {
+				power_balance_value = {
+				id = USA_power_balance
+				value < -0.05
+				}
+			}
+			add_stability = 0.01
+			add_power_balance_value = {
+			id = USA_power_balance
+			value = 0.15
+			tooltip_side = "+15 balance of power value"
+			}
+		}
+		else_if = {
+			limit = {
+				power_balance_value = {
+				id = USA_power_balance
+				value > -0.05
+				}
+				power_balance_value = {
+				id = USA_power_balance
+				value < 0.05
+				}
+			}
+			add_stability = 0.05
+		}
+	}
+	}
+	
+	USA_modernize_a_state = {
+	name = "Modernize infrastructure in a State"
+	days_re_enable = 100
+    allowed = { 
+		tag = USA
+	}
+	ai_will_do = {
+       	factor = 70
+    }
+	modifier = {
+		consumer_goods_factor = 0.15
+		political_power_cost = 0.15
+	}
+	days_remove = 20
+	cost = 50
+	complete_effect = {
+		add_popularity = { ideology = neutrality popularity = 0.04 }
+		add_stability = -0.01
+		add_power_balance_value = {
+			id = USA_power_balance
+			value = -0.2
+			tooltip_side = "-20 balance of power value"
+		}
+	}
+    remove_effect = {
+		random_owned_controlled_state = {
+			if = {
+			limit = { is_core_of = ROOT }
+			add_extra_state_shared_building_slots = 2
+			}
+		}
+	}
+	}
+	
+	USA_patriotic_labor_drive = {
+	name = "Patriotic Labor Drive"
+	days_re_enable = 100
+    allowed = { 
+		tag = USA
+	}
+	ai_will_do = {
+       	factor = 80
+    }
+	modifier = {
+		production_factory_efficiency_gain_factor = 0.2
+		production_factory_max_efficiency_factor = 0.1
+	}
+	days_remove = 90
+	cost = 50
+    complete_effect = {
+		add_popularity = { ideology = communism popularity = 0.04 }
+		add_stability = -0.01
+		add_power_balance_value = {
+			id = USA_power_balance
+			value = 0.2
+			tooltip_side = "+20 balance of power value"
+		}
+	}
+	}
+}
+
+foreign_politics = {
+	USA_triumph_over_war_and_money = {
+	name = "Annihilate the Material Powers"
+	target_trigger = { 
+     	FROM = {
+			can_ROOT_get_wargoal_on_THIS = yes
+			or = {
+				has_government = democratic
+				has_government = communism 
+			}
+		}
+	}
+	war_with_target_on_complete = yes
+    allowed = { 
+		tag = USA
+	}
+	available = { 
+		has_war = no 
+	}
+	visible = {
+		has_government = fascism
+		has_completed_focus = USA_triumph_over_money
+	}
+	ai_will_do = {
+       	factor = 50
+    }
+	days_remove = 150
+	cost = 25
+	targeted_modifier = {
+		tag = FROM    
+		attack_bonus_against = 0.1
+		attack_bonus_against_cores = 0.2
+	}
+    complete_effect = {
+		declare_war_on = {
+			target = FROM
+            type = puppet_wargoal_focus
+        }
+	}
+	}
+	
+	USA_conquest_of_latam = {
+	name = "Demand Ariel and Caliban's Submission"
+	targets = { BRA ARG COL VEN CHL BOL ECU PRU PAR URG PAN NIC GUA COS HON ELS HAI DOM }
+	fire_only_once = yes
+    allowed = { 
+		tag = USA
+	}
+	available = { 
+		has_war = no 
+		has_completed_focus = USA_proclaim_utopia_hegemony
+		FROM = { NOT = { is_ally_with = ROOT } }
+	}
+	visible = {
+		has_completed_focus = USA_proclaim_utopia_hegemony
+	}
+	ai_will_do = {
+       	factor = 50
+    }
+	days_remove = 10
+	cost = 25
+    remove_effect = {
+		FROM = { country_event = { id = pound.10 days = 3 } }
+	}
+	}
+	USA_isolate_japan = {
+		name = "Isolate Japan"
+		targets = { JAP }
+		allowed = { 
+			tag = USA
+		}
+		available = { 
+			JAP = { is_in_faction_with = USA }
+			has_government = fascism
+		}
+		visible = {
+			has_completed_focus = USA_outshine_the_sun
+		}
+		ai_will_do = {
+			factor = 80
+		}
+		days_re_enable = 90
+		complete_effect = {
+			faction_leader = { 
+				remove_from_faction = JAP
+				remove_from_faction = MEN
+				remove_from_faction = MAN
+			}
+		}
+	}
+}
+USA_map_painting = {
+	USA_integrate_states = {
+		name = "Integrate [FROM.GetName]"
+		state_target = yes
+		icon = GFX_decision_infiltrate_state
+		target_trigger = {
+			FROM = {
+			is_owned_by = USA
+			is_claimed_by = USA
+			NOT = { is_core_of = USA }
+			}
+		}
+		fire_only_once = yes
+		on_map_mode = map_only
+		allowed = { 
+			tag = USA
+		}
+		cost = 10
+		days_remove = 30
+		available = { 
+			tag = USA
+			has_government = fascism
+			FROM = {
+				resistance < 10
+				compliance > 15
+			}
+		}
+		modifier = { political_power_factor = -0.3 }
+		ai_will_do = {
+			factor = 90
+		}
+		remove_effect = {
+			FROM = { 
+				add_core_of = ROOT
+				remove_claim_by = ROOT
+			}
+		}
+	}
+	USA_reorganize_quebec = {
+		name = "Reorganize Quebec"
+		fire_only_once = yes
+		icon = GFX_decision_generic_form_nation
+		allowed = { 
+			tag = USA
+		}
+		visible = { 
+			OR = {
+			any_allied_country = { owns_state = 468 }
+			USA = { owns_state = 468 }
+			}
+			has_government = fascism
+		}
+		ai_will_do = {
+			factor = 100
+		}
+		complete_effect = {
+			QUE = { transfer_state = 468 }
+			set_autonomy = {
+				target = QUE
+				autonomous_state = collaborator_gov
+			}	
+		}
+	}
+	USA_reorganize_quebec2 = {
+		name = "Transfer Land to Quebec"
+		fire_only_once = yes
+		allowed = { 
+			tag = USA
+		}
+		icon = GFX_decision_infiltrate_state
+		state_target = yes
+		targets = { 862 860 863 466 861 }
+		visible = { 
+			QUE = { owns_state = 468 }
+			QUE = { is_subject_of = USA }
+			has_government = fascism
+		}
+		ai_will_do = {
+			factor = 100
+		}
+		complete_effect = {
+			FROM = { 
+			transfer_state_to = QUE 
+			add_core_of = QUE
+			}	
+		}
+	}
+	USA_reorganize_mexico = {
+		name = "Reorganize Mexico"
+		fire_only_once = yes
+		icon = GFX_decision_generic_form_nation
+		allowed = { 
+			tag = USA
+		}
+		visible = { 
+			OR = {
+			any_allied_country = { owns_state = 277 }
+			USA = { owns_state = 277 }
+			}
+			has_government = fascism
+		}
+		ai_will_do = {
+			factor = 100
+		}
+		complete_effect = {
+			277 = { transfer_state_to = MEX }
+			set_autonomy = {
+				target = MEX
+				autonomous_state = collaborator_gov
+			}	
+		}
+	}
+	USA_reorganize_mexico2 = {
+		name = "Transfer Land to Mexico"
+		fire_only_once = yes
+		allowed = { 
+			tag = USA
+		}
+		icon = GFX_decision_infiltrate_state
+		state_target = yes
+		targets = { 477 478 485 476 475 474 }
+		visible = { 
+			MEX = { owns_state = 277 }
+			MEX = { is_subject_of = USA }
+			has_government = fascism
+		}
+		ai_will_do = {
+			factor = 100
+		}
+		complete_effect = {
+			FROM = { 
+			transfer_state_to = MEX 
+			add_core_of = MEX
+			}	
+		}
+	}
+	USA_reorganize_britain = {
+		name = "Install a Collaborator Government in Britain"
+		fire_only_once = yes
+		allowed = { 
+			tag = USA
+		}
+		icon = GFX_decision_generic_form_nation
+		visible = { 
+			OR = {
+			any_allied_country = { owns_state = 126 }
+			USA = { owns_state = 126 }
+			}
+			has_government = fascism
+		}
+		ai_will_do = {
+			factor = 100
+		}
+		complete_effect = {
+			ENG = { 
+				transfer_state = 126
+				transfer_state = 129
+				transfer_state = 120
+				transfer_state = 120
+				transfer_state = 136
+				transfer_state = 121
+				transfer_state = 133
+				transfer_state = 131
+				transfer_state = 931
+				transfer_state = 132
+				transfer_state = 130
+				transfer_state = 122
+				transfer_state = 128
+				transfer_state = 125
+				transfer_state = 127
+				transfer_state = 123
+				transfer_state = 338
+			}
+			GER = {
+				transfer_state = 933
+				transfer_state = 932
+			}
+			IRE = { transfer_state = 119 }
+			set_autonomy = {
+				target = ENG
+				autonomous_state = collaborator_gov
+			}
+			ENG = {
+				set_politics = {
+				ruling_party = neutrality
+				elections_allowed = no
+				long_name = "New State"
+				name = "New State"
+				}
+				promote_character = ENG_Wyndham_Lewis
+			}
+		}
+		}
+		
+	USA_anchluss_iceland = {
+		name = "Territory Transfer of Iceland"
+		fire_only_once = yes
+		state_target = yes
+		targets = { 100 }
+		allowed = { 
+			tag = USA
+		}
+		icon = GFX_decision_infiltrate_state
+		visible = { 
+			has_government = fascism
+			has_claim_on = 100
+		}
+		available = {
+			any_allied_country = { owns_state = 100 }
+			NOT = { USA = { owns_state = 100 } }
+		}
+		ai_will_do = {
+			factor = 100
+		}
+		complete_effect = {
+			transfer_state = FROM
+		}
+	}
+	
+	USA_anchluss_greenland = {
+		name = "Demand Greenland"
+		fire_only_once = yes
+		state_target = yes
+		targets = { 101 }
+		allowed = { 
+			tag = USA
+		}
+		icon = GFX_decision_infiltrate_state
+		visible = { 
+			NOT = { USA = { owns_state = 101 } }
+			has_government = fascism
+			has_claim_on = 101
+		}
+		available = {
+			strength_ratio = {
+				tag = DEN
+				ratio > 6
+			} 
+			ships_in_area = { area = 50 size > 19 } 
+			ships_in_area = { area = 44 size > 19 } 
+		}
+		ai_will_do = {
+			factor = 100
+		}
+		complete_effect = {
+			transfer_state = FROM
+		}
+	}
+	
+	USA_install_collaborators = {
+		name = "Install a Collaborator Government in [FROM.GetNameDef]"
+		fire_only_once = yes
+		allowed = { 
+			tag = USA
+		}
+		icon = GFX_decision_generic_form_nation
+		target_array = subjects
+		target_trigger = {
+			FROM = {
+				is_subject_of = USA
+				NOT = { has_autonomy_state = collaborator_gov }
+			}
+		}
+		ai_will_do = {
+			factor = 100
+		}
+		complete_effect = {
+			set_autonomy = {
+				target = FROM
+				autonomous_state = collaborator_gov
+			}
+		}
+	}
+}
+	
+USA_jupiter_league = {
+	USA_invite_nations_jupiter_league = {
+		name = "Invite [FROM.GetNameDef] to the Jupiter League"
+		fire_only_once = yes
+		targets = { ITA CHI SWE NOR ENG GRE POR AST BRA ARG RUS SPA }
+		allowed = { 
+			tag = USA
+		}
+		available = {
+			has_war_support > 0.5
+			has_completed_focus = USA_vanguard_of_new_utopia
+			FROM = {
+				OR = {
+					AND = {
+						tag = SPA
+						has_completed_focus = SPA_the_national_syndicalist_state
+					}
+					AND = {
+						tag = CHI
+						has_government = neutrality
+					}
+					has_government = fascism
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 50
+		}
+		days_remove = 10
+		cost = 50
+		remove_effect = {
+			FROM = { country_event = { id = pound.11 days = 3 } }
+		}
+	}		
+	USA_develop_jupiter_league = {
+		name = "Help Modernize [FROM.GetNameDef]"
+		days_re_enable = 35
+		target_array = faction_members
+		allowed = { 
+			tag = USA
+		}
+		available = {
+			has_completed_focus = USA_vanguard_of_new_utopia
+			is_in_faction_with = FROM
+		}
+		ai_will_do = {
+			factor = 50
+		}
+		days_remove = 5
+		cost = 20
+		remove_effect = {
+			FROM = { 
+				random_list = {
+				50 = { add_offsite_building = { type = arms_factory level = 1 } }
+				50 = { add_offsite_building = { type = industrial_complex level = 2 }
+				}
+			}
+			}
+		}			
+	}
+}

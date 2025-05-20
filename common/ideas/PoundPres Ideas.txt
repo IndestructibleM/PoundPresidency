@@ -1,0 +1,164 @@
+ideas = {
+	country = {
+		USA_war_against_degeneration = {
+			allowed_civil_war = {
+				always = yes
+			}
+			modifier = {
+			democratic_drift = -0.1
+			stability_factor = -0.5
+			war_support_factor = -0.3
+			consumer_goods_factor = 0.15
+			political_power_cost = 0.75
+			weekly_manpower = -800
+			}
+		}
+		USA_obliterated_stock_market = {
+			allowed_civil_war = {
+				always = yes
+			}
+			name = "Stock Market Obliterated"
+			modifier = {
+				industrial_capacity_dockyard = -0.3
+				industrial_capacity_factory = -0.2
+				consumer_goods_factor = 0.5
+				production_factory_max_efficiency_factor = -0.20
+			}
+		}
+		
+		USA_creative_drive = {
+			allowed_civil_war = {
+				always = yes
+			}
+			name = "Creative Drive"
+			modifier = {
+				industrial_capacity_dockyard = 0.2
+				industrial_capacity_factory = 0.2
+				political_power_cost = 0.2
+				production_factory_efficiency_gain_factor = 0.10
+			}
+			on_remove = {
+				add_stability = 0.15
+			}
+		}
+		
+		USA_revolutionary_destiny = {
+			allowed_civil_war = {
+				always = yes
+			}
+			name = "Revolutionary Manifest Destiny"
+			modifier = {
+				justify_war_goal_time = -0.3
+				resistance_growth = -0.1
+				invasion_preparation = -0.5
+				naval_invasion_penalty = -0.25
+				naval_invasion_capacity = 5
+			}
+		}
+		
+		USA_apotheotic_destiny = {
+			allowed_civil_war = {
+				always = yes
+			}
+			name = "Apotheotic Destiny"
+			modifier = {
+				justify_war_goal_time = -0.5
+				resistance_growth = -0.2
+				invasion_preparation = -0.5
+				naval_invasion_penalty = -0.25
+				naval_invasion_capacity = 5
+				required_garrison_factor = 0.05
+				compliance_growth = 0.1
+				weekly_manpower = 500
+				stability_factor = 0.1
+			}
+		}
+		
+		USA_american_blackshirts = {
+			allowed_civil_war = {
+				always = yes
+			}
+			name = "Popular Squadron Militia"
+			modifier = {
+				conscription_factor = 0.10
+				army_morale_factor = 0.10
+			}
+		}
+		USA_ubermensch_council = {
+			allowed_civil_war = {
+				always = yes
+			}
+			name = "Council of American Supermen"
+			modifier = {
+				war_stability_factor = 0.15
+				neutrality_drift = 0.01
+				communism_drift = 0.01
+			}
+		}
+		
+		USA_state_of_utopia = {
+			allowed_civil_war = {
+				always = yes
+			}
+			name = "State of Utopia"
+			modifier = {
+				army_attack_speed_factor = 0.1
+				war_support_factor = 0.1
+				industry_repair_factor = -0.5
+				monthly_population = 0.1
+			}
+		}
+		USA_national_syndicalism = {
+			allowed_civil_war = {
+				always = yes
+			}
+			name = "National Syndicalism Arises"
+			modifier = {
+				production_factory_max_efficiency_factor = 0.05
+				industrial_capacity_factory = 0.10
+				industrial_capacity_dockyard = 0.10
+				production_factory_efficiency_gain_factor = -0.10
+				production_factory_start_efficiency_factor = -0.05
+			}
+		}
+		USA_national_syndicalism2 = {
+			allowed_civil_war = {
+				always = yes
+			}
+			picture = GFX_idea_USA_national_syndicalism
+			name = "Supraproduction Syndicalism"
+			modifier = {
+				production_factory_max_efficiency_factor = 0.1
+				industrial_capacity_factory = 0.10
+				industrial_capacity_dockyard = 0.10
+				production_factory_efficiency_gain_factor = -0.15
+				production_speed_arms_factory_factor = 0.15
+				production_speed_industrial_complex_factor = 0.15
+			}
+		}
+		
+		USA_modernism_without_mercy = {
+			allowed_civil_war = {
+				always = yes
+			}
+			name = "Modernism Without Mercy"
+			modifier = {
+				production_speed_infrastructure_factor = 0.15
+				production_speed_rail_way_factor = 0.15
+				supply_node_range = 0.1
+			}
+		}
+		
+		USA_we_are_the_sun = {
+			allowed_civil_war = {
+				always = yes
+			}
+			modifier = {
+				nuclear_production = 1
+				production_speed_nuclear_reactor_factor = 0.2
+				nuclear_production_factor= 0.2
+				rocket_attack_factor = 0.5
+			}
+		}
+	}
+}

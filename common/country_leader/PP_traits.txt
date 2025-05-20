@@ -1,0 +1,62 @@
+leader_traits = {
+	#Yockey
+	youth_vanguard = {
+		random = no
+		sprite = 13
+		weekly_casualties_war_support = 0.006
+		conscription_factor = 0.10
+		party_popularity_stability_factor = 0.08
+	}
+	
+	technocratic_corporatist = {
+		random = no
+		sprite = 10
+		production_factory_max_efficiency_factor = 0.10
+		line_change_production_efficiency_factor = 0.10
+		production_speed_buildings_factor = 0.05
+		production_lack_of_resource_penalty_factor = -0.1
+		research_speed_factor = 0.1
+		production_factory_efficiency_gain_factor = -0.10
+		power_balance_weekly = -0.007
+	}
+	
+	natsynd_theorist = {
+		random = no
+		sprite = 10
+		consumer_goods_expected_value = -0.05
+		local_resources_factor = 0.08
+		political_power_cost = 0.1
+		power_balance_weekly = 0.007
+	}
+	
+	fascist_ambassador = {
+		random = no
+		sprite = 13
+		fascism_drift = 0.1
+		fascism_acceptance = 30
+		political_power_gain = 0.05
+	}
+	
+	american_eagle = {
+		random = no
+		sprite = 1
+		experience_gain_air = 0.35
+		experience_gain_air_factor = 0.10
+		air_superiority_efficiency = 0.10
+		air_ace_generation_chance_factor = 0.05
+	}
+	
+	artist_tyrant = {
+		random = no
+		high_command_cost_factor = -0.25
+		political_power_factor = 0.2
+		stability_factor = -0.10
+	}
+	
+	light_bearer = {
+		random = no
+		fascism_drift = 0.05
+		war_support_weekly = 0.02
+		land_reinforce_rate = 0.02
+	}
+}

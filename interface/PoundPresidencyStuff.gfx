@@ -1,0 +1,84 @@
+spriteTypes = {
+
+	SpriteType = {
+		name = "GFX_collaborator_gov_icon"
+		texturefile = "gfx/interface/autonomy/collaborator_gov.png"
+	}
+	SpriteType = {
+		name = "GFX_idea_USA_state_of_utopia"
+		texturefile = "gfx/interface/ideas/USA_state_of_utopia.png"
+	}
+	SpriteType = {
+		name = "GFX_idea_USA_obliterated_stock_market"
+		texturefile = "gfx/interface/ideas/USA_obliterated_stock_market.png"
+	}
+	SpriteType = {
+		name = "GFX_idea_USA_national_syndicalism"
+		texturefile = "gfx/interface/ideas/USA_national_syndicalism.png"
+	}
+	SpriteType = {
+		name = "GFX_idea_USA_national_syndicalism2"
+		texturefile = "gfx/interface/ideas/USA_national_syndicalism.png"
+	}
+	SpriteType = {
+		name = "GFX_idea_USA_american_blackshirts"
+		texturefile = "gfx/interface/ideas/USA_american_blackshirts.png"
+	}
+	SpriteType = {
+		name = "GFX_idea_USA_modernism_without_mercy"
+		texturefile = "gfx/interface/ideas/USA_modernism_without_mercy.png"
+	}
+	SpriteType = {
+		name = "GFX_idea_USA_revolutionary_destiny"
+		texturefile = "gfx/interface/ideas/USA_revolutionary_destiny.png"
+	}
+	SpriteType = {
+		name = "GFX_idea_USA_apotheotic_destiny"
+		texturefile = "gfx/interface/ideas/USA_apotheotic_destiny.png"
+	}
+	SpriteType = {
+		name = "GFX_idea_USA_we_are_the_sun"
+		texturefile = "gfx/interface/ideas/USA_we_are_the_sun.png"
+	}
+	SpriteType = {
+		name = "GFX_idea_USA_ubermensch_council"
+		texturefile = "gfx/interface/ideas/USA_ubermensch_council.png"
+	}
+	SpriteType = {
+		name = "GFX_idea_USA_creative_drive"
+		texturefile = "gfx/interface/ideas/USA_creative_drive.png"
+	}
+	SpriteType = {
+		name = "GFX_idea_USA_war_against_degeneration"
+		texturefile = "gfx/interface/ideas/USA_war_against_degeneration.png"
+	}
+	SpriteType = {
+		name = "GFX_bop_USA_fascist_syndicalists_side"
+		texturefile = "gfx/interface/bop/bop_USA_fascist_syndicalists_side.png"
+	}
+	SpriteType = {
+		name = "GFX_bop_USA_technomodernists_side"
+		texturefile = "gfx/interface/bop/bop_USA_technomodernists_side.png"
+	}
+	SpriteType = {
+		name = "GFX_bop_USA_power_balance"
+		texturefile = "gfx/interface/bop/USA_power_balance.png"
+	}
+	SpriteType = {
+		name = "GFX_report_event_USA_technocracy_meeting"
+		texturefile = "gfx/event_pictures/Event_USA_technocracy_meeting.png"
+	}
+	SpriteType = {
+		name = "GFX_report_event_USA_yockey"
+		texturefile = "gfx/event_pictures/Event_USA_yockey.png"
+	}
+	SpriteType = {
+		name = "GFX_report_event_USA_fascist_march"
+		texturefile = "gfx/event_pictures/Event_USA_fascist_march.png"
+	}
+	SpriteType = {
+		name = "GFX_report_event_pound_intro"
+		texturefile = "gfx/event_pictures/Event_pound_intro.png"
+	}
+	
+}
