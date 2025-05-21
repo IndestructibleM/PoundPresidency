@@ -1,5 +1,6 @@
 ﻿l_english:
- ### Focus
+ ### Focus 
+ # Pound
  USA_towards_national_utopia: "Towards National Utopia!"
  USA_towards_national_utopia_desc: "Towards National Utopia!"
  USA_obliterate_the_banks: "Obliterate the Banks"
@@ -76,12 +77,45 @@
  USA_virtue_of_the_sun_desc: "The Virtue of the Sun"
  USA_proclaim_utopia_hegemony: "Proclaim the Hegemony of Utopia"
  USA_proclaim_utopia_hegemony_desc: "Proclaim the Hegemony of Utopia"
+ USA_fall_of_prometheus: "Fall of Prometheus"
+ # Yockey
+ USA_prophecy_of_imperium: "Prophecy of Imperium"
+ USA_rise_of_authority: "The Rise of Authority"
+ USA_destroy_cultural_distortion: "Destroy Cultural Distortion"
+ USA_european_liberation_front: "The European Liberation Front"
+ USA_totalitarian_socialism: "Totalitarian Socialism"
+ USA_destiny_of_america: "The Destiny of America"
+ USA_the_enemy_of_europe: "The Enemy of Europe"
+ USA_frontier_of_annihilation: "Frontiers of Annihilation"
+ USA_20_20ths: "§t"Twenty-Twentieths of the World"§!"
+ # Hemmingway
+ USA_left_utopians_triumph: "Triumph of the Left-Utopians!"
+ USA_autonomy_of_creative_labor: "Autonomy of Creative Labor"
+ USA_natural_revolution: "Natural Revolution"
+ USA_walk_in_woods: "A Walk in the Woods"
+ USA_fraternal_republic: "Fraternal Republic"
+ USA_invincible_peoples_will: "Invincible Will of the People"
+ USA_town_hall_councilism: "Townhall Councilism"
+ USA_hopes_and_dreams: "Hopes and Dreams will Save the World"
+ USA_worker_farmer_kingdom: "Grand Toiler Kingdom"
  
+ 
+ 
+ # Butler Coup
+ USA_butlers_salvation: "Butler's Salvation Putsch"
+ USA_wrangle_the_army: "Wrangle the Army"
+ USA_state_guards_to_rescue: "State Guards to the Rescue"
+ USA_reclaim_america: "Reclaiming America"
+ USA_martial_not_barbaric_law: "Martial Law, Not Barbaric Law"
+ USA_needs_of_the_people: "For the Needs of the People"
+ USA_lightning_warfare: "Miracle of Lightning Warfare"
+ USA_advance_american_tactics: "Advance American Tactics"
+
  ### Ideas
  USA_war_against_degeneration: "§RTHE SECOND AMERICAN REVOLUTION§!"
  USA_we_are_the_sun: "§CWe are the Sun§!"
  
- ### Cosmetic
+ ### Country and Cosmetic Names
  ASR: "American Social Republic"
  ASR_DEF: "the American Social Republic"
  ASR_ADJ: "American"
@@ -93,12 +127,21 @@
  ASR_virtue: "National Republic of Virtue"
  ASR_virtue_DEF: "the National Republic of Virtue"
  
- QUE_USA_fascism_subject: "New French State of Borelia"
- QUE_USA_fascism_subject_DEF: "the New French State of Borelia"
- MEX_USA_neutrality_subject: "Cosmic Mexican State"
- MEX_USA_neutrality_subject_DEF: "the Cosmic Mexican State"
- ENG_USA_neutrality_subject: "Grand Kingdom of Brittania"
- ENG_USA_neutrality_subject_DEF: "the Grand Kingdom of Brittania"
+ YOCK: "Provisional Western Imperium"
+ YOCK_ADJ: "Imperial American"
+ YOCK_DEF: "Provisional Western Imperium"
+ 
+ HEMM: "Commonwealth of American Council Republics"
+ HEMM_ADJ: "American Commonwealth"
+ HEMM_DEF: "the Commonwealth of American Council Republics"
+ 
+ 
+ QUE_USA_fascism_subject: "National State of Borelia"
+ QUE_USA_fascism_subject_DEF: "the National State of Borelia"
+ MEX_USA_fascism_subject: "Cosmic Mexican State"
+ MEX_USA_fascism_subject_DEF: "the Cosmic Mexican State"
+ ENG_USA_neutrality_subject: "Sublime Kingdom of Brittania"
+ ENG_USA_neutrality_subject_DEF: "the Sublime Kingdom of Brittania"
 
  ### Traits
  youth_vanguard: "Youth Vanguard Leader"
@@ -134,6 +177,8 @@
  pound.5.d:0 "The storm has broken over Manhattan. This morning, the streets of New York awoke not to the hum of finance and commerce, but to the thundering boots of the American Socialist Republican Party’s Vanguard Legion. With Red, White and Blue banners fluttering between the monoliths of capital, thousands of uniformed paramilitaries marched down Wall Street in tight formation, chanting slogans denouncing the “bourgeois tyranny” that once ruled unchecked from the towers above. \n\nIt began as a demonstration—one of many in recent weeks—but it quickly transformed into something far more decisive. Armed with pipes, sledgehammers, and the fury of a class long trampled, the ASRP militias turned on the financial district with a vengeance. Bank fronts were shattered with rhythmic precision; great glass panels crumbled beneath boots and batons, and the lobbies of Wall Street titans—JP Morgan, Goldman, and their ilk—were engulfed in flame. Banners were hoisted atop burning banks like war trophies, a declaration that the rule of the dollar was at an end. \n\nEyewitnesses report coordinated squads targeting specific businesses and political offices, dragging known financiers, party loyalists of the old regime, and "class traitors" into the streets for public humiliation. Some were beaten, others simply vanished in the chaos. The police—either sympathetic to the ASRP cause or cowed into inaction—offered no resistance. Those who attempted to intervene were swiftly disarmed and absorbed into the tide of red. \n\nFrom atop the broken steps of the New York Stock Exchange, an ASRP local militia leader is reported to have proclaimed a “final reckoning” for the exploiters of the American worker. “No more brokers, no more bailouts—no more blood for banks!” he roared, as the statue of George Washington behind him was defaced with the hammer and torch emblem of the party. \n\nAs smoke curls into the sky, the world watches with horror and awe. The heart of American finance has fallen—not to a foreign invader, but to its own children, armed with ideology, desperation, and fire."
  pound.8.d:0 "The Sun had not even risen over New Olympos, yet Ezra Pound was driven, literally and figuratively, to meet with America's top generals to decide the doctrine for the ground forces of the newly born Social Republic. Pound walked out of his limousine and to the freshly-constructed supreme military office. Pound began to greet and shake hands with the generals, particularly Douglas MacArthur and George Patton, before sitting down. As the conference commenced and went by slowly, the doctrinal divides between MacArthur and Patton began to show until they were outright yelling. \n\nAs MacArthur and Patton’s bickering began to grow increasingly louder and aggressive until the dismayed Pound slammed onto the conference table and shouted, “Will you simpletons shut up for God's sake and stop arguing like fools!?” The room fell into an abrupt silence. Pound took a deep breath before delivering the final verdict:"
  pound.9.d:0 "Perfection. Absolute perfection. America stands anew, the world clean of it's capitalist shackles, and the demonic bloodlines such as the Rothschilds burn in hell. Standing atop the Empire State building, Commander Pound speaks to the masses of not just America, but of all the world. "Compatriots! Are we not victorious?" The Commander spoke. The crowd joyously shouted back: "Never!" \n\n"Brothers and sisters of the Social Republic, today marks the conclusion of our revolution! Those who stood against us are no more, and only glory shall come to my people in the wake of monumental victory!" He continued. Pound went on, boasting of America's "Imperium of the Highest Arts". The people cried out in splendor, for at last their strife has beared fruit. Pound paused, looked back in silence, before ending his speech: "Today, we are Champions, today, we are olympians, having felled the titans once more. Now, I have the most important news of all for you, and that is about the very matter of our country...""
+ 
+ butler.1.d: "Patience runs dry. No amount of sing-songy or artsy-fartsy display of national brilliance nor pride can win the masses if you do not provide their beloved bread and circuses. Pound's arrogance has caught up with him, and with a seeming inability to fix the great depression and "Surpass material strife", the people are more than outraged. The last straw came when Pound revealed several war plans, including potential alliances with fascist powers. While MacArthur and Patton were eager to hear Pound's ambitions, Smedley Butler was horrified; After an intense argument, Butler was sacked from the American Legion - A mistake no fool should make. The noble wrath of now not just the people, but the military and veterans who had supported Pound now too turn on him. \n\nThe people march down the Streets of the capitol shouting "Utopia? I don't give a damn!" to mock the fascist party. Now, Butler approaches with 10,000 American Legion men, the military and police tipped off and uncaring for the madman about to be deposed. As Butler Strode into the "Commander's Palace" - a decadent construction made for Pound's ego - He wondered how he might be remembered in history. He was doing the right thing, no? Yet now he was likely to be dictator - Roosevelt and the previous adminsitration lay dead or are missing persons, and the thought of so much power, so much responsibility irked the old Smedley. \n\n It was easy. Pound broke down as soon as the battalions broke into his quarters. He was grabbed and beat. Then held on the ground and handcuffed. "Former President- Forgive me God for saying this- Former 'Commander' of America, Ezra Loomis Pound, you are under arrest and sentenced to trial before the supreme court of the United States. You know what you have done, and we believe the power of popular will to be of due justice to you. You have the right to remain silent." \n\nPound didn't speak, merely staring down. It was over. And it was not coming back."
  
  
  collaborator_gov: "Collaborator Government"

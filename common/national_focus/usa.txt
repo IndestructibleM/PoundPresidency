@@ -23,7 +23,7 @@ focus_tree = {
 			original_tag = USA
 		}
 	}
-	continuous_focus_position = { x = 50 y = 1600 }
+	continuous_focus_position = { x = 50 y = 2500 }
 	default = no
 #	focus = {
 #		id = USA_
@@ -7001,13 +7001,13 @@ focus_tree = {
 		available_if_capitulated = no
 		search_filters = {FOCUS_FILTER_INDUSTRY FOCUS_FILTER_STABILITY FOCUS_FILTER_USA_CONGRESS}
 		completion_reward = {
-			custom_effect_tooltip = "Through blood and flame, America will be remade..."
 			hidden_effect = {
-				set_cosmetic_tag = USA_democratic
 				remove_ideas = USA_war_against_degeneration
 				add_popularity = { ideology = fascism popularity = 0.05}
 			}
+			activate_mission = USA_cement_power_take_action
 			add_threat = 5
+			custom_effect_tooltip = "Through blood and flame, America will be remade..."
 		}
 	}
 	focus = {
@@ -8253,25 +8253,699 @@ focus_tree = {
 		}
 	}
 
-	### BUTLER COUP ###
-
+	### POUND SUCCESSORS 
 	focus = {
-		id = USA_butlers_salvation
-		x = 28
-		y = 10
-		cost = 5
-		ai_will_do = {
-			factor = 2
+		id = USA_fall_of_prometheus
+		x = 13
+		y = 11
+		offset = {
+			x = 26
+			y = 0
+			trigger = {
+				has_dlc = "Man the Guns"
+			}
 		}
+		
+		cost = 3
+		ai_will_do = {
+			factor = 10
+		}
+		icon = GFX_focus_ARG_defense_and_democracy
 		available = {
-			has_government = neutrality
-			has_country_leader = { ruling_only = yes character = USA_Smedly_Butler }
+			has_government = fascism
+			NOT = { has_country_leader = { ruling_only = yes character = USA_Ezra_Pound } }
+			has_country_flag = PoundDead
 		}
 
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
-		search_filters = {FOCUS_FILTER_INDUSTRY FOCUS_FILTER_STABILITY FOCUS_FILTER_USA_CONGRESS}
+		completion_reward = {
+			country_event = { id = pound.12 days = 0 }
+		}
+	}
+	# Yockey
+	focus = {
+		id = USA_prophecy_of_imperium
+		x = 7
+		y = 1
+		
+		cost = 5
+		ai_will_do = {
+			factor = 10
+		}
+		relative_position_id = USA_fall_of_prometheus
+		prerequisite = { focus = USA_fall_of_prometheus }
+		icon = GFX_focus_ITA_mare_nostrum
+		available = {
+			has_government = fascism
+			has_country_leader = { ruling_only = yes character = USA_francis_yockey }
+			has_country_flag = PoundDead
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		completion_reward = {
+			add_war_support = -0.08
+			add_stability = 0.10
+		}
+	}
+	focus = {
+		id = USA_rise_of_authority
+		x = -1
+		y = 1
+		
+		cost = 5
+		ai_will_do = {
+			factor = 10
+		}
+		relative_position_id = USA_prophecy_of_imperium
+		prerequisite = { focus = USA_prophecy_of_imperium }
+		icon = GFX_focus_GER_expand_ss_security_duties
+		available = {
+			has_government = fascism
+			has_country_leader = { ruling_only = yes character = USA_francis_yockey }
+			has_country_flag = PoundDead
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		completion_reward = {
+		}
+	}
+	focus = {
+		id = USA_destroy_cultural_distortion
+		x = 1
+		y = 1
+		
+		cost = 5
+		ai_will_do = {
+			factor = 10
+		}
+		relative_position_id = USA_prophecy_of_imperium
+		prerequisite = { focus = USA_prophecy_of_imperium }
+		icon = GFX_focus_GER_strafbataillon
+		available = {
+			has_government = fascism
+			has_country_leader = { ruling_only = yes character = USA_francis_yockey }
+			has_country_flag = PoundDead
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		completion_reward = {
+			add_popularity = { ideology = democratic popularity = -1 }
+			add_popularity = { ideology = communism popularity = -1 }
+		}
+	}
+	focus = {
+		id = USA_european_liberation_front
+		x = -2
+		y = 2
+		
+		cost = 5
+		ai_will_do = {
+			factor = 10
+		}
+		relative_position_id = USA_prophecy_of_imperium
+		prerequisite = { focus = USA_destroy_cultural_distortion }
+		prerequisite = { focus = USA_rise_of_authority }
+		icon = GFX_focus_generic_fascist_troops
+		available = {
+			has_government = fascism
+			has_country_leader = { ruling_only = yes character = USA_francis_yockey }
+			has_country_flag = PoundDead
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = USA_totalitarian_socialism
+		x = 0
+		y = 2
+		
+		cost = 5
+		ai_will_do = {
+			factor = 10
+		}
+		relative_position_id = USA_prophecy_of_imperium
+		prerequisite = { focus = USA_destroy_cultural_distortion }
+		prerequisite = { focus = USA_rise_of_authority }
+		icon = GFX_focus_DEN_heavy_regulations
+		available = {
+			has_government = fascism
+			has_country_leader = { ruling_only = yes character = USA_francis_yockey }
+			has_country_flag = PoundDead
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		completion_reward = {
+			if = {
+				limit = { has_idea = USA_national_syndicalism }
+				swap_ideas = {
+					remove_idea = USA_national_syndicalism 
+					add_idea = USA_creative_totalitariat
+				}
+			}
+			if = {
+				limit = { has_idea = USA_national_syndicalism2 }
+				swap_ideas = {
+					remove_idea = USA_national_syndicalism2
+					add_idea = USA_creative_totalitariat
+				}
+			}
+		}
+	}
+	focus = {
+		id = USA_destiny_of_america
+		x = 2
+		y = 2
+		
+		cost = 5
+		ai_will_do = {
+			factor = 10
+		}
+		relative_position_id = USA_prophecy_of_imperium
+		prerequisite = { focus = USA_destroy_cultural_distortion }
+		prerequisite = { focus = USA_rise_of_authority }
+		icon = GFX_focus_GER_establish_protectorates_in_america
+		available = {
+			has_government = fascism
+			has_country_leader = { ruling_only = yes character = USA_francis_yockey }
+			has_country_flag = PoundDead
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		completion_reward = {
+		}
+	}
+	focus = {
+		id = USA_the_enemy_of_europe
+		x = -1
+		y = 3
+		
+		cost = 5
+		ai_will_do = {
+			factor = 10
+		}
+		relative_position_id = USA_prophecy_of_imperium
+		prerequisite = { focus = USA_european_liberation_front }
+		prerequisite = { focus = USA_totalitarian_socialism }
+		prerequisite = { focus = USA_destiny_of_america }
+		icon = GFX_focus_GER_end_european_communism
+		available = {
+			has_government = fascism
+			has_country_leader = { ruling_only = yes character = USA_francis_yockey }
+			has_country_flag = PoundDead
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		completion_reward = {
+		}
+	}
+	focus = {
+		id = USA_frontier_of_annihilation
+		x = 1
+		y = 3
+		
+		cost = 5
+		ai_will_do = {
+			factor = 10
+		}
+		relative_position_id = USA_prophecy_of_imperium
+		prerequisite = { focus = USA_european_liberation_front }
+		prerequisite = { focus = USA_totalitarian_socialism }
+		prerequisite = { focus = USA_destiny_of_america }
+		icon = GFX_focus_NOR_frontkjempere
+		available = {
+			has_government = fascism
+			has_country_leader = { ruling_only = yes character = USA_francis_yockey }
+			has_country_flag = PoundDead
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		completion_reward = {
+			add_ideas = closed_economy
+			add_ideas = extensive_conscription
+			add_ideas = tot_economic_mobilisation
+			add_political_power = -100
+		}
+	}
+	focus = {
+		id = USA_20_20ths
+		x = 0
+		y = 4
+		
+		cost = 5
+		ai_will_do = {
+			factor = 10
+		}
+		relative_position_id = USA_prophecy_of_imperium
+		prerequisite = { focus = USA_frontier_of_annihilation }
+		prerequisite = { focus = USA_the_enemy_of_europe }
+		icon = GFX_focus_generic_total_war
+		available = {
+			has_government = fascism
+			has_country_leader = { ruling_only = yes character = USA_francis_yockey }
+			has_country_flag = PoundDead
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		completion_reward = {
+		}
+	}
+	
+	# Hemmingway
+	focus = {
+		id = USA_left_utopians_triumph
+		x = -7
+		y = 1
+		
+		cost = 5
+		ai_will_do = {
+			factor = 10
+		}
+		relative_position_id = USA_fall_of_prometheus
+		prerequisite = { focus = USA_fall_of_prometheus }
+		icon = GFX_focus_GER_liberate_exploited_colonial_workers
+		available = {
+			has_government = communism
+			has_country_leader = { ruling_only = yes character = USA_Ernest_Hemmingway }
+			has_country_flag = PoundDead
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		completion_reward = {
+		}
+	}
+	focus = {
+		id = USA_autonomy_of_creative_labor
+		x = -1
+		y = 1
+		
+		cost = 5
+		ai_will_do = {
+			factor = 10
+		}
+		relative_position_id = USA_left_utopians_triumph
+		prerequisite = { focus = USA_left_utopians_triumph }
+		icon = GFX_focus_generic_workers
+		available = {
+			has_government = communism
+			has_country_leader = { ruling_only = yes character = USA_Ernest_Hemmingway }
+			has_country_flag = PoundDead
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		completion_reward = {
+		}
+	}
+	focus = {
+		id = USA_natural_revolution
+		x = 1
+		y = 1
+		
+		cost = 5
+		ai_will_do = {
+			factor = 10
+		}
+		relative_position_id = USA_left_utopians_triumph
+		prerequisite = { focus = USA_left_utopians_triumph }
+		icon = GFX_focus_prc_agrarian_socialism
+		available = {
+			has_government = communism
+			has_country_leader = { ruling_only = yes character = USA_Ernest_Hemmingway }
+			has_country_flag = PoundDead
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		completion_reward = {
+		}
+	}
+	focus = {
+		id = USA_walk_in_woods
+		x = -2
+		y = 2
+		
+		cost = 5
+		ai_will_do = {
+			factor = 10
+		}
+		relative_position_id = USA_left_utopians_triumph
+		prerequisite = { focus = USA_autonomy_of_creative_labor }
+		prerequisite = { focus = USA_natural_revolution }
+		icon = GFX_focus_generic_population_growth
+		available = {
+			has_government = communism
+			has_country_leader = { ruling_only = yes character = USA_Ernest_Hemmingway }
+			has_country_flag = PoundDead
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		completion_reward = {
+		}
+	}
+	focus = {
+		id = USA_fraternal_republic
+		x = 0
+		y = 2
+		
+		cost = 5
+		ai_will_do = {
+			factor = 10
+		}
+		relative_position_id = USA_left_utopians_triumph
+		prerequisite = { focus = USA_autonomy_of_creative_labor }
+		prerequisite = { focus = USA_natural_revolution }
+		icon = GFX_focus_focus_fra_revolution_utmost
+		available = {
+			has_government = communism
+			has_country_leader = { ruling_only = yes character = USA_Ernest_Hemmingway }
+			has_country_flag = PoundDead
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		completion_reward = {
+		}
+	}
+	focus = {
+		id = USA_invincible_peoples_will
+		x = 2
+		y = 2
+		
+		cost = 5
+		ai_will_do = {
+			factor = 10
+		}
+		relative_position_id = USA_left_utopians_triumph
+		prerequisite = { focus = USA_autonomy_of_creative_labor }
+		prerequisite = { focus = USA_natural_revolution }
+		icon = GFX_focus_spr_masters_of_our_own_fate
+		available = {
+			has_government = communism
+			has_country_leader = { ruling_only = yes character = USA_Ernest_Hemmingway }
+			has_country_flag = PoundDead
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		completion_reward = {
+		}
+	}
+	focus = {
+		id = USA_town_hall_councilism
+		x = -1
+		y = 3
+		
+		cost = 5
+		ai_will_do = {
+			factor = 10
+		}
+		relative_position_id = USA_left_utopians_triumph
+		prerequisite = { focus = USA_fraternal_republic }
+		prerequisite = { focus = USA_walk_in_woods }
+		prerequisite = { focus = USA_invincible_peoples_will }
+		icon = GFX_focus_SWE_refuge_for_revolutionaries
+		available = {
+			has_government = communism
+			has_country_leader = { ruling_only = yes character = USA_Ernest_Hemmingway }
+			has_country_flag = PoundDead
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = USA_hopes_and_dreams
+		x = 1
+		y = 3
+		
+		cost = 5
+		ai_will_do = {
+			factor = 10
+		}
+		relative_position_id = USA_left_utopians_triumph
+		prerequisite = { focus = USA_fraternal_republic }
+		prerequisite = { focus = USA_walk_in_woods }
+		prerequisite = { focus = USA_invincible_peoples_will }
+		icon = GFX_focus_por_workers_of_iberia
+		available = {
+			has_government = communism
+			has_country_leader = { ruling_only = yes character = USA_Ernest_Hemmingway }
+			has_country_flag = PoundDead
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = USA_worker_farmer_kingdom
+		x = 0
+		y = 4
+		
+		cost = 5
+		ai_will_do = {
+			factor = 10
+		}
+		relative_position_id = USA_left_utopians_triumph
+		prerequisite = { focus = USA_hopes_and_dreams }
+		prerequisite = { focus = USA_town_hall_councilism }
+		icon = GFX_focus_GER_proletarian_solidarity
+		available = {
+			has_government = communism
+			has_country_leader = { ruling_only = yes character = USA_Ernest_Hemmingway }
+			has_country_flag = PoundDead
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		completion_reward = {
+		}
+	}
+
+
+	### BUTLER COUP ###
+	focus = {
+		id = USA_butlers_salvation
+		x = 28
+		y = 11
+		offset = {
+			x = 26
+			y = 0
+			trigger = {
+				has_dlc = "Man the Guns"
+			}
+		}
+		
+		cost = 3
+		ai_will_do = {
+			factor = 5
+		}
+		icon = GFX_focus_ARG_defense_and_democracy
+		available = {
+			has_government = neutrality
+			has_country_leader = { ruling_only = yes character = USA_Smedley_Butler }
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		completion_reward = {
+			remove_ideas = USA_state_of_utopia
+			add_political_power = 50
+		}
+	}
+	focus = {
+		id = USA_wrangle_the_army
+		x = -2
+		y = 1
+		cost = 5
+		ai_will_do = {
+			factor = 5
+		}
+		icon = GFX_focus_generic_anti_fascist_diplomacy
+		relative_position_id = USA_butlers_salvation
+		prerequisite = { focus = USA_butlers_salvation }
+		available = {
+			has_government = neutrality
+			has_country_leader = { ruling_only = yes character = USA_Smedley_Butler }
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		completion_reward = {
+		}
+	}
+	focus = {
+		id = USA_state_guards_to_rescue
+		x = -2
+		y = 2
+		cost = 5
+		ai_will_do = {
+			factor = 5
+		}
+		icon = GFX_focus_generic_little_entente
+		relative_position_id = USA_butlers_salvation
+		prerequisite = { focus = USA_wrangle_the_army }
+		available = {
+			has_government = neutrality
+			has_country_leader = { ruling_only = yes character = USA_Smedley_Butler }
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		completion_reward = {
+		}
+	}
+	focus = {
+		id = USA_lightning_warfare
+		x = -3
+		y = 3
+		cost = 5
+		ai_will_do = {
+			factor = 5
+		}
+		mutually_exclusive = { focus = USA_advance_american_tactics }
+		icon = GFX_focus_generic_army_tanks2
+		relative_position_id = USA_butlers_salvation
+		prerequisite = { focus = USA_state_guards_to_rescue }
+		available = {
+			has_government = neutrality
+			has_country_leader = { ruling_only = yes character = USA_Smedley_Butler }
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		completion_reward = {
+		}
+	}
+	focus = {
+		id = USA_advance_american_tactics
+		x = -1
+		y = 3
+		cost = 5
+		ai_will_do = {
+			factor = 5
+		}
+		mutually_exclusive = { focus = USA_lightning_warfare }
+		icon = GFX_focus_generic_combined_arms
+		relative_position_id = USA_butlers_salvation
+		prerequisite = { focus = USA_state_guards_to_rescue }
+		available = {
+			has_government = neutrality
+			has_country_leader = { ruling_only = yes character = USA_Smedley_Butler }
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		completion_reward = {
+		}
+	}
+	focus = {
+		id = USA_reclaim_america
+		x = 2
+		y = 1
+		cost = 5
+		ai_will_do = {
+			factor = 5
+		}
+		icon = GFX_focus_generic_strike_at_democracy1
+		relative_position_id = USA_butlers_salvation
+		prerequisite = { focus = USA_butlers_salvation }
+		available = {
+			has_government = neutrality
+			has_country_leader = { ruling_only = yes character = USA_Smedley_Butler }
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		completion_reward = {
+		}
+	}
+	focus = {
+		id = USA_martial_not_barbaric_law
+		x = 2
+		y = 2
+		cost = 5
+		ai_will_do = {
+			factor = 5
+		}
+		icon = GFX_focus_generic_manpower
+		relative_position_id = USA_butlers_salvation
+		prerequisite = { focus = USA_reclaim_america }
+		available = {
+			has_government = neutrality
+			has_country_leader = { ruling_only = yes character = USA_Smedley_Butler }
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		completion_reward = {
+		}
+	}
+	focus = {
+		id = USA_needs_of_the_people
+		x = 2
+		y = 3
+		cost = 5
+		ai_will_do = {
+			factor = 5
+		}
+		icon = GFX_focus_generic_welfare
+		relative_position_id = USA_butlers_salvation
+		prerequisite = { focus = USA_martial_not_barbaric_law }
+		available = {
+			has_government = neutrality
+			has_country_leader = { ruling_only = yes character = USA_Smedley_Butler }
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
 		completion_reward = {
 		}
 	}

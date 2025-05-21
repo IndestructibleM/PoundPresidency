@@ -11,6 +11,30 @@ characters = {
 		}
 	}
 	
+	USA_Ernest_Hemmingway = {
+		name = "Ernest Hemmingway"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/USA/Portrait_Ernest_Hemmingway.png"
+			}
+		}
+		country_leader = {
+			ideology = marxism
+		}
+	}
+	
+	USA_Smedley_Butler = {
+		name = "Smedley D. Butler"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/USA/Portrait_Smedley_Butler.png"
+			}
+		}
+		country_leader = {
+			ideology = moderatism
+		}
+	}
+	
 	ENG_Wyndham_Lewis = {
 		name = "Wyndham Lewis"
 		portraits = {
@@ -83,6 +107,12 @@ characters = {
 			civilian = {
 				small = "gfx/interface/advisors/USA/USA_francis_yockey.png"
 			}
+			civilian = {
+				large = "gfx/leaders/USA/Portrait_Francis_Yockey.png"
+			}
+		}
+		country_leader = {
+			ideology = nazism
 		}
 		advisor = {
 			slot = political_advisor

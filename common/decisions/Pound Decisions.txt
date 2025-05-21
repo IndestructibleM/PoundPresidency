@@ -1,3 +1,35 @@
+political_actions = {
+	USA_cement_power_take_action = {
+		name = "Take Action to Cement Power"
+		fire_only_once = yes
+		activation = {
+			tag = USA
+			has_government = fascism
+			has_completed_focus = USA_2nd_american_revolution
+		}
+		days_mission_timeout = 260
+		is_good = no
+		icon = GFX_decision_revolt
+		available = { 
+			NOT = { has_idea = USA_obliterated_stock_market }
+			has_completed_focus = USA_total_action_state
+			has_completed_focus = USA_american_ubermensch_council
+			fascism > 0.6
+		}
+		ai_will_do = {
+			factor = 100
+		}
+		complete_effect = { 
+			add_stability = 0.05
+			add_popularity = { ideology = fascism popularity = 0.05 }
+		}
+		timeout_effect = {
+			country_event = { id = butler.1 days = 8 }
+		}
+	}
+}
+
+
 USA_balance_of_power_category = {
 	USA_work_with_technocrats = {
 	name = "Work with Technocrats"
