@@ -13,6 +13,8 @@ on_actions = {
 					name = "ASRP"
 				}
 				recruit_character = USA_Ezra_Pound
+				recruit_character = USA_Ernest_Hemmingway
+				recruit_character = USA_Smedley_Butler
 				recruit_character = USA_richard_child
 				recruit_character = USA_howard_scott
 				recruit_character = USA_francis_yockey

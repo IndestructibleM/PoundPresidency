@@ -1,0 +1,252 @@
+add_namespace = pound
+add_namespace = butler
+
+country_event = {
+	id = pound.0
+	desc = pound.0.d
+	title = "Welcome to The Pound Presidency!"
+	fire_only_once = yes
+	is_triggered_only = yes
+	picture = GFX_report_event_pound_intro
+	
+	option = {
+		name = "Thank you, let me play!"
+		custom_effect_tooltip = "And thank you, player!"
+	}
+}
+
+country_event = {
+	id = pound.1
+	desc = pound.1.d
+	title = "Revolutionary Violence!"
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {
+		name = "The Nation Must Be Cleansed."
+		add_manpower = -10000
+		add_stability = -0.1
+	}
+}
+
+country_event = {
+	id = pound.2
+	title = "The Opposition to Abstract Capital"
+	desc = pound.2.d
+	fire_only_once = yes
+	is_triggered_only = yes
+	picture = GFX_report_event_USA_technocracy_meeting 
+	
+	option = {
+		name = "A most interesting proposal indeed."
+		set_party_name = {
+			ideology = neutrality
+			long_name = "Technocracy Incorporated"
+			name = "Technocracy Inc."
+		}
+		add_tech_bonus = {
+			bonus = 0.3
+			uses = 1
+			category = electronics
+		}
+		add_popularity = { ideology = neutrality popularity = 0.08 }
+	}
+}
+
+country_event = {
+	id = pound.3
+	desc = pound.3.d
+	title = "The Young Totalitarian"
+	fire_only_once = yes
+	is_triggered_only = yes
+	picture = GFX_report_event_USA_yockey 
+	
+	option = {
+		name = "Fascinating..."
+		add_popularity = { ideology = fascism popularity = 0.05 }
+		add_stability = -0.05
+	}
+}
+
+country_event = {
+	id = pound.4
+	desc = pound.4.d
+	title = "Detonation of Hollywood"
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {
+		name = "A better show than the subversive garbage they produce!"
+		add_stability = -0.1
+	}
+}
+
+country_event = {
+	id = pound.5
+	desc = pound.5.d
+	title = "The March on Wallstreet"
+	fire_only_once = yes
+	is_triggered_only = yes
+	picture = GFX_report_event_USA_fascist_march
+	
+	option = {
+		name = "Out all the robbery!"
+		add_stability = -0.1
+		add_popularity = { ideology = fascism popularity = 0.05 }
+	}
+}
+
+country_event = {
+	id = pound.8
+	title = "The Art of War"
+	desc = pound.8.d
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {
+		name = "Speed and Merciless Technology!"
+		add_doctrine_cost_reduction = {
+			cost_reduction = 0.5
+			uses = 2
+			category = cat_mobile_warfare
+		}
+		add_power_balance_value = {
+			id = USA_power_balance
+			value = -0.1
+		}
+	}
+	option = {
+		name = "Total War, Total Destruction!"
+		add_doctrine_cost_reduction = {
+			cost_reduction = 0.5
+			uses = 2
+			category = cat_superior_firepower
+		}
+		add_power_balance_value = {
+			id = USA_power_balance
+			value = 0.1
+		}
+	}
+}
+country_event = {
+	id = pound.9
+	title = "The Imperium of the Highest Arts"
+	desc = pound.9.d
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {
+		name = "...We shall sing in the bliss of a new Utopia!"
+		set_cosmetic_tag = ASR_utopia
+	}
+	option = {
+		name = "...Pound shall declare himself king of Heroes!"
+		set_cosmetic_tag = ASR_kingdom
+	}
+	option = {
+		name = "...The virtue of our kin shall shine like the Sun!"
+		set_cosmetic_tag = ASR_virtue
+	}
+}
+
+country_event = {
+	id = pound.10
+	title = "Commander Pound Demands Our Submission!"
+	is_triggered_only = yes
+	desc = "Pound's USA demands our submission! Submit or fight?"
+	option = {
+		ai_chance = {
+			factor = 30
+		}
+		name = "We Shall Fight for our Freedom!"
+		add_political_power = 100
+		USA = { 	
+			create_wargoal = {
+			type = puppet_wargoal_focus
+			target = ROOT
+			}
+		}
+	}
+	option = {
+		ai_chance = {
+			factor = 60
+		}
+		name = "We have no choice but to give in."
+		USA = {
+			set_autonomy = {
+				target = ROOT
+				autonomous_state = collaborator_gov
+				end_wars = yes
+				end_civil_wars = yes
+			}
+		}
+	}
+}
+country_event = {
+	id = pound.11
+	title = "The new America invites us to join the Jupiter League"
+	desc = "Pound Invites you to join his faction, do you rally with him or decline?"
+	is_triggered_only = yes
+	
+	option = {
+		name = "We shall rally with Utopia!"
+		add_political_power = -50
+		USA = { add_to_faction = ROOT }
+	}
+}
+
+country_event = {
+	id = pound.12
+	title = "Choosing a Successor"
+	is_triggered_only = yes
+	
+	option = {
+		name = "Hemmingway"
+		promote_character = USA_Ernest_Hemmingway
+		set_politics = {
+			ruling_party = communism
+			elections_allowed = no
+			last_election = "1936.11.5"
+			election_frequency = 48
+			long_name = "Popular Social Front"
+			name = "PSF"
+		}
+		set_cosmetic_tag = HEMM
+	}
+	
+	option = {
+		name = "Yockey"
+		promote_character = USA_francis_yockey
+		set_politics = {
+			ruling_party = fascism
+			elections_allowed = no
+			long_name = "Imperial Vanguard"
+			name = "Imperial Vanguard"
+		}
+		set_cosmetic_tag = YOCK
+	}
+}
+
+### Smeddy Butt
+country_event = {
+	id = butler.1
+	title = "The Salvation Putsch!"
+	desc = butler.1.d
+	is_triggered_only = yes
+	
+	option = {
+		name = "The Cantos closes, but, perhaps a new story begins."
+		retire_character = USA_Ezra_Pound
+		promote_character = USA_Smedley_Butler
+		set_politics = {
+			ruling_party = neutrality
+			elections_allowed = yes
+			last_election = "1936.11.5"
+			election_frequency = 48
+			long_name = "Government for National Salvation"
+			name = "GNS"
+		}
+		add_popularity = { ideology = neutrality popularity = 0.20 }
+		hidden_effect = { set_cosmetic_tag = USA_democratic }
+	}
+}
