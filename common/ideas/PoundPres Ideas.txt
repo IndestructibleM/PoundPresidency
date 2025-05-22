@@ -213,7 +213,7 @@ ideas = {
 			allowed_civil_war = {
 				always = yes
 			}
-			name = "Destiny of Imperium"
+			name = "Actualization of Imperium"
 			modifier = {
 				justify_war_goal_time = -0.5
 				resistance_growth = -0.05

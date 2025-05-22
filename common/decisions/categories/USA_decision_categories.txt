@@ -129,3 +129,16 @@ USA_jupiter_league = {
 		has_completed_focus = USA_vanguard_of_new_utopia
 	}
 }
+
+USA_fight_for_western_civilization = {
+	
+	allowed = {
+		original_tag = USA
+	}
+	
+	priority = 80
+	
+	visible = {
+		has_completed_focus = USA_destroy_cultural_distortion
+	}
+}

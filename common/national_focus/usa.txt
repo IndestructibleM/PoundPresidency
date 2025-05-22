@@ -8349,7 +8349,6 @@ focus_tree = {
  				character = "USA_lawrence_dennis"
   				slot = political_advisor
 			}
-			add_stability = 0.03
 		}
 	}
 	focus = {
@@ -8376,7 +8375,7 @@ focus_tree = {
 		completion_reward = {
 			add_popularity = { ideology = democratic popularity = -1 }
 			add_popularity = { ideology = communism popularity = -1 }
-			add_stability = 0.03
+			unlock_decision_category_tooltip = USA_fight_for_western_civilization
 		}
 	}
 	focus = {
@@ -8561,6 +8560,9 @@ focus_tree = {
 		continue_if_invalid = no
 		available_if_capitulated = no
 		completion_reward = {
+			leave_faction = yes
+			create_faction = "Imperium of Europe"
+			unlock_decision_tooltip = USA_towards_world_unity
 		}
 	}
 	
@@ -8587,6 +8589,7 @@ focus_tree = {
 		continue_if_invalid = no
 		available_if_capitulated = no
 		completion_reward = {
+			add_popularity = { ideology = communism popularity = 0.2 }
 		}
 	}
 	focus = {
