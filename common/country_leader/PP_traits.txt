@@ -59,4 +59,11 @@ leader_traits = {
 		war_support_weekly = 0.02
 		land_reinforce_rate = 0.02
 	}
+	
+	prophet_of_imperium = {
+		random = no
+		fascism_drift = 0.1
+		drift_defence_factor = 0.2
+		war_stability_factor = 0.2
+	}
 }
