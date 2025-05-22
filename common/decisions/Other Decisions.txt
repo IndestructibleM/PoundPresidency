@@ -1,0 +1,44 @@
+foreign_politics = {
+	USA_towards_world_unity = {
+	name = "Towards 20/20ths of the World!"
+	target_trigger = { 
+     	FROM = {
+			can_ROOT_get_wargoal_on_THIS = yes
+		}
+	}
+	icon = GFX_decision_generic_confiscation
+	war_with_target_on_complete = yes
+    allowed = { 
+		tag = USA
+	}
+	available = {
+		OR = {
+			has_war_with_major = no 
+			has_war_with = FROM
+		}
+		OR = {
+			is_neighbor_of = FROM
+			FROM = { any_owned_state = { is_coastal = yes } }
+		}
+	}
+	visible = {
+		has_government = fascism
+	}
+	ai_will_do = {
+       	factor = 50
+    }
+	days_remove = 200
+	cost = 20
+	targeted_modifier = {
+		tag = FROM    
+		attack_bonus_against = 0.2
+		attack_bonus_against_cores = 0.2
+	}
+    complete_effect = {
+		declare_war_on = {
+			target = FROM
+            type = annex_everything
+        }
+	}
+	}
+}
