@@ -77,6 +77,12 @@ characters = {
 			civilian = {
 				small = "gfx/interface/advisors/USA/USA_richard_child.png"
 			}
+			civilian = {
+				large = "gfx/leaders/USA/Portrait_Richard_Child.png"
+			}
+		}
+		country_leader = {
+			ideology = fascism_ideology
 		}
 		advisor = {
 			slot = political_advisor

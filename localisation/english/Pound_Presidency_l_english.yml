@@ -151,6 +151,8 @@
  american_eagle: "The American Eagle"
  artist_tyrant: "Artist-Tyrant"
  light_bearer: "Lucibel the Light-Bearer"
+ prophet_of_imperium: "Prophet of Imperium"
+ 
  
  ### Decisions
  USA_map_painting: "All the World a Canvas"
@@ -182,3 +184,5 @@
  
  
  collaborator_gov: "Collaborator Government"
+ 
+ PoundDead: "Commander Pound is No More"
