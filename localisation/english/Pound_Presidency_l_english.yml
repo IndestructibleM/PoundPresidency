@@ -98,19 +98,18 @@
  USA_town_hall_councilism: "Townhall Councilism"
  USA_hopes_and_dreams: "Hopes and Dreams will Save the World"
  USA_worker_farmer_kingdom: "Grand Toiler Kingdom"
+ # Christians
+ USA_away_from_gold: "Away from the Tyranny of Gold"
+ USA_the_whiteshirts: "The Crusader Whiteshirts"
+ USA_crusade_for_economic_liberty: "Crusade for Economic Liberty"
+ USA_a_red_kkk: "Stand up for the New People's Klan!"
+ USA_paper_and_ink_revolution: "Paper and Ink Revolution"
+ USA_human_effort_instead_of_gold: "Human Effort instead of Gold"
+ USA_escalate_the_finance_war: "Escalate the War on Finance"
+ USA_the_golden_rule: "The Golden Rule, not Rule of Gold"
+ USA_the_death_of_tyranny: "The Death of Tyranny"
  
  
- 
- # Butler Coup
- USA_butlers_salvation: "Butler's Salvation Putsch"
- USA_wrangle_the_army: "Wrangle the Army"
- USA_state_guards_to_rescue: "State Guards to the Rescue"
- USA_reclaim_america: "Reclaiming America"
- USA_martial_not_barbaric_law: "Martial Law, Not Barbaric Law"
- USA_needs_of_the_people: "For the Needs of the People"
- USA_lightning_warfare: "Miracle of Lightning Warfare"
- USA_advance_american_tactics: "Advance American Tactics"
-
  ### Ideas
  USA_war_against_degeneration: "§RTHE SECOND AMERICAN REVOLUTION§!"
  USA_we_are_the_sun: "§CWe are the Sun§!"
@@ -135,6 +134,9 @@
  HEMM_ADJ: "American Commonwealth"
  HEMM_DEF: "the Commonwealth of American Council Republics"
  
+ CHRI: "Confederacy of Revolutionary American States" 
+ CHRI_DEF: "the Confederacy of Revolutionary American States" 
+ CHRI_ADJ: "Revolutionary Confederate" 
  
  QUE_USA_fascism_subject: "National State of Borelia"
  QUE_USA_fascism_subject_DEF: "the National State of Borelia"

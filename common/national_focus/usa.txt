@@ -7568,10 +7568,6 @@ focus_tree = {
     			ideology = fascism_ideology
     			trait = light_bearer
 			}
-			add_power_balance_value = {
-				id = USA_power_balance
-				value = -0.1
-			}
 			custom_effect_tooltip = wholesomedotpng
 		}
 	}
@@ -8267,11 +8263,11 @@ focus_tree = {
 			}
 		}
 		
-		cost = 3
+		cost = 2
 		ai_will_do = {
 			factor = 10
 		}
-		icon = GFX_focus_ARG_defense_and_democracy
+		icon = GFX_goal_generic_attack_allies
 		available = {
 			has_government = fascism
 			NOT = { has_country_leader = { ruling_only = yes character = USA_Ezra_Pound } }
@@ -8316,6 +8312,7 @@ focus_tree = {
    				ideology = nazism
    				trait = prophet_of_imperium
 			}
+			set_cosmetic_tag = YOCK
 		}
 	}
 	focus = {
@@ -8590,6 +8587,7 @@ focus_tree = {
 		available_if_capitulated = no
 		completion_reward = {
 			add_popularity = { ideology = communism popularity = 0.2 }
+			set_cosmetic_tag = HEMM
 		}
 	}
 	focus = {
@@ -8663,6 +8661,12 @@ focus_tree = {
 		continue_if_invalid = no
 		available_if_capitulated = no
 		completion_reward = {
+			every_owned_state = {
+			if = {
+			limit = { is_core_of = ROOT }
+			add_extra_state_shared_building_slots = 1
+			}
+			}
 		}
 	}
 	focus = {
@@ -8785,6 +8789,231 @@ focus_tree = {
 		available = {
 			has_government = communism
 			has_country_leader = { ruling_only = yes character = USA_Ernest_Hemmingway }
+			has_country_flag = PoundDead
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = USA_away_from_gold
+		x = 0
+		y = 1
+		
+		cost = 5
+		ai_will_do = {
+			factor = 10
+		}
+		relative_position_id = USA_fall_of_prometheus
+		prerequisite = { focus = USA_fall_of_prometheus }
+		icon = GFX_focus_ITA_corpo_volontari_della_liberta
+		available = {
+			has_government = fascism
+			has_country_leader = { ruling_only = yes character = USA_George_Christians }
+			has_country_flag = PoundDead
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		completion_reward = {
+		}
+	}
+	focus = {
+		id = USA_the_whiteshirts
+		x = -1
+		y = 1
+		
+		cost = 5
+		ai_will_do = {
+			factor = 10
+		}
+		relative_position_id = USA_away_from_gold
+		prerequisite = { focus = USA_away_from_gold }
+		icon = GFX_focus_SOV_builder_of_the_red_army
+		available = {
+			has_government = fascism
+			has_country_leader = { ruling_only = yes character = USA_George_Christians }
+			has_country_flag = PoundDead
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		completion_reward = {
+		}
+	}
+	focus = {
+		id = USA_crusade_for_economic_liberty
+		x = 1
+		y = 1
+		
+		cost = 5
+		ai_will_do = {
+			factor = 10
+		}
+		relative_position_id = USA_away_from_gold
+		prerequisite = { focus = USA_away_from_gold }
+		icon = GFX_focus_ITA_generic_fascist_workers
+		available = {
+			has_government = fascism
+			has_country_leader = { ruling_only = yes character = USA_George_Christians }
+			has_country_flag = PoundDead
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		completion_reward = {
+		}
+	}
+	focus = {
+		id = USA_a_red_kkk
+		x = -2
+		y = 2
+		
+		cost = 5
+		ai_will_do = {
+			factor = 10
+		}
+		relative_position_id = USA_away_from_gold
+		prerequisite = { focus = USA_the_whiteshirts }
+		prerequisite = { focus = USA_crusade_for_economic_liberty }
+		icon = GFX_focus_usa_honor_the_confederacy
+		available = {
+			has_government = fascism
+			has_country_leader = { ruling_only = yes character = USA_George_Christians }
+			has_country_flag = PoundDead
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		completion_reward = {
+		}
+	}
+	focus = {
+		id = USA_paper_and_ink_revolution
+		x = 0
+		y = 2
+		
+		cost = 5
+		ai_will_do = {
+			factor = 10
+		}
+		relative_position_id = USA_away_from_gold
+		prerequisite = { focus = USA_the_whiteshirts }
+		prerequisite = { focus = USA_crusade_for_economic_liberty }
+		icon = GFX_focus_generic_fascist_propaganda
+		available = {
+			has_government = fascism
+			has_country_leader = { ruling_only = yes character = USA_George_Christians }
+			has_country_flag = PoundDead
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		completion_reward = {
+		}
+	}
+	focus = {
+		id = USA_human_effort_instead_of_gold
+		x = 2
+		y = 2
+		
+		cost = 5
+		ai_will_do = {
+			factor = 10
+		}
+		relative_position_id = USA_away_from_gold
+		prerequisite = { focus = USA_the_whiteshirts }
+		prerequisite = { focus = USA_crusade_for_economic_liberty }
+		icon = GFX_focus_generic_public_works
+		available = {
+			has_government = fascism
+			has_country_leader = { ruling_only = yes character = USA_George_Christians }
+			has_country_flag = PoundDead
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		completion_reward = {
+		}
+	}
+	focus = {
+		id = USA_escalate_the_finance_war
+		x = -1
+		y = 3
+		
+		cost = 5
+		ai_will_do = {
+			factor = 10
+		}
+		relative_position_id = USA_away_from_gold
+		prerequisite = { focus = USA_paper_and_ink_revolution }
+		prerequisite = { focus = USA_a_red_kkk }
+		prerequisite = { focus = USA_human_effort_instead_of_gold }
+		icon = GFX_focus_GER_wage_war_on_capitalism
+		available = {
+			has_government = fascism
+			has_country_leader = { ruling_only = yes character = USA_George_Christians }
+			has_country_flag = PoundDead
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		completion_reward = {
+		}
+	}
+	focus = {
+		id = USA_the_golden_rule
+		x = 1
+		y = 3
+		
+		cost = 5
+		ai_will_do = {
+			factor = 10
+		}
+		relative_position_id = USA_away_from_gold
+		prerequisite = { focus = USA_paper_and_ink_revolution }
+		prerequisite = { focus = USA_a_red_kkk }
+		prerequisite = { focus = USA_human_effort_instead_of_gold }
+		icon = GFX_focus_SWE_refuge_for_revolutionaries
+		available = {
+			has_government = fascism
+			has_country_leader = { ruling_only = yes character = USA_George_Christians }
+			has_country_flag = PoundDead
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		completion_reward = {
+		}
+	}
+	focus = {
+		id = USA_the_death_of_tyranny
+		x = 0
+		y = 4
+		
+		cost = 5
+		ai_will_do = {
+			factor = 10
+		}
+		relative_position_id = USA_away_from_gold
+		prerequisite = { focus = USA_the_golden_rule }
+		prerequisite = { focus = USA_escalate_the_finance_war }
+		icon = GFX_focus_NOR_send_the_king_back_to_denmark
+		available = {
+			has_government = fascism
+			has_country_leader = { ruling_only = yes character = USA_George_Christians }
 			has_country_flag = PoundDead
 		}
 
