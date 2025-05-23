@@ -211,7 +211,6 @@ country_event = {
 			long_name = "Popular Social Front"
 			name = "PSF"
 		}
-		set_cosmetic_tag = HEMM
 	}
 	
 	option = {
@@ -223,7 +222,6 @@ country_event = {
 			long_name = "Imperial Vanguard"
 			name = "Imperial Vanguard"
 		}
-		set_cosmetic_tag = YOCK
 	}
 }
 

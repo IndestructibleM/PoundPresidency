@@ -1636,10 +1636,14 @@ ASR_virtue = {
 	color_ui = rgb { 30 50 150 }
 }
 HEMM = {
-	color = rgb { 155 20 20 }
-	color_ui = rgb { 150 20 20 }
+	color = rgb { 160 20 20 }
+	color_ui = rgb { 160 20 20 }
 }
 YOCK = {
 	color = rgb { 0 0 80 }
 	color_ui = rgb { 0 0 80 }
+}
+CHRI = {
+	color = rgb { 140 10 35 }
+	color_ui = rgb { 140 10 35 }
 }
