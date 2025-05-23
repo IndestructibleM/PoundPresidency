@@ -7380,6 +7380,8 @@ focus_tree = {
 			add_ideas = civilian_economy
 			add_state_core = 463
 			add_state_core = 629
+			add_state_core = 686
+			add_state_core = 650
 			custom_effect_tooltip = "We shall end the false snore of Monroe in favor of a revolutionary Manifest Destiny!"
 		}
 	}

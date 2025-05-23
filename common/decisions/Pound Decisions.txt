@@ -284,7 +284,7 @@ USA_map_painting = {
 			tag = USA
 		}
 		cost = 10
-		days_remove = 30
+		days_remove = 20
 		available = { 
 			tag = USA
 			has_government = fascism
@@ -293,7 +293,7 @@ USA_map_painting = {
 				compliance > 15
 			}
 		}
-		modifier = { political_power_factor = -0.3 }
+		modifier = { political_power_factor = -0.2 }
 		ai_will_do = {
 			factor = 90
 		}
