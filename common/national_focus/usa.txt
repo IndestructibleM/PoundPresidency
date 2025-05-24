@@ -8285,7 +8285,7 @@ focus_tree = {
 	# Yockey
 	focus = {
 		id = USA_prophecy_of_imperium
-		x = 7
+		x = 9
 		y = 1
 		
 		cost = 5
@@ -8566,7 +8566,7 @@ focus_tree = {
 	# Hemmingway
 	focus = {
 		id = USA_left_utopians_triumph
-		x = -7
+		x = -9
 		y = 1
 		
 		cost = 5
@@ -8799,9 +8799,10 @@ focus_tree = {
 		}
 	}
 
+	## George Christians
 	focus = {
 		id = USA_away_from_gold
-		x = 0
+		x = 3
 		y = 1
 		
 		cost = 5
@@ -9013,7 +9014,233 @@ focus_tree = {
 		icon = GFX_focus_NOR_send_the_king_back_to_denmark
 		available = {
 			has_government = fascism
-			has_country_leader = { ruling_only = yes character = USA_George_Christians }
+			has_country_leader = { ruling_only = yes character = USA_howard_scott }
+			has_country_flag = PoundDead
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		completion_reward = {
+		}
+	}
+
+	## Scott
+	focus = {
+		id = USA_revolt_of_engineers
+		x = -3
+		y = 1
+		
+		cost = 5
+		ai_will_do = {
+			factor = 10
+		}
+		relative_position_id = USA_fall_of_prometheus
+		prerequisite = { focus = USA_fall_of_prometheus }
+		icon = GFX_goal_generic_fortify_city
+		available = {
+			has_government = neutrality
+			has_country_leader = { ruling_only = yes character = USA_howard_scott }
+			has_country_flag = PoundDead
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		completion_reward = {
+		}
+	}
+	focus = {
+		id = USA_geothermal_evolution
+		x = -1
+		y = 1
+		
+		cost = 5
+		ai_will_do = {
+			factor = 10
+		}
+		relative_position_id = USA_revolt_of_engineers
+		prerequisite = { focus = USA_revolt_of_engineers }
+		icon = GFX_focus_GER_prioritize_the_four_year_plan
+		available = {
+			has_government = neutrality
+			has_country_leader = { ruling_only = yes character = USA_howard_scott }
+			has_country_flag = PoundDead
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		completion_reward = {
+		}
+	}
+	focus = {
+		id = USA_dictatorship_of_logos
+		x = 1
+		y = 1
+		
+		cost = 5
+		ai_will_do = {
+			factor = 10
+		}
+		relative_position_id = USA_revolt_of_engineers
+		prerequisite = { focus = USA_revolt_of_engineers }
+		icon = GFX_goal_tfv_generic_tech_sharing
+		available = {
+			has_government = neutrality
+			has_country_leader = { ruling_only = yes character = USA_howard_scott }
+			has_country_flag = PoundDead
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		completion_reward = {
+		}
+	}
+	focus = {
+		id = USA_energy_credit_system
+		x = -2
+		y = 2
+		
+		cost = 5
+		ai_will_do = {
+			factor = 10
+		}
+		relative_position_id = USA_revolt_of_engineers
+		prerequisite = { focus = USA_geothermal_evolution }
+		prerequisite = { focus = USA_dictatorship_of_logos }
+		icon = GFX_focus_GER_customs_union
+		available = {
+			has_government = neutrality
+			has_country_leader = { ruling_only = yes character = USA_howard_scott }
+			has_country_flag = PoundDead
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		completion_reward = {
+		}
+	}
+	focus = {
+		id = USA_hierarchical_meritocracy
+		x = 0
+		y = 2
+		
+		cost = 5
+		ai_will_do = {
+			factor = 10
+		}
+		relative_position_id = USA_revolt_of_engineers
+		prerequisite = { focus = USA_geothermal_evolution }
+		prerequisite = { focus = USA_dictatorship_of_logos }
+		icon = GFX_focus_generic_full_social_mobilization
+		available = {
+			has_government = neutrality
+			has_country_leader = { ruling_only = yes character = USA_howard_scott }
+			has_country_flag = PoundDead
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		completion_reward = {
+		}
+	}
+	focus = {
+		id = USA_sober_up_and_study
+		x = 2
+		y = 2
+		
+		cost = 5
+		ai_will_do = {
+			factor = 10
+		}
+		relative_position_id = USA_revolt_of_engineers
+		prerequisite = { focus = USA_geothermal_evolution }
+		prerequisite = { focus = USA_dictatorship_of_logos }
+		icon = GFX_focus_generic_treaty
+		available = {
+			has_government = neutrality
+			has_country_leader = { ruling_only = yes character = USA_howard_scott }
+			has_country_flag = PoundDead
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		completion_reward = {
+		}
+	}
+	focus = {
+		id = USA_wonders_of_mankind
+		x = -1
+		y = 3
+		
+		cost = 5
+		ai_will_do = {
+			factor = 10
+		}
+		relative_position_id = USA_revolt_of_engineers
+		prerequisite = { focus = USA_energy_credit_system }
+		prerequisite = { focus = USA_hierarchical_meritocracy }
+		prerequisite = { focus = USA_sober_up_and_study }
+		icon = GFX_focus_GER_wunderwaffe
+		available = {
+			has_government = neutrality
+			has_country_leader = { ruling_only = yes character = USA_howard_scott }
+			has_country_flag = PoundDead
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		completion_reward = {
+		}
+	}
+	focus = {
+		id = USA_liberation_of_science
+		x = 1
+		y = 3
+		
+		cost = 5
+		ai_will_do = {
+			factor = 10
+		}
+		relative_position_id = USA_revolt_of_engineers
+		prerequisite = { focus = USA_energy_credit_system }
+		prerequisite = { focus = USA_hierarchical_meritocracy }
+		prerequisite = { focus = USA_sober_up_and_study }
+		icon = GFX_focus_research2
+		available = {
+			has_government = neutrality
+			has_country_leader = { ruling_only = yes character = USA_howard_scott }
+			has_country_flag = PoundDead
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		completion_reward = {
+		}
+	}
+	focus = {
+		id = USA_panama_to_pole
+		x = 0
+		y = 4
+		
+		cost = 5
+		ai_will_do = {
+			factor = 10
+		}
+		relative_position_id = USA_revolt_of_engineers
+		prerequisite = { focus = USA_wonders_of_mankind }
+		prerequisite = { focus = USA_liberation_of_science }
+		icon = GFX_focus_generic_diplomatic_treaty
+		available = {
+			has_government = neutrality
+			has_country_leader = { ruling_only = yes character = USA_howard_scott }
 			has_country_flag = PoundDead
 		}
 

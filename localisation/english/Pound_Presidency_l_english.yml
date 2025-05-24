@@ -87,7 +87,7 @@
  USA_destiny_of_america: "The Destiny of America"
  USA_the_enemy_of_europe: "The Enemy of Europe"
  USA_frontier_of_annihilation: "Frontiers of Annihilation"
- USA_20_20ths: "§t"Twenty-Twentieths of the World"§!"
+ USA_20_20ths: ""Twenty-Twentieths of the World""
  # Hemmingway
  USA_left_utopians_triumph: "Triumph of the Left-Utopians!"
  USA_autonomy_of_creative_labor: "Autonomy of Creative Labor"
@@ -102,12 +102,22 @@
  USA_away_from_gold: "Away from the Tyranny of Gold"
  USA_the_whiteshirts: "The Crusader Whiteshirts"
  USA_crusade_for_economic_liberty: "Crusade for Economic Liberty"
- USA_a_red_kkk: "Stand up for the New People's Klan!"
+ USA_a_red_kkk: "A Red Klan Rises!"
  USA_paper_and_ink_revolution: "Paper and Ink Revolution"
  USA_human_effort_instead_of_gold: "Human Effort instead of Gold"
  USA_escalate_the_finance_war: "Escalate the War on Finance"
  USA_the_golden_rule: "The Golden Rule, not Rule of Gold"
  USA_the_death_of_tyranny: "The Death of Tyranny"
+ # Scott
+ USA_revolt_of_engineers: "Revolt of the Engineers"
+ USA_geothermal_evolution: "Geothermal Evolution"
+ USA_dictatorship_of_logos: "Dictatorship of Logos"
+ USA_hierarchical_meritocracy: "Hierarchical Meritocracy"
+ USA_energy_credit_system: "Energy Credit System"
+ USA_sober_up_and_study: "Sober up and Study!"
+ USA_wonders_of_mankind: "Wonders of Mankind"
+ USA_liberation_of_science: "Liberation of Science"
+ USA_panama_to_pole: "From Panama to the North Pole"
  
  
  ### Ideas
@@ -138,12 +148,20 @@
  CHRI_DEF: "the Confederacy of Revolutionary American States" 
  CHRI_ADJ: "Revolutionary Confederate" 
  
+ SCOT: "North American Technate"
+ SCOT_DEF: "the North American Technate"
+ SCOT_ADJ: "Technate"
+ 
+ Imperium: "Imperium of Faustian Europe"
+ Imperium_DEF: "the Imperium of Faustian Europe"
+ Imperium_ADJ: "Imperium"
+ 
  QUE_USA_fascism_subject: "National State of Borelia"
  QUE_USA_fascism_subject_DEF: "the National State of Borelia"
  MEX_USA_fascism_subject: "Cosmic Mexican State"
  MEX_USA_fascism_subject_DEF: "the Cosmic Mexican State"
- ENG_USA_neutrality_subject: "Sublime Kingdom of Brittania"
- ENG_USA_neutrality_subject_DEF: "the Sublime Kingdom of Brittania"
+ ENG_USA_neutrality_subject: "Grand Kingdom of Brittania"
+ ENG_USA_neutrality_subject_DEF: "the Grand Kingdom of Brittania"
 
  ### Traits
  youth_vanguard: "Youth Vanguard Leader"
@@ -188,3 +206,10 @@
  collaborator_gov: "Collaborator Government"
  
  PoundDead: "Commander Pound is No More"
+ 
+ # Ideologies
+ socfash: "Social Fascism"
+ natcol: "National Collectivism"
+ utopian_socialism: "Utopian Socialism"
+ technocracy: "Technocracy"
+ toteur: "Totalitarian Paneuropeanism"

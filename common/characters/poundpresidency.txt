@@ -7,7 +7,7 @@ characters = {
 			}
 		}
 		country_leader = {
-			ideology = fascism_ideology
+			ideology = socfash
 		}
 	}
 	
@@ -19,7 +19,19 @@ characters = {
 			}
 		}
 		country_leader = {
-			ideology = marxism
+			ideology = utopian_socialism
+		}
+	}
+	
+	USA_George_Christians = {
+		name = "George W. Christians"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/USA/Portrait_George_Christians.png"
+			}
+		}
+		country_leader = {
+			ideology = natcol
 		}
 	}
 	
@@ -97,6 +109,12 @@ characters = {
 			civilian = {
 				small = "gfx/interface/advisors/USA/USA_howard_scott.png"
 			}
+			civilian = {
+				large = "gfx/leaders/USA/Portrait_Howard_Scott.png"
+			}
+		}
+		country_leader = {
+			ideology = technocracy
 		}
 		advisor = {
 			slot = political_advisor
@@ -118,7 +136,7 @@ characters = {
 			}
 		}
 		country_leader = {
-			ideology = nazism
+			ideology = toteur
 		}
 		advisor = {
 			slot = political_advisor

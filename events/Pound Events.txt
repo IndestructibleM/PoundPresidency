@@ -201,7 +201,7 @@ country_event = {
 	is_triggered_only = yes
 	
 	option = {
-		name = "Hemmingway"
+		name = "March Left! Hemmingway!"
 		promote_character = USA_Ernest_Hemmingway
 		set_politics = {
 			ruling_party = communism
@@ -214,7 +214,31 @@ country_event = {
 	}
 	
 	option = {
-		name = "Yockey"
+		name = "March Forward! Scott!"
+		promote_character = USA_howard_scott
+		set_politics = {
+			ruling_party = neutrality
+			elections_allowed = no
+			last_election = "1936.11.5"
+			election_frequency = 48
+		}
+	}
+	
+	option = {
+		name = "March Back! Christians!"
+		promote_character = USA_George_Christians
+		set_politics = {
+			ruling_party = fascism
+			elections_allowed = no
+			last_election = "1936.11.5"
+			election_frequency = 48
+			long_name = "Crusaders for Liberty"
+			name = "Crusaders for Liberty"
+		}
+	}
+	
+	option = {
+		name = "March Right! Yockey!"
 		promote_character = USA_francis_yockey
 		set_politics = {
 			ruling_party = fascism

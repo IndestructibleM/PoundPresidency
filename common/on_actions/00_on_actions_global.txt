@@ -14,11 +14,11 @@ on_actions = {
 				}
 				recruit_character = USA_Ezra_Pound
 				recruit_character = USA_Ernest_Hemmingway
-				recruit_character = USA_Smedley_Butler
 				recruit_character = USA_richard_child
 				recruit_character = USA_howard_scott
 				recruit_character = USA_francis_yockey
 				recruit_character = USA_lawrence_dennis
+				recruit_character = USA_George_Christians
 				recruit_character = USA_charles_lindbergh_ac
 				country_event = { id = pound.0 days = 0 } 
 			}

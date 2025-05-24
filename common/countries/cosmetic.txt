@@ -1643,7 +1643,15 @@ YOCK = {
 	color = rgb { 0 0 80 }
 	color_ui = rgb { 0 0 80 }
 }
+Imperium = {
+	color = rgb { 0 0 80 }
+	color_ui = rgb { 0 0 80 }
+}
 CHRI = {
 	color = rgb { 140 10 35 }
 	color_ui = rgb { 140 10 35 }
+}
+SCOT = {
+	color = rgb { 90 90 100 }
+	color_ui = rgb { 90 90 100 }
 }
