@@ -8822,6 +8822,7 @@ focus_tree = {
 		continue_if_invalid = no
 		available_if_capitulated = no
 		completion_reward = {
+			set_cosmetic_tag = CHRI
 		}
 	}
 	focus = {
@@ -9048,6 +9049,8 @@ focus_tree = {
 		continue_if_invalid = no
 		available_if_capitulated = no
 		completion_reward = {
+			add_popularity = { ideology = neutrality popularity = 0.2 }
+			set_cosmetic_tag = SCOT
 		}
 	}
 	focus = {
