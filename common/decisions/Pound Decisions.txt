@@ -17,7 +17,6 @@ USA_balance_of_power_category = {
 	cost = 50
     complete_effect = {
 		add_popularity = { ideology = neutrality popularity = 0.04 }
-		add_stability = -0.01
 		add_power_balance_value = {
 			id = USA_power_balance
 			value = -0.15
@@ -44,7 +43,6 @@ USA_balance_of_power_category = {
 	cost = 50
     complete_effect = {
 		add_popularity = { ideology = communism popularity = 0.04 }
-		add_stability = -0.01
 		add_power_balance_value = {
 			id = USA_power_balance
 			value = 0.15
@@ -74,7 +72,7 @@ USA_balance_of_power_category = {
 			limit = {
 				power_balance_value = {
 				id = USA_power_balance
-				value > 0.05
+				value > 0.1
 				}
 			}
 			add_stability = 0.01
@@ -88,7 +86,7 @@ USA_balance_of_power_category = {
 			limit = {
 				power_balance_value = {
 				id = USA_power_balance
-				value < -0.05
+				value < -0.1
 				}
 			}
 			add_stability = 0.01
@@ -102,11 +100,11 @@ USA_balance_of_power_category = {
 			limit = {
 				power_balance_value = {
 				id = USA_power_balance
-				value > -0.05
+				value > -0.1
 				}
 				power_balance_value = {
 				id = USA_power_balance
-				value < 0.05
+				value < 0.1
 				}
 			}
 			add_stability = 0.05
@@ -131,7 +129,6 @@ USA_balance_of_power_category = {
 	cost = 50
 	complete_effect = {
 		add_popularity = { ideology = neutrality popularity = 0.04 }
-		add_stability = -0.01
 		add_power_balance_value = {
 			id = USA_power_balance
 			value = -0.2
@@ -165,7 +162,6 @@ USA_balance_of_power_category = {
 	cost = 50
     complete_effect = {
 		add_popularity = { ideology = communism popularity = 0.04 }
-		add_stability = -0.01
 		add_power_balance_value = {
 			id = USA_power_balance
 			value = 0.2
@@ -181,6 +177,7 @@ foreign_politics = {
 	target_trigger = { 
      	FROM = {
 			can_ROOT_get_wargoal_on_THIS = yes
+			is_neighbor_of = FROM
 			or = {
 				has_government = democratic
 				has_government = communism 
@@ -336,8 +333,7 @@ USA_map_painting = {
 			tag = USA
 		}
 		icon = GFX_decision_infiltrate_state
-		state_target = yes
-		targets = { 862 860 863 466 861 }
+		targets = { QUE }
 		visible = { 
 			QUE = { owns_state = 468 }
 			QUE = { is_subject_of = USA }
@@ -348,8 +344,11 @@ USA_map_painting = {
 		}
 		complete_effect = {
 			FROM = { 
-			transfer_state_to = QUE 
-			add_core_of = QUE
+			transfer_state = 861
+			transfer_state = 466
+			transfer_state = 863
+			transfer_state = 860
+			transfer_state = 862
 			}	
 		}
 	}
@@ -385,8 +384,7 @@ USA_map_painting = {
 			tag = USA
 		}
 		icon = GFX_decision_infiltrate_state
-		state_target = yes
-		targets = { 477 478 485 476 475 474 }
+		targets = { MEX }
 		visible = { 
 			MEX = { owns_state = 277 }
 			MEX = { is_subject_of = USA }
@@ -397,8 +395,12 @@ USA_map_painting = {
 		}
 		complete_effect = {
 			FROM = { 
-			transfer_state_to = MEX 
-			add_core_of = MEX
+			transfer_state = 474
+			transfer_state = 475
+			transfer_state = 476
+			transfer_state = 485
+			transfer_state = 478
+			transfer_state = 477
 			}	
 		}
 	}
@@ -408,6 +410,8 @@ USA_map_painting = {
 		allowed = { 
 			tag = USA
 		}
+		targets = { ENG }
+		target_non_existing = yes
 		icon = GFX_decision_generic_form_nation
 		visible = { 
 			OR = {
@@ -420,24 +424,8 @@ USA_map_painting = {
 			factor = 100
 		}
 		complete_effect = {
-			ENG = { 
-				transfer_state = 126
-				transfer_state = 129
-				transfer_state = 120
-				transfer_state = 120
-				transfer_state = 136
-				transfer_state = 121
-				transfer_state = 133
-				transfer_state = 131
-				transfer_state = 931
-				transfer_state = 132
-				transfer_state = 130
-				transfer_state = 122
-				transfer_state = 128
-				transfer_state = 125
-				transfer_state = 127
-				transfer_state = 123
-				transfer_state = 338
+			FROM = { 
+				every_core_state = { transfer_state_to = PREV }
 			}
 			GER = {
 				transfer_state = 933
@@ -448,7 +436,7 @@ USA_map_painting = {
 				target = ENG
 				autonomous_state = collaborator_gov
 			}
-			ENG = {
+			FROM = {
 				set_politics = {
 				ruling_party = neutrality
 				elections_allowed = no
@@ -458,7 +446,7 @@ USA_map_painting = {
 				promote_character = ENG_Wyndham_Lewis
 			}
 		}
-		}
+	}
 		
 	USA_anchluss_iceland = {
 		name = "Territory Transfer of Iceland"
@@ -471,7 +459,7 @@ USA_map_painting = {
 		icon = GFX_decision_infiltrate_state
 		visible = { 
 			has_government = fascism
-			has_claim_on = 100
+			FROM = { is_claimed_by = USA }
 		}
 		available = {
 			any_allied_country = { owns_state = 100 }
@@ -497,12 +485,12 @@ USA_map_painting = {
 		visible = { 
 			NOT = { USA = { owns_state = 101 } }
 			has_government = fascism
-			has_claim_on = 101
+			101 = { is_claimed_by = USA }
 		}
 		available = {
 			strength_ratio = {
 				tag = DEN
-				ratio > 6
+				ratio > 5
 			} 
 			ships_in_area = { area = 50 size > 19 } 
 			ships_in_area = { area = 44 size > 19 } 

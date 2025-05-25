@@ -93,12 +93,12 @@
  ASR_virtue: "National Republic of Virtue"
  ASR_virtue_DEF: "the National Republic of Virtue"
  
- QUE_USA_fascism_subject: "National State of Borelia"
- QUE_USA_fascism_subject_DEF: "the National State of Borelia"
+ QUE_USA_fascism_subject: "New French State of Borelia"
+ QUE_USA_fascism_subject_DEF: "the New French State of Borelia"
  MEX_USA_fascism_subject: "Cosmic Mexican State"
  MEX_USA_fascism_subject_DEF: "the Cosmic Mexican State"
- ENG_USA_neutrality_subject: "Sublime Kingdom of Brittania"
- ENG_USA_neutrality_subject_DEF: "the Sublime Kingdom of Brittania"
+ ENG_USA_neutrality_subject: "Grand Kingdom of Brittania"
+ ENG_USA_neutrality_subject_DEF: "the Grand Kingdom of Brittania"
 
  ### Traits
  youth_vanguard: "Youth Vanguard Leader"
@@ -121,9 +121,9 @@
  USA_technomodernists_medium_control_range: "Medium Technocratic-Modernist Influence"
  USA_technomodernists_high_control_range: "High Technocratic-Modernist Influence"
  USA_fascist_syndicalists_side: "Fascist Syndicalist Populists"
- USA_fascist_syndicalists_low_control_range: "Low Fascist-Syndicalsit Influence"
- USA_fascist_syndicalists_medium_control_range: "Medium Fascist-Syndicalsit Influence"
- USA_fascist_syndicalists_high_control_range: "High Fascist-Syndicalsit Influence"
+ USA_fascist_syndicalists_low_control_range: "Low Fascist-Syndicalist Influence"
+ USA_fascist_syndicalists_medium_control_range: "Medium Fascist-Syndicalistt Influence"
+ USA_fascist_syndicalists_high_control_range: "High Fascist-Syndicalist Influence"
  
  ### Events
  pound.0.d:0 "Welcome to The Pound Presidency. What happens when a 4-times mental hospital patient, pyschedelics user and wannabe-poet makes his own mod? This is the answer! \n\nTo get Ezra Pound as president, wait until the 1936 elections event, and select the third option. Pound will become leader and the ruling ideology will change to fascism. That's it. Coring and release decisions are formable after taking the "All the World a Canvas" focus. It is also reccomended to play on historical for the best experience. \n\nThis mod was made for fun with some friends in a group chat in about 3 weeks work while I finished up my semester, a lot of love went into it and I can only hope you enjoy playing it as much as I did making it! \n\nMod Credits: Indy, Koopa, Deng, Jotell, MacDeko, Stapledonite, OttomanTurks, Verre De Lune, MrSwagBringer, and the very cool testers that I forced at gunpoint to play the mod."

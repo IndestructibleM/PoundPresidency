@@ -8213,6 +8213,7 @@ focus_tree = {
 		completion_reward = {
 			unlock_decision_tooltip = USA_conquest_of_latam
 			country_event = { id = pound.9 days = 0 }
+			add_stability = 0.08
 		}
 	}		
 	focus = {

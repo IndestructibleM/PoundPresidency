@@ -157,7 +157,7 @@ ideas = {
 				nuclear_production = 1
 				production_speed_nuclear_reactor_factor = 0.2
 				nuclear_production_factor= 0.2
-				rocket_attack_factor = 0.5
+				ground_attack_factor = 0.3
 			}
 		}
 	}
