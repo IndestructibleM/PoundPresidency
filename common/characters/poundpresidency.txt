@@ -35,6 +35,18 @@ characters = {
 		}
 	}
 	
+	MEX_Jose_Vasconcelos = {
+		name = "José Vasconcelos"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/MEX/Portrait_Jose_Vasconcelos.png"
+			}
+		}
+		country_leader = {
+			ideology = despotism
+		}
+	}
+	
 	USA_richard_child = {
 		name = "Richard W. Child"
 		portraits = {

@@ -414,7 +414,8 @@ USA_map_painting = {
 			set_autonomy = {
 				target = MEX
 				autonomous_state = collaborator_gov
-			}	
+			}
+			MEX = { promote_character = MEX_Jose_Vasconcelos }
 		}
 	}
 	USA_reorganize_mexico2 = {

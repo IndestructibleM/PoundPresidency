@@ -2249,6 +2249,7 @@ country_event = {
 	id = pound.40
 	title = "Claims for Greater Liberia"
 	desc = "Pound Invites you to join his faction, do you rally with him or decline?"
+	fire_only_once = yes
 	trigger = { 
 		tag = LIB
 		has_government = fascism
