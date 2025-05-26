@@ -21,6 +21,7 @@ on_actions = {
 				country_event = { id = pound.0 days = 0 } 
 			}
 			ENG = { recruit_character = ENG_Wyndham_Lewis }
+			LIB = { recruit_character = LIB_Marcus_Garvey }
 		}
 	}
 }

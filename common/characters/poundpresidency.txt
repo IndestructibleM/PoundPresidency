@@ -23,6 +23,18 @@ characters = {
 		}
 	}
 	
+	LIB_Marcus_Garvey = {
+		name = "Marcus Garvey"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/LIB/Portrait_Marcus_Garvey.png"
+			}
+		}
+		country_leader = {
+			ideology = fascism_ideology
+		}
+	}
+	
 	USA_richard_child = {
 		name = "Richard W. Child"
 		portraits = {

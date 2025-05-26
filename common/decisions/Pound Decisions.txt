@@ -447,6 +447,70 @@ USA_map_painting = {
 			}
 		}
 	}
+	USA_reorganize_liberia = {
+		name = "Reorganize Liberia"
+		fire_only_once = yes
+		icon = GFX_decision_generic_form_nation
+		targets = { LIB }
+		target_non_existing = yes
+		allowed = { 
+			tag = USA
+		}
+		available = { 
+			OR = {
+			any_allied_country = { owns_state = 298 }
+			USA = { owns_state = 298 }
+			LIB = { is_subject_of = USA }
+			}
+		}
+		ai_will_do = {
+			factor = 100
+		}
+		complete_effect = {
+			FROM = { 
+				transfer_state = 298
+				add_state_claim = 556
+				add_state_claim = 780
+				add_state_claim = 778
+				add_state_claim = 274
+				add_state_claim = 779
+				add_state_claim = 296
+				add_state_claim = 776
+				add_state_claim = 777
+				add_state_claim = 700
+				promote_character = LIB_Marcus_Garvey
+			}
+			set_autonomy = {
+				target = LIB
+				autonomous_state = collaborator_gov
+			}
+		}
+	}
+	
+	USA_transfer_to_liberia = {
+		name = "Transfer [FROM.GetName] to Liberia"
+		fire_only_once = yes
+		icon = GFX_decision_infiltrate_state
+		state_target = yes
+		targets = { 556 780 778 274 779 296 776 777 700 }
+		allowed = { 
+			tag = USA
+		}
+		visible = { 
+			OR = {
+			USA = { owns_state = FROM }
+			owner = { is_ally_with = USA }
+			}
+		}
+		ai_will_do = {
+			factor = 100
+		}
+		complete_effect = {
+			FROM = { 
+				transfer_state_to = LIB
+			}
+		}
+	}
 		
 	USA_anchluss_iceland = {
 		name = "Territory Transfer of Iceland"
@@ -457,11 +521,9 @@ USA_map_painting = {
 			tag = USA
 		}
 		icon = GFX_decision_infiltrate_state
-		visible = { 
+		available = { 
 			has_government = fascism
 			FROM = { is_claimed_by = USA }
-		}
-		available = {
 			any_allied_country = { owns_state = 100 }
 			NOT = { USA = { owns_state = 100 } }
 		}
@@ -482,12 +544,10 @@ USA_map_painting = {
 			tag = USA
 		}
 		icon = GFX_decision_infiltrate_state
-		visible = { 
+		available = { 
 			NOT = { USA = { owns_state = 101 } }
 			has_government = fascism
 			101 = { is_claimed_by = USA }
-		}
-		available = {
 			strength_ratio = {
 				tag = DEN
 				ratio > 5
