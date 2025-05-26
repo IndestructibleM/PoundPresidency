@@ -95,8 +95,8 @@
  
  QUE_USA_fascism_subject: "New French State of Borelia"
  QUE_USA_fascism_subject_DEF: "the New French State of Borelia"
- MEX_USA_fascism_subject: "Cosmic Mexican State"
- MEX_USA_fascism_subject_DEF: "the Cosmic Mexican State"
+ MEX_USA_neutrality_subject: "Cosmic Mexican State"
+ MEX_USA_neutrality_subject_DEF: "the Cosmic Mexican State"
  ENG_USA_neutrality_subject: "Grand Kingdom of Brittania"
  ENG_USA_neutrality_subject_DEF: "the Grand Kingdom of Brittania"
 

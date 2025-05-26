@@ -172,46 +172,6 @@ USA_balance_of_power_category = {
 }
 
 foreign_politics = {
-	USA_coup_in_liberia = {
-	name = "Establish a Sister Republic in Liberia"
-	fire_only_once = yes
-	targets = { LIB }
-    allowed = { 
-		tag = USA
-	}
-	icon = GFX_decision_generic_prepare_civil_war
-	visible = {
-		tag = USA
-		has_completed_focus = USA_artistic_imperialism
-	}
-	ai_will_do = {
-       	factor = 90
-    }
-	modifier = {
-		political_power_factor = -0.50
-		civilian_factory_use = 10
-	}
-	days_remove = 100
-	cost = 100
-	complete_effect = {
-		add_equipment_to_stockpile = {
-			type = infantry_equipment
-			amount = -2000
-		}
-	}
-	
-    remove_effect = {
-		set_autonomy = {
-			target = LIB
-			autonomous_state = collaborator_gov
-		}
-		LIB = {
-			promote_character = LIB_Marcus_Garvey
-			set_cosmetic_tag = LIB_PP
-		}
-	}
-	}
-	
 	USA_triumph_over_war_and_money = {
 	name = "Annihilate the Material Powers"
 	target_trigger = { 
@@ -303,6 +263,8 @@ foreign_politics = {
 		}
 	}
 }
+
+
 USA_map_painting = {
 	USA_integrate_states = {
 		name = "Integrate [FROM.GetName]"
@@ -396,6 +358,8 @@ USA_map_painting = {
 		name = "Reorganize Mexico"
 		fire_only_once = yes
 		icon = GFX_decision_generic_form_nation
+		targets = { MEX }
+		target_non_existing = yes
 		allowed = { 
 			tag = USA
 		}
@@ -410,14 +374,23 @@ USA_map_painting = {
 			factor = 100
 		}
 		complete_effect = {
-			277 = { transfer_state_to = MEX }
 			set_autonomy = {
 				target = MEX
 				autonomous_state = collaborator_gov
 			}
-			MEX = { promote_character = MEX_Jose_Vasconcelos }
+			FROM = {
+				transfer_state = 277
+				promote_character = MEX_Jose_Vasconcelos_PP
+				set_politics = {
+					ruling_party = neutrality
+					elections_allowed = no
+					long_name = "Partido Nacional Revolucionario Reorganizado"
+					name = "PNRR"
+				}
+			}
 		}
 	}
+	
 	USA_reorganize_mexico2 = {
 		name = "Transfer Land to Mexico"
 		fire_only_once = yes
@@ -488,36 +461,43 @@ USA_map_painting = {
 			}
 		}
 	}
-	USA_reorganize_liberia = {
-		name = "Reorganize Liberia"
+	
+	USA_coup_in_liberia = {
+		name = "Marcus Garvey and the Liberia Plan"
 		fire_only_once = yes
-		icon = GFX_decision_generic_form_nation
 		targets = { LIB }
-		target_non_existing = yes
 		allowed = { 
 			tag = USA
 		}
-		available = { 
-			OR = {
-			any_allied_country = { owns_state = 298 }
-			USA = { owns_state = 298 }
-			}
-			NOT = { LIB = { owns_state = 298 } }
-		}
+		icon = GFX_decision_generic_prepare_civil_war
 		ai_will_do = {
-			factor = 100
+			factor = 90
 		}
+		modifier = {
+			political_power_factor = -0.50
+			civilian_factory_use = 10
+		}
+		days_remove = 100
+		cost = 100
 		complete_effect = {
-			FROM = { 
-				transfer_state = 298
-				promote_character = LIB_Marcus_Garvey
-				set_cosmetic_tag = LIB_PP
-			}
-			set_autonomy = {
-				target = LIB
-				autonomous_state = collaborator_gov
+			add_equipment_to_stockpile = {
+				type = infantry_equipment
+				amount = -2000
 			}
 		}
+	
+		remove_effect = {
+		set_autonomy = {
+			target = LIB
+			autonomous_state = collaborator_gov
+			end_wars = yes
+			end_civil_wars = yes
+		}
+		LIB = {
+			promote_character = LIB_Marcus_Garvey
+			set_cosmetic_tag = LIB_PP
+		}
+	}
 	}
 	
 	USA_transfer_to_liberia = {
@@ -531,7 +511,7 @@ USA_map_painting = {
 		}
 		visible = { 
 			OR = {
-			USA = { owns_state = FROM }
+			FROM = { owner = { tag = USA } }
 			FROM = { owner = { is_ally_with = USA } }
 			}
 		}
