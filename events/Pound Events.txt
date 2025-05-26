@@ -211,6 +211,7 @@ country_event = {
 			long_name = "Popular Social Front"
 			name = "PSF"
 		}
+		hidden_effect = { set_cosmetic_tag = ASR }
 	}
 	
 	option = {
@@ -222,6 +223,7 @@ country_event = {
 			last_election = "1936.11.5"
 			election_frequency = 48
 		}
+		hidden_effect = { set_cosmetic_tag = ASR }
 	}
 	
 	option = {
@@ -265,7 +267,7 @@ country_event = {
 	}
 	
 	option = {
-		name = "Pound is shot before he can finish!"
+		name = "Pound is shot before he can act!"
 		ai_chance = {
 			factor = 30
 		}

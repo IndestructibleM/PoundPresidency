@@ -9226,6 +9226,7 @@ focus_tree = {
 		continue_if_invalid = no
 		available_if_capitulated = no
 		completion_reward = {
+			add_research_slot = 1
 		}
 	}
 	focus = {
@@ -9251,6 +9252,14 @@ focus_tree = {
 		continue_if_invalid = no
 		available_if_capitulated = no
 		completion_reward = {
-		}
-	}
+			every_state = { 
+				limit = { is_on_continent = north_america }
+				add_claim_by = USA
+			}
+            create_wargoal = {
+            	target = PREV
+            	type = annex_everything
+          	}	
+      	}
+    }
 }
