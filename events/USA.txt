@@ -2244,3 +2244,28 @@ country_event = {
 		USA = { add_to_faction = ROOT }
 	}
 }
+
+country_event = {
+	id = pound.40
+	title = "Claims for Greater Liberia"
+	desc = "Pound Invites you to join his faction, do you rally with him or decline?"
+	trigger = { 
+		tag = LIB
+		has_government = fascism
+		is_subject_of = USA
+		USA = { has_government = fascism }
+	}
+	
+	option = {
+		name = "WE WUZ"
+		add_state_claim = 556
+		add_state_claim = 780
+		add_state_claim = 778
+		add_state_claim = 274
+		add_state_claim = 779
+		add_state_claim = 296
+		add_state_claim = 776
+		add_state_claim = 777
+		add_state_claim = 700
+	}
+}

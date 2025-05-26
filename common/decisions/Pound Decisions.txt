@@ -172,6 +172,46 @@ USA_balance_of_power_category = {
 }
 
 foreign_politics = {
+	USA_coup_in_liberia = {
+	name = "Establish a Sister Republic in Liberia"
+	fire_only_once = yes
+	targets = { LIB }
+    allowed = { 
+		tag = USA
+	}
+	icon = GFX_decision_generic_prepare_civil_war
+	visible = {
+		tag = USA
+		has_completed_focus = USA_artistic_imperialism
+	}
+	ai_will_do = {
+       	factor = 90
+    }
+	modifier = {
+		political_power_factor = -0.50
+		civilian_factory_use = 10
+	}
+	days_remove = 100
+	cost = 100
+	complete_effect = {
+		add_equipment_to_stockpile = {
+			type = infantry_equipment
+			amount = -2000
+		}
+	}
+	
+    remove_effect = {
+		set_autonomy = {
+			target = LIB
+			autonomous_state = collaborator_gov
+		}
+		LIB = {
+			promote_character = LIB_Marcus_Garvey
+			set_cosmetic_tag = LIB_PP
+		}
+	}
+	}
+	
 	USA_triumph_over_war_and_money = {
 	name = "Annihilate the Material Powers"
 	target_trigger = { 
@@ -460,8 +500,8 @@ USA_map_painting = {
 			OR = {
 			any_allied_country = { owns_state = 298 }
 			USA = { owns_state = 298 }
-			LIB = { is_subject_of = USA }
 			}
+			NOT = { LIB = { owns_state = 298 } }
 		}
 		ai_will_do = {
 			factor = 100
@@ -469,15 +509,6 @@ USA_map_painting = {
 		complete_effect = {
 			FROM = { 
 				transfer_state = 298
-				add_state_claim = 556
-				add_state_claim = 780
-				add_state_claim = 778
-				add_state_claim = 274
-				add_state_claim = 779
-				add_state_claim = 296
-				add_state_claim = 776
-				add_state_claim = 777
-				add_state_claim = 700
 				promote_character = LIB_Marcus_Garvey
 				set_cosmetic_tag = LIB_PP
 			}
@@ -500,7 +531,7 @@ USA_map_painting = {
 		visible = { 
 			OR = {
 			USA = { owns_state = FROM }
-			owner = { is_ally_with = USA }
+			FROM = { owner = { is_ally_with = USA } }
 			}
 		}
 		ai_will_do = {
@@ -509,6 +540,8 @@ USA_map_painting = {
 		complete_effect = {
 			FROM = { 
 				transfer_state_to = LIB
+				remove_claim_by = LIB
+				add_core_of = LIB
 			}
 		}
 	}
