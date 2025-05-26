@@ -479,6 +479,7 @@ USA_map_painting = {
 				add_state_claim = 777
 				add_state_claim = 700
 				promote_character = LIB_Marcus_Garvey
+				set_cosmetic_tag = LIB_PP
 			}
 			set_autonomy = {
 				target = LIB
