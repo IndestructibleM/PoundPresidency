@@ -59,6 +59,7 @@ USA_recalc_congress_icon_frames = yes
 USA = {
 	country_event = { id = usa.50 days = 2 }
 	country_event = { id = usa.51 days = 2 }
+	country_event = { id = pound.0 days = 0 } 
 }
 
 # Starting tech
@@ -382,6 +383,7 @@ add_ideas = {
 	disarmed_nation
 	free_trade
 	home_of_the_free
+	USA_rise_of_pound
 }
 
 
@@ -401,7 +403,8 @@ set_autonomy = {
 }
 
 recruit_character = USA_earl_browder
-recruit_character = USA_william_dudley_pelley
+recruit_character = USA_william_dudley_pelley 
+### ^He shows up as fascist leader at first but doesn't show up if you chose the third election option
 recruit_character = USA_franklin_delano_roosevelt
 recruit_character = USA_george_s_patton
 recruit_character = USA_omar_bradley
@@ -482,8 +485,6 @@ recruit_character = USA_francis_yockey
 recruit_character = USA_lawrence_dennis
 recruit_character = USA_George_Christians
 recruit_character = USA_charles_lindbergh_ac
-
-country_event = { id = pound.0 days = 0 } 
 
 
 

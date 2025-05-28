@@ -23,6 +23,8 @@ foreign_politics = {
 	}
 	visible = {
 		has_government = fascism
+		has_completed_focus = USA_20_20ths
+		has_country_leader = { ruling_only = yes character = USA_francis_yockey }
 	}
 	ai_will_do = {
        	factor = 50

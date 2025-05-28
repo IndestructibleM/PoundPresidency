@@ -209,6 +209,7 @@ country_event = {
 
 	immediate = {
 		hidden_effect = {
+		remove_ideas = USA_rise_of_pound
 			if = {
 				limit = {
 					OR = {
