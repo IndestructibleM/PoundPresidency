@@ -154,6 +154,12 @@ characters = {
 			civilian = {
 				small = "gfx/interface/advisors/USA/USA_lawrence_dennis.png"
 			}
+			civilian = {
+				large = "gfx/leaders/USA/Portrait_Lawrence_Dennis.png"
+			}
+		}
+		country_leader = {
+			ideology = fascism_ideology
 		}
 		advisor = {
 			slot = political_advisor

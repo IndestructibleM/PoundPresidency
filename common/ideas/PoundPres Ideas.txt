@@ -6,7 +6,7 @@ ideas = {
 				always = yes
 			}
 			modifier = {
-				stability_factor = -0.15
+				stability_factor = -0.2
 				fascism_drift = 0.08
 			}
 		}

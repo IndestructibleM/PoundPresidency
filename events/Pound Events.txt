@@ -197,6 +197,7 @@ country_event = {
 
 country_event = {
 	id = pound.12
+	desc = pound.12.d
 	title = "Choosing a Successor"
 	is_triggered_only = yes
 	
@@ -219,6 +220,18 @@ country_event = {
 		promote_character = USA_howard_scott
 		set_politics = {
 			ruling_party = neutrality
+			elections_allowed = no
+			last_election = "1936.11.5"
+			election_frequency = 48
+		}
+		hidden_effect = { set_cosmetic_tag = ASR }
+	}
+	
+	option = {
+		name = "Stand Strong! Dennis!"
+		promote_character = USA_lawrence_dennis
+		set_politics = {
+			ruling_party = fascism
 			elections_allowed = no
 			last_election = "1936.11.5"
 			election_frequency = 48
@@ -276,6 +289,18 @@ country_event = {
 		retire_character = USA_Ezra_Pound
 		promote_character = USA_richard_child
 		set_country_flag = PoundDead
+	}
+}
+
+country_event = {
+	id = pound.14
+	title = "The Eagle and the Silver Star"
+	desc = pound.14.d
+	is_triggered_only = yes
+	
+	option = {
+		name = "And so, the poet ruled, and the dreamers bowed."
+		retire_character = USA_william_dudley_pelley
 	}
 }
 

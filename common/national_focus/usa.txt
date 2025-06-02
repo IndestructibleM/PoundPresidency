@@ -7508,7 +7508,7 @@ focus_tree = {
 	}
 	focus = {
 		id = USA_artistic_imperialism
-		icon = GFX_goal_generic_political_pressure
+		icon = GFX_focus_ITA_ferrea_mole_ferreo_cuore
 		relative_position_id = USA_towards_national_utopia
 		x = 1
 		y = 7
@@ -8282,10 +8282,247 @@ focus_tree = {
 			remove_power_balance = { id = USA_power_balance }
 		}
 	}
+
+	# Dennis
+	focus = {
+		id = USA_the_plan_of_popular_will
+		x = 0
+		y = 1
+		
+		cost = 5
+		ai_will_do = {
+			factor = 10
+		}
+		relative_position_id = USA_fall_of_prometheus
+		prerequisite = { focus = USA_fall_of_prometheus }
+		icon = GFX_focus_generic_fascist_propaganda
+		available = {
+			has_government = fascism
+			has_country_leader = { ruling_only = yes character = USA_lawrence_dennis }
+			has_country_flag = PoundDead
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		completion_reward = {
+		
+		}
+	}
+	focus = {
+		id = USA_national_planning_force
+		x = -1
+		y = 1
+		
+		cost = 5
+		ai_will_do = {
+			factor = 10
+		}
+		relative_position_id = USA_the_plan_of_popular_will
+		prerequisite = { focus = USA_the_plan_of_popular_will }
+		icon = GFX_focus_GER_factories_for_resources
+		available = {
+			has_government = fascism
+			has_country_leader = { ruling_only = yes character = USA_lawrence_dennis }
+			has_country_flag = PoundDead
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		completion_reward = {
+		
+		}
+	}
+
+	focus = {
+		id = USA_the_in_elite
+		x = 1
+		y = 1
+		
+		cost = 5
+		ai_will_do = {
+			factor = 10
+		}
+		relative_position_id = USA_the_plan_of_popular_will
+		prerequisite = { focus = USA_the_plan_of_popular_will }
+		icon = GFX_focus_GER_expand_gestapo
+		available = {
+			has_government = fascism
+			has_country_leader = { ruling_only = yes character = USA_lawrence_dennis }
+			has_country_flag = PoundDead
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		completion_reward = {
+		
+		}
+	}
+	focus = {
+		id = USA_making_good_citizens
+		x = -2
+		y = 2
+		
+		cost = 5
+		ai_will_do = {
+			factor = 10
+		}
+		relative_position_id = USA_the_plan_of_popular_will
+		prerequisite = { focus = USA_national_planning_force }
+		prerequisite = { focus = USA_the_in_elite }
+		icon = GFX_focus_GER_autarky_achieved
+		available = {
+			has_government = fascism
+			has_country_leader = { ruling_only = yes character = USA_lawrence_dennis }
+			has_country_flag = PoundDead
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		completion_reward = {
+		
+		}
+	}
+	focus = {
+		id = USA_state_absolutism
+		x = 0
+		y = 2
+		
+		cost = 5
+		ai_will_do = {
+			factor = 10
+		}
+		relative_position_id = USA_the_plan_of_popular_will
+		prerequisite = { focus = USA_national_planning_force }
+		prerequisite = { focus = USA_the_in_elite }
+		icon = GFX_focus_GER_expand_ss_security_duties
+		available = {
+			has_government = fascism
+			has_country_leader = { ruling_only = yes character = USA_lawrence_dennis }
+			has_country_flag = PoundDead
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		completion_reward = {
+		
+		}
+	}
+	focus = {
+		id = USA_fascist_rationale
+		x = 2
+		y = 2
+		
+		cost = 5
+		ai_will_do = {
+			factor = 10
+		}
+		relative_position_id = USA_the_plan_of_popular_will
+		prerequisite = { focus = USA_national_planning_force }
+		prerequisite = { focus = USA_the_in_elite }
+		icon = GFX_goal_tfv_generic_tech_sharing
+		available = {
+			has_government = fascism
+			has_country_leader = { ruling_only = yes character = USA_lawrence_dennis }
+			has_country_flag = PoundDead
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		completion_reward = {
+		
+		}
+	}
+	focus = {
+		id = USA_efficiency_through_might
+		x = -1
+		y = 3
+		
+		cost = 5
+		ai_will_do = {
+			factor = 10
+		}
+		relative_position_id = USA_the_plan_of_popular_will
+		prerequisite = { focus = USA_making_good_citizens }
+		prerequisite = { focus = USA_state_absolutism }
+		prerequisite = { focus = USA_fascist_rationale }
+		icon = GFX_focus_generic_military_dictatorship
+		available = {
+			has_government = fascism
+			has_country_leader = { ruling_only = yes character = USA_lawrence_dennis }
+			has_country_flag = PoundDead
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		completion_reward = {
+		
+		}
+	}
+	focus = {
+		id = USA_plan_that_commands
+		x = 1
+		y = 3
+		
+		cost = 5
+		ai_will_do = {
+			factor = 10
+		}
+		relative_position_id = USA_the_plan_of_popular_will
+		prerequisite = { focus = USA_making_good_citizens }
+		prerequisite = { focus = USA_state_absolutism }
+		prerequisite = { focus = USA_fascist_rationale }
+		icon = GFX_focus_GER_strengthen_the_proletarian_international
+		available = {
+			has_government = fascism
+			has_country_leader = { ruling_only = yes character = USA_lawrence_dennis }
+			has_country_flag = PoundDead
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		completion_reward = {
+		
+		}
+	}
+	focus = {
+		id = USA_fascist_national_interest
+		x = 0
+		y = 4
+		
+		cost = 5
+		ai_will_do = {
+			factor = 10
+		}
+		relative_position_id = USA_the_plan_of_popular_will
+		prerequisite = { focus = USA_plan_that_commands }
+		prerequisite = { focus = USA_efficiency_through_might }
+		icon = GFX_focus_GER_establish_protectorates_in_america
+		available = {
+			has_government = fascism
+			has_country_leader = { ruling_only = yes character = USA_lawrence_dennis }
+			has_country_flag = PoundDead
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		completion_reward = {
+		
+		}
+	}
+	
 	# Yockey
 	focus = {
 		id = USA_prophecy_of_imperium
-		x = 9
+		x = 12
 		y = 1
 		
 		cost = 5
@@ -8566,7 +8803,7 @@ focus_tree = {
 	# Hemmingway
 	focus = {
 		id = USA_left_utopians_triumph
-		x = -9
+		x = -12
 		y = 1
 		
 		cost = 5
@@ -8802,7 +9039,7 @@ focus_tree = {
 	## George Christians
 	focus = {
 		id = USA_away_from_gold
-		x = 3
+		x = 6
 		y = 1
 		
 		cost = 5
@@ -9029,7 +9266,7 @@ focus_tree = {
 	## Scott
 	focus = {
 		id = USA_revolt_of_engineers
-		x = -3
+		x = -6
 		y = 1
 		
 		cost = 5
