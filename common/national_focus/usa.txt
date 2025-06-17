@@ -9312,6 +9312,7 @@ focus_tree = {
 		continue_if_invalid = no
 		available_if_capitulated = no
 		completion_reward = {
+			add_ideas = USA_technocratic_economy
 		}
 	}
 	focus = {
@@ -9463,7 +9464,7 @@ focus_tree = {
 		continue_if_invalid = no
 		available_if_capitulated = no
 		completion_reward = {
-			add_research_slot = 1
+			set_research_slots = 7
 		}
 	}
 	focus = {
@@ -9493,10 +9494,6 @@ focus_tree = {
 				limit = { is_on_continent = north_america }
 				add_claim_by = USA
 			}
-            create_wargoal = {
-            	target = PREV
-            	type = annex_everything
-          	}	
       	}
     }
 }
