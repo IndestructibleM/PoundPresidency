@@ -1,0 +1,13 @@
+characters = {
+	ITA_giusseppi_bottai = {
+		name = "Giuseseppi Bottai"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/USA/Portrait_Ezra_Pound.png"
+			}
+		}
+		country_leader = {
+			ideology = fascism_ideology
+		}
+	}
+}
