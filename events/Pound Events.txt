@@ -209,26 +209,14 @@ country_event = {
 			elections_allowed = no
 			last_election = "1936.11.5"
 			election_frequency = 48
-			long_name = "Popular Social Front"
-			name = "PSF"
+			long_name = "Peoples' Union for Common Revolution"
+			name = "PUCR"
 		}
 		hidden_effect = { set_cosmetic_tag = ASR }
 	}
 	
 	option = {
-		name = "March Forward! Scott!"
-		promote_character = USA_howard_scott
-		set_politics = {
-			ruling_party = neutrality
-			elections_allowed = no
-			last_election = "1936.11.5"
-			election_frequency = 48
-		}
-		hidden_effect = { set_cosmetic_tag = ASR }
-	}
-	
-	option = {
-		name = "Stand Strong! Dennis!"
+		name = "March Forward! Dennis!"
 		promote_character = USA_lawrence_dennis
 		set_politics = {
 			ruling_party = fascism
@@ -276,7 +264,7 @@ country_event = {
 			factor = 90
 		}
 		add_manpower = -1
-		add_popularity = { ideology = fascism popularity = 0.05 }
+		add_popularity = { ideology = fascism popularity = 0.03 }
 	}
 	
 	option = {
@@ -284,7 +272,8 @@ country_event = {
 		ai_chance = {
 			factor = 30
 		}
-		add_popularity = { ideology = fascism popularity = -0.1 }
+		add_popularity = { ideology = fascism popularity = -0.15 }
+		add_stability = -0.1
 		add_political_power = -150
 		retire_character = USA_Ezra_Pound
 		promote_character = USA_richard_child

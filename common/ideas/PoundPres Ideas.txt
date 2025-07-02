@@ -6,8 +6,11 @@ ideas = {
 				always = yes
 			}
 			modifier = {
-				stability_weekly = -0.015
+				stability_factor = -0.25
 				fascism_drift = 0.08
+			}
+			on_remove = {
+				add_stability = -0.1
 			}
 		}
 		USA_war_against_degeneration = {
@@ -168,89 +171,6 @@ ideas = {
 				production_speed_nuclear_reactor_factor = 0.2
 				nuclear_production_factor= 0.2
 				ground_attack_factor = 0.3
-			}
-		}
-		
-		## SCOTT
-		USA_technocratic_economy = {
-			allowed_civil_war = {
-				always = yes
-			}
-			name = "Technocratic Corporatist Planning"
-			modifier = {
-				research_speed_factor = 0.1
-				consumer_goods_factor = -0.2
-				production_factory_start_efficiency_factor = -0.20
-				production_factory_efficiency_gain_factor = -0.15
-				production_factory_max_efficiency_factor = 0.15
-				industrial_capacity_dockyard = 0.05
-				min_export = -0.05
-			}
-		}
-
-
-		## YOCKEY
-		USA_resurgence_of_authority = {
-			allowed_civil_war = {
-				always = yes
-			}
-			name = "Resurgence of Authority"
-			modifier = {
-				political_power_cost = -0.20
-				conscription = 0.01
-				foreign_subversive_activites = -1
-				army_intel_to_others = -0.3
-				civilian_intel_to_others = -0.3
-				compliance_gain = 0.04
-			}
-		}
-		
-		USA_creative_totalitariat = {
-			allowed_civil_war = {
-				always = yes
-			}
-			name = "The Creative Totalitariat"
-			modifier = {
-				production_factory_max_efficiency_factor = 0.15
-				industrial_capacity_dockyard = 0.2
-				research_speed_factor = 0.1
-				production_factory_start_efficiency_factor = 0.05
-				production_speed_buildings_factor = 0.2
-				conscription_factor = -0.2
-			}
-		}
-
-		USA_european_liberation_army = {
-			allowed_civil_war = {
-				always = yes
-			}
-			name = "European Liberation Army"
-			modifier = {
-				training_time_factor = 0.2
-				army_attack_factor = 0.1
-				breakthrough_factor = 0.1
-				max_planning = 0.2
-				army_morale = 0.2
-				army_morale_factor = 0.1
-				minimum_training_level = 0.10
-			}
-		}
-		
-		USA_imperium_destiny = {
-			allowed_civil_war = {
-				always = yes
-			}
-			name = "Actualization of Imperium"
-			modifier = {
-				justify_war_goal_time = -0.5
-				resistance_growth = -0.05
-				required_garrison_factor = 0.05
-				invasion_preparation = -0.5
-				naval_invasion_penalty = -0.25
-				naval_invasion_capacity = 5
-				army_attack_against_major_factor = 0.1
-				org_loss_when_moving = -0.1
-				offensive_war_stability_factor = 0.20
 			}
 		}
 	}

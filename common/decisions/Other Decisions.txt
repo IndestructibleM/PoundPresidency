@@ -44,3 +44,143 @@ foreign_politics = {
 	}
 	}
 }
+USA_fight_for_western_civilization = { 
+	USA_white_integralism = {
+		name = "Found the Church of the West"
+		fire_only_once = yes
+		icon = GFX_decision_generic_nationalism
+		allowed = { tag = USA }
+		ai_will_do = {
+			factor = 80
+		}
+		days_remove = 80
+		cost = 50
+		complete_effect = {
+			add_war_support = -0.04
+		}
+		remove_effect = {
+			add_stability = 0.05
+		}
+		modifier = {
+			research_speed_factor = -0.05
+			production_speed_buildings_factor = 0.15
+			stability_weekly = 0.01
+		}
+	}
+	USA_end_petty_capitalism = {
+		name = "Destroy the Remnants of Capitalism"
+		fire_only_once = yes
+		icon = GFX_decision_generic_nationalism
+		allowed = { tag = CHI }
+		ai_will_do = {
+			factor = 80
+		}
+		days_remove = 80
+		cost = 50
+		complete_effect = {
+			add_war_support = -0.04
+		}
+		remove_effect = {
+			add_stability = 0.05
+		}
+		modifier = {
+			consumer_goods_factor = -0.2
+			production_factory_efficiency_gain_factor = 0.10
+		}
+	}
+	USA_rebirth_of_natalism = {
+		name = "Rebirth of Natalism"
+		fire_only_once = yes
+		icon = GFX_decision_generic_nationalism
+		allowed = { tag = USA }
+		ai_will_do = {
+			factor = 80
+		}
+		days_remove = 125
+		cost = 50
+		complete_effect = {
+			add_war_support = -0.04
+		}
+		remove_effect = {
+			add_stability = 0.05
+		}
+		modifier = {
+			monthly_population = 0.30
+			war_support_weekly = 0.005
+		}
+	}
+	USA_unleash_spiritual_sciences = {
+		name = "Unleash Spiritual and Occult Science"
+		fire_only_once = yes
+		icon = GFX_decision_generic_nationalism
+		allowed = { tag = USA }
+		ai_will_do = {
+			factor = 80
+		}
+		days_remove = 100
+		cost = 50
+		complete_effect = {
+			add_war_support = -0.04
+		}
+		remove_effect = {
+			add_stability = 0.05
+			add_unit_bonus = {
+ 				category_all_infantry = {
+				supply_consumption = -0.02
+				default_morale = 0.04
+  				}
+			}	
+		}
+		modifier = {
+			research_speed_factor = 0.15
+			consumer_goods_expected_value = 0.15
+		}
+	}
+	USA_rise_of_superpersonal_unity = {
+		name = "Rise of Superpersonal Unity"
+		fire_only_once = yes
+		icon = GFX_decision_generic_nationalism
+		allowed = { tag = USA }
+		ai_will_do = {
+			factor = 80
+		}
+		days_remove = 80
+		cost = 50
+		complete_effect = {
+			add_war_support = -0.04
+		}
+		remove_effect = {
+			add_stability = 0.05
+		}
+		modifier = {
+			consumer_goods_factor = -0.2
+			industrial_capacity_factory = 0.2
+		}
+	}
+	USA_declare_imperium_united = {
+		name = "End the Decline"
+		fire_only_once = yes
+		icon = GFX_decision_generic_form_nation
+		allowed = { tag = USA }
+		available = { 
+			owns_state = 64
+			owns_state = 126
+			owns_state = 16
+			owns_state = 2
+			owns_state = 4
+			owns_state = 10
+			owns_state = 41
+		}
+		ai_will_do = {
+			factor = 100
+		}
+		days_remove = 30
+		cost = 200
+		modifier = { consumer_goods_expected_value = 0.5 political_power_cost = 1}
+		remove_effect = {
+			set_stability = 1
+			set_war_support = 1
+			set_cosmetic_tag = Imperium
+		}
+	}
+}

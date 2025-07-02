@@ -78,6 +78,7 @@
  USA_proclaim_utopia_hegemony: "Proclaim the Hegemony of Utopia"
  USA_proclaim_utopia_hegemony_desc: "Proclaim the Hegemony of Utopia"
  USA_fall_of_prometheus: "Fall of Prometheus"
+ 
  # Dennis
  USA_the_plan_of_popular_will: "For A Plan of Popular Will"
  USA_national_planning_force: "National Planning Force"
@@ -88,8 +89,6 @@
  USA_efficiency_through_might: "Efficiency Through Might"
  USA_plan_that_commands: "A Plan That Commands"
  USA_fascist_national_interest: "Subordination to National Interest"
- 
- 
  # Yockey
  USA_prophecy_of_imperium: "Prophecy of Imperium"
  USA_rise_of_authority: "The Rise of Authority"
@@ -156,20 +155,19 @@
  HEMM_ADJ: "American Commonwealth"
  HEMM_DEF: "the Commonwealth of American Council Republics"
  
- CHRI: "Confederacy of Revolutionary American States" 
- CHRI_DEF: "the Confederacy of Revolutionary American States" 
- CHRI_ADJ: "Revolutionary Confederate" 
+ CHRI: "Confederacy of Golden Labor" 
+ CHRI_DEF: "the Confederacy of Golden Labor"
  
- SCOT: "North American Technate"
- SCOT_DEF: "the North American Technate"
- SCOT_ADJ: "Technate"
+ DENN: "American Popular State"
+ DENN_DEF: "the American Popular State"
+ DENN_ADJ: "American"
  
  Imperium: "Imperium of Faustian Europe"
  Imperium_DEF: "the Imperium of Faustian Europe"
  Imperium_ADJ: "Imperium"
  
- QUE_USA_fascism_subject: "National State of Borelia"
- QUE_USA_fascism_subject_DEF: "the National State of Borelia"
+ QUE_USA_fascism_subject: "Borelian State of New France"
+ QUE_USA_fascism_subject_DEF: "Borelian State of New France"
  MEX_USA_fascism_subject: "Cosmic Mexican State"
  MEX_USA_fascism_subject_DEF: "the Cosmic Mexican State"
  ENG_USA_neutrality_subject: "Grand Kingdom of Brittania"
@@ -189,6 +187,7 @@
  ### Decisions
  USA_map_painting: "All the World a Canvas"
  USA_jupiter_league: "The Jupiter League"
+ USA_fight_for_western_civilization: "§5The Fight for Western Civilization§!"
  wholesomedotpng: "§tA new beginning to lay new beliefs \n\nI swear the oath to you \n\nLong live the king \n\nHis people singing \n\nReign for a thousand years \n\nI swear the oath to you \n\nLong live the king§!"
  ### BoP
  USA_power_balance: "Struggle of the New American Gods"
