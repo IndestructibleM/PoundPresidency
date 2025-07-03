@@ -7231,6 +7231,7 @@ focus_tree = {
 		search_filters = {FOCUS_FILTER_INDUSTRY FOCUS_FILTER_STABILITY FOCUS_FILTER_USA_CONGRESS}
 		completion_reward = {
 			add_popularity = { ideology = fascism popularity = 0.1 }
+			add_stability = 0.08
 			set_cosmetic_tag = ASR
 		}
 	}
@@ -7616,6 +7617,7 @@ focus_tree = {
 		prerequisite = {
 			focus = USA_light_of_civilization
 		}
+		mutually_exclusive = { focus = USA_virtue_of_the_sun}
 		ai_will_do = {
 			factor = 1
 		}
@@ -7643,6 +7645,7 @@ focus_tree = {
 		id = USA_virtue_of_the_sun
 		icon = GFX_focus_GER_wunderwaffe
 		relative_position_id = USA_towards_national_utopia
+		mutually_exclusive = { focus = USA_remove_sin}
 		x = 1
 		y = 9
 		cost = 6
