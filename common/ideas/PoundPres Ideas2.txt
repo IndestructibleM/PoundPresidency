@@ -1,19 +1,58 @@
 ideas = {
 	country = {
 		
-		## SCOTT
+		## DENNIS
 		USA_technocratic_economy = {
 			allowed_civil_war = {
 				always = yes
 			}
-			name = "Technocratic Corporatist Planning"
+			name = "Technocratic Social Planning"
 			modifier = {
-				research_speed_factor = 0.1
-				consumer_goods_factor = -0.2
+				research_speed_factor = 0.05
+				consumer_goods_factor = -0.1
 				production_factory_start_efficiency_factor = -0.20
 				production_factory_efficiency_gain_factor = -0.15
-				production_factory_max_efficiency_factor = 0.15
+				production_factory_max_efficiency_factor = 0.05
+				line_change_production_efficiency_factor = -0.15
 				industrial_capacity_dockyard = 0.05
+				min_export = -0.05
+			}
+		}
+		
+		USA_technocratic_economy2 = {
+			allowed_civil_war = {
+				always = yes
+			}
+			name = "Technocratic Social Planning"
+			modifier = {
+				research_speed_factor = 0.1
+				consumer_goods_factor = -0.20
+				production_factory_start_efficiency_factor = -0.15
+				production_factory_efficiency_gain_factor = -0.15
+				production_factory_max_efficiency_factor = 0.1
+				line_change_production_efficiency_factor = -0.15
+				production_speed_industrial_complex_factor = 0.1
+				production_speed_arms_factory_factor = 0.1
+				industrial_capacity_dockyard = 0.05
+				min_export = -0.05
+			}
+		}
+		
+		USA_technocratic_economy3 = {
+			allowed_civil_war = {
+				always = yes
+			}
+			name = "Technocratic Social Planning"
+			modifier = {
+				research_speed_factor = 0.15
+				consumer_goods_expected_value = -0.20
+				production_factory_start_efficiency_factor = -0.10
+				production_factory_efficiency_gain_factor = -0.2
+				line_change_production_efficiency_factor = -0.15
+				production_factory_max_efficiency_factor = 0.20
+				production_speed_industrial_complex_factor = 0.3
+				production_speed_arms_factory_factor = 0.3
+				industrial_capacity_dockyard = 0.1
 				min_export = -0.05
 			}
 		}

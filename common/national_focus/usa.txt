@@ -7681,7 +7681,7 @@ focus_tree = {
 		id = USA_berlin_overtures
 		icon = GFX_focus_chi_mission_to_germany
 		relative_position_id = USA_towards_national_utopia
-		x = 4
+		x = 5
 		y = 5
 		cost = 6
 		prerequisite = {
@@ -7712,7 +7712,7 @@ focus_tree = {
 		id = USA_sign_pact_of_rome
 		icon = GFX_focus_befriend_italy
 		relative_position_id = USA_towards_national_utopia
-		x = 6
+		x = 7
 		y = 5
 		cost = 6
 		prerequisite = {
@@ -7747,7 +7747,7 @@ focus_tree = {
 		id = USA_vanguard_of_new_utopia
 		icon = GFX_goal_generic_military_sphere
 		relative_position_id = USA_towards_national_utopia
-		x = 8
+		x = 9
 		y = 5
 		cost = 6
 		prerequisite = {
@@ -7778,7 +7778,7 @@ focus_tree = {
 		id = USA_isolate_yellow_empire
 		icon = GFX_focus_usa_focus_on_asia
 		relative_position_id = USA_towards_national_utopia
-		x = 4
+		x = 5
 		y = 6
 		cost = 6
 		prerequisite = {
@@ -7858,6 +7858,7 @@ focus_tree = {
    				type = puppet_wargoal_focus
     			target = JAP
 			}
+			add_state_claim = 555
 			add_state_claim = 633
 			add_state_claim = 646
 			add_state_claim = 648
@@ -7866,17 +7867,18 @@ focus_tree = {
 			add_state_claim = 481
 			add_state_claim = 684
 			add_state_claim = 645
+			add_state_claim = 647
 		}
 	}
 	focus = {
-		id = USA_silkworms_mulberry_groves
+		id = USA_tropical_domain
 		icon = GFX_focus_jap_strike_south
 		relative_position_id = USA_towards_national_utopia
-		x = 4
+		x = 5
 		y = 8
 		cost = 5
 		prerequisite = {
-			focus = USA_outshine_the_sun
+			focus = USA_isolate_yellow_empire
 		}
 		ai_will_do = {
 			factor = 2
@@ -7898,22 +7900,6 @@ focus_tree = {
 			}
 			create_wargoal = {
    				type = puppet_wargoal_focus
-    			target = BRM
-			}
-			create_wargoal = {
-   				type = puppet_wargoal_focus
-    			target = SIA
-			}
-			create_wargoal = {
-   				type = puppet_wargoal_focus
-    			target = INS
-			}
-			create_wargoal = {
-   				type = puppet_wargoal_focus
-    			target = MAL
-			}
-			create_wargoal = {
-   				type = puppet_wargoal_focus
     			target = NZL
 			}
 			create_wargoal = {
@@ -7921,16 +7907,14 @@ focus_tree = {
     			target = AST
 			}
 			add_state_claim = 635
-			add_state_claim = 729
-			add_state_claim = 326
-			add_state_claim = 728
+			unlock_decision_tooltip = USA_coup_in_liberia
 		}
 	}		
 	focus = {
 		id = USA_to_slay_brittania
 		icon = GFX_focus_generic_strike_at_democracy1
 		relative_position_id = USA_towards_national_utopia
-		x = 6
+		x = 7
 		y = 6
 		cost = 6
 		prerequisite = {
@@ -7968,7 +7952,7 @@ focus_tree = {
 		id = USA_rome_conquers_athens
 		icon = GFX_focus_attack_britain
 		relative_position_id = USA_towards_national_utopia
-		x = 6
+		x = 7
 		y = 7
 		cost = 5
 		prerequisite = {
@@ -8002,7 +7986,7 @@ focus_tree = {
 		id = USA_spices_and_spirits
 		icon = GFX_focus_smiling_buddha
 		relative_position_id = USA_towards_national_utopia
-		x = 6
+		x = 7
 		y = 8
 		cost = 5
 		prerequisite = {
@@ -8036,7 +8020,7 @@ focus_tree = {
 		id = USA_return_to_tenochtitlan
 		icon = GFX_focus_attack_mexico
 		relative_position_id = USA_towards_national_utopia
-		x = 8
+		x = 9
 		y = 6
 		cost = 5
 		prerequisite = {
@@ -8074,7 +8058,7 @@ focus_tree = {
 		id = USA_reorganize_the_caribbean
 		icon = GFX_goal_generic_major_war
 		relative_position_id = USA_towards_national_utopia
-		x = 8
+		x = 10
 		y = 7
 		cost = 5
 		prerequisite = {
@@ -8107,11 +8091,11 @@ focus_tree = {
 		id = USA_stella_polaris
 		icon = GFX_focus_generic_invade_iceland
 		relative_position_id = USA_towards_national_utopia
-		x = 8
+		x = 9
 		y = 8
 		cost = 5
 		prerequisite = {
-			focus = USA_reorganize_the_caribbean
+			focus = USA_return_to_tenochtitlan
 		}
 		ai_will_do = {
 			factor = 2
@@ -8155,7 +8139,7 @@ focus_tree = {
 		id = USA_reimagine_world_order
 		icon = GFX_goal_generic_position_armies
 		relative_position_id = USA_towards_national_utopia
-		x = 5
+		x = 6
 		y = 9
 		cost = 5
 		prerequisite = {
@@ -8185,7 +8169,7 @@ focus_tree = {
 		id = USA_proclaim_utopia_hegemony
 		icon = GFX_focus_GER_establish_protectorates_in_america
 		relative_position_id = USA_towards_national_utopia
-		x = 7
+		x = 8
 		y = 9
 		cost = 5
 		prerequisite = {
@@ -8220,7 +8204,7 @@ focus_tree = {
 		id = USA_triumph_over_money
 		icon = GFX_focus_generic_strike_at_democracy2
 		relative_position_id = USA_towards_national_utopia
-		x = 6
+		x = 7
 		y = 10
 		cost = 5
 		ai_will_do = {
@@ -8309,6 +8293,7 @@ focus_tree = {
 		continue_if_invalid = no
 		available_if_capitulated = no
 		completion_reward = {
+			remove_ideas = USA_state_of_utopia
 			add_popularity = { ideology = fascism popularity = 0.1 }
 			add_popularity = { ideology = neutrality popularity = 0.1 }
 			set_cosmetic_tag = DENN
@@ -8336,7 +8321,12 @@ focus_tree = {
 		continue_if_invalid = no
 		available_if_capitulated = no
 		completion_reward = {
-			add_ideas = USA_technocratic_economy
+			swap_ideas = {
+				remove_idea = USA_national_syndicalism
+				remove_idea = USA_national_syndicalism2
+				add_idea = USA_technocratic_economy
+			}
+			
 		}
 	}
 
@@ -8388,7 +8378,10 @@ focus_tree = {
 		continue_if_invalid = no
 		available_if_capitulated = no
 		completion_reward = {
-		
+			swap_ideas = {
+				remove_idea = USA_technocratic_economy
+				add_idea = USA_technocratic_economy2
+			}
 		}
 	}
 	focus = {
@@ -8467,7 +8460,7 @@ focus_tree = {
 		continue_if_invalid = no
 		available_if_capitulated = no
 		completion_reward = {
-		
+			
 		}
 	}
 	focus = {
@@ -8494,7 +8487,10 @@ focus_tree = {
 		continue_if_invalid = no
 		available_if_capitulated = no
 		completion_reward = {
-		
+			swap_ideas = {
+				remove_idea = USA_technocratic_economy2
+				add_idea = USA_technocratic_economy3
+			}
 		}
 	}
 	focus = {
@@ -8547,6 +8543,7 @@ focus_tree = {
 		continue_if_invalid = no
 		available_if_capitulated = no
 		completion_reward = {
+			remove_ideas = USA_state_of_utopia
 			add_political_power = 50
 			add_trait = {
 				character = USA_francis_yockey
@@ -9077,6 +9074,7 @@ focus_tree = {
 		continue_if_invalid = no
 		available_if_capitulated = no
 		completion_reward = {
+			remove_ideas = USA_state_of_utopia
 			set_cosmetic_tag = CHRI
 		}
 	}

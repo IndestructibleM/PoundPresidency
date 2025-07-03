@@ -461,6 +461,46 @@ USA_map_painting = {
 			}
 		}
 	}
+	USA_reorganize_japan = {
+		name = "Install a Collaborator Government in Japan"
+		fire_only_once = yes
+		allowed = { 
+			tag = USA
+		}
+		targets = { JAP }
+		target_non_existing = yes
+		icon = GFX_decision_generic_form_nation
+		visible = { 
+			OR = {
+			any_allied_country = { owns_state = 282 }
+			USA = { owns_state = 282 }
+			}
+			has_government = fascism
+		}
+		ai_will_do = {
+			factor = 100
+		}
+		complete_effect = {
+			FROM = { 
+				every_core_state = { 
+					limit = { NOT = { has_claim_by = USA } }
+					transfer_state_to = PREV
+				}
+			}
+			set_autonomy = {
+				target = JAP
+				autonomous_state = collaborator_gov
+			}
+			FROM = {
+				set_politics = {
+				ruling_party = neutrality
+				elections_allowed = no
+				long_name = "Reorganized Imperial Diet"
+				name = "Reorganized Diet"
+				}
+			}
+		}
+	}
 	
 	USA_coup_in_liberia = {
 		name = "Marcus Garvey and the Liberia Plan"
@@ -469,6 +509,7 @@ USA_map_painting = {
 		allowed = { 
 			tag = USA
 		}
+		visible = { has_completed_focus = USA_tropical_domain }
 		icon = GFX_decision_generic_prepare_civil_war
 		ai_will_do = {
 			factor = 90
@@ -509,7 +550,8 @@ USA_map_painting = {
 		allowed = { 
 			tag = USA
 		}
-		visible = { 
+		visible = {
+			has_completed_focus = USA_tropical_domain
 			OR = {
 			FROM = { owner = { tag = USA } }
 			FROM = { owner = { is_ally_with = USA } }
