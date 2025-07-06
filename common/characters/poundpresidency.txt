@@ -83,6 +83,40 @@ characters = {
 		}
 	}
 	
+	### ADVISORS ####
+
+	USA_willis_carto = {
+		name = "Willis Carto"
+		portraits = {
+			civilian = {
+				small = "gfx/interface/advisors/USA/USA_willis_carto.png"
+			}
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = USA_willis_carto_idea
+			available = { has_completed_focus = USA_rise_of_authority }
+			visible = { has_completed_focus = USA_rise_of_authority }
+			traits = { ideological_crusader }
+		}
+	}
+	
+	USA_revilo_oliver = {
+		name = "Revilo P. Oliver"
+		portraits = {
+			civilian = {
+				small = "gfx/interface/advisors/USA/USA_revilo_oliver.png"
+			}
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = USA_willis_carto_idea
+			available = { has_completed_focus = USA_rise_of_authority }
+			visible = { has_completed_focus = USA_rise_of_authority }
+			traits = { subservient_ultranationalist }
+		}
+	}
+	
 	USA_richard_child = {
 		name = "Richard W. Child"
 		portraits = {
