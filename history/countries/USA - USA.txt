@@ -485,6 +485,9 @@ recruit_character = USA_francis_yockey
 recruit_character = USA_lawrence_dennis
 recruit_character = USA_George_Christians
 recruit_character = USA_charles_lindbergh_ac
+recruit_character = USA_willis_carto
+recruit_character = USA_revilo_oliver
+
 
 
 
