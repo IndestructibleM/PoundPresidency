@@ -7697,7 +7697,6 @@ focus_tree = {
 		available = {
 			has_government = fascism
 			GER = { has_government = fascism }
-			has_country_leader = { ruling_only = yes character = USA_ezra_pound }
 		}
 
 		cancel_if_invalid = yes
@@ -7727,7 +7726,6 @@ focus_tree = {
 		}
 		available = {
 			has_government = fascism
-			GER = { NOT = { has_government = fascism } }
 			ITA = { has_government = fascism }
 			has_country_leader = { ruling_only = yes character = USA_ezra_pound }
 		}
@@ -7792,7 +7790,6 @@ focus_tree = {
 
 		available = {
 			has_government = fascism
-			has_country_leader = { ruling_only = yes character = USA_ezra_pound }
 		}
 
 		cancel_if_invalid = yes
@@ -7846,7 +7843,6 @@ focus_tree = {
 
 		available = {
 			has_government = fascism
-			has_country_leader = { ruling_only = yes character = USA_ezra_pound }
 		}
 
 		cancel_if_invalid = yes
@@ -7886,7 +7882,6 @@ focus_tree = {
 
 		available = {
 			has_government = fascism
-			has_country_leader = { ruling_only = yes character = USA_ezra_pound }
 		}
 
 		cancel_if_invalid = yes
@@ -7928,7 +7923,6 @@ focus_tree = {
 
 		available = {
 			has_government = fascism
-			has_country_leader = { ruling_only = yes character = USA_ezra_pound }
 		}
 
 		cancel_if_invalid = yes
@@ -7964,7 +7958,6 @@ focus_tree = {
 
 		available = {
 			has_government = fascism
-			has_country_leader = { ruling_only = yes character = USA_ezra_pound }
 		}
 
 		cancel_if_invalid = yes
@@ -7998,7 +7991,6 @@ focus_tree = {
 
 		available = {
 			has_government = fascism
-			has_country_leader = { ruling_only = yes character = USA_ezra_pound }
 		}
 
 		cancel_if_invalid = yes
@@ -8034,7 +8026,6 @@ focus_tree = {
 
 		available = {
 			has_government = fascism
-			has_country_leader = { ruling_only = yes character = USA_ezra_pound }
 		}
 
 		cancel_if_invalid = yes
@@ -8070,7 +8061,6 @@ focus_tree = {
 
 		available = {
 			has_government = fascism
-			has_country_leader = { ruling_only = yes character = USA_ezra_pound }
 		}
 
 		cancel_if_invalid = yes
@@ -8103,7 +8093,6 @@ focus_tree = {
 
 		available = {
 			has_government = fascism
-			has_country_leader = { ruling_only = yes character = USA_ezra_pound }
 		}
 
 		cancel_if_invalid = yes
@@ -8153,7 +8142,6 @@ focus_tree = {
 
 		available = {
 			has_government = fascism
-			has_country_leader = { ruling_only = yes character = USA_ezra_pound }
 		}
 
 		cancel_if_invalid = yes
