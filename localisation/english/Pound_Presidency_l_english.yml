@@ -168,8 +168,8 @@
  
  QUE_USA_fascism_subject: "Borelian State of New France"
  QUE_USA_fascism_subject_DEF: "Borelian State of New France"
- MEX_USA_fascism_subject: "Cosmic Mexican State"
- MEX_USA_fascism_subject_DEF: "the Cosmic Mexican State"
+ MEX_USA_neutrality_subject: "Cosmic Mexican State"
+ MEX_USA_neutrality_subject_DEF: "the Cosmic Mexican State"
  ENG_USA_neutrality_subject: "Regency of Great Britain"
  ENG_USA_neutrality_subject_DEF: "the Regency of England, Scotland and Wales"
 

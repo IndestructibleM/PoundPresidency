@@ -7273,7 +7273,7 @@ focus_tree = {
 			}
 			add_trait = {
     			character = USA_Ezra_Pound
-    			ideology = fascism_ideology
+    			ideology = socfash
     			trait = artist_tyrant
 			}
 		}
@@ -7566,7 +7566,7 @@ focus_tree = {
 			country_event = { id= pound.13 days = 3 }
 			add_trait = {
     			character = USA_Ezra_Pound
-    			ideology = fascism_ideology
+    			ideology = socfash
     			trait = light_bearer
 			}
 			custom_effect_tooltip = wholesomedotpng
