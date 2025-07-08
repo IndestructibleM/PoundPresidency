@@ -7472,7 +7472,7 @@ focus_tree = {
 				id = USA_power_balance
 				value = 0.08
 			}
-			custom_effect_tooltip = "You will be granted +15% stability upon the removal of this spirit."
+			custom_effect_tooltip = "You will be granted +20% stability upon the removal of this spirit."
 		}
 	}
 	focus = {
@@ -8618,6 +8618,10 @@ focus_tree = {
 				uses = 2
 				category = special_forces_doctrine
 			}	
+			add_timed_idea = {
+				idea = USA_war_for_west
+				days = 100
+			}
 		}
 	}
 	focus = {
@@ -8733,10 +8737,7 @@ focus_tree = {
 		continue_if_invalid = no
 		available_if_capitulated = no
 		completion_reward = {
-			send_equipment_fraction = {
-   				value = 0.10
-   				target = GER
-			}
+			country_event = { id = yock.4 days = 0 }
 			create_wargoal = {
             target = SOV
             type = topple_government

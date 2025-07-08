@@ -9,9 +9,6 @@ ideas = {
 				stability_factor = -0.25
 				fascism_drift = 0.08
 			}
-			on_remove = {
-				add_stability = -0.1
-			}
 		}
 		USA_war_against_degeneration = {
 			allowed_civil_war = {
@@ -47,11 +44,11 @@ ideas = {
 			modifier = {
 				industrial_capacity_dockyard = 0.2
 				industrial_capacity_factory = 0.2
-				political_power_cost = 0.2
+				political_power_cost = 0.3
 				production_factory_efficiency_gain_factor = 0.10
 			}
 			on_remove = {
-				add_stability = 0.15
+				add_stability = 0.20
 			}
 		}
 		

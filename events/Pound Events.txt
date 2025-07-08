@@ -1,5 +1,6 @@
 add_namespace = pound
 add_namespace = butler
+add_namespace = yock
 
 country_event = {
 	id = pound.0
@@ -280,6 +281,34 @@ country_event = {
 		set_country_flag = PoundDead
 	}
 }
+country_event = {
+	id = pound.13
+	title = "Baptism"
+	desc = pound.13.d
+	is_triggered_only = yes
+	
+	option = {
+		name = "Pound strikes first, winning the day!"
+		ai_chance = {
+			factor = 90
+		}
+		add_manpower = -1
+		add_popularity = { ideology = fascism popularity = 0.03 }
+	}
+	
+	option = {
+		name = "Pound is shot before he can act!"
+		ai_chance = {
+			factor = 30
+		}
+		add_popularity = { ideology = fascism popularity = -0.15 }
+		add_stability = -0.1
+		add_political_power = -150
+		retire_character = USA_Ezra_Pound
+		promote_character = USA_richard_child
+		set_country_flag = PoundDead
+	}
+}
 
 country_event = {
 	id = pound.14
@@ -292,6 +321,50 @@ country_event = {
 		retire_character = USA_william_dudley_pelley
 	}
 }
+
+country_event = {
+	id = yock.4
+	title = "The Enemy of our Enemies"
+	desc = yock.4.d
+	is_triggered_only = yes
+	
+	option = {
+		name = "Fight with the Reich against Bolshevism!"
+		ai_chance = {
+			factor = 50
+		}
+		send_equipment_fraction = {
+   			value = 0.10
+   			target = GER
+		}
+		add_to_war = {
+    		targeted_alliance = GER
+    		enemy = SOV
+    		hostility_reason = asked_to_join
+		}
+		add_threat = 3
+		custom_effect_tooltip = "You will be able to subsume Germany into the Imperium peacefully if selected."
+		set_country_flag = yockwithger
+	}
+	
+	option = {
+		name = "We shall play the long game..."
+		ai_chance = {
+			factor = 50
+		}
+		GER = { remove_from_faction	= USA }
+		create_wargoal = {
+            target = GER
+            type = annex_everything
+       	}
+		create_wargoal = {
+            target = ITA
+            type = annex_everything
+       	}
+		add_manpower = 100000
+	}
+}
+
 
 ### Smeddy Butt
 country_event = {
