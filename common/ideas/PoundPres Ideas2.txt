@@ -57,7 +57,46 @@ ideas = {
 			}
 		}
 
-
+		## Christians
+		USA_red_crusaders = {
+			allowed_civil_war = {
+				always = yes
+			}
+			name = "Red Crusaders"
+			modifier = {
+				conscription_factor = 0.1
+				army_morale_factor = 0.1
+				weekly_manpower = 100
+				army_org_regain = 0.02
+			}
+		}
+		
+		USA_red_crusaders2 = {
+			allowed_civil_war = {
+				always = yes
+			}
+			name = "White Knights and Red Crusaders"
+			modifier = {
+				conscription_factor = 0.15
+				army_morale_factor = 0.1
+				weekly_manpower = 200
+				army_org_regain = 0.05
+				communism_drift = 0.03
+			}
+		}
+		USA_crusade_against_capital = {
+			allowed_civil_war = {
+				always = yes
+			}
+			name = "Crusade against Capital"
+			modifier = {
+				conscription_factor = -0.40
+				
+				weekly_manpower = 200
+				army_org_regain = 0.05
+				communism_drift = 0.03
+			}
+		}
 		## YOCKEY
 		USA_resurgence_of_authority = {
 			allowed_civil_war = {

@@ -9100,6 +9100,10 @@ focus_tree = {
 		continue_if_invalid = no
 		available_if_capitulated = no
 		completion_reward = {
+			swap_ideas = {
+				remove_idea = USA_american_blackshirts
+				add_idea = USA_red_crusaders
+			}
 		}
 	}
 	focus = {
@@ -9124,6 +9128,10 @@ focus_tree = {
 		continue_if_invalid = no
 		available_if_capitulated = no
 		completion_reward = {
+			add_timed_idea = {
+				idea = USA_crusade_against_capital
+				days = 150
+			}
 		}
 	}
 	focus = {
@@ -9149,6 +9157,11 @@ focus_tree = {
 		continue_if_invalid = no
 		available_if_capitulated = no
 		completion_reward = {
+			swap_ideas = {
+				remove_idea = USA_red_crusaders
+				add_idea = USA_red_crusaders2
+			}
+			add_manpower = 20000
 		}
 	}
 	focus = {
