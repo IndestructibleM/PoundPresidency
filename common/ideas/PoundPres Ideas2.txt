@@ -159,7 +159,6 @@ ideas = {
 				production_factory_start_efficiency_factor = 0.05
 				production_speed_buildings_factor = 0.2
 				conscription_factor = -0.2
-				disabled_ideas = 1
 			}
 		}
 
