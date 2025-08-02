@@ -1639,6 +1639,10 @@ HEMM = {
 	color = rgb { 160 20 20 }
 	color_ui = rgb { 160 20 20 }
 }
+earthrepublic = {
+	color = rgb { 20 120 40 }
+	color_ui = rgb { 20 120 40}
+}
 YOCK = {
 	color = rgb { 0 0 80 }
 	color_ui = rgb { 0 0 80 }

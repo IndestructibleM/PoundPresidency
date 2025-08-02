@@ -213,7 +213,8 @@ country_event = {
 			long_name = "Peoples' Union for Common Revolution"
 			name = "PUCR"
 		}
-		hidden_effect = { set_cosmetic_tag = ASR }
+		set_cosmetic_tag = HEMM
+		retire_character = USA_richard_child
 	}
 	
 	option = {
@@ -225,7 +226,7 @@ country_event = {
 			last_election = "1936.11.5"
 			election_frequency = 48
 		}
-		hidden_effect = { set_cosmetic_tag = ASR }
+		retire_character = USA_richard_child
 	}
 	
 	option = {
@@ -239,6 +240,7 @@ country_event = {
 			long_name = "Crusaders for Liberty"
 			name = "Crusaders for Liberty"
 		}
+		retire_character = USA_richard_child
 	}
 	
 	option = {
@@ -250,6 +252,7 @@ country_event = {
 			long_name = "Imperial Vanguard"
 			name = "Imperial Vanguard"
 		}
+		retire_character = USA_richard_child
 	}
 }
 

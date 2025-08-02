@@ -8845,7 +8845,6 @@ focus_tree = {
 		available_if_capitulated = no
 		completion_reward = {
 			add_popularity = { ideology = communism popularity = 0.2 }
-			set_cosmetic_tag = HEMM
 			add_political_power = 50
 			add_ideas = USA_fascist_resistance
 		}
@@ -8918,6 +8917,7 @@ focus_tree = {
 				remove_idea = USA_fascist_resistance
 				add_idea = USA_fascist_resistance2
 			}
+			custom_effect_tooltip = "New ministers will become available!"
 		}
 	}
 	focus = {
@@ -9024,7 +9024,7 @@ focus_tree = {
 			}
 			set_war_support = 1
 			add_stability = 0.2
-			add_popularity = { ideology = communism popularity = 0.3 }
+			add_popularity = { ideology = communism popularity = 0.2 }
 			add_popularity = { ideology = democratic popularity = 0.15 }
 			custom_effect_tooltip = bashthefash
 			retire_character = USA_francis_yockey

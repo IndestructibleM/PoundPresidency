@@ -212,6 +212,46 @@ characters = {
 		}
 	}
 	
+	USA_upton_sinclair = {
+		name = "Upton Sinclair"
+		portraits = {
+			civilian = {
+				small = "gfx/interface/advisors/USA/USA_Upton_Sinclair.png"
+			}
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = USA_upton_sinclair_idea
+			visible = {
+				has_completed_focus = USA_natural_revolution
+			}
+			available = {
+				has_completed_focus = USA_natural_revolution
+			}
+			traits = { socialist_justice }
+		}
+	}
+	
+	USA_max_eastman = {
+		name = "Max Eastman"
+		portraits = {
+			civilian = {
+				small = "gfx/interface/advisors/USA/USA_Max_Eastman.png"
+			}
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = USA_max_eastman_idea
+			visible = {
+				has_completed_focus = USA_natural_revolution
+			}
+			available = {
+				has_completed_focus = USA_natural_revolution
+			}
+			traits = { IRQ_poet_of_freedom }
+		}
+	}
+	
 	USA_charles_lindbergh_ac = {
 		name = "Charles Lindbergh"
 		portraits = {

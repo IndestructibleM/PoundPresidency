@@ -487,6 +487,8 @@ recruit_character = USA_George_Christians
 recruit_character = USA_charles_lindbergh_ac
 recruit_character = USA_willis_carto
 recruit_character = USA_revilo_oliver
+recruit_character = USA_max_eastman
+recruit_character = USA_upton_sinclair
 
 
 
