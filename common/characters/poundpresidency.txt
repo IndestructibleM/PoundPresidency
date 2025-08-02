@@ -21,6 +21,9 @@ characters = {
 		country_leader = {
 			ideology = utopian_socialism
 		}
+		country_leader = {
+			ideology = socdem
+		}
 	}
 	
 	USA_George_Christians = {
@@ -32,6 +35,7 @@ characters = {
 		}
 		country_leader = {
 			ideology = natcol
+			traits = {unproven_leader}
 		}
 	}
 	

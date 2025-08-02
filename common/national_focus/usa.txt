@@ -7696,7 +7696,10 @@ focus_tree = {
 		}
 		available = {
 			has_government = fascism
+			OR = {
 			GER = { has_government = fascism }
+			ITA = { has_government = fascism }
+			}
 		}
 
 		cancel_if_invalid = yes
@@ -7704,7 +7707,15 @@ focus_tree = {
 		available_if_capitulated = no
 		search_filters = {FOCUS_FILTER_INDUSTRY FOCUS_FILTER_STABILITY FOCUS_FILTER_USA_CONGRESS}
 		completion_reward = {
-			GER = { add_to_faction = USA }
+			if = {
+				limit = { GER = { has_government = fascism } }
+				GER = { add_to_faction = USA }
+			}
+			else_if = {
+				limit = { ITA = { has_government = fascism } }
+				USA = { create_faction = pactofrome }
+				add_to_faction = ITA
+			}
 		}
 	}
 	focus = {
@@ -8155,7 +8166,7 @@ focus_tree = {
 		completion_reward = {
 			unlock_decision_tooltip = USA_conquest_of_latam
 			country_event = { id = pound.9 days = 0 }
-			add_stability = 0.08
+			add_stability = 0.1
 		}
 	}		
 	focus = {
@@ -8224,6 +8235,7 @@ focus_tree = {
 		available_if_capitulated = no
 		completion_reward = {
 			country_event = { id = pound.12 days = 0 }
+			remove_ideas = USA_ubermensch_council
 			remove_power_balance = { id = USA_power_balance }
 		}
 	}
@@ -8368,7 +8380,7 @@ focus_tree = {
 		completion_reward = {
 			add_trait = {
     			character = USA_lawrence_dennis
-    			ideology = fascism_ideology
+    			ideology = fascism_ideology 
     			trait = american_totalitarian
 			}
 		}
@@ -8400,6 +8412,21 @@ focus_tree = {
 			army_experience = 50
 			navy_experience = 50
 			air_experience = 50
+			add_doctrine_cost_reduction = {
+				cost_reduction = 0.75
+				uses = 1
+				category = land_doctrine
+			}
+			add_doctrine_cost_reduction = {
+				cost_reduction = 0.75
+				uses = 1
+				category = air_doctrine
+			}
+			add_tech_bonus = {
+    			bonus = 0.5
+   				uses = 2
+    			category = electronics
+			}
 		}
 	}
 	focus = {
@@ -8544,10 +8571,7 @@ focus_tree = {
 		completion_reward = {
 			set_war_support = 1
 			add_ideas = USA_resurgence_of_authority
-			remove_advisor_role = {
- 				character = "USA_howard_scott"
-  				slot = political_advisor
-			}
+			retire_character = USA_howard_scott
 			retire_character = USA_Ernest_Hemmingway
 			retire_character = USA_George_Christians
 			add_trait = {
@@ -8555,6 +8579,8 @@ focus_tree = {
    				ideology = nazism
    				trait = prophet_of_imperium
 			}
+			country_event = { id = yock.1 days = 0 }
+			custom_effect_tooltip = "New ministers will become available!"
 		}
 	}
 	focus = {
@@ -8590,7 +8616,7 @@ focus_tree = {
 			}	
 			add_timed_idea = {
 				idea = USA_war_for_west
-				days = 100
+				days = 125
 			}
 			custom_effect_tooltip = "You will gain a new spirit when the timed spirit is removed."
 		}
@@ -8708,7 +8734,7 @@ focus_tree = {
 		continue_if_invalid = no
 		available_if_capitulated = no
 		completion_reward = {
-			country_event = { id = yock.4 days = 0 }
+			country_event = { id = yock.3 days = 0 }
 			create_wargoal = {
             target = SOV
             type = topple_government
@@ -8736,8 +8762,8 @@ focus_tree = {
 		available = {
 			has_government = fascism
 			has_country_leader = { ruling_only = yes character = USA_francis_yockey }
-			has_country_flag = PoundDead
-		}
+			has_country_flag = PoundDed
+		}a
 
 		cancel_if_invalid = yes
 		continue_if_invalid = no
@@ -8748,6 +8774,7 @@ focus_tree = {
 			add_ideas = tot_economic_mobilisation
 			add_political_power = -100
 			add_stability = 0.03
+			country_event = { id = yock.2 days = 0 }
 		}
 	}
 	focus = {
@@ -8773,7 +8800,14 @@ focus_tree = {
 		continue_if_invalid = no
 		available_if_capitulated = no
 		completion_reward = {
-			leave_faction = yes
+			if = {
+				limit = { is_faction_leader = no }
+				leave_faction = yes
+			}
+			set_country_leader_portrait = {
+				ideology = fascism
+				portrait = Portrait_Francis_Yockey_cap
+			}
 			create_faction = "Imperium of Europe"
 			unlock_decision_tooltip = USA_towards_world_unity
 			every_state = { 
@@ -8813,6 +8847,7 @@ focus_tree = {
 			add_popularity = { ideology = communism popularity = 0.2 }
 			set_cosmetic_tag = HEMM
 			add_political_power = 50
+			add_ideas = USA_fascist_resistance
 		}
 	}
 	focus = {
@@ -8837,6 +8872,7 @@ focus_tree = {
 		continue_if_invalid = no
 		available_if_capitulated = no
 		completion_reward = {
+			unlock_decision_tooltip = HEMM_sister_republics
 			if = {
 				limit = { is_in_faction_with = GER }
 				leave_faction = yes
@@ -8848,11 +8884,6 @@ focus_tree = {
 			else = {
 				leave_faction = yes
 				create_faction = theunitedfront
-			}
-			release_autonomy = {
-    			target = CAN
-   			 	autonomy_state = sister_republic
-  				freedom_level = 0.3
 			}
 		}
 	}
@@ -8878,7 +8909,15 @@ focus_tree = {
 		continue_if_invalid = no
 		available_if_capitulated = no
 		completion_reward = {
-			add_ideas = USA_natural_revolution_idea
+			set_power_balance = {
+   				id = HEMM_power_balance
+    			left_side = USA_socdem_side
+    			right_side = USA_revsoc_side_side
+			}
+			swap_ideas = {
+				remove_idea = USA_fascist_resistance
+				add_idea = USA_fascist_resistance2
+			}
 		}
 	}
 	focus = {
@@ -8915,6 +8954,7 @@ focus_tree = {
     			ideology = utopian_socialism
     			trait = soldier_author_sportsman
 			}
+			remove_ideas = USA_modernism_without_mercy
 		}
 	}
 	focus = {
@@ -8940,7 +8980,7 @@ focus_tree = {
 		continue_if_invalid = no
 		available_if_capitulated = no
 		completion_reward = {
-			unlock_decision_tooltip = HEMM_sister_republics
+			add_ideas = USA_fraternal_republic_idea
 			if = {
 				limit = { is_in_faction_with = GER }
 				leave_faction = yes
@@ -8972,19 +9012,25 @@ focus_tree = {
 			has_government = communism
 			has_country_leader = { ruling_only = yes character = USA_Ernest_Hemmingway }
 			has_country_flag = PoundDead
-			fascism < 0.4
 		}
 
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
 		completion_reward = {
+			swap_ideas = {
+				remove_idea = USA_fascist_resistance
+				add_idea = USA_fascist_resistance3
+			}
 			set_war_support = 1
 			add_stability = 0.2
-			set_popularities = {
-				democratic = 20
-				communism = 80
-			}
+			add_popularity = { ideology = communism popularity = 0.3 }
+			add_popularity = { ideology = democratic popularity = 0.15 }
+			custom_effect_tooltip = bashthefash
+			retire_character = USA_francis_yockey
+			retire_character = USA_lawrence_dennis
+			retire_character = USA_George_Christians
+			retire_character = USA_charles_lindbergh
 		}
 	}
 	focus = {
@@ -9012,6 +9058,8 @@ focus_tree = {
 		available_if_capitulated = no
 		completion_reward = {
 			add_popularity = { ideology = democratic popularity = 0.2 }
+			remove_ideas = USA_fascist_resistance3
+			add_ideas = USA_peoples_commonwealth
 		}
 	}
 
@@ -9023,6 +9071,13 @@ focus_tree = {
 		cost = 7.2
 		ai_will_do = {
 			factor = 10
+		}
+		available = { 
+			NOT = {
+				has_idea = USA_fascist_resistance
+				has_idea = USA_fascist_resistance2
+				has_idea = USA_fascist_resistance3
+			}
 		}
 		relative_position_id = USA_left_utopians_triumph
 		prerequisite = { focus = USA_fraternal_republic }
@@ -9116,6 +9171,7 @@ focus_tree = {
 			remove_ideas = USA_state_of_utopia
 			set_cosmetic_tag = CHRI
 			add_political_power = 50
+			add_popularity = { ideology = fascism popularity = -0.25 }
 		}
 	}
 	focus = {
@@ -9168,6 +9224,8 @@ focus_tree = {
 		continue_if_invalid = no
 		available_if_capitulated = no
 		completion_reward = {
+			remove_ideas = USA_national_syndicalism
+			remove_ideas = USA_national_syndicalism2
 			add_timed_idea = {
 				idea = USA_crusade_against_capital
 				days = 150
@@ -9197,6 +9255,7 @@ focus_tree = {
 			has_government = fascism
 			has_country_leader = { ruling_only = yes character = USA_George_Christians }
 			has_country_flag = PoundDead
+			fascism > 0.45
 		}
 
 		cancel_if_invalid = yes
@@ -9233,6 +9292,7 @@ focus_tree = {
 		continue_if_invalid = no
 		available_if_capitulated = no
 		completion_reward = {
+			unlock_decision_category_tooltip = USA_pap_ink_revolution_cat
 		}
 	}
 	focus = {
@@ -9252,12 +9312,14 @@ focus_tree = {
 			has_government = fascism
 			has_country_leader = { ruling_only = yes character = USA_George_Christians }
 			has_country_flag = PoundDead
+			fascism > 0.45
 		}
 
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
 		completion_reward = {
+			add_ideas = USA_humanity_over_gold
 		}
 	}
 	focus = {
@@ -9278,6 +9340,7 @@ focus_tree = {
 			has_government = fascism
 			has_country_leader = { ruling_only = yes character = USA_George_Christians }
 			has_country_flag = PoundDead
+			fascism > 0.6
 		}
 
 		cancel_if_invalid = yes
@@ -9301,9 +9364,33 @@ focus_tree = {
    				active = yes
 			}
 			diplomatic_relation = {
-    			country = SOV
+    			country = JAP
     			relation = embargo
    				active = yes
+			}
+			FRA = { 
+				add_timed_idea = {
+					idea = class_warfare
+					days = 200
+				}
+			}
+			ENG = { 
+				add_timed_idea = {
+					idea = class_warfare
+					days = 200
+				}
+			}
+			SOV = { 
+				add_timed_idea = {
+					idea = class_warfare
+					days = 200
+				}
+			}
+			JAP = { 
+				add_timed_idea = {
+					idea = class_warfare
+					days = 200
+				}
 			}
 		}
 	}
@@ -9325,13 +9412,18 @@ focus_tree = {
 			has_government = fascism
 			has_country_leader = { ruling_only = yes character = USA_George_Christians }
 			has_country_flag = PoundDead
+			fascism > 0.6
 		}
 
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
 		completion_reward = {
-			unlock_decision_tooltip = USA_red_circle		
+			unlock_decision_tooltip = USA_red_circle
+			swap_ruler_traits = {
+    			remove = unproven_leader
+   				add = newagecrusader
+			}	
 		}
 	}
 	focus = {
@@ -9349,8 +9441,9 @@ focus_tree = {
 		icon = GFX_focus_NOR_send_the_king_back_to_denmark
 		available = {
 			has_government = fascism
-			has_country_leader = { ruling_only = yes character = USA_howard_scott }
+			has_country_leader = { ruling_only = yes character = USA_George_Christians }
 			has_country_flag = PoundDead
+			fascism > 0.6
 		}
 
 		cancel_if_invalid = yes

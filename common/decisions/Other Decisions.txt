@@ -101,8 +101,8 @@ USA_fight_for_western_civilization = {
 			stability_weekly = 0.01
 		}
 	}
-	USA_end_petty_capitalism = {
-		name = "Destroy the Remnants of Capitalism"
+	USA_end_petty_capUSAlism = {
+		name = "Destroy the Remnants of CapUSAlism"
 		fire_only_once = yes
 		icon = GFX_decision_generic_nationalism
 		allowed = { tag = CHI }
@@ -226,30 +226,152 @@ USA_fight_for_western_civilization = {
 			}
 		}
 	}
+}
+foreign_politics = {
 	USA_red_circle = {
 		name = "The Crimson Circle"
 		fire_only_once = yes
 		icon = GFX_decision_generic_form_nation
 		allowed = { tag = USA }
 		visible = { has_completed_focus = USA_the_golden_rule }
-		targets = {MEX VEN COL CUB HAI DOM PAN HON GUA NIC COS ELS }
+		targets = { MEX VEN COL CUB HAI DOM PAN HON GUA NIC COS ELS }
 		ai_will_do = {
 			factor = 100
 		}
-		days_remove = 30
-		cost = 200
-		modifier = { consumer_goods_expected_value = 0.5 political_power_cost = 1}
-		remove_effect = {
-			set_stability = 1
-			set_war_support = 1
-			set_cosmetic_tag = Imperium
-			every_state = { 
-				limit = { 
-					is_on_continent = europe
-					is_controlled_by_ROOT_or_ally = yes
-				}
-				transfer_state_to = USA
+		days_remove = 10
+		cost = 25
+		complete_effect = {
+			FROM ={
+				every_core_state = { add_claim_by = USA }
 			}
 		}
+		remove_effect = {
+			declare_war_on = {
+				target = FROM
+				type = annex_everything
+			}
+		}
+	}
+}
+USA_pap_ink_revolution_cat = {
+	USA_Cassa_il_Mezzogiorno = {
+		name = "Cassa per il Mezzogiorno Expansion"
+		allowed = { tag = USA }
+		icon = GFX_decision_generic_propoganda
+		days_remove = 50
+		fire_only_once = yes
+		available = {
+			NOT = { has_country_flag = USA.Active_campaign }
+		}
+		ai_will_do = {
+			factor = 100
+		}
+		cost = 40
+		modifier = {
+			consumer_goods_expected_value = 0.1
+			industrial_capacity_factory = -0.1
+		}
+		complete_effect = { set_country_flag = USA.Active_campaign }
+		remove_effect = {
+			add_popularity = { ideology = fascism popularity = 0.1 }	
+			clr_country_flag = USA.Active_campaign
+		}
+	}	
+	USA_fight_the_papists = {
+		name = "'St. Patricks Day in America'"
+		allowed = { tag = USA }
+		icon = GFX_decision_generic_propoganda
+		days_remove = 50
+		fire_only_once = yes
+		available = {
+			NOT = { has_country_flag = USA.Active_campaign }
+		}
+		ai_will_do = {
+			factor = 100
+		}
+		cost = 40
+		modifier = {
+			weekly_manpower = -100
+			political_power_factor = -0.3
+		}
+		complete_effect = { set_country_flag = USA.Active_campaign }
+		remove_effect = {
+			clr_country_flag = USA.Active_campaign
+			add_popularity = { ideology = fascism popularity = 0.1 }
+			add_war_support = 0.1	z
+		}
+	}	
+	USA_stand_up_be_counted = {
+		name = "National Urban and Transportation Effort"
+		allowed = { tag = USA }
+		icon = GFX_decision_generic_propoganda
+		days_remove = 50
+		fire_only_once = yes
+		available = {
+			NOT = { has_country_flag = USA.Active_campaign }
+		}
+		ai_will_do = {
+			factor = 100
+		}
+		cost = 40
+		modifier = {
+			consumer_goods_expected_value = 0.1
+			production_speed_buildings_factor = -0.1
+		}
+		complete_effect = { set_country_flag = USA.Active_campaign }
+		remove_effect = {
+			add_manpower = 200000
+			add_popularity = { ideology = fascism popularity = 0.1 }
+		}
+	}	
+	USA_venture_for_markets = {
+		name = "Venture for New Markets"
+		allowed = { tag = USA }
+		icon = GFX_decision_generic_propoganda
+		days_remove = 40
+		fire_only_once = yes
+		available = {
+			NOT = { has_country_flag = USA.Active_campaign }
+		}
+		ai_will_do = {
+			factor = 100
+		}
+		cost = 30
+		modifier = {
+			consumer_goods_expected_value = 0.15
+			industrial_capacity_factory = -0.2
+		}
+		complete_effect = { 
+			set_country_flag = USA.Active_campaign 
+		}
+		remove_effect = {
+			clr_country_flag = USA.Active_campaign
+			add_popularity = { ideology = fascism popularity = 0.1 }
+		}
+	}
+	USA_paper_and_ink_campaign = {
+		name = "The Paper and Ink Campaign"
+  	 	activation = {
+       		always = no
+   	 	}
+		allowed = { tag = USA }
+		icon = GFX_decision_gre_paying_ifc_debt
+		fire_only_once = yes
+		is_good = no
+    	available = {
+    	}
+    	days_mission_timeout = 250
+    	complete_effect = {
+			add_political_power = 100
+			set_war_support = 1
+    	}
+    	timeout_effect = {
+			add_political_power = -500
+			add_war_support = -0.2
+			add_timed_idea = {
+				idea = class_warfare
+				days = 80
+			}
+   	 	}
 	}
 }

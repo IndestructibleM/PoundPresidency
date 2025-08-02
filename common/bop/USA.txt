@@ -85,8 +85,8 @@ USA_power_balance = {
 			min = 0.1
 			max = 0.3
 			modifier = {
-				industrial_capacity_factory = 0.05 #Good
-				production_speed_buildings_factor = 0.05 #Bad
+				industrial_capacity_factory = 0.05 
+				production_speed_buildings_factor = 0.05 
 			}
 			on_activate = {
 			}
@@ -101,8 +101,8 @@ USA_power_balance = {
 			max = 0.6
 			modifier = {
 				research_speed_factor = -0.1
-				industrial_capacity_factory = 0.1 #Good
-				production_speed_buildings_factor = 0.1 #Bad
+				industrial_capacity_factory = 0.1
+				production_speed_buildings_factor = 0.1 
 			}
 			on_activate = {
 				

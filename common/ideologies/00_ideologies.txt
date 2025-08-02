@@ -12,6 +12,10 @@ ideologies = {
 
 			socialism = {
 			}
+			
+			socdem = {
+				color = { 194 30 86 }
+			}
 
 			populism = {
 			}

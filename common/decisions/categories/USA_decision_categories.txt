@@ -142,3 +142,14 @@ USA_fight_for_western_civilization = {
 		has_completed_focus = USA_destroy_cultural_distortion
 	}
 }
+
+USA_pap_ink_revolution_cat = {
+	allowed = {
+		original_tag = USA
+	}	
+	priority = 80
+	
+	visible = {
+		has_completed_focus = USA_paper_and_ink_revolution
+	}
+}

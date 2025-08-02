@@ -1,0 +1,148 @@
+HEMM_power_balance = {
+	initial_value = 0.00
+	left_side = USA_socdem_side
+	right_side = USA_revsoc_side	
+	decision_category = HEMM_bop_category
+
+	### Neutral status
+	range = {
+		id = USA_ernest_range
+		min = -0.10
+		max = 0.10
+		modifier = {
+			stability_factor = 0.1
+			party_popularity_stability_factor = 0.3
+		}
+		on_activate = {
+		}
+		on_deactivate = {
+			
+		}
+	}
+
+	side = {
+		id = USA_socdem_side	
+		icon = GFX_bop_USA_socdem_side
+
+		range = {
+			id = USA_socdem_low_control_range
+			min = -0.3
+			max = -0.1
+			modifier = {
+				experience_gain_army = 0.05
+				research_speed_factor = 0.05
+			}
+			on_activate = {
+				
+			}
+			on_deactivate = {
+				
+			}
+		}
+
+		range = {
+			id = USA_socdem_medium_control_range
+			min = -0.7
+			max = -0.3
+			modifier = {
+				experience_gain_army = 0.10
+				research_speed_factor = 0.15
+				war_support_factor = -0.05
+			}
+			on_activate = {
+			}
+			on_deactivate = {
+				
+			}
+		}
+
+		range = {
+			id = USA_socdem_high_control_range
+			min = -1
+			max = -0.7
+			modifier = {
+				experience_gain_army = 0.05
+				research_speed_factor = 0.1
+				war_support_factor = -0.2
+				neutrality_drift = 0.02
+			}
+			on_activate = {
+				set_politics = {
+					set_politics = {
+   					ruling_party = democratic
+    				elections_allowed = no
+    				long_name = "United Peoples' Party"
+    				name = UPP
+					}
+				}
+			}
+			on_deactivate = {
+				
+			}
+		}
+
+	}
+
+	side = {
+		id = USA_revsoc_side_side	
+		icon = GFX_bop_USA_revsoc_side_side
+
+		range = {
+			id = USA_revsoc_side_low_control_range
+			min = 0.1
+			max = 0.3
+			modifier = {
+				communism_drift = 0.03
+				industrial_capacity_factory = 0.05
+				industrial_capacity_dockyard = 0.05
+			}
+			on_activate = {
+			}
+			on_deactivate = {
+				
+			}
+		}
+
+		range = {
+			id = USA_revsoc_side_medium_control_range
+			min = 0.3
+			max = 0.7
+			modifier = {
+				communism_drift = 0.07
+				industrial_capacity_factory = 0.10
+				industrial_capacity_dockyard = 0.10
+				consumer_goods_expected_value = -0.05
+			}
+			on_activate = {
+				
+			}
+			on_deactivate = {
+				
+			}
+		}
+
+		range = {
+			id = USA_revsoc_side_high_control_range
+			min = 0.7
+			max = 1
+			modifier = {
+				communism_drift = 0.1
+				industrial_capacity_factory = 0.15
+				industrial_capacity_dockyard = 0.15
+				consumer_goods_expected_value = -0.1
+			}
+			on_activate = {
+				set_politics = {
+					set_politics = {
+   					ruling_party = communism
+					}
+				}
+			}
+			on_deactivate = {
+				
+			}
+		}
+
+	}
+}
+

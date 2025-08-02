@@ -314,7 +314,13 @@ country_event = {
 	id = pound.14
 	title = "The Eagle and the Silver Star"
 	desc = pound.14.d
-	is_triggered_only = yes
+	trigger = {
+		has_completed_focus = USA_now_constructive_evolution
+		has_government = fascism
+	}
+	mean_time_to_happen = {
+		days = 60
+	}
 	
 	option = {
 		name = "And so, the poet ruled, and the dreamers bowed."
@@ -323,7 +329,31 @@ country_event = {
 }
 
 country_event = {
-	id = yock.4
+	id = yock.1
+	title = "Enjoy the Silence"
+	desc = yock.1.d
+	is_triggered_only = yes
+	
+	option = {
+		name = "And then there was no one to speak out for me!"
+		add_manpower = -8
+	}
+}
+
+country_event = {
+	id = yock.2
+	title = "More Than Anything You Can Even Yet Imagine"
+	desc = yock.2.d
+	is_triggered_only = yes
+	
+	option = {
+		name = "Let the fire consume the old world."
+		add_war_support = 0.03
+	}
+}
+
+country_event = {
+	id = yock.3
 	title = "The Enemy of our Enemies"
 	desc = yock.4.d
 	is_triggered_only = yes
@@ -348,7 +378,7 @@ country_event = {
 	}
 	
 	option = {
-		name = "We shall play the long game..."
+		name = "We shall take the hard path..."
 		ai_chance = {
 			factor = 50
 		}
