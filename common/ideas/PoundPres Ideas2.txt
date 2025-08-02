@@ -1,6 +1,19 @@
 ideas = {
 	country = {
-		
+		## HEMMINGWAY
+		USA_save_the_world = {
+			allowed_civil_war = {
+				always = yes
+			}
+			name = "Hopes and Dreams will Save the World!"
+			modifier = {
+				army_attack_factor = 0.3
+				army_morale = 2
+				land_reinforce_rate = 0.05
+				army_speed_factor = 0.15
+				weekly_manpower = 1000
+			}
+		}
 		## DENNIS
 		USA_technocratic_economy = {
 			allowed_civil_war = {
@@ -57,6 +70,36 @@ ideas = {
 			}
 		}
 
+		USA_nothing_against_everything_for_state = {
+			allowed_civil_war = {
+				always = yes
+			}
+			name = "Nothing Against the State, Everything for the State, All Within the State"
+			modifier = {
+				political_power_factor = 0.2
+				foreign_subversive_activites = -1
+				resistance_decay = 0.3
+				compliance_growth = 0.3
+				stability_weekly = 0.005
+			}
+		}
+		
+		USA_elite_connections = {
+			allowed_civil_war = {
+				always = yes
+			}
+			name = "Elite Connections"
+			modifier = {
+				trade_opinion_factor = 0.25
+				opinion_gain_monthly_same_ideology = 10
+				required_garrison_factor = -0.08
+				fascism_acceptance = 30
+				neutrality_acceptance = 30
+				reassignment_duration_factor = -0.3
+				experience_loss_factor = -0.2
+			}
+		}
+
 		## Christians
 		USA_red_crusaders = {
 			allowed_civil_war = {
@@ -88,13 +131,28 @@ ideas = {
 			allowed_civil_war = {
 				always = yes
 			}
-			name = "Crusade against Capital"
+			name = "Crusade against Capitalism"
 			modifier = {
-				conscription_factor = -0.40
-				
-				weekly_manpower = 200
+				conscription_factor = -0.5
+				stability_factor = -0.5
+				weekly_manpower = 250
 				army_org_regain = 0.05
-				communism_drift = 0.03
+				communism_drift = 0.05
+			}
+			on_remove = {
+				add_offsite_building = { type = arms_factory level = 8 }
+				add_ideas = USA_knights_of_golden_rule
+			}
+		}
+		USA_knights_of_golden_rule = {
+			allowed_civil_war = {
+				always = yes
+			}
+			name = "Knights of the Golden Rule"
+			modifier = {
+				conscription = 0.015
+				army_org_regain = 0.1
+				research_speed_factor = -0.1
 			}
 		}
 		## YOCKEY

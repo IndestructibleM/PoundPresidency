@@ -66,4 +66,20 @@ leader_traits = {
 		drift_defence_factor = 0.2
 		war_stability_factor = 0.2
 	}
+	
+	american_totalitarian = {
+		random = no
+		civilian_intel_to_others = -100
+		army_intel_to_others = -100
+		navy_intel_to_others = -100
+		airforce_intel_to_others = -100
+		offensive_war_stability_factor = 0.5
+	}
+	
+	soldier_author_sportsman = {
+		random = no
+		conscription_factor = 0.1
+		army_strength_factor = 0.2
+		political_power_cost = -0.2
+	}
 }

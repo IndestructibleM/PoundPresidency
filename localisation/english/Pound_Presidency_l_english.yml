@@ -67,8 +67,8 @@
  USA_reimagine_world_order_desc: "All the World a Canvas"
  USA_stella_polaris: "Journey for the North Star"
  USA_stella_polaris_desc: "Journey for the North Star"
- USA_silkworms_mulberry_groves: "Silkworms, Coconuts and Mulberry Groves"
- USA_silkworms_mulberry_groves_desc: "Silkworms, Coconuts and Mulberry Groves"
+ USA_tropical_domain: "A Tropical Adventure"
+ USA_tropical_domain: "A Tropical Adventure"
  USA_light_of_civilization: "The Light of Civilization"
  USA_light_of_civilization_desc: "The Light of Civilization"
  USA_remove_sin: "Towards a World Removed of Sin"
@@ -107,7 +107,7 @@
  USA_fraternal_republic: "Fraternal Republic"
  USA_invincible_peoples_will: "Invincible Will of the People"
  USA_town_hall_councilism: "Townhall Councilism"
- USA_hopes_and_dreams: "Hopes and Dreams will Save the World"
+ USA_hopes_and_dreams: "For Whom the Bell Tolls"
  USA_worker_farmer_kingdom: "Grand Toiler Kingdom"
  # Christians
  USA_away_from_gold: "Away from the Tyranny of Gold"
@@ -166,6 +166,8 @@
  Imperium_DEF: "the Imperium of Faustian Europe"
  Imperium_ADJ: "Imperium"
  
+ earthrepublic: "Peoples' Republic of Earth"
+ 
  QUE_USA_fascism_subject: "Borelian State of New France"
  QUE_USA_fascism_subject_DEF: "Borelian State of New France"
  MEX_USA_neutrality_subject: "Cosmic Mexican State"
@@ -182,13 +184,16 @@
  artist_tyrant: "Artist-Tyrant"
  light_bearer: "Lucibel the Light-Bearer"
  prophet_of_imperium: "Prophet of Imperium"
- 
+ soldier_author_sportsman: "Soldier, Author, Sportsman"
+ american_totalitarian: "American Totalitarian"
  
  ### Decisions
  USA_map_painting: "All the World a Canvas"
  USA_jupiter_league: "The Jupiter League"
  USA_fight_for_western_civilization: "§5The Fight for Western Civilization§!"
  wholesomedotpng: "§tA new beginning to lay new beliefs \n\nI swear the oath to you \n\nLong live the king \n\nHis people singing \n\nReign for a thousand years \n\nI swear the oath to you \n\nLong live the king§!"
+ falsemaskoffreedom: "§BWe must subordinate our appetites, our passions and our egoism to the wholeness of the National interest. This way we will be a really free people, otherwise anarchy and indiscipline will reign over us under the false mask of freedom.§!"
+ shizobolgang: "§RMine eyes have seen the glory of the coming of the Lord \n\nHe is trampling out the vintage where the grapes of wrath are stored \n\nHe hath loosed the fateful lightning of His terrible swift sword \n\nHis truth is marching on§!"
  ### BoP
  USA_power_balance: "Struggle of the New American Gods"
  USA_pound_range: "Ezra Absolutism"
@@ -218,9 +223,10 @@
  
  
  collaborator_gov: "Collaborator Government"
+ sister_republic: "Sister Republic"
  
  PoundDead: "Commander Pound is No More"
- 
+ theunitedfront: "The United Front"
  # Ideologies
  socfash: "Social Fascism"
  natcol: "Red Nativism"
