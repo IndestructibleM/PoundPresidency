@@ -8383,6 +8383,9 @@ focus_tree = {
     			ideology = fascism_ideology 
     			trait = american_totalitarian
 			}
+			set_technology = {
+    			suicide_craft = 1
+			}
 		}
 	}
 	focus = {
@@ -8955,6 +8958,12 @@ focus_tree = {
     			trait = soldier_author_sportsman
 			}
 			remove_ideas = USA_modernism_without_mercy
+			add_unit_bonus = {
+ 				category_all_infantry = {
+				supply_consumption = -0.02
+				default_morale = 0.05
+  				}
+			}	
 		}
 	}
 	focus = {
@@ -9292,7 +9301,8 @@ focus_tree = {
 		continue_if_invalid = no
 		available_if_capitulated = no
 		completion_reward = {
-			unlock_decision_category_tooltip = USA_pap_ink_revolution_cat
+			unlock_decision_category_tooltip = USA_pap_ink_revolution_cata
+			activate_mission = USA_paper_and_ink_campaign
 		}
 	}
 	focus = {

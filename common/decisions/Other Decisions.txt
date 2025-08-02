@@ -254,10 +254,10 @@ foreign_politics = {
 	}
 }
 USA_pap_ink_revolution_cat = {
-	USA_Cassa_il_Mezzogiorno = {
-		name = "Cassa per il Mezzogiorno Expansion"
+	USA_gods_love_over_golden_slavery = {
+		name = "Restoring the Faith and Breaking our Chains"
 		allowed = { tag = USA }
-		icon = GFX_decision_generic_propoganda
+		icon = GFX_decision_generic_civil_support
 		days_remove = 50
 		fire_only_once = yes
 		available = {
@@ -270,6 +270,7 @@ USA_pap_ink_revolution_cat = {
 		modifier = {
 			consumer_goods_expected_value = 0.1
 			industrial_capacity_factory = -0.1
+			fascism_drift = 0.15
 		}
 		complete_effect = { set_country_flag = USA.Active_campaign }
 		remove_effect = {
@@ -280,7 +281,7 @@ USA_pap_ink_revolution_cat = {
 	USA_fight_the_papists = {
 		name = "'St. Patricks Day in America'"
 		allowed = { tag = USA }
-		icon = GFX_decision_generic_propoganda
+		icon = GFX_decision_generic_civil_support
 		days_remove = 50
 		fire_only_once = yes
 		available = {
@@ -292,19 +293,20 @@ USA_pap_ink_revolution_cat = {
 		cost = 40
 		modifier = {
 			weekly_manpower = -100
-			political_power_factor = -0.3
+			political_power_factor = -0.25
+			fascism_drift = 0.15
 		}
 		complete_effect = { set_country_flag = USA.Active_campaign }
 		remove_effect = {
 			clr_country_flag = USA.Active_campaign
 			add_popularity = { ideology = fascism popularity = 0.1 }
-			add_war_support = 0.1	z
+			add_war_support = 0.1
 		}
 	}	
 	USA_stand_up_be_counted = {
 		name = "National Urban and Transportation Effort"
 		allowed = { tag = USA }
-		icon = GFX_decision_generic_propoganda
+		icon = GFX_decision_generic_civil_support
 		days_remove = 50
 		fire_only_once = yes
 		available = {
@@ -317,6 +319,7 @@ USA_pap_ink_revolution_cat = {
 		modifier = {
 			consumer_goods_expected_value = 0.1
 			production_speed_buildings_factor = -0.1
+			fascism_drift = 0.15
 		}
 		complete_effect = { set_country_flag = USA.Active_campaign }
 		remove_effect = {
@@ -327,7 +330,7 @@ USA_pap_ink_revolution_cat = {
 	USA_venture_for_markets = {
 		name = "Venture for New Markets"
 		allowed = { tag = USA }
-		icon = GFX_decision_generic_propoganda
+		icon = GFX_decision_generic_civil_support
 		days_remove = 40
 		fire_only_once = yes
 		available = {
@@ -336,10 +339,11 @@ USA_pap_ink_revolution_cat = {
 		ai_will_do = {
 			factor = 100
 		}
-		cost = 30
+		cost = 40
 		modifier = {
 			consumer_goods_expected_value = 0.15
 			industrial_capacity_factory = -0.2
+			fascism_drift = 0.15
 		}
 		complete_effect = { 
 			set_country_flag = USA.Active_campaign 
@@ -352,13 +356,14 @@ USA_pap_ink_revolution_cat = {
 	USA_paper_and_ink_campaign = {
 		name = "The Paper and Ink Campaign"
   	 	activation = {
-       		always = no
+       		has_completed_focus = USA_paper_and_ink_revolution
    	 	}
 		allowed = { tag = USA }
-		icon = GFX_decision_gre_paying_ifc_debt
+		icon = GFX_decision_generic_nationalism
 		fire_only_once = yes
 		is_good = no
     	available = {
+			fascism > 0.75
     	}
     	days_mission_timeout = 250
     	complete_effect = {
