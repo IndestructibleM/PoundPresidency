@@ -45,7 +45,7 @@ ideas = {
 			allowed_civil_war = {
 				always = yes
 			}
-			name = "The Great Peoples' Commonwealth"
+			name = "The Great People's Commonwealth"
 			modifier = {
 			stability_factor = 0.1
 			war_support_factor = 0.1
