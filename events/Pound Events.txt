@@ -7,7 +7,11 @@ country_event = {
 	desc = pound.0.d
 	title = "Welcome to The Pound Presidency!"
 	fire_only_once = yes
-	is_triggered_only = yes
+	trigger ={
+		is_ai = no
+		tag = USA
+	}
+	mean_time_to_happen = { days = 0 }
 	picture = GFX_report_event_pound_intro
 	
 	option = {
@@ -318,9 +322,11 @@ country_event = {
 	title = "The Eagle and the Silver Star"
 	desc = pound.14.d
 	trigger = {
+		tag = USA
 		has_completed_focus = USA_now_constructive_evolution
 		has_government = fascism
 	}
+	fire_only_once = yes
 	mean_time_to_happen = {
 		days = 60
 	}
@@ -328,6 +334,118 @@ country_event = {
 	option = {
 		name = "And so, the poet ruled, and the dreamers bowed."
 		retire_character = USA_william_dudley_pelley
+	}
+}
+
+country_event = {
+	id = pound.15
+	title = "Britain Offers Peace"
+	desc = pound.15.d
+	fire_only_once = yes
+	trigger = {
+		has_government = fascism
+		tag = USA
+		naval_strength_ratio = {
+    		tag = ENG
+    		ratio > 2
+		}
+		strength_ratio = {
+   			tag = ENG
+    		ratio > 2
+		}
+		has_war_with = ENG
+		ENG = {
+			casualties_inflicted_by = {
+    			opponent = USA
+    			thousands > 300
+			}
+			alliance_strength_ratio < 0.5
+			OR = {
+				any_core_state = { is_controlled_by = USA }
+				NOT = { 
+					controls_state = 446
+					controls_state = 118
+					controls_state = 696
+					controls_state = 311
+					controls_state = 116
+				}
+			}
+		}
+		all_core_state = { is_controlled_by = USA }
+		ships_in_area = { area = 43 size > 100 } 
+		ships_in_area = { area = 18 size > 100 } 
+		OR = {
+			CAN = { has_capitulated = yes }
+			NOT = { country_exists = CAN }
+		}
+	}
+	mean_time_to_happen = {
+		days = 20
+	}
+	
+	option = {
+		name = "Victory is Ours!"
+		ENG = {
+			every_core_state = { transfer_state_to = USA }
+			white_peace = USA
+		}
+		set_autonomy = {
+   			target = AST
+    		autonomous_state = collaborator_gov
+    		end_wars = yes
+    		end_civil_wars = yes
+		}
+		set_autonomy = {
+   			target = SAF
+    		autonomous_state = collaborator_gov
+    		end_wars = yes
+    		end_civil_wars = yes
+		}
+		set_autonomy = {
+   			target = NZL
+    		autonomous_state = collaborator_gov
+    		end_wars = yes
+    		end_civil_wars = yes
+		}
+		set_autonomy = {
+   			target = RAJ
+    		autonomous_state = collaborator_gov
+    		end_wars = yes
+    		end_civil_wars = yes
+		}
+		release_autonomy = {
+   			target = EGY
+    		autonomous_state = collaborator_gov
+    		end_wars = yes
+    		end_civil_wars = yes
+		}
+		LIB = {
+			transfer_state = 689
+			transfer_state = 693
+			transfer_state = 692
+			transfer_state = 308
+			transfer_state = 274
+			transfer_state = 701
+		}
+		add_state_claim = 691
+		add_state_claim = 687
+		add_state_claim = 687
+	}
+}
+
+country_event = {
+	id = pound.16
+	title = "British Scripted Peace Deal Guide!"
+	desc = pound.16.d
+	trigger = {
+		tag = USA
+		has_war_with = ENG
+		has_government = fascism
+	}
+	fire_only_once = yes
+	
+	option = {
+		name = "Alright!"
 	}
 }
 

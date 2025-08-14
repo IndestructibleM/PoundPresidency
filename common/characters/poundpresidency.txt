@@ -255,15 +255,15 @@ characters = {
 	USA_charles_lindbergh_ac = {
 		name = "Charles Lindbergh"
 		portraits = {
-			civilian = {
-				small = "gfx/interface/advisors/USA/USA_charles_lindbergh.png"
+			army={
+				small=GFX_portrait_USA_charles_lindbergh_small
 			}
 		}
 		advisor = {
 			slot = air_chief
 			idea_token = USA_charles_lindbergh_ac_idea
 			available = {
-				has_completed_focus = USA_american_ubermensch_council
+				has_completed_focus = USA_artistic_imperialism
 			}
 			traits = { american_eagle }
 			on_add = {
@@ -273,6 +273,32 @@ characters = {
 					value = -0.08
 					} 
 				}
+			}
+		}
+	}
+	USA_george_s_patton_tpp ={
+		name=USA_george_s_patton
+		portraits={
+			army={
+				large=GFX_portrait_USA_george_s_patton
+			}
+			army={
+				small="GFX_idea_george_patton"
+			}
+		}
+		advisor={
+			cost = 100
+			available = {
+				has_completed_focus = USA_artistic_imperialism
+			}
+			slot = army_chief
+			idea_token = george_patton
+			ledger = army
+			allowed = {
+				original_tag = USA
+			}
+			traits = {
+				army_chief_maneuver_2
 			}
 		}
 	}

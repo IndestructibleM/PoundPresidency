@@ -439,7 +439,7 @@ USA_map_painting = {
 		}
 		complete_effect = {
 			FROM = { 
-				every_core_state = { transfer_state_to = PREV }
+				every_core_state = { transfer_state_to = RBR }
 			}
 			GER = {
 				transfer_state = 933
@@ -447,17 +447,17 @@ USA_map_painting = {
 			}
 			IRE = { transfer_state = 119 }
 			set_autonomy = {
-				target = ENG
+				target = RBR
 				autonomous_state = collaborator_gov
 			}
-			FROM = {
+			RBR = {
 				set_politics = {
 				ruling_party = neutrality
 				elections_allowed = no
 				long_name = "New State"
 				name = "New State"
 				}
-				promote_character = ENG_Wyndham_Lewis
+				add_popularity = { ideology = neutrality popularity = 0.35 }
 			}
 		}
 	}

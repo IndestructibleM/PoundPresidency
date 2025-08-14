@@ -1,7 +1,6 @@
 on_actions = {
 	on_startup = {
 		effect = {
-			ENG = { recruit_character = ENG_Wyndham_Lewis }
 			LIB = { recruit_character = LIB_Marcus_Garvey }
 			MEX = { recruit_character = MEX_Jose_Vasconcelos_PP }	
 		}
