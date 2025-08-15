@@ -136,11 +136,8 @@ USA_balance_of_power_category = {
 		}
 	}
     remove_effect = {
-		random_owned_controlled_state = {
-			if = {
-			limit = { is_core_of = ROOT }
+		random_core_State = {
 			add_extra_state_shared_building_slots = 2
-			}
 		}
 	}
 	}
