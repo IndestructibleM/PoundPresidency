@@ -147,9 +147,10 @@ USA_pap_ink_revolution_cat = {
 	allowed = {
 		original_tag = USA
 	}	
-	priority = 80
+	priority = 90
 	
 	visible = {
 		has_completed_focus = USA_paper_and_ink_revolution
+		has_active_mission = USA_paper_and_ink_campaign
 	}
 }

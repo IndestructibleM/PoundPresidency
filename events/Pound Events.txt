@@ -206,35 +206,35 @@ country_event = {
 	title = "Choosing a Successor"
 	is_triggered_only = yes
 	
-	option = {
-		name = "March Left! Hemmingway!"
-		promote_character = USA_Ernest_Hemmingway
-		set_politics = {
-			ruling_party = communism
-			elections_allowed = no
-			last_election = "1936.11.5"
-			election_frequency = 48
-			long_name = "Peoples' Union for Common Revolution"
-			name = "PUCR"
-		}
-		set_cosmetic_tag = HEMM
-		retire_character = USA_richard_child
-	}
+	#option = {
+	#	name = "March Left! Hemmingway!"
+	#	promote_character = USA_Ernest_Hemmingway
+	#	set_politics = {
+	#		ruling_party = communism
+	#		elections_allowed = no
+	#		last_election = "1936.11.5"
+	#		election_frequency = 48
+	#		long_name = "Peoples' Union for Common Revolution"
+	#		name = "PUCR"
+	#	}
+	#	set_cosmetic_tag = HEMM
+	#	retire_character = USA_richard_child
+	#}
+	
+	#option = {
+	#	name = "March Forward! Dennis!"
+	#	promote_character = USA_lawrence_dennis
+	#	set_politics = {
+	#		ruling_party = fascism
+	#		elections_allowed = no
+	#		last_election = "1936.11.5"
+	#		election_frequency = 48
+	#	}
+	#	retire_character = USA_richard_child
+	#}
 	
 	option = {
-		name = "March Forward! Dennis!"
-		promote_character = USA_lawrence_dennis
-		set_politics = {
-			ruling_party = fascism
-			elections_allowed = no
-			last_election = "1936.11.5"
-			election_frequency = 48
-		}
-		retire_character = USA_richard_child
-	}
-	
-	option = {
-		name = "March Back! Christians!"
+		name = "March Left! Christians!" ## March Back
 		promote_character = USA_George_Christians
 		set_politics = {
 			ruling_party = fascism

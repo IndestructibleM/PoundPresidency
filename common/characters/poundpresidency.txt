@@ -34,7 +34,7 @@ characters = {
 			}
 		}
 		country_leader = {
-			ideology = natcol
+			ideology = klanbol
 			traits = {unproven_leader}
 		}
 	}

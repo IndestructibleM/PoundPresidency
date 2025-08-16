@@ -234,10 +234,11 @@
  pactofrome: "Pact of Rome"
  
  # Ideologies
- socfash: "Social Fascism"
- natcol: "Red Nativism"
+ socfash: "Revolutionary Fascism"
+ klanbol: "Red Nativism"
+ klanbol_desc: "KLANBOL GANG"
  utopian_socialism: "Utopian Socialism"
- socdem: "Socialist Democracy"
+ socdem: "Democratic Socialism"
  technocracy: "Technocracy"
  toteur: "Totalitarian Paneuropeanism"
 

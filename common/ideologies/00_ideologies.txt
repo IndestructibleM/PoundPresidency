@@ -161,7 +161,7 @@ ideologies = {
 			socfash = {
 			}
 			
-			natcol = {
+			klanbol = {
 				color = { 120 0 25 }
 			}
 			

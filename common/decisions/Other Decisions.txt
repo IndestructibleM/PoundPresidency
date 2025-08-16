@@ -252,6 +252,45 @@ foreign_politics = {
 			}
 		}
 	}
+	
+	USA_integrate_crimson_circle = {
+		name = "Integrate [FROM.GetName]"
+		state_target = yes
+		icon = GFX_decision_infiltrate_state
+		target_trigger = {
+			FROM = {
+			is_owned_by = USA
+			is_claimed_by = USA
+			NOT = { is_core_of = USA }
+			}
+		}
+		visible = { has_completed_focus = USA_the_golden_rule }
+		fire_only_once = yes
+		on_map_mode = map_only
+		allowed = { 
+			tag = USA
+		}
+		cost = 20
+		days_remove = 20
+		available = { 
+			tag = USA
+			has_government = fascism
+			FROM = {
+				resistance < 10
+				compliance > 20
+			}
+		}
+		modifier = { political_power_factor = -0.2 }
+		ai_will_do = {
+			factor = 90
+		}
+		remove_effect = {
+			FROM = { 
+				add_core_of = ROOT
+				remove_claim_by = ROOT
+			}
+		}
+	}
 }
 USA_pap_ink_revolution_cat = {
 	USA_gods_love_over_golden_slavery = {
@@ -274,7 +313,7 @@ USA_pap_ink_revolution_cat = {
 		}
 		complete_effect = { set_country_flag = USA.Active_campaign }
 		remove_effect = {
-			add_popularity = { ideology = fascism popularity = 0.1 }	
+			add_popularity = { ideology = fascism popularity = 0.08 }	
 			clr_country_flag = USA.Active_campaign
 		}
 	}	
@@ -299,12 +338,12 @@ USA_pap_ink_revolution_cat = {
 		complete_effect = { set_country_flag = USA.Active_campaign }
 		remove_effect = {
 			clr_country_flag = USA.Active_campaign
-			add_popularity = { ideology = fascism popularity = 0.1 }
+			add_popularity = { ideology = fascism popularity = 0.08 }
 			add_war_support = 0.1
 		}
 	}	
-	USA_stand_up_be_counted = {
-		name = "National Urban and Transportation Effort"
+	USA_klansmen_read_marx = {
+		name = "Teach Marx to the Klan"
 		allowed = { tag = USA }
 		icon = GFX_decision_generic_civil_support
 		days_remove = 50
@@ -323,15 +362,17 @@ USA_pap_ink_revolution_cat = {
 		}
 		complete_effect = { set_country_flag = USA.Active_campaign }
 		remove_effect = {
-			add_manpower = 200000
+			add_manpower = 25000
 			add_popularity = { ideology = fascism popularity = 0.1 }
+			add_popularity = { ideology = communism popularity = 0.05 }
+
 		}
 	}	
-	USA_venture_for_markets = {
-		name = "Venture for New Markets"
+	USA_defining_american = {
+		name = "Defining a True American"
 		allowed = { tag = USA }
 		icon = GFX_decision_generic_civil_support
-		days_remove = 40
+		days_remove = 50
 		fire_only_once = yes
 		available = {
 			NOT = { has_country_flag = USA.Active_campaign }
@@ -351,6 +392,7 @@ USA_pap_ink_revolution_cat = {
 		remove_effect = {
 			clr_country_flag = USA.Active_campaign
 			add_popularity = { ideology = fascism popularity = 0.1 }
+			add_stability = 0.1
 		}
 	}
 	USA_paper_and_ink_campaign = {
@@ -365,13 +407,14 @@ USA_pap_ink_revolution_cat = {
     	available = {
 			fascism > 0.75
     	}
-    	days_mission_timeout = 250
+    	days_mission_timeout = 220
     	complete_effect = {
 			add_political_power = 100
 			set_war_support = 1
+			add_war_support = 0.1
     	}
     	timeout_effect = {
-			add_political_power = -500
+			add_political_power = -200
 			add_war_support = -0.2
 			add_timed_idea = {
 				idea = class_warfare
