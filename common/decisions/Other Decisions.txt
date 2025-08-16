@@ -356,7 +356,7 @@ USA_pap_ink_revolution_cat = {
 		}
 		cost = 40
 		modifier = {
-			consumer_goods_expected_value = 0.1
+			consumer_goods_expected_value = 0.15
 			production_speed_buildings_factor = -0.1
 			fascism_drift = 0.15
 		}
