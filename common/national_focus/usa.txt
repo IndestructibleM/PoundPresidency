@@ -7757,7 +7757,6 @@ focus_tree = {
 		y = 6
 		cost = 6
 		prerequisite = {
-			focus = USA_sign_pact_of_rome
 			focus = USA_berlin_overtures
 			focus = USA_vanguard_of_new_utopia
 		}
@@ -7890,7 +7889,6 @@ focus_tree = {
 		y = 6
 		cost = 6
 		prerequisite = {
-			focus = USA_sign_pact_of_rome
 			focus = USA_berlin_overtures
 			focus = USA_vanguard_of_new_utopia
 		}
@@ -7935,7 +7933,6 @@ focus_tree = {
 
 		available = {
 			has_government = fascism
-			has_country_leader = { ruling_only = yes character = USA_ezra_pound }
 		}
 
 		cancel_if_invalid = yes
@@ -7995,7 +7992,6 @@ focus_tree = {
 		y = 6
 		cost = 5
 		prerequisite = {
-			focus = USA_sign_pact_of_rome
 			focus = USA_berlin_overtures
 			focus = USA_vanguard_of_new_utopia
 		}
@@ -8115,7 +8111,6 @@ focus_tree = {
 		prerequisite = {
 			focus = USA_berlin_overtures
 			focus = USA_vanguard_of_new_utopia
-			focus = USA_sign_pact_of_rome
 		}
 		ai_will_do = {
 			factor = 2
@@ -8123,6 +8118,7 @@ focus_tree = {
 
 		available = {
 			has_government = fascism
+			has_country_leader = { ruling_only = yes character = USA_ezra_pound }
 		}
 
 		cancel_if_invalid = yes
@@ -8144,7 +8140,6 @@ focus_tree = {
 		prerequisite = {
 			focus = USA_berlin_overtures
 			focus = USA_vanguard_of_new_utopia
-			focus = USA_sign_pact_of_rome
 		}
 		ai_will_do = {
 			factor = 2

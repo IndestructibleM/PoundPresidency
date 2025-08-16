@@ -363,6 +363,7 @@ USA_pap_ink_revolution_cat = {
 		complete_effect = { set_country_flag = USA.Active_campaign }
 		remove_effect = {
 			add_manpower = 25000
+			clr_country_flag = USA.Active_campaign
 			add_popularity = { ideology = fascism popularity = 0.1 }
 			add_popularity = { ideology = communism popularity = 0.05 }
 
