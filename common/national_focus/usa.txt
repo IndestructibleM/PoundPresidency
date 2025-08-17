@@ -8480,7 +8480,7 @@ focus_tree = {
 		available = {
 			has_government = fascism
 			has_country_leader = { ruling_only = yes character = USA_francis_yockey }
-			has_country_flag = PoundDed
+			has_country_flag = PoundDead
 		}a
 
 		cancel_if_invalid = yes
