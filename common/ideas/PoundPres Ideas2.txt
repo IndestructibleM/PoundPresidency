@@ -1,0 +1,359 @@
+ideas = {
+	country = {
+		## HEMMINGWAY
+		USA_fascist_resistance = {
+			allowed_civil_war = {
+				always = yes
+			}
+			name = "Massive Fascist Resistance!"
+			modifier = {
+			stability_factor = -0.3
+			war_support_factor = -0.3
+			political_power_cost = 0.3
+			army_org_factor = -0.25
+			consumer_goods_expected_value = 0.30
+			}
+		}
+		USA_fascist_resistance2 = {
+			allowed_civil_war = {
+				always = yes
+			}
+			name = "Fascist Resistance!"
+			modifier = {
+			stability_factor = -0.2
+			war_support_factor = -0.2
+			political_power_cost = 0.2
+			army_org_factor = -0.15
+			consumer_goods_expected_value = 0.2
+			}
+		}
+		USA_fascist_resistance3 = {
+			allowed_civil_war = {
+				always = yes
+			}
+			name = "Small Fascist Resistance!"
+			modifier = {
+			stability_factor = -0.1
+			war_support_factor = -0.1
+			political_power_cost = 0.1
+			army_org_factor = -0.08
+			consumer_goods_expected_value = 0.1
+			}
+		}
+		
+		USA_peoples_commonwealth = {
+			allowed_civil_war = {
+				always = yes
+			}
+			name = "The Great People's Commonwealth"
+			modifier = {
+			stability_factor = 0.1
+			war_support_factor = 0.1
+			political_power_gain = 0.15
+			army_org = 5
+			consumer_goods_expected_value = -0.15
+			communism_drift = 0.1
+			}
+		}
+		
+		USA_fraternal_republic_idea = {
+			allowed_civil_war = {
+				always = yes
+			}
+			name = "Fraternal Republic of Freeborn Peoples"
+			modifier = {
+				compliance_gain = 0.10
+				supply_consumption_factor = -0.1
+				river_crossing_factor = -0.2
+				terrain_penalty_reduction = 0.2
+				land_night_attack = 0.2
+			}
+		}
+
+		USA_save_the_world = {
+			allowed_civil_war = {
+				always = yes
+			}
+			name = "Hopes and Dreams will Save the World!"
+			modifier = {
+				army_attack_factor = 0.3
+				army_morale = 2
+				land_reinforce_rate = 0.05
+				army_speed_factor = 0.15
+				weekly_manpower = 1000
+			}
+		}
+		## DENNIS
+		USA_technocratic_economy = {
+			allowed_civil_war = {
+				always = yes
+			}
+			name = "Technocratic Social Planning"
+			modifier = {
+				research_speed_factor = 0.05
+				consumer_goods_factor = -0.1
+				production_factory_start_efficiency_factor = -0.20
+				production_factory_efficiency_gain_factor = -0.15
+				production_factory_max_efficiency_factor = 0.05
+				line_change_production_efficiency_factor = -0.15
+				industrial_capacity_dockyard = 0.05
+				min_export = -0.05
+			}
+		}
+		
+		USA_technocratic_economy2 = {
+			allowed_civil_war = {
+				always = yes
+			}
+			name = "Technocratic Social Planning"
+			modifier = {
+				research_speed_factor = 0.1
+				consumer_goods_factor = -0.20
+				production_factory_start_efficiency_factor = -0.15
+				production_factory_efficiency_gain_factor = -0.15
+				production_factory_max_efficiency_factor = 0.1
+				line_change_production_efficiency_factor = -0.15
+				production_speed_industrial_complex_factor = 0.1
+				production_speed_arms_factory_factor = 0.1
+				industrial_capacity_dockyard = 0.05
+				min_export = -0.05
+			}
+		}
+		
+		USA_technocratic_economy3 = {
+			allowed_civil_war = {
+				always = yes
+			}
+			name = "Technocratic Social Planning"
+			modifier = {
+				research_speed_factor = 0.15
+				consumer_goods_expected_value = -0.20
+				production_factory_start_efficiency_factor = -0.10
+				production_factory_efficiency_gain_factor = -0.2
+				line_change_production_efficiency_factor = -0.15
+				production_factory_max_efficiency_factor = 0.20
+				production_speed_industrial_complex_factor = 0.3
+				production_speed_arms_factory_factor = 0.3
+				industrial_capacity_dockyard = 0.1
+				min_export = -0.05
+			}
+		}
+
+		USA_nothing_against_everything_for_state = {
+			allowed_civil_war = {
+				always = yes
+			}
+			name = "Nothing Against the State, Everything for the State, All Within the State"
+			modifier = {
+				political_power_factor = 0.2
+				foreign_subversive_activites = -1
+				resistance_decay = 0.3
+				compliance_growth = 0.3
+				stability_weekly = 0.005
+				justify_war_goal_time = -0.3
+			}
+		}
+		
+		USA_elite_connections = {
+			allowed_civil_war = {
+				always = yes
+			}
+			name = "Elite Connections"
+			modifier = {
+				trade_opinion_factor = 0.25
+				opinion_gain_monthly_same_ideology = 10
+				required_garrison_factor = -0.08
+				fascism_acceptance = 30
+				neutrality_acceptance = 30
+				reassignment_duration_factor = -0.3
+				experience_loss_factor = -0.2
+			}
+		}
+
+		## Christians
+		USA_red_crusaders = {
+			allowed_civil_war = {
+				always = yes
+			}
+			name = "Red Crusaders"
+			modifier = {
+				conscription_factor = 0.1
+				army_morale_factor = 0.1
+				weekly_manpower = 100
+				army_org_regain = 0.05
+				research_speed_factor = -0.05
+			}
+		}
+		
+		USA_red_crusaders2 = {
+			allowed_civil_war = {
+				always = yes
+			}
+			name = "White Knights and Red Crusaders"
+			modifier = {
+				conscription_factor = 0.15
+				army_morale_factor = 0.1
+				weekly_manpower = 200
+				army_org_regain = 0.1
+				communism_drift = 0.03
+				research_speed_factor = -0.1
+			}
+		}
+		USA_crusade_against_capital = {
+			allowed_civil_war = {
+				always = yes
+			}
+			name = "Crusade against Capitalism"
+			modifier = {
+				conscription_factor = -0.5
+				stability_factor = -0.5
+				weekly_manpower = -200
+				army_org_regain = 0.05
+				communism_drift = 0.05
+			}
+			on_remove = {
+				add_offsite_building = { type = arms_factory level = 8 }
+				add_ideas = USA_knights_of_golden_rule
+			}
+		}
+		USA_knights_of_golden_rule = {
+			allowed_civil_war = {
+				always = yes
+			}
+			name = "Knights of the Golden Rule"
+			modifier = {
+				conscription = 0.02
+				army_org_regain = 0.1
+				research_speed_factor = -0.1
+				training_time_factor = -0.15
+				research_speed_factor = -0.05
+			}
+		}
+		class_warfare = {
+			allowed_civil_war = {
+				always = yes
+			}
+			name = "Class Warfare!"
+			modifier = {
+				stability_factor = -0.3
+				war_support_factor = -0.3
+				political_power_cost = 0.5
+				army_org_factor = -0.25
+				consumer_goods_expected_value = 0.3
+				industrial_capacity_dockyard = -0.3
+				industrial_capacity_factory = -0.3
+			}
+		}
+		
+		USA_humanity_over_gold = {
+			allowed_civil_war = {
+				always = yes
+			}
+			name = "True Humanity over False Gold"
+			modifier = {
+				production_lack_of_resource_penalty_factor = -0.2
+				production_speed_buildings_factor = 0.15
+				production_factory_max_efficiency_factor = 0.15
+				production_factory_start_efficiency_factor = -0.1
+			}
+		}
+		## YOCKEY
+		USA_war_for_west = {
+			allowed_civil_war = {
+				always = yes
+			}
+			name = "War for the West"
+			modifier = {
+				stability_factor = -0.3
+				war_support_factor = -0.5
+				political_power_cost = 1
+				surrender_limit = -0.20
+				army_org_factor = -0.25
+				weekly_manpower = -500
+				industrial_capacity_dockyard = -0.3
+				industrial_capacity_factory = -0.3
+			}
+			on_remove = {
+				add_ideas = USA_cleansed_organism
+			}
+		}
+		
+		USA_cleansed_organism = {
+			allowed_civil_war = {
+				always = yes
+			}
+			name = "Cleansed Superorganism"
+			modifier = {
+				stability_factor = 0.1
+				war_support_factor = 0.1
+				surrender_limit = 0.1
+				army_org_factor = 0.1
+				weekly_manpower = 300
+			}
+		}
+
+		USA_resurgence_of_authority = {
+			allowed_civil_war = {
+				always = yes
+			}
+			name = "Resurgence of Authority"
+			modifier = {
+				political_power_cost = -0.1
+				conscription = 0.02
+				foreign_subversive_activites = -1
+				army_intel_to_others = -20
+				civilian_intel_to_others = -20
+				compliance_gain = 0.04
+			}
+		}
+		
+		USA_creative_totalitariat = {
+			allowed_civil_war = {
+				always = yes
+			}
+			name = "The Creative Totalitariat"
+			modifier = {
+				production_factory_max_efficiency_factor = 0.15
+				industrial_capacity_dockyard = 0.2
+				research_speed_factor = 0.1
+				production_factory_start_efficiency_factor = 0.05
+				production_speed_buildings_factor = 0.2
+				conscription_factor = -0.2
+			}
+		}
+
+		USA_european_liberation_army = {
+			allowed_civil_war = {
+				always = yes
+			}
+			name = "European Liberation Army"
+			modifier = {
+				training_time_factor = 0.2
+				army_attack_factor = 0.1
+				breakthrough_factor = 0.1
+				max_planning = 0.2
+				army_morale = 0.2
+				army_morale_factor = 0.1
+				minimum_training_level = 0.10
+			}
+		}
+		
+		USA_imperium_destiny = {
+			allowed_civil_war = {
+				always = yes
+			}
+			name = "Actualization of Imperium"
+			modifier = {
+				justify_war_goal_time = -0.5
+				resistance_growth = -0.05
+				required_garrison_factor = 0.05
+				invasion_preparation = -0.5
+				naval_invasion_penalty = -0.25
+				naval_invasion_capacity = 5
+				army_attack_against_major_factor = 0.1
+				org_loss_when_moving = -0.1
+				offensive_war_stability_factor = 0.20
+			}
+		}
+	}
+}

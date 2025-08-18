@@ -7,7 +7,47 @@ characters = {
 			}
 		}
 		country_leader = {
-			ideology = fascism_ideology
+			ideology = socfash
+		}
+	}
+	
+	USA_Ernest_Hemmingway = {
+		name = "Ernest Hemmingway"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/USA/Portrait_Ernest_Hemmingway.png"
+			}
+		}
+		country_leader = {
+			ideology = utopian_socialism
+		}
+		country_leader = {
+			ideology = socdem
+		}
+	}
+	
+	USA_George_Christians = {
+		name = "George W. Christians"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/USA/Portrait_George_Christians.png"
+			}
+		}
+		country_leader = {
+			ideology = klanbol
+			traits = {unproven_leader}
+		}
+	}
+	
+	USA_Smedley_Butler = {
+		name = "Smedley D. Butler"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/USA/Portrait_Smedley_Butler.png"
+			}
+		}
+		country_leader = {
+			ideology = moderatism
 		}
 	}
 	
@@ -47,12 +87,52 @@ characters = {
 		}
 	}
 	
+	### ADVISORS ####
+
+	USA_willis_carto = {
+		name = "Willis Carto"
+		portraits = {
+			civilian = {
+				small = "gfx/interface/advisors/USA/USA_willis_carto.png"
+			}
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = USA_willis_carto_idea
+			available = { has_completed_focus = USA_rise_of_authority }
+			visible = { has_completed_focus = USA_rise_of_authority }
+			traits = { ideological_crusader }
+		}
+	}
+	
+	USA_revilo_oliver = {
+		name = "Revilo P. Oliver"
+		portraits = {
+			civilian = {
+				small = "gfx/interface/advisors/USA/USA_revilo_oliver.png"
+			}
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = USA_willis_carto_idea
+			available = { has_completed_focus = USA_rise_of_authority }
+			visible = { has_completed_focus = USA_rise_of_authority }
+			traits = { subservient_ultranationalist }
+		}
+	}
+	
 	USA_richard_child = {
 		name = "Richard W. Child"
 		portraits = {
 			civilian = {
 				small = "gfx/interface/advisors/USA/USA_richard_child.png"
 			}
+			civilian = {
+				large = "gfx/leaders/USA/Portrait_Richard_Child.png"
+			}
+		}
+		country_leader = {
+			ideology = fascism_ideology
 		}
 		advisor = {
 			slot = political_advisor
@@ -67,6 +147,12 @@ characters = {
 			civilian = {
 				small = "gfx/interface/advisors/USA/USA_howard_scott.png"
 			}
+			civilian = {
+				large = "gfx/leaders/USA/Portrait_Howard_Scott.png"
+			}
+		}
+		country_leader = {
+			ideology = technocracy
 		}
 		advisor = {
 			slot = political_advisor
@@ -83,6 +169,12 @@ characters = {
 			civilian = {
 				small = "gfx/interface/advisors/USA/USA_francis_yockey.png"
 			}
+			civilian = {
+				large = "gfx/leaders/USA/Portrait_Francis_Yockey.png"
+			}
+		}
+		country_leader = {
+			ideology = toteur
 		}
 		advisor = {
 			slot = political_advisor
@@ -100,6 +192,12 @@ characters = {
 			civilian = {
 				small = "gfx/interface/advisors/USA/USA_lawrence_dennis.png"
 			}
+			civilian = {
+				large = "gfx/leaders/USA/Portrait_Lawrence_Dennis.png"
+			}
+		}
+		country_leader = {
+			ideology = fascism_ideology
 		}
 		advisor = {
 			slot = political_advisor
@@ -114,18 +212,58 @@ characters = {
 		}
 	}
 	
+	USA_upton_sinclair = {
+		name = "Upton Sinclair"
+		portraits = {
+			civilian = {
+				small = "gfx/interface/advisors/USA/USA_Upton_Sinclair.png"
+			}
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = USA_upton_sinclair_idea
+			visible = {
+				has_completed_focus = USA_natural_revolution
+			}
+			available = {
+				has_completed_focus = USA_natural_revolution
+			}
+			traits = { socialist_justice }
+		}
+	}
+	
+	USA_max_eastman = {
+		name = "Max Eastman"
+		portraits = {
+			civilian = {
+				small = "gfx/interface/advisors/USA/USA_Max_Eastman.png"
+			}
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = USA_max_eastman_idea
+			visible = {
+				has_completed_focus = USA_natural_revolution
+			}
+			available = {
+				has_completed_focus = USA_natural_revolution
+			}
+			traits = { IRQ_poet_of_freedom }
+		}
+	}
+	
 	USA_charles_lindbergh_ac = {
 		name = "Charles Lindbergh"
 		portraits = {
-			civilian = {
-				small = "gfx/interface/advisors/USA/USA_charles_lindbergh.png"
+			army={
+				small=GFX_portrait_USA_charles_lindbergh_small
 			}
 		}
 		advisor = {
 			slot = air_chief
 			idea_token = USA_charles_lindbergh_ac_idea
 			available = {
-				has_completed_focus = USA_american_ubermensch_council
+				has_completed_focus = USA_artistic_imperialism
 			}
 			traits = { american_eagle }
 			on_add = {
@@ -135,6 +273,32 @@ characters = {
 					value = -0.08
 					} 
 				}
+			}
+		}
+	}
+	USA_george_s_patton_tpp ={
+		name=USA_george_s_patton
+		portraits={
+			army={
+				large=GFX_portrait_USA_george_s_patton
+			}
+			army={
+				small="GFX_idea_george_patton"
+			}
+		}
+		advisor={
+			cost = 100
+			available = {
+				has_completed_focus = USA_artistic_imperialism
+			}
+			slot = army_chief
+			idea_token = george_patton
+			ledger = army
+			allowed = {
+				original_tag = USA
+			}
+			traits = {
+				army_chief_maneuver_2
 			}
 		}
 	}

@@ -50,7 +50,7 @@ leader_traits = {
 		random = no
 		high_command_cost_factor = -0.25
 		political_power_factor = 0.2
-		stability_factor = -0.10
+		stability_factor = -0.15
 	}
 	
 	light_bearer = {
@@ -58,5 +58,42 @@ leader_traits = {
 		fascism_drift = 0.05
 		war_support_weekly = 0.02
 		land_reinforce_rate = 0.02
+	}
+	
+	prophet_of_imperium = {
+		random = no
+		fascism_drift = 0.1
+		drift_defence_factor = 0.2
+		war_stability_factor = 0.2
+	}
+	
+	american_totalitarian = {
+		random = no
+		civilian_intel_to_others = -100
+		army_intel_to_others = -100
+		navy_intel_to_others = -100
+		airforce_intel_to_others = -100
+		offensive_war_stability_factor = 0.25
+		command_power_gain = 0.2
+	}
+	
+	soldier_author_sportsman = {
+		random = no
+		conscription_factor = 0.1
+		army_strength_factor = 0.1
+		political_power_cost = -0.2
+	}
+	
+	unproven_leader = {
+		random = no
+		stability_factor = -0.1
+		war_support_factor = -0.1
+		political_power_cost = 0.2
+	}
+	newagecrusader = {
+		random = no
+		stability_factor = 0.05
+		war_support_factor = 0.1
+		consumer_goods_expected_value = -0.1
 	}
 }

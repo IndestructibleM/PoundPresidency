@@ -49,6 +49,10 @@ spriteTypes = {
 		texturefile = "gfx/interface/ideas/USA_creative_drive.png"
 	}
 	SpriteType = {
+		name = "GFX_idea_USA_rise_of_pound"
+		texturefile = "gfx/interface/ideas/USA_rise_of_pound.png"
+	}
+	SpriteType = {
 		name = "GFX_idea_USA_war_against_degeneration"
 		texturefile = "gfx/interface/ideas/USA_war_against_degeneration.png"
 	}
@@ -80,5 +84,4 @@ spriteTypes = {
 		name = "GFX_report_event_pound_intro"
 		texturefile = "gfx/event_pictures/Event_pound_intro.png"
 	}
-	
 }

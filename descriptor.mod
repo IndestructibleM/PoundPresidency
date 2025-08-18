@@ -5,6 +5,5 @@ tags={
 }
 name="The Pound Presidency"
 picture="thumbnail.png"
-supported_version="1.16.8"
-path="C:/Users/Michael H/Documents/Paradox Interactive/Hearts of Iron IV/mod/PoundPresidency"
+supported_version="1.16.9"
 remote_file_id="3464682403"

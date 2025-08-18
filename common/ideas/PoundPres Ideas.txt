@@ -1,5 +1,15 @@
 ideas = {
 	country = {
+		USA_rise_of_pound = {
+			name = "An American Iliad"
+			allowed_civil_war = {
+				always = yes
+			}
+			modifier = {
+				stability_factor = -0.25
+				fascism_drift = 0.08
+			}
+		}
 		USA_war_against_degeneration = {
 			allowed_civil_war = {
 				always = yes
@@ -34,11 +44,11 @@ ideas = {
 			modifier = {
 				industrial_capacity_dockyard = 0.2
 				industrial_capacity_factory = 0.2
-				political_power_cost = 0.2
+				political_power_cost = 0.3
 				production_factory_efficiency_gain_factor = 0.10
 			}
 			on_remove = {
-				add_stability = 0.15
+				add_stability = 0.20
 			}
 		}
 		
@@ -68,9 +78,11 @@ ideas = {
 				naval_invasion_penalty = -0.25
 				naval_invasion_capacity = 5
 				required_garrison_factor = 0.05
-				compliance_growth = 0.1
+				compliance_growth = 0.15
 				weekly_manpower = 500
-				stability_factor = 0.1
+				stability_weekly = 0.01
+				max_planning = 0.2
+				army_morale = 0.4
 			}
 		}
 		
@@ -155,9 +167,12 @@ ideas = {
 			}
 			modifier = {
 				nuclear_production = 1
-				production_speed_nuclear_reactor_factor = 0.2
+				sp_tag_nuclear_power_speed_factor = 0.2
+				sp_tag_rocket_speed_factor = 0.2
 				nuclear_production_factor= 0.2
-				ground_attack_factor = 0.3
+				ground_attack_factor = 0.2
+				air_superiority_efficiency = 0.2
+				army_attack_speed_factor = 0.05
 			}
 		}
 	}

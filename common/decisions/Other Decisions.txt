@@ -1,0 +1,454 @@
+foreign_politics = {
+	USA_towards_world_unity = {
+	name = "Towards 20/20ths of the World!"
+	target_trigger = { 
+     	FROM = {
+			can_ROOT_get_wargoal_on_THIS = yes
+		}
+	}
+	icon = GFX_decision_generic_confiscation
+	war_with_target_on_complete = yes
+    allowed = { 
+		tag = USA
+	}
+	available = {
+		OR = {
+			has_war_with_major = no 
+			has_war_with = FROM
+		}
+		OR = {
+			is_neighbor_of = FROM
+			FROM = { any_owned_state = { is_coastal = yes } }
+		}
+	}
+	visible = {
+		has_government = fascism
+		has_completed_focus = USA_20_20ths
+		has_country_leader = { ruling_only = yes character = USA_francis_yockey }
+	}
+	ai_will_do = {
+       	factor = 50
+    }
+	days_remove = 200
+	cost = 20
+	targeted_modifier = {
+		tag = FROM    
+		attack_bonus_against = 0.2
+		attack_bonus_against_cores = 0.2
+	}
+    complete_effect = {
+		declare_war_on = {
+			target = FROM
+            type = annex_everything
+        }
+	}
+	}
+	USA_eat_the_reich = {
+		name = "Union between Germany and America"
+		fire_only_once = yes
+		icon = GFX_decision_generic_form_nation
+		allowed = { tag = USA }
+		visible = {
+			has_country_flag = yockwithger
+			has_country_leader = { ruling_only = yes character = USA_francis_yockey }
+		}
+		available = {
+			has_war = no
+			is_in_faction_with = GER
+			GER = { has_war = no }
+			SOV = {
+				OR = {
+					has_capitulated = yes
+					exists = no
+					is_subject_of = GER
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 80
+		}
+		days_remove = 10
+		cost = 100
+		remove_effect = {
+			GER = { every_core_state = { add_core_of = ROOT } }
+			annex_country = {
+   				target = GER
+    			transfer_troops = yes
+			}
+		}
+	}
+}
+USA_fight_for_western_civilization = { 
+	USA_white_integralism = {
+		name = "Found the Church of the West"
+		fire_only_once = yes
+		icon = GFX_decision_generic_nationalism
+		allowed = { tag = USA }
+		ai_will_do = {
+			factor = 80
+		}
+		days_remove = 80
+		cost = 50
+		complete_effect = {
+			add_war_support = -0.05
+		}
+		remove_effect = {
+			add_stability = 0.05
+		}
+		modifier = {
+			research_speed_factor = -0.05
+			production_speed_buildings_factor = 0.15
+			stability_weekly = 0.01
+		}
+	}
+	USA_end_petty_capitalism = {
+		name = "Destroy the Remnants of Capitalism"
+		fire_only_once = yes
+		icon = GFX_decision_generic_nationalism
+		allowed = { tag = CHI }
+		ai_will_do = {
+			factor = 80
+		}
+		days_remove = 80
+		cost = 50
+		complete_effect = {
+			add_war_support = -0.05
+		}
+		remove_effect = {
+			add_stability = 0.05
+		}
+		modifier = {
+			consumer_goods_factor = -0.2
+			production_factory_efficiency_gain_factor = 0.10
+		}
+	}
+	USA_rebirth_of_natalism = {
+		name = "Rebirth of Natalism"
+		fire_only_once = yes
+		icon = GFX_decision_generic_nationalism
+		allowed = { tag = USA }
+		ai_will_do = {
+			factor = 80
+		}
+		days_remove = 125
+		cost = 50
+		complete_effect = {
+			add_war_support = -0.05
+		}
+		remove_effect = {
+			add_stability = 0.05
+		}
+		modifier = {
+			monthly_population = 0.30
+			war_support_weekly = 0.005
+		}
+	}
+	USA_unleash_spiritual_sciences = {
+		name = "Unleash Spiritual and Occult Science"
+		fire_only_once = yes
+		icon = GFX_decision_generic_nationalism
+		allowed = { tag = USA }
+		ai_will_do = {
+			factor = 80
+		}
+		days_remove = 100
+		cost = 50
+		complete_effect = {
+			add_war_support = -0.05
+		}
+		remove_effect = {
+			add_stability = 0.05
+			add_unit_bonus = {
+ 				category_all_infantry = {
+				supply_consumption = -0.02
+				default_morale = 0.04
+  				}
+			}	
+		}
+		modifier = {
+			research_speed_factor = 0.15
+			consumer_goods_expected_value = 0.15
+		}
+	}
+	USA_rise_of_superpersonal_unity = {
+		name = "Rise of Superpersonal Unity"
+		fire_only_once = yes
+		icon = GFX_decision_generic_nationalism
+		allowed = { tag = USA }
+		ai_will_do = {
+			factor = 80
+		}
+		days_remove = 80
+		cost = 50
+		complete_effect = {
+			add_war_support = -0.05
+		}
+		remove_effect = {
+			add_stability = 0.05
+		}
+		modifier = {
+			consumer_goods_factor = -0.2
+			industrial_capacity_factory = 0.2
+		}
+	}
+
+	USA_declare_imperium_united = {
+		name = "End the Decline"
+		fire_only_once = yes
+		icon = GFX_decision_generic_form_nation
+		allowed = { tag = USA }
+		available = { 
+			has_war = no
+			owns_state = 64
+			owns_state = 126
+			owns_state = 16
+			owns_state = 2
+			owns_state = 4
+			owns_state = 10
+			owns_state = 41
+		}
+		ai_will_do = {
+			factor = 100
+		}
+		days_remove = 30
+		cost = 200
+		modifier = { consumer_goods_expected_value = 0.5 political_power_cost = 1}
+		remove_effect = {
+			set_stability = 1
+			set_war_support = 1
+			set_cosmetic_tag = Imperium
+			every_state = { 
+				limit = { 
+					is_on_continent = europe
+					is_controlled_by_ROOT_or_ally = yes
+				}
+				transfer_state_to = USA
+			}
+		}
+	}
+	USA_truly_unite_the_west = {
+		name = "Spiritual Unification of the Western Cultural Organism"
+		fire_only_once = yes
+		icon = GFX_decision_generic_form_nation
+		allowed = { tag = USA }
+		available = { 
+			has_war = no
+			owns_state = 64
+			owns_state = 126
+			owns_state = 16
+			owns_state = 2
+			owns_state = 4
+			owns_state = 10
+			owns_state = 41
+			has_cosmetic_tag = Imperium
+		}
+		ai_will_do = {
+			factor = 100
+		}
+		days_remove = 50
+		cost = 100
+		modifier = { consumer_goods_expected_value = 0.5 political_power_cost = 1}
+		remove_effect = {
+			every_claimed_state = {
+				add_core_of = FROM
+			}
+		}
+	}
+}
+foreign_politics = {
+	USA_red_circle = {
+		name = "The Crimson Circle"
+		fire_only_once = yes
+		icon = GFX_decision_generic_form_nation
+		allowed = { tag = USA }
+		visible = { has_completed_focus = USA_the_golden_rule }
+		targets = { MEX VEN COL CUB HAI DOM PAN HON GUA NIC COS ELS }
+		ai_will_do = {
+			factor = 100
+		}
+		days_remove = 10
+		cost = 25
+		complete_effect = {
+			FROM ={
+				every_core_state = { add_claim_by = USA }
+			}
+		}
+		remove_effect = {
+			declare_war_on = {
+				target = FROM
+				type = annex_everything
+			}
+		}
+	}
+	
+	USA_integrate_crimson_circle = {
+		name = "Integrate [FROM.GetName]"
+		state_target = yes
+		icon = GFX_decision_infiltrate_state
+		target_trigger = {
+			FROM = {
+			is_owned_by = USA
+			is_claimed_by = USA
+			NOT = { is_core_of = USA }
+			}
+		}
+		visible = { has_completed_focus = USA_the_golden_rule }
+		fire_only_once = yes
+		on_map_mode = map_only
+		allowed = { 
+			tag = USA
+		}
+		cost = 20
+		days_remove = 20
+		available = { 
+			tag = USA
+			has_government = fascism
+			FROM = {
+				resistance < 10
+				compliance > 20
+			}
+		}
+		modifier = { political_power_factor = -0.2 }
+		ai_will_do = {
+			factor = 90
+		}
+		remove_effect = {
+			FROM = { 
+				add_core_of = ROOT
+				remove_claim_by = ROOT
+			}
+		}
+	}
+}
+USA_pap_ink_revolution_cat = {
+	USA_gods_love_over_golden_slavery = {
+		name = "Restoring the Faith and Breaking our Chains"
+		allowed = { tag = USA }
+		icon = GFX_decision_generic_civil_support
+		days_remove = 50
+		fire_only_once = yes
+		available = {
+			NOT = { has_country_flag = USA.Active_campaign }
+		}
+		ai_will_do = {
+			factor = 100
+		}
+		cost = 40
+		modifier = {
+			consumer_goods_expected_value = 0.1
+			industrial_capacity_factory = -0.1
+			fascism_drift = 0.15
+		}
+		complete_effect = { set_country_flag = USA.Active_campaign }
+		remove_effect = {
+			add_popularity = { ideology = fascism popularity = 0.08 }	
+			clr_country_flag = USA.Active_campaign
+		}
+	}	
+	USA_fight_the_papists = {
+		name = "'St. Patricks Day in America'"
+		allowed = { tag = USA }
+		icon = GFX_decision_generic_civil_support
+		days_remove = 50
+		fire_only_once = yes
+		available = {
+			NOT = { has_country_flag = USA.Active_campaign }
+		}
+		ai_will_do = {
+			factor = 100
+		}
+		cost = 40
+		modifier = {
+			weekly_manpower = -100
+			political_power_factor = -0.25
+			fascism_drift = 0.15
+		}
+		complete_effect = { set_country_flag = USA.Active_campaign }
+		remove_effect = {
+			clr_country_flag = USA.Active_campaign
+			add_popularity = { ideology = fascism popularity = 0.08 }
+			add_war_support = 0.1
+		}
+	}	
+	USA_klansmen_read_marx = {
+		name = "Teach Marx to the Klan"
+		allowed = { tag = USA }
+		icon = GFX_decision_generic_civil_support
+		days_remove = 50
+		fire_only_once = yes
+		available = {
+			NOT = { has_country_flag = USA.Active_campaign }
+		}
+		ai_will_do = {
+			factor = 100
+		}
+		cost = 40
+		modifier = {
+			consumer_goods_expected_value = 0.15
+			production_speed_buildings_factor = -0.1
+			fascism_drift = 0.15
+		}
+		complete_effect = { set_country_flag = USA.Active_campaign }
+		remove_effect = {
+			add_manpower = 25000
+			clr_country_flag = USA.Active_campaign
+			add_popularity = { ideology = fascism popularity = 0.1 }
+			add_popularity = { ideology = communism popularity = 0.05 }
+
+		}
+	}	
+	USA_defining_american = {
+		name = "Defining a True American"
+		allowed = { tag = USA }
+		icon = GFX_decision_generic_civil_support
+		days_remove = 50
+		fire_only_once = yes
+		available = {
+			NOT = { has_country_flag = USA.Active_campaign }
+		}
+		ai_will_do = {
+			factor = 100
+		}
+		cost = 40
+		modifier = {
+			consumer_goods_expected_value = 0.15
+			industrial_capacity_factory = -0.2
+			fascism_drift = 0.15
+		}
+		complete_effect = { 
+			set_country_flag = USA.Active_campaign 
+		}
+		remove_effect = {
+			clr_country_flag = USA.Active_campaign
+			add_popularity = { ideology = fascism popularity = 0.1 }
+			add_stability = 0.1
+		}
+	}
+	USA_paper_and_ink_campaign = {
+		name = "The Paper and Ink Campaign"
+  	 	activation = {
+       		has_completed_focus = USA_paper_and_ink_revolution
+   	 	}
+		allowed = { tag = USA }
+		icon = GFX_decision_generic_nationalism
+		fire_only_once = yes
+		is_good = no
+    	available = {
+			fascism > 0.75
+    	}
+    	days_mission_timeout = 220
+    	complete_effect = {
+			add_political_power = 100
+			set_war_support = 1
+			add_war_support = 0.1
+    	}
+    	timeout_effect = {
+			add_political_power = -200
+			add_war_support = -0.2
+			add_timed_idea = {
+				idea = class_warfare
+				days = 80
+			}
+   	 	}
+	}
+}

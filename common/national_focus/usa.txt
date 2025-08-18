@@ -23,7 +23,7 @@ focus_tree = {
 			original_tag = USA
 		}
 	}
-	continuous_focus_position = { x = 50 y = 1600 }
+	continuous_focus_position = { x = 50 y = 2500 }
 	default = no
 #	focus = {
 #		id = USA_
@@ -7001,13 +7001,12 @@ focus_tree = {
 		available_if_capitulated = no
 		search_filters = {FOCUS_FILTER_INDUSTRY FOCUS_FILTER_STABILITY FOCUS_FILTER_USA_CONGRESS}
 		completion_reward = {
-			custom_effect_tooltip = "Through blood and flame, America will be remade..."
 			hidden_effect = {
-				set_cosmetic_tag = USA_democratic
 				remove_ideas = USA_war_against_degeneration
 				add_popularity = { ideology = fascism popularity = 0.05}
 			}
 			add_threat = 5
+			custom_effect_tooltip = "Through blood and flame, America will be remade..."
 		}
 	}
 	focus = {
@@ -7063,7 +7062,7 @@ focus_tree = {
 		search_filters = {FOCUS_FILTER_INDUSTRY FOCUS_FILTER_STABILITY FOCUS_FILTER_USA_CONGRESS}
 		completion_reward = {
 			USA_great_depression_level_down = yes
-			add_popularity = { ideology = communism popularity = 0.08 }
+			add_popularity = { ideology = communism popularity = 0.06 }
 			set_party_name = {
     		ideology = communism
     		long_name = "National Confederation of Labor"
@@ -7132,7 +7131,7 @@ focus_tree = {
 				add_idea = USA_national_syndicalism2
 			}
 			activate_advisor = USA_lawrence_dennis_idea
-			add_popularity = { ideology = communism popularity = 0.05 }
+			add_popularity = { ideology = communism popularity = 0.04 }
 			add_power_balance_value = {
 				id = USA_power_balance
 				value = 0.1
@@ -7168,7 +7167,7 @@ focus_tree = {
 		completion_reward = {
 			remove_ideas = USA_obliterated_stock_market
 			activate_advisor = USA_howard_scott_idea
-			add_popularity = { ideology = neutrality popularity = 0.05 }
+			add_popularity = { ideology = neutrality popularity = 0.04 }
 			add_research_slot = 1
 			add_power_balance_value = {
 				id = USA_power_balance
@@ -7232,6 +7231,7 @@ focus_tree = {
 		search_filters = {FOCUS_FILTER_INDUSTRY FOCUS_FILTER_STABILITY FOCUS_FILTER_USA_CONGRESS}
 		completion_reward = {
 			add_popularity = { ideology = fascism popularity = 0.1 }
+			add_stability = 0.08
 			set_cosmetic_tag = ASR
 		}
 	}
@@ -7273,7 +7273,7 @@ focus_tree = {
 			}
 			add_trait = {
     			character = USA_Ezra_Pound
-    			ideology = fascism_ideology
+    			ideology = socfash
     			trait = artist_tyrant
 			}
 		}
@@ -7472,7 +7472,7 @@ focus_tree = {
 				id = USA_power_balance
 				value = 0.08
 			}
-			custom_effect_tooltip = "You will be granted +15% stability upon the removal of this spirit."
+			custom_effect_tooltip = "You will be granted +20% stability upon the removal of this spirit."
 		}
 	}
 	focus = {
@@ -7509,7 +7509,7 @@ focus_tree = {
 	}
 	focus = {
 		id = USA_artistic_imperialism
-		icon = GFX_goal_generic_political_pressure
+		icon = GFX_focus_ITA_ferrea_mole_ferreo_cuore
 		relative_position_id = USA_towards_national_utopia
 		x = 1
 		y = 7
@@ -7563,14 +7563,11 @@ focus_tree = {
 		available_if_capitulated = no
 		search_filters = {FOCUS_FILTER_INDUSTRY FOCUS_FILTER_STABILITY }
 		completion_reward = {
+			country_event = { id= pound.13 days = 3 }
 			add_trait = {
     			character = USA_Ezra_Pound
-    			ideology = fascism_ideology
+    			ideology = socfash
     			trait = light_bearer
-			}
-			add_power_balance_value = {
-				id = USA_power_balance
-				value = -0.1
 			}
 			custom_effect_tooltip = wholesomedotpng
 		}
@@ -7620,6 +7617,7 @@ focus_tree = {
 		prerequisite = {
 			focus = USA_light_of_civilization
 		}
+		mutually_exclusive = { focus = USA_virtue_of_the_sun}
 		ai_will_do = {
 			factor = 1
 		}
@@ -7647,6 +7645,7 @@ focus_tree = {
 		id = USA_virtue_of_the_sun
 		icon = GFX_focus_GER_wunderwaffe
 		relative_position_id = USA_towards_national_utopia
+		mutually_exclusive = { focus = USA_remove_sin}
 		x = 1
 		y = 9
 		cost = 6
@@ -7682,7 +7681,7 @@ focus_tree = {
 		id = USA_berlin_overtures
 		icon = GFX_focus_chi_mission_to_germany
 		relative_position_id = USA_towards_national_utopia
-		x = 4
+		x = 6
 		y = 5
 		cost = 6
 		prerequisite = {
@@ -7697,40 +7696,10 @@ focus_tree = {
 		}
 		available = {
 			has_government = fascism
+			OR = {
 			GER = { has_government = fascism }
-			has_country_leader = { ruling_only = yes character = USA_ezra_pound }
-		}
-
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
-		search_filters = {FOCUS_FILTER_INDUSTRY FOCUS_FILTER_STABILITY FOCUS_FILTER_USA_CONGRESS}
-		completion_reward = {
-			GER = { add_to_faction = USA }
-		}
-	}
-	focus = {
-		id = USA_sign_pact_of_rome
-		icon = GFX_focus_befriend_italy
-		relative_position_id = USA_towards_national_utopia
-		x = 6
-		y = 5
-		cost = 6
-		prerequisite = {
-			focus = USA_dynamic_superpower
-		}
-		ai_will_do = {
-			factor = 1
-		}
-		mutually_exclusive = { 
-			focus = USA_berlin_overtures
-			focus = USA_vanguard_of_new_utopia
-		}
-		available = {
-			has_government = fascism
-			GER = { NOT = { has_government = fascism } }
 			ITA = { has_government = fascism }
-			has_country_leader = { ruling_only = yes character = USA_ezra_pound }
+			}
 		}
 
 		cancel_if_invalid = yes
@@ -7738,9 +7707,14 @@ focus_tree = {
 		available_if_capitulated = no
 		search_filters = {FOCUS_FILTER_INDUSTRY FOCUS_FILTER_STABILITY FOCUS_FILTER_USA_CONGRESS}
 		completion_reward = {
-			ITA = { 
-				create_faction = "Pact of Steel"
-				add_to_faction = USA
+			if = {
+				limit = { GER = { has_government = fascism } }
+				GER = { add_to_faction = USA }
+			}
+			else_if = {
+				limit = { ITA = { has_government = fascism } }
+				USA = { create_faction = pactofrome }
+				add_to_faction = ITA
 			}
 		}
 	}
@@ -7779,11 +7753,10 @@ focus_tree = {
 		id = USA_isolate_yellow_empire
 		icon = GFX_focus_usa_focus_on_asia
 		relative_position_id = USA_towards_national_utopia
-		x = 4
+		x = 5
 		y = 6
 		cost = 6
 		prerequisite = {
-			focus = USA_sign_pact_of_rome
 			focus = USA_berlin_overtures
 			focus = USA_vanguard_of_new_utopia
 		}
@@ -7793,7 +7766,6 @@ focus_tree = {
 
 		available = {
 			has_government = fascism
-			has_country_leader = { ruling_only = yes character = USA_ezra_pound }
 		}
 
 		cancel_if_invalid = yes
@@ -7847,7 +7819,6 @@ focus_tree = {
 
 		available = {
 			has_government = fascism
-			has_country_leader = { ruling_only = yes character = USA_ezra_pound }
 		}
 
 		cancel_if_invalid = yes
@@ -7859,6 +7830,7 @@ focus_tree = {
    				type = puppet_wargoal_focus
     			target = JAP
 			}
+			add_state_claim = 555
 			add_state_claim = 633
 			add_state_claim = 646
 			add_state_claim = 648
@@ -7867,17 +7839,18 @@ focus_tree = {
 			add_state_claim = 481
 			add_state_claim = 684
 			add_state_claim = 645
+			add_state_claim = 647
 		}
 	}
 	focus = {
-		id = USA_silkworms_mulberry_groves
+		id = USA_tropical_domain
 		icon = GFX_focus_jap_strike_south
 		relative_position_id = USA_towards_national_utopia
-		x = 4
+		x = 5
 		y = 8
 		cost = 5
 		prerequisite = {
-			focus = USA_outshine_the_sun
+			focus = USA_isolate_yellow_empire
 		}
 		ai_will_do = {
 			factor = 2
@@ -7885,7 +7858,6 @@ focus_tree = {
 
 		available = {
 			has_government = fascism
-			has_country_leader = { ruling_only = yes character = USA_ezra_pound }
 		}
 
 		cancel_if_invalid = yes
@@ -7899,22 +7871,6 @@ focus_tree = {
 			}
 			create_wargoal = {
    				type = puppet_wargoal_focus
-    			target = BRM
-			}
-			create_wargoal = {
-   				type = puppet_wargoal_focus
-    			target = SIA
-			}
-			create_wargoal = {
-   				type = puppet_wargoal_focus
-    			target = INS
-			}
-			create_wargoal = {
-   				type = puppet_wargoal_focus
-    			target = MAL
-			}
-			create_wargoal = {
-   				type = puppet_wargoal_focus
     			target = NZL
 			}
 			create_wargoal = {
@@ -7922,20 +7878,17 @@ focus_tree = {
     			target = AST
 			}
 			add_state_claim = 635
-			add_state_claim = 729
-			add_state_claim = 326
-			add_state_claim = 728
+			unlock_decision_tooltip = USA_coup_in_liberia
 		}
 	}		
 	focus = {
 		id = USA_to_slay_brittania
 		icon = GFX_focus_generic_strike_at_democracy1
 		relative_position_id = USA_towards_national_utopia
-		x = 6
+		x = 7
 		y = 6
 		cost = 6
 		prerequisite = {
-			focus = USA_sign_pact_of_rome
 			focus = USA_berlin_overtures
 			focus = USA_vanguard_of_new_utopia
 		}
@@ -7945,7 +7898,6 @@ focus_tree = {
 
 		available = {
 			has_government = fascism
-			has_country_leader = { ruling_only = yes character = USA_ezra_pound }
 		}
 
 		cancel_if_invalid = yes
@@ -7969,7 +7921,7 @@ focus_tree = {
 		id = USA_rome_conquers_athens
 		icon = GFX_focus_attack_britain
 		relative_position_id = USA_towards_national_utopia
-		x = 6
+		x = 7
 		y = 7
 		cost = 5
 		prerequisite = {
@@ -7981,7 +7933,6 @@ focus_tree = {
 
 		available = {
 			has_government = fascism
-			has_country_leader = { ruling_only = yes character = USA_ezra_pound }
 		}
 
 		cancel_if_invalid = yes
@@ -8003,7 +7954,7 @@ focus_tree = {
 		id = USA_spices_and_spirits
 		icon = GFX_focus_smiling_buddha
 		relative_position_id = USA_towards_national_utopia
-		x = 6
+		x = 7
 		y = 8
 		cost = 5
 		prerequisite = {
@@ -8037,11 +7988,10 @@ focus_tree = {
 		id = USA_return_to_tenochtitlan
 		icon = GFX_focus_attack_mexico
 		relative_position_id = USA_towards_national_utopia
-		x = 8
+		x = 9
 		y = 6
 		cost = 5
 		prerequisite = {
-			focus = USA_sign_pact_of_rome
 			focus = USA_berlin_overtures
 			focus = USA_vanguard_of_new_utopia
 		}
@@ -8051,7 +8001,6 @@ focus_tree = {
 
 		available = {
 			has_government = fascism
-			has_country_leader = { ruling_only = yes character = USA_ezra_pound }
 		}
 
 		cancel_if_invalid = yes
@@ -8075,7 +8024,7 @@ focus_tree = {
 		id = USA_reorganize_the_caribbean
 		icon = GFX_goal_generic_major_war
 		relative_position_id = USA_towards_national_utopia
-		x = 8
+		x = 10
 		y = 7
 		cost = 5
 		prerequisite = {
@@ -8108,11 +8057,11 @@ focus_tree = {
 		id = USA_stella_polaris
 		icon = GFX_focus_generic_invade_iceland
 		relative_position_id = USA_towards_national_utopia
-		x = 8
+		x = 9
 		y = 8
 		cost = 5
 		prerequisite = {
-			focus = USA_reorganize_the_caribbean
+			focus = USA_return_to_tenochtitlan
 		}
 		ai_will_do = {
 			factor = 2
@@ -8156,13 +8105,12 @@ focus_tree = {
 		id = USA_reimagine_world_order
 		icon = GFX_goal_generic_position_armies
 		relative_position_id = USA_towards_national_utopia
-		x = 5
+		x = 6
 		y = 9
-		cost = 5
+		cost = 3
 		prerequisite = {
 			focus = USA_berlin_overtures
 			focus = USA_vanguard_of_new_utopia
-			focus = USA_sign_pact_of_rome
 		}
 		ai_will_do = {
 			factor = 2
@@ -8186,13 +8134,12 @@ focus_tree = {
 		id = USA_proclaim_utopia_hegemony
 		icon = GFX_focus_GER_establish_protectorates_in_america
 		relative_position_id = USA_towards_national_utopia
-		x = 7
+		x = 8
 		y = 9
 		cost = 5
 		prerequisite = {
 			focus = USA_berlin_overtures
 			focus = USA_vanguard_of_new_utopia
-			focus = USA_sign_pact_of_rome
 		}
 		ai_will_do = {
 			factor = 2
@@ -8201,6 +8148,7 @@ focus_tree = {
 		available = {
 			has_government = fascism
 			has_country_leader = { ruling_only = yes character = USA_ezra_pound }
+			has_completed_focus = USA_light_of_civilization
 			277 = { is_controlled_by_ROOT_or_ally = yes }
 			276 = { is_controlled_by_ROOT_or_ally = yes }
 			126 = { is_controlled_by_ROOT_or_ally = yes }
@@ -8213,14 +8161,14 @@ focus_tree = {
 		completion_reward = {
 			unlock_decision_tooltip = USA_conquest_of_latam
 			country_event = { id = pound.9 days = 0 }
-			add_stability = 0.08
+			add_stability = 0.1
 		}
 	}		
 	focus = {
 		id = USA_triumph_over_money
 		icon = GFX_focus_generic_strike_at_democracy2
 		relative_position_id = USA_towards_national_utopia
-		x = 6
+		x = 7
 		y = 10
 		cost = 5
 		ai_will_do = {
@@ -8252,4 +8200,675 @@ focus_tree = {
 			unlock_decision_tooltip = USA_triumph_over_war_and_money
 		}
 	}
+
+	### POUND SUCCESSORS 
+	focus = {
+		id = USA_fall_of_prometheus
+		x = 13
+		y = 11
+		offset = {
+			x = 26
+			y = 0
+			trigger = {
+				has_dlc = "Man the Guns"
+			}
+		}
+		
+		cost = 2
+		ai_will_do = {
+			factor = 10
+		}
+		icon = GFX_goal_generic_attack_allies
+		available = {
+			has_government = fascism
+			NOT = { has_country_leader = { ruling_only = yes character = USA_Ezra_Pound } }
+			has_country_flag = PoundDead
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		completion_reward = {
+			country_event = { id = pound.12 days = 0 }
+			remove_ideas = USA_ubermensch_council
+			remove_power_balance = { id = USA_power_balance }
+		}
+	}
+
+	# Dennis
+	
+	# Yockey
+	focus = {
+		id = USA_prophecy_of_imperium
+		x = 3
+		y = 1
+		
+		cost = 5
+		ai_will_do = {
+			factor = 10
+		}
+		relative_position_id = USA_fall_of_prometheus
+		prerequisite = { focus = USA_fall_of_prometheus }
+		icon = GFX_focus_ITA_mare_nostrum
+		available = {
+			has_government = fascism
+			has_country_leader = { ruling_only = yes character = USA_francis_yockey }
+			has_country_flag = PoundDead
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		completion_reward = {
+			remove_ideas = USA_state_of_utopia
+			add_political_power = 50
+			set_cosmetic_tag = YOCK
+		}
+	}
+	focus = {
+		id = USA_rise_of_authority
+		x = -1
+		y = 1
+		
+		cost = 5
+		ai_will_do = {
+			factor = 10
+		}
+		relative_position_id = USA_prophecy_of_imperium
+		prerequisite = { focus = USA_prophecy_of_imperium }
+		icon = GFX_focus_GER_expand_ss_security_duties
+		available = {
+			has_government = fascism
+			has_country_leader = { ruling_only = yes character = USA_francis_yockey }
+			has_country_flag = PoundDead
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		completion_reward = {
+			set_war_support = 1
+			add_ideas = USA_resurgence_of_authority
+			retire_character = USA_howard_scott
+			retire_character = USA_Ernest_Hemmingway
+			retire_character = USA_George_Christians
+			add_trait = {
+				character = USA_francis_yockey
+   				ideology = nazism
+   				trait = prophet_of_imperium
+			}
+			country_event = { id = yock.1 days = 0 }
+			custom_effect_tooltip = "New ministers will become available!"
+		}
+	}
+	focus = {
+		id = USA_destroy_cultural_distortion
+		x = 1
+		y = 1
+		
+		cost = 5
+		ai_will_do = {
+			factor = 10
+		}
+		relative_position_id = USA_prophecy_of_imperium
+		prerequisite = { focus = USA_prophecy_of_imperium }
+		icon = GFX_focus_GER_strafbataillon
+		available = {
+			has_government = fascism
+			has_country_leader = { ruling_only = yes character = USA_francis_yockey }
+			has_country_flag = PoundDead
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		completion_reward = {
+			add_popularity = { ideology = democratic popularity = -1 }
+			add_popularity = { ideology = communism popularity = -1 }
+			add_popularity = { ideology = neutrality popularity = -1 }
+			unlock_decision_category_tooltip = USA_fight_for_western_civilization
+			add_doctrine_cost_reduction = {
+				cost_reduction = 0.5
+				uses = 2
+				category = special_forces_doctrine
+			}	
+			add_timed_idea = {
+				idea = USA_war_for_west
+				days = 125
+			}
+			custom_effect_tooltip = "You will gain a new spirit when the timed spirit is removed."
+		}
+	}
+	focus = {
+		id = USA_european_liberation_front
+		x = -2
+		y = 2
+		
+		cost = 5
+		ai_will_do = {
+			factor = 10
+		}
+		relative_position_id = USA_prophecy_of_imperium
+		prerequisite = { focus = USA_destroy_cultural_distortion }
+		prerequisite = { focus = USA_rise_of_authority }
+		icon = GFX_focus_generic_fascist_troops
+		available = {
+			has_government = fascism
+			has_country_leader = { ruling_only = yes character = USA_francis_yockey }
+			has_country_flag = PoundDead
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = USA_american_blackshirts
+				add_idea = USA_european_liberation_army
+			}
+			add_stability = 0.03
+		}
+	}
+
+	focus = {
+		id = USA_totalitarian_socialism
+		x = 0
+		y = 2
+		
+		cost = 5
+		ai_will_do = {
+			factor = 10
+		}
+		relative_position_id = USA_prophecy_of_imperium
+		prerequisite = { focus = USA_destroy_cultural_distortion }
+		prerequisite = { focus = USA_rise_of_authority }
+		icon = GFX_focus_DEN_heavy_regulations
+		available = {
+			has_government = fascism
+			has_country_leader = { ruling_only = yes character = USA_francis_yockey }
+			has_country_flag = PoundDead
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		completion_reward = {
+			remove_ideas = USA_national_syndicalism
+			remove_ideas = USA_national_syndicalism2 
+			add_ideas = USA_creative_totalitariat
+		}
+	}
+	focus = {
+		id = USA_destiny_of_america
+		x = 2
+		y = 2
+		
+		cost = 5
+		ai_will_do = {
+			factor = 10
+		}
+		relative_position_id = USA_prophecy_of_imperium
+		prerequisite = { focus = USA_destroy_cultural_distortion }
+		prerequisite = { focus = USA_rise_of_authority }
+		icon = GFX_focus_GER_establish_protectorates_in_america
+		available = {
+			has_government = fascism
+			has_country_leader = { ruling_only = yes character = USA_francis_yockey }
+			has_country_flag = PoundDead
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = USA_revolutionary_destiny
+				add_idea = USA_imperium_destiny
+			}
+			add_stability = 0.03
+		}
+	}
+	focus = {
+		id = USA_the_enemy_of_europe
+		x = -1
+		y = 3
+		
+		cost = 5
+		ai_will_do = {
+			factor = 10
+		}
+		relative_position_id = USA_prophecy_of_imperium
+		prerequisite = { focus = USA_european_liberation_front }
+		prerequisite = { focus = USA_totalitarian_socialism }
+		prerequisite = { focus = USA_destiny_of_america }
+		icon = GFX_focus_GER_end_european_communism
+		available = {
+			has_government = fascism
+			has_country_leader = { ruling_only = yes character = USA_francis_yockey }
+			has_country_flag = PoundDead
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		completion_reward = {
+			country_event = { id = yock.3 days = 0 }
+			create_wargoal = {
+            target = SOV
+            type = topple_government
+       		}
+			create_wargoal = {
+            target = PRC
+            type = topple_government
+       		}
+		}
+	}
+	focus = {
+		id = USA_frontier_of_annihilation
+		x = 1
+		y = 3
+		
+		cost = 5
+		ai_will_do = {
+			factor = 10
+		}
+		relative_position_id = USA_prophecy_of_imperium
+		prerequisite = { focus = USA_european_liberation_front }
+		prerequisite = { focus = USA_totalitarian_socialism }
+		prerequisite = { focus = USA_destiny_of_america }
+		icon = GFX_focus_NOR_frontkjempere
+		available = {
+			has_government = fascism
+			has_country_leader = { ruling_only = yes character = USA_francis_yockey }
+			has_country_flag = PoundDead
+		}a
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		completion_reward = {
+			add_ideas = closed_economy
+			add_ideas = extensive_conscription
+			add_ideas = tot_economic_mobilisation
+			add_political_power = -100
+			add_stability = 0.03
+			country_event = { id = yock.2 days = 0 }
+		}
+	}
+	focus = {
+		id = USA_20_20ths
+		x = 0
+		y = 4
+		
+		cost = 5
+		ai_will_do = {
+			factor = 10
+		}
+		relative_position_id = USA_prophecy_of_imperium
+		prerequisite = { focus = USA_frontier_of_annihilation }
+		prerequisite = { focus = USA_the_enemy_of_europe }
+		icon = GFX_focus_generic_total_war
+		available = {
+			has_government = fascism
+			has_country_leader = { ruling_only = yes character = USA_francis_yockey }
+			has_country_flag = PoundDead
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		completion_reward = {
+			if = {
+				limit = { is_faction_leader = no }
+				leave_faction = yes
+			}
+			set_country_leader_portrait = {
+				ideology = fascism
+				portrait = Portrait_Francis_Yockey_cap
+			}
+			create_faction = "Imperium of Europe"
+			unlock_decision_tooltip = USA_towards_world_unity
+			every_state = { 
+				limit = { is_on_continent = europe }
+				add_claim_by = USA
+			}
+			CAN = { every_owned_state = { add_claim_by = ROOT }}
+			AST = { every_owned_state = { add_claim_by = ROOT }}
+			NZL = { every_owned_state = { add_claim_by = ROOT }}
+			SAF = { every_owned_state = { add_claim_by = ROOT }}
+		}
+	}
+	
+	# Hemmingway
+
+
+	## George Christians
+	focus = {
+		id = USA_away_from_gold
+		x = -3
+		y = 1
+		
+		cost = 5
+		ai_will_do = {
+			factor = 10
+		}
+		relative_position_id = USA_fall_of_prometheus
+		prerequisite = { focus = USA_fall_of_prometheus }
+		icon = GFX_focus_ITA_corpo_volontari_della_liberta
+		available = {
+			has_government = fascism
+			has_country_leader = { ruling_only = yes character = USA_George_Christians }
+			has_country_flag = PoundDead
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		completion_reward = {
+			remove_ideas = USA_state_of_utopia
+			set_cosmetic_tag = CHRI
+			add_political_power = 50
+			add_popularity = { ideology = fascism popularity = -0.3 }
+		}
+	}
+	focus = {
+		id = USA_the_whiteshirts
+		x = -1
+		y = 1
+		
+		cost = 5
+		ai_will_do = {
+			factor = 10
+		}
+		relative_position_id = USA_away_from_gold
+		prerequisite = { focus = USA_away_from_gold }
+		icon = GFX_focus_SOV_builder_of_the_red_army
+		available = {
+			has_government = fascism
+			has_country_leader = { ruling_only = yes character = USA_George_Christians }
+			has_country_flag = PoundDead
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = USA_american_blackshirts
+				add_idea = USA_red_crusaders
+			}
+		}
+	}
+	focus = {
+		id = USA_crusade_for_economic_liberty
+		x = 1
+		y = 1
+		
+		cost = 5
+		ai_will_do = {
+			factor = 10
+		}
+		relative_position_id = USA_away_from_gold
+		prerequisite = { focus = USA_away_from_gold }
+		icon = GFX_focus_ITA_generic_fascist_workers
+		available = {
+			has_government = fascism
+			has_country_leader = { ruling_only = yes character = USA_George_Christians }
+			has_country_flag = PoundDead
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		completion_reward = {
+			remove_ideas = USA_national_syndicalism
+			remove_ideas = USA_national_syndicalism2
+			add_timed_idea = {
+				idea = USA_crusade_against_capital
+				days = 150
+			}
+			add_tech_bonus = {
+   				bonus = 0.5
+    			uses = 3
+    			category = industry
+			}
+			custom_effect_tooltip = "You will gain a new spirit when the timed spirit is removed."
+		}
+	}
+	focus = {
+		id = USA_a_red_kkk
+		x = -2
+		y = 2
+		
+		cost = 5
+		ai_will_do = {
+			factor = 10
+		}
+		relative_position_id = USA_away_from_gold
+		prerequisite = { focus = USA_the_whiteshirts }
+		prerequisite = { focus = USA_crusade_for_economic_liberty }
+		icon = GFX_focus_usa_honor_the_confederacy
+		available = {
+			has_government = fascism
+			has_country_leader = { ruling_only = yes character = USA_George_Christians }
+			has_country_flag = PoundDead
+			fascism > 0.45
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = USA_red_crusaders
+				add_idea = USA_red_crusaders2
+			}
+			add_manpower = 20000
+		}
+	}
+	focus = {
+		id = USA_paper_and_ink_revolution
+		x = 0
+		y = 2
+		
+		cost = 5
+		ai_will_do = {
+			factor = 10
+		}
+		relative_position_id = USA_away_from_gold
+		prerequisite = { focus = USA_the_whiteshirts }
+		prerequisite = { focus = USA_crusade_for_economic_liberty }
+		icon = GFX_focus_generic_fascist_propaganda
+		available = {
+			has_government = fascism
+			has_country_leader = { ruling_only = yes character = USA_George_Christians }
+			has_country_flag = PoundDead
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		completion_reward = {
+			unlock_decision_category_tooltip = USA_pap_ink_revolution_cat
+			activate_mission = USA_paper_and_ink_campaign
+		}
+	}
+	focus = {
+		id = USA_human_effort_instead_of_gold
+		x = 2
+		y = 2
+		
+		cost = 5
+		ai_will_do = {
+			factor = 10
+		}
+		relative_position_id = USA_away_from_gold
+		prerequisite = { focus = USA_the_whiteshirts }
+		prerequisite = { focus = USA_crusade_for_economic_liberty }
+		icon = GFX_focus_generic_public_works
+		available = {
+			has_government = fascism
+			has_country_leader = { ruling_only = yes character = USA_George_Christians }
+			has_country_flag = PoundDead
+			fascism > 0.45
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		completion_reward = {
+			add_ideas = USA_humanity_over_gold
+		}
+	}
+	focus = {
+		id = USA_escalate_the_finance_war
+		x = -1
+		y = 3
+		
+		cost = 5
+		ai_will_do = {
+			factor = 10
+		}
+		relative_position_id = USA_away_from_gold
+		prerequisite = { focus = USA_paper_and_ink_revolution }
+		prerequisite = { focus = USA_a_red_kkk }
+		prerequisite = { focus = USA_human_effort_instead_of_gold }
+		icon = GFX_focus_GER_wage_war_on_capitalism
+		available = {
+			has_government = fascism
+			has_country_leader = { ruling_only = yes character = USA_George_Christians }
+			has_country_flag = PoundDead
+			fascism > 0.6
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		completion_reward = {
+			add_manpower = -15000
+			diplomatic_relation = {
+    			country = ENG
+    			relation = embargo
+   				active = yes
+			}
+			diplomatic_relation = {
+    			country = FRA
+    			relation = embargo
+   				active = yes
+			}
+			diplomatic_relation = {
+    			country = SOV
+    			relation = embargo
+   				active = yes
+			}
+			diplomatic_relation = {
+    			country = JAP
+    			relation = embargo
+   				active = yes
+			}
+			FRA = { 
+				add_timed_idea = {
+					idea = class_warfare
+					days = 200
+				}
+			}
+			ENG = { 
+				add_timed_idea = {
+					idea = class_warfare
+					days = 200
+				}
+			}
+			SOV = { 
+				add_timed_idea = {
+					idea = class_warfare
+					days = 200
+				}
+			}
+			JAP = { 
+				add_timed_idea = {
+					idea = class_warfare
+					days = 200
+				}
+			}
+		}
+	}
+	focus = {
+		id = USA_the_golden_rule
+		x = 1
+		y = 3
+		
+		cost = 5
+		ai_will_do = {
+			factor = 10
+		}
+		relative_position_id = USA_away_from_gold
+		prerequisite = { focus = USA_paper_and_ink_revolution }
+		prerequisite = { focus = USA_a_red_kkk }
+		prerequisite = { focus = USA_human_effort_instead_of_gold }
+		icon = GFX_focus_SWE_refuge_for_revolutionaries
+		available = {
+			has_government = fascism
+			has_country_leader = { ruling_only = yes character = USA_George_Christians }
+			has_country_flag = PoundDead
+			fascism > 0.6
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		completion_reward = {
+			unlock_decision_tooltip = USA_red_circle
+			swap_ruler_traits = {
+    			remove = unproven_leader
+   				add = newagecrusader
+			}	
+		}
+	}
+	focus = {
+		id = USA_the_death_of_tyranny
+		x = 0
+		y = 4
+		
+		cost = 5
+		ai_will_do = {
+			factor = 10
+		}
+		relative_position_id = USA_away_from_gold
+		prerequisite = { focus = USA_the_golden_rule }
+		prerequisite = { focus = USA_escalate_the_finance_war }
+		icon = GFX_focus_NOR_send_the_king_back_to_denmark
+		available = {
+			has_government = fascism
+			has_country_leader = { ruling_only = yes character = USA_George_Christians }
+			has_country_flag = PoundDead
+			fascism > 0.6
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		completion_reward = {
+			custom_effect_tooltip = shizobolgang
+			custom_effect_tooltip = "It is time for the last wars to free humanity to begin!"
+			create_wargoal = {
+   				type = topple_government
+    			target = ENG
+			}
+			create_wargoal = {
+   				type = topple_government
+    			target = FRA
+			}
+			create_wargoal = {
+   				type = topple_government
+    			target = GER
+			}
+			create_wargoal = {
+   				type = topple_government
+    			target = SOV
+			}
+		}
+	}
+
+	## Scott
+	
 }
