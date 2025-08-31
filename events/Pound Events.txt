@@ -339,7 +339,7 @@ country_event = {
 
 country_event = {
 	id = pound.15
-	title = "Britain Offers Peace"
+	title = "The London Surrender!"
 	desc = pound.15.d
 	fire_only_once = yes
 	trigger = {
@@ -351,15 +351,14 @@ country_event = {
 		}
 		strength_ratio = {
    			tag = ENG
-    		ratio > 2
+    		ratio > 1
 		}
 		has_war_with = ENG
 		ENG = {
 			casualties_inflicted_by = {
     			opponent = USA
-    			thousands > 300
+    			thousands > 200
 			}
-			alliance_strength_ratio < 0.5
 			OR = {
 				any_core_state = { is_controlled_by = USA }
 				NOT = { 
@@ -372,8 +371,8 @@ country_event = {
 			}
 		}
 		all_core_state = { is_controlled_by = USA }
-		ships_in_area = { area = 43 size > 100 } 
-		ships_in_area = { area = 18 size > 100 } 
+		ships_in_area = { area = 43 size > 80 } 
+		ships_in_area = { area = 18 size > 80 } 
 		OR = {
 			CAN = { has_capitulated = yes }
 			NOT = { country_exists = CAN }
@@ -443,6 +442,17 @@ country_event = {
 		has_government = fascism
 	}
 	fire_only_once = yes
+	
+	option = {
+		name = "Alright!"
+	}
+}
+
+country_event = {
+	id = pound.17
+	title = "British Scripted Peace Deal Guide!"
+	desc = pound.16.d
+	is_triggered_only = yes
 	
 	option = {
 		name = "Alright!"
