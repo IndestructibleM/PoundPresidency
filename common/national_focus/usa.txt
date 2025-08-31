@@ -8481,7 +8481,7 @@ focus_tree = {
 			has_government = fascism
 			has_country_leader = { ruling_only = yes character = USA_francis_yockey }
 			has_country_flag = PoundDead
-		}a
+		}
 
 		cancel_if_invalid = yes
 		continue_if_invalid = no
@@ -8524,7 +8524,7 @@ focus_tree = {
 			}
 			set_country_leader_portrait = {
 				ideology = fascism
-				portrait = Portrait_Francis_Yockey_cap
+				portrait = GFX_Portrait_Francis_Yockey_cap
 			}
 			create_faction = "Imperium of Europe"
 			unlock_decision_tooltip = USA_towards_world_unity
