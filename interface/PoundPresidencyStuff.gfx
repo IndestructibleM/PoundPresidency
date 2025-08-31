@@ -84,4 +84,8 @@ spriteTypes = {
 		name = "GFX_report_event_pound_intro"
 		texturefile = "gfx/event_pictures/Event_pound_intro.png"
 	}
+	SpriteType = {
+		name = "GFX_Portrait_Francis_Yockey_cap"
+		texturefile = "gfx/leaders/USA/Portrait_Francis_Yockey_cap.png"
+	}
 }
