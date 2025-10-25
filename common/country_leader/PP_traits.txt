@@ -67,14 +67,12 @@ leader_traits = {
 		war_stability_factor = 0.2
 	}
 	
-	american_totalitarian = {
+	nuclear_commander = {
 		random = no
-		civilian_intel_to_others = -100
-		army_intel_to_others = -100
-		navy_intel_to_others = -100
-		airforce_intel_to_others = -100
 		offensive_war_stability_factor = 0.25
 		command_power_gain = 0.2
+		planning_speed = 0.20
+		max_planning = 0.2
 	}
 	
 	soldier_author_sportsman = {

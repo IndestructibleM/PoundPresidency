@@ -123,7 +123,7 @@
  USA_dictatorship_of_logos: "Dictatorship of Logos"
  USA_hierarchical_meritocracy: "Hierarchical Meritocracy"
  USA_energy_credit_system: "Energy Credit System"
- USA_sober_up_and_study: "Sober up and Study!"
+ USA_sober_up_and_study: "Sober Up and Study!"
  USA_wonders_of_mankind: "Wonders of Mankind"
  USA_liberation_of_science: "Liberation of Science"
  USA_panama_to_pole: "From Panama to the North Pole"
@@ -156,6 +156,10 @@
  CHRI: "Confederacy of Golden Labor" 
  CHRI_DEF: "the Confederacy of Golden Labor"
  
+ SCOT: "North American Technate"
+ SCOT_DEF: "the North American Technate"
+ SCOT_ADJ: "American"
+ 
  DENN: "American Popular State"
  DENN_DEF: "the American Popular State"
  DENN_ADJ: "American"
@@ -181,7 +185,7 @@
  light_bearer: "Lucibel the Light-Bearer"
  prophet_of_imperium: "Prophet of Imperium"
  soldier_author_sportsman: "Soldier, Author, Sportsman"
- american_totalitarian: "American Totalitarian"
+ nuclear_commander: "Nuclear Commander"
  unproven_leader: "Unproven Leader"
  newagecrusader: "New-Age Crusader"
  

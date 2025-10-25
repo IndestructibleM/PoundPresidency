@@ -173,6 +173,12 @@ defined_text = {
 		}
 		localization_key = revisionist_zionism
 	}
+	text = {
+		trigger = {
+			has_country_leader_ideology = technocracy
+		}
+		localization_key = technocracy
+	}
 }
 defined_text = {
 	name = GetSubIdeologyFas

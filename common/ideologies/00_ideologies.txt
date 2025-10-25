@@ -230,7 +230,7 @@ ideologies = {
 			}
 			
 			technocracy = {
-				color = { 200 170 170 }
+
 			}
 		}
 

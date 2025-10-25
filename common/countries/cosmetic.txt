@@ -1659,6 +1659,6 @@ CHRI = {
 	color_ui = rgb { 140 10 35 }
 }
 SCOT = {
-	color = rgb { 90 90 100 }
-	color_ui = rgb { 90 90 100 }
+	color = rgb { 110 110 130 }
+	color_ui = rgb { 110 110 130 }
 }

@@ -221,17 +221,17 @@ country_event = {
 	#	retire_character = USA_richard_child
 	#}
 	
-	#option = {
-	#	name = "March Forward! Dennis!"
-	#	promote_character = USA_lawrence_dennis
-	#	set_politics = {
-	#		ruling_party = fascism
-	#		elections_allowed = no
-	#		last_election = "1936.11.5"
-	#		election_frequency = 48
-	#	}
-	#	retire_character = USA_richard_child
-	#}
+	option = {
+		name = "March Forward! Scott!"
+		promote_character = USA_howard_scott
+		set_politics = {
+			ruling_party = neutrality
+			elections_allowed = no
+			last_election = "1936.11.5"
+			election_frequency = 48
+		}
+		retire_character = USA_richard_child
+	}
 	
 	option = {
 		name = "March Left! Christians!" ## March Back
