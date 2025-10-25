@@ -9155,6 +9155,28 @@ focus_tree = {
 			add_war_support = 0.15
 			unlock_decision_tooltip = SCOT_integrate_states
 			unlock_decision_tooltip = SCOT_towards_north_american_self_sufficiency
+			101 = {
+				add_claim_by = USA
+				OWNER = { 
+    				ROOT = {
+       					create_wargoal = {
+           				target = PREV
+            			type = take_state_focus
+        				}
+   					}
+				}			
+			}
+			100 = {
+				add_claim_by = USA
+				OWNER = { 
+    				ROOT = {
+       					create_wargoal = {
+           				target = PREV
+            			type = take_state_focus
+        				}
+   					}
+				}			
+			}
 		}
 	}
 }
