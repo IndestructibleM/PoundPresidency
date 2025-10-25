@@ -7,11 +7,7 @@ country_event = {
 	desc = pound.0.d
 	title = "Welcome to The Pound Presidency!"
 	fire_only_once = yes
-	trigger ={
-		is_ai = no
-		tag = USA
-	}
-	mean_time_to_happen = { days = 0 }
+	is_triggered_only = yes
 	picture = GFX_report_event_pound_intro
 	
 	option = {
