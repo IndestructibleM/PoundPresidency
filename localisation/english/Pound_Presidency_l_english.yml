@@ -138,12 +138,12 @@
  ASR_DEF: "the American Social Republic"
  ASR_ADJ: "American"
  
- ASR_utopia: "Republic of Utopia"
- ASR_utopia_DEF: "the Republic of Utopia"
+ ASR_utopia: "Imperium of Utopia"
+ ASR_utopia_DEF: "the Imperium of Utopia"
  ASR_kingdom: "Supreme Kingdom of Heroic America"
  ASR_kingdom_DEF: "the Supreme Kingdom of Heroic America"
- ASR_virtue: "National Republic of Virtue"
- ASR_virtue_DEF: "the National Republic of Virtue"
+ ASR_virtue: "Greater Republic of Virtue"
+ ASR_virtue_DEF: "the Greater Republic of Virtue"
  
  YOCK: "Provisional Western Imperium"
  YOCK_ADJ: "Imperial American"
