@@ -9320,4 +9320,1121 @@
 			}
 		}
 	}
+
+	## Imperial Eclipse Moments
+	focus = {
+        id = FRA_viva_la_revolution_nationale
+        x = 54
+        y = 10
+        available = {
+            has_country_flag = darnand_wins
+        }
+        ai_will_do = {
+		    factor = 50
+		}
+		cost = 5
+        completion_reward = {
+            add_stability = 0.20
+			add_political_power = 100
+			country_event = fra.10
+		}
+    }
+	focus = {
+        id = FRA_patriots_in_control
+        icon = GFX_goal_FRA_FRA_patriots_in_control
+        x = 0
+        y = 1
+        available = {
+            has_country_flag = darnand_wins
+        }
+        prerequisite = { focus = FRA_viva_la_revolution_nationale }
+        relative_position_id = FRA_viva_la_revolution_nationale
+        ai_will_do = {
+		    factor = 50
+		}
+		cost = 5
+        completion_reward = {
+            add_stability = 0.20
+			add_political_power = 100
+			country_event = fra.10
+		}
+    }
+    focus = {
+        id = centralize_the_party
+        icon = GFX_goal_centralize_the_party
+        x = -1
+        y = 1
+        prerequisite = { focus = FRA_patriots_in_control }
+        relative_position_id = FRA_patriots_in_control
+        ai_will_do = {
+		    factor = 50
+		}
+		cost = 5
+        completion_reward = {
+			add_political_power = 100
+			country_event = fra.10
+            custom_effect_tooltip = vitalisttakeover
+            hidden_effect = {
+                add_popularity = { ideology = vitalism popularity = 1 }
+            }
+		}
+       
+    }
+    focus = {
+        id = transform_corporate_structure
+        icon = GFX_goal_transform_corporate_structure
+        x = 1
+        y = 1
+        prerequisite = { focus = FRA_patriots_in_control }
+        relative_position_id = FRA_patriots_in_control
+        ai_will_do = {
+		    factor = 50
+		}
+		cost = 5
+        completion_reward = {
+            add_ideas = FRA_national_socialism
+			add_ideas = national_socialism_law
+		}
+    }
+    focus = {
+        id = way_of_warrior
+        icon = GFX_goal_way_of_warrior
+        x = 2
+        y = 2
+        prerequisite = { focus = transform_corporate_structure }
+        relative_position_id = FRA_patriots_in_control
+        ai_will_do = {
+		    factor = 50
+		}
+		cost = 5
+        completion_reward = {
+            add_ideas = FRA_warrior_life
+            add_manpower = 25000
+		}
+    }
+    focus = {
+        id = national_carthasis
+        icon = GFX_goal_FRA_national_catharsis
+        x = 0
+        y = 2
+        prerequisite = { focus = transform_corporate_structure }
+        relative_position_id = FRA_patriots_in_control
+        prerequisite = { focus = centralize_the_party }
+        ai_will_do = {
+		    factor = 50
+		}
+		cost = 5
+        completion_reward = {
+            swap_ideas = {
+                remove_idea = FRA_revolution_nationale
+                add_idea = FRA_revolution_nationale_2
+            }
+            add_manpower = -2000
+		}
+    }
+    focus = {
+        id = FRA_agrarian_auturky
+        icon = GFX_goal_FRA_achieve_agrarian_auturky
+        x = -2
+        y = 2
+        prerequisite = { focus = centralize_the_party }
+        relative_position_id = FRA_patriots_in_control
+        ai_will_do = {
+		    factor = 50
+		}
+		cost = 5
+        completion_reward = {
+            add_war_support = 0.05
+            add_stability = 0.05
+            add_ideas = limited_exports
+		}
+    }
+    focus = {
+        id = united_in_spirit
+        icon = GFX_goal_FRA_united_in_spirit
+        x = -3
+        y = 3
+        prerequisite = { focus = FRA_agrarian_auturky }
+        relative_position_id = FRA_patriots_in_control
+        ai_will_do = {
+		    factor = 50
+		}
+		cost = 5
+        completion_reward = {
+            add_ideas = united_for_france
+		}
+    }
+    focus = {
+        id = FRA_legionary_workers_corps
+        icon = GFX_goal_FRA_legionary_workers_corps
+        x = 0
+        y = 3
+        prerequisite = { focus = national_carthasis }
+        relative_position_id = FRA_patriots_in_control
+        ai_will_do = {
+		    factor = 50
+		}
+		cost = 5
+        completion_reward = {
+            add_ideas = fra_legionary_workers_corps
+		}
+    }
+    focus = {
+        id = loyalty_to_fff
+        icon = GFX_goal_FRA_order_in_blood
+        x = 3
+        y = 3
+        prerequisite = { focus = way_of_warrior }
+        relative_position_id = FRA_patriots_in_control
+        ai_will_do = {
+		    factor = 50
+		}
+		cost = 5
+        completion_reward = {
+            add_political_power = 50
+            add_war_support = 0.05
+
+		}
+    }
+    focus = {
+        id = france_for_french
+        icon = GFX_goal_france_for_french
+        x = -3
+        y = 4
+        prerequisite = { focus = united_in_spirit }
+        prerequisite = { focus = FRA_legionary_workers_corps }
+        relative_position_id = FRA_patriots_in_control
+        ai_will_do = {
+		    factor = 50
+		}
+		cost = 5
+        completion_reward = {
+            swap_ideas = {
+            remove_idea = united_for_france 
+            add_idea = united_for_france_2
+            }
+		}
+    }
+    focus = {
+        id = FRA_national_labor_front
+        icon = GFX_goal_FRA_national_labor_front
+        x = -1
+        y = 4
+        prerequisite = { focus = united_in_spirit }
+        prerequisite = { focus = FRA_legionary_workers_corps }
+        relative_position_id = FRA_patriots_in_control
+        ai_will_do = {
+		    factor = 50
+		}
+		cost = 5
+        completion_reward = {
+            swap_ideas = {
+                remove_idea = fra_legionary_workers_corps
+                add_idea = national_socialist_worker_ethic
+            }
+		}
+    }
+    focus = {
+        id = deal_with_the_church
+        icon = GFX_goal_FRA_deal_with_church
+        x = 1
+        y = 4
+        prerequisite = { focus = oaths_of_loyalty }
+        prerequisite = { focus = FRA_legionary_workers_corps }
+        relative_position_id = FRA_patriots_in_control
+        ai_will_do = {
+		    factor = 50
+		}
+		cost = 5
+        completion_reward = {
+            country_event = fra.church
+            add_politial_power = -100
+		}
+    }
+    focus = {
+        id = culture_war
+        icon = GFX_goal_culture_war
+        x = 3
+        y = 4
+        prerequisite = { focus = loyalty_to_fff }
+        prerequisite = { focus = FRA_legionary_workers_corps }
+        relative_position_id = FRA_patriots_in_control
+        ai_will_do = {
+		    factor = 50
+		}
+		cost = 5
+        completion_reward = {
+            country_event = fra.culture
+            add_politial_power = 50
+            add_manpower = -5000
+            ad_stability = -0.05
+		}
+    }
+    focus = {
+        id = destiny_of_french_nation
+        icon = GFX_goal_destiny_of_french_nation
+        x = 0
+        y = 5
+        available = {
+			OR = {
+				FRA = { owns_state = 126 }
+				any_subject_country = {
+					owns_state = 126
+				}
+			}
+			OR = {
+				FRA = { owns_state = 1114 }
+				any_subject_country = {
+					owns_state = 1114
+				}
+			}
+        }
+        prerequisite = { focus = france_for_french }
+        prerequisite = { focus = FRA_national_labor_front }
+        prerequisite = { focus = deal_with_the_church }
+        prerequisite = { focus = culture_war }
+        relative_position_id = FRA_patriots_in_control
+        ai_will_do = {
+		    factor = 50
+		}
+		cost = 5
+        completion_reward = {
+            set_faction_name = BrotherhoodofEurope
+            country_event = fra.destiny
+			set_cosmetic_tag = FRA_endsieg
+		}
+    }
+
+	focus = {
+        id = bucard_wins
+        icon = "GFX_goal_bucard_wins"
+        x = 9
+        y = 1
+        available = {
+        }
+        prerequisite = { focus = FRA_viva_la_revolution_nationale }
+        relative_position_id = FRA_viva_la_revolution_nationale
+        ai_will_do = {
+		    factor = 50
+		}
+		cost = 8
+        completion_reward = {
+			add_political_power = 100
+			country_event = fra.bucard
+		}
+    }
+    focus = {
+        id = militarism_cure
+        icon = "GFX_goal_militarism_cure"
+        x = -2
+        y = 1
+        prerequisite = { focus = bucard_wins }
+        relative_position_id = bucard_wins
+        ai_will_do = {
+		    factor = 50
+		}
+		cost = 8
+        completion_reward = {
+			swap_ideas = {
+                remove_idea = french_militarism_2
+                add_idea = french_militarism_3
+           }	
+		}
+    }
+    focus = {
+        id = war_for_france
+        icon = "GFX_goal_war_for_france"
+        x = 0
+        y = 1
+        prerequisite = { focus = bucard_wins }
+        relative_position_id = bucard_wins
+        ai_will_do = {
+		    factor = 50
+		}
+		cost = 8
+        completion_reward = {
+			country_event = fra.francewar
+            add_manpower = -3000
+		}
+    }
+    focus = {
+        id = maximalismic_society
+        icon = "GFX_goal_maximalismic_society"
+        x = 2
+        y = 1
+        prerequisite = { focus = bucard_wins }
+        relative_position_id = bucard_wins
+        ai_will_do = {
+		    factor = 50
+		}
+		cost = 8
+        completion_reward = {
+			add_ideas = total_state
+		}
+    }
+    focus = {
+        id = french_war_machine
+        icon = "GFX_goal_maximalismic_society"
+        x = -2
+        y = 2
+        prerequisite = { focus = militarism_cure }
+        relative_position_id = bucard_wins
+        ai_will_do = {
+		    factor = 50
+		}
+		cost = 8
+        completion_reward = {
+			swap_ideas = {
+                remove_ideas = french_militarism_3
+                add_ideas = french_war_machine
+            }
+		}
+    }
+    focus = {
+        id = fight_anti_france
+        icon = "GFX_goal_fight_anti_france"
+        x = 0
+        y = 2
+        prerequisite = { focus = war_for_france }
+        relative_position_id = bucard_wins
+        ai_will_do = {
+		    factor = 50
+		}
+		cost = 8
+        completion_reward = {
+			add_ideas = fight_for_france
+		}
+    }
+    focus = {
+        id = everything_for_country
+        icon = "GFX_goal_everything_for_country"
+        x = 2
+        y = 2
+        prerequisite = { focus = maximalismic_society }
+        relative_position_id = bucard_wins
+        ai_will_do = {
+		    factor = 50
+		}
+		cost = 8
+        completion_reward = {
+			swap_ideas = {
+                remove_ideas = total_state
+                add_ideas = everything_for_country
+            }
+		}
+    }
+    focus = {
+        id = FRA_national_syndicalism
+        icon = "GFX_goal_on_ruins_of_deciet" 
+        x = -3
+        y = 3
+        prerequisite = { focus = french_war_machine }
+        relative_position_id = bucard_wins
+        ai_will_do = {
+		    factor = 50
+		}
+		cost = 8
+        completion_reward = {
+			swap_ideas = {
+                remove_ideas = french_war_machine
+                add_ideas = french_war_machine_2
+            }
+		}
+    }
+    focus = {
+        id = FRA_reactionary_revolution
+        icon = "GFX_goal_FRA_reactionary_revolution"
+        x = -2
+        y = 4
+        prerequisite = { focus = FRA_national_syndicalism }
+        relative_position_id = bucard_wins
+        ai_will_do = {
+		    factor = 50
+		}
+		cost = 8
+        completion_reward = {
+			add_political_power = -200
+            add_stability = -0.05
+            add_war_support = -0.1
+		}
+    }
+    focus = {
+        id = FRA_build_higher_order
+        icon = "GFX_goal_work_their_blood"
+        x = -1
+        y = 3
+        prerequisite = { focus = fight_anti_france }
+        relative_position_id = bucard_wins
+        ai_will_do = {
+		    factor = 50
+		}
+		cost = 8
+        completion_reward = {
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+            random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+            add_manpower = -1000
+		}
+    }
+    focus = {
+        id = on_ruins_of_deciet
+        icon = "GFX_goal_revolutionary_violence"
+        x = 1
+        y = 3
+        prerequisite = { focus = fight_anti_france }
+        relative_position_id = bucard_wins
+        ai_will_do = {
+		    factor = 50
+		}
+		cost = 8
+        completion_reward = {
+            add_manpower = -8000
+            remove_ideas = fight_for_france
+		}
+    }
+    focus = {
+        id = etat_de_force
+        icon = "GFX_goal_etat_de_force"
+        x = 3
+        y = 3
+        prerequisite = { focus = everything_for_country }
+        relative_position_id = bucard_wins
+        ai_will_do = {
+		    factor = 50
+		}
+		cost = 8
+        completion_reward = {
+            swap_ideas = {
+                remove_ideas = everything_for_country
+                add_ideas = etat_de_force
+            }
+            country_event = fra.force
+		}
+    }
+    focus = {
+        id = france_for_all
+        icon = "GFX_goal_france_for_all"
+        x = 2
+        y = 4
+        prerequisite = { focus = etat_de_force }
+        relative_position_id = bucard_wins
+        ai_will_do = {
+		    factor = 50
+		}
+		cost = 8
+        completion_reward = {
+            add_ideas = french_futurism
+		}
+    }
+    focus = {
+        id = FRA_tradition_of_revolution
+        icon = "GFX_goal_dream_of_death"
+        x = 0
+        y = 4
+        prerequisite = { focus = FRA_build_higher_order }
+        prerequisite = { focus = on_ruins_of_deciet }
+        relative_position_id = bucard_wins
+        ai_will_do = {
+		    factor = 50
+		}
+		cost = 8
+        completion_reward = {
+            country_event = fra.tribe
+		}
+    }
+    focus = {
+        id = ascendent_glory
+        icon = "GFX_goal_ascendent_glory"
+        x = 0
+        y = 5
+        prerequisite = { focus = france_for_all }
+        prerequisite = { focus = FRA_tradition_of_revolution }
+        prerequisite = { focus = FRA_reactionary_revolution }
+        relative_position_id = bucard_wins
+        ai_will_do = {
+		    factor = 50
+		}
+		cost = 8
+        completion_reward = {
+            swap_ideas = {
+                remove_ideas = french_war_machine_2
+                remove_ideas = laws_of_tribe
+                remove_ideas = etat_de_force
+                remove_ideas = french_futurism
+                add_ideas = francist_imperial_glory
+            }
+		}
+    }
+	 focus = {
+        id = rousing_speeches
+        x = -19
+        y = 1
+        prerequisite = { focus = FRA_viva_la_revolution_nationale }
+        relative_position_id = FRA_viva_la_revolution_nationale
+        ai_will_do = {
+		    factor = 50
+		}
+		cost = 5
+        completion_reward = {
+			add_political_power = 50
+			country_event = fra.8
+		}
+    }
+    focus = {
+        id = FRA_vitalization_of_french_culture
+        x = -2
+        y = 1
+        prerequisite = { focus = rousing_speeches }
+        relative_position_id = rousing_speeches
+        ai_will_do = {
+		    factor = 50
+		}
+		cost = 5
+        completion_reward = {
+        add_ideas = french_cultural_movement
+   		}
+   	}
+    focus = {
+        id = FRA_the_autoroutes
+        x = -2
+        y = 2
+        prerequisite = { focus = FRA_vitalization_of_french_culture }
+        relative_position_id = rousing_speeches
+        ai_will_do = {
+		    factor = 50
+		}
+		cost = 5
+        completion_reward = {
+            21 = {
+        	    add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+			    }
+            }
+            32 = {
+        	    add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+			    }
+            }
+            26 = {
+        	    add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+			    }
+            }
+            33 = {
+        	    add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+			    }
+            }
+            16 = {
+        	    add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+			    }
+            }
+            15 = {
+        	    add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+			    }
+            }
+		}
+    }
+    focus = {
+        id = like_caeser_like_bonaparte
+        x = -2
+        y = 3
+        prerequisite = { focus = FRA_the_autoroutes }
+        relative_position_id = rousing_speeches
+        ai_will_do = {
+		    factor = 50
+		}
+		cost = 5
+        completion_reward = {
+        	
+		}
+    }
+    focus = {
+        id = FRA_une_peuple_une_nation_une_chef
+        x = 0
+        y = 1
+        prerequisite = { focus = rousing_speeches }
+        relative_position_id = rousing_speeches
+        ai_will_do = {
+		    factor = 50
+		}
+		cost = 5
+        completion_reward = {
+        	add_ideas = cult_of_personality
+		}
+    }
+    focus = {
+        id = finely_dressed
+        x = 0
+        y = 2
+        prerequisite = { focus = FRA_une_peuple_une_nation_une_chef }
+        relative_position_id = rousing_speeches
+        ai_will_do = {
+		    factor = 50
+		}
+		cost = 5
+        completion_reward = {
+        	add_political_power = 50
+        	swap_ideas = {
+        		remove_ideas = french_cultural_movement
+        		add_ideas = french_cultural_expansion
+        	}
+		}
+    }
+    focus = {
+        id = algeria_colonization
+        x = 0
+        y = 3
+        prerequisite = { focus = finely_dressed }
+        relative_position_id = rousing_speeches
+        ai_will_do = {
+		    factor = 50
+		}
+		cost = 8
+        completion_reward = {
+        	add_state_core = 460
+        	add_state_core = 459
+			add_state_core = 805
+            add_state_core = 865
+        	add_manpower = -10000
+		}
+	}
+	focus = {
+        id = birth_programs
+        x = 2
+        y = 1
+        prerequisite = { focus = rousing_speeches }
+        relative_position_id = rousing_speeches
+        ai_will_do = {
+		    factor = 50
+		}
+		cost = 5
+        completion_reward = {
+        	add_ideas = birth_programs
+		}
+    }
+    focus = {
+        id = state_athleticism
+        x = 2
+        y = 2
+        prerequisite = { focus = birth_programs }
+        relative_position_id = rousing_speeches
+        ai_will_do = {
+		    factor = 50
+		}
+		cost = 5
+        completion_reward = {
+        	swap_ideas = {
+        		remove_idea = birth_programs
+        		add_idea = new_life_movement
+        	}
+		}
+    }
+    focus = {
+        id = FRA_juenesses_patriotes
+        x = 2
+        y = 3
+        prerequisite = { focus = state_athleticism }
+        relative_position_id = rousing_speeches
+        ai_will_do = {
+		    factor = 50
+		}
+		cost = 5
+        completion_reward = {
+        	swap_ideas = {
+        		remove_idea = new_life_movement
+        		add_idea = new_life_movement_2
+        	}
+		}
+    }
+    focus = {
+        id = popularize_france
+        x = -1
+        y = 4
+        prerequisite = { focus = like_caeser_like_bonaparte }
+        prerequisite = { focus = algeria_colonization }
+        relative_position_id = rousing_speeches
+        ai_will_do = {
+		    factor = 50
+		}
+		cost = 5
+        completion_reward = {
+        	swap_ideas = {
+        		remove_idea = french_cultural_expansion
+        		add_ideas = french_popular_culture
+        	}
+		}
+    }
+    focus = {
+        id = begin_projects
+        x = 1
+        y = 4
+        prerequisite = { focus = algeria_colonization }
+        prerequisite = { focus = FRA_juenesses_patriotes }
+        relative_position_id = rousing_speeches
+        ai_will_do = {
+		    factor = 50
+		}
+		cost = 5
+        completion_reward = {
+        	unlock_decision_category_tooltip = FRA_projects
+		}
+    }
+    focus = {
+        id = working_with_deat
+        icon = GFX_goal_FRA_working_with_deat
+        x = -10
+        y = 1
+        available = {
+            has_country_flag = deat_wins
+        }
+        prerequisite = { focus = FRA_viva_la_revolution_nationale }
+        relative_position_id = FRA_viva_la_revolution_nationale
+        ai_will_do = {
+		    factor = 50
+		}
+		cost = 5
+        completion_reward = {
+		add_stability = 0.20
+		add_politial_power = 100
+		}
+    }
+    focus = {
+        id = technocratic_management
+        icon = GFX_goal_FRA_technocratic_management
+        x = -2
+        y = 1
+        prerequisite = { focus = working_with_deat }
+        relative_position_id = working_with_deat
+        ai_will_do = {
+		    factor = 50
+		}
+		cost = 5
+        completion_reward = {
+            add_ideas = FRA_techno_maximalism
+		}
+    }
+    focus = {
+        id = ordre_autorite_nation
+        icon = GFX_goal_FRA_ordre_autorite_nation
+        x = -3
+        y = 2
+        prerequisite = { focus = technocratic_management }
+        relative_position_id = working_with_deat
+        ai_will_do = {
+		    factor = 50
+		}
+		cost = 5
+        completion_reward = {
+            swap_ideas = {
+                remove_idea = FRA_techno_maximalism
+                add_idea = FRA_techno_maximalism_2
+            }
+		}
+    }
+    focus = {
+        id = a_dark_enlightenment
+        icon = GFX_goal_FRA_a_dark_enlightenment
+        x = -4
+        y = 3
+        prerequisite = { focus = ordre_autorite_nation }
+        relative_position_id = working_with_deat
+        ai_will_do = {
+		    factor = 50
+		}
+		cost = 5
+        completion_reward = {
+            add_political_power = -50
+            add_stability = -0.02
+            add_ideas = FRA_sorelian_dawn
+			add_ideas = secularism
+		}
+    }
+    focus = {
+        id = entrench_party_state
+        icon = GFX_goal_FRA_entrench_party_state
+        x = -2
+        y = 3
+        prerequisite = { focus = ordre_autorite_nation }
+        relative_position_id = working_with_deat
+        ai_will_do = {
+		    factor = 50
+		}
+		cost = 5
+        completion_reward = {
+            custom_effect_tooltip = vitalisttakeover
+            hidden_effect = {
+                add_popularity = { ideology = vitalism popularity = 1 }
+            }
+		}
+    }
+    focus = {
+        id = military_communism
+        icon = GFX_goal_FRA_military_communism
+        x = 0
+        y = 1
+        prerequisite = { focus = working_with_deat }
+        relative_position_id = working_with_deat
+        ai_will_do = {
+		    factor = 50
+		}
+		cost = 5
+        completion_reward = {        
+            add_ideas = FRA_Military_communism
+		}
+    }
+    focus = {
+        id = european_outreach
+        icon = GFX_goal_FRA_european_outreach
+        x = 0
+        y = 2
+        prerequisite = { focus = military_communism }
+        relative_position_id = working_with_deat
+        ai_will_do = {
+		    factor = 50
+		}
+		cost = 5
+        completion_reward = {
+       
+		}
+    }
+    focus = {
+        id = white_brotherhood
+        icon = GFX_goal_FRA_white_brotherhood
+        x = 0
+        y = 3
+        prerequisite = { focus = european_outreach }
+        relative_position_id = working_with_deat
+        ai_will_do = {
+		    factor = 50
+		}
+		cost = 5
+        completion_reward = {
+            add_ideas = FRA_european_brotherhood
+            add_ideas = diplo_internationalism
+		}
+    }
+    focus = {
+        id = socialize_corporates
+        icon = GFX_goal_FRA_socialize_corporates
+        x = 2
+        y = 1
+        prerequisite = { focus = working_with_deat }
+        relative_position_id = working_with_deat
+        ai_will_do = {
+		    factor = 50
+		}
+		cost = 5
+        completion_reward = {
+            add_ideas = FRA_proletarian_corporatism
+		}
+    }
+    focus = {
+        id = industrial_qoutas
+        icon = GFX_goal_FRA_industrial_qoutas
+        x = 3
+        y = 2
+        prerequisite = { focus = socialize_corporates }
+        relative_position_id = working_with_deat
+        ai_will_do = {
+		    factor = 50
+		}
+		cost = 5
+        completion_reward = {
+            swap_ideas = {
+            remove_idea = FRA_proletarian_corporatism
+            add_idea = FRA_proletarian_corporatism_2
+            }
+			add_ideas = state_socialism
+		}
+    }
+    focus = {
+        id = planisme
+        icon = GFX_goal_FRA_planisme
+        x = 2
+        y = 3
+        prerequisite = { focus = industrial_qoutas }
+        relative_position_id = working_with_deat
+        ai_will_do = {
+		    factor = 50
+		}
+		cost = 5
+        completion_reward = {
+            swap_ideas = {
+            remove_idea = FRA_proletarian_corporatism_2
+            add_idea = FRA_proletarian_corporatism_3
+            }
+		}
+    }
+    focus = {
+        id = scientific_revolution
+        icon = GFX_goal_FRA_scientific_revolution
+        x = 4
+        y = 3
+        prerequisite = { focus = industrial_qoutas }
+        relative_position_id = working_with_deat
+        ai_will_do = {
+		    factor = 50
+		}
+		cost = 5
+        completion_reward = {
+            add_research_slot = 1
+			add_tech_bonus = {
+			bonus = 0.75
+			uses = 1
+			category = electronics
+			}
+			add_tech_bonus = {
+			bonus = 0.75
+			uses = 1
+			category = nuclear
+			}
+		}
+    }
+    focus = {
+        id = four_year_plan
+        icon = GFX_goal_FRA_four_year_plan
+        x = 3
+        y = 4
+        prerequisite = { focus = scientific_revolution }
+        prerequisite = { focus = planisme }
+        prerequisite = { focus = white_brotherhood}
+        relative_position_id = working_with_deat
+        ai_will_do = {
+		    factor = 50
+		}
+		cost = 5
+        completion_reward = {
+            random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+            random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+            random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+    }
+    focus = {
+        id = proletarian_nationalism
+        icon = GFX_goal_FRA_proletarian_nationalism
+        x = 0
+        y = 4
+        prerequisite = { focus = white_brotherhood }
+        prerequisite = { focus = planisme }
+        prerequisite = { focus = entrench_party_state } 
+        relative_position_id = working_with_deat
+        ai_will_do = {
+		    factor = 50
+		}
+		cost = 5
+        completion_reward = {
+            country_event = fra.9
+            add_ideas = FRA_proletarian_nationalism
+		}
+    }
+    focus = {
+        id = constructive_revolution
+        icon = GFX_goal_FRA_constructive_revolution
+        x = -3
+        y = 4
+        prerequisite = { focus = white_brotherhood }
+        prerequisite = { focus = a_dark_enlightenment }
+        prerequisite = { focus = entrench_party_state } 
+        relative_position_id = working_with_deat
+        ai_will_do = {
+		    factor = 50
+		}
+		cost = 5
+        completion_reward = {
+            swap_ideas = {
+                remove_idea = FRA_techno_maximalism_2
+                add_idea = FRA_techno_maximalism_3
+            }
+		}
+    }
+    focus = {
+        id = master_of_the_continent
+        icon = GFX_goal_FRA_master_of_the_continent
+        x = 0
+        y = 5
+        prerequisite = { focus = four_year_plan }
+        prerequisite = { focus = constructive_revolution }
+        prerequisite = { focus = proletarian_nationalism } 
+        relative_position_id = working_with_deat
+        available = {
+            OR = {
+				FRA = { owns_state = 126 }
+				any_subject_country = {
+					owns_state = 126
+				}
+			}
+			OR = {
+				FRA = { owns_state = 1114 }
+				any_subject_country = {
+					owns_state = 1114
+				}
+			}
+        }
+        ai_will_do = {
+		    factor = 50
+		}
+		cost = 5
+        completion_reward = {
+            hidden_effect = {
+                swap_ideas = {
+                remove_idea = FRA_european_brotherhood
+                add_idea = FRA_triumph_of_neosocialism
+                }
+                remove_ideas = FRA_techno_maximalism_3
+                remove_ideas = FRA_proletarian_nationalism
+                remove_ideas = FRA_proletarian_corporatism_3
+            }
+            custom_effect_tooltip = "This will combine multiple spirits into one."
+            set_cosmetic_tag = FRA_NeoSocEuropa
+		}
+    }
 }
