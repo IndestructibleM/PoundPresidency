@@ -126,7 +126,7 @@ ideas = {
 			}
 			name = "Technocratic Social Planning"
 			modifier = {
-				research_speed_factor = 0.15
+				research_speed_factor = 0.1
 				consumer_goods_expected_value = -0.20
 				production_factory_start_efficiency_factor = -0.10
 				production_factory_efficiency_gain_factor = -0.2
@@ -143,30 +143,31 @@ ideas = {
 			allowed_civil_war = {
 				always = yes
 			}
-			name = "Nothing Against the State, Everything for the State, All Within the State"
+			name = "Dictatorship of Reason"
 			modifier = {
-				political_power_factor = 0.2
+				political_power_factor = 0.10
 				foreign_subversive_activites = -1
-				resistance_decay = 0.3
-				compliance_growth = 0.3
-				stability_weekly = 0.005
-				justify_war_goal_time = -0.3
+				resistance_decay = 0.2
+				compliance_growth = 0.2
+				stability_factor = 0.15
+				invasion_preparation = -0.5
+				naval_invasion_penalty = -0.25
+				naval_invasion_capacity = 5
 			}
 		}
 		
-		USA_elite_connections = {
+		USA_unleashed_science = {
 			allowed_civil_war = {
 				always = yes
 			}
-			name = "Elite Connections"
+			name = "Science Unleashed"
 			modifier = {
-				trade_opinion_factor = 0.25
-				opinion_gain_monthly_same_ideology = 10
-				required_garrison_factor = -0.08
-				fascism_acceptance = 30
-				neutrality_acceptance = 30
-				reassignment_duration_factor = -0.3
-				experience_loss_factor = -0.2
+				trade_opinion_factor = 0.20
+				research_speed_factor = 0.2
+				supply_node_range = 0.15
+				army_speed_factor = 0.05
+				scientist_breakthrough_bonus_factor = 0.25
+				scientist_research_bonus_factor = 0.25
 			}
 		}
 

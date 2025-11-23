@@ -6,7 +6,10 @@ operations = {
 	}
 	visible = {
 		tag = USA
+		OR = {
 		has_government = fascism
+		has_government = neutrality
+		}
 		has_war_with = ENG
 	}
     complete_effect = {

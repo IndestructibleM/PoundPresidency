@@ -7258,6 +7258,7 @@ focus_tree = {
 		continue_if_invalid = no
 		available_if_capitulated = no
 		completion_reward = {
+			country_event = { id= pound.13 days = 3 }
 			set_capital = {state = 358}
 			set_province_name = {
    			 	id = 3878
@@ -7535,6 +7536,11 @@ focus_tree = {
 		completion_reward = {
 			country_event = { id = pound.8 days = 0 }
 			army_experience = 50
+			add_doctrine_cost_reduction = {
+				cost_reduction = 0.5
+				uses = 2
+				category = land_doctrine
+			}
 		}
 	}
 	focus = {
@@ -7563,7 +7569,6 @@ focus_tree = {
 		available_if_capitulated = no
 		search_filters = {FOCUS_FILTER_INDUSTRY FOCUS_FILTER_STABILITY }
 		completion_reward = {
-			country_event = { id= pound.13 days = 3 }
 			add_trait = {
     			character = USA_Ezra_Pound
     			ideology = socfash
@@ -8107,7 +8112,7 @@ focus_tree = {
 		relative_position_id = USA_towards_national_utopia
 		x = 6
 		y = 9
-		cost = 3
+		cost = 2
 		prerequisite = {
 			focus = USA_berlin_overtures
 			focus = USA_vanguard_of_new_utopia
@@ -8240,7 +8245,7 @@ focus_tree = {
 	# Yockey
 	focus = {
 		id = USA_prophecy_of_imperium
-		x = 3
+		x = 6
 		y = 1
 		
 		cost = 5
@@ -8545,7 +8550,7 @@ focus_tree = {
 	## George Christians
 	focus = {
 		id = USA_away_from_gold
-		x = -3
+		x = -6
 		y = 1
 		
 		cost = 5
@@ -8870,5 +8875,313 @@ focus_tree = {
 	}
 
 	## Scott
-	
+	focus = {
+		id = USA_revolt_of_engineers
+		x = 0
+		y = 1
+		
+		cost = 5
+		ai_will_do = {
+			factor = 10
+		}
+		relative_position_id = USA_fall_of_prometheus
+		prerequisite = { focus = USA_fall_of_prometheus }
+		icon = GFX_goal_generic_fortify_city
+		available = {
+			has_government = neutrality
+			has_country_leader = { ruling_only = yes character = USA_howard_scott }
+			has_country_flag = PoundDead
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		completion_reward = {
+			remove_ideas = USA_state_of_utopia
+			remove_ideas = USA_american_blackshirts
+			set_cosmetic_tag = SCOT
+			add_political_power = 50
+			add_popularity = { ideology = fascism popularity = -0.15 }
+		}
+	}
+	focus = {
+		id = USA_geothermal_evolution
+		x = -1
+		y = 1
+		
+		cost = 5
+		ai_will_do = {
+			factor = 10
+		}
+		relative_position_id = USA_revolt_of_engineers
+		prerequisite = { focus = USA_revolt_of_engineers }
+		icon = GFX_focus_GER_prioritize_the_four_year_plan
+		available = {
+			has_government = neutrality
+			has_country_leader = { ruling_only = yes character = USA_howard_scott }
+			has_country_flag = PoundDead
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		completion_reward = {
+			remove_ideas = USA_national_syndicalism
+			remove_ideas = USA_national_syndicalism2
+			add_ideas = USA_technocratic_economy
+		}
+	}
+	focus = {
+		id = USA_dictatorship_of_logos
+		x = 1
+		y = 1
+		
+		cost = 5
+		ai_will_do = {
+			factor = 10
+		}
+		relative_position_id = USA_revolt_of_engineers
+		prerequisite = { focus = USA_revolt_of_engineers }
+		icon = GFX_goal_tfv_generic_tech_sharing
+		available = {
+			has_government = neutrality
+			has_country_leader = { ruling_only = yes character = USA_howard_scott }
+			has_country_flag = PoundDead
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		completion_reward = {
+			swap_ideas = {
+			remove_idea = USA_revolutionary_destiny
+			add_idea = USA_nothing_against_everything_for_state
+			}
+		}
+	}
+	focus = {
+		id = USA_energy_credit_system
+		x = -2
+		y = 2
+		
+		cost = 5
+		ai_will_do = {
+			factor = 10
+		}
+		relative_position_id = USA_revolt_of_engineers
+		prerequisite = { focus = USA_geothermal_evolution }
+		prerequisite = { focus = USA_dictatorship_of_logos }
+		icon = GFX_focus_GER_customs_union
+		available = {
+			has_government = neutrality
+			has_country_leader = { ruling_only = yes character = USA_howard_scott }
+			has_country_flag = PoundDead
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = USA_technocratic_economy
+				add_idea = USA_technocratic_economy2
+			}
+		}
+	}
+	focus = {
+		id = USA_hierarchical_meritocracy
+		x = 0
+		y = 2
+		
+		cost = 5
+		ai_will_do = {
+			factor = 10
+		}
+		relative_position_id = USA_revolt_of_engineers
+		prerequisite = { focus = USA_geothermal_evolution }
+		prerequisite = { focus = USA_dictatorship_of_logos }
+		icon = GFX_focus_generic_full_social_mobilization
+		available = {
+			has_government = neutrality
+			has_country_leader = { ruling_only = yes character = USA_howard_scott }
+			has_country_flag = PoundDead
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		completion_reward = {
+			add_trait = {
+    			character = USA_howard_scott
+    			ideology = technocracy
+    			trait = nuclear_commander
+			}
+			
+		}
+	}
+	focus = {
+		id = USA_sober_up_and_study
+		x = 2
+		y = 2
+		
+		cost = 5
+		ai_will_do = {
+			factor = 10
+		}
+		relative_position_id = USA_revolt_of_engineers
+		prerequisite = { focus = USA_geothermal_evolution }
+		prerequisite = { focus = USA_dictatorship_of_logos }
+		icon = GFX_focus_generic_treaty
+		available = {
+			has_government = neutrality
+			has_country_leader = { ruling_only = yes character = USA_howard_scott }
+			has_country_flag = PoundDead
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		completion_reward = {
+			army_experience = 75
+			air_experience = 75
+			navy_experience = 75
+			add_doctrine_cost_reduction = {
+				cost_reduction = 0.5
+				uses = 2
+				category = land_doctrine
+			}
+			add_doctrine_cost_reduction = {
+				cost_reduction = 0.5
+				uses = 2
+				category = naval_doctrine
+			}
+			add_doctrine_cost_reduction = {
+				cost_reduction = 0.5
+				uses = 2
+				category = air_doctrine
+			}
+		}
+	}
+	focus = {
+		id = USA_wonders_of_mankind
+		x = -1
+		y = 3
+		
+		cost = 5
+		ai_will_do = {
+			factor = 10
+		}
+		relative_position_id = USA_revolt_of_engineers
+		prerequisite = { focus = USA_energy_credit_system }
+		prerequisite = { focus = USA_hierarchical_meritocracy }
+		prerequisite = { focus = USA_sober_up_and_study }
+		icon = GFX_focus_GER_wunderwaffe
+		available = {
+			has_government = neutrality
+			has_country_leader = { ruling_only = yes character = USA_howard_scott }
+			has_country_flag = PoundDead
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		completion_reward = {
+			add_tech_bonus = {
+				bonus = 1.0
+				uses = 2
+				category = nuclear
+			}
+			add_tech_bonus = {
+				bonus = 1.0
+				uses = 2
+				category = rocketry
+			}
+			swap_ideas = {
+				remove_idea = USA_technocratic_economy2
+				add_idea = USA_technocratic_economy3
+			}
+		}
+	}
+	focus = {
+		id = USA_liberation_of_science
+		x = 1
+		y = 3
+		
+		cost = 5
+		ai_will_do = {
+			factor = 10
+		}
+		relative_position_id = USA_revolt_of_engineers
+		prerequisite = { focus = USA_energy_credit_system }
+		prerequisite = { focus = USA_hierarchical_meritocracy }
+		prerequisite = { focus = USA_sober_up_and_study }
+		icon = GFX_focus_research2
+		available = {
+			has_government = neutrality
+			has_country_leader = { ruling_only = yes character = USA_howard_scott }
+			has_country_flag = PoundDead
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		completion_reward = {
+			set_research_slots = 7
+			add_ideas = USA_unleashed_science
+		}
+	}
+	focus = {
+		id = USA_panama_to_pole
+		x = 0
+		y = 4
+		
+		cost = 5
+		ai_will_do = {
+			factor = 10
+		}
+		relative_position_id = USA_revolt_of_engineers
+		prerequisite = { focus = USA_wonders_of_mankind }
+		prerequisite = { focus = USA_liberation_of_science }
+		icon = GFX_focus_generic_diplomatic_treaty
+		available = {
+			has_government = neutrality
+			has_country_leader = { ruling_only = yes character = USA_howard_scott }
+			has_country_flag = PoundDead
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		completion_reward = {
+			every_state = { 
+				limit = { is_on_continent = north_america }
+				add_claim_by = USA
+			}
+			add_war_support = 0.15
+			unlock_decision_tooltip = SCOT_integrate_states
+			unlock_decision_tooltip = SCOT_towards_north_american_self_sufficiency
+			101 = {
+				add_claim_by = USA
+				OWNER = { 
+    				ROOT = {
+       					create_wargoal = {
+           				target = PREV
+            			type = take_state_focus
+        				}
+   					}
+				}			
+			}
+			100 = {
+				add_claim_by = USA
+				OWNER = { 
+    				ROOT = {
+       					create_wargoal = {
+           				target = PREV
+            			type = take_state_focus
+        				}
+   					}
+				}			
+			}
+		}
+	}
 }
