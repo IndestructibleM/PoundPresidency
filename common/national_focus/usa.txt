@@ -7536,6 +7536,11 @@ focus_tree = {
 		completion_reward = {
 			country_event = { id = pound.8 days = 0 }
 			army_experience = 50
+			add_doctrine_cost_reduction = {
+				cost_reduction = 0.5
+				uses = 2
+				category = land_doctrine
+			}
 		}
 	}
 	focus = {

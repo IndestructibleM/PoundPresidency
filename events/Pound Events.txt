@@ -106,10 +106,11 @@ country_event = {
 	
 	option = {
 		name = "Speed and Merciless Technology!"
-		add_doctrine_cost_reduction = {
-			cost_reduction = 0.5
-			uses = 2
-			category = cat_mobile_warfare
+		add_mastery_bonus = {
+			bonus = 0.2
+			days = 200
+			track = armor
+			grand_doctrine = new_mobile_warfare
 		}
 		add_power_balance_value = {
 			id = USA_power_balance
@@ -118,10 +119,11 @@ country_event = {
 	}
 	option = {
 		name = "Total War, Total Destruction!"
-		add_doctrine_cost_reduction = {
-			cost_reduction = 0.5
-			uses = 2
-			category = cat_superior_firepower
+		add_mastery_bonus = {
+			bonus = 0.2
+			days = 200
+			track = combat_support
+			grand_doctrine = superior_firepower
 		}
 		add_power_balance_value = {
 			id = USA_power_balance
