@@ -6,6 +6,10 @@ RBR = {
 	color = rgb { 170 25 40 }
 	color_ui = rgb { 170 25 40 }
 }
+FRA_etat = {
+	color = rgb { 40 50 150 }
+	color_ui = rgb { 40 50 150 }
+}
 RAJ_UK = {
 	color = rgb { 170  10  10 }
 	color_ui = rgb { 200  10  10 }
