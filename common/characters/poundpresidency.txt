@@ -7,7 +7,7 @@ characters = {
 			}
 		}
 		country_leader = {
-			ideology = socfash
+			ideology = fascism_ideology
 		}
 	}
 	
@@ -34,7 +34,7 @@ characters = {
 			}
 		}
 		country_leader = {
-			ideology = klanbol
+			ideology = fascism_ideology
 			traits = {unproven_leader}
 		}
 	}
@@ -152,7 +152,7 @@ characters = {
 			}
 		}
 		country_leader = {
-			ideology = technocracy
+			ideology = despotism
 		}
 		advisor = {
 			slot = political_advisor
@@ -174,7 +174,7 @@ characters = {
 			}
 		}
 		country_leader = {
-			ideology = toteur
+			ideology = nazism
 		}
 		advisor = {
 			slot = political_advisor
