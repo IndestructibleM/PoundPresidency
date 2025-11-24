@@ -9326,28 +9326,181 @@
         id = FRA_viva_la_revolution_nationale
         x = 54
         y = 10
+        icon = GFX_goal_confront_the_party
+        ai_will_do = {
+		    factor = 50
+		}
+		available = {
+			has_government = fascism
+        }
+		cost = 5
+        completion_reward = {
+			add_political_power = 100
+			set_cosmetic_tag = FRA_etat
+			set_power_balance = {
+				id = FRA_power_balance
+			}
+        }
+    }
+    focus = {
+        id = plenty_for_people
+        x = -2
+        y = 1
+        icon = GFX_goal_plenty_for_people
+        prerequisite = { focus = FRA_viva_la_revolution_nationale }
+        relative_position_id = FRA_viva_la_revolution_nationale
+        ai_will_do = {
+		    factor = 50
+		}
+		cost = 5
+        completion_reward = {
+            add_ideas = FRA_accesible_commodities
+			random_core_state = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+        }
+    }
+
+    focus = {
+        id = grand_industrial_plan
+        x = -2
+        y = 2
+        icon = GFX_goal_grand_industrial_plan
+        prerequisite = { focus = plenty_for_people }
+        relative_position_id = FRA_viva_la_revolution_nationale
+        ai_will_do = {
+		    factor = 50
+		}
+		cost = 5
+        completion_reward = {
+			random_core_state = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+			random_core_state = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+        }
+    }
+    focus = {
+        id = french_militarism
+        x = 0
+        y = 1
+        icon = GFX_goal_french_militarism
+        prerequisite = { focus = FRA_viva_la_revolution_nationale }
+        relative_position_id = FRA_viva_la_revolution_nationale
+        ai_will_do = {
+		    factor = 50
+		}
+		cost = 5
+        completion_reward = {
+            add_ideas = low_economic_mobilisation
+		 	add_ideas = limited_conscription
+		}
+    }
+    focus = {
+        id = eternal_struggle
+        x = 0
+        y = 2
+        icon = GFX_goal_eternal_struggle
+        prerequisite = { focus = french_militarism }
+        relative_position_id = FRA_viva_la_revolution_nationale
+        ai_will_do = {
+		    factor = 50
+		}
+		cost = 5
+        completion_reward = {
+		 	swap_ideas = {
+		 		remove_idea = FRA_spirit_of_vengeance
+		 		add_idea = FRA_spirit_of_vengeance_2
+			}	
+		    country_event = fra.5
+		}
+    }
+    focus = {
+        id = clean_up_bureacracy
+        x = 2
+        y = 1
+        icon = GFX_goal_clean_up_bureacracy
+        prerequisite = { focus = FRA_viva_la_revolution_nationale }
+        relative_position_id = FRA_viva_la_revolution_nationale
+        ai_will_do = {
+		    factor = 50
+		}
+		cost = 5
+        completion_reward = {
+            swap_ideas = {
+                remove_ideas = cracks_in_party
+                add_ideas = party_clean_up
+            }
+			country_event = fra.6
+		}
+    }
+
+    focus = {
+        id = the_conference
+        x = 2
+        y = 2
+        icon = GFX_goal_the_conference
+        prerequisite = { focus = clean_up_bureacracy }
+        relative_position_id = FRA_viva_la_revolution_nationale
+        ai_will_do = {
+		    factor = 50
+		}
+		cost = 5
+        completion_reward = {
+			country_event = france.9
+			add_political_power = -50
+		}
+    }
+
+	focus = {
+        id = FRA_confront_the_party
+        x = 54
+        y = 13
         available = {
 			has_government = fascism
         }
         ai_will_do = {
 		    factor = 50
 		}
+		prerequisite = {
+			focus = grand_industrial_plan
+		}
+		prerequisite = {
+			focus = eternal_struggle
+		}
+		prerequisite = {
+			focus = the_conference
+		}
 		cost = 5
         completion_reward = {
-			add_political_power = 100
-			set_cosmetic_tag = FRA_etat
 		}
     }
 	focus = {
         id = FRA_patriots_in_control
         icon = GFX_goal_FRA_FRA_patriots_in_control
-        x = 0
+        x = 9
         y = 1
         available = {
             has_country_flag = darnand_wins
         }
-        prerequisite = { focus = FRA_viva_la_revolution_nationale }
-        relative_position_id = FRA_viva_la_revolution_nationale
+        prerequisite = { focus = FRA_confront_the_party }
+        relative_position_id = FRA_confront_the_party
         ai_will_do = {
 		    factor = 50
 		}
@@ -9600,19 +9753,18 @@
         completion_reward = {
             set_faction_name = BrotherhoodofEurope
             country_event = fra.destiny
-			set_cosmetic_tag = FRA_endsieg
 		}
     }
 
 	focus = {
         id = bucard_wins
         icon = "GFX_goal_bucard_wins"
-        x = 9
+        x = 0
         y = 1
         available = {
         }
-        prerequisite = { focus = FRA_viva_la_revolution_nationale }
-        relative_position_id = FRA_viva_la_revolution_nationale
+        prerequisite = { focus = FRA_confront_the_party }
+        relative_position_id = FRA_confront_the_party
         ai_will_do = {
 		    factor = 50
 		}
@@ -9881,8 +10033,8 @@
         id = rousing_speeches
         x = -19
         y = 1
-        prerequisite = { focus = FRA_viva_la_revolution_nationale }
-        relative_position_id = FRA_viva_la_revolution_nationale
+        prerequisite = { focus = FRA_confront_the_party }
+        relative_position_id = FRA_confront_the_party
         ai_will_do = {
 		    factor = 50
 		}
@@ -10114,8 +10266,8 @@
         available = {
             has_country_flag = deat_wins
         }
-        prerequisite = { focus = FRA_viva_la_revolution_nationale }
-        relative_position_id = FRA_viva_la_revolution_nationale
+        prerequisite = { focus = FRA_confront_the_party }
+        relative_position_id = FRA_confront_the_party
         ai_will_do = {
 		    factor = 50
 		}
@@ -10434,6 +10586,23 @@
             }
             custom_effect_tooltip = "This will combine multiple spirits into one."
             set_cosmetic_tag = FRA_NeoSocEuropa
+		}
+    }
+
+	focus = {
+        id = FRA_towards_european_hegemony
+        icon = GFX_goal_FRA_FRA_patriots_in_control
+        x = 16
+        y = 1
+        available = {
+        }
+        prerequisite = { focus = FRA_confront_the_party }
+        relative_position_id = FRA_confront_the_party
+        ai_will_do = {
+		    factor = 50
+		}
+		cost = 5
+        completion_reward = {
 		}
     }
 }
