@@ -4000,7 +4000,7 @@
 				is_in_faction_with = ROOT
 				custom_trigger_tooltip = {
 					tooltip = FRA_invest_in_our_weaker_allies_trigger_tt
-					check_variable = { num_of_military_factories < etat.num_of_military_factories }
+					check_variable = { num_of_military_factories < FRA.num_of_military_factories }
 				}
 			}
 		}
@@ -4018,7 +4018,7 @@
 				limit = {
 					is_in_faction_with = ROOT
 					NOT = { is_subject_of = ROOT }
-					check_variable = { num_of_military_factories < etat.num_of_military_factories }
+					check_variable = { num_of_military_factories < FRA.num_of_military_factories }
 				}
 				random_owned_state = {
 					limit = {
@@ -7259,6 +7259,7 @@
 
 		available = {
 			is_subject = no
+			NOT = { has_government = fascism }
 		}
 		
 		bypass = {
@@ -9461,10 +9462,7 @@
 		}
 		cost = 5
         completion_reward = {
-            swap_ideas = {
-                remove_ideas = cracks_in_party
-                add_ideas = party_clean_up
-            }
+            add_political_power = 50
 			country_event = etat.6
 		}
     }
@@ -9727,7 +9725,7 @@
 		cost = 5
         completion_reward = {
             country_event = etat.12
-            add_politial_power = -100
+            add_political_power = -100
 		}
     }
     focus = {
@@ -9744,7 +9742,7 @@
 		cost = 5
         completion_reward = {
             country_event = etat.13
-            add_politial_power = 50
+            add_political_power = 50
             add_manpower = -5000
             ad_stability = -0.05
 		}
@@ -9827,7 +9825,7 @@
 		}
 		cost = 8
         completion_reward = {
-			country_event = etat.francewar
+			country_event = etat.18
             add_manpower = -3000
 		}
     }
@@ -9987,10 +9985,10 @@
 		cost = 8
         completion_reward = {
             swap_ideas = {
-                remove_ideas = everything_for_country
-                add_ideas = etat_de_force
+                remove_idea = everything_for_country
+                add_idea = etat_de_force
             }
-            country_event = etat.force
+            country_event = etat.16
 		}
     }
     focus = {
@@ -10020,7 +10018,7 @@
 		}
 		cost = 8
         completion_reward = {
-            country_event = etat.tribe
+            country_event = etat.17
 		}
     }
     focus = {
@@ -10173,10 +10171,6 @@
 		cost = 5
         completion_reward = {
         	add_political_power = 50
-        	swap_ideas = {
-        		remove_ideas = french_cultural_movement
-        		add_ideas = french_cultural_expansion
-        	}
 		}
     }
     focus = {
@@ -10260,8 +10254,8 @@
 		cost = 5
         completion_reward = {
         	swap_ideas = {
-        		remove_idea = french_cultural_expansion
-        		add_ideas = french_popular_culture
+        		remove_idea = french_cultural_movement
+        		add_idea = french_popular_culture
         	}
 		}
     }
@@ -10300,7 +10294,7 @@
 		cost = 5
         completion_reward = {
 		add_stability = 0.25
-		add_politial_power = 100
+		add_political_power = 100
 		}
     }
     focus = {
@@ -10669,7 +10663,7 @@
 		cost = 5
         completion_reward = {
             add_to_faction = ITA
-            add_politial_power = 50
+            add_political_power = 50
             ITA = {
                 add_opinion_modifier = { target = FRA modifier = small_increase }
              }
@@ -10894,7 +10888,7 @@ focus = {
         factor = 80
     }
     available = {
-        64 = { controlled_by_ROOT_or_ally = GER }
+        64 = { is_controlled_by_ROOT_or_ally  = yes }
     }
     cost = 3
     completion_reward = {
@@ -10918,7 +10912,7 @@ focus = {
         factor = 80
     }
     available = {
-      	64 = { controlled_by_ROOT_or_ally = GER }
+      	64 = { is_controlled_by_ROOT_or_ally  = yes }
     }
     cost = 3
     completion_reward = {
