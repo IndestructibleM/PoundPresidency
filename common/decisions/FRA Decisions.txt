@@ -165,6 +165,9 @@ FRA_balance_of_power_category = {
 		is_good = no
 		complete_effect = {
 			remove_ideas = FRA_party_divide
+			remove_power_balance = {
+				id = FRA_power_balance
+			}
 		}
 		timeout_effect = {
 			add_stability = -0.25
