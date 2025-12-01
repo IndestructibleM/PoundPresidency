@@ -5,7 +5,7 @@
 		factor = 0
 		
 		modifier = {
-			add = 20
+			add = 30
 			tag = FRA
 		}
 	}
@@ -9520,10 +9520,10 @@
         y = 1
         available = {
             has_government = fascism
-			has_country_leader = {
-				character = FRA_joseph_darnand
-				ruling_only = yes
-			}
+			#has_country_leader = {
+			#	character = FRA_joseph_darnand
+			#	ruling_only = yes
+			#}
         }
         prerequisite = { focus = FRA_duel_of_fates }
         relative_position_id = FRA_duel_of_fates
@@ -9532,7 +9532,7 @@
 		}
 		cost = 5
         completion_reward = {
-            add_stability = 0.1
+            add_stability = 0.25
 			add_political_power = 100
 			country_event = etat.11
 		}
@@ -9608,6 +9608,7 @@
                 add_idea = FRA_revolution_nationale_2
             }
             add_manpower = -2000
+			add_war_support = 0.1
 		}
     }
     focus = {
@@ -9624,7 +9625,7 @@
         completion_reward = {
             add_war_support = 0.05
             add_stability = 0.05
-            add_ideas = limited_exports
+            add_ideas = autarkic_economy
 		}
     }
     focus = {
@@ -9792,7 +9793,7 @@
 		}
 		cost = 8
         completion_reward = {
-			add_stability = 0.1
+			add_stability = 0.25
 			add_political_power = 100
 		}
     }
@@ -10058,6 +10059,7 @@
 		cost = 5
         completion_reward = {
 			add_political_power = 50
+			add_war_support = 0.1
 			country_event = etat.8
 		}
     }
@@ -10297,7 +10299,7 @@
 		}
 		cost = 5
         completion_reward = {
-		add_stability = 0.1
+		add_stability = 0.25
 		add_politial_power = 100
 		}
     }
@@ -10332,6 +10334,7 @@
                 remove_idea = FRA_techno_maximalism
                 add_idea = FRA_techno_maximalism_2
             }
+			add_ideas = totalitarianism
 		}
     }
     focus = {

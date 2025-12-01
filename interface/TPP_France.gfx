@@ -455,4 +455,110 @@ spriteType = {
     texturefile = "gfx/interface/goals/eternal_struggle.png"
 }
 
+
+spriteType = {
+    name = "GFX_idea_abs_monarchy"
+    texturefile = "gfx/interface/ideas/laws/abs_monarchy.dds"
+}
+
+spriteType = {
+    name = "GFX_idea_con_monarchy"
+    texturefile = "gfx/interface/ideas/laws/con_monarchy.png"
+}
+
+spriteType = {
+    name = "GFX_idea_corporatism"
+    texturefile = "gfx/interface/ideas/laws/corporatism.png"
+}
+
+spriteType = {
+    name = "GFX_idea_decentralized_planning"
+    texturefile = "gfx/interface/ideas/laws/decentralized_planning.png"
+}
+
+spriteType = {
+    name = "GFX_idea_laissez_faire"
+    texturefile = "gfx/interface/ideas/laws/laizzes_faire.png"
+}
+
+spriteType = {
+    name = "GFX_idea_liberal_republic"
+    texturefile = "gfx/interface/ideas/laws/liberal_republic.dds"
+}
+
+spriteType = {
+    name = "GFX_idea_oligarchy"
+    texturefile = "gfx/interface/ideas/laws/oligarchy.dds"
+}
+
+spriteType = {
+    name = "GFX_idea_colonial_gov"
+    texturefile = "gfx/interface/ideas/laws/colonial_gov.dds"
+}
+
+spriteType = {
+    name = "GFX_idea_partystate"
+    texturefile = "gfx/interface/ideas/laws/partystate.dds"
+}
+
+spriteType = {
+    name = "GFX_idea_soviet_democracy"
+    texturefile = "gfx/interface/ideas/laws/soviet_democracy.dds"
+}
+
+spriteType = {
+    name = "GFX_idea_state_capitalism"
+    texturefile = "gfx/interface/ideas/laws/state_capitalism.png"
+}
+
+spriteType = {
+    name = "GFX_idea_stratocracy"
+    texturefile = "gfx/interface/ideas/laws/stratocracy.dds"
+}
+
+spriteType = {
+    name = "GFX_idea_traditional_economy"
+    texturefile = "gfx/interface/ideas/laws/traditional_economy.png"
+}
+
+spriteType = {
+    name = "GFX_idea_warlordism"
+    texturefile = "gfx/interface/ideas/laws/warlordism.dds"
+}
+
+spriteType = {
+    name = "GFX_idea_totalitarianism"
+    texturefile = "gfx/interface/ideas/laws/totalitarianism.dds"
+}
+
+spriteType = {
+    name = "GFX_idea_draft1"
+    texturefile = "gfx/interface/ideas/laws/draft1.dds"
+}
+
+spriteType = {
+    name = "GFX_idea_draft2"
+    texturefile = "gfx/interface/ideas/laws/draft2.png"
+}
+
+spriteType = {
+    name = "GFX_idea_draft3"
+    texturefile = "gfx/interface/ideas/laws/draft3.dds"
+}
+
+spriteType = {
+    name = "GFX_idea_draft4"
+    texturefile = "gfx/interface/ideas/laws/draft4.png"
+}
+
+spriteType = {
+    name = "GFX_idea_draft5"
+    texturefile = "gfx/interface/ideas/laws/draft5.dds"
+}
+
+spriteType = {
+    name = "GFX_idea_draft6"
+    texturefile = "gfx/interface/ideas/laws/draft6.dds"
+}
+
 }

@@ -1464,6 +1464,7 @@ ideas = {
 			level = 1
 			cost = 100
 			cancel_if_invalid = no
+			default = yes
 			allowed_to_remove = {
 				NOT = { has_idea = undisturbed_isolation }
 			}
@@ -1486,7 +1487,6 @@ ideas = {
 				conscription_factor = 0.05
 				weekly_manpower = 75
 			}
-			default = yes
 			available = { 
 				has_war_support > 0.2
 				NOT = { has_idea = undisturbed_isolation }

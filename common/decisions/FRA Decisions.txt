@@ -156,6 +156,9 @@ FRA_balance_of_power_category = {
 		allowed = { tag = FRA }
 		days_mission_timeout = 365
 		fire_only_once = yes
+		activation = {
+			has_completed_focus = FRA_viva_la_revolution_nationale
+		}
 		ai_will_do = {
         	factor = 100
     	}
