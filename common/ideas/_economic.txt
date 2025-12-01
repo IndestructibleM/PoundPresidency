@@ -1790,6 +1790,14 @@ ideas = {
 				drift_defence_factor = -0.10
 				stability_factor = 0.05
 			}
+			available = {
+				OR = {
+				has_country_leader_ideology = despotism
+				has_country_leader_ideology = oligarchism
+				has_country_leader_ideology = moderatism
+				has_country_leader_ideology = centrism
+				}
+			}
 		}	
 		
 		stratocracy = {
@@ -1800,8 +1808,15 @@ ideas = {
 			stability_factor = -0.08
 			war_support_factor = 0.1
 			war_stability_factor = 0.1
-			justify_war_goal_time = -0.
+			justify_war_goal_time = -0.25
 			communism_acceptance = -25
+			available = {
+				OR = {
+				has_country_leader_ideology = despotism
+				has_country_leader_ideology = oligarchism
+				has_country_leader_ideology = japan_militarism_ideology
+				}
+			}
 			}
 		}
 		
@@ -1813,6 +1828,9 @@ ideas = {
 			stability_factor = -0.1
 			war_support_factor = 0.15
 			justify_war_goal_time = -0.15
+			available = {
+				has_country_leader_ideology = despotism
+			}
 			}
 		}
 		
@@ -1825,6 +1843,13 @@ ideas = {
 				stability_factor = -0.1
 				drift_defence_factor = -0.15
 				communism_acceptance = -25
+			}
+			available = {
+				OR = {
+				has_country_leader_ideology = despotism
+				has_country_leader_ideology = oligarchism
+				has_country_leader_ideology = japan_militarism_ideology
+				}
 			}
 		}	
 		
@@ -1839,6 +1864,13 @@ ideas = {
 			war_stability_factor = 0.05
 			communism_acceptance = -25
 			}
+			available = {
+				OR = {
+				has_country_leader_ideology = despotism
+				has_country_leader_ideology = japan_militarism_ideology
+				has_country_leader_ideology = emperor_fascism
+				}
+			}
 		}	
 		
 		con_monarchy = {
@@ -1850,6 +1882,9 @@ ideas = {
 			war_support_factor = 0.05
 			war_stability_factor = 0.1
 			democratic_acceptance = 15
+			}
+			available = {
+				always = no # Is assigned
 			}
 		}	
 		
@@ -1864,6 +1899,15 @@ ideas = {
 			justify_war_goal_time = 0.15
 			democratic_acceptance = 25
 			}
+			available = {
+				OR = {
+				has_country_leader_ideology = liberalism
+				has_country_leader_ideology = conservatism
+				has_country_leader_ideology = socialism
+				has_country_leader_ideology = populism
+				has_country_leader_ideology = centrism
+				}
+			}
 		}	
 		
 		soviet_democracy = {
@@ -1875,6 +1919,15 @@ ideas = {
 			war_stability_factor = 0.1
 			production_factory_efficiency_gain_factor = -0.05
 			communism_acceptance = 25
+			}
+			available = {
+				OR = {
+				has_country_leader_ideology = socialism
+				has_country_leader_ideology = leninism
+				has_country_leader_ideology = marxism
+				has_country_leader_ideology = anarchism
+				has_country_leader_ideology = anarchist_communism
+				}
 			}
 		}
 		
@@ -1889,6 +1942,13 @@ ideas = {
 			defensive_war_stability_factor = 0.15
 			justify_war_goal_time = -0.25
 			}
+			available = {
+				OR  = {
+				has_government = communism 
+				has_country_leader_ideology = fascism_ideology
+				has_country_leader_ideology = gen_nazism
+				}
+			}
 		}
 		
 		totalitarianism = {
@@ -1902,8 +1962,13 @@ ideas = {
 			drift_defence_factor = 0.2
 			justify_war_goal_time = -0.25
 			}
+			available = {
+				OR  = {
+				has_government = fascism 
+				has_country_leader_ideology = anti_revisionism
+				has_country_leader_ideology = stalinism
+				}
+			}
 		}
-		
-
 	}
 }
