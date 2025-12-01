@@ -1,0 +1,10 @@
+﻿l_english:
+ PRODUCTION_MATERIALS_GRAIN:0 "Grain"
+ grain_desc:0 "Grain is the harvested seeds of cereal crops like wheat, rice, corn, barley, and oats, which are staple foods for much of the world's population. It is used primarily for human consumption, animal feed, and as a raw material in products like rations."
+ ##grain_desc:0 "In the new update, it matters not if you actually have grain specifically, it only matters if you have a 7th resource. I replaced the energy-giving resource in defines with "grain" and swapped out grain for grain, essentially making grain the resource used instead of grain."
+ farm: "Farm"
+ farm_desc: "A farm is a tract of cultivated land where fields of wheat, barley, oats, or corn are systematically planted, tended, and harvested using both traditional and mechanized methods. It typically includes storage silos, barns, and equipment sheds that support the efficient processing and preservation of the harvested grain."
+ 
+rations_eq: "Rations"
+rations_eq_desc: "Rations are what is used by the military to feed and supply troops with sustenance. Rations are produced using simple foods to minimize cost and maximize nourishment."
+rations_eq_short: "Military Rations"

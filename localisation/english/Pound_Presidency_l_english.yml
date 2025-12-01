@@ -255,18 +255,41 @@
  RBR_ADJ: "Briton"
  
  
+ 
+ ##############
  ### FRANCE ###
+ #############
+ 
  FRA_etat: "French Popular State"
  FRA_etat_DEF: "the French Popular State"
  FRA_etat_ADJ: "French"
  
+ FRA_NeoSocEuropa: "European Social Republic"
+ FRA_NeoSocEuropa_DEF: "the European Social Republic"
+ FRA_NeoSocEuropa_ADJ: "European"
+ 
+ 
+ 
+ plenty_for_people:0 "Plenty for the People"
 
+ grand_industrial_plan:0 "A Grand Industrial Plan"
+
+ french_militarism:0 "Ignite our Fire"
+
+ eternal_struggle:0 "The Eternal Struggle"
+
+ clean_up_bureacracy:0 "Bureaucratic Clean-up"
+
+ the_conference:0 "The Conference"
+
+ FRA_duel_of_fates:0 "Duel of the Fates"
+ 
  FRA_patriots_in_control: "Patriots in Control!"
  FRA_viva_la_revolution_nationale: "Viva La Revolution Nationale!"
  centralize_the_party: "Unification of the Fascist Movement"
  transform_corporate_structure: "Transform to a Corporate Structure"
  way_of_warrior: "Way of the Warrior"
- national_carthasis: "National Cartharsis"
+ national_carthasis: "Wrath of Joseph the Carpenter"
  FRA_agrarian_auturky: "Agrarian Autarky"
  united_in_spirit: "United in Spirit and Purpose"
  FRA_national_labor_front: "All-National Labor Front"
@@ -277,3 +300,94 @@
  deal_with_the_church: "A Deal With the Church"
  destiny_of_french_nation: "Destiny of the French Nation"
  
+ rousing_speeches: "Rousing Speaches"
+FRA_une_peuple_une_nation_une_chef: "Une People, Une Nation, Une Chef"
+finely_dressed: ""But You Will Be Finely Dressed""
+FRA_vitalization_of_french_culture: "The Vitalization of French Culture"
+birth_programs: "Births for the French Nation"
+state_athleticism: "State Athleticism"
+FRA_the_autoroutes: "The Autoroutes"
+algeria_colonization: "Final Colonization of Algeria"
+FRA_juenesses_patriotes: "Juenesses Patriotes"
+begin_projects: "Begin our Great Projects"
+
+
+FRA_towards_european_hegemony: "Towards European Hegemony"
+FRA_demand_ger_war_debts: "Demand German War Debts"
+bucard_wins: "Truimph of the Chief"
+militarism_cure: "Embrace the Only Cure for the World"
+french_war_machine: "French War Machine"
+war_for_france: "War for France"
+fight_anti_france: "Destroy the Anti-France"
+FRA_national_syndicalism: "Organic Command Economy"
+FRA_build_higher_order: "A Higher Order"
+on_ruins_of_deciet: "On Ruins of Deceit"
+FRA_tradition_of_revolution: "Our Tradition of Revolution"
+FRA_reactionary_revolution: "Fuse Revolution and Reaction"
+maximalismic_society: "Totalistic Society"
+everything_for_country: "Everything for the Country"
+etat_de_force: "État de force"
+france_for_all: "France for All, All for France"
+ascendent_glory: "Ascendent National Collective"
+
+working_with_deat: "The Neo-Socialist Ascendency"
+technocratic_management: "Technocratic Management"
+ordre_autorite_nation: "Ordre, Autorité, Nation"
+a_dark_enlightenment: "The Anti-Enlightenment"
+entrench_party_state: "Entrench the Party-State"
+constructive_revolution: "Constructive Revolution"
+military_communism: "Military Communism"
+european_outreach: "European Outreach"
+white_brotherhood: "European Brotherhood"
+proletarian_nationalism: "Proletarian Nationalism"
+socialize_corporates: "Corporatism of Heroic Labor"
+industrial_qoutas: "Implement Industrial Qoutas"
+planisme: "Planisme"
+scientific_revolution: "Scientific Revolution"
+four_year_plan: "First Four Year Plan"
+master_of_the_continent: "Master of the Continent"
+
+remilitarize_lorraine: "Remilitarize Lorraine"
+the_rattach: "The Rattach"
+unite_with_romandy: "Unite with Romandy"
+FRA_beyond_natural_borders:0 "Beyond our Natural Borders"
+continental_system: "New Continental System"
+molotov_brassilach_pact: "The Molotov-Brassilach Pact"
+the_great_lance: "The Great Lance"
+FRA_secure_luxembourg: "Secure Luxembourg"
+latin_brotherhood: "Latin Brotherhood"
+fra_natural_borders: "Claim our Natural Borders"
+turkish_question: "Stance on Turkey"
+FRA_gauls_and_gaels: "Of Gauls and Gaels"
+fascist_internationale: "Found the Fascist Internationale"
+split_the_germanics: "Split the Germanics"
+make_them_bleed: "Make them Bleed"
+demand_alsace_lorraine: "Demand Alsace Lorraine"
+die_perfidious_albion: "Die, Perfidious Albion!"
+loot_our_conquests: "Loot our Conquests"
+FRA_operation_sapin: "Opération Sapin"
+FRA_Plan_R4: "Plan R 4"
+le_nouvel_ordre: "L'Ordre Nouveau"
+
+FRA_power_balance: "Duel of the Fates"
+FRA_bucard_range: "Francistes March Forwards"
+FRA_neosocialists_side: "Néo-Socialistes Ascendent"
+FRA_milice_side: "La Milice leads the Storm"
+
+
+
+
+economy_model: "Economic Model"
+government_type: "Government Type"
+draft: "Draft Law"
+
+oligarchy: "Oligarchy"
+stratocracy: "Stratocracy"
+warlordism: "Warlordism"
+colonial_gov: "Colonial Government"
+abs_monarchy: "Absolute Monarchy"
+con_monarchy: "Constitutional Monarchy"
+liberal_republic: "Liberal Republic"
+soviet_democracy: "Soviet Democracy"
+partystate: "Party-State"
+totalitarianism: "Totalitarianism"

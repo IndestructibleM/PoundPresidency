@@ -1,0 +1,538 @@
+fra_foriegn_policy = {
+	fra_invade_hol = {
+		name = "Striking the Lance"
+		fire_only_once = yes
+		allowed = { tag = FRA }
+		war_with_on_remove = HOL
+		days_remove = 60
+		targets = { HOL }
+		available = {
+			date > 1939.7.15
+			FRA = { 
+			has_war_with = GER
+			}
+		}
+		ai_will_do = {
+        	factor = 90
+    	}
+		targeted_modifier = {
+    	tag = HOL
+    	attack_bonus_against_cores = 1
+		defense_bonus_against = 0.5
+		breakthrough_bonus_against = 1
+		}
+		modifier = {
+			army_speed_factor = 0.10
+		}
+		complete_effect = {
+			create_wargoal = {
+            target = HOL
+            type = annex_everything
+			}
+		}
+	}
+	fra_geneva_award = {
+		name = "First Geneva Award"
+		fire_only_once = yes
+		allowed = { tag = FRA }
+		cost = 100
+		days_remove = 10
+		targets = { SWI }
+		ai_will_do = {
+        	factor = 100
+    	}
+		available = {
+			date > 1937.2.1
+			845 = { is_owned_by = FRA }
+		}
+
+		remove_effect = {
+			ITA = {
+				transfer_state = 846
+				add_state_core = 846
+			}
+		}
+	}		
+	fra_march_into_catalonia = {
+		name = "March into Catalonia"
+		fire_only_once = yes
+		allowed = { tag = FRA }
+		days_remove = 10
+		cost = 100
+		targets = { 165 }
+		state_target = yes
+		ai_will_do = {
+        	factor = 100
+    	}
+		available = {
+			SPR = { has_war_with = SPA }
+			has_completed_focus = latin_brotherhood
+		}
+
+		remove_effect = {
+			FROM = {
+				transfer_state_to = ROOT
+				add_core_of = ROOT
+			}
+		}
+	}		
+}
+FRA_unification_of_europe = {
+	FRA_integrate_west_germany = {
+		name = "Integrate Western Germany"
+		fire_only_once = yes
+		allowed = { tag = FRA  }
+		days_remove = 25
+		cost = 100
+		targets = { RHI }
+		modifier = {
+			political_power_cost = 0.20
+			consumer_goods_factor = 0.15
+		}
+		ai_will_do = {
+        	factor = 100
+    	}
+		available = {
+			NOT = { has_country_flag = integrating_territory }
+			has_completed_focus = master_of_the_continent
+		}
+		complete_effect = {
+			set_country_flag = integrating_territory
+		}
+		remove_effect = {
+			HAN = {
+			every_owned_state = {
+			add_core_of = FRA
+			transfer_state_to = FRA
+			}
+			}
+			RHI = {
+			every_owned_state = {
+			add_core_of = FRA
+			transfer_state_to = FRA
+				}
+			}
+			clr_country_flag = integrating_territory
+		}		
+	}
+	FRA_integrate_south_germany = {
+		name = "Integrate Southern Germany"
+		fire_only_once = yes
+		allowed = { tag = FRA  }
+		days_remove = 25
+		cost = 100
+		targets = { DNB }
+		modifier = {
+			political_power_cost = 0.20
+			consumer_goods_factor = 0.15
+		}
+		ai_will_do = {
+        	factor = 100
+    	}
+		available = {
+			NOT = { has_country_flag = integrating_territory }
+			has_completed_focus = master_of_the_continent
+		}
+		complete_effect = {
+			set_country_flag = integrating_territory
+		}
+		remove_effect = {
+			WUR = {
+			every_owned_state = {
+			add_core_of = FRA
+			transfer_state_to = FRA
+				}
+			}
+			DNB = {
+			every_owned_state = {
+			add_core_of = FRA
+			transfer_state_to = FRA
+				}
+			}
+			clr_country_flag = integrating_territory
+		}		
+	}
+	
+	FRA_integrate_east_germany = {
+		name = "Integrate Eastern Germany"
+		fire_only_once = yes
+		allowed = { tag = FRA  }
+		days_remove = 25
+		cost = 100
+		targets = { PRE }
+		modifier = {
+			political_power_cost = 0.20
+			consumer_goods_factor = 0.15
+		}
+		ai_will_do = {
+        	factor = 100
+    	}
+		available = {
+			NOT = { has_country_flag = integrating_territory }
+			has_completed_focus = master_of_the_continent
+		}
+		complete_effect = {
+			set_country_flag = integrating_territory
+		}
+		remove_effect = {
+			THU = {
+				every_owned_state = {
+				add_core_of = FRA
+				transfer_state_to = FRA
+				}
+			}
+			PRE = {
+			every_owned_state = {
+			add_core_of = FRA
+			transfer_state_to = FRA
+				}
+			}
+			clr_country_flag = integrating_territory
+		}		
+	}
+	
+	FRA_integrate_jutland = {
+		name = "Integrate the Jutland Protetorate"
+		fire_only_once = yes
+		allowed = { tag = FRA  }
+		days_remove = 25
+		cost = 100
+		targets = { SCH }
+		modifier = {
+			political_power_cost = 0.20
+			consumer_goods_factor = 0.15
+		}
+		ai_will_do = {
+        	factor = 100
+    	}
+		available = {
+			NOT = { has_country_flag = integrating_territory }
+			has_completed_focus = master_of_the_continent
+		}
+		complete_effect = {
+			set_country_flag = integrating_territory
+		}
+		remove_effect = {
+			SCH = {
+			every_owned_state = {
+			add_core_of = FRA
+			transfer_state_to = FRA
+			}
+			}
+			clr_country_flag = integrating_territory
+			}		
+		}
+	FRA_integrate_italian_greece = {
+		name = "Integrate Hellas"
+		fire_only_once = yes
+		allowed = { tag = FRA  }
+		days_remove = 25
+		cost = 100
+		targets = { GRE }
+		modifier = {
+			political_power_cost = 0.20
+			consumer_goods_factor = 0.15
+		}
+		ai_will_do = {
+        	factor = 100
+    	}
+		available = {
+			NOT = { has_country_flag = integrating_territory }
+			has_completed_focus = master_of_the_continent
+			GRE = {
+				is_subject_of = ITA
+			}
+		}
+		complete_effect = {
+			set_country_flag = integrating_territory
+		}
+		remove_effect = {
+			GRE = {
+			every_owned_state = {
+			add_core_of = FRA
+			transfer_state_to = FRA
+			}
+			}
+			clr_country_flag = integrating_territory
+		}		
+	}
+	FRA_integrate_england = {
+		name = "Integrate England"
+		fire_only_once = yes
+		allowed = { tag = FRA  }
+		days_remove = 25
+		cost = 100
+		targets = { GBP ENG }
+		modifier = {
+			political_power_cost = 0.20
+			consumer_goods_factor = 0.15
+		}
+		ai_will_do = {
+        	factor = 100
+    	}
+		available = {
+			NOT = { has_country_flag = integrating_territory }
+			has_completed_focus = master_of_the_continent
+		}
+		complete_effect = {
+			set_country_flag = integrating_territory
+		}
+		remove_effect = {
+			GBP = {
+			every_owned_state = {
+			add_core_of = FRA
+			transfer_state_to = FRA
+			}
+			}
+			clr_country_flag = integrating_territory
+		}		
+	}
+	FRA_integrate_gaelique = {
+		name = "Integrate the Gaelic Protetorate"
+		fire_only_once = yes
+		allowed = { tag = FRA  }
+		days_remove = 25
+		cost = 100
+		targets = { SCO }
+		modifier = {
+			political_power_cost = 0.20
+			consumer_goods_factor = 0.15
+		}
+		ai_will_do = {
+        	factor = 100
+    	}
+		available = {
+			NOT = { has_country_flag = integrating_territory }
+			has_completed_focus = master_of_the_continent
+		}
+		complete_effect = {
+			set_country_flag = integrating_territory
+		}
+		remove_effect = {
+			SCO = {
+				every_owned_state = {
+				add_core_of = FRA
+				transfer_state_to = FRA
+				}
+			}
+			clr_country_flag = integrating_territory
+		}		
+	}
+	FRA_integrate_swiss = {
+		name = "Integrate Helvetica"
+		fire_only_once = yes
+		allowed = { tag = FRA  }
+		days_remove = 25
+		cost = 100
+		targets = { SWI }
+		modifier = {
+			political_power_cost = 0.20
+			consumer_goods_factor = 0.15
+		}
+		ai_will_do = {
+        	factor = 100
+    	}
+		available = {
+			NOT = { has_country_flag = integrating_territory }
+			has_completed_focus = master_of_the_continent
+		}
+		complete_effect = {
+			set_country_flag = integrating_territory
+		}
+		remove_effect = {
+			SWI = {
+			every_owned_state = {
+			add_core_of = FRA
+			transfer_state_to = FRA
+			}
+			}
+			clr_country_flag = integrating_territory
+		}		
+	}
+	FRA_integrate_nordic = {
+		name = "Integrate the Nordic Protetorate"
+		fire_only_once = yes
+		allowed = { tag = FRA  }
+		days_remove = 25
+		cost = 100
+		targets = { ICE }
+		modifier = {
+			political_power_cost = 0.20
+			consumer_goods_factor = 0.15
+		}
+		ai_will_do = {
+        	factor = 100
+    	}
+		available = {
+			NOT = { has_country_flag = integrating_territory }
+			has_completed_focus = master_of_the_continent
+		}
+		complete_effect = {
+			set_country_flag = integrating_territory
+		}
+		remove_effect = {
+			ICE = {
+			every_owned_state = {
+			add_core_of = FRA
+			transfer_state_to = FRA
+			}
+			}
+			clr_country_flag = integrating_territory
+		}		
+	}
+	FRA_integrate_czechs = {
+		name = "Integrate Czechia"
+		fire_only_once = yes
+		allowed = { tag = FRA  }
+		days_remove = 25
+		cost = 100
+		targets = { CZE }
+		modifier = {
+			political_power_cost = 0.20
+			consumer_goods_factor = 0.15
+		}
+		ai_will_do = {
+        	factor = 100
+    	}
+		available = {
+			NOT = { has_country_flag = integrating_territory }
+			has_completed_focus = master_of_the_continent
+		}
+		complete_effect = {
+			set_country_flag = integrating_territory
+		}
+		remove_effect = {
+			CZE = {
+			every_owned_state = {
+			add_core_of = FRA
+			transfer_state_to = FRA
+			}
+			}
+			clr_country_flag = integrating_territory
+		}		
+	}
+	FRA_unification_with_italy = {
+		name = "Unification with Italy"
+		fire_only_once = yes
+		allowed = { tag = FRA  }
+		days_remove = 25
+		cost = 100
+		targets = { ITA }
+		modifier = {
+			political_power_cost = 0.20
+			consumer_goods_factor = 0.15
+		}
+		ai_will_do = {
+        	factor = 85
+    	}
+		available = {
+			NOT = { has_country_flag = integrating_territory }
+			has_completed_focus = master_of_the_continent
+			is_ally_with = ITA
+		}
+		complete_effect = {
+			set_country_flag = integrating_territory
+		}
+		remove_effect = {
+			annex_country = {
+				target = ITA
+				transfer_troops = yes
+			}
+			ITA = {
+			every_core_state = {
+			add_core_of = FRA
+			}
+			}
+			clr_country_flag = integrating_territory
+		}		
+	}
+	FRA_unification_with_iberia = {
+		name = "Unification with Iberia"
+		fire_only_once = yes
+		allowed = { tag = FRA }
+		days_remove = 25
+		cost = 100
+		targets = { SPA }
+		modifier = {
+			political_power_cost = 0.20
+			consumer_goods_factor = 0.15
+		}
+		ai_will_do = {
+        	factor = 85
+    	}
+		available = {
+			NOT = { has_country_flag = integrating_territory }
+			has_completed_focus = master_of_the_continent
+		}
+		complete_effect = {
+			set_country_flag = integrating_territory
+		}
+		remove_effect = {
+			annex_country = {
+				target = SPA
+				transfer_troops = no
+			}
+			SPA = {
+				every_core_state = {
+				add_core_of = FRA
+				}
+			}
+		clr_country_flag = integrating_territory
+		}		
+	}
+}
+
+
+FRA_balance_of_power_category = {
+	FRA_rally_the_milice = {
+		allowed = { tag = FRA }
+		cost = 50
+		days_remove = 20
+		ai_will_do = {
+        	factor = 100
+    	}
+
+		remove_effect = {
+			add_power_balance_value = {
+   				id = FRA_power_balance
+    			value = 0.1
+    			tooltip_side = FRA_milice_side
+			}
+		}
+	}
+	FRA_work_with_neosocialists = {
+		allowed = { tag = FRA }
+		cost = 50
+		days_remove = 20
+		ai_will_do = {
+        	factor = 100
+    	}
+
+		remove_effect = {
+			add_power_balance_value = {
+   				id = FRA_power_balance
+    			value = -0.1
+    			tooltip_side = FRA_neosocialists_side
+			}
+		}
+	}
+	
+	FRA_resolve_the_party_crisis = {
+		allowed = { tag = FRA }
+		days_mission_timeout = 365
+		fire_only_once = yes
+		ai_will_do = {
+        	factor = 100
+    	}
+		available = {
+			has_completed_focus = FRA_duel_of_fates
+		}
+		is_good = no
+		timeout_effect = {
+			add_stability = -0.25
+			add_war_support = -0.25
+			add_political_power = -150
+		}
+	}
+
+}

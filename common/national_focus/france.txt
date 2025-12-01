@@ -5,7 +5,7 @@
 		factor = 0
 		
 		modifier = {
-			add = 10
+			add = 20
 			tag = FRA
 		}
 	}
@@ -4000,7 +4000,7 @@
 				is_in_faction_with = ROOT
 				custom_trigger_tooltip = {
 					tooltip = FRA_invest_in_our_weaker_allies_trigger_tt
-					check_variable = { num_of_military_factories < FRA.num_of_military_factories }
+					check_variable = { num_of_military_factories < etat.num_of_military_factories }
 				}
 			}
 		}
@@ -4018,7 +4018,7 @@
 				limit = {
 					is_in_faction_with = ROOT
 					NOT = { is_subject_of = ROOT }
-					check_variable = { num_of_military_factories < FRA.num_of_military_factories }
+					check_variable = { num_of_military_factories < etat.num_of_military_factories }
 				}
 				random_owned_state = {
 					limit = {
@@ -5354,6 +5354,7 @@
 				add_to_temp_variable = { FRA_rw_support = party_popularity@fascism }
 				check_variable = { FRA_rw_support > 0.5 }
 			}
+			is_ai = yes
 		}
 		
 		bypass = {
@@ -9326,20 +9327,27 @@
         id = FRA_viva_la_revolution_nationale
         x = 54
         y = 10
-        icon = GFX_goal_confront_the_party
+        icon = GFX_FRA_national_jacobin
         ai_will_do = {
 		    factor = 50
 		}
 		available = {
-			has_government = fascism
+			fascism > 0.3
+			democratic < 0.3
+			communism < 0.3
+			is_ai = no
         }
 		cost = 5
         completion_reward = {
-			add_political_power = 100
+			set_politics = {
+				ruling_party = fascism
+				elections_allowed = no
+			}
 			set_cosmetic_tag = FRA_etat
 			set_power_balance = {
 				id = FRA_power_balance
 			}
+			add_ideas = FRA_party_divide
         }
     }
     focus = {
@@ -9394,6 +9402,14 @@
 					instant_build = yes
 				}
 			}
+			random_core_state = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
         }
     }
     focus = {
@@ -9408,8 +9424,8 @@
 		}
 		cost = 5
         completion_reward = {
-            add_ideas = low_economic_mobilisation
-		 	add_ideas = limited_conscription
+            upgrade_economy_law = yes 
+			add_ideas = FRA_reborn_militarism
 		}
     }
     focus = {
@@ -9425,10 +9441,10 @@
 		cost = 5
         completion_reward = {
 		 	swap_ideas = {
-		 		remove_idea = FRA_spirit_of_vengeance
+		 		remove_idea = FRA_reborn_militarism
 		 		add_idea = FRA_spirit_of_vengeance_2
 			}	
-		    country_event = fra.5
+		    country_event = etat.5
 		}
     }
     focus = {
@@ -9447,7 +9463,7 @@
                 remove_ideas = cracks_in_party
                 add_ideas = party_clean_up
             }
-			country_event = fra.6
+			country_event = etat.6
 		}
     }
 
@@ -9455,7 +9471,7 @@
         id = the_conference
         x = 2
         y = 2
-        icon = GFX_goal_the_conference
+        icon = GFX_the_conference
         prerequisite = { focus = clean_up_bureacracy }
         relative_position_id = FRA_viva_la_revolution_nationale
         ai_will_do = {
@@ -9464,12 +9480,13 @@
 		cost = 5
         completion_reward = {
 			country_event = france.9
-			add_political_power = -50
+			army_experience = 50
 		}
     }
 
 	focus = {
-        id = FRA_confront_the_party
+        id = FRA_duel_of_fates
+		icon = GFX_duel_of_fates
         x = 54
         y = 13
         available = {
@@ -9489,26 +9506,33 @@
 		}
 		cost = 5
         completion_reward = {
+			add_political_power = 50
+			country_event = etat.10
+			remove_ideas = FRA_disjointed_government
 		}
     }
 	focus = {
         id = FRA_patriots_in_control
-        icon = GFX_goal_FRA_FRA_patriots_in_control
+        icon = GFX_FRA_enough_dissent
         x = 9
         y = 1
         available = {
-            has_country_flag = darnand_wins
+            has_government = fascism
+			has_country_leader = {
+				character = FRA_joseph_darnand
+				ruling_only = yes
+			}
         }
-        prerequisite = { focus = FRA_confront_the_party }
-        relative_position_id = FRA_confront_the_party
+        prerequisite = { focus = FRA_duel_of_fates }
+        relative_position_id = FRA_duel_of_fates
         ai_will_do = {
 		    factor = 50
 		}
 		cost = 5
         completion_reward = {
-            add_stability = 0.20
+            add_stability = 0.1
 			add_political_power = 100
-			country_event = fra.10
+			country_event = etat.10
 		}
     }
     focus = {
@@ -9524,7 +9548,7 @@
 		cost = 5
         completion_reward = {
 			add_political_power = 100
-			country_event = fra.10
+			country_event = etat.10
             custom_effect_tooltip = vitalisttakeover
             hidden_effect = {
                 add_popularity = { ideology = vitalism popularity = 1 }
@@ -9545,7 +9569,7 @@
 		cost = 5
         completion_reward = {
             add_ideas = FRA_national_socialism
-			add_ideas = national_socialism_law
+			add_ideas = corporatism
 		}
     }
     focus = {
@@ -9566,7 +9590,7 @@
     }
     focus = {
         id = national_carthasis
-        icon = GFX_goal_FRA_national_catharsis
+        icon = GFX_FRA_national_catharsis
         x = 0
         y = 2
         prerequisite = { focus = transform_corporate_structure }
@@ -9586,7 +9610,7 @@
     }
     focus = {
         id = FRA_agrarian_auturky
-        icon = GFX_goal_FRA_achieve_agrarian_auturky
+        icon = GFX_FRA_achieve_agrarian_auturky
         x = -2
         y = 2
         prerequisite = { focus = centralize_the_party }
@@ -9633,7 +9657,7 @@
     }
     focus = {
         id = loyalty_to_fff
-        icon = GFX_goal_FRA_order_in_blood
+        icon = GFX_FRA_order_in_blood
         x = 3
         y = 3
         prerequisite = { focus = way_of_warrior }
@@ -9688,7 +9712,7 @@
     }
     focus = {
         id = deal_with_the_church
-        icon = GFX_goal_FRA_deal_with_church
+        icon = GFX_FRA_deal_with_church
         x = 1
         y = 4
         prerequisite = { focus = oaths_of_loyalty }
@@ -9699,7 +9723,7 @@
 		}
 		cost = 5
         completion_reward = {
-            country_event = fra.church
+            country_event = etat.church
             add_politial_power = -100
 		}
     }
@@ -9716,7 +9740,7 @@
 		}
 		cost = 5
         completion_reward = {
-            country_event = fra.culture
+            country_event = etat.culture
             add_politial_power = 50
             add_manpower = -5000
             ad_stability = -0.05
@@ -9728,18 +9752,8 @@
         x = 0
         y = 5
         available = {
-			OR = {
-				FRA = { owns_state = 126 }
-				any_subject_country = {
-					owns_state = 126
-				}
-			}
-			OR = {
-				FRA = { owns_state = 1114 }
-				any_subject_country = {
-					owns_state = 1114
-				}
-			}
+			64 = { owns_or_subject_of = yes }
+       		126 = { owns_or_subject_of = yes }
         }
         prerequisite = { focus = france_for_french }
         prerequisite = { focus = FRA_national_labor_front }
@@ -9752,7 +9766,7 @@
 		cost = 5
         completion_reward = {
             set_faction_name = BrotherhoodofEurope
-            country_event = fra.destiny
+            country_event = etat.destiny
 		}
     }
 
@@ -9762,16 +9776,21 @@
         x = 0
         y = 1
         available = {
+			has_government = fascism
+			has_country_leader = {
+				character = FRA_marcel_deat
+				ruling_only = yes
+			}
         }
-        prerequisite = { focus = FRA_confront_the_party }
-        relative_position_id = FRA_confront_the_party
+        prerequisite = { focus = FRA_duel_of_fates }
+        relative_position_id = FRA_duel_of_fates
         ai_will_do = {
 		    factor = 50
 		}
 		cost = 8
         completion_reward = {
+			add_stability = 0.1
 			add_political_power = 100
-			country_event = fra.bucard
 		}
     }
     focus = {
@@ -9804,7 +9823,7 @@
 		}
 		cost = 8
         completion_reward = {
-			country_event = fra.francewar
+			country_event = etat.francewar
             add_manpower = -3000
 		}
     }
@@ -9820,7 +9839,6 @@
 		}
 		cost = 8
         completion_reward = {
-			add_ideas = total_state
 		}
     }
     focus = {
@@ -9853,7 +9871,6 @@
 		}
 		cost = 8
         completion_reward = {
-			add_ideas = fight_for_france
 		}
     }
     focus = {
@@ -9876,7 +9893,7 @@
     }
     focus = {
         id = FRA_national_syndicalism
-        icon = "GFX_goal_on_ruins_of_deciet" 
+        icon = GFX_FRA_industrial_push_command
         x = -3
         y = 3
         prerequisite = { focus = french_war_machine }
@@ -9886,10 +9903,7 @@
 		}
 		cost = 8
         completion_reward = {
-			swap_ideas = {
-                remove_ideas = french_war_machine
-                add_ideas = french_war_machine_2
-            }
+			add_ideas = corporatism
 		}
     }
     focus = {
@@ -9911,7 +9925,7 @@
     }
     focus = {
         id = FRA_build_higher_order
-        icon = "GFX_goal_work_their_blood"
+        icon = GFX_dream_of_death
         x = -1
         y = 3
         prerequisite = { focus = fight_anti_france }
@@ -9972,7 +9986,7 @@
                 remove_ideas = everything_for_country
                 add_ideas = etat_de_force
             }
-            country_event = fra.force
+            country_event = etat.force
 		}
     }
     focus = {
@@ -9987,7 +10001,6 @@
 		}
 		cost = 8
         completion_reward = {
-            add_ideas = french_futurism
 		}
     }
     focus = {
@@ -10003,7 +10016,7 @@
 		}
 		cost = 8
         completion_reward = {
-            country_event = fra.tribe
+            country_event = etat.tribe
 		}
     }
     focus = {
@@ -10033,21 +10046,23 @@
         id = rousing_speeches
         x = -19
         y = 1
-        prerequisite = { focus = FRA_confront_the_party }
-        relative_position_id = FRA_confront_the_party
+		icon = GFX_FRA_Endless_Devotion_Patrie_Imperiale
+        prerequisite = { focus = FRA_duel_of_fates }
+        relative_position_id = FRA_duel_of_fates
         ai_will_do = {
 		    factor = 50
 		}
 		cost = 5
         completion_reward = {
 			add_political_power = 50
-			country_event = fra.8
+			country_event = etat.8
 		}
     }
     focus = {
         id = FRA_vitalization_of_french_culture
         x = -2
         y = 1
+		icon = GFX_FRA_aesthetic_community
         prerequisite = { focus = rousing_speeches }
         relative_position_id = rousing_speeches
         ai_will_do = {
@@ -10163,6 +10178,7 @@
         id = algeria_colonization
         x = 0
         y = 3
+		icon = GFX_focus_fra_french_union
         prerequisite = { focus = finely_dressed }
         relative_position_id = rousing_speeches
         ai_will_do = {
@@ -10229,6 +10245,7 @@
         id = popularize_france
         x = -1
         y = 4
+		
         prerequisite = { focus = like_caeser_like_bonaparte }
         prerequisite = { focus = algeria_colonization }
         relative_position_id = rousing_speeches
@@ -10264,16 +10281,20 @@
         x = -10
         y = 1
         available = {
-            has_country_flag = deat_wins
+            has_government = fascism
+			has_country_leader = {
+				character = FRA_marcel_deat
+				ruling_only = yes
+			}
         }
-        prerequisite = { focus = FRA_confront_the_party }
-        relative_position_id = FRA_confront_the_party
+        prerequisite = { focus = FRA_duel_of_fates }
+        relative_position_id = FRA_duel_of_fates
         ai_will_do = {
 		    factor = 50
 		}
 		cost = 5
         completion_reward = {
-		add_stability = 0.20
+		add_stability = 0.1
 		add_politial_power = 100
 		}
     }
@@ -10389,7 +10410,6 @@
 		cost = 5
         completion_reward = {
             add_ideas = FRA_european_brotherhood
-            add_ideas = diplo_internationalism
 		}
     }
     focus = {
@@ -10423,7 +10443,7 @@
             remove_idea = FRA_proletarian_corporatism
             add_idea = FRA_proletarian_corporatism_2
             }
-			add_ideas = state_socialism
+			add_ideas = central_planning
 		}
     }
     focus = {
@@ -10523,7 +10543,7 @@
 		}
 		cost = 5
         completion_reward = {
-            country_event = fra.9
+            country_event = etat.9
             add_ideas = FRA_proletarian_nationalism
 		}
     }
@@ -10592,12 +10612,12 @@
 	focus = {
         id = FRA_towards_european_hegemony
         icon = GFX_goal_FRA_FRA_patriots_in_control
-        x = 16
+        x = 18
         y = 1
         available = {
         }
-        prerequisite = { focus = FRA_confront_the_party }
-        relative_position_id = FRA_confront_the_party
+        prerequisite = { focus = FRA_duel_of_fates }
+        relative_position_id = FRA_duel_of_fates
         ai_will_do = {
 		    factor = 50
 		}
@@ -10605,4 +10625,347 @@
         completion_reward = {
 		}
     }
+
+    focus = {
+        id = the_rattach
+        icon = GFX_goal_the_rattach
+        x = 0
+        y = 1
+        prerequisite = { focus = FRA_towards_european_hegemony }
+        relative_position_id = FRA_towards_european_hegemony
+        ai_will_do = {
+		    factor = 50
+		}
+        available = {
+            has_army_manpower = { size > 599999 }
+        }
+		cost = 5
+        completion_reward = {
+            country_event = { id = etat.16 }
+			add_state_core = 980
+			add_state_core = 34
+		}
+    }
+	
+	focus = {
+        id = latin_brotherhood
+        icon = GFX_goal_latin_brotherhood
+        x = 2
+        y = 1
+        prerequisite = { focus = FRA_towards_european_hegemony }
+        relative_position_id = FRA_towards_european_hegemony
+        ai_will_do = {
+		    factor = 50
+		}
+        available = {
+        }
+		cost = 5
+        completion_reward = {
+            FRA = {
+                add_to_faction = SPA
+            }
+            add_politial_power = 50
+            ITA = {
+                add_opinion_modifier = { target = FRA modifier = small_increase }
+             }
+            SPA = {
+                add_opinion_modifier = { target = FRA modifier = small_increase }
+            }
+		}
+    }
+	focus = {
+        id = FRA_secure_luxembourg
+        icon = GFX_goal_FRA_secure_luxembourg
+        x = 0
+        y = 2
+        prerequisite = { focus = the_rattach }
+        relative_position_id = FRA_towards_european_hegemony
+        ai_will_do = {
+		    factor = 50
+		}
+        available = {
+			has_army_manpower = { size > 699999 }
+        }
+		cost = 5
+        completion_reward = {
+            annex_country = {
+				target = LUX
+			}
+			add_state_claim = 8
+		}
+    }
+
+    focus = {
+        id = unite_with_romandy
+        icon = GFX_goal_unite_with_romandy
+        x = 0
+        y = 3
+        prerequisite = { focus = FRA_secure_luxembourg }
+        relative_position_id = FRA_towards_european_hegemony
+        ai_will_do = {
+		    factor = 50
+		}
+        available = {
+            has_army_manpower = { size > 849999 }
+        }
+		cost = 5
+        completion_reward = {
+            transfer_state = 845
+			add_state_core = 845
+		}
+    }
+    focus = {
+        id = the_great_lance
+        icon = GFX_goal_the_great_lance
+        x = -2
+        y = 3
+        prerequisite = { focus = molotov_brassilach_pact }
+        relative_position_id = FRA_towards_european_hegemony
+        ai_will_do = {
+		    factor = 50
+		}
+        available = {
+        }
+		cost = 5
+        completion_reward = {
+            country_event = etat.lance
+            #Add Mission Great Lance.
+		}
+    }
+    focus = {
+        id = continental_system
+        icon = GFX_goal_continental_system
+        x = -2
+        y = 1
+        prerequisite = { focus = FRA_towards_european_hegemony }
+        relative_position_id = FRA_towards_european_hegemony
+        ai_will_do = {
+		    factor = 50
+		}
+        available = {
+        }
+		cost = 5
+        completion_reward = {
+            ITA = {
+               add_opinion_modifier = { target = FRA modifier =  huge_increase }
+            }
+            SPA = {
+                add_opinion_modifier = { target = FRA modifier = huge_increase }
+            }
+            ROM = {
+                add_opinion_modifier = { target = FRA modifier = huge_increase }
+            }
+            GRE = {
+                add_opinion_modifier = { target = FRA modifier = huge_increase }
+            }
+            POL = {
+                add_opinion_modifier = { target = FRA modifier = huge_increase }
+            }
+			create_faction = fascist_nationale
+        }
+    }
+    focus = {
+        id = molotov_brassilach_pact
+        icon = GFX_goal_molotov_brassilach_pact
+        x = -2
+        y = 2
+        prerequisite = { focus = continental_system }
+        relative_position_id = FRA_towards_european_hegemony
+        ai_will_do = {
+		    factor = 50
+		}
+		cost = 5
+			completion_reward = {
+            #NAP with russia
+			diplomatic_relation = {
+			country = SOV
+			relation = non_aggression_pact
+			active =yes
+			}
+			add_tech_bonus = {
+				bonus = 0.5
+				uses = 2
+				category = armor
+}
+		}
+	}
+focus = {
+    id = FRA_gauls_and_gaels
+    icon = GFX_fund_irish_rebels
+    x = 2
+    y = 2
+    prerequisite = { focus = latin_brotherhood }
+    relative_position_id = FRA_towards_european_hegemony
+    ai_will_do = {
+        factor = 50
+    }
+    available = {
+    }
+    cost = 5
+    completion_reward = {
+    }
+}
+focus = {
+    id = FRA_beyond_natural_borders
+    icon = GFX_fra_natural_borders
+    x = 2
+    y = 3
+    prerequisite = { focus = FRA_gauls_and_gaels }
+    prerequisite = { focus = make_them_bleed }
+    relative_position_id = FRA_towards_european_hegemony
+    ai_will_do = {
+        factor = 50
+    }
+    available = {
+        ##GER_has_war_with = ENG
+    }
+    cost = 5
+    completion_reward = {
+		add_state_claim = 51
+		add_state_claim = 42
+		add_state_claim = 36
+		add_state_claim = 7
+		add_state_claim = 35
+		add_state_claim = 35
+		add_state_claim = 977
+    }
+}
+focus = {
+    id = FRA_demand_ger_war_debts
+    icon = GFX_FRA_germanophobia
+    x = -1
+    y = 4
+    prerequisite = { focus = the_great_lance }
+    prerequisite = { focus = unite_with_romandy }
+    relative_position_id = FRA_towards_european_hegemony
+    ai_will_do = {
+        factor = 80
+    }
+    available = {
+        has_army_manpower = { size > 999999 }
+		has_war = no
+    }
+    cost = 5
+    completion_reward = {
+       create_wargoal = {
+            target = GER
+            type = annex_everything
+       }
+    }
+}
+focus = {
+    id = die_perfidious_albion
+    icon = GFX_goal_march_on_calais
+    x = 1
+    y = 4
+    prerequisite = { focus = FRA_beyond_natural_borders }
+    prerequisite = { focus = unite_with_romandy }
+    relative_position_id = FRA_towards_european_hegemony
+    ai_will_do = {
+        factor = 50
+    }
+    available = {
+        has_army_manpower = { size > 999999 }
+		has_war = no
+    }
+    cost = 5
+    completion_reward = {
+		create_wargoal = {
+            target = ENG
+            type = annex_everything
+        }
+    }
+}
+focus = {
+    id = FRA_operation_sapin
+    #icon = GFX_goal_FRA_demand_ger_war_debts
+    x = -2
+    y = 5
+    prerequisite = {
+        focus = die_perfidious_albion
+        focus = FRA_demand_ger_war_debts
+    }
+    relative_position_id = FRA_towards_european_hegemony
+    ai_will_do = {
+        factor = 80
+    }
+    available = {
+        64 = { controlled_by_ROOT_or_ally = GER }
+    }
+    cost = 3
+    completion_reward = {
+       create_wargoal = {
+            target = SWI
+            type = annex_everything
+       }
+    }
+}
+focus = {
+    id = FRA_Plan_R4
+    #icon = GFX_goal_FRA_demand_ger_war_debts
+    x = 2
+    y = 5
+	prerequisite = {
+        focus = die_perfidious_albion
+        focus = FRA_demand_ger_war_debts
+    }
+    relative_position_id = FRA_towards_european_hegemony
+    ai_will_do = {
+        factor = 80
+    }
+    available = {
+      	64 = { controlled_by_ROOT_or_ally = GER }
+    }
+    cost = 3
+    completion_reward = {
+       create_wargoal = {
+            target = NOR
+            type = annex_everything
+       }
+	   create_wargoal = {
+            target = DEN
+            type = annex_everything
+       }
+    }
+}
+focus = {
+    id = loot_our_conquests
+    icon = GFX_goal_loot_our_conquests
+    x = 0
+    y = 5
+    prerequisite = {
+        focus = die_perfidious_albion
+        focus = FRA_demand_ger_war_debts
+    }
+    relative_position_id = FRA_towards_european_hegemony
+    ai_will_do = {
+        factor = 50
+    }
+    available = {
+        GER_has_war_with = ENG
+    }
+    cost = 5
+    completion_reward = {
+    }
+}
+focus = {
+    id = le_nouvel_ordre
+    icon = GFX_goal_le_nouvel_ordre
+    x = 0
+    y = 6
+    prerequisite = { focus = loot_our_conquests }
+    relative_position_id = FRA_towards_european_hegemony
+    ai_will_do = {
+        factor = 50
+    }
+    available = {
+        has_war = no
+       	64 = { owns_or_subject_of = yes }
+       	126 = { owns_or_subject_of = yes }
+    }
+    cost = 5
+    completion_reward = {
+        
+    }
+}
 }

@@ -2,13 +2,13 @@ ideas = {
 
 	country = {
 
-		FRA_spirit_of_vengeance = {
+		FRA_reborn_militarism = {
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea French_Revanchism_idea" }
-			name = "Spirit of Vengeance"
-			picture = FRA_spirit_of_vengeance.png
+			name = "Spirit of Militarism Reborn"
+			picture = FRA_spirit_of_vengeance
 			allowed = { always = no }
 			modifier = {
-				conscription = 0.02
+				conscription = 0.01
 				army_morale_factor = 0.10
 			}
 		}
@@ -29,7 +29,6 @@ ideas = {
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea FRA_socialist_education_idea" }
 			name = "Party Divide"
 			picture = FRA_party_divide
-			allowed = { always = no }
 			modifier = {
 				stability_weekly = -0.005
 				political_power_factor = -0.20
@@ -62,23 +61,21 @@ ideas = {
 			}
 		}
 		FRA_spirit_of_vengeance_2 = {
-			on_add = { log = "[GetDateText]: [Root.GetName]: add idea French_Revanchism_idea" }
-			name = "Spirit of Vengeance"
-			picture = FRA_spirit_of_vengeance.png
-			allowed = { always = no }
+			name = "Spirit of Militarism Reborn"
+			picture = FRA_spirit_of_vengeance
 			modifier = {
 				army_morale_factor = 0.10
-				conscription = 0.02
+				conscription = 0.01
 			}
 			targeted_modifier = {
 				tag = GER
-				attack_bonus_against = 0.10
-				defense_bonus_against = 0.05
+				attack_bonus_against = 0.1
+				defense_bonus_against = 0.1
 			}
 			targeted_modifier = {
-				tag = GBR
-				attack_bonus_against = 0.10
-				defense_bonus_against = 0.05
+				tag = ENG
+				attack_bonus_against = 0.1
+				defense_bonus_against = 0.1
 			}
 		}
 

@@ -7,12 +7,17 @@ RBR = {
 	color_ui = rgb { 170 25 40 }
 }
 FRA_etat = {
-	color = rgb { 40 50 150 }
-	color_ui = rgb { 40 50 150 }
+	color = rgb { 5 10 130 }
+	color_ui = rgb { 5 10 140 }
 }
 RAJ_UK = {
 	color = rgb { 170  10  10 }
 	color_ui = rgb { 200  10  10 }
+}
+
+FRA_NeoSocEuropa = {
+	color = rgb { 130 10 10 }
+	color_ui = rgb { 130 10 10 }
 }
 
 RAJ_FREE = {

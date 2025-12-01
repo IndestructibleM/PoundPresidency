@@ -89,3 +89,18 @@ spriteTypes = {
 		texturefile = "gfx/leaders/USA/Portrait_Francis_Yockey_cap.png"
 	}
 }
+spriteTypes = {
+
+	SpriteType = {
+		name = "GFX_idea_corporatism"
+		texturefile = "gfx/interface/ideas/laws/corporatism.png"
+	}
+	SpriteType = {
+		name = "GFX_idea_decentralized_planning"
+		texturefile = "gfx/interface/ideas/laws/decentralized_planning.png"
+	}
+	SpriteType = {
+		name = "GFX_idea_state_capitalism"
+		texturefile = "gfx/interface/ideas/laws/state_capitalism.png"
+	}
+}

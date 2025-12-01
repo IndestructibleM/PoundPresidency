@@ -1,0 +1,458 @@
+spriteTypes = {
+
+spriteType = {
+    name = "GFX_FRA_aesthetic_community"
+    texturefile = "gfx/interface/goals/FRA_aesthetic_community.png"
+}
+
+spriteType = {
+    name = "GFX_FRA_agro_industrial_federation"
+    texturefile = "gfx/interface/goals/FRA_agro_industrial_federation.png"
+}
+
+spriteType = {
+    name = "GFX_FRA_germanophobia"
+    texturefile = "gfx/interface/goals/FRA_germanophobia.png"
+}
+
+spriteType = {
+    name = "GFX_FRA_national_jacobin"
+    texturefile = "gfx/interface/goals/FRA_national_jacobin.png"
+}
+
+spriteType = {
+    name = "GFX_FRA_reason"
+    texturefile = "gfx/interface/goals/FRA_reason.png"
+}
+
+spriteType = {
+    name = "GFX_FRA_red_imperialism"
+    texturefile = "gfx/interface/goals/FRA_red_imperialism.png"
+}
+
+spriteType = {
+    name = "GFX_FRA_centralised_economy"
+    texturefile = "gfx/interface/goals/NFA_centralised_economy.png"
+}
+
+spriteType = {
+    name = "GFX_FRA_Endless_Devotion_Patrie_Imperiale"
+    texturefile = "gfx/interface/goals/NFA_Endless_Devotion_Patrie_Imperiale.png"
+}
+
+spriteType = {
+    name = "GFX_FRA_government_consensus"
+    texturefile = "gfx/interface/goals/NFA_government_consensus.png"
+}
+
+spriteType = {
+    name = "GFX_FRA_idealsofyouth"
+    texturefile = "gfx/interface/goals/NFA_idealsofyouth.png"
+}
+
+spriteType = {
+    name = "GFX_FRA_imperial"
+    texturefile = "gfx/interface/goals/NFA_imperial.png"
+}
+
+spriteType = {
+    name = "GFX_FRA_industrial_push_command"
+    texturefile = "gfx/interface/goals/NFA_industrial_push_command.png"
+}
+
+spriteType = {
+    name = "GFX_FRA_into_the_future"
+    texturefile = "gfx/interface/goals/NFA_into_the_future.png"
+}
+
+spriteType = {
+    name = "GFX_FRA_Maintain_Master_France"
+    texturefile = "gfx/interface/goals/NFA_Maintain_Master_France.png"
+}
+
+spriteType = {
+    name = "GFX_FRA_moral_order"
+    texturefile = "gfx/interface/goals/NFA_moral_order.png"
+}
+
+spriteType = {
+    name = "GFX_FRA_order_and_reason"
+    texturefile = "gfx/interface/goals/NFA_order_and_reason.png"
+}
+
+spriteType = {
+    name = "GFX_way_of_warrior"
+    texturefile = "gfx/interface/goals/way_of_warrior.png"
+}
+
+spriteType = {
+    name = "GFX_work_their_blood"
+    texturefile = "gfx/interface/goals/work_their_blood.png"
+}
+
+spriteType = {
+    name = "GFX_war_for_france"
+    texturefile = "gfx/interface/goals/war_for_france.png"
+}
+
+spriteType = {
+    name = "GFX_unite_with_romandy"
+    texturefile = "gfx/interface/goals/unite_with_romandy.png"
+}
+
+spriteType = {
+    name = "GFX_the_rattach"
+    texturefile = "gfx/interface/goals/the_rattach.png"
+}
+
+spriteType = {
+    name = "GFX_totalistic_society"
+    texturefile = "gfx/interface/goals/totalistic_society.png"
+}
+
+spriteType = {
+    name = "GFX_transform_corporate_structure"
+    texturefile = "gfx/interface/goals/transform_corporate_structure.png"
+}
+
+spriteType = {
+    name = "GFX_sweep_the_nation"
+    texturefile = "gfx/interface/goals/sweep_the_nation.png"
+}
+
+spriteType = {
+    name = "GFX_the_conference"
+    texturefile = "gfx/interface/goals/the_conference.png"
+}
+
+spriteType = {
+    name = "GFX_the_great_lance"
+    texturefile = "gfx/interface/goals/the_great_lance.png"
+}
+
+spriteType = {
+    name = "GFX_renew_legionary_ideal"
+    texturefile = "gfx/interface/goals/renew_legionary_ideal.png"
+}
+
+spriteType = {
+    name = "GFX_revolutionary_violence"
+    texturefile = "gfx/interface/goals/revolutionary_violence.png"
+}
+
+spriteType = {
+    name = "GFX_remilitarize_lorraine"
+    texturefile = "gfx/interface/goals/remilitarize_lorraine.png"
+}
+
+spriteType = {
+    name = "GFX_past_future_glories"
+    texturefile = "gfx/interface/goals/past_future_glories.png"
+}
+
+spriteType = {
+    name = "GFX_plenty_for_people"
+    texturefile = "gfx/interface/goals/plenty_for_people.png"
+}
+
+spriteType = {
+    name = "GFX_molotov_brassilach_pact"
+    texturefile = "gfx/interface/goals/molotov_brassilach_pact.png"
+}
+
+spriteType = {
+    name = "GFX_on_ruins_of_deciet"
+    texturefile = "gfx/interface/goals/on_ruins_of_deciet.png"
+}
+
+spriteType = {
+    name = "GFX_march_on_calais"
+    texturefile = "gfx/interface/goals/march_on_calais.png"
+}
+
+spriteType = {
+    name = "GFX_militarism_cure"
+    texturefile = "gfx/interface/goals/militarism_cure.png"
+}
+
+spriteType = {
+    name = "GFX_make_them_bleed"
+    texturefile = "gfx/interface/goals/make_them_bleed.png"
+}
+
+spriteType = {
+    name = "GFX_loot_our_conquests"
+    texturefile = "gfx/interface/goals/loot_our_conquests.png"
+}
+
+spriteType = {
+    name = "GFX_latin_brotherhood"
+    texturefile = "gfx/interface/goals/latin_brotherhood.png"
+}
+
+spriteType = {
+    name = "GFX_le_nouvel_ordre"
+    texturefile = "gfx/interface/goals/le_nouvel_ordre.png"
+}
+
+spriteType = {
+    name = "GFX_grand_industrial_plan"
+    texturefile = "gfx/interface/goals/grand_industrial_plan.png"
+}
+
+spriteType = {
+    name = "GFX_french_war_machine"
+    texturefile = "gfx/interface/goals/french_war_machine.png"
+}
+
+spriteType = {
+    name = "GFX_fund_irish_rebels"
+    texturefile = "gfx/interface/goals/fund_irish_rebels.png"
+}
+
+spriteType = {
+    name = "GFX_france_for_french"
+    texturefile = "gfx/interface/goals/france_for_french.png"
+}
+
+spriteType = {
+    name = "GFX_french_militarism"
+    texturefile = "gfx/interface/goals/french_militarism.png"
+}
+
+spriteType = {
+    name = "GFX_fortify_the_party"
+    texturefile = "gfx/interface/goals/fortify_the_party.png"
+}
+
+spriteType = {
+    name = "GFX_fra_natural_borders"
+    texturefile = "gfx/interface/goals/fra_natural_borders.png"
+}
+
+spriteType = {
+    name = "GFX_france_for_all"
+    texturefile = "gfx/interface/goals/france_for_all.png"
+}
+
+spriteType = {
+    name = "GFX_fight_anti_france"
+    texturefile = "gfx/interface/goals/fight_anti_france.png"
+}
+
+spriteType = {
+    name = "GFX_fascist_internationale"
+    texturefile = "gfx/interface/goals/fascist_internationale.png"
+}
+
+spriteType = {
+    name = "GFX_everything_for_country"
+    texturefile = "gfx/interface/goals/everything_for_country.png"
+}
+
+spriteType = {
+    name = "GFX_dream_of_death"
+    texturefile = "gfx/interface/goals/dream_of_death.png"
+}
+
+spriteType = {
+    name = "GFX_duel_of_fates"
+    texturefile = "gfx/interface/goals/duel_of_fates.png"
+}
+
+spriteType = {
+    name = "GFX_etat_de_force"
+    texturefile = "gfx/interface/goals/etat_de_force.png"
+}
+
+spriteType = {
+    name = "GFX_demand_alsace_lorraine"
+    texturefile = "gfx/interface/goals/demand_alsace_lorraine.png"
+}
+
+spriteType = {
+    name = "GFX_destiny_of_french_nation"
+    texturefile = "gfx/interface/goals/destiny_of_french_nation.png"
+}
+
+spriteType = {
+    name = "GFX_culture_war"
+    texturefile = "gfx/interface/goals/culture_war.png"
+}
+
+spriteType = {
+    name = "GFX_confront_the_party"
+    texturefile = "gfx/interface/goals/confront_the_party.png"
+}
+
+spriteType = {
+    name = "GFX_continental_system"
+    texturefile = "gfx/interface/goals/continental_system.png"
+}
+
+spriteType = {
+    name = "GFX_clean_up_bureacracy"
+    texturefile = "gfx/interface/goals/clean_up_bureacracy.png"
+}
+
+spriteType = {
+    name = "GFX_bucard_wins"
+    texturefile = "gfx/interface/goals/bucard_wins.png"
+}
+
+spriteType = {
+    name = "GFX_centralize_the_party"
+    texturefile = "gfx/interface/goals/centralize_the_party.png"
+}
+
+spriteType = {
+    name = "GFX_ascendent_glory"
+    texturefile = "gfx/interface/goals/ascendent_glory.png"
+}
+
+spriteType = {
+    name = "GFX_FRA_working_with_deat"
+    texturefile = "gfx/interface/goals/FRA_working_with_deat.png"
+}
+
+spriteType = {
+    name = "GFX_FRA_technocratic_management"
+    texturefile = "gfx/interface/goals/FRA_technocratic_management.png"
+}
+
+spriteType = {
+    name = "GFX_FRA_united_in_spirit"
+    texturefile = "gfx/interface/goals/FRA_united_in_spirit.png"
+}
+
+spriteType = {
+    name = "GFX_FRA_white_brotherhood"
+    texturefile = "gfx/interface/goals/FRA_white_brotherhood.png"
+}
+
+spriteType = {
+    name = "GFX_FRA_reactionary_revolution"
+    texturefile = "gfx/interface/goals/FRA_reactionary_revolution.png"
+}
+
+spriteType = {
+    name = "GFX_FRA_scientific_revolution"
+    texturefile = "gfx/interface/goals/FRA_scientific_revolution.png"
+}
+
+spriteType = {
+    name = "GFX_FRA_socialize_corporates"
+    texturefile = "gfx/interface/goals/FRA_socialize_corporates.png"
+}
+
+spriteType = {
+    name = "GFX_FRA_plenty_for_people"
+    texturefile = "gfx/interface/goals/FRA_plenty_for_people.png"
+}
+
+spriteType = {
+    name = "GFX_FRA_proletarian_nationalism"
+    texturefile = "gfx/interface/goals/FRA_proletarian_nationalism.png"
+}
+
+spriteType = {
+    name = "GFX_FRA_order_in_blood"
+    texturefile = "gfx/interface/goals/FRA_order_in_blood.png"
+}
+
+spriteType = {
+    name = "GFX_FRA_ordre_autorite_nation"
+    texturefile = "gfx/interface/goals/FRA_ordre_autorite_nation.png"
+}
+
+spriteType = {
+    name = "GFX_FRA_planisme"
+    texturefile = "gfx/interface/goals/FRA_planisme.png"
+}
+
+spriteType = {
+    name = "GFX_FRA_military_communism"
+    texturefile = "gfx/interface/goals/FRA_military_communism.png"
+}
+
+spriteType = {
+    name = "GFX_FRA_national_catharsis"
+    texturefile = "gfx/interface/goals/FRA_national_catharsis.png"
+}
+
+spriteType = {
+    name = "GFX_FRA_national_labor_front"
+    texturefile = "gfx/interface/goals/FRA_national_labor_front.png"
+}
+
+spriteType = {
+    name = "GFX_FRA_legionary_workers_corps"
+    texturefile = "gfx/interface/goals/FRA_legionary_workers_corps.png"
+}
+
+spriteType = {
+    name = "GFX_FRA_master_of_the_continent"
+    texturefile = "gfx/interface/goals/FRA_master_of_the_continent.png"
+}
+
+spriteType = {
+    name = "GFX_FRA_four_year_plan"
+    texturefile = "gfx/interface/goals/FRA_four_year_plan.png"
+}
+
+spriteType = {
+    name = "GFX_FRA_industrial_qoutas"
+    texturefile = "gfx/interface/goals/FRA_industrial_qoutas.png"
+}
+
+spriteType = {
+    name = "GFX_FRA_enough_dissent"
+    texturefile = "gfx/interface/goals/FRA_enough_dissent.png"
+}
+
+spriteType = {
+    name = "GFX_FRA_entrench_party_state"
+    texturefile = "gfx/interface/goals/FRA_entrench_party_state.png"
+}
+
+spriteType = {
+    name = "GFX_FRA_european_outreach"
+    texturefile = "gfx/interface/goals/FRA_european_outreach.png"
+}
+
+spriteType = {
+    name = "GFX_FRA_achieve_agrarian_auturky"
+    texturefile = "gfx/interface/goals/FRA_achieve_agrarian_auturky.png"
+}
+
+spriteType = {
+    name = "GFX_FRA_constructive_revolution"
+    texturefile = "gfx/interface/goals/FRA_constructive_revolution.png"
+}
+
+spriteType = {
+    name = "GFX_FRA_deal_with_church"
+    texturefile = "gfx/interface/goals/FRA_deal_with_church.png"
+}
+
+spriteType = {
+    name = "GFX_FRA_a_dark_enlightenment"
+    texturefile = "gfx/interface/goals/FRA_a_dark_enlightenment.png"
+}
+
+spriteType = {
+    name = "GFX_NFA_Endless_Devotion_Patrie_Imperiale"
+    texturefile = "gfx/interface/goals/NFA_Endless_Devotion_Patrie_Imperiale.png"
+}
+
+spriteType = {
+    name = "GFX_NFA_Maintain_Master_France"
+    texturefile = "gfx/interface/goals/NFA_Maintain_Master_France.png"
+}
+
+spriteType = {
+    name = "GFX_eternal_struggle"
+    texturefile = "gfx/interface/goals/eternal_struggle.png"
+}
+
+}

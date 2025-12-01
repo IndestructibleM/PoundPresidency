@@ -1,20 +1,19 @@
 FRA_power_balance = {
 	initial_value = 0.00
 	left_side = FRA_neosocialists_side
-	right_side = FRA_ultramilitarists_side	
+	right_side = FRA_milice_side	
 	decision_category = FRA_balance_of_power_category
 
 	### Neutral status
 	range = {
 		id = FRA_bucard_range
-		min = -0.15
-		max = 0.15
+		min = -0.25
+		max = 0.25
 		modifier = {
 			political_power_factor = 0.05
-			stability_factor = 0.1
+			stability_factor = 0.05
 		}
 		on_activate = {
-			add_popularity = { ideology = fascism popularity = 0.05 }
 		}
 		on_deactivate = {
 			
@@ -27,11 +26,10 @@ FRA_power_balance = {
 
 		range = {
 			id = FRA_neosocialists_low_control_range
-			min = -0.4
-			max = -0.15
+			min = -0.6
+			max = -0.25
 			modifier = {
-				experience_gain_army = 0.05
-				research_speed_factor = 0.05
+				
 			}
 			on_activate = {
 				
@@ -45,12 +43,9 @@ FRA_power_balance = {
 		range = {
 			id = FRA_neosocialists_high_control_range
 			min = -1
-			max = -0.4
+			max = -0.6
 			modifier = {
-				experience_gain_army = 0.05
-				research_speed_factor = 0.1
-				war_support_factor = -0.2
-				neutrality_drift = 0.02
+				
 			}
 			on_activate = {
 			}
@@ -62,16 +57,15 @@ FRA_power_balance = {
 	}
 
 	side = {
-		id = FRA_ultramilitarists_side	
-		icon = GFX_bop_FRA_ultramilitarists_side
+		id = FRA_milice_side	
+		icon = GFX_bop_FRA_milice_side
 
 		range = {
-			id = FRA_ultramilitarists_low_control_range
-			min = 0.15
-			max = 0.4
+			id = FRA_milice_low_control_range
+			min = 0.25
+			max = 0.6
 			modifier = {
-				industrial_capacity_factory = 0.05 
-				production_speed_buildings_factor = 0.05 
+				
 			}
 			on_activate = {
 			}
@@ -81,11 +75,10 @@ FRA_power_balance = {
 		}
 
 		range = {
-			id = FRA_ultramilitarists_high_control_range
-			min = 0.4
+			id = FRA_milice_high_control_range
+			min = 0.6
 			max = 1
 			modifier = {
-				conscription_factor = 0.10
 			}
 			on_activate = {
 			}

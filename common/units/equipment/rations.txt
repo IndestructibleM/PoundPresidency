@@ -1,0 +1,30 @@
+equipments = {
+
+	rations = {
+		is_archetype = yes
+		is_buildable = yes
+		type = {
+			infantry
+			motorized
+		}
+		group_by = archetype
+		picture = archetype_infantry_equipment
+		interface_category = interface_category_land
+		reliability = 0.75
+
+		#Space taken in convoy
+		lend_lease_cost = 1
+
+		build_cost_ic = 0.10
+		resources = {
+			grain = 2
+		}
+	}
+
+	rations_eq = {
+		archetype = rations
+		priority = 200
+		active = yes
+	}
+
+}
