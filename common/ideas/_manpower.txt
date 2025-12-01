@@ -1492,7 +1492,7 @@ ideas = {
 				NOT = { has_idea = undisturbed_isolation }
 			}
 			allowed_to_remove = {
-				NOT = { has_idea = socialist_reconstruction }
+				NOT = { has_idea = undisturbed_isolation }
 			}
 			ai_will_do = { factor = 80 }
 		}

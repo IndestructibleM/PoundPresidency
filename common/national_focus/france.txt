@@ -9426,6 +9426,7 @@
         completion_reward = {
             upgrade_economy_law = yes 
 			add_ideas = FRA_reborn_militarism
+			country_event = etat.4
 		}
     }
     focus = {
@@ -9445,6 +9446,7 @@
 		 		add_idea = FRA_spirit_of_vengeance_2
 			}	
 		    country_event = etat.5
+			add_war_support = 0.1
 		}
     }
     focus = {
@@ -9479,7 +9481,7 @@
 		}
 		cost = 5
         completion_reward = {
-			country_event = france.9
+			country_event = etat.7
 			army_experience = 50
 		}
     }
@@ -9548,8 +9550,8 @@
 		cost = 5
         completion_reward = {
 			add_political_power = 100
-			country_event = etat.10
-            custom_effect_tooltip = vitalisttakeover
+			country_event = etat.11
+            custom_effect_tooltip = fascisttakeover
             hidden_effect = {
                 add_popularity = { ideology = vitalism popularity = 1 }
             }
@@ -9723,7 +9725,7 @@
 		}
 		cost = 5
         completion_reward = {
-            country_event = etat.church
+            country_event = etat.12
             add_politial_power = -100
 		}
     }
@@ -9740,7 +9742,7 @@
 		}
 		cost = 5
         completion_reward = {
-            country_event = etat.culture
+            country_event = etat.13
             add_politial_power = 50
             add_manpower = -5000
             ad_stability = -0.05
@@ -9766,7 +9768,7 @@
 		cost = 5
         completion_reward = {
             set_faction_name = BrotherhoodofEurope
-            country_event = etat.destiny
+            country_event = etat.14
 		}
     }
 
@@ -9778,9 +9780,10 @@
         available = {
 			has_government = fascism
 			has_country_leader = {
-				character = FRA_marcel_deat
+				character = FRA_marcel_bucard
 				ruling_only = yes
 			}
+			NOT = { has_completed_focus = FRA_patriots_in_control}
         }
         prerequisite = { focus = FRA_duel_of_fates }
         relative_position_id = FRA_duel_of_fates
@@ -10153,7 +10156,7 @@
 		}
 		cost = 5
         completion_reward = {
-        	add_ideas = cult_of_personality
+        	add_ideas = totalitarianism
 		}
     }
     focus = {
@@ -10188,8 +10191,8 @@
         completion_reward = {
         	add_state_core = 460
         	add_state_core = 459
-			add_state_core = 805
-            add_state_core = 865
+			add_state_core = 458
+            add_state_claim = 513
         	add_manpower = -10000
 		}
 	}
@@ -10361,7 +10364,7 @@
 		}
 		cost = 5
         completion_reward = {
-            custom_effect_tooltip = vitalisttakeover
+            custom_effect_tooltip = fascisttakeover
             hidden_effect = {
                 add_popularity = { ideology = vitalism popularity = 1 }
             }
@@ -10728,8 +10731,7 @@
         }
 		cost = 5
         completion_reward = {
-            country_event = etat.lance
-            #Add Mission Great Lance.
+			unlock_decision_tooltip = fra_invade_hol
 		}
     }
     focus = {

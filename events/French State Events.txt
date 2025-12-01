@@ -1,4 +1,5 @@
 add_namespace = etat
+add_namespace = etatfopo
 
 country_event = {
 	id = etat.0
@@ -15,10 +16,10 @@ country_event = {
 }
 
 country_event = {
-	id = etat.5
-	title = etat.5.t
+	id = etatfopo.5
+	title = etatfopo.5.t
 	is_triggered_only = yes
-	desc = etat.5.d
+	desc = etatfopo.5.d
 	option = {
 		ai_chance = {
 			factor = 30
@@ -46,6 +47,141 @@ country_event = {
 				end_wars = yes
 				end_civil_wars = yes
 			}
+		}
+	}
+}
+
+country_event = {
+	id = etat.4
+	title = etat.4.t    ###"A Brawl over National Matters"
+	desc = etat.4.d
+	fire_only_once = yes
+	is_triggered_only = yes
+	option = {
+		name = etat.4.a
+		add_power_balance_value = {
+            id = FRA_power_balance
+            value = 0.2
+        }
+	}
+	option = {
+		name = etat.4.b
+		add_power_balance_value = {
+            id = FRA_power_balance
+            value = -0.2
+            
+        }
+	}
+}
+country_event = {
+	id = etat.5
+	title = etat.5.t
+	desc = etat.5.d
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = etat.5.a
+		add_power_balance_value = {
+            id = FRA_power_balance
+            value = 0.2
+        }
+	}
+	option = {
+		name = etat.5.b
+		add_power_balance_value = {
+            id = FRA_power_balance
+            value = -0.2
+            
+        }
+	}
+}
+country_event = {
+	id = etat.6
+	title = etat.6.t
+	desc = etat.6.d
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = etat.5.a
+		add_power_balance_value = {
+            id = FRA_power_balance
+            value = 0.2
+        }
+	}
+	option = {
+		name = etat.5.b
+		add_power_balance_value = {
+            id = FRA_power_balance
+            value = -0.2
+            
+        }
+	}
+}
+country_event = {
+	id = etat.7
+	title = etat.7.t
+	desc = etat.7.d
+	is_triggered_only = yes
+	option = {
+		name = etat.7.a
+		add_power_balance_value = {
+            id = FRA_power_balance
+            value = 0.25
+        }
+	}
+	option = {
+		name = etat.7.b
+		add_power_balance_value = {
+            id = FRA_power_balance
+            value = -0.25
+            
+        }
+	}
+}
+
+country_event = {
+	id = etat.10
+	title = etat.10.t
+	desc = etat.10.d
+	
+	is_triggered_only = yes
+	option = {
+		name = etat.19.a
+		if = {
+			limit = {
+				power_balance_value = {
+    				id = FRA_power_balance
+    				value > 0.25
+				}
+			}
+			custom_effect_tooltip = tt_darnandwins
+			country_event = { id = etat.20 days = 5 }
+		}
+		if = {
+			limit = {
+				power_balance_value = {
+    				id = FRA_power_balance
+    				value < -0.25
+				}
+			}
+			custom_effect_tooltip = tt_deatwins
+			country_event = { id = etat.21 days = 5 }
+		}
+		if = {
+			limit = {
+				power_balance_value = {
+    				id = FRA_power_balance
+    				value > -0.25
+				}
+				power_balance_value = {
+    				id = FRA_power_balance
+    				value < 0.25
+				}
+			}
+			custom_effect_tooltip = tt_bucardwins
+			country_event = { id = etat.22 days = 5 }
 		}
 	}
 }

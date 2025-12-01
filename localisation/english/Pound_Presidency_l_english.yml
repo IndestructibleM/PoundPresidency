@@ -391,3 +391,7 @@ liberal_republic: "Liberal Republic"
 soviet_democracy: "Soviet Democracy"
 partystate: "Party-State"
 totalitarianism: "Totalitarianism"
+
+
+###### STATES
+ STATE_1047: "Eastern Rhineland"
