@@ -377,6 +377,7 @@ FRA_milice_side: "La Milice leads the Storm"
 fascist_nationale: "Fascist Nationale"
 
 
+### LAWS ####
 economy_model: "Economic Model"
 government_type: "Government Type"
 draft: "Draft Law"
@@ -391,7 +392,6 @@ liberal_republic: "Liberal Republic"
 soviet_democracy: "Soviet Democracy"
 partystate: "Party-State"
 totalitarianism: "Totalitarianism"
-
 
 ###### STATES
  STATE_1047: "Eastern Rhineland"
