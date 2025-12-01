@@ -1810,13 +1810,13 @@ ideas = {
 			war_stability_factor = 0.1
 			justify_war_goal_time = -0.25
 			communism_acceptance = -25
+			}
 			available = {
 				OR = {
 				has_country_leader_ideology = despotism
 				has_country_leader_ideology = oligarchism
 				has_country_leader_ideology = japan_militarism_ideology
 				}
-			}
 			}
 		}
 		
@@ -1828,9 +1828,9 @@ ideas = {
 			stability_factor = -0.1
 			war_support_factor = 0.15
 			justify_war_goal_time = -0.15
+			}
 			available = {
 				has_country_leader_ideology = despotism
-			}
 			}
 		}
 		
