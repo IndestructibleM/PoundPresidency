@@ -1798,6 +1798,9 @@ ideas = {
 				has_country_leader_ideology = centrism
 				}
 			}
+			ai_will_do = {
+				factor = 100
+			}
 		}	
 		
 		stratocracy = {
@@ -1818,6 +1821,9 @@ ideas = {
 				has_country_leader_ideology = japan_militarism_ideology
 				}
 			}
+			ai_will_do = {
+				factor = 100
+			}
 		}
 		
 		warlordism = {
@@ -1831,6 +1837,9 @@ ideas = {
 			}
 			available = {
 				has_country_leader_ideology = despotism
+			}
+			ai_will_do = {
+				factor = 100
 			}
 		}
 		
@@ -1850,6 +1859,9 @@ ideas = {
 				has_country_leader_ideology = oligarchism
 				has_country_leader_ideology = japan_militarism_ideology
 				}
+			}
+			ai_will_do = {
+				factor = 100
 			}
 		}	
 		
@@ -1884,7 +1896,21 @@ ideas = {
 			democratic_acceptance = 15
 			}
 			available = {
-				always = no # Is assigned
+				has_government = democratic
+				OR = {
+					tag = ENG
+					tag = SWE
+					tag = DEN
+					tag = NOR
+					tag = JAP
+					tag = AST
+					tag = CAN
+					tag = NZL
+					tag = SAF
+				}
+			}
+			ai_will_do = {
+				factor = 100
 			}
 		}	
 		
@@ -1908,6 +1934,9 @@ ideas = {
 				has_country_leader_ideology = centrism
 				}
 			}
+			ai_will_do = {
+				factor = 100
+			}
 		}	
 		
 		soviet_democracy = {
@@ -1929,6 +1958,9 @@ ideas = {
 				has_country_leader_ideology = anarchist_communism
 				}
 			}
+			ai_will_do = {
+				factor = 100
+			}
 		}
 		
 		partystate = {
@@ -1949,6 +1981,9 @@ ideas = {
 				has_country_leader_ideology = gen_nazism
 				}
 			}
+			ai_will_do = {
+				factor = 100
+			}
 		}
 		
 		totalitarianism = {
@@ -1956,7 +1991,7 @@ ideas = {
 			removal_cost = -1
 			modifier = {
 			stability_factor = -0.1
-			political_power_factor = 0.2
+			political_power_factor = 0.15
 			offensive_war_stability_factor = 0.2
 			defensive_war_stability_factor = 0.05
 			drift_defence_factor = 0.2
@@ -1968,6 +2003,9 @@ ideas = {
 				has_country_leader_ideology = anti_revisionism
 				has_country_leader_ideology = stalinism
 				}
+			}
+			ai_will_do = {
+				factor = 100
 			}
 		}
 	}
