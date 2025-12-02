@@ -1,5 +1,6 @@
 fra_foriegn_policy = {
-	icon = GFX_decision_revolt
+	icon = GFX_decision_category_generic_fascism
+	picture = GFX_decision_cat_picture_ITA_missiolinis
 	priority = 100
 	allowed = {
 		original_tag = FRA

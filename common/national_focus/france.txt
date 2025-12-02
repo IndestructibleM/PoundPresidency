@@ -10135,6 +10135,7 @@
         id = like_caeser_like_bonaparte
         x = -2
         y = 3
+		icon = GFX_FRA_imperial
         prerequisite = { focus = FRA_the_autoroutes }
         relative_position_id = rousing_speeches
         ai_will_do = {
@@ -10225,6 +10226,7 @@
     }
     focus = {
         id = FRA_juenesses_patriotes
+		icon = GFX_FRA_idealsofyouth
         x = 2
         y = 3
         prerequisite = { focus = state_athleticism }
@@ -10244,7 +10246,7 @@
         id = popularize_france
         x = -1
         y = 4
-		
+		icon = GFX_FRA_into_the_future
         prerequisite = { focus = like_caeser_like_bonaparte }
         prerequisite = { focus = algeria_colonization }
         relative_position_id = rousing_speeches
@@ -10611,7 +10613,7 @@
 
 	focus = {
         id = FRA_towards_european_hegemony
-        icon = GFX_goal_FRA_FRA_patriots_in_control
+        icon = GFX_FRA_imperial
         x = 18
         y = 1
         available = {
@@ -10674,7 +10676,7 @@
     }
 	focus = {
         id = FRA_secure_luxembourg
-        icon = GFX_goal_FRA_secure_luxembourg
+        icon = GFX_goal_LUX_Foreign_Policy
         x = 0
         y = 2
         prerequisite = { focus = the_rattach }

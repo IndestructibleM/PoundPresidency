@@ -34,6 +34,10 @@ spriteType = {
     name = "GFX_FRA_centralised_economy"
     texturefile = "gfx/interface/goals/NFA_centralised_economy.png"
 }
+spriteType = {
+    name = "GFX_goal_LUX_Foreign_Policy"
+    texturefile = "gfx/interface/goals/goal_LUX_Foreign_Policy.png"
+}
 
 spriteType = {
     name = "GFX_FRA_Endless_Devotion_Patrie_Imperiale"
@@ -113,11 +117,6 @@ spriteType = {
 spriteType = {
     name = "GFX_transform_corporate_structure"
     texturefile = "gfx/interface/goals/transform_corporate_structure.png"
-}
-
-spriteType = {
-    name = "GFX_sweep_the_nation"
-    texturefile = "gfx/interface/goals/sweep_the_nation.png"
 }
 
 spriteType = {

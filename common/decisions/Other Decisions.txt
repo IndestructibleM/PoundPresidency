@@ -521,7 +521,6 @@ foreign_politics = {
 operations = {
 	generic_army_xp_to_infantry_combat= {
 		name = "Convert Army XP to Infantry/Combat Support Mastery"
-		fire_only_once = yes
 		icon = GFX_decision_generic_military
 		available = { 
 			has_army_experience > 99
@@ -550,7 +549,6 @@ operations = {
 	generic_army_xp_to_armor_operations = {
 		name = "Convert Army XP to Armor/Operations Mastery"
 		icon = GFX_decision_generic_military
-		fire_only_once = yes
 		available = { 
 			has_army_experience > 99
 		}
@@ -577,7 +575,6 @@ operations = {
 	}
 	generic_air_xp_to_fighter_striker = {
 		name = "Convert Air XP to Fighter/Striker Mastery"
-		fire_only_once = yes
 		available = { 
 			has_air_experience > 99
 		}
@@ -591,7 +588,7 @@ operations = {
 			has_air_experience > 99
 		}
 		custom_cost_text = cost_AirXP_100
-		complete_effect = { navy_experience = -100 }
+		complete_effect = { air_experience = -100 }
 		remove_effect = {
 			add_mastery = {
 				amount = 50
@@ -605,7 +602,6 @@ operations = {
 	}
 	generic_air_xp_to_medium_heavy = {
 		name = "Convert Air XP to Medium/Heavy Mastery"
-		fire_only_once = yes
 		available = { 
 			has_air_experience > 99
 		}
@@ -633,7 +629,6 @@ operations = {
 	}
 	generic_navy_xp_to_submarine_screen = {
 		name = "Convert Naval XP to Submarine/Screen Mastery"
-		fire_only_once = yes
 		available = { 
 			has_navy_experience > 99
 		}
@@ -661,7 +656,6 @@ operations = {
 	}
 	generic_navy_xp_to_carrier_capital = {
 		name = "Convert Naval XP to Carrier/Capital Mastery"
-		fire_only_once = yes
 		icon = GFX_decision_generic_naval
 		available = { 
 			has_navy_experience > 99

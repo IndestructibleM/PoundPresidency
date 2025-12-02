@@ -103,6 +103,11 @@ FRA_operation_sapin: "Opération Sapin"
 FRA_Plan_R4: "Plan R 4"
 le_nouvel_ordre: "L'Ordre Nouveau"
 
+
+fra_foriegn_policy: "Foreign Policy of the New French Nation"
+fra_foriegn_policy_desc: "Foreign Policy of the New French Nation"
+
+
 FRA_power_balance: "Duel of the Fates"
 FRA_bucard_range: "Francistes March Forwards"
 FRA_neosocialists_side: "Néo-Socialistes Ascendent"

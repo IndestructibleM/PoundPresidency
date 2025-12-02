@@ -1,16 +1,17 @@
 fra_foriegn_policy = {
 	fra_invade_hol = {
 		name = "Striking the Lance"
+		icon = GFX_decision_hol_draw_up_staff_plans
 		fire_only_once = yes
 		allowed = { tag = FRA }
-		war_with_on_remove = HOL
+		war_with_on_complete = HOL
 		days_remove = 60
-		targets = { HOL }
 		available = {
 			date > 1939.7.15
 			FRA = { 
 			has_war_with = GER
 			}
+			is_neighbor_of = HOL
 		}
 		ai_will_do = {
         	factor = 90
@@ -21,11 +22,8 @@ fra_foriegn_policy = {
 		defense_bonus_against = 0.5
 		breakthrough_bonus_against = 1
 		}
-		modifier = {
-			army_speed_factor = 0.10
-		}
 		complete_effect = {
-			create_wargoal = {
+			declare_war_on = {
             target = HOL
             type = annex_everything
 			}
@@ -35,6 +33,7 @@ fra_foriegn_policy = {
 		name = "First Geneva Award"
 		fire_only_once = yes
 		allowed = { tag = FRA }
+		icon = GFX_decision_hol_draw_up_staff_plans
 		cost = 100
 		days_remove = 10
 		targets = { SWI }
@@ -57,6 +56,7 @@ fra_foriegn_policy = {
 		name = "March into Catalonia"
 		fire_only_once = yes
 		allowed = { tag = FRA }
+		icon = GFX_decision_hol_draw_up_staff_plans
 		days_remove = 10
 		cost = 100
 		targets = { 165 }
@@ -75,7 +75,68 @@ fra_foriegn_policy = {
 				add_core_of = ROOT
 			}
 		}
-	}		
+	}			
+	FRA_invite_to_continental_system = {
+		name = "Invite [FROM.GetNameDEF] to the Continental System"
+		fire_only_once = yes
+		allowed = { tag = FRA }
+		cost = 30
+		days_remove = 10
+		targets = { ITA POL SPA IRE GRE }
+		ai_will_do = {
+        	factor = 80
+    	}
+		available ={
+			FROM = {
+				is_in_faction = no
+				OR = {
+				has_opinion = { target = ROOT value > 30 }
+				has_government = fascism 
+				}
+			}
+		}
+		visible = {
+			has_completed_focus = continental_system
+		}
+
+		remove_effect = {
+			give_guarantee = FROM
+			give_market_access = FROM
+		}
+	}
+	FRA_invite_to_fash_nationale = {
+		name = "Invite [FROM.GetNameDEF] to the Fascist Nationale"
+		fire_only_once = yes
+		allowed = { tag = FRA }
+		cost = 50
+		days_remove = 10
+		targets = { ITA POL SPA IRE GRE }
+		ai_will_do = {
+        	factor = 80
+    	}
+		available ={
+			FROM = {
+				is_in_faction = no
+				OR = {
+					has_opinion = { target = ROOT value > 75 }
+					AND = {
+						has_government = fascism 
+						has_opinion = { target = ROOT value > 50 }
+					}
+				}
+			}
+		}
+		visible = {
+			has_completed_focus = molotov_brassilach_pact
+			FROM = {
+				is_guaranteed_by = ROOT
+			}
+		}
+
+		remove_effect = {
+			add_to_faction = FROM
+		}
+	}	
 }
 FRA_triumph_of_neosocialism_cat = {
 	FRA_integrate_west_germany = {

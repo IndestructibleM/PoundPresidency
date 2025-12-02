@@ -107,9 +107,8 @@ country_event = {
 	option = {
 		name = "Speed and Merciless Technology!"
 		add_mastery_bonus = {
-			bonus = 0.2
-			days = 200
-			track = armor
+			bonus = 0.25
+			days = 250
 			grand_doctrine = new_mobile_warfare
 		}
 		add_power_balance_value = {
@@ -120,9 +119,8 @@ country_event = {
 	option = {
 		name = "Total War, Total Destruction!"
 		add_mastery_bonus = {
-			bonus = 0.2
-			days = 200
-			track = combat_support
+			bonus = 0.25
+			days = 250
 			grand_doctrine = superior_firepower
 		}
 		add_power_balance_value = {
@@ -258,34 +256,6 @@ country_event = {
 	}
 }
 
-country_event = {
-	id = pound.13
-	title = "Baptism"
-	desc = pound.13.d
-	is_triggered_only = yes
-	
-	option = {
-		name = "Pound strikes first, winning the day!"
-		ai_chance = {
-			factor = 90
-		}
-		add_manpower = -1
-		add_popularity = { ideology = fascism popularity = 0.03 }
-	}
-	
-	option = {
-		name = "Pound is shot before he can act!"
-		ai_chance = {
-			factor = 30
-		}
-		add_popularity = { ideology = fascism popularity = -0.15 }
-		add_stability = -0.1
-		add_political_power = -150
-		retire_character = USA_Ezra_Pound
-		promote_character = USA_richard_child
-		set_country_flag = PoundDead
-	}
-}
 country_event = {
 	id = pound.13
 	title = "Baptism"

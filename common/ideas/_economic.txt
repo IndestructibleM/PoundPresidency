@@ -1857,11 +1857,11 @@ ideas = {
 				num_of_owned_factories < 10
 				is_major = no
 			}
+			default  = yes
 			removal_cost = 0
 			modifier = {
 				production_factory_efficiency_gain_factor = -0.10
 				production_factory_max_efficiency_factor = -0.10
-				industrial_capacity_factory = 0.05
 				research_speed_factor = -0.1
 				production_lack_of_resource_penalty_factor = -0.2
 				supply_consumption_factor = -0.1
