@@ -1094,6 +1094,7 @@ ideas = {
 				research_speed_factor = 0.10
 				civilian_intel_to_others = 40.0
 				navy_intel_to_others = 20.0
+				trade_opinion_factor = 0.30
 				cic_construction_boost_factor = 0.05
 			}
 
@@ -1173,14 +1174,15 @@ ideas = {
 			removal_cost = -1
 
 			modifier = {
-				min_export = 0.5
-				industrial_capacity_factory = 0.1
-				industrial_capacity_dockyard = 0.1
-				production_speed_buildings_factor = 0.1
-				research_speed_factor = 0.05
+				min_export = 0.65
+				industrial_capacity_factory = 0.125
+				industrial_capacity_dockyard = 0.125
+				production_speed_buildings_factor = 0.125
+				research_speed_factor = 0.075
 				civilian_intel_to_others = 20.0
 				navy_intel_to_others = 10.0
 				cic_construction_boost_factor = 0.1
+				trade_opinion_factor = 0.20
 			}
 
 			default = yes
@@ -1209,6 +1211,75 @@ ideas = {
 				modifier = {
 					factor = 1000
 					has_idea = uncontrolled_exports #Poland should try and escape this as soon as they can
+				}
+   			}
+		}
+		protectionism = {
+			available = {
+
+				if = {
+					limit = {
+						original_tag = CHI
+						has_dlc = "Waking the Tiger"
+					}
+					NOT = { has_idea = CHI_nine_power_treaty }
+				}
+				if = {
+					limit = {
+						original_tag = SPR
+						has_dlc = "La Resistance"
+					}
+					NOT = { has_completed_focus = SPR_all_must_bear_the_torch }
+				}
+				if = {
+					limit = {
+						original_tag = GER
+					}
+					NOT = { has_completed_focus = GER_autarky_efforts }
+				}
+
+				if = {
+					limit = {
+						original_tag = PRC
+						has_dlc = "No Compromise, No Surrender"
+					}
+					NOT = { has_completed_focus = PRC_promote_paper_bills }
+				}
+			}
+			cost = 150
+			removal_cost = -1
+
+			modifier = {
+				min_export = 0.5
+				industrial_capacity_factory = 0.1
+				industrial_capacity_dockyard = 0.1
+				production_speed_buildings_factor = 0.1
+				research_speed_factor = 0.05
+				civilian_intel_to_others = 20.0
+				navy_intel_to_others = 10.0
+				cic_construction_boost_factor = 0.1
+				trade_opinion_factor = 0.1
+			}
+			cancel_if_invalid = no
+
+			ai_will_do = {
+   				factor = 1
+
+				modifier = {
+					factor = 0
+
+					is_major = no
+					has_war = no
+					is_in_faction = no
+					OR = {
+						# portugal and sweden are special tungsten snowflakes
+						tag = POR
+						tag = SWE
+
+						# Iraq & Iran are special oil snowflakes
+						tag = PER
+						tag = IRQ
+					}
 				}
    			}
 		}
@@ -1584,13 +1655,13 @@ ideas = {
 			cost = 100
 			cancel_if_invalid = yes
 			modifier = {
-				industrial_capacity_factory = 0.15
-				industrial_capacity_dockyard = 0.15
-				military_industrial_organization_funds_gain = 0.15
+				industrial_capacity_factory = 0.1
+				industrial_capacity_dockyard = 0.1
+				military_industrial_organization_funds_gain = 0.1
 				military_industrial_organization_research_bonus = 0.05
 				production_speed_buildings_factor = 0.15
-				consumer_goods_factor = 0.20
-				line_change_production_efficiency_factor = 0.1
+				consumer_goods_expected_value = 0.1
+				line_change_production_efficiency_factor = -0.1
 			}
 			available = {
 				OR = {
@@ -1619,9 +1690,8 @@ ideas = {
 				industrial_capacity_factory = 0.08
 				industrial_capacity_dockyard = 0.08
 				production_speed_buildings_factor = 0.08
-				military_industrial_organization_funds_gain = 0.15
-				consumer_goods_factor = 0.1
-				line_change_production_efficiency_factor = 0.05
+				military_industrial_organization_funds_gain = 0.1
+				consumer_goods_factor = 0.15
 			}
 			allowed_to_remove = {
 				always = no
@@ -1645,6 +1715,7 @@ ideas = {
 				production_factory_efficiency_gain_factor = 0.10
 				line_change_production_efficiency_factor = -0.20
 				production_factory_start_efficiency_factor = 0.10
+				consumer_goods_expected_value = -0.05
 			}
 			allowed_to_remove = {
 				always = no
@@ -1666,10 +1737,9 @@ ideas = {
 			modifier = {
 				min_export = -0.05
 				production_factory_efficiency_gain_factor = 0.15
-				production_factory_max_efficiency_factor = -0.05
-				production_speed_buildings_factor = 0.1
-				conversion_cost_civ_to_mil_factor = -0.25
-				conversion_cost_mil_to_civ_factor = -0.25
+				production_factory_max_efficiency_factor = -0.08
+				line_change_production_efficiency_factor = 0.05
+				consumer_goods_expected_value = -0.1
 			}
 			allowed_to_remove = {
 				always = no
@@ -1682,12 +1752,8 @@ ideas = {
 			cancel_if_invalid = yes
 			available = {
 				OR = {
-				has_country_leader_ideology = emperor_fascism
-				has_country_leader_ideology = falangism
-				has_country_leader_ideology = fascism_ideology
-				has_country_leader_ideology = nazism
-				has_country_leader_ideology = gen_nazism
-				has_country_leader_ideology = rexism
+				has_government = fascism
+				has_country_leader_ideology = despotism
 				}
 			}
 			removal_cost = 0
@@ -1719,7 +1785,7 @@ ideas = {
 				min_export = -0.10
 				production_factory_efficiency_gain_factor = -0.2
 				production_factory_max_efficiency_factor = 0.1
-				production_speed_buildings_factor = 0.05
+				consumer_goods_factor = -0.15
 				research_speed_factor = 0.05
 			}
 			allowed_to_remove = {
@@ -1742,10 +1808,13 @@ ideas = {
 			}
 			removal_cost = 0
 			modifier = {
-				production_factory_efficiency_gain_factor = 0.10
-				production_factory_max_efficiency_factor = -0.05
-				production_speed_buildings_factor = 0.03
-				industrial_capacity_factory = 0.08
+				line_change_production_efficiency_factor = -0.10
+				production_speed_buildings_factor = 0.05
+				industrial_capacity_factory = 0.1
+				industrial_capacity_dockyard = 0.1
+				military_industrial_organization_funds_gain = 0.05
+				military_industrial_organization_research_bonus = 0.05
+				consumer_goods_expected_value = 0.05
 			}
 			allowed_to_remove = {
 				always = no
@@ -1770,7 +1839,7 @@ ideas = {
 				industrial_capacity_factory = 0.08
 				industrial_capacity_dockyard = 0.08
 				production_speed_buildings_factor = 0.05
-				consumer_goods_factor = 0.08
+				consumer_goods_factor = 0.1
 			}
 			allowed_to_remove = {
 				always = no
@@ -1787,12 +1856,12 @@ ideas = {
 			}
 			removal_cost = 0
 			modifier = {
-				min_export = -0.1
 				production_factory_efficiency_gain_factor = -0.10
-				production_factory_max_efficiency_factor = -0.08
+				production_factory_max_efficiency_factor = -0.10
 				industrial_capacity_factory = 0.05
 				research_speed_factor = -0.1
-				production_lack_of_resource_penalty_factor = -0.10
+				production_lack_of_resource_penalty_factor = -0.2
+				supply_consumption_factor = -0.1
 				line_change_production_efficiency_factor = 0.10
 			}
 			allowed_to_remove = {
@@ -1881,7 +1950,11 @@ ideas = {
 			justify_war_goal_time = -0.15
 			}
 			available = {
+				OR = {
 				has_country_leader_ideology = despotism
+				has_country_leader_ideology = oligarchism
+				}
+				num_of_owned_factories < 25
 			}
 			ai_will_do = {
 				factor = 100
@@ -1899,11 +1972,8 @@ ideas = {
 				communism_acceptance = -25
 			}
 			available = {
-				OR = {
-				has_country_leader_ideology = despotism
-				has_country_leader_ideology = oligarchism
-				has_country_leader_ideology = japan_militarism_ideology
-				}
+				NOT = { has_government = communism }
+				is_subject = yes
 			}
 			ai_will_do = {
 				factor = 100
@@ -1937,7 +2007,8 @@ ideas = {
 			drift_defence_factor = 0.25
 			stability_factor = 0.1
 			war_stability_factor = 0.1
-			democratic_acceptance = 15
+			democratic_acceptance = 25
+			neutrality_acceptance = 15
 			}
 			available = {
 				has_government = democratic
@@ -1971,10 +2042,7 @@ ideas = {
 			}
 			available = {
 				OR = {
-				has_country_leader_ideology = liberalism
-				has_country_leader_ideology = conservatism
-				has_country_leader_ideology = socialism
-				has_country_leader_ideology = populism
+				has_government = democratic
 				has_country_leader_ideology = centrism
 				}
 			}
@@ -1992,6 +2060,7 @@ ideas = {
 			war_stability_factor = 0.1
 			production_factory_efficiency_gain_factor = -0.05
 			communism_acceptance = 25
+			fascism_acceptance = -25
 			}
 			available = {
 				OR = {
@@ -2040,6 +2109,7 @@ ideas = {
 			defensive_war_stability_factor = 0.05
 			drift_defence_factor = 0.2
 			justify_war_goal_time = -0.25
+			democratic_acceptance = -25
 			}
 			available = {
 				OR  = {

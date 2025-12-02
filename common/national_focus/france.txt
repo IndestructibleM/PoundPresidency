@@ -10642,7 +10642,7 @@
         }
 		cost = 5
         completion_reward = {
-            country_event = { id = etatfopo.5 }
+            BEL = { country_event = { id = etatfopo.5 } }
 			add_state_core = 980
 			add_state_core = 34
 		}

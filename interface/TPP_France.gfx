@@ -586,4 +586,9 @@ spriteType = {
     texturefile = "gfx/interface/ideas/laws/draft6.dds"
 }
 
+spriteType = {
+    name = "GFX_idea_protectionism"
+    texturefile = "gfx/interface/ideas/laws/protectionism.png"
+}
+
 }

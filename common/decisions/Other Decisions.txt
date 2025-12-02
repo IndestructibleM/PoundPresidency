@@ -526,8 +526,8 @@ operations = {
 		available = { 
 			has_army_experience > 99
 		}
-		days_remove = 30
-		days_re_enable = 60
+		days_remove = 50
+		days_re_enable = 50
 		ai_will_do = {
 			factor = 70
 		}
@@ -554,8 +554,8 @@ operations = {
 		available = { 
 			has_army_experience > 99
 		}
-		days_remove = 30
-		days_re_enable = 60
+		days_remove = 50
+		days_re_enable = 50
 		ai_will_do = {
 			factor = 70
 		}
@@ -582,8 +582,8 @@ operations = {
 			has_air_experience > 99
 		}
 		icon = GFX_decision_generic_air
-		days_remove = 30
-		days_re_enable = 60
+		days_remove = 50
+		days_re_enable = 50
 		ai_will_do = {
 			factor = 70
 		}
@@ -610,8 +610,8 @@ operations = {
 			has_air_experience > 99
 		}
 		icon = GFX_decision_generic_air
-		days_remove = 30
-		days_re_enable = 60
+		days_remove = 50
+		days_re_enable = 50
 		ai_will_do = {
 			factor = 70
 		}
@@ -637,8 +637,8 @@ operations = {
 		available = { 
 			has_navy_experience > 99
 		}
-		days_remove = 30
-		days_re_enable = 60
+		days_remove = 50
+		days_re_enable = 50
 		ai_will_do = {
 			factor = 70
 		}
@@ -666,8 +666,8 @@ operations = {
 		available = { 
 			has_navy_experience > 99
 		}
-		days_remove = 30
-		days_re_enable = 60
+		days_remove = 50
+		days_re_enable = 50
 		ai_will_do = {
 			factor = 70
 		}
