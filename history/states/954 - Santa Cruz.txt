@@ -7,7 +7,7 @@ state = {
 	
 	resources = {
 		oil = 3
-		grain = 2 # initial distribution = with infra 2.4 / 2 total
+		coal = 2 # initial distribution = with infra 2.4 / 2 total
 	}
 
 	history = {

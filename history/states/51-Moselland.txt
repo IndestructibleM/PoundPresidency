@@ -3,7 +3,7 @@ state={
 	name="STATE_51"
 	resources={
 		steel=35
-		grain=60
+		coal=60
 	}
 	provinces={
 		587 3444 3547 9522 

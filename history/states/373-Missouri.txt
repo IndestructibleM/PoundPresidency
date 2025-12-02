@@ -8,7 +8,7 @@ state={
 	
 	resources={
 		aluminium=12 # was: 18
-		grain = 5 # initial distribution = with infra 8 / 1280 total
+		coal = 5 # initial distribution = with infra 8 / 1280 total
 	}
 
 

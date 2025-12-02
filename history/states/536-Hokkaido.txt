@@ -6,7 +6,7 @@ state = {
 
 	resources = {
 		steel = 18 #Took half of Tohoku's steel
-		grain = 10 #initial distribution
+		coal = 10 #initial distribution
 	}
 	
 	state_category = rural

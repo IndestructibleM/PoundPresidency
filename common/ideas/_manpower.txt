@@ -1458,6 +1458,7 @@ ideas = {
 		cancel_if_invalid = no
 		law = yes
 		use_list_view = yes
+		removal_cost = -1
 		draft1 = {
 			name = "No Draft"
 			picture = GFX_idea_draft1
@@ -1518,7 +1519,7 @@ ideas = {
 			picture = GFX_idea_draft4
 			level = 4
 			cost = 100
-			cancel_if_invalid = no
+			cancel_if_invalid = yes
 			modifier = {
 				conscription_factor = 0.1
 				weekly_manpower = 125
@@ -1526,7 +1527,13 @@ ideas = {
 				war_support_factor = -0.075
 			}
 			available = { 
-				has_war_support > 0.2
+				OR = {
+					has_war_support > 0.25
+					AND = {
+						has_war_support > 0.2
+						has_war = yes
+					}
+				}
 			}
 			ai_will_do = { factor = 120 }
 		}

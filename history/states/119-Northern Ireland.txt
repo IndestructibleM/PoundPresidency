@@ -35,7 +35,7 @@ state={
 	
 	resources={
 		aluminium=2
-		grain = 2 #initial distribution
+		coal = 2 #initial distribution
 	}
 
 	local_supplies=0.0 

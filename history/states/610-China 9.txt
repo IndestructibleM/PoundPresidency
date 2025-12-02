@@ -7,7 +7,7 @@ state = {
 
 	resources = {
 		oil = 1
-		grain = 1
+		coal = 1
 	}
 
 	history = {

@@ -6,7 +6,7 @@ state = {
 	state_category = large_town
 
 	resources = {
-		grain = 8 # 200,000 metric tons produced 
+		coal = 8 # 200,000 metric tons produced 
 		oil = 3 #1m barrels annually
 	}
 

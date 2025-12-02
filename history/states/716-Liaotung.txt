@@ -6,7 +6,7 @@ state={
 		chromium = 4
 		tungsten = 4
 		oil = 3 #Japan extracted 1m barrels annually from Manhuria
-		grain = 11
+		coal = 11
 	}
 
 	history={

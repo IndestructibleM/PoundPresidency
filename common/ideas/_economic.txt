@@ -108,8 +108,10 @@ ideas = {
 
 			modifier = {
 				consumer_goods_expected_value = 0.35
-				production_speed_industrial_complex_factor = -0.3
 				production_speed_arms_factory_factor = -0.3
+				production_speed_bunker_factor = -0.3
+				production_speed_coastal_bunker_factor = -0.3
+				production_speed_anti_air_building_factor = -0.3
 				conversion_cost_civ_to_mil_factor= 0.3
 				conversion_cost_mil_to_civ_factor = 0.3
 				max_fuel_factor = -0.25
@@ -1329,99 +1331,6 @@ ideas = {
    			}
 		}
 
-		autarkic_economy = {
-			visible = {
-				OR = {
-					AND = {
-					original_tag = GER
-					has_completed_focus = GER_autarky_efforts
-					NOT = { has_completed_focus = GER_autarky_achieved }
-					}
-					AND = {
-					original_tag = FRA
-					has_completed_focus = FRA_duel_of_fates
-					}
-				}
-			}
-
-			available = {
-			}
-
-			cost = 150
-			removal_cost = -1
-
-			modifier = {
-				min_export = 0.15
-				#industrial_capacity_factory = 0.05
-				#industrial_capacity_dockyard = 0.05
-				production_speed_buildings_factor = 0.05
-				research_speed_factor = 0.05
-				lend_lease_tension = 0.20
-				faction_trade_opinion_factor = 0.25
-				#cic_construction_boost = -0.05
-			}
-
-			cancel_if_invalid = no
-
-			ai_will_do = { #Germany should always for AutarkicEconomy if its available
-   				factor = 100
-
-   				modifier = {
-   					add = 500
-   					has_idea = limited_exports
-   				}
-
-   				modifier = {
-   					add = 1500
-   					has_idea = closed_economy
-   					has_large_ally_not_pick_closed_economy = yes
-   				}
-   			}
-		}
-
-		autarkic_economy_improved = {
-			picture = autarkic_economy
-			name = autarkic_economy
-			visible = {
-				original_tag = GER
-				has_completed_focus = GER_autarky_achieved
-			}
-
-			available = {
-			}
-
-			cost = 150
-			removal_cost = -1
-
-			modifier = {
-				min_export = 0.15
-				industrial_capacity_factory = 0.05
-				industrial_capacity_dockyard = 0.05
-				production_speed_buildings_factor = 0.1
-				research_speed_factor = 0.05
-				lend_lease_tension = 0.20
-				faction_trade_opinion_factor = 0.5
-				#cic_construction_boost = -0.05
-			}
-
-			cancel_if_invalid = no
-
-			ai_will_do = { #Germany should always for AutarkicEconomy if its available
-   				factor = 100
-
-   				modifier = {
-   					add = 500
-   					has_idea = limited_exports
-   				}
-
-   				modifier = {
-   					add = 1500
-   					has_idea = closed_economy
-   					has_large_ally_not_pick_closed_economy = yes
-   				}
-   			}
-		}
-
 		closed_economy = {
 
 
@@ -1544,6 +1453,95 @@ ideas = {
    			}
 		}
 
+
+		autarkic_economy = {
+
+			available = {
+				OR = {
+					AND = {
+					original_tag = GER
+					has_completed_focus = GER_autarky_efforts
+					NOT = { has_completed_focus = GER_autarky_achieved }
+					}
+					has_idea = totalitarianism
+				}
+			}
+
+			cost = 150
+			removal_cost = -1
+
+			modifier = {
+				min_export = 0.15
+				#industrial_capacity_factory = 0.05
+				#industrial_capacity_dockyard = 0.05
+				production_speed_buildings_factor = 0.05
+				research_speed_factor = 0.05
+				lend_lease_tension = 0.20
+				faction_trade_opinion_factor = 0.25
+				#cic_construction_boost = -0.05
+			}
+
+			cancel_if_invalid = no
+
+			ai_will_do = { #Germany should always for AutarkicEconomy if its available
+   				factor = 100
+
+   				modifier = {
+   					add = 500
+   					has_idea = limited_exports
+   				}
+
+   				modifier = {
+   					add = 1500
+   					has_idea = closed_economy
+   					has_large_ally_not_pick_closed_economy = yes
+   				}
+   			}
+		}
+
+		autarkic_economy_improved = {
+			picture = autarkic_economy
+			name = autarkic_economy
+			visible = {
+				original_tag = GER
+				has_completed_focus = GER_autarky_achieved
+			}
+
+			available = {
+			}
+
+			cost = 150
+			removal_cost = -1
+
+			modifier = {
+				min_export = 0.15
+				industrial_capacity_factory = 0.05
+				industrial_capacity_dockyard = 0.05
+				production_speed_buildings_factor = 0.1
+				research_speed_factor = 0.05
+				lend_lease_tension = 0.20
+				faction_trade_opinion_factor = 0.5
+				#cic_construction_boost = -0.05
+			}
+
+			cancel_if_invalid = no
+
+			ai_will_do = { #Germany should always for AutarkicEconomy if its available
+   				factor = 100
+
+   				modifier = {
+   					add = 500
+   					has_idea = limited_exports
+   				}
+
+   				modifier = {
+   					add = 1500
+   					has_idea = closed_economy
+   					has_large_ally_not_pick_closed_economy = yes
+   				}
+   			}
+		}
+
 		special_economic_zones = {
 			available = {
 				always = no
@@ -1578,12 +1576,12 @@ ideas = {
 		}
 	}
 	economy_model = {
-		cancel_if_invalid = no
+		cancel_if_invalid = yes
 		law = yes
 		laissez_faire = {
 			name = "Laissez-Faire"
 			picture = GFX_idea_laissez_faire
-			cost = 0
+			cost = 100
 			cancel_if_invalid = yes
 			modifier = {
 				industrial_capacity_factory = 0.15
@@ -1600,7 +1598,6 @@ ideas = {
 				has_country_leader_ideology = conservatism
 				}
 			}
-			default = yes
 			removal_cost = -1
 			allowed_to_remove = {
 				always = yes
@@ -1609,7 +1606,7 @@ ideas = {
 		keynesianism = {
 			name = "Keynesianism"
 			picture = GFX_idea_keynesianism
-			cost = 0
+			cost = 100
 			cancel_if_invalid = yes
 			available = {
 				OR = {
@@ -1617,8 +1614,7 @@ ideas = {
 				has_country_leader_ideology = populism
 				}
 			}
-			default = yes
-			removal_cost = -1
+			removal_cost = 0
 			modifier = {
 				industrial_capacity_factory = 0.08
 				industrial_capacity_dockyard = 0.08
@@ -1634,14 +1630,13 @@ ideas = {
 		gift_economy = {
 			name = "Gift Economy"
 			picture = GFX_idea_gift_economy
-			cost = 0
+			cost = 100
 			cancel_if_invalid = yes
 			available = {
 				has_country_leader_ideology = anarchism
 				has_country_leader_ideology = anarchist_communism
 			}
-			default = yes
-			removal_cost = -1
+			removal_cost = 0
 			modifier = {
 				min_export = -0.10
 				production_factory_efficiency_gain_factor = -0.10
@@ -1657,7 +1652,7 @@ ideas = {
 		decentralized_planning = {
 			name = "Decentral Planning"
 			picture = GFX_idea_decentralized_planning
-			cost = 0
+			cost = 100
 			cancel_if_invalid = yes
 			available = {
 				OR = {
@@ -1667,7 +1662,7 @@ ideas = {
 				}
 			}
 			default = yes
-			removal_cost = -1
+			removal_cost = 0
 			modifier = {
 				production_factory_efficiency_gain_factor = 0.10
 				line_change_production_efficiency_factor = -0.20
@@ -1680,7 +1675,7 @@ ideas = {
 		central_planning = {
 			name = "Central Planning"
 			picture = GFX_idea_social_planning
-			cost = 0
+			cost = 100
 			cancel_if_invalid = yes
 			available = {
 				OR = {
@@ -1689,8 +1684,7 @@ ideas = {
 				has_country_leader_ideology = anti_revisionism
 				}
 			}
-			default = yes
-			removal_cost = -1
+			removal_cost = 0
 			modifier = {
 				min_export = -0.05
 				production_factory_efficiency_gain_factor = 0.15
@@ -1703,7 +1697,7 @@ ideas = {
 		corporatism = {
 			name = "Corporatism"
 			picture = GFX_idea_corporatism
-			cost = 0
+			cost = 100
 			cancel_if_invalid = yes
 			available = {
 				OR = {
@@ -1715,8 +1709,7 @@ ideas = {
 				has_country_leader_ideology = rexism
 				}
 			}
-			default = yes
-			removal_cost = -1
+			removal_cost = 0
 			modifier = {
 				min_export = -0.10
 				production_factory_efficiency_gain_factor = -0.10
@@ -1730,7 +1723,7 @@ ideas = {
 		state_capitalism = {
 			name = "State Capitalism"
 			picture = GFX_idea_state_capitalism
-			cost = 0
+			cost = 100
 			cancel_if_invalid = yes
 			available = {
 				OR = {
@@ -1741,8 +1734,7 @@ ideas = {
 				has_country_leader_ideology = japan_militarism_ideology
 				}
 			}
-			default = yes
-			removal_cost = -1
+			removal_cost = 0
 			modifier = {
 				production_factory_efficiency_gain_factor = 0.10
 				production_factory_max_efficiency_factor = -0.05
@@ -1756,14 +1748,13 @@ ideas = {
 		traditional_economy = {
 			name = "Traditional Economy"
 			picture = GFX_idea_traditional_economy
-			cost = 0
+			cost = 100
 			cancel_if_invalid = yes
 			available = {
 				num_of_owned_factories < 10
 				is_major = no
 			}
-			default = yes
-			removal_cost = -1
+			removal_cost = 0
 			modifier = {
 				min_export = -0.1
 				production_factory_efficiency_gain_factor = -0.10
@@ -1781,10 +1772,11 @@ ideas = {
 	government_type = {
 		law = yes
 		removal_cost = -1
-		cost = 0
+		cost = 100
+		cancel_if_invalid = yes
 		oligarchy = {
-			cost = 0
-			removal_cost = -1
+			cost = 100
+			removal_cost = 0
 			modifier = {
 				political_power_factor = -0.05
 				drift_defence_factor = -0.10
@@ -1804,11 +1796,11 @@ ideas = {
 		}	
 		
 		stratocracy = {
-			cost = 0
-			removal_cost = -1
+			cost = 100
+			removal_cost = 0
 			modifier = {
 			political_power_factor = 0.05
-			stability_factor = -0.08
+			stability_factor = -0.1
 			war_support_factor = 0.1
 			war_stability_factor = 0.1
 			justify_war_goal_time = -0.25
@@ -1827,8 +1819,8 @@ ideas = {
 		}
 		
 		warlordism = {
-			cost = 0
-			removal_cost = -1
+			cost = 100
+			removal_cost = 0
 			modifier = {
 			political_power_factor = -0.1
 			stability_factor = -0.1
@@ -1844,8 +1836,8 @@ ideas = {
 		}
 		
 		colonial_gov = {
-			cost = 0
-			removal_cost = -1
+			cost = 100
+			removal_cost = 0
 			modifier = {
 				conscription_factor = -0.25
 				political_power_gain = 0.1
@@ -1866,13 +1858,13 @@ ideas = {
 		}	
 		
 		abs_monarchy = {
-			cost = 0
-			removal_cost = -1
+			cost = 100
+			removal_cost = 0
 			modifier = {
 			drift_defence_factor = 0.1
 			stability_factor = 0.05
 			political_power_factor = -0.1
-			war_support_factor = 0.1
+			war_support_factor = 0.05
 			war_stability_factor = 0.05
 			communism_acceptance = -25
 			}
@@ -1886,12 +1878,11 @@ ideas = {
 		}	
 		
 		con_monarchy = {
-			cost = 0
-			removal_cost = -1
+			cost = 100
+			removal_cost = 0
 			modifier = {
-			drift_defence_factor = 0.3
+			drift_defence_factor = 0.25
 			stability_factor = 0.1
-			war_support_factor = 0.05
 			war_stability_factor = 0.1
 			democratic_acceptance = 15
 			}
@@ -1915,8 +1906,8 @@ ideas = {
 		}	
 		
 		liberal_republic = {
-			cost = 0
-			removal_cost = -1
+			cost = 100
+			removal_cost = 0
 			modifier = {
 			drift_defence_factor = 0.1
 			political_power_factor = 0.1
@@ -1940,8 +1931,8 @@ ideas = {
 		}	
 		
 		soviet_democracy = {
-			cost = 0
-			removal_cost = -1
+			cost = 100
+			removal_cost = 0
 			modifier = {
 			drift_defence_factor = 0.1
 			political_power_factor = 0.1
@@ -1964,8 +1955,8 @@ ideas = {
 		}
 		
 		partystate = {
-			cost = 0
-			removal_cost = -1
+			cost = 100
+			removal_cost = 0
 			modifier = {
 			drift_defence_factor = 0.2
 			political_power_factor = 0.05
@@ -1987,8 +1978,8 @@ ideas = {
 		}
 		
 		totalitarianism = {
-			cost = 0
-			removal_cost = -1
+			cost = 100
+			removal_cost = 0
 			modifier = {
 			stability_factor = -0.1
 			political_power_factor = 0.15

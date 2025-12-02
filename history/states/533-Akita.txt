@@ -6,7 +6,7 @@ state = {
 	resources = {
 		steel = 10 # was: 35, then 15
 		oil = 3 #Should be located in the northern state after the split
-		grain = 2 #initial distribution
+		coal = 2 #initial distribution
 	}
 
 	history = {

@@ -8,7 +8,7 @@ state={
 
 	resources={
 		chromium = 1
-		grain = 2 # initial distribution / 3 total
+		coal = 2 # initial distribution / 3 total
 	}
 
 	history={

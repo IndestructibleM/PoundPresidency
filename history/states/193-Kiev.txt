@@ -6,9 +6,9 @@ state={
 	
 	state_category = city
 	resources = {
-		grain = 80
+		coal = 80
 	}
-	### Added by grain mod
+	### Added by coal mod
 
 	history={
 		victory_points = {

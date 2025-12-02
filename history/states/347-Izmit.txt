@@ -6,7 +6,7 @@ state={
 	resources={
 		chromium=19 # was: 26
 		steel = 9
-		grain = 5 #initial distribution
+		coal = 5 #initial distribution
 	}
 	
 	state_category = rural

@@ -7,7 +7,7 @@ state = {
 
 	resources = {
 		tungsten = 70
-		grain = 4 #Kalewa mines near the Chindwin River
+		coal = 4 #Kalewa mines near the Chindwin River
 	}
 	
 	history = {

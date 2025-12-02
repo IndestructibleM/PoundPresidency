@@ -3,9 +3,9 @@ state = {
 	name = "STATE_1036"
 
 	resources = {
-		grain = 80
+		coal = 80
 	}
-	### Added by grain mod
+	### Added by coal mod
 
 	history = {
 

@@ -2,7 +2,7 @@ state={
 	id=1046
 	name="STATE_1046"
 	resources={
-		grain = 12 #initial distribution
+		coal = 12 #initial distribution
 	}
 
 	history={

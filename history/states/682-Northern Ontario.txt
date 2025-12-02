@@ -8,7 +8,7 @@ state = {
 	resources = {
 		steel = 8 # was: 12.000
 		aluminium = 9 # was: 14.000
-		grain = 2 # initial distribution = with infra 3.2 / 36 total
+		coal = 2 # initial distribution = with infra 3.2 / 36 total
 	}
 
 	history = {

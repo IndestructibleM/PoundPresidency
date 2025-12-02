@@ -5,7 +5,7 @@ state = {
 	manpower = 2563100
 
 	resources = {
-		grain = 16 #initial distribution
+		coal = 16 #initial distribution
 	}
 
 	history = {

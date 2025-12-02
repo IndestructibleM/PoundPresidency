@@ -8,7 +8,7 @@ state={
 	
 	resources={
 		steel = 21 # was: 36
-		grain = 29 #initial distribution
+		coal = 29 #initial distribution
 	}
 
 	history={

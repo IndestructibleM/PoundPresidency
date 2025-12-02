@@ -41,7 +41,7 @@ state={
 	manpower=500000
 
 	resources = {
-		grain = 8 #initial distribution
+		coal = 8 #initial distribution
 	}
 	buildings_max_level_factor=1.000
 

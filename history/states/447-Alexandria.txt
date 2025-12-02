@@ -7,7 +7,7 @@ state={
 		oil=1 # was: 2
 		tungsten = 3 #maganese
 		steel = 3 #Maganese
-		grain = 40
+		coal = 40
 	}
 	
 	state_category = town
