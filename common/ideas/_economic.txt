@@ -108,10 +108,10 @@ ideas = {
 
 			modifier = {
 				consumer_goods_expected_value = 0.35
-				production_speed_arms_factory_factor = -0.3
-				production_speed_bunker_factor = -0.3
-				production_speed_coastal_bunker_factor = -0.3
-				production_speed_anti_air_building_factor = -0.3
+				production_speed_arms_factory_factor = -0.35
+				production_speed_bunker_factor = -0.35
+				production_speed_coastal_bunker_factor = -0.35
+				production_speed_anti_air_building_factor = -0.35
 				conversion_cost_civ_to_mil_factor= 0.3
 				conversion_cost_mil_to_civ_factor = 0.3
 				max_fuel_factor = -0.25
@@ -1600,7 +1600,7 @@ ideas = {
 			}
 			removal_cost = -1
 			allowed_to_remove = {
-				always = yes
+				always = no
 			}
 		}
 		keynesianism = {
@@ -1624,33 +1624,11 @@ ideas = {
 				line_change_production_efficiency_factor = 0.05
 			}
 			allowed_to_remove = {
-				always = yes
-			}
-		}
-		gift_economy = {
-			name = "Gift Economy"
-			picture = GFX_idea_gift_economy
-			cost = 100
-			cancel_if_invalid = yes
-			available = {
-				has_country_leader_ideology = anarchism
-				has_country_leader_ideology = anarchist_communism
-			}
-			removal_cost = 0
-			modifier = {
-				min_export = -0.10
-				production_factory_efficiency_gain_factor = -0.10
-				production_factory_max_efficiency_factor = -0.05
-				industrial_capacity_factory = 0.05
-				line_change_production_efficiency_factor = 0.10
-				consumer_goods_factor = -0.10
-			}
-			allowed_to_remove = {
-				always = yes
+				always = no
 			}
 		}
 		decentralized_planning = {
-			name = "Decentral Planning"
+			name = "Decentralized Planning"
 			picture = GFX_idea_decentralized_planning
 			cost = 100
 			cancel_if_invalid = yes
@@ -1669,12 +1647,12 @@ ideas = {
 				production_factory_start_efficiency_factor = 0.10
 			}
 			allowed_to_remove = {
-				always = yes
+				always = no
 			}
 		}
 		central_planning = {
 			name = "Central Planning"
-			picture = GFX_idea_social_planning
+			picture = GFX_eng_spirit_of_the_industrial_revolution
 			cost = 100
 			cancel_if_invalid = yes
 			available = {
@@ -1693,10 +1671,13 @@ ideas = {
 				conversion_cost_civ_to_mil_factor = -0.25
 				conversion_cost_mil_to_civ_factor = -0.25
 			}
+			allowed_to_remove = {
+				always = no
+			}
 		}
 		corporatism = {
 			name = "Corporatism"
-			picture = GFX_idea_corporatism
+			picture = GFX_idea_generic_fascist_workers
 			cost = 100
 			cancel_if_invalid = yes
 			available = {
@@ -1717,7 +1698,32 @@ ideas = {
 				production_speed_buildings_factor = 0.05
 			}
 			allowed_to_remove = {
-				always = yes
+				always = no
+			}
+		}
+		dirigisme = {
+			name = "Dirigisme"
+			cost = 100
+			cancel_if_invalid = yes
+			available = {
+				OR = {
+				has_country_leader_ideology = emperor_fascism
+				has_country_leader_ideology = despotism
+				has_country_leader_ideology = fascism_ideology
+				has_country_leader_ideology = moderatism
+				has_country_leader_ideology = gen_nazism
+				}
+			}
+			removal_cost = 0
+			modifier = {
+				min_export = -0.10
+				production_factory_efficiency_gain_factor = -0.2
+				production_factory_max_efficiency_factor = 0.1
+				production_speed_buildings_factor = 0.05
+				research_speed_factor = 0.05
+			}
+			allowed_to_remove = {
+				always = no
 			}
 		}
 		state_capitalism = {
@@ -1742,7 +1748,32 @@ ideas = {
 				industrial_capacity_factory = 0.08
 			}
 			allowed_to_remove = {
-				always = yes
+				always = no
+			}
+		}
+		mixed_economy = {
+			name = "Mixed Economy"
+			cost = 100
+			cancel_if_invalid = yes
+			available = {
+				OR = {
+				has_country_leader_ideology = socialism
+				has_country_leader_ideology = oligarchism
+				has_country_leader_ideology = moderatism
+				has_country_leader_ideology = centrism
+				has_country_leader_ideology = populism
+				}
+			}
+			removal_cost = 0
+			modifier = {
+				production_factory_efficiency_gain_factor = -0.10
+				industrial_capacity_factory = 0.08
+				industrial_capacity_dockyard = 0.08
+				production_speed_buildings_factor = 0.05
+				consumer_goods_factor = 0.08
+			}
+			allowed_to_remove = {
+				always = no
 			}
 		}
 		traditional_economy = {
@@ -1765,7 +1796,29 @@ ideas = {
 				line_change_production_efficiency_factor = 0.10
 			}
 			allowed_to_remove = {
-				always = yes
+				always = no
+			}
+		}
+		gift_economy = {
+			name = "Gift Economy"
+			picture = GFX_idea_gift_economy
+			cost = 100
+			cancel_if_invalid = yes
+			available = {
+				has_country_leader_ideology = anarchism
+				has_country_leader_ideology = anarchist_communism
+			}
+			removal_cost = 0
+			modifier = {
+				min_export = -0.10
+				production_factory_efficiency_gain_factor = -0.10
+				production_factory_max_efficiency_factor = -0.05
+				industrial_capacity_factory = 0.05
+				line_change_production_efficiency_factor = 0.10
+				consumer_goods_factor = -0.10
+			}
+			allowed_to_remove = {
+				always = no
 			}
 		}
 	}

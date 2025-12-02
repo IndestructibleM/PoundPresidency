@@ -468,7 +468,12 @@ spriteType = {
 
 spriteType = {
     name = "GFX_idea_corporatism"
-    texturefile = "gfx/interface/ideas/laws/corporatism.png"
+    texturefile = "gfx/interface/ideas/laws/corporatism.dds"
+}
+
+spriteType = {
+    name = "GFX_idea_keynesianism"
+    texturefile = "gfx/interface/ideas/laws/keynesianism.png"
 }
 
 spriteType = {
@@ -477,8 +482,18 @@ spriteType = {
 }
 
 spriteType = {
+    name = "GFX_idea_central_planning"
+    texturefile = "gfx/interface/ideas/laws/central_planning.dds"
+}
+
+spriteType = {
     name = "GFX_idea_laissez_faire"
     texturefile = "gfx/interface/ideas/laws/laizzes_faire.png"
+}
+
+spriteType = {
+    name = "GFX_idea_gift_economy"
+    texturefile = "gfx/interface/ideas/laws/gift_economy.dds"
 }
 
 spriteType = {
@@ -519,6 +534,16 @@ spriteType = {
 spriteType = {
     name = "GFX_idea_traditional_economy"
     texturefile = "gfx/interface/ideas/laws/traditional_economy.png"
+}
+
+spriteType = {
+    name = "GFX_idea_dirigisme"
+    texturefile = "gfx/interface/ideas/laws/dirigisme.png"
+}
+
+spriteType = {
+    name = "GFX_idea_mixed_economy"
+    texturefile = "gfx/interface/ideas/laws/mixed_economy.png"
 }
 
 spriteType = {
