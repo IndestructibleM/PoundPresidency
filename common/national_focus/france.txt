@@ -10838,6 +10838,7 @@ focus = {
     prerequisite = { focus = the_great_lance }
     prerequisite = { focus = unite_with_romandy }
     relative_position_id = FRA_towards_european_hegemony
+	will_lead_to_war_with = GER
     ai_will_do = {
         factor = 80
     }
@@ -10856,6 +10857,7 @@ focus = {
 focus = {
     id = die_perfidious_albion
     icon = GFX_goal_march_on_calais
+	will_lead_to_war_with = ENG
     x = 1
     y = 4
     prerequisite = { focus = FRA_beyond_natural_borders }
