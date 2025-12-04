@@ -14,12 +14,12 @@ focus_tree = {
 		factor = 0
 		
 		modifier = {
-			add = 50
+			add = 10
 			tag = USA
 		}
 		
 		modifier = {
-			add = 50
+			add = 10
 			original_tag = USA
 		}
 	}
@@ -6868,15 +6868,8 @@ focus_tree = {
 		id = USA_towards_national_utopia
 		icon = GFX_focus_generic_population_growth
 		relative_position_id = USA_reestablish_the_gold_standard
-		x = 8
+		x = 22
 		y = 0
-		offset = {
-			x = 14
-			y = 0
-			trigger = {
-				has_dlc = "Man the Guns"
-			}
-		}
 		
 		cost = 5
 
