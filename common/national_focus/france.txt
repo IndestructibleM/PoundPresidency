@@ -9533,6 +9533,7 @@
             add_stability = 0.25
 			add_political_power = 100
 			country_event = etat.11
+			promote_character = FRA_joseph_darnand
 		}
     }
     focus = {
@@ -10626,6 +10627,7 @@
 		cost = 5
         completion_reward = {
 			create_faction = fascist_nationale
+			remove_ideas = FRA_victors_of_wwi
 		}
     }
 

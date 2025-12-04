@@ -2,24 +2,10 @@ add_namespace = etat
 add_namespace = etatfopo
 
 country_event = {
-	id = etat.0
-	desc = etat.0.d
-	title = "Welcome to The Pound Presidency!"
-	fire_only_once = yes
+	id = etatfopo.1
+	title = etatfopo.1.t
 	is_triggered_only = yes
-	picture = GFX_report_event_pound_intro
-	
-	option = {
-		name = "Thank you, let me play!"
-		custom_effect_tooltip = "And thank you, player!"
-	}
-}
-
-country_event = {
-	id = etatfopo.5
-	title = etatfopo.5.t
-	is_triggered_only = yes
-	desc = etatfopo.5.d
+	desc = etatfopo.1.d
 	option = {
 		ai_chance = {
 			factor = 30
@@ -48,6 +34,39 @@ country_event = {
 				end_civil_wars = yes
 			}
 		}
+	}
+}
+
+country_event = {
+	id = etatfopo.2
+	title = etatfopo.2.t
+	fire_only_once = yes
+	desc = etatfopo.2.d
+	trigger = {
+		tag = FRA
+		has_government = fascism
+		has_war_with = GER
+		GER = { surrender_progress > 0.7 }
+	}
+	option = {
+		ai_chance = {
+			factor = 100
+		}
+		name = "The irony is defeaning. Accept."
+		white_peace = {
+			tag = GER
+			message = tt_FraBeatGer
+		}
+		GER = {
+			
+		}
+	}
+	option = {
+		ai_chance = {
+			factor = 20
+		}
+		name = "We do not acccept their mercy plea."
+		
 	}
 }
 
@@ -183,5 +202,17 @@ country_event = {
 			custom_effect_tooltip = tt_bucardwins
 			country_event = { id = etat.22 days = 5 }
 		}
+	}
+}
+
+
+country_event = {
+	id = etat.11
+	title = etat.11.t
+	desc = etat.11.d
+	is_triggered_only = yes
+	option = {
+		name = etat.11.a
+		custom_effect_tooltip = tt_dylantest
 	}
 }

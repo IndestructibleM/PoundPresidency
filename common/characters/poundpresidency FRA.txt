@@ -1,9 +1,9 @@
 characters = {
-	ITA_giusseppi_bottai = {
-		name = "Giuseseppi Bottai"
+	FRA_joseph_darnand = {
+		name = "Joseph Darnand"
 		portraits = {
 			civilian = {
-				large = "gfx/leaders/USA/Portrait_Ezra_Pound.png"
+				large = "gfx/leaders/FRA/Portrait_Joseph_Darnand.png"
 			}
 		}
 		country_leader = {
