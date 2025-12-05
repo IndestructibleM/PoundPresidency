@@ -1455,7 +1455,6 @@ ideas = {
 	}
 
 	draft = {
-		cancel_if_invalid = no
 		law = yes
 		use_list_view = yes
 		removal_cost = -1
@@ -1483,7 +1482,6 @@ ideas = {
 			picture = GFX_idea_draft2
 			level = 2
 			cost = 100
-			cancel_if_invalid = no
 			modifier = {
 				mobilization_speed = -0.35
 				conscription_factor = 0.05
@@ -1503,7 +1501,6 @@ ideas = {
 			picture = GFX_idea_draft3
 			level = 3
 			cost = 100
-			cancel_if_invalid = no
 			modifier = {
 				conscription_factor = 0.075
 				weekly_manpower = 100

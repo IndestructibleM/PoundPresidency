@@ -14,12 +14,12 @@ focus_tree = {
 		factor = 0
 		
 		modifier = {
-			add = 50
+			add = 10
 			tag = USA
 		}
 		
 		modifier = {
-			add = 50
+			add = 10
 			original_tag = USA
 		}
 	}

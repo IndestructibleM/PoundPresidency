@@ -1,4 +1,4 @@
-fra_foriegn_policy = {
+FRA_foriegn_policy = {
 	icon = GFX_decision_category_generic_fascism
 	picture = GFX_decision_cat_picture_ITA_missiolinis
 	priority = 100
@@ -7,10 +7,7 @@ fra_foriegn_policy = {
 	}
 	visible = {
 		has_government = fascism
-		has_country_leader = {
-			character = FRA_marcel_bucard
-			ruling_only = yes
-		}
+		has_completed_focus = continental_system
 	}
 }
 FRA_unification_of_europe = {

@@ -6,7 +6,6 @@ ideas = {
 
 		undisturbed_isolation = {
 
-
 			allowed = {
 				always = no
 			}
@@ -989,10 +988,7 @@ ideas = {
 	trade_laws = {
 		law = yes
 		use_list_view = yes
-
 		uncontrolled_exports = {
-
-
 			allowed = {
 				always = no
 			}
@@ -1647,7 +1643,6 @@ ideas = {
 		}
 	}
 	economy_model = {
-		cancel_if_invalid = yes
 		law = yes
 		laissez_faire = {
 			name = "Laissez-Faire"
@@ -1896,12 +1891,9 @@ ideas = {
 	}
 	government_type = {
 		law = yes
-		removal_cost = -1
-		cost = 100
-		cancel_if_invalid = yes
 		oligarchy = {
 			cost = 100
-			removal_cost = 0
+			removal_cost = -1
 			modifier = {
 				political_power_factor = -0.05
 				drift_defence_factor = -0.10
@@ -1922,7 +1914,7 @@ ideas = {
 		
 		stratocracy = {
 			cost = 100
-			removal_cost = 0
+			removal_cost = -1
 			modifier = {
 			political_power_factor = 0.05
 			stability_factor = -0.1

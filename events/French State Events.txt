@@ -1,4 +1,5 @@
 add_namespace = etat
+add_namespace = etatflav
 add_namespace = etatfopo
 
 country_event = {
@@ -28,7 +29,7 @@ country_event = {
 			transfer_state = 34
 			transfer_state = 980
 			set_autonomy = {
-				target = ROOT
+				target = BEL
 				autonomous_state = collaborator_gov
 				end_wars = yes
 				end_civil_wars = yes
@@ -57,9 +58,10 @@ country_event = {
 			tag = GER
 			message = tt_FraBeatGer
 		}
-		GER = {
-			
-		}
+		transfer_state = 51
+		transfer_state = 42
+		puppet = GER
+		GER = { add_ideas = FRA_dominating_industry }
 	}
 	option = {
 		ai_chance = {
@@ -71,8 +73,20 @@ country_event = {
 }
 
 country_event = {
+	id = etat.1
+	title = etat.1.t
+	desc = etat.1.d
+	fire_only_once = yes
+	is_triggered_only = yes
+	option = {
+		name = etat.1.a
+	}
+}
+
+
+country_event = {
 	id = etat.4
-	title = etat.4.t    ###"A Brawl over National Matters"
+	title = etat.4.t  
 	desc = etat.4.d
 	fire_only_once = yes
 	is_triggered_only = yes
@@ -92,6 +106,7 @@ country_event = {
         }
 	}
 }
+
 country_event = {
 	id = etat.5
 	title = etat.5.t
@@ -167,44 +182,41 @@ country_event = {
 	
 	is_triggered_only = yes
 	option = {
-		name = etat.19.a
-		if = {
-			limit = {
-				power_balance_value = {
-    				id = FRA_power_balance
-    				value > 0.25
-				}
+		name = etat.10.a
+		trigger = {
+			power_balance_value = {
+    			id = FRA_power_balance
+    			value > 0.25
 			}
-			custom_effect_tooltip = tt_darnandwins
-			country_event = { id = etat.20 days = 5 }
 		}
-		if = {
-			limit = {
-				power_balance_value = {
-    				id = FRA_power_balance
-    				value < -0.25
-				}
-			}
-			custom_effect_tooltip = tt_deatwins
-			country_event = { id = etat.21 days = 5 }
-		}
-		if = {
-			limit = {
-				power_balance_value = {
-    				id = FRA_power_balance
-    				value > -0.25
-				}
-				power_balance_value = {
-    				id = FRA_power_balance
-    				value < 0.25
-				}
-			}
-			custom_effect_tooltip = tt_bucardwins
-			country_event = { id = etat.22 days = 5 }
-		}
+		promote_character = FRA_joseph_darnand
 	}
+	option = {
+		name = etat.10.b
+		trigger = {
+			power_balance_value = {
+    			id = FRA_power_balance
+				value < -0.25
+			}
+		}
+		country_event = { id = etat.21 days = 2 }
+	}
+	option = {
+		name = etat.10.c
+		trigger = {
+			power_balance_value = {
+    		id = FRA_power_balance
+    		value > -0.25
+		}
+		power_balance_value = {
+    		id = FRA_power_balance
+    		value < 0.25
+		}
+		}
+		country_event = { id = etat.22 days = 2 }
+	}
+	
 }
-
 
 country_event = {
 	id = etat.11
@@ -213,6 +225,17 @@ country_event = {
 	is_triggered_only = yes
 	option = {
 		name = etat.11.a
-		custom_effect_tooltip = tt_dylantest
+		promote_character = FRA_joseph_darnand
+	}
+}
+
+country_event = {
+	id = etat.12
+	title = etat.12.t
+	desc = etat.12.d
+	is_triggered_only = yes
+	option = {
+		name = etat.12.a
+		promote_character = FRA_marcel_deat
 	}
 }

@@ -1,5 +1,5 @@
-fra_foriegn_policy = {
-	fra_invade_hol = {
+FRA_foriegn_policy = {
+	FRA_invade_hol = {
 		name = "Striking the Lance"
 		icon = GFX_decision_hol_draw_up_staff_plans
 		fire_only_once = yes
@@ -29,7 +29,7 @@ fra_foriegn_policy = {
 			}
 		}
 	}
-	fra_geneva_award = {
+	FRA_geneva_award = {
 		name = "First Geneva Award"
 		fire_only_once = yes
 		allowed = { tag = FRA }
@@ -41,8 +41,7 @@ fra_foriegn_policy = {
         	factor = 100
     	}
 		available = {
-			date > 1937.2.1
-			845 = { is_owned_by = FRA }
+			owns_state = 845
 		}
 
 		remove_effect = {
@@ -52,7 +51,7 @@ fra_foriegn_policy = {
 			}
 		}
 	}		
-	fra_march_into_catalonia = {
+	FRA_march_into_catalonia = {
 		name = "March into Catalonia"
 		fire_only_once = yes
 		allowed = { tag = FRA }
@@ -65,7 +64,8 @@ fra_foriegn_policy = {
         	factor = 100
     	}
 		available = {
-			SPR = { has_war_with = SPA }
+			SPR = { has_civil_war = yes }
+			country_exists = SPA
 			has_completed_focus = latin_brotherhood
 		}
 
@@ -74,6 +74,7 @@ fra_foriegn_policy = {
 				transfer_state_to = ROOT
 				add_core_of = ROOT
 			}
+			army_experience = 10
 		}
 	}			
 	FRA_invite_to_continental_system = {
@@ -138,6 +139,7 @@ fra_foriegn_policy = {
 		}
 	}	
 }
+
 FRA_triumph_of_neosocialism_cat = {
 	FRA_integrate_west_germany = {
 		name = "Integrate Western Germany"
