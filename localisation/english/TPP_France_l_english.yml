@@ -11,6 +11,7 @@
  FRA_NeoSocEuropa_DEF: "the European Social Republic"
  FRA_NeoSocEuropa_ADJ: "European"
  
+ ### FOCUS ###
  plenty_for_people:0 "Plenty for the People"
  grand_industrial_plan:0 "A Grand Industrial Plan"
  french_militarism:0 "Ignite our Fire"
@@ -35,12 +36,12 @@
  destiny_of_french_nation: "Destiny of the French Nation"
  
  rousing_speeches: "Rousing Speaches"
-FRA_une_peuple_une_nation_une_chef: "Une People, Une Nation, Une Chef"
-finely_dressed: ""But You Will Be Finely Dressed""
-FRA_vitalization_of_french_culture: "The Vitalization of French Culture"
-birth_programs: "Births for the French Nation"
-state_athleticism: "State Athleticism"
-FRA_the_autoroutes: "The Autoroutes"
+ FRA_une_peuple_une_nation_une_chef: "Une People, Une Nation, Une Chef"
+ finely_dressed: ""But You Will Be Finely Dressed""
+ FRA_vitalization_of_french_culture: "The Vitalization of French Culture"
+ birth_programs: "Births for the French Nation"
+ state_athleticism: "State Athleticism"
+ FRA_the_autoroutes: "The Autoroutes"
 algeria_colonization: "Final Colonization of Algeria"
 FRA_juenesses_patriotes: "Juenesses Patriotes"
 begin_projects: "Begin our Great Projects"
@@ -130,3 +131,10 @@ etat.3.d: "Though the Francist March on Paris has succeeded, not all nationalist
 etat.3.a: "Integrate them - France must stand united."
 etat.3.b: "Purge these reactionary pretenders at once!"
 etat.3.c: "Remove de La Rocque, Darnand will command the veterans."
+
+ GER_FRA_fascism_subject: "Confédération Allemande"
+ GER_FRA_fascism_subject_DEF: "the Confédération Allemande"
+ PRE_FRA_fascism_subject: "Prussian State"
+ PRE_FRA_fascism_subject_DEF: "the Prussian State"
+ 
+ BrotherhoodofEurope: "Brotherhood Europa"

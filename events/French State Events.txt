@@ -60,8 +60,29 @@ country_event = {
 		}
 		transfer_state = 51
 		transfer_state = 42
-		puppet = GER
-		GER = { add_ideas = FRA_dominating_industry }
+		GER = { 
+			add_ideas = FRA_dominating_industry 
+			release = SHL
+		}
+		PRE = {
+			transfer_state = 64
+			transfer_state = 62
+			transfer_state = 63
+			transfer_state = 68
+			transfer_state = 61
+		}
+		set_autonomy = {
+			target = GER
+			autonomous_state = collaborator_gov
+		}
+		set_autonomy = {
+			target = SHL
+			autonomous_state = collaborator_gov
+		}
+		puppet = PRE
+		POL = {
+			every_claimed_state = { limit = { owner = GER } transfer_state_to = POL }
+		}
 	}
 	option = {
 		ai_chance = {

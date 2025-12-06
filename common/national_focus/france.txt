@@ -10686,7 +10686,6 @@
 				target = LUX
 			}
 			add_state_claim = 8
-			add_threat = 5
 		}
     }
 
@@ -10773,7 +10772,10 @@
 			give_guarantee = POL
 			POL = {
 				add_popularity = { ideology = fascism popularity = 0.2 }
+				add_state_claim = 5
+				add_state_claim = 67
 			}
+			85 = { set_demilitarized_zone = no }
 		}
 	}
 focus = {
