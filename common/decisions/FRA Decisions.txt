@@ -5,6 +5,7 @@ FRA_foriegn_policy = {
 		fire_only_once = yes
 		allowed = { tag = FRA }
 		war_with_on_complete = HOL
+		priority = 2
 		days_remove = 60
 		available = {
 			date > 1939.7.15
@@ -36,6 +37,7 @@ FRA_foriegn_policy = {
 		icon = GFX_decision_hol_draw_up_staff_plans
 		cost = 100
 		days_remove = 10
+		priority = 4
 		targets = { SWI }
 		ai_will_do = {
         	factor = 100
@@ -57,6 +59,7 @@ FRA_foriegn_policy = {
 		allowed = { tag = FRA }
 		icon = GFX_decision_hol_draw_up_staff_plans
 		days_remove = 10
+		priority = 5
 		cost = 100
 		targets = { 165 }
 		state_target = yes
@@ -83,7 +86,7 @@ FRA_foriegn_policy = {
 		allowed = { tag = FRA }
 		cost = 30
 		days_remove = 10
-		targets = { ITA POL SPA IRE GRE }
+		targets = { ITA POL SPA IRE GRE ROM }
 		ai_will_do = {
         	factor = 80
     	}
@@ -111,22 +114,18 @@ FRA_foriegn_policy = {
 		allowed = { tag = FRA }
 		cost = 50
 		days_remove = 10
-		targets = { ITA POL SPA IRE GRE }
+		targets = { ITA POL SPA IRE ROM }
 		ai_will_do = {
         	factor = 80
     	}
 		available ={
 			FROM = {
 				is_in_faction = no
-				OR = {
-					has_opinion = { target = ROOT value > 75 }
-					AND = {
-						has_government = fascism 
-						has_opinion = { target = ROOT value > 50 }
-					}
-				}
+				has_opinion = { target = ROOT value > 70 }
+				fascism > 0.4
 			}
 		}
+	
 		visible = {
 			has_completed_focus = molotov_brassilach_pact
 			FROM = {
@@ -136,6 +135,29 @@ FRA_foriegn_policy = {
 
 		remove_effect = {
 			add_to_faction = FROM
+		}
+	}
+	
+	FRA_inspire_fascism_in_allies = {
+		name = FRA_inspire_fascism_in_allies
+		fire_only_once = yes
+		allowed = { tag = FRA }
+		cost = 50
+		days_remove = 50
+		targets = { POL SPA IRE ROM }
+		ai_will_do = {
+        	factor = 80
+    	}
+		available ={
+			FROM = {
+				NOT = { has_government = fascism }
+			}
+		}
+		complete_effect = {
+			FROM = { add_popularity = { ideology = fascism popularity = 0.05 } }
+		}
+		remove_effect = {
+			FROM = { add_popularity = { ideology = fascism popularity = 0.1 } }
 		}
 	}	
 }

@@ -47,7 +47,7 @@ country_event = {
 		tag = FRA
 		has_government = fascism
 		has_war_with = GER
-		GER = { surrender_progress > 0.7 }
+		GER = { surrender_progress > 0.65 }
 	}
 	option = {
 		ai_chance = {
@@ -73,6 +73,34 @@ country_event = {
 }
 
 country_event = {
+	id = etatfopo.3
+	title = etatfopo.3.t
+	fire_only_once = yes
+	desc = etatfopo.3.d
+	trigger = {
+		tag = FRA
+		has_completed_focus = the_great_lance
+	}
+	mean_time_to_happen = { days = 30 }
+	option = {
+		ai_chance = {
+			factor = 15
+		}
+		name = "On second thought..."
+		ENG = { give_guarantee = HOL }
+		remove_decision = fra_invade_hol
+	}
+	option = {
+		ai_chance = {
+			factor = 20
+		}
+		name = "GTFO Eternal Anglo"
+		ENG = { give_guarantee = HOL }
+		add_threat = 5
+	}
+}
+
+country_event = {
 	id = etat.1
 	title = etat.1.t
 	desc = etat.1.d
@@ -80,6 +108,38 @@ country_event = {
 	is_triggered_only = yes
 	option = {
 		name = etat.1.a
+	}
+}
+
+country_event = {
+	id = etat.3
+	title = etat.3.t
+	desc = etat.3.d
+	fire_only_once = yes
+	trigger = {
+		has_power_balance = {
+			id = FRA_power_balance
+		}
+		tag = FRA
+	}
+	mean_time_to_happen = { days = 60 }
+	option = {
+		name = etat.3.a
+		add_political_power = 20
+	}
+	option = {
+		name = etat.3.b
+		add_power_balance_value = {
+            id = FRA_power_balance
+            value = -0.1
+        }
+	}
+	option = {
+		name = etat.3.c
+		add_power_balance_value = {
+            id = FRA_power_balance
+            value = 0.1
+        }
 	}
 }
 

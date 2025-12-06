@@ -10618,6 +10618,7 @@
         completion_reward = {
 			create_faction = fascist_nationale
 			remove_ideas = FRA_victors_of_wwi
+			add_threat = 5
 		}
     }
 
@@ -10685,6 +10686,7 @@
 				target = LUX
 			}
 			add_state_claim = 8
+			add_threat = 5
 		}
     }
 
@@ -10712,7 +10714,7 @@
         icon = GFX_goal_the_great_lance
         x = -2
         y = 3
-        prerequisite = { focus = molotov_brassilach_pact }
+        prerequisite = { focus = FRA_ally_poland }
         relative_position_id = FRA_towards_european_hegemony
         ai_will_do = {
 		    factor = 50
@@ -10757,8 +10759,8 @@
         }
     }
     focus = {
-        id = molotov_brassilach_pact
-        icon = GFX_goal_molotov_brassilach_pact
+        id = FRA_ally_poland
+        icon = GFX_goal_FRA_ally_poland
         x = -2
         y = 2
         prerequisite = { focus = continental_system }
@@ -10768,15 +10770,9 @@
 		}
 		cost = 4
 		completion_reward = {
-			diplomatic_relation = {
-			country = SOV
-			relation = non_aggression_pact
-			active = yes
-			}
-			add_tech_bonus = {
-				bonus = 0.5
-				uses = 2
-				category = armor
+			give_guarantee = POL
+			POL = {
+				add_popularity = { ideology = fascism popularity = 0.2 }
 			}
 		}
 	}

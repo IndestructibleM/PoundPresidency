@@ -117,10 +117,16 @@ fascist_nationale: "Fascist Nationale"
 
 FRA_NeoSocEuropa: "European Social Republic"
 
-literally_charlemange: "§YLiterally Charlemange§!"
+literally_charlemange: "§Literally Charlemange§!"
 joseph_the_carpenter: "§YJoseph the Carpenter§!"
 
 #### EVENTS ####
 etat.1.t: "The March on Paris Triumphs!"
 etat.1.d: "Paris awoke today to the thunderous echo of boots upon its boulevards. Thousands of uniformed Francist militants surged through the capital in a disciplined, relentless column, led personally by Marcel Bucard. The government of the Popular Front, already weakened by internal discord and paralysed by crisis, collapsed with stunning speed as Francist detachments seized ministries, telegraph offices, and the Chamber of Deputies. \n\nBy midday, Bucard appeared on the balcony of the Hôtel de Ville, greeted by a roaring crowd of supporters waving the banners of the Francist Movement. In a fiery speech, he proclaimed the downfall of “the corrupt parliamentary clique,” heralding the birth of a new national order for France. He vowed to restore authority, discipline, and unity, invoking parallels to Mussolini’s own rise and declaring France “reborn through action, will, and sacrifice.” \n\nAs evening descends over Paris, the tricolour still flies — but now guarded by Francist militias. The fate of the Republic is no longer in doubt: a new regime has taken its place, forged in the spectacle and force of a march the world will not soon forget."
 etat.1.a: "Our forefathers fought for liberty. We fight for order."
+
+etat.3.t: "The Croix-de-Feu Question"
+etat.3.d: "Though the Francist March on Paris has succeeded, not all nationalist forces in France clearly stand beneath Marcel Bucard’s banner. The Croix-de-Feu, led by the respected veteran François de La Rocque, remain one of the largest and most disciplined right-wing leagues in the country. Their membership—overwhelmingly decorated veterans—commands enormous public sympathy, and their organisational strength is unmatched. \n\nNow that the Francists control the government, the question of how to treat the Croix-de-Feu has become a key internal struggle. \n\nMarcel Bucard, aiming to avoid destructive infighting, insists that they must be peacefully integrated into the new National Francist State. A divided right, he argues, would only embolden the regime’s enemies. \n\nMarcel Déat, however, deeply distrusts their moderation and their mass popularity. He warns that they are “a bourgeois relic masquerading as nationalism” and demands their dissolution and purge before they can challenge the Party’s authority. \n\nJoseph Darnand, ever the militant organiser, proposes a third path: remove de La Rocque, absorb the Croix-de-Feu’s elite paramilitaries under his command, and forge a unified, loyalist militia to secure the revolution through force."
+etat.3.a: "Integrate them - France must stand united."
+etat.3.b: "Purge these reactionary pretenders at once!"
+etat.3.c: "Remove de La Rocque, Darnand will command the veterans."
