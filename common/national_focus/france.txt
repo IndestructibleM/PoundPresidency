@@ -9462,8 +9462,9 @@
 		}
 		cost = 5
         completion_reward = {
-            add_political_power = 50
+            add_political_power = 100
 			country_event = etat.6
+			add_popularity = { ideology = democratic popularity = -0.1 }
 		}
     }
 
@@ -10064,9 +10065,9 @@
             }
 		}
     }
-	 focus = {
+	focus = {
         id = rousing_speeches ### FIX ALL THIS SHITTY 2022 IMPERIAL ECLIPSE CODE
-        x = -19
+        x = -18
         y = 1
 		icon = GFX_FRA_Endless_Devotion_Patrie_Imperiale
         prerequisite = { focus = FRA_duel_of_fates }
@@ -10074,16 +10075,17 @@
         ai_will_do = {
 		    factor = 50
 		}
-		cost = 3
+		cost = 4
         completion_reward = {
 			add_popularity = { ideology = fascism popularity = 0.1 }
 			add_war_support = 0.05
 			add_stability = 0.05
 			country_event = etat.8
+			add_ideas = FRA_revolution_nationale
 		}
     }
     focus = {
-        id = FRA_vitalization_of_french_culture
+        id = FRA_out_liberty_in_order
         x = -2
         y = 1
 		icon = GFX_FRA_aesthetic_community
@@ -10097,79 +10099,10 @@
         	add_ideas = FRA_french_cultural_movement
    		}
    	}
-    focus = {
-        id = FRA_the_autoroutes
-        x = -2
-        y = 2
-        prerequisite = { focus = FRA_vitalization_of_french_culture }
-        relative_position_id = rousing_speeches
-        ai_will_do = {
-		    factor = 50
-		}
-		cost = 4
-        completion_reward = {
-            21 = {
-        	    add_building_construction = {
-					type = infrastructure
-					level = 3
-					instant_build = yes
-			    }
-            }
-            32 = {
-        	    add_building_construction = {
-					type = infrastructure
-					level = 3
-					instant_build = yes
-			    }
-            }
-            26 = {
-        	    add_building_construction = {
-					type = infrastructure
-					level = 3
-					instant_build = yes
-			    }
-            }
-            33 = {
-        	    add_building_construction = {
-					type = infrastructure
-					level = 3
-					instant_build = yes
-			    }
-            }
-            16 = {
-        	    add_building_construction = {
-					type = infrastructure
-					level = 3
-					instant_build = yes
-			    }
-            }
-            15 = {
-        	    add_building_construction = {
-					type = infrastructure
-					level = 3
-					instant_build = yes
-			    }
-            }
-		}
-    }
-    focus = {
-        id = like_caeser_like_bonaparte
-        x = -2
-        y = 3
-		icon = GFX_FRA_imperial
-        prerequisite = { focus = FRA_the_autoroutes }
-        relative_position_id = rousing_speeches
-        ai_will_do = {
-		    factor = 50
-		}
-		cost = 4
-        completion_reward = {
-        	
-		}
-    }
+
     focus = {
         id = FRA_une_peuple_une_nation_une_chef
-        x = 0
+        x = 2
         y = 1
         prerequisite = { focus = rousing_speeches }
         relative_position_id = rousing_speeches
@@ -10181,42 +10114,9 @@
         	remove_ideas = FRA_disjointed_government
 		}
     }
-    focus = {
-        id = finely_dressed
-        x = 0
-        y = 2
-        prerequisite = { focus = FRA_une_peuple_une_nation_une_chef }
-        relative_position_id = rousing_speeches
-        ai_will_do = {
-		    factor = 50
-		}
-		cost = 4
-        completion_reward = {
-        	add_political_power = 50
-		}
-    }
-    focus = {
-        id = algeria_colonization
-        x = 0
-        y = 3
-		icon = GFX_focus_fra_french_union
-        prerequisite = { focus = finely_dressed }
-        relative_position_id = rousing_speeches
-        ai_will_do = {
-		    factor = 50
-		}
-		cost = 4
-        completion_reward = {
-        	add_state_core = 460
-        	add_state_core = 459
-			add_state_core = 458
-            add_state_claim = 513
-        	add_manpower = -10000
-		}
-	}
 	focus = {
-        id = birth_programs
-        x = 2
+        id = FRA_new_life_movement
+        x = 0
         y = 1
         prerequisite = { focus = rousing_speeches }
         relative_position_id = rousing_speeches
@@ -10225,32 +10125,15 @@
 		}
 		cost = 4
         completion_reward = {
-        	add_ideas = birth_programs
-		}
-    }
-    focus = {
-        id = state_athleticism
-        x = 2
-        y = 2
-        prerequisite = { focus = birth_programs }
-        relative_position_id = rousing_speeches
-        ai_will_do = {
-		    factor = 50
-		}
-		cost = 4
-        completion_reward = {
-        	swap_ideas = {
-        		remove_idea = birth_programs
-        		add_idea = new_life_movement
-        	}
+        	add_ideas = new_life_movement	
 		}
     }
     focus = {
         id = FRA_juenesses_patriotes
 		icon = GFX_FRA_idealsofyouth
-        x = 2
-        y = 3
-        prerequisite = { focus = state_athleticism }
+        x = 0
+        y = 2
+        prerequisite = { focus = FRA_new_life_movement }
         relative_position_id = rousing_speeches
         ai_will_do = {
 		    factor = 50
@@ -10618,6 +10501,7 @@
         completion_reward = {
 			create_faction = fascist_nationale
 			remove_ideas = FRA_victors_of_wwi
+			unlock_decision_category_tooltip = FRA_foriegn_policy
 			add_threat = 5
 		}
     }
@@ -10723,6 +10607,12 @@
 		cost = 4
         completion_reward = {
 			unlock_decision_tooltip = fra_invade_hol
+			add_tech_bonus = {
+    			bonus = 0.5
+    			uses = 2
+    			category = armor
+			}
+			custom_effect_tooltip = "The British won't take kindly to this plan..."
 		}
     }
     focus = {
@@ -10754,7 +10644,6 @@
             POL = {
                 add_opinion_modifier = { target = FRA modifier = huge_increase }
             }
-			unlock_decision_category_tooltip = FRA_foriegn_policy
         }
     }
     focus = {
@@ -10771,11 +10660,19 @@
 		completion_reward = {
 			give_guarantee = POL
 			POL = {
-				add_popularity = { ideology = fascism popularity = 0.2 }
+				add_popularity = { ideology = fascism popularity = 0.1 }
 				add_state_claim = 5
 				add_state_claim = 67
 			}
-			85 = { set_demilitarized_zone = no }
+			send_equipment = {
+    			equipment = infantry_equipment
+    			amount = 2000
+    			target = POL
+			}
+			ENG = {
+                add_opinion_modifier = { target = FRA modifier = faction_traitor }
+                add_opinion_modifier = { target = POL modifier = faction_traitor }
+            }
 		}
 	}
 focus = {
@@ -10793,6 +10690,12 @@ focus = {
     cost = 4
     completion_reward = {
 		give_guarantee = IRE
+		unlock_decision_tooltip = FRA_request_irelands_help
+		send_equipment = {
+    		equipment = infantry_equipment
+    		amount = 2000
+    		target = IRE
+		}
     }
 }
 focus = {
@@ -10864,6 +10767,12 @@ focus = {
             target = ENG
             type = annex_everything
         }
+		add_mastery_bonus = {
+    		bonus = 0.5
+    		days = 120
+    		# FILTERS:
+    		folder = air
+		}
     }
 }
 focus = {
@@ -10919,6 +10828,11 @@ focus = {
 			target = DEN
 			type = annex_everything
 	    }
+		add_tech_bonus = {
+    		bonus = 1
+    		uses = 1
+    		category = tp_tech
+		}
     }
 }
 focus = {
@@ -10934,11 +10848,12 @@ focus = {
     ai_will_do = {
         factor = 50
     }
-    available = {
-        GER_has_war_with = ENG
-    }
     cost = 5
     completion_reward = {
+		every_claimed_state = {
+			limit = { is_controlled_by_ROOT_or_ally = yes }
+			transfer_state_to = FRA
+		}
     }
 }
 focus = {

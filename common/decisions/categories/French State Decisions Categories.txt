@@ -7,7 +7,7 @@ FRA_foriegn_policy = {
 	}
 	visible = {
 		has_government = fascism
-		has_completed_focus = continental_system
+		has_completed_focus = FRA_towards_european_hegemony
 	}
 }
 FRA_unification_of_europe = {
