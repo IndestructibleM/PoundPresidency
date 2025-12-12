@@ -127,7 +127,7 @@ FRA_foriegn_policy = {
 		}
 	
 		visible = {
-			has_completed_focus = molotov_brassilach_pact
+			has_completed_focus = continental_system
 			FROM = {
 				is_guaranteed_by = ROOT
 			}
