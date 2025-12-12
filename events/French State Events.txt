@@ -61,14 +61,15 @@ country_event = {
 		transfer_state = 51
 		transfer_state = 42
 		GER = { 
-			add_ideas = FRA_dominating_industry 
 			release = SHL
+			retire_country_leader = yes
 		}
 		PRE = {
 			transfer_state = 64
 			transfer_state = 62
 			transfer_state = 63
 			transfer_state = 68
+			transfer_state = 65
 			transfer_state = 61
 		}
 		set_autonomy = {
@@ -89,7 +90,7 @@ country_event = {
 			factor = 20
 		}
 		name = "We do not acccept their mercy plea."
-		
+		add_command_power = 30
 	}
 }
 
@@ -318,5 +319,16 @@ country_event = {
 	option = {
 		name = etat.12.a
 		promote_character = FRA_marcel_deat
+	}
+}
+
+country_event = {
+	id = etatflav.1
+	title = etatflav.1.t
+	desc = etatflav.1.d
+	is_triggered_only = yes
+	option = {
+		name = etatflav.1.a
+		custom_effect_tooltip = "Crime will drop by 13%"
 	}
 }

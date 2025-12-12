@@ -112,6 +112,7 @@ FRA_foriegn_policy = {
 		name = "Invite [FROM.GetNameDEF] to the Fascist Nationale"
 		fire_only_once = yes
 		allowed = { tag = FRA }
+		fire_only_once = yes
 		cost = 50
 		days_remove = 10
 		targets = { ITA POL SPA IRE ROM }
@@ -120,7 +121,6 @@ FRA_foriegn_policy = {
     	}
 		available ={
 			FROM = {
-				is_in_faction = no
 				has_opinion = { target = ROOT value > 70 }
 				fascism > 0.4
 			}
@@ -164,7 +164,7 @@ FRA_foriegn_policy = {
 
 FRA_triumph_of_neosocialism_cat = {
 	FRA_integrate_west_germany = {
-		name = "Integrate Western Germany"
+		name = "Integrate TEMP"
 		fire_only_once = yes
 		allowed = { tag = FRA  }
 		days_remove = 25
@@ -204,42 +204,10 @@ FRA_triumph_of_neosocialism_cat = {
 
 
 FRA_balance_of_power_category = {
-	FRA_rally_the_milice = {
-		allowed = { tag = FRA }
-		cost = 50
-		days_remove = 20
-		ai_will_do = {
-        	factor = 100
-    	}
-
-		remove_effect = {
-			add_power_balance_value = {
-   				id = FRA_power_balance
-    			value = 0.15
-    			tooltip_side = FRA_milice_side
-			}
-		}
-	}
-	FRA_work_with_neosocialists = {
-		allowed = { tag = FRA }
-		cost = 50
-		days_remove = 20
-		ai_will_do = {
-        	factor = 100
-    	}
-
-		remove_effect = {
-			add_power_balance_value = {
-   				id = FRA_power_balance
-    			value = -0.15
-    			tooltip_side = FRA_neosocialists_side
-			}
-		}
-	}
 	
 	FRA_resolve_the_party_crisis = {
 		allowed = { tag = FRA }
-		days_mission_timeout = 365
+		days_mission_timeout = 350
 		fire_only_once = yes
 		activation = {
 			has_completed_focus = FRA_viva_la_revolution_nationale
@@ -263,5 +231,76 @@ FRA_balance_of_power_category = {
 			add_political_power = -150
 		}
 	}
+}
 
+operations = {
+	FRA_integrate_claimed_territory = {
+	name = "Integrate [FROM.GetName] into Greater France"
+	state_target = yes
+	icon = GFX_decision_infiltrate_state
+	target_trigger = {
+		FROM = {
+		is_owned_and_controlled_by = FRA
+		is_claimed_by = FRA
+		NOT = { is_core_of = FRA }
+		is_on_continent = europe
+		}
+	}
+	fire_only_once = yes
+	on_map_mode = map_only
+	allowed = { 
+		tag = FRA
+	}
+	cost = 25
+	days_remove = 35
+	available = { 
+		FROM = {
+			resistance < 20
+			compliance > 50
+		}
+	}
+	modifier = { political_power_factor = -0.15 }
+	ai_will_do = {
+		factor = 90
+	}
+	remove_effect = {
+		FROM = { 
+			add_core_of = ROOT
+			remove_claim_by = ROOT
+		}
+	}
+	}
+	
+	FRA_annex_belgium = {
+	name = "Annex the Rest of Belgium"
+	targets = { BEL }
+	icon = GFX_decision_infiltrate_state
+	visible = {
+		has_completed_focus = the_rattach
+		country_exists = BEL
+	}
+	available = {
+		FROM = {
+		is_subject_of = FRA
+		has_government = fascism
+		}
+		has_stability > 0.5
+	}
+	fire_only_once = yes
+	allowed = { 
+		tag = FRA
+	}
+	cost = 50
+	days_remove = 80
+	modifier = { political_power_factor = -0.20 }
+	ai_will_do = {
+		factor = 90
+	}
+	remove_effect = {
+		annex_country = {
+			target = BEL
+			transfer_troops = yes
+		}
+	}
+	}
 }

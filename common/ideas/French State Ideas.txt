@@ -115,7 +115,7 @@ ideas = {
 			}
 		}
 
-		revolution_nationale_3 = {
+		FRA_revolution_nationale_3 = {
 			name = "Revolution Nationale"
 			modifier = {
 				surrender_limit = 0.15
@@ -189,12 +189,12 @@ ideas = {
 			}
 		}
 
-		fraternitas_ferri_advisors = {
+		FRA_grande_armee_fasciste = {
 			on_add = { log = "[GetDateText]: [Root.GetName]: add idea FRA_market_socialism_idea" }
-			name = "French Advisors"
+			name = "Grande Armee Fasciste"
 			allowed = { always = no }
 			modifier = {
-				max_planning = 0.08
+				max_planning = 0.10
 				army_speed_factor = 0.05
 				experience_gain_army_factor = 0.10
 			}
