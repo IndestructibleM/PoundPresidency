@@ -2,7 +2,12 @@ on_actions = {
 	on_startup = {
 		effect = {
 			LIB = { recruit_character = LIB_Marcus_Garvey }
-			FRA = { recruit_character = FRA_joseph_darnand }
+			FRA = { 
+				recruit_character = FRA_joseph_darnand 
+				recruit_character = FRA_marcel_deat_leader 
+				recruit_character = FRA_pierre_la_rochelle 
+				recruit_character = FRA_xavier_vallat 
+			}
 			MEX = { recruit_character = MEX_Jose_Vasconcelos_PP }	
 			every_country = { country_event = { id = pound.0 days = 0 } }
 			18 = {

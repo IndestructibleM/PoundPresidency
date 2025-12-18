@@ -134,11 +134,13 @@ etat.3.c: "Remove de La Rocque, Darnand will command the veterans."
 
 etatflav.1.t: "The Rise of the “ThugHunters”"
 etatflav.1.d: "With Joseph Darnand’s new order settling into place, the regime has begun reorganizing domestic security with brutal efficiency. The Milice Nationale, already feared, has been supplemented by an even more specialised force—an elite internal police cadre tasked exclusively with rooting out violent criminals, black marketeers, saboteurs, and political agitators. \n\nOfficially, they are known as the Groupe de Sécurité Spéciale, men selected from the hardest, coldest veterans of the Eastern Legion and the urban paramilitaries. Unofficially, the public has already given them a far more colourful nickname: the “ThugHunters.” \n\nStories circulate through cafés and alleys: masked squads kicking down doors in the grey hours before dawn, criminals dragged into unmarked vans, entire rackets dissolved overnight. Some citizens praise the sudden drop in street crime; others mutter that the ThugHunters seem almost too eager, too unrestrained, too frighteningly loyal to Darnand alone. \n\nThe new Chief of State, for his part, seems pleased. These men, he declares, are “the shield of the New France.” Yet even members of his own regime whisper that this force—trained by Darnand himself—may be less a shield and more a weapon waiting for a target he alone chooses."
-etatflav.1.a: "“Crime will not survive in the New France.”"
+etatflav.1.a: "Crime will not survive in the New France."
 
- GER_FRA_fascism_subject: "Confédération Allemande"
- GER_FRA_fascism_subject_DEF: "the Confédération Allemande"
- PRE_FRA_fascism_subject: "State of Prussia"
- PRE_FRA_fascism_subject_DEF: "the State of Prussia"
+GER_FRA_fascism_subject: "Confédération Allemande"
+GER_FRA_fascism_subject_DEF: "the Confédération Allemande"
+PRE_FRA_fascism_subject: "State of Prussia"
+PRE_FRA_fascism_subject_DEF: "the State of Prussia"
  
- BrotherhoodofEurope: "Brotherhood Europa"
+BrotherhoodofEurope: "Brotherhood Europa"
+
+fascisttakeover: "§tThe Currently Ruling Fascist Movement Will Take Over All Politics in France!§!"

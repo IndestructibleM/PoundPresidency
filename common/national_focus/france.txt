@@ -9557,7 +9557,7 @@
 			country_event = etat.11
             custom_effect_tooltip = fascisttakeover
             hidden_effect = {
-                add_popularity = { ideology = vitalism popularity = 1 }
+                add_popularity = { ideology = fascism popularity = 1 }
             }
 			add_ideas = totalitarianism
 		}
@@ -9932,12 +9932,10 @@
 		cost = 8
         completion_reward = {
 			add_manpower = -3000
-			set_popularities = {
-				democratic = 0
-				neutrality = 0
-				fascism = 100
-				communism = 0
-			}
+			custom_effect_tooltip = fascisttakeover
+            hidden_effect = {
+                add_popularity = { ideology = fascism popularity = 1 }
+            }
 			add_stability = 0.08	
 		}
     }
@@ -10201,7 +10199,7 @@
         available = {
             has_government = fascism
 			has_country_leader = {
-				character = FRA_marcel_deat
+				character = FRA_marcel_deat_leader
 				ruling_only = yes
 			}
         }
@@ -10285,7 +10283,7 @@
         completion_reward = {
             custom_effect_tooltip = fascisttakeover
             hidden_effect = {
-                add_popularity = { ideology = vitalism popularity = 1 }
+                add_popularity = { ideology = fascism popularity = 1 }
             }
 			add_ideas = partystate
 		}

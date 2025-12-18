@@ -10,4 +10,47 @@ characters = {
 			ideology = fascism_ideology
 		}
 	}
+	
+	FRA_marcel_deat_leader = {
+		name = "Marcel Deat"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/FRA/Portrait_Marcel_Deat.png"
+			}
+		}
+		country_leader = {
+			ideology = fascism_ideology
+		}
+	}
+
+	FRA_pierre_la_rochelle = {
+		name = "Pierre Drieu La Rochelle"
+		portraits = {
+			civilian = {
+				small = "gfx/interface/advisors/FRA/FRA_pierre_la_rochelle.png"
+			}
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = FRA_pierre_la_rochelle_idea
+			available = { has_government = fascism }
+			traits = { ideological_crusader }
+		}
+	}
+
+	FRA_xavier_vallat = {
+		name = "Xavier Vallat"
+		portraits = {
+			civilian = {
+				small = "gfx/interface/advisors/FRA/FRA_xavier_vallat.png"
+			}
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = FRA_xavier_vallat_idea
+			available = { has_government = fascism }
+			traits = { ideological_crusader }
+		}
+	}
+
 }

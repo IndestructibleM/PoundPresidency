@@ -318,7 +318,7 @@ country_event = {
 	is_triggered_only = yes
 	option = {
 		name = etat.12.a
-		promote_character = FRA_marcel_deat
+		promote_character = FRA_marcel_deat_leader
 	}
 }
 
