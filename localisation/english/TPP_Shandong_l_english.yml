@@ -4,6 +4,9 @@
  #######################
  SND_power_balance: "The Swing of the Dogmeat"
  SND_crackpot_side: "Crackpot Dictator"
- SND_tyrannical_side: "Tyrant Warlord"
+ SND_tyrannical_side: "Brutish Warlord"
  
  ### FOCUS ###
+ 
+ SND_warlords_personal_fife: "A Warlord's Personal Fife"
+ SND_chaos_is_a_ladder: "Chaos is a Ladder"
