@@ -1,0 +1,14 @@
+ideas = {
+	country = {
+
+		SND_stable_silver_supply = {
+			name = "Stabilized Silver Supply"
+			picture = FRA_spirit_of_vengeance
+			allowed = { always = no }
+			modifier = {
+				consumer_goods_factor = -0.15
+                industrial_capacity_factory = 0.1
+			}
+		}
+    }
+}

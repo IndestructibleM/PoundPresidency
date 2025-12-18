@@ -1,0 +1,1454 @@
+focus_tree = {
+	id = dogmeat_focus
+	
+	country = {
+		factor = 0
+		
+		modifier = {
+			add = 20
+			tag = SND
+		}
+	}
+    continuous_focus_position = { x = 300 y = 2000 }
+	initial_show_position = {
+		x = 0
+	}
+
+	
+	default = no
+	focus = {
+		id = SND_dogmeat_general_ascendent
+		#icon = 
+		x = 4
+		y = 0
+		
+		prerequisite = {}
+		mutually_exclusive = { }
+		cost = 5
+			ai_will_do = {
+			factor = 1
+		}
+		available = {
+			
+		}
+		
+		bypass = {
+
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		completion_reward = {
+	
+		}
+	}
+    focus = {
+		id = SND_rule_by_rifle_whim
+		#icon = 
+		x = -1
+		y = 1
+		relative_position_id = SND_dogmeat_general_ascendent
+		prerequisite = { focus = SND_dogmeat_general_ascendent }
+		mutually_exclusive = { }
+		cost = 5
+			ai_will_do = {
+			factor = 1
+		}
+		available = {
+			
+		}
+		
+		bypass = {
+
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		completion_reward = {
+			add_equipment_to_stockpile = {
+            type = infantry_equipment
+            amount = 2000
+        	}
+			add_political_power = 50
+		}
+	}
+    focus = {
+		id = SND_shandong_under_strongman
+		#icon = 
+		x = 1
+		y = 1
+		relative_position_id = SND_dogmeat_general_ascendent
+		prerequisite = { focus = SND_dogmeat_general_ascendent }
+		mutually_exclusive = { }
+		cost = 5
+			ai_will_do = {
+			factor = 1
+		}
+		available = {
+			
+		}
+		
+		bypass = {
+
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		completion_reward = {
+			add_ideas = warlordism
+		}
+	}
+    focus = {
+		id = SND_warlords_personal_fife
+		#icon = 
+		x = 0
+		y = 2
+		relative_position_id = SND_dogmeat_general_ascendent
+		prerequisite = { 
+            focus = SND_rule_by_rifle_whim 
+        }
+        prerequisite = {
+            focus = SND_shandong_under_strongman 
+        }
+		mutually_exclusive = { }
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		completion_reward = {
+			every_owned_state = {
+       			add_extra_state_shared_building_slots = 2
+        	}
+			add_victory_points = {
+	        	province = 1069
+               value = 5
+       		}
+		}
+	}
+    focus = {
+		id = SND_chaos_is_a_ladder
+		#icon = 
+		x = 0
+		y = 3
+		relative_position_id = SND_dogmeat_general_ascendent
+		prerequisite = { 
+            focus = SND_warlords_personal_fife 
+        }
+		mutually_exclusive = { }
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			
+		}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		completion_reward = {
+			capital_scope = {
+        		add_extra_state_shared_building_slots = 1
+        		add_building_construction = {
+           		type = arms_factory
+            	level = 1
+           		instant_build = yes
+        		}
+				add_building_construction = {
+           		type = infrastructure
+            	level = 1
+           		instant_build = yes
+        		}
+        	}
+			set_power_balance = {
+    			id = SND_power_balance
+    			left_side = SND_crackpot_side
+    			right_side = SND_tyrannical_side
+			}
+		}
+	}
+    focus = {
+		id = SND_loyalty_bought_not_earned
+		#icon = 
+		x = 0
+		y = 4
+		relative_position_id = SND_dogmeat_general_ascendent
+		prerequisite = { 
+            focus = SND_chaos_is_a_ladder 
+        }
+		mutually_exclusive = { }
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		completion_reward = {
+			add_equipment_to_stockpile = {
+            type = motorized_equipment
+            amount = 300
+        	}
+			add_equipment_to_stockpile = {
+            type = support_equipment
+            amount = 200
+        	}
+			add_political_power = 50
+		}
+	}
+    focus = {
+		id = SND_rails_for_guns
+		#icon = 
+		x = -2
+		y = 5
+		relative_position_id = SND_dogmeat_general_ascendent
+		prerequisite = { 
+            focus = SND_loyalty_bought_not_earned 
+        }
+		mutually_exclusive = { }
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			
+		}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		completion_reward = {
+			add_equipment_to_stockpile = {
+            type = infantry_equipment
+            amount = 2000
+        	}
+			add_equipment_bonus = {
+           		bonus = {
+                train_equipment = {
+			        build_cost_ic  = -0.15
+                }
+            	}
+      		}
+		}
+	}
+    
+    focus = {
+		id = SND_shandong_arsenal
+		#icon = 
+		x = 0
+		y = 5
+		relative_position_id = SND_dogmeat_general_ascendent
+		prerequisite = { 
+            focus = SND_loyalty_bought_not_earned 
+        }
+		mutually_exclusive = { }
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			
+		}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		completion_reward = {
+	
+		}
+	}
+    
+    focus = {
+		id = SND_industry_through_coercion
+		#icon = 
+		x = 2
+		y = 5
+		relative_position_id = SND_dogmeat_general_ascendent
+		prerequisite = { 
+            focus = SND_loyalty_bought_not_earned 
+        }
+		mutually_exclusive = { }
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			
+		}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		completion_reward = {
+			random_core_state = {
+            add_extra_state_shared_building_slots = 1
+            add_building_construction = {
+            type = arms_factory 
+            level = 1
+            instant_build = yes
+            }
+			}
+			random_core_state = {
+			add_extra_state_shared_building_slots = 2
+            add_building_construction = {
+            type = industrial_complex 
+            level = 2
+            instant_build = yes
+            }
+        	}
+		}
+	}
+    
+    focus = {
+		id = SND_country_won_by_shellfire
+		#icon = 
+		x = -1
+		y = 6
+		relative_position_id = SND_dogmeat_general_ascendent
+		prerequisite = { 
+            focus = SND_loyalty_bought_not_earned 
+        }
+		mutually_exclusive = { }
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			
+		}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		completion_reward = {
+			add_equipment_to_stockpile = {
+            type = artillery_equipment
+            amount = 250
+        	}
+		}
+	}
+    
+    focus = {
+		id = SND_national_strength_above_all
+		#icon = 
+		x = 1
+		y = 6
+		relative_position_id = SND_dogmeat_general_ascendent
+		prerequisite = { 
+            focus = SND_loyalty_bought_not_earned 
+        }
+		mutually_exclusive = { }
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			
+		}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		completion_reward = {
+			upgrade_draft_law = yes
+		}
+	}
+    
+    focus = {
+		id = SND_shandong_open_for_business
+		#icon = 
+		x = 0
+		y = 7
+		relative_position_id = SND_dogmeat_general_ascendent
+		prerequisite = { 
+            focus = SND_country_won_by_shellfire 
+        }
+        prerequisite = { 
+            focus = SND_national_strength_above_all 
+        }
+        prerequisite = { 
+            focus = SND_shandong_arsenal 
+        }
+		mutually_exclusive = { }
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			
+		}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		completion_reward = {
+			add_equipment_to_stockpile = {
+            type = support_equipment
+            amount = 200
+        	}
+		}
+	}
+    
+    focus = {
+		id = SND_foreign_advisors_no_questions
+		#icon = 
+		x = 0
+		y = 8
+		relative_position_id = SND_dogmeat_general_ascendent
+		prerequisite = { 
+            focus = SND_shandong_open_for_business 
+        }
+		mutually_exclusive = { }
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			
+		}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		completion_reward = {
+			add_research_slot = 1
+		}
+	}
+    
+    focus = {
+		id = SND_japanese_brokers
+		#icon = 
+		x = -1
+		y = 9
+		relative_position_id = SND_dogmeat_general_ascendent
+		prerequisite = { 
+            focus = SND_foreign_advisors_no_questions 
+        }
+		mutually_exclusive = { }
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			
+		}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		completion_reward = {
+	
+		}
+	}
+    
+    focus = {
+		id = SND_invite_white_russians
+		#icon = 
+		x = 0
+		y = 10
+		relative_position_id = SND_dogmeat_general_ascendent
+		prerequisite = { 
+            focus = SND_foreign_advisors_no_questions 
+        }
+		mutually_exclusive = { }
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			
+		}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		completion_reward = {
+	
+		}
+	}
+
+    focus = {
+		id = SND_concessions_for_cannons
+		#icon = 
+		x = 1
+		y = 9
+		relative_position_id = SND_dogmeat_general_ascendent
+		prerequisite = { 
+            focus = SND_foreign_advisors_no_questions 
+        }
+		mutually_exclusive = { }
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			
+		}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		completion_reward = {
+			add_equipment_to_stockpile = {
+            type = artillery_equipment
+            amount = 200
+        	}
+			add_political_power = -50
+		}
+	}
+
+    ### ECONOMY ###
+
+    focus = {
+		id = SND_found_dogmeat_economics
+		#icon = 
+		x = 12
+		y = 0
+		
+		prerequisite = {}
+		mutually_exclusive = { }
+		cost = 5
+			ai_will_do = {
+			factor = 1
+		}
+		available = {
+			
+		}
+		
+		bypass = {
+
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		completion_reward = {
+			add_tech_bonus = {
+            bonus = 0.35
+            uses = 3
+            category = industry
+      		}
+		}
+	}
+    focus = {
+		id = SND_opium_lifeline
+		#icon = 
+		x = 12
+		y = 1
+		
+		prerequisite = { focus = SND_found_dogmeat_economics }
+		mutually_exclusive = { }
+		cost = 5
+			ai_will_do = {
+			factor = 1
+		}
+		available = {
+			
+		}
+		
+		bypass = {
+
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		completion_reward = {
+			add_resource = {
+				type = grain
+				amount = 10
+				state = 597
+			}
+			add_equipment_to_stockpile = {
+            type = rations_eq
+            amount = 2000
+        	}
+		}
+	}
+    focus = {
+		id = SND_vice_as_state_policy
+		#icon = 
+		x = -2
+		y = 2
+		relative_position_id = SND_found_dogmeat_economics
+		prerequisite = { 
+            focus = SND_opium_lifeline 
+        }
+		mutually_exclusive = { }
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			
+		}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		completion_reward = {
+	
+		}
+	}
+    focus = {
+		id = SND_smugglers_in_uniform
+		#icon = 
+		x = 0
+		y = 2
+		relative_position_id = SND_found_dogmeat_economics
+		prerequisite = { 
+            focus = SND_opium_lifeline 
+        }
+		mutually_exclusive = { }
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			
+		}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		completion_reward = {
+			unlock_decision_tooltip = SND_raid_the_warlords
+		}
+	}
+
+    focus = {
+		id = SND_nation_high_on_revenue
+		#icon = 
+		x = 2
+		y = 2
+		relative_position_id = SND_found_dogmeat_economics
+		prerequisite = { 
+            focus = SND_opium_lifeline 
+        }
+		mutually_exclusive = { }
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			
+		}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		completion_reward = {
+	
+		}
+	}
+    
+    focus = {
+		id = SND_managed_kleptocracy
+		#icon = 
+		x = -1
+		y = 3
+		relative_position_id = SND_found_dogmeat_economics
+		prerequisite = { 
+            focus = SND_vice_as_state_policy 
+        }
+		mutually_exclusive = { }
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			
+		}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		completion_reward = {
+	
+		}
+	}
+    focus = {
+		id = SND_war_workshops
+		#icon = 
+		x = 1
+		y = 3
+		relative_position_id = SND_found_dogmeat_economics
+		prerequisite = { 
+            focus = SND_nation_high_on_revenue 
+        }
+		mutually_exclusive = { }
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			
+		}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		completion_reward = {
+	
+		}
+	}
+    
+    focus = {
+		id = SND_hire_men_who_count
+		#icon = 
+		x = 0
+		y = 4
+		relative_position_id = SND_found_dogmeat_economics
+		prerequisite = { 
+            focus = SND_war_workshops 
+        }
+        prerequisite = { 
+            focus = SND_smugglers_in_uniform 
+        }
+        prerequisite = { 
+            focus = SND_managed_kleptocracy 
+        }
+		mutually_exclusive = { }
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			
+		}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		completion_reward = {
+			remove_ideas = CHI_ineffective_bureaucracy_warlord
+		}
+	}
+    
+    focus = {
+		id = SND_sieze_banks
+		#icon = 
+		x = -1
+		y = 5
+		relative_position_id = SND_found_dogmeat_economics
+		prerequisite = { 
+            focus = SND_hire_men_who_count 
+        }
+		mutually_exclusive = { }
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			
+		}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		completion_reward = {
+			every_owned_state = {
+				add_building_construction = {
+           		type = infrastructure
+            	level = 1
+           		instant_build = yes
+        		}
+			}
+			add_offsite_building = { type = arms_factory level = 2 }
+		}
+	}
+    focus = {
+		id = SND_stabilize_silver
+		#icon = 
+		x = 1
+		y = 5
+		relative_position_id = SND_found_dogmeat_economics
+		prerequisite = {
+            focus = SND_hire_men_who_count 
+        }
+		mutually_exclusive = { }
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			
+		}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		completion_reward = {
+			add_ideas = SND_stable_silver_supply
+		}
+	}
+
+    focus = {
+		id = SND_dogmeat_model
+		#icon = 
+		x = 0
+		y = 6
+		relative_position_id = SND_found_dogmeat_economics
+		prerequisite = {
+            focus = SND_stabilize_silver 
+        }
+        prerequisite = {
+            focus = SND_sieze_banks 
+        }
+		mutually_exclusive = { }
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			
+		}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		completion_reward = {
+			remove_ideas = CHI_warlord_state_idea
+		}
+	}
+	
+	focus = {
+		id = SND_test_neighboring_cliques
+		#icon = 
+		x = 20
+		y = 0
+		mutually_exclusive = { }
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			OR = {
+				has_completed_focus = SND_dogmeat_model
+				has_completed_focus = SND_shandong_open_for_business
+			}
+		}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		completion_reward = {
+			create_wargoal = {
+            target = HBC
+            type = annex_everything
+        	}
+			add_command_power = 30
+		}
+	}
+	
+	focus = {
+		id = SND_war_the_only_diplomacy
+		#icon = 
+		x = 0
+		y = 1
+		prerequisite = {
+            focus = SND_test_neighboring_cliques 
+        }
+        relative_position_id = SND_test_neighboring_cliques
+		mutually_exclusive = { }
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			
+		}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		completion_reward = {
+	
+		}
+	}
+
+	focus = {
+		id = SND_kingdom_of_gunfire
+		#icon = 
+		x = 0
+		y = 2
+		prerequisite = {
+            focus = SND_war_the_only_diplomacy 
+        }
+        relative_position_id = SND_test_neighboring_cliques
+		mutually_exclusive = { }
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			
+		}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		completion_reward = {
+	
+		}
+	}
+	
+	focus = {
+		id = SND_warlord_against_empire
+		#icon = 
+		x = -1
+		y = 3
+		prerequisite = {
+            focus = SND_kingdom_of_gunfire 
+        }
+        relative_position_id = SND_test_neighboring_cliques
+		mutually_exclusive = { }
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			
+		}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		completion_reward = {
+	
+		}
+	}
+
+	focus = {
+		id = SND_ghosts_of_zoulin
+		#icon = 
+		x = 1
+		y = 3
+		prerequisite = {
+            focus = SND_kingdom_of_gunfire 
+        }
+        relative_position_id = SND_test_neighboring_cliques
+		mutually_exclusive = { }
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			
+		}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		completion_reward = {
+	
+		}
+	}
+	
+	focus = {
+		id = SND_shells_against_rising_sun
+		#icon = 
+		x = 0
+		y = 4
+		prerequisite = {
+            focus = SND_ghosts_of_zoulin 
+        }
+		prerequisite = {
+            focus = SND_warlord_against_empire 
+        }
+        relative_position_id = SND_test_neighboring_cliques
+		mutually_exclusive = { }
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			
+		}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		completion_reward = {
+	
+		}
+	}
+	
+	focus = {
+		id = SND_merge_the_cliques
+		#icon = 
+		x = -1
+		y = 5
+		prerequisite = {
+            focus = SND_shells_against_rising_sun 
+        }
+        relative_position_id = SND_test_neighboring_cliques
+		mutually_exclusive = { }
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			
+		}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		completion_reward = {
+	
+		}
+	}
+
+	focus = {
+		id = SND_poems_in_blood_and_sorrow
+		#icon = 
+		x = 1
+		y = 5
+		prerequisite = {
+            focus = SND_shells_against_rising_sun 
+        }
+        relative_position_id = SND_test_neighboring_cliques
+		mutually_exclusive = { }
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			
+		}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		completion_reward = {
+	
+		}
+	}
+
+	focus = {
+		id = SND_crown_king_of_north
+		#icon = 
+		x = 0
+		y = 6
+		prerequisite = {
+            focus = SND_merge_the_cliques 
+        }
+		prerequisite = {
+            focus = SND_poems_in_blood_and_sorrow 
+        }
+        relative_position_id = SND_test_neighboring_cliques
+		mutually_exclusive = { }
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			
+		}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		completion_reward = {
+	
+		}
+	}
+	
+	focus = {
+		id = SND_march_down_yellow_river
+		#icon = 
+		x = 11
+		y = 8
+		mutually_exclusive = { }
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			
+		}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		completion_reward = {
+	
+		}
+	}
+	focus = {
+		id = SND_reckoning_with_chiangkaishek
+		#icon = 
+		x = 2
+		y = 0
+		relative_position_id = SND_march_down_yellow_river
+		mutually_exclusive = { }
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			
+		}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		completion_reward = {
+	
+		}
+	}
+
+	focus = {
+		id = SND_erase_sun_yat_sens_heirs
+		#icon = 
+		x = 1
+		y = 1
+		relative_position_id = SND_march_down_yellow_river
+		mutually_exclusive = { }
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			
+		}
+		prerequisite = {
+            focus = SND_march_down_yellow_river 
+        }
+		prerequisite = {
+            focus = SND_reckoning_with_chiangkaishek 
+        }
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		completion_reward = {
+	
+		}
+	}
+
+	focus = {
+		id = SND_no_more_frontier_kings
+		#icon = 
+		x = -1
+		y = 2
+		relative_position_id = SND_march_down_yellow_river
+		mutually_exclusive = { }
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			
+		}
+		prerequisite = {
+            focus = SND_erase_sun_yat_sens_heirs 
+        }
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		completion_reward = {
+	
+		}
+	}
+
+	focus = {
+		id = SND_crush_red_bandits
+		#icon = 
+		x = 1
+		y = 2
+		relative_position_id = SND_march_down_yellow_river
+		mutually_exclusive = { }
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			
+		}
+		prerequisite = {
+            focus = SND_erase_sun_yat_sens_heirs 
+        }
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		completion_reward = {
+	
+		}
+	}
+	
+	focus = {
+		id = SND_end_southwest_cliques
+		#icon = 
+		x = 3
+		y = 2
+		relative_position_id = SND_march_down_yellow_river
+		mutually_exclusive = { }
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			
+		}
+		prerequisite = {
+            focus = SND_erase_sun_yat_sens_heirs 
+        }
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		completion_reward = {
+	
+		}
+	}
+	
+	focus = {
+		id = SND_one_warlord_to_rule_them_all
+		#icon = 
+		x = 1
+		y = 3
+		relative_position_id = SND_march_down_yellow_river
+		mutually_exclusive = { }
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			
+		}
+		prerequisite = {
+            focus = SND_no_more_frontier_kings 
+        }
+		prerequisite = {
+            focus = SND_crush_red_bandits 
+        }
+		prerequisite = {
+            focus = SND_end_southwest_cliques 
+        }
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		completion_reward = {
+	
+		}
+	}
+
+	focus = {
+		id = SND_mandate_of_the_gun
+		#icon = 
+		x = 1
+		y = 4
+		relative_position_id = SND_march_down_yellow_river
+		mutually_exclusive = { }
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			
+		}
+		prerequisite = {
+            focus = SND_one_warlord_to_rule_them_all 
+        }
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		completion_reward = {
+	
+		}
+	}
+	
+	focus = {
+		id = SND_eternal_warlord_state
+		#icon = 
+		x = 18
+		y = 8
+		#relative_position_id = SND_march_down_yellow_river
+		mutually_exclusive = { }
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			has_country_flag = HasUnitedChina
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		completion_reward = {
+	
+		}
+	}
+	
+	focus = {
+		id = SND_institutionalize_warlordism
+		#icon = 
+		x = -1
+		y = 1
+		relative_position_id = SND_eternal_warlord_state
+		mutually_exclusive = { }
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			
+		}
+		prerequisite = {
+            focus = SND_eternal_warlord_state 
+        }
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		completion_reward = {
+	
+		}
+	}
+	focus = {
+		id = SND_decree_on_drunkenness
+		#icon = 
+		x = 1
+		y = 1
+		relative_position_id = SND_eternal_warlord_state
+		mutually_exclusive = { }
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			
+		}
+		prerequisite = {
+            focus = SND_eternal_warlord_state 
+        }
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		completion_reward = {
+	
+		}
+	}
+	
+	focus = {
+		id = SND_centralize_the_cliques
+		#icon = 
+		x = 0
+		y = 2
+		relative_position_id = SND_eternal_warlord_state
+		mutually_exclusive = { }
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			
+		}
+		prerequisite = {
+            focus = SND_decree_on_drunkenness 
+        }
+		prerequisite = {
+            focus = SND_institutionalize_warlordism 
+        }
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		completion_reward = {
+	
+		}
+	}
+	focus = {
+		id = SND_rebuild_what_we_broke
+		#icon = 
+		x = -1
+		y = 3
+		relative_position_id = SND_eternal_warlord_state
+		mutually_exclusive = { }
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			
+		}
+		prerequisite = {
+            focus = SND_centralize_the_cliques 
+        }
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		completion_reward = {
+	
+		}
+	}
+	focus = {
+		id = SND_china_must_never_be_weak
+		#icon = 
+		x = 1
+		y = 3
+		relative_position_id = SND_eternal_warlord_state
+		mutually_exclusive = { }
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			
+		}
+		prerequisite = {
+            focus = SND_centralize_the_cliques 
+        }
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		completion_reward = {
+	
+		}
+	}
+
+	focus = {
+		id = SND_the_dogmeat_dynasty
+		#icon = 
+		x = 0
+		y = 4
+		relative_position_id = SND_eternal_warlord_state
+		mutually_exclusive = { }
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			
+		}
+		prerequisite = {
+            focus = SND_rebuild_what_we_broke 
+        }
+		prerequisite = {
+            focus = SND_china_must_never_be_weak 
+        }
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		completion_reward = {
+	
+		}
+	}
+}
