@@ -3,8 +3,8 @@ ideas = {
 
 		SND_stable_silver_supply = {
 			name = "Stabilized Silver Supply"
-			picture = FRA_spirit_of_vengeance
-			allowed = { always = no }
+			#picture = 
+			allowed = { tag = SND }
 			modifier = {
 				consumer_goods_factor = -0.15
                 industrial_capacity_factory = 0.1
@@ -12,11 +12,52 @@ ideas = {
 		}
 		SND_high_on_revenue = {
 			name = "High on Revenue"
-			picture = FRA_spirit_of_vengeance
-			allowed = { always = no }
+			#picture = 
+			allowed = { tag = SND }
 			modifier = {
 				production_factory_max_efficiency_factor = 0.05
                 production_speed_buildings_factor = 0.10
+			}
+		}
+		
+		SND_corruption_powered = {
+			name = "Corruption is Actually Good"
+			#picture = 
+			allowed = { tag = SND }
+			modifier = {
+				political_power_factor = 0.10
+                stability_factor = 0.05
+			}
+		}
+		
+		SND_zhang_zongchang_is_high = {
+			name = "Zongchang is High Again"
+			#picture = 
+			allowed = { tag = SND }
+			modifier = {
+				stability_factor = -0.5
+				power_balance_daily = -0.02
+			}
+		}
+		
+		SND_against_an_empire = {
+			name = "Warlord Against an Empire"
+			#picture = 
+			allowed = { tag = SND }
+			targeted_modifier = {
+				tag = JAP
+				attack_bonus_against = 0.10
+				defense_bonus_against = 0.10
+			}
+		}
+
+		SND_lord_of_war = {
+			name = "Lord of War"
+			#picture = 
+			allowed = { tag = SND }
+			modifier = {
+				justify_war_goal_time = -0.50
+				generate_wargoal_tension = -0.3
 			}
 		}
     }
