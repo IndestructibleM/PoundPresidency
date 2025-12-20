@@ -274,7 +274,7 @@ focus_tree = {
             category = infantry_weapons
       		}
 			add_tech_bonus = {
-            bonus = 0.35
+            bonus = 1
             uses = 2
             category = artillery
       		}
@@ -344,6 +344,9 @@ focus_tree = {
 		continue_if_invalid = no
 		available_if_capitulated = no
 		completion_reward = {
+			set_technology = {
+    			gw_artillery = 1
+			}
 			add_equipment_to_stockpile = {
             type = artillery_equipment
             amount = 200
@@ -1020,6 +1023,7 @@ focus_tree = {
 		available_if_capitulated = no
 		completion_reward = {
 			MAN = { every_owned_state = { add_claim_by = SND } }
+			MEN = { every_owned_state = { add_claim_by = SND } }
 		}
 	}
 	
@@ -1078,14 +1082,31 @@ focus_tree = {
 			factor = 1
 		}
 		available = {
-			
+			has_war = no
+			has_political_power > 200
 		}
 		
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
 		completion_reward = {
-	
+			annex_country = {
+   				target = MEN
+    			transfer_troops = yes
+			}
+			annex_country = {
+   				target = MAN
+    			transfer_troops = yes
+			}
+			annex_country = {
+   				target = SHX
+    			transfer_troops = yes
+			}
+			annex_country = {
+   				target = HBC
+    			transfer_troops = yes
+			}
+			add_political_power = -200
 		}
 	}
 
@@ -1111,7 +1132,7 @@ focus_tree = {
 		continue_if_invalid = no
 		available_if_capitulated = no
 		completion_reward = {
-	
+			
 		}
 	}
 
@@ -1140,7 +1161,12 @@ focus_tree = {
 		continue_if_invalid = no
 		available_if_capitulated = no
 		completion_reward = {
-	
+			every_owned_state = {
+				if = { 
+					limit = { is_controlled_by = SND }
+					add_core_of = SND
+				}
+			}
 		}
 	}
 	

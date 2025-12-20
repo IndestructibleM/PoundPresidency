@@ -46,7 +46,6 @@ SND_power_balance = {
 			max = -0.4
 			modifier = {
 				neutrality_drift = -0.03
-				power_balance_weekly = -0.01
 			}
 			on_activate = {
 				
@@ -99,7 +98,6 @@ SND_power_balance = {
 			modifier = {
 				neutrality_drift = -0.03
 				war_support_factor = 0.04
-				power_balance_weekly = 0.01
 			}
 			on_activate = {
 			}

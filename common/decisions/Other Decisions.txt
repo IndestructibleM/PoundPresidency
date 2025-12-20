@@ -682,3 +682,100 @@ operations = {
 		}
 	}
 }
+
+SND_balance_of_power_cat = {
+	SND_opium_bread_circuses = {
+	name = "Bread and Circuses with Opium"
+	days_re_enable = 80
+    allowed = { 
+		tag = SND
+	}
+	ai_will_do = {
+       	factor = 90
+    }
+	days_remove = 50
+	cost = 50
+    complete_effect = {
+		add_popularity = { ideology = neutrality popularity = 0.05 }
+	}
+	remove_effect = {
+		add_power_balance_value = {
+			id = SND_power_balance
+			value = -0.15
+		}
+	}
+	}
+	
+	SND_crush_opposition = {
+	name = "Enforce Law without Order"
+	days_re_enable = 80
+    allowed = { 
+		tag = SND
+	}
+	ai_will_do = {
+       	factor = 90
+    }
+	days_remove = 50
+	cost = 50
+    complete_effect = {
+		add_popularity = { ideology = neutrality popularity = 0.05 }
+	}
+	remove_effect = {
+		add_power_balance_value = {
+			id = SND_power_balance
+			value = 0.15
+		}
+	}
+	}
+	
+	SND_gambling = {
+	name = "Do Some Gambling"
+	days_re_enable = 35
+    allowed = { 
+		tag = SND
+	}
+	ai_will_do = {
+       	factor = 80
+    }
+	days_remove = 10
+	cost = 25
+    remove_effect = {
+		random_list = {
+    		10 = {
+    	    add_stability = 0.05
+  			}
+    		10 = {
+        	add_manpower = 5000
+    		}
+    		10 = {
+        	add_war_support = 0.05
+    		}
+    		10 = {
+        	army_experience = 5
+    		}
+			10 = {
+    	    add_stability = -0.05
+  			}
+    		10 = {
+        	add_manpower = -5000
+    		}
+    		10 = {
+        	add_war_support = -0.05
+    		}
+    		10 = {
+        	army_experience = -5
+    		}
+			10 = {
+        		add_equipment_to_stockpile = {
+            		type = infantry_equipment
+            		amount = 250
+        		}	
+    		}
+			10 = {
+        		add_timed_idea = { idea = SND_zhang_zongchang_is_high days = 10 }
+    		}
+		}
+	}
+	}
+	
+}

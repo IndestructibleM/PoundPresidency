@@ -36,7 +36,7 @@ ideas = {
 			allowed = { tag = SND }
 			modifier = {
 				stability_factor = -0.5
-				power_balance_daily = -0.02
+				power_balance_daily = -0.01
 			}
 		}
 		
@@ -47,7 +47,7 @@ ideas = {
 			targeted_modifier = {
 				tag = JAP
 				attack_bonus_against = 0.10
-				defense_bonus_against = 0.10
+				defense_bonus_against = 0.25
 			}
 		}
 
@@ -57,7 +57,7 @@ ideas = {
 			allowed = { tag = SND }
 			modifier = {
 				justify_war_goal_time = -0.50
-				generate_wargoal_tension = -0.3
+				generate_wargoal_tension = -0.3	
 			}
 		}
     }
