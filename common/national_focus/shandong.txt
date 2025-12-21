@@ -68,7 +68,7 @@ focus_tree = {
 		completion_reward = {
 			add_equipment_to_stockpile = {
             type = infantry_equipment
-            amount = 4000
+            amount = 3000
         	}
 			add_political_power = 50
 		}
@@ -201,7 +201,7 @@ focus_tree = {
 		completion_reward = {
 			add_equipment_to_stockpile = {
             type = infantry_equipment
-            amount = 1500
+            amount = 1000
         	}
 			add_equipment_to_stockpile = {
             type = support_equipment
@@ -506,6 +506,12 @@ focus_tree = {
 		continue_if_invalid = no
 		available_if_capitulated = no
 		completion_reward = {
+			add_equipment_to_stockpile = {
+            type = infantry_equipment
+            amount = 1500
+        	}
+			army_experience = 30
+			recruit_character = SOV_grigory_semyonov
 		}
 	}
 
@@ -901,8 +907,8 @@ focus_tree = {
 	focus = {
 		id = SND_test_neighboring_cliques
 		icon = GFX_goal_generic_territory_or_war
-		x = 19
-		y = 0
+		x = 9
+		y = 7
 		mutually_exclusive = { }
 		cost = 6
 		ai_will_do = {
@@ -1185,8 +1191,8 @@ focus_tree = {
 	focus = {
 		id = SND_march_down_yellow_river
 		#icon = 
-		x = 23
-		y = 2
+		x = 13
+		y = 9
 		mutually_exclusive = { }
 		cost = 6
 		ai_will_do = {
@@ -1415,8 +1421,8 @@ focus_tree = {
 	focus = {
 		id = SND_eternal_warlord_state
 		icon = GFX_focus_CHI_a_new_middle_kingdom
-		x = 9
-		y = 8
+		x = 19
+		y = 0
 		#relative_position_id = SND_march_down_yellow_river
 		mutually_exclusive = { }
 		cost = 6
