@@ -68,7 +68,7 @@ focus_tree = {
 		completion_reward = {
 			add_equipment_to_stockpile = {
             type = infantry_equipment
-            amount = 2000
+            amount = 4000
         	}
 			add_political_power = 50
 		}
@@ -200,8 +200,8 @@ focus_tree = {
 		available_if_capitulated = no
 		completion_reward = {
 			add_equipment_to_stockpile = {
-            type = motorized_equipment
-            amount = 300
+            type = infantry_equipment
+            amount = 1500
         	}
 			add_equipment_to_stockpile = {
             type = support_equipment
@@ -274,7 +274,7 @@ focus_tree = {
             category = infantry_weapons
       		}
 			add_tech_bonus = {
-            bonus = 1
+            bonus = 0.5
             uses = 2
             category = artillery
       		}
@@ -349,7 +349,7 @@ focus_tree = {
 			}
 			add_equipment_to_stockpile = {
             type = artillery_equipment
-            amount = 200
+            amount = 250
         	}
 			add_stability = 0.1
 		}
@@ -592,7 +592,7 @@ focus_tree = {
 			}
 			add_equipment_to_stockpile = {
             type = rations_eq
-            amount = 2000
+            amount = 4000
         	}
 			add_timed_idea = {
 				idea = SND_zhang_zongchang_is_high
