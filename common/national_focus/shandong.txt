@@ -901,7 +901,7 @@ focus_tree = {
 	focus = {
 		id = SND_test_neighboring_cliques
 		icon = GFX_goal_generic_territory_or_war
-		x = 20
+		x = 19
 		y = 0
 		mutually_exclusive = { }
 		cost = 6
@@ -1185,16 +1185,16 @@ focus_tree = {
 	focus = {
 		id = SND_march_down_yellow_river
 		#icon = 
-		x = 11
-		y = 8
+		x = 23
+		y = 2
 		mutually_exclusive = { }
 		cost = 6
 		ai_will_do = {
 			factor = 1
 		}
+		prerequisite = { focus = SND_war_the_only_diplomacy }
 		available = {
 			has_war = no
-			has_completed_focus = SND_crown_king_of_north
 		}
 		will_lead_to_war_with = CHI
 		cancel_if_invalid = yes
@@ -1222,9 +1222,9 @@ focus_tree = {
 		ai_will_do = {
 			factor = 1
 		}
+		prerequisite = { focus = SND_war_the_only_diplomacy }
 		available = {
 			has_war = no
-			has_completed_focus = SND_crown_king_of_north
 		}
 		
 		cancel_if_invalid = yes
@@ -1415,7 +1415,7 @@ focus_tree = {
 	focus = {
 		id = SND_eternal_warlord_state
 		icon = GFX_focus_CHI_a_new_middle_kingdom
-		x = 18
+		x = 9
 		y = 8
 		#relative_position_id = SND_march_down_yellow_river
 		mutually_exclusive = { }
