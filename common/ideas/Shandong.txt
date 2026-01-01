@@ -58,6 +58,9 @@ ideas = {
 			modifier = {
 				justify_war_goal_time = -0.50
 				generate_wargoal_tension = -0.3	
+				dig_in_speed = 1
+				max_planning = 0.1
+				army_attack_speed_factor = 0.15
 			}
 		}
     }

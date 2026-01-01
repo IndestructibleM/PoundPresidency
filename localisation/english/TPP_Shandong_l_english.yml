@@ -2,6 +2,9 @@
  #######################
  ### DOGMEAT GENERAL ###
  #######################
+ Dogmeat_desc: "§Y"The Dogmeat General"§! \n\nOfficially declared dead years ago, Zhang Zongchang’s return to power has only deepened his legend. Once the undisputed master of Shandong, Zhang built his rule on corruption, opium revenues, mercenary armies, and unapologetic brutality. That such a man could vanish from history—only to reappear and seize control once more—seems less an anomaly than a confirmation of the chaotic age China endures. \n\nZhang is no ideologue, reformer, or nationalist visionary. He believes in power as a personal possession, to be taken, spent, and defended with guns and silver. His administration is infamous for its excesses: public executions as spectacle, state-sanctioned vice as revenue, and governance conducted through whim, intimidation, and loyalty purchased outright. Yet for all his absurdities, Zhang possesses a sharp instinct for survival and an unflinching willingness to do whatever is necessary to remain in control. \n\nMocked by intellectuals and feared by civilians, Zhang cultivates his reputation deliberately. His erratic behaviour, crude poetry, and open contempt for convention serve a purpose—confusing rivals, discouraging conspiracies, and reinforcing the idea that resistance is futile. Under his rule, order exists not through institutions, but through fear and unpredictability. \n\nWhether Zhang Zongchang represents the final grotesque echo of the warlord era or its most enduring embodiment remains uncertain. What is clear is that as long as the Dogmeat General lives, China’s fate will be decided not by ideals or constitutions, but by the man who holds the gun longest."
+
+ 
  SND_power_balance: "The Swing of the Dogmeat"
  SND_crackpot_side: "Crackpot Dictator"
  SND_tyrannical_side: "Brutish Warlord"
@@ -25,3 +28,4 @@
  SND_japanese_brokers: "Contact Japanese Brokers"
  SND_invite_white_russians: "Invite the White Russians"
  SND_concessions_for_cannons: "Concessions for Cannons"
+ SND_empire: "Great Qi"

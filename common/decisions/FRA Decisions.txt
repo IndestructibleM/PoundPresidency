@@ -139,7 +139,7 @@ FRA_foriegn_policy = {
 	}
 	
 	FRA_inspire_fascism_in_allies = {
-		name = FRA_inspire_fascism_in_allies
+		name = "Rally the Fascist Parties in [From.GetName]"
 		fire_only_once = yes
 		allowed = { tag = FRA }
 		cost = 50

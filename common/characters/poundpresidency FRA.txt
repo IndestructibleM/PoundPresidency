@@ -22,6 +22,29 @@ characters = {
 			ideology = fascism_ideology
 		}
 	}
+	SND_Zhang_Zongchang = {
+		name = "Zhang Zongchang"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/SND/Portrait_Zhang_Zongchang.png"
+			}
+			army = {
+				large = "gfx/leaders/SND/Portrait_Zhang_Zongchang.png"
+			}
+		}
+		country_leader = {
+			ideology = despotism
+			desc = Dogmeat_desc
+		}
+		corps_commander = {
+    		skill = 4
+    		attack_skill = 3
+    		defense_skill = 3
+    		planning_skill = 2
+   			logistics_skill = 2
+			traits = { reckless substance_abuser }
+		}
+	}
 
 	FRA_pierre_la_rochelle = {
 		name = "Pierre Drieu La Rochelle"
