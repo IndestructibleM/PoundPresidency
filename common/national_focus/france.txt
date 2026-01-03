@@ -9350,6 +9350,10 @@
 			}
 			add_ideas = FRA_party_divide
 			country_event = etat.1
+			set_country_leader_portrait = {
+				ideology = fascism
+				portrait = GFX_Portrait_Marcel_Bucard
+			}
         }
     }
     focus = {
@@ -10694,7 +10698,7 @@
     }
     focus = {
         id = FRA_ally_poland
-        icon = GFX_goal_FRA_ally_poland
+        icon = GFX_POL_Cavaliers_Triumphant
         x = -2
         y = 2
         prerequisite = { focus = continental_system }
@@ -10793,7 +10797,7 @@ focus = {
     }
 }
 focus = {
-    id = die_perfidious_albion
+    id = FRA_die_perfidious_albion
     icon = GFX_goal_march_on_calais
 	will_lead_to_war_with = ENG
     x = 1
@@ -10824,11 +10828,11 @@ focus = {
 }
 focus = {
     id = FRA_operation_sapin
-    #icon = GFX_goal_FRA_demand_ger_war_debts
+    icon = GFX_BAY_TAKE_SWISS
     x = -2
     y = 5
     prerequisite = {
-        focus = die_perfidious_albion
+        focus = FRA_die_perfidious_albion
         focus = FRA_demand_ger_war_debts
     }
     relative_position_id = FRA_towards_european_hegemony
@@ -10849,11 +10853,11 @@ focus = {
 }
 focus = {
     id = FRA_Plan_R4
-    #icon = GFX_goal_FRA_demand_ger_war_debts
+    icon = GFX_NFA_Troupes_de_Marine_Focus
     x = 2
     y = 5
 	prerequisite = {
-        focus = die_perfidious_albion
+        focus = FRA_die_perfidious_albion
         focus = FRA_demand_ger_war_debts
     }
     relative_position_id = FRA_towards_european_hegemony
@@ -10888,7 +10892,7 @@ focus = {
     x = 0
     y = 5
     prerequisite = {
-        focus = die_perfidious_albion
+        focus = FRA_die_perfidious_albion
         focus = FRA_demand_ger_war_debts
     }
     relative_position_id = FRA_towards_european_hegemony

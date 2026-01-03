@@ -58,3 +58,97 @@ on_actions = {
 		}
 	}
 }
+on_actions = {
+	on_capitulation = {
+		effect = {
+			if = {
+				limit = {
+					ROOT = { tag = ENG }
+                    FROM = {
+                        OR = {
+                            tag = FRA 
+                            tag = ITA
+                        }	
+                    }	
+				}
+				white_peace = {
+					tag = ENG
+					message = tt_FraBeatEng
+				}
+				SCO = {
+					every_core_state = { transfer_state_to = PREV }
+				}
+				WLS = {
+					every_core_state = { transfer_state_to = PREV }
+				}
+				119 = {
+					transfer_state_to = IRE
+				}
+				FRA = {
+					country_event = { id = etatfopo.2 days = 15 }
+					transfer_state = 933
+					transfer_state = 932
+					set_autonomy = {
+					target = SCO
+					autonomous_state = collaborator_gov
+					}
+					set_autonomy = {
+					target = WLS
+					autonomous_state = collaborator_gov
+					}
+					set_autonomy = {
+					target = ENG
+					autonomous_state = puppet
+					}
+				}
+			
+			}
+		}
+	}
+	on_capitulation = {
+		effect = {
+			if = {
+				limit = {
+					ROOT = { tag = GER }
+                    FROM = {
+						has_government = fascism
+                        OR = {
+                            tag = FRA 
+                            tag = ITA
+                        }	
+                    }	
+				}
+				white_peace = {
+					tag = GER
+					message = tt_FraBeatGer
+				}
+				transfer_state = 51
+				transfer_state = 42
+				GER = { 
+					release = SHL
+					retire_country_leader = yes
+				}
+				PRE = {
+					transfer_state = 64
+					transfer_state = 62
+					transfer_state = 63
+					transfer_state = 68
+					transfer_state = 65
+					transfer_state = 61
+				}
+				set_autonomy = {
+					target = GER
+					autonomous_state = collaborator_gov
+				}
+				set_autonomy = {
+					target = SHL
+					autonomous_state = collaborator_gov
+				}
+				puppet = PRE
+				POL = {
+					every_claimed_state = { limit = { owner = GER } transfer_state_to = POL }
+				}
+			}
+		}
+	}
+}

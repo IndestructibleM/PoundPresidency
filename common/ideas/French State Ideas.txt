@@ -332,8 +332,8 @@ ideas = {
 			}
 			targeted_modifier = {
 				tag = FRA
-				mic_to_target_factor = 1.0
-				cic_to_target_factor = 0.5
+				mic_to_target_factor = 0.75
+				cic_to_target_factor = 0.35
 			}
 		}
 

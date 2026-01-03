@@ -456,8 +456,40 @@ spriteType = {
 
 
 spriteType = {
+    name = "GFX_NFA_Troupes_de_Marine_Focus"
+    texturefile = "gfx/interface/goals/NFA_Troupes_de_Marine_Focus.png"
+}
+
+spriteType = {
+    name = "GFX_NFA_crush_anti_france"
+    texturefile = "gfx/interface/goals/NFA_crush_anti_france.png"
+}
+
+spriteType = {
+    name = "GFX_BAY_TAKE_SWISS"
+    texturefile = "gfx/interface/goals/BAY_TAKE_SWISS.png"
+}
+
+spriteType = {
+    name = "GFX_NFA_joan_of_arc"
+    texturefile = "gfx/interface/goals/NFA_joan_of_arc.png"
+}
+
+spriteType = {
+    name = "GFX_POL_Cavaliers_Triumphant"
+    texturefile = "gfx/interface/goals/POL_Cavaliers_Triumphant.png"
+}
+
+spriteType = {
+    name = "GFX_FRA_die_perfidious_albion"
+    texturefile = "gfx/interface/goals/ZAM_bolster_brit_control.png"
+}
+
+
+
+spriteType = {
     name = "GFX_idea_abs_monarchy"
-    texturefile = "gfx/interface/ideas/laws/abs_monarchy.dds"
+    texturefile = "gfx/interface/ideas/laws/abs_monarchy.png"
 }
 
 spriteType = {
@@ -467,7 +499,7 @@ spriteType = {
 
 spriteType = {
     name = "GFX_idea_corporatism"
-    texturefile = "gfx/interface/ideas/laws/corporatism.dds"
+    texturefile = "gfx/interface/ideas/laws/corporatism.png"
 }
 
 spriteType = {
@@ -482,7 +514,7 @@ spriteType = {
 
 spriteType = {
     name = "GFX_idea_central_planning"
-    texturefile = "gfx/interface/ideas/laws/central_planning.dds"
+    texturefile = "gfx/interface/ideas/laws/central_planning.png"
 }
 
 spriteType = {
@@ -492,32 +524,32 @@ spriteType = {
 
 spriteType = {
     name = "GFX_idea_gift_economy"
-    texturefile = "gfx/interface/ideas/laws/gift_economy.dds"
+    texturefile = "gfx/interface/ideas/laws/gift_economy.png"
 }
 
 spriteType = {
     name = "GFX_idea_liberal_republic"
-    texturefile = "gfx/interface/ideas/laws/liberal_republic.dds"
+    texturefile = "gfx/interface/ideas/laws/liberal_republic.png"
 }
 
 spriteType = {
     name = "GFX_idea_oligarchy"
-    texturefile = "gfx/interface/ideas/laws/oligarchy.dds"
+    texturefile = "gfx/interface/ideas/laws/oligarchy.png"
 }
 
 spriteType = {
     name = "GFX_idea_colonial_gov"
-    texturefile = "gfx/interface/ideas/laws/colonial_gov.dds"
+    texturefile = "gfx/interface/ideas/laws/colonial_gov.png"
 }
 
 spriteType = {
     name = "GFX_idea_partystate"
-    texturefile = "gfx/interface/ideas/laws/partystate.dds"
+    texturefile = "gfx/interface/ideas/laws/partystate.png"
 }
 
 spriteType = {
     name = "GFX_idea_soviet_democracy"
-    texturefile = "gfx/interface/ideas/laws/soviet_democracy.dds"
+    texturefile = "gfx/interface/ideas/laws/soviet_democracy.png"
 }
 
 spriteType = {
@@ -527,7 +559,7 @@ spriteType = {
 
 spriteType = {
     name = "GFX_idea_stratocracy"
-    texturefile = "gfx/interface/ideas/laws/stratocracy.dds"
+    texturefile = "gfx/interface/ideas/laws/stratocracy.png"
 }
 
 spriteType = {
@@ -547,17 +579,17 @@ spriteType = {
 
 spriteType = {
     name = "GFX_idea_warlordism"
-    texturefile = "gfx/interface/ideas/laws/warlordism.dds"
+    texturefile = "gfx/interface/ideas/laws/warlordism.png"
 }
 
 spriteType = {
     name = "GFX_idea_totalitarianism"
-    texturefile = "gfx/interface/ideas/laws/totalitarianism.dds"
+    texturefile = "gfx/interface/ideas/laws/totalitarianism.png"
 }
 
 spriteType = {
     name = "GFX_idea_draft1"
-    texturefile = "gfx/interface/ideas/laws/draft1.dds"
+    texturefile = "gfx/interface/ideas/laws/draft1.png"
 }
 
 spriteType = {
@@ -567,7 +599,7 @@ spriteType = {
 
 spriteType = {
     name = "GFX_idea_draft3"
-    texturefile = "gfx/interface/ideas/laws/draft3.dds"
+    texturefile = "gfx/interface/ideas/laws/draft3.png"
 }
 
 spriteType = {
@@ -577,12 +609,12 @@ spriteType = {
 
 spriteType = {
     name = "GFX_idea_draft5"
-    texturefile = "gfx/interface/ideas/laws/draft5.dds"
+    texturefile = "gfx/interface/ideas/laws/draft5.png"
 }
 
 spriteType = {
     name = "GFX_idea_draft6"
-    texturefile = "gfx/interface/ideas/laws/draft6.dds"
+    texturefile = "gfx/interface/ideas/laws/draft6.png"
 }
 
 spriteType = {

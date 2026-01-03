@@ -5,6 +5,10 @@ spriteTypes = {
 		texturefile = "gfx/interface/autonomy/collaborator_gov.png"
 	}
 	SpriteType = {
+		name = "GFX_Portrait_Marcel_Bucard"
+		texturefile = "gfx/leaders/FRA/Portrait_Marcel_Bucard.png"
+	}
+	SpriteType = {
 		name = "GFX_idea_USA_state_of_utopia"
 		texturefile = "gfx/interface/ideas/USA_state_of_utopia.png"
 	}

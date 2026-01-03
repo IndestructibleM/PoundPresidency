@@ -43,54 +43,31 @@ country_event = {
 	title = etatfopo.2.t
 	fire_only_once = yes
 	desc = etatfopo.2.d
-	trigger = {
-		tag = FRA
-		has_government = fascism
-		has_war_with = GER
-		GER = { surrender_progress > 0.65 }
-	}
+	is_triggered_only = yes
 	option = {
+		name = etatfopo.2.a
 		ai_chance = {
 			factor = 100
 		}
-		name = "The irony is defeaning. Accept."
-		white_peace = {
-			tag = GER
-			message = tt_FraBeatGer
+		BAN = { every_core_state = { transfer_state_to = PAK } }
+		PAK = { every_core_state = { transfer_state_to = PAK } }
+		EGY = { every_core_state = { transfer_state_to = EGY } }
+		SUD = { every_core_state = { transfer_state_to = EGY } }
+		TZN = { every_core_state = { transfer_state_to = TZN } }
+		NGA = { every_core_state = { transfer_state_to = NGA } }
+		BRN = { every_core_state = { transfer_state_to = BRN } }
+		ENG = {
+			dismantle_faction = yes
+			end_puppet = RAJ
+			end_puppet = SAF
+			end_puppet = CAN
+			end_puppet = NZL
+			end_puppet = PAL
+			end_puppet = JOR
+			end_puppet = AST
+			end_puppet = BRM
+			end_puppet = MAL
 		}
-		transfer_state = 51
-		transfer_state = 42
-		GER = { 
-			release = SHL
-			retire_country_leader = yes
-		}
-		PRE = {
-			transfer_state = 64
-			transfer_state = 62
-			transfer_state = 63
-			transfer_state = 68
-			transfer_state = 65
-			transfer_state = 61
-		}
-		set_autonomy = {
-			target = GER
-			autonomous_state = collaborator_gov
-		}
-		set_autonomy = {
-			target = SHL
-			autonomous_state = collaborator_gov
-		}
-		puppet = PRE
-		POL = {
-			every_claimed_state = { limit = { owner = GER } transfer_state_to = POL }
-		}
-	}
-	option = {
-		ai_chance = {
-			factor = 20
-		}
-		name = "We do not acccept their mercy plea."
-		add_command_power = 30
 	}
 }
 
