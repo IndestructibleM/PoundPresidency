@@ -46,15 +46,6 @@ on_actions = {
 					amount = 30
 				}
 			}
-			every_country = {
-				limit = { has_idea = CHI_warlord_state_idea }
-				capital_scope = {
-				add_resource = {
-					type = coal 
-					amount = 5
-				}
-				}
-			}
 		}
 	}
 }

@@ -34,7 +34,7 @@ buildings = {
 	
 	farm = {
 		show_on_map = 1
-		base_cost = 7500
+		base_cost = 5000
 		icon_frame = 1
 		per_level_extra_cost = 500
 		local_resources_coal = 4 # May use local_resources_ + any resource name
@@ -43,14 +43,13 @@ buildings = {
 		allied_build = yes
 		show_modifier = yes
 
-		#country_modifiers = {
-			#modifiers = {
-			#grain_gain_from_states = 2.0 #per hour
-			#}
-		#}
+		state_modifiers = {
+			local_factory_energy_consumption = -0.1
+		}
 
 		level_cap = {
-			state_max = 5
+			state_max = 4
 		}
 	}
+
 }

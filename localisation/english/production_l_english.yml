@@ -50,14 +50,9 @@
  PRODUCTION_MATERIALS_CHROMIUM:0 "Chromium"
  PRODUCTION_MATERIALS_STEEL:0 "Steel"
  PRODUCTION_MATERIALS_TUNGSTEN:0 "Tungsten"
- ######## TPP #########
+ ######## GOC #########
  PRODUCTION_MATERIALS_COAL:0 "Grain"
  coal_desc:0 "Grain is the harvested seeds of cereal crops like wheat, rice, corn, barley, and oats, which are staple foods for much of the world's population. It is used primarily for human consumption, animal feed, and as a raw material in products like rations."
- farm: "Farm"
- farm_desc: "A farm is a tract of cultivated land where fields of wheat, barley, oats, or corn are systematically planted, tended, and harvested using both traditional and mechanized methods. It typically includes storage silos, barns, and equipment sheds that support the efficient processing and preservation of the harvested coal."
- rations_eq: "Rations"
- rations_eq_desc: "Rations are what is used by the military to feed and supply troops with sustenance. Rations are produced using simple foods to minimize cost and maximize nourishment."
- rations_eq_short: "Military Rations"
  PRODUCTION_MATERIAL_VAL:0 "$VALUE|0H$"
  PRODUCTION_VEHICLES_BUTTON:0 "Build Armored Vehicles"
  PRODUCTION_VEHICLES_BUTTON_DISABLED:0 "Armored Vehicles are §RNot invented§!!"

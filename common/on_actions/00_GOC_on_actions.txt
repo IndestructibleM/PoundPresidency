@@ -1,0 +1,30 @@
+on_actions = {
+	on_startup = {
+		effect = {
+			every_country = {
+				if = { 
+					limit = { 
+						coal < 6
+					}
+					capital_scope = {
+						add_resource = {
+    					type = coal
+    					amount = 4
+						}
+					}
+				}
+				else_if = { 
+					limit = { 
+						num_of_owned_factories > 30
+					}
+					capital_scope = {
+						add_resource = {
+    					type = coal
+    					amount = 4
+						}
+					}
+				}
+			}
+		}
+	}
+}

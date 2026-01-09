@@ -1,0 +1,19 @@
+﻿l_english:
+
+ goc.1.t: "Threat of Famine Looms"
+ goc.1.d: "Go get more grain quick buddy."
+ goc.1.a: "We must resolve this"
+
+ goc.2.t: "Famine in our Country!"
+ goc.2.d: "Should've gotten more grain."
+ goc.2.a: "Sad !"
+
+ generic_famine: "Ongoing Famine"
+
+ farm: "Farm"
+ farm_desc: "A farm will provide a state with §Y+2 Grain§!. \n\nA farm is a tract of cultivated land where fields of wheat, barley, oats, or corn are systematically planted and harvested." 
+ rations_eq: "Rations"
+ rations_eq_desc: "Rations are what is used by the military to feed and supply troops with sustenance. Rations are produced using simple foods to minimize cost and maximize nourishment."
+ rations_eq_short: "Military Rations"
+ farm_upgrade: "Improved Farming Techniques"
+ farm_upgrade1: "Advanced Farming Techniques"
