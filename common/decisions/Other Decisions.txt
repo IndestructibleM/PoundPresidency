@@ -687,6 +687,7 @@ SND_balance_of_power_cat = {
 	SND_opium_bread_circuses = {
 	name = "Bread and Circuses with Opium"
 	days_re_enable = 80
+	icon = GFX_decision_gre_investment_decisions
     allowed = { 
 		tag = SND
 	}
@@ -709,6 +710,7 @@ SND_balance_of_power_cat = {
 	SND_crush_opposition = {
 	name = "Enforce Law without Order"
 	days_re_enable = 80
+	icon = GFX_decision_generic_police_action
     allowed = { 
 		tag = SND
 	}
@@ -728,9 +730,301 @@ SND_balance_of_power_cat = {
 	}
 	}
 	
+	SND_merge_the_cliques_dec = {
+	name = "Merge [FROM.GetNameDEF] into our State"
+	fire_only_once = yes
+	icon = GFX_decision_generic_confiscation
+    allowed = { 
+		tag = SND
+	}
+	visible = { has_completed_focus = SND_merge_the_cliques}
+	target_trigger = {
+		FROM = {
+			OR = {
+			is_ally_with = ROOT
+			overlord = {
+				is_ally_with = ROOT
+				tag = JAP
+			}
+			}
+		}
+	}
+	targets = {
+		RNG MAN MEN HBC
+	}
+	ai_will_do = {
+       	factor = 90
+    }
+	days_remove = 25
+	cost = 50
+	modifier = {
+		political_power_factor = -0.2
+		consumer_goods_expected_value = 0.05
+	}
+	remove_effect = {
+		add_power_balance_value = {
+			id = SND_power_balance
+			value = 0.1
+		}
+		annex_country = {
+   			target = FROM
+    		transfer_troops = yes
+		}
+		FROM = {
+			every_core_state = { add_core_of = ROOT }
+		}
+	}
+	}
+	
+	SND_reckoning_with_chiang = {
+	name = "The Reckoning with Chiang Kai-Shek"
+    allowed = { 
+		tag = SND
+	}
+	days_re_enable = 80
+	available = {
+		has_completed_focus = SND_reckoning_with_chiangkaishek
+		has_war_with = CHI
+		is_neighbor_of = CHI
+	}
+	icon = GFX_decision_jap_conquer_china
+	ai_will_do = {
+       	factor = 100
+    }
+	days_remove = 70
+	cost = 25
+	modifier = {
+		planning_speed = 0.20
+	}
+	targeted_modifier = {
+		tag = CHI
+		attack_bonus_against = 0.25
+		breakthrough_bonus_against = 0.25
+		defense_bonus_against = -0.15
+	}
+	complete_effect = {
+		add_command_power = -35
+	}
+	}
+	
+	SND_strike_south = {
+	name = "Strike South!"
+    allowed = { 
+		tag = SND
+	}
+	days_re_enable = 80
+	available = {
+		has_completed_focus = SND_erase_sun_yat_sens_heirs
+		is_neighbor_of = GXC
+		is_neighbor_of = GDC
+		has_war_with = GXC
+		has_war_with = GDC
+	}
+	icon = GFX_decision_generic_operation
+	ai_will_do = {
+       	factor = 100
+    }
+	days_remove = 70
+	cost = 25
+	modifier = {
+		planning_speed = 0.20
+	}
+	targeted_modifier = {
+		tag = GXC
+		attack_bonus_against = 0.25
+		breakthrough_bonus_against = 0.25
+		defense_bonus_against = -0.15
+	}
+	targeted_modifier = {
+		tag = GDC
+		attack_bonus_against = 0.25
+		breakthrough_bonus_against = 0.25
+		defense_bonus_against = -0.15
+	}
+	complete_effect = {
+		add_command_power = -35
+	}
+	}
+	
+	SND_strike_southwest = {
+	name = "Strike Southwest!"
+    allowed = { 
+		tag = SND
+	}
+	days_re_enable = 80
+	available = {
+		has_completed_focus = SND_end_southwest_cliques
+		is_neighbor_of = YUN
+		is_neighbor_of = SIC
+		has_war_with = YUN
+		has_war_with = SIC
+	}
+	icon = GFX_decision_generic_operation
+	ai_will_do = {
+       	factor = 100
+    }
+	days_remove = 70
+	cost = 25
+	modifier = {
+		planning_speed = 0.20
+	}
+	targeted_modifier = {
+		tag = YUN
+		attack_bonus_against = 0.25
+		breakthrough_bonus_against = 0.25
+		defense_bonus_against = -0.15
+	}
+	targeted_modifier = {
+		tag = SIC
+		attack_bonus_against = 0.25
+		breakthrough_bonus_against = 0.25
+		defense_bonus_against = -0.15
+	}
+	complete_effect = {
+		add_command_power = -35
+	}
+	}
+
+	SND_strike_prc = {
+	name = "Strike the Reds!"
+    allowed = { 
+		tag = SND
+	}
+	days_re_enable = 80
+	available = {
+		has_completed_focus = SND_crush_red_bandits
+		has_war_with = PRC
+	}
+	icon = GFX_decision_generic_operation
+	ai_will_do = {
+       	factor = 100
+    }
+	days_remove = 70
+	cost = 25
+	modifier = {
+		planning_speed = 0.20
+	}
+	targeted_modifier = {
+		tag = PRC
+		attack_bonus_against = 0.25
+		breakthrough_bonus_against = 0.25
+		defense_bonus_against = -0.15
+	}
+	complete_effect = {
+		add_command_power = -35
+	}
+	}
+
+	SND_strike_west = {
+	name = "Strike West!"
+    allowed = { 
+		tag = SND
+	}
+	days_re_enable = 80
+	available = {
+		has_completed_focus = SND_no_more_frontier_kings
+		count_triggers = {
+			amount = 3
+			has_war_with = SIK
+			has_war_with = XSM
+			has_war_with = GSM
+			has_war_with = NXM
+			has_war_with = KHM
+		}
+		count_triggers = {
+			amount = 2
+			is_neighbor_of = SIK
+			is_neighbor_of = XSM
+			is_neighbor_of = GSM
+			is_neighbor_of = NXM
+			is_neighbor_of = KHM
+		}
+		
+	}
+	icon = GFX_decision_generic_operation
+	ai_will_do = {
+       	factor = 100
+    }
+	days_remove = 70
+	cost = 25
+	modifier = {
+		planning_speed = 0.20
+	}
+	targeted_modifier = {
+		tag = SIK
+		attack_bonus_against = 0.25
+		breakthrough_bonus_against = 0.25
+		defense_bonus_against = -0.15
+	}
+	targeted_modifier = {
+		tag = XSM
+		attack_bonus_against = 0.25
+		breakthrough_bonus_against = 0.25
+		defense_bonus_against = -0.15
+	}
+	targeted_modifier = {
+		tag = GSM
+		attack_bonus_against = 0.25
+		breakthrough_bonus_against = 0.25
+		defense_bonus_against = -0.15
+	}
+	targeted_modifier = {
+		tag = NXM
+		attack_bonus_against = 0.25
+		breakthrough_bonus_against = 0.25
+		defense_bonus_against = -0.15
+	}
+	targeted_modifier = {
+		tag = KHM
+		attack_bonus_against = 0.25
+		breakthrough_bonus_against = 0.25
+		defense_bonus_against = -0.15
+	}
+	complete_effect = {
+		add_command_power = -35
+	}
+	}
+
+	SND_core_FROM_territory = {
+	name = "Integrate the Territory of [FROM.GetNameDEF]"
+	fire_only_once = yes
+	icon = GFX_decision_oppression
+    allowed = { 
+		tag = SND
+	}
+	target_non_existing = yes
+	target_trigger = {
+		FROM = {
+			capital_scope = {
+				is_claimed_by = ROOT
+				is_owned_and_controlled_by = ROOT
+			}
+			NOT = {
+				tag = RNG
+				tag = ROA
+			}
+		}
+	}
+	ai_will_do = {
+       	factor = 90
+    }
+	days_remove = 30
+	cost = 50
+	modifier = {
+		political_power_factor = -0.2
+		consumer_goods_expected_value = 0.05
+	}
+	remove_effect = {
+		FROM = {
+			every_core_state = { add_core_of = ROOT }
+		}
+	}
+	}
+	
 	SND_gambling = {
 	name = "Do Some Gambling"
 	days_re_enable = 35
+	icon = GFX_decision_generic_welfare
     allowed = { 
 		tag = SND
 	}

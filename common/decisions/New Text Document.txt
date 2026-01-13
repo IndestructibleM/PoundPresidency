@@ -1,3 +1,0 @@
-SND_balance_of_power_cat = {
-    allowed = { tag = SND }
-}

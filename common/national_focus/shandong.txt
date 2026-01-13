@@ -14,12 +14,14 @@ focus_tree = {
 		x = 0
 	}
 
+	shared_focus = CHI_sea_invite_foreign_investors
+
 	
 	default = no
 	focus = {
 		id = SND_dogmeat_general_ascendent
 		icon = GFX_focus_CHI_meritocratic_principles
-		x = 4
+		x = 2
 		y = 0
 		
 		prerequisite = {}
@@ -40,7 +42,6 @@ focus_tree = {
 		available_if_capitulated = no
 		completion_reward = {
 			promote_character = SND_zhang_zongchang
-			custom_effect_tooltip = "NOTE Add Zongchang Takeover Here"
 		}
 	}
     focus = {
@@ -131,6 +132,11 @@ focus_tree = {
 	        	province = 1069
                value = 5
        		}
+			set_power_balance = {
+    			id = SND_power_balance
+    			left_side = SND_crackpot_side
+    			right_side = SND_tyrannical_side
+			}
 		}
 	}
     focus = {
@@ -168,11 +174,6 @@ focus_tree = {
            		instant_build = yes
         		}
         	}
-			set_power_balance = {
-    			id = SND_power_balance
-    			left_side = SND_crackpot_side
-    			right_side = SND_tyrannical_side
-			}
 			add_timed_idea = {
 				idea = SND_zhang_zongchang_is_high
 				days = 10
@@ -240,6 +241,11 @@ focus_tree = {
             type = infantry_equipment
             amount = 2000
         	}
+			add_tech_bonus = {
+            bonus = 0.8
+            uses = 1
+            category = train_tech
+      		}
 			add_equipment_bonus = {
            		bonus = {
                 train_equipment = {
@@ -288,6 +294,14 @@ focus_tree = {
             uses = 2
             category = artillery
       		}
+			capital_scope = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+           		type = arms_factory 
+            	level = 1
+           		instant_build = yes
+            	}
+			}
 		}
 	}
     
@@ -317,10 +331,10 @@ focus_tree = {
 		available_if_capitulated = no
 		completion_reward = {
 			random_owned_controlled_state = {
-            add_extra_state_shared_building_slots = 1
+            add_extra_state_shared_building_slots = 2
             add_building_construction = {
             type = arms_factory 
-            level = 1
+            level = 2
             instant_build = yes
             }
 			}
@@ -523,7 +537,7 @@ focus_tree = {
             amount = 1500
         	}
 			army_experience = 30
-			recruit_character = SOV_grigory_semyonov
+			custom_effect_tooltip = "Grigory Semyonov Will Become a General!"
 		}
 	}
 
@@ -565,12 +579,12 @@ focus_tree = {
     focus = {
 		id = SND_found_dogmeat_economics
 		#icon = 
-		x = 12
+		x = 9
 		y = 0
 		
 		prerequisite = {}
 		mutually_exclusive = { }
-		cost = 6
+		cost = 5
 			ai_will_do = {
 			factor = 1
 		}
@@ -595,12 +609,12 @@ focus_tree = {
     focus = {
 		id = SND_opium_lifeline
 		#icon = 
-		x = 12
+		x = 9
 		y = 1
 		
 		prerequisite = { focus = SND_found_dogmeat_economics }
 		mutually_exclusive = { }
-		cost = 6
+		cost = 5
 			ai_will_do = {
 			factor = 1
 		}
@@ -794,6 +808,51 @@ focus_tree = {
             }
 		}
 	}
+	
+	focus = {
+		id = SND_plunder_earth_and_towns
+		#icon = 
+		x = 2
+		y = 4
+		relative_position_id = SND_found_dogmeat_economics
+		prerequisite = { 
+            focus = SND_war_workshops 
+			focus = SND_nation_high_on_revenue
+        }
+		mutually_exclusive = { }
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			
+		}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		completion_reward = {
+			capital_scope = {
+				add_resource = {
+					type = steel
+					amount = 16
+				}
+				add_resource = {
+					type = tungsten
+					amount = 8
+				}
+				add_resource = {
+					type = aluminium
+					amount = 5
+				}
+			}
+			add_tech_bonus = {
+            bonus = 0.5
+            uses = 2
+            category = excavation_tech
+      		}
+		}
+	}
     
     focus = {
 		id = SND_hire_men_who_count
@@ -903,7 +962,7 @@ focus_tree = {
             focus = SND_sieze_banks 
         }
 		mutually_exclusive = { }
-		cost = 6
+		cost = 5
 		ai_will_do = {
 			factor = 1
 		}
@@ -923,10 +982,10 @@ focus_tree = {
 	focus = {
 		id = SND_test_neighboring_cliques
 		icon = GFX_goal_generic_territory_or_war
-		x = 19
+		x = 16
 		y = 0
 		mutually_exclusive = { }
-		cost = 6
+		cost = 5
 		ai_will_do = {
 			factor = 1
 		}
@@ -946,7 +1005,7 @@ focus_tree = {
             type = annex_everything
         	}
 			HBC = {
-				every_owned_state = { add_core_of = SND }
+				every_owned_state = { add_claim_by = SND }
 			}
 			add_command_power = 30
 		}
@@ -954,7 +1013,7 @@ focus_tree = {
 	
 	focus = {
 		id = SND_war_the_only_diplomacy
-		#icon = 
+		icon = GFX_focus_CHI_prepare_war_zones
 		x = 0
 		y = 1
 		prerequisite = {
@@ -962,7 +1021,7 @@ focus_tree = {
         }
         relative_position_id = SND_test_neighboring_cliques
 		mutually_exclusive = { }
-		cost = 6
+		cost = 5
 		ai_will_do = {
 			factor = 1
 		}
@@ -984,15 +1043,15 @@ focus_tree = {
 	}
 	focus = {
 		id = SND_shake_hands_with_devil
-		#icon = 
-		x = 3
+		icon = GFX_focus_JAP_give_it_your_all_for_the_emperor
+		x = 7
 		y = 2
 		prerequisite = {
             focus = SND_war_the_only_diplomacy 
         }
         relative_position_id = SND_test_neighboring_cliques
 		mutually_exclusive = { focus = SND_march_down_yellow_river }
-		cost = 3
+		cost = 5
 		ai_will_do = {
 			factor = 1
 		}
@@ -1009,29 +1068,43 @@ focus_tree = {
     			value = 0.2
 			}
 			JAP = {
-				add_to_faction = SND
+				set_autonomy = {
+   					target = ROOT
+    				autonomous_state = autonomy_dominion
+    				end_wars = no
+   					end_civil_wars = no
+				}
 			}
 			CHI = {
 				every_owned_state = { add_claim_by = SND }
+			}
+			create_wargoal = {
+				target = CHI
+				type = annex_everything
 			}
 		}
 	}
 	
 	focus = {
 		id = SND_march_on_korea
-		#icon = 
+		icon = GFX_focus_attack_japan
 		x = 3
-		y = 3
+		y = 6
 		prerequisite = {
-            focus = SND_shake_hands_with_devil 
-        }
+			focus = SND_mandate_of_the_gun
+		}
         relative_position_id = SND_test_neighboring_cliques
 		cost = 5
 		ai_will_do = {
 			factor = 1
 		}
+		mutually_exclusive = {
+			focus = SND_one_warlord_to_rule_them_all
+		}
 		available = {
-			has_war = no
+			NOT  = {
+				has_war_with = CHI
+			}
 			is_in_faction_with = JAP
 			OR = { 
 				CHI = { is_subject_of = ROOT }
@@ -1048,7 +1121,9 @@ focus_tree = {
 		completion_reward = {
 			JAP = {
 				remove_from_faction = SND
+				end_puppet = SND
 			}
+			white_peace = SND
 			create_wargoal = {
 				target = JAP
 				type = annex_everything
@@ -1056,10 +1131,39 @@ focus_tree = {
 			add_command_power = 50
 		}
 	}
+	focus = {
+		id = SND_reckoning_with_chiangkaishek
+		icon = GFX_focus_CHI_denounce_feudalism
+		x = -1
+		y = 3
+		relative_position_id = SND_test_neighboring_cliques
+		mutually_exclusive = { }
+		cost = 6
+		ai_will_do = {
+			factor = 1
+		}
+		prerequisite = { focus = SND_kingdom_of_gunfire }
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		completion_reward = {
+			add_doctrine_cost_reduction = {
+				cost_reduction = 0.5
+				uses = 2
+				category = land_doctrine
+			}
+			army_experience = 50
+			add_equipment_to_stockpile = {
+            type = infantry_equipment
+            amount = 5000
+        	}
+		}
+	}
 
 	focus = {
 		id = SND_kingdom_of_gunfire
-		#icon = 
+		icon = GFX_focus_CHI_weaponise_the_faithful
 		x = 0
 		y = 2
 		prerequisite = {
@@ -1088,11 +1192,11 @@ focus_tree = {
 		id = SND_warlord_against_empire
 		icon = GFX_focus_generic_limited_social_mobilization
 		x = -1
-		y = 3
+		y = 1
 		prerequisite = {
-            focus = SND_kingdom_of_gunfire 
+            focus = SND_march_down_yellow_river 
         }
-        relative_position_id = SND_test_neighboring_cliques
+        relative_position_id = SND_march_down_yellow_river
 		mutually_exclusive = { }
 		cost = 6
 		ai_will_do = {
@@ -1112,7 +1216,7 @@ focus_tree = {
 
 	focus = {
 		id = SND_ghosts_of_zoulin
-		#icon = 
+		icon = GFX_focus_CHI_tongzi_jun
 		x = 1
 		y = 3
 		prerequisite = {
@@ -1139,14 +1243,11 @@ focus_tree = {
 	
 	focus = {
 		id = SND_shells_against_rising_sun
-		#icon = 
-		x = 0
+		icon = GFX_goal_generic_army_artillery
+		x = -2
 		y = 4
 		prerequisite = {
-            focus = SND_ghosts_of_zoulin 
-        }
-		prerequisite = {
-            focus = SND_warlord_against_empire 
+            focus = SND_reckoning_with_chiangkaishek 
         }
         relative_position_id = SND_test_neighboring_cliques
 		mutually_exclusive = { }
@@ -1179,11 +1280,11 @@ focus_tree = {
 	
 	focus = {
 		id = SND_merge_the_cliques
-		#icon = 
-		x = -1
-		y = 5
+		icon = GFX_focus_generic_military_dictatorship
+		x = 8
+		y = 3
 		prerequisite = {
-            focus = SND_shells_against_rising_sun 
+            focus = SND_shake_hands_with_devil 
         }
         relative_position_id = SND_test_neighboring_cliques
 		mutually_exclusive = { }
@@ -1191,42 +1292,25 @@ focus_tree = {
 		ai_will_do = {
 			factor = 1
 		}
-		available = {
-			has_war = no
-			has_political_power > 200
-		}
 		
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
 		completion_reward = {
-			annex_country = {
-   				target = MEN
-    			transfer_troops = yes
-			}
-			annex_country = {
-   				target = MAN
-    			transfer_troops = yes
-			}
-			annex_country = {
-   				target = SHX
-    			transfer_troops = yes
-			}
-			annex_country = {
-   				target = HBC
-    			transfer_troops = yes
-			}
-			add_political_power = -200
+			unlock_decision_tooltip = SND_merge_the_cliques_dec
 		}
 	}
 
 	focus = {
 		id = SND_poems_in_blood_and_sorrow
-		#icon = 
-		x = 1
-		y = 5
+		icon = GFX_focus_generic_strike_at_democracy2
+		x = 0
+		y = 4
 		prerequisite = {
-            focus = SND_shells_against_rising_sun 
+            focus = SND_reckoning_with_chiangkaishek 
+        }
+		prerequisite = {
+            focus = SND_ghosts_of_zoulin 
         }
         relative_position_id = SND_test_neighboring_cliques
 		mutually_exclusive = { }
@@ -1248,14 +1332,11 @@ focus_tree = {
 
 	focus = {
 		id = SND_crown_king_of_north
-		#icon = 
-		x = 0
-		y = 6
+		icon = GFX_focus_CHI_a_second_empire_of_china
+		x = 2
+		y = 4
 		prerequisite = {
-            focus = SND_merge_the_cliques 
-        }
-		prerequisite = {
-            focus = SND_poems_in_blood_and_sorrow 
+            focus = SND_ghosts_of_zoulin 
         }
         relative_position_id = SND_test_neighboring_cliques
 		mutually_exclusive = { }
@@ -1264,29 +1345,42 @@ focus_tree = {
 			factor = 1
 		}
 		available = {
-			
+			count_triggers = {
+			amount = 2
+			owns_state = 715
+			owns_state = 608
+			owns_state = 611
+			}
 		}
 		
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
 		completion_reward = {
-			every_claimed_state = {
-				if = { 
-					limit = { is_owned_by = SND }
-					add_core_of = SND
-				}
+			every_state = {
+					limit = { 
+						OR = {
+							region = 155
+							region = 243
+							region = 242
+							region = 244
+							region = 143
+						}
+					}
+				add_core_of = SND
 			}
+			set_cosmetic_tag = SND_beijing
+			custom_effect_tooltip = "This will core all of Northern China!"
 		}
 	}
 	
 	focus = {
 		id = SND_march_down_yellow_river
-		#icon = 
-		x = 24
+		icon = GFX_focus_attack_china
+		x = 21
 		y = 2
 		mutually_exclusive = { focus = SND_shake_hands_with_devil }
-		cost = 6
+		cost = 5
 		ai_will_do = {
 			factor = 1
 		}
@@ -1309,39 +1403,10 @@ focus_tree = {
 			add_command_power = 30
 		}
 	}
-	focus = {
-		id = SND_reckoning_with_chiangkaishek
-		#icon = 
-		x = 2
-		y = 0
-		relative_position_id = SND_march_down_yellow_river
-		mutually_exclusive = { }
-		cost = 6
-		ai_will_do = {
-			factor = 1
-		}
-		prerequisite = { focus = SND_war_the_only_diplomacy }
-		
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
-		completion_reward = {
-			add_doctrine_cost_reduction = {
-				cost_reduction = 0.5
-				uses = 2
-				category = land_doctrine
-			}
-			army_experience = 50
-			add_equipment_to_stockpile = {
-            type = infantry_equipment
-            amount = 5000
-        	}
-		}
-	}
 
 	focus = {
 		id = SND_erase_sun_yat_sens_heirs
-		#icon = 
+		icon = GFX_focus_CHI_revise_the_national_curriculum
 		x = 1
 		y = 1
 		relative_position_id = SND_march_down_yellow_river
@@ -1357,9 +1422,6 @@ focus_tree = {
             focus = SND_march_down_yellow_river 
             focus = SND_shake_hands_with_devil 
         }
-		prerequisite = {
-            focus = SND_reckoning_with_chiangkaishek 
-        }
 		
 		cancel_if_invalid = yes
 		continue_if_invalid = no
@@ -1369,16 +1431,18 @@ focus_tree = {
 				target = GXC
 				type = annex_everything
 			}
+			GXC = { every_core_state = { add_claim_by = SND } }
 			declare_war_on = {
 				target = GDC
 				type = annex_everything
 			}
+			GDC = { every_core_state = { add_claim_by = SND } }
 		}
 	}
 
 	focus = {
 		id = SND_no_more_frontier_kings
-		#icon = 
+		icon = GFX_focus_CHI_tour_the_west
 		x = -1
 		y = 2
 		relative_position_id = SND_march_down_yellow_river
@@ -1398,13 +1462,47 @@ focus_tree = {
 		continue_if_invalid = no
 		available_if_capitulated = no
 		completion_reward = {
-	
+			create_wargoal = {
+            target = XSM
+            type = annex_everything
+        	}
+			XSM = {
+				every_owned_state = { add_claim_by = SND }
+			}
+			create_wargoal = {
+            target = GSM
+            type = annex_everything
+        	}
+			GSM = {
+				every_owned_state = { add_claim_by = SND }
+			}
+			create_wargoal = {
+            target = NXM
+            type = annex_everything
+        	}
+			NXM = {
+				every_owned_state = { add_claim_by = SND }
+			}
+			create_wargoal = {
+            target = KHM
+            type = annex_everything
+        	}
+			KHM = {
+				every_owned_state = { add_claim_by = SND }
+			}
+			create_wargoal = {
+            target = SIK
+            type = annex_everything
+        	}
+			SIK = {
+				every_owned_state = { add_claim_by = SND }
+			}
 		}
 	}
 
 	focus = {
 		id = SND_crush_red_bandits
-		#icon = 
+		icon = GFX_focus_generic_attack_chinese_soviets
 		x = 1
 		y = 2
 		relative_position_id = SND_march_down_yellow_river
@@ -1424,13 +1522,17 @@ focus_tree = {
 		continue_if_invalid = no
 		available_if_capitulated = no
 		completion_reward = {
-	
+			create_wargoal = {
+            target = PRC
+            type = annex_everything
+        	}
+			PRC = { every_core_state = { add_claim_by = SND } }
 		}
 	}
 	
 	focus = {
 		id = SND_end_southwest_cliques
-		#icon = 
+		icon = GFX_focus_CHI_tour_the_south
 		x = 3
 		y = 2
 		relative_position_id = SND_march_down_yellow_river
@@ -1450,14 +1552,50 @@ focus_tree = {
 		continue_if_invalid = no
 		available_if_capitulated = no
 		completion_reward = {
-	
+			create_wargoal = {
+            target = SIC
+            type = annex_everything
+        	}
+			SIC = { every_core_state = { add_claim_by = SND } }
+			create_wargoal = {
+            target = YUN
+            type = annex_everything
+        	}
+			YUN = { every_core_state = { add_claim_by = SND } }
 		}
 	}
 	
 	focus = {
 		id = SND_one_warlord_to_rule_them_all
-		#icon = 
-		x = 1
+		icon = GFX_focus_CHI_cradle_of_civilization
+		x = -4
+		y = 4
+		relative_position_id = SND_march_down_yellow_river
+		mutually_exclusive = {
+			focus = SND_march_on_korea
+		}
+		cost = 6
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			has_war = no
+		}
+		prerequisite = {
+			focus = SND_mandate_of_the_gun
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		completion_reward = {
+	
+		}
+	}
+
+	focus = {
+		id = SND_mandate_of_the_gun
+		icon = GFX_focus_AFG_against_kabul
+		x = -3
 		y = 3
 		relative_position_id = SND_march_down_yellow_river
 		mutually_exclusive = { }
@@ -1469,6 +1607,9 @@ focus_tree = {
 			
 		}
 		prerequisite = {
+			focus = SND_crown_king_of_north
+		}
+		prerequisite = {
             focus = SND_no_more_frontier_kings 
         }
 		prerequisite = {
@@ -1477,45 +1618,31 @@ focus_tree = {
 		prerequisite = {
             focus = SND_end_southwest_cliques 
         }
-		
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
-		completion_reward = {
-	
-		}
-	}
-
-	focus = {
-		id = SND_mandate_of_the_gun
-		#icon = 
-		x = 1
-		y = 4
-		relative_position_id = SND_march_down_yellow_river
-		mutually_exclusive = { }
-		cost = 6
-		ai_will_do = {
-			factor = 1
-		}
-		available = {
-			
-		}
 		prerequisite = {
-            focus = SND_one_warlord_to_rule_them_all 
+            focus = SND_shells_against_rising_sun 
+        }
+		prerequisite = {
+            focus = SND_poems_in_blood_and_sorrow 
         }
 		
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
 		completion_reward = {
-	
+			add_equipment_bonus = {
+                bonus = {
+                infantry_equipment = {
+                    soft_attack = 0.2
+                }
+                }
+            }
 		}
 	}
 	
 	focus = {
 		id = SND_eternal_warlord_state
-		icon = GFX_focus_CHI_a_new_middle_kingdom
-		x = 21
+		icon = GFX_focus_CHI_victory_over_the_invaders
+		x = 18
 		y = 7
 		#relative_position_id = SND_march_down_yellow_river
 		mutually_exclusive = { }
@@ -1523,9 +1650,7 @@ focus_tree = {
 		ai_will_do = {
 			factor = 1
 		}
-		prerequisite = {
-			focus = SND_crown_king_of_north
-		}
+		
 		prerequisite = {
 			focus = SND_mandate_of_the_gun
 		}
@@ -1546,8 +1671,8 @@ focus_tree = {
 	
 	focus = {
 		id = SND_institutionalize_warlordism
-		#icon = 
-		x = -1
+		icon = GFX_focus_generic_expropriate_industrialist
+		x = -2
 		y = 1
 		relative_position_id = SND_eternal_warlord_state
 		mutually_exclusive = { }
@@ -1571,8 +1696,8 @@ focus_tree = {
 	}
 	focus = {
 		id = SND_decree_on_drunkenness
-		#icon = 
-		x = 1
+		icon = GFX_focus_generic_happy_cheer
+		x = 2
 		y = 1
 		relative_position_id = SND_eternal_warlord_state
 		mutually_exclusive = { }
@@ -1599,6 +1724,31 @@ focus_tree = {
 		id = SND_centralize_the_cliques
 		icon = GFX_focus_generic_subjugation
 		x = 0
+		y = 1
+		relative_position_id = SND_eternal_warlord_state
+		mutually_exclusive = { }
+		cost = 6
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			
+		}
+		prerequisite = {
+            focus = SND_eternal_warlord_state 
+        }
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		completion_reward = {
+	
+		}
+	}
+	focus = {
+		id = SND_rebuild_what_we_broke
+		icon = GFX_focus_generic_full_employment
+		x = -1
 		y = 2
 		relative_position_id = SND_eternal_warlord_state
 		mutually_exclusive = { }
@@ -1610,7 +1760,7 @@ focus_tree = {
 			
 		}
 		prerequisite = {
-            focus = SND_decree_on_drunkenness 
+            focus = SND_centralize_the_cliques 
         }
 		prerequisite = {
             focus = SND_institutionalize_warlordism 
@@ -1624,10 +1774,10 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = SND_rebuild_what_we_broke
-		#icon = 
-		x = -1
-		y = 3
+		id = SND_china_must_never_be_weak
+		icon = GFX_focus_generic_mass_production
+		x = 1
+		y = 2
 		relative_position_id = SND_eternal_warlord_state
 		mutually_exclusive = { }
 		cost = 6
@@ -1640,30 +1790,8 @@ focus_tree = {
 		prerequisite = {
             focus = SND_centralize_the_cliques 
         }
-		
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
-		completion_reward = {
-	
-		}
-	}
-	focus = {
-		id = SND_china_must_never_be_weak
-		#icon = 
-		x = 1
-		y = 3
-		relative_position_id = SND_eternal_warlord_state
-		mutually_exclusive = { }
-		cost = 6
-		ai_will_do = {
-			factor = 1
-		}
-		available = {
-			
-		}
 		prerequisite = {
-            focus = SND_centralize_the_cliques 
+            focus = SND_decree_on_drunkenness 
         }
 		
 		cancel_if_invalid = yes
@@ -1676,9 +1804,9 @@ focus_tree = {
 
 	focus = {
 		id = SND_the_dogmeat_dynasty
-		#icon = 
+		icon = GFX_focus_CHI_a_new_middle_kingdom
 		x = 0
-		y = 4
+		y = 3
 		relative_position_id = SND_eternal_warlord_state
 		mutually_exclusive = { }
 		cost = 6
@@ -1699,7 +1827,9 @@ focus_tree = {
 		continue_if_invalid = no
 		available_if_capitulated = no
 		completion_reward = {
-	
+			set_cosmetic_tag = SND_empire
+			add_stability = 0.1
+			add_war_support = 0.1
 		}
 	}
 }

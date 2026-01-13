@@ -32,7 +32,7 @@ ideas = {
 		
 		SND_zhang_zongchang_is_high = {
 			name = "Zongchang is High Again"
-			#picture = 
+			picture = GFX_idea_prc_permit_opium_trade
 			allowed = { tag = SND }
 			modifier = {
 				stability_factor = -0.5
@@ -44,9 +44,12 @@ ideas = {
 			name = "Warlord Against an Empire"
 			#picture = 
 			allowed = { tag = SND }
+			modifier = {
+				army_org = 8
+			}
 			targeted_modifier = {
 				tag = JAP
-				attack_bonus_against = 0.10
+				attack_bonus_against = 0.25
 				defense_bonus_against = 0.25
 			}
 		}

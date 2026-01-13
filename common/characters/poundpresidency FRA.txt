@@ -45,6 +45,26 @@ characters = {
 			traits = { reckless substance_abuser }
 		}
 	}
+	SND_grigory_semyonov = {
+		name = SOV_grigory_semyonov
+		portraits = {
+			army = {
+				large = "gfx/leaders/SND/Portrait_SOV_grigory_semyonov.png"
+			}
+		}
+
+		corps_commander = {
+			traits = { cavalry_officer cavalry_leader }
+			skill = 3
+			attack_skill = 4
+			defense_skill = 2
+			planning_skill = 1
+			logistics_skill = 3
+			visible = {
+				has_completed_focus = SND_invite_white_russians
+			}
+		}
+	}
 
 	FRA_pierre_la_rochelle = {
 		name = "Pierre Drieu La Rochelle"
