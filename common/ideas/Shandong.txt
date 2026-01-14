@@ -30,6 +30,20 @@ ideas = {
 			}
 		}
 		
+		SND_national_strength = {
+			name = "Brute Force Nation"
+			#picture = 
+			allowed = { tag = SND }
+			modifier = {
+				army_attack_factor = 0.05
+				stability_factor = -0.1
+				army_org_factor = 0.1
+				breakthrough_factor = 0.1
+				conscription = 0.005
+				political_power_factor = -0.05
+			}
+		}
+		
 		SND_zhang_zongchang_is_high = {
 			name = "Zongchang is High Again"
 			picture = GFX_idea_prc_permit_opium_trade
@@ -64,6 +78,19 @@ ideas = {
 				dig_in_speed = 1
 				max_planning = 0.1
 				army_attack_speed_factor = 0.15
+			}
+		}
+		
+		SND_blood_and_sorrow = {
+			name = "In Blood and Sorrow"
+			#picture = 
+			allowed = { tag = SND }
+			modifier = {
+				resistance_target = -0.1
+				resistance_growth = -0.1
+				compliance_gain = 0.15
+				conscription_factor = -0.2
+				industry_repair_factor = 0.2
 			}
 		}
     }

@@ -26,7 +26,7 @@ focus_tree = {
 		
 		prerequisite = {}
 		mutually_exclusive = { }
-		cost = 6
+		cost = 5
 			ai_will_do = {
 			factor = 1
 		}
@@ -42,6 +42,27 @@ focus_tree = {
 		available_if_capitulated = no
 		completion_reward = {
 			promote_character = SND_zhang_zongchang
+			set_party_name = {
+    			ideology = neutrality
+    			long_name = zhang_clique
+    			name = zhang_clique
+			}
+			set_party_name = {
+    			ideology = democratic
+    			long_name = zhang_clique
+    			name = zhang_clique
+			}
+			set_party_name = {
+    			ideology = communism
+    			long_name = zhang_clique
+    			name = zhang_clique
+			}
+			set_party_name = {
+    			ideology = fascism
+    			long_name = zhang_clique
+    			name = zhang_clique
+			}
+			add_stability = -0.40
 		}
 	}
     focus = {
@@ -71,6 +92,7 @@ focus_tree = {
             type = infantry_equipment
             amount = 3000
         	}
+			upgrade_draft_law = yes
 			add_political_power = 50
 		}
 	}
@@ -412,13 +434,13 @@ focus_tree = {
 		continue_if_invalid = no
 		available_if_capitulated = no
 		completion_reward = {
-			upgrade_draft_law = yes
-			add_war_support = 0.1
-			army_experience = 50
+			add_ideas = SND_national_strength
+			army_experience = 30
 			add_power_balance_value = {
     			id = SND_power_balance
     			value = 0.1
 			}
+			add_stability = 0.1
 		}
 	}
     
@@ -478,7 +500,14 @@ focus_tree = {
 		available_if_capitulated = no
 		completion_reward = {
 			add_research_slot = 1
-			add_popularity = { ideology = neutrality popularity = -0.10 }
+			add_popularity = { ideology = neutrality popularity = -0.20 }
+			add_tech_bonus = {
+            bonus = 0.35
+            uses = 2
+            category = electronics
+      		}
+			air_experience = 35
+			navy_experience = 35
 		}
 	}
     
@@ -506,6 +535,12 @@ focus_tree = {
 		available_if_capitulated = no
 		completion_reward = {
 			give_market_access = JAP
+			add_tech_bonus = {
+            bonus = 0.35
+            uses = 2
+            category = industry
+      		}
+			add_offsite_building = { type = industrial_complex level = 2 }
 		}
 	}
     
@@ -534,8 +569,9 @@ focus_tree = {
 		completion_reward = {
 			add_equipment_to_stockpile = {
             type = infantry_equipment
-            amount = 1500
+            amount = 2000
         	}
+			add_manpower = 15000
 			army_experience = 30
 			custom_effect_tooltip = "Grigory Semyonov Will Become a General!"
 		}
@@ -566,9 +602,8 @@ focus_tree = {
 		completion_reward = {
 			add_equipment_to_stockpile = {
             type = artillery_equipment
-            amount = 250
+            amount = 300
         	}
-			add_political_power = -50
 			give_market_access = ENG
 			give_market_access = USA
 		}
@@ -589,7 +624,7 @@ focus_tree = {
 			factor = 1
 		}
 		available = {
-			
+			has_completed_focus = SND_shandong_arsenal
 		}
 		
 		bypass = {
@@ -990,10 +1025,7 @@ focus_tree = {
 			factor = 1
 		}
 		available = {
-			OR = {
-				has_completed_focus = SND_loyalty_bought_not_earned
-				has_completed_focus = SND_hire_men_who_count
-			}
+			has_completed_focus = SND_shandong_arsenal
 		}
 		
 		cancel_if_invalid = yes
@@ -1326,7 +1358,7 @@ focus_tree = {
 		continue_if_invalid = no
 		available_if_capitulated = no
 		completion_reward = {
-			
+			add_ideas = SND_blood_and_sorrow
 		}
 	}
 
@@ -1526,7 +1558,7 @@ focus_tree = {
             target = PRC
             type = annex_everything
         	}
-			PRC = { every_core_state = { add_claim_by = SND } }
+			PRC = { every_owned_state = { add_claim_by = SND } }
 		}
 	}
 	
