@@ -9805,6 +9805,7 @@
   			 	ideology = fascism_ideology
 				trait = literally_charlemange
 			}
+			set_cosmetic_tag = FRA_legionary
             set_faction_name = BrotherhoodofEurope
             country_event = etat.14
 		}

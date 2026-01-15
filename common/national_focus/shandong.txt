@@ -104,7 +104,7 @@ focus_tree = {
 		relative_position_id = SND_dogmeat_general_ascendent
 		prerequisite = { focus = SND_dogmeat_general_ascendent }
 		mutually_exclusive = { }
-		cost = 6
+		cost = 5
 			ai_will_do = {
 			factor = 1
 		}
@@ -680,7 +680,7 @@ focus_tree = {
 		}
 	}
     focus = {
-		id = SND_vice_as_state_policy
+		id = SND_dig_deep_dig_greedy
 		#icon = 
 		x = -2
 		y = 2
@@ -689,9 +689,9 @@ focus_tree = {
             focus = SND_opium_lifeline 
         }
 		mutually_exclusive = { }
-		cost = 6
+		cost = 5
 		ai_will_do = {
-			factor = 1
+			factor = 5
 		}
 		available = {
 			
@@ -701,13 +701,26 @@ focus_tree = {
 		continue_if_invalid = no
 		available_if_capitulated = no
 		completion_reward = {
-			add_popularity = { ideology = neutrality popularity = 0.10 }
+			add_popularity = { ideology = neutrality popularity = 0.05 }
 			capital_scope = {
 				add_resource = {
 					type = steel
+					amount = 16
+				}
+				add_resource = {
+					type = tungsten
 					amount = 8
 				}
+				add_resource = {
+					type = aluminium
+					amount = 5
+				}
 			}
+			add_tech_bonus = {
+            bonus = 0.5
+            uses = 2
+            category = excavation_tech
+      		}
 			add_power_balance_value = {
     			id = SND_power_balance
     			value = -0.1
@@ -724,9 +737,9 @@ focus_tree = {
             focus = SND_opium_lifeline 
         }
 		mutually_exclusive = { }
-		cost = 6
+		cost = 5
 		ai_will_do = {
-			factor = 1
+			factor = 5
 		}
 		available = {
 			
@@ -759,9 +772,9 @@ focus_tree = {
             focus = SND_opium_lifeline 
         }
 		mutually_exclusive = { }
-		cost = 6
+		cost = 5
 		ai_will_do = {
-			factor = 1
+			factor = 5
 		}
 		available = {
 			
@@ -790,12 +803,12 @@ focus_tree = {
 		y = 3
 		relative_position_id = SND_found_dogmeat_economics
 		prerequisite = { 
-            focus = SND_vice_as_state_policy 
+            focus = SND_dig_deep_dig_greedy 
         }
 		mutually_exclusive = { }
-		cost = 6
+		cost = 5
 		ai_will_do = {
-			factor = 1
+			factor = 5
 		}
 		available = {
 			
@@ -821,9 +834,9 @@ focus_tree = {
             focus = SND_nation_high_on_revenue 
         }
 		mutually_exclusive = { }
-		cost = 6
+		cost = 5
 		ai_will_do = {
-			factor = 1
+			factor = 5
 		}
 		available = {
 			
@@ -843,51 +856,6 @@ focus_tree = {
             }
 		}
 	}
-	
-	focus = {
-		id = SND_plunder_earth_and_towns
-		#icon = 
-		x = 2
-		y = 4
-		relative_position_id = SND_found_dogmeat_economics
-		prerequisite = { 
-            focus = SND_war_workshops 
-			focus = SND_nation_high_on_revenue
-        }
-		mutually_exclusive = { }
-		cost = 5
-		ai_will_do = {
-			factor = 1
-		}
-		available = {
-			
-		}
-		
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
-		completion_reward = {
-			capital_scope = {
-				add_resource = {
-					type = steel
-					amount = 16
-				}
-				add_resource = {
-					type = tungsten
-					amount = 8
-				}
-				add_resource = {
-					type = aluminium
-					amount = 5
-				}
-			}
-			add_tech_bonus = {
-            bonus = 0.5
-            uses = 2
-            category = excavation_tech
-      		}
-		}
-	}
     
     focus = {
 		id = SND_hire_men_who_count
@@ -905,9 +873,9 @@ focus_tree = {
             focus = SND_managed_kleptocracy 
         }
 		mutually_exclusive = { }
-		cost = 6
+		cost = 5
 		ai_will_do = {
-			factor = 1
+			factor = 5
 		}
 		available = {
 			
@@ -932,9 +900,9 @@ focus_tree = {
             focus = SND_hire_men_who_count 
         }
 		mutually_exclusive = { }
-		cost = 6
+		cost = 5
 		ai_will_do = {
-			factor = 1
+			factor = 5
 		}
 		available = {
 			
@@ -968,9 +936,9 @@ focus_tree = {
             focus = SND_hire_men_who_count 
         }
 		mutually_exclusive = { }
-		cost = 6
+		cost = 5
 		ai_will_do = {
-			factor = 1
+			factor = 5
 		}
 		available = {
 			
@@ -1011,6 +979,7 @@ focus_tree = {
 		completion_reward = {
 			remove_ideas = CHI_warlord_state_idea
 			add_ideas = state_capitalism
+			add_ideas = stratocracy
 		}
 	}
 	
@@ -1088,7 +1057,12 @@ focus_tree = {
 			factor = 1
 		}
 		available = {
-			
+			JAP = {
+				OR = {
+				has_government = neutrality
+				has_government = fascism
+				}
+			}
 		}
 		
 		cancel_if_invalid = yes
@@ -1155,12 +1129,14 @@ focus_tree = {
 				remove_from_faction = SND
 				end_puppet = SND
 			}
-			white_peace = SND
+			every_enemy_country = {
+				white_peace = ROOT
+			}
 			create_wargoal = {
 				target = JAP
 				type = annex_everything
 			}
-			add_command_power = 50
+			add_command_power = 30
 		}
 	}
 	focus = {
@@ -1170,9 +1146,9 @@ focus_tree = {
 		y = 3
 		relative_position_id = SND_test_neighboring_cliques
 		mutually_exclusive = { }
-		cost = 6
+		cost = 5
 		ai_will_do = {
-			factor = 1
+			factor = 5
 		}
 		prerequisite = { focus = SND_kingdom_of_gunfire }
 		
@@ -1203,9 +1179,9 @@ focus_tree = {
         }
         relative_position_id = SND_test_neighboring_cliques
 		mutually_exclusive = { }
-		cost = 6
+		cost = 5
 		ai_will_do = {
-			factor = 1
+			factor = 5
 		}
 		available = {
 			
@@ -1230,9 +1206,9 @@ focus_tree = {
         }
         relative_position_id = SND_march_down_yellow_river
 		mutually_exclusive = { }
-		cost = 6
+		cost = 5
 		ai_will_do = {
-			factor = 1
+			factor = 5
 		}
 		available = {
 			
@@ -1256,9 +1232,9 @@ focus_tree = {
         }
         relative_position_id = SND_test_neighboring_cliques
 		mutually_exclusive = { }
-		cost = 6
+		cost = 5
 		ai_will_do = {
-			factor = 1
+			factor = 5
 		}
 		available = {
 			
@@ -1270,6 +1246,22 @@ focus_tree = {
 		completion_reward = {
 			MAN = { every_owned_state = { add_claim_by = SND } }
 			MEN = { every_owned_state = { add_claim_by = SND } }
+			SHX = { every_owned_state = { add_claim_by = SND } }
+			create_wargoal = {
+            target = MAN
+            type = annex_everything
+        	}
+			create_wargoal = {
+            target = MAN
+            type = annex_everything
+        	}
+			create_wargoal = {
+            target = SHX
+            type = annex_everything
+        	}
+			every_army_leader = {
+				add_logistics = 1
+			}
 		}
 	}
 	
@@ -1283,9 +1275,9 @@ focus_tree = {
         }
         relative_position_id = SND_test_neighboring_cliques
 		mutually_exclusive = { }
-		cost = 6
+		cost = 5
 		ai_will_do = {
-			factor = 1
+			factor = 5
 		}
 		available = {
 			
@@ -1307,6 +1299,13 @@ focus_tree = {
                 }
                 }
             }
+			add_daily_mastery = {
+				amount = 0.5
+				days = 90
+				folder = land
+				track = combat_support
+				index = 1
+			}	
 		}
 	}
 	
@@ -1320,9 +1319,9 @@ focus_tree = {
         }
         relative_position_id = SND_test_neighboring_cliques
 		mutually_exclusive = { }
-		cost = 6
+		cost = 5
 		ai_will_do = {
-			factor = 1
+			factor = 5
 		}
 		
 		cancel_if_invalid = yes
@@ -1346,9 +1345,9 @@ focus_tree = {
         }
         relative_position_id = SND_test_neighboring_cliques
 		mutually_exclusive = { }
-		cost = 6
+		cost = 5
 		ai_will_do = {
-			factor = 1
+			factor = 5
 		}
 		available = {
 			
@@ -1372,9 +1371,9 @@ focus_tree = {
         }
         relative_position_id = SND_test_neighboring_cliques
 		mutually_exclusive = { }
-		cost = 6
+		cost = 5
 		ai_will_do = {
-			factor = 1
+			factor = 5
 		}
 		available = {
 			count_triggers = {
@@ -1443,9 +1442,9 @@ focus_tree = {
 		y = 1
 		relative_position_id = SND_march_down_yellow_river
 		mutually_exclusive = { }
-		cost = 6
+		cost = 5
 		ai_will_do = {
-			factor = 1
+			factor = 5
 		}
 		available = {
 			
@@ -1479,12 +1478,29 @@ focus_tree = {
 		y = 2
 		relative_position_id = SND_march_down_yellow_river
 		mutually_exclusive = { }
-		cost = 6
+		cost = 5
 		ai_will_do = {
-			factor = 1
+			factor = 5
 		}
 		available = {
 			
+		}
+		bypass = {
+			XSM = {
+				capital_scope = { is_owned_by = ROOT }
+			}
+			GSM = {
+				capital_scope = { is_owned_by = ROOT }
+			}
+			NXM = {
+				capital_scope = { is_owned_by = ROOT }
+			}
+			KHM = {
+				capital_scope = { is_owned_by = ROOT }
+			}
+			SIK = {
+				capital_scope = { is_owned_by = ROOT }
+			}
 		}
 		prerequisite = {
             focus = SND_erase_sun_yat_sens_heirs 
@@ -1539,9 +1555,9 @@ focus_tree = {
 		y = 2
 		relative_position_id = SND_march_down_yellow_river
 		mutually_exclusive = { }
-		cost = 6
+		cost = 5
 		ai_will_do = {
-			factor = 1
+			factor = 5
 		}
 		available = {
 			
@@ -1559,6 +1575,11 @@ focus_tree = {
             type = annex_everything
         	}
 			PRC = { every_owned_state = { add_claim_by = SND } }
+			create_wargoal = {
+            target = XIC
+            type = annex_everything
+        	}
+			XIC = { every_core_state = { add_claim_by = SND } }
 		}
 	}
 	
@@ -1569,9 +1590,9 @@ focus_tree = {
 		y = 2
 		relative_position_id = SND_march_down_yellow_river
 		mutually_exclusive = { }
-		cost = 6
+		cost = 5
 		ai_will_do = {
-			factor = 1
+			factor = 5
 		}
 		available = {
 			
@@ -1606,11 +1627,11 @@ focus_tree = {
 		mutually_exclusive = {
 			focus = SND_march_on_korea
 		}
-		cost = 6
+		cost = 5
 		ai_will_do = {
 			factor = 1
 		}
-		available = {
+		avai5able = {
 			has_war = no
 		}
 		prerequisite = {
@@ -1631,9 +1652,9 @@ focus_tree = {
 		y = 3
 		relative_position_id = SND_march_down_yellow_river
 		mutually_exclusive = { }
-		cost = 6
+		cost = 5
 		ai_will_do = {
-			factor = 1
+			factor = 5
 		}
 		available = {
 			
@@ -1678,16 +1699,15 @@ focus_tree = {
 		y = 7
 		#relative_position_id = SND_march_down_yellow_river
 		mutually_exclusive = { }
-		cost = 6
+		cost = 5
 		ai_will_do = {
-			factor = 1
+			factor = 5
 		}
 		
 		prerequisite = {
 			focus = SND_mandate_of_the_gun
 		}
 		available = {
-			has_completed_focus = SND_mandate_of_the_gun
 			has_war = no			
 		}
 		cancel_if_invalid = yes
@@ -1708,9 +1728,9 @@ focus_tree = {
 		y = 1
 		relative_position_id = SND_eternal_warlord_state
 		mutually_exclusive = { }
-		cost = 6
+		cost = 5
 		ai_will_do = {
-			factor = 1
+			factor = 5
 		}
 		available = {
 			
@@ -1724,6 +1744,7 @@ focus_tree = {
 		available_if_capitulated = no
 		completion_reward = {
 			add_ideas = protectionism
+			add_research_slot = 1
 		}
 	}
 	focus = {
@@ -1733,9 +1754,9 @@ focus_tree = {
 		y = 1
 		relative_position_id = SND_eternal_warlord_state
 		mutually_exclusive = { }
-		cost = 6
+		cost = 5
 		ai_will_do = {
-			factor = 1
+			factor = 5
 		}
 		available = {
 			
@@ -1759,9 +1780,9 @@ focus_tree = {
 		y = 1
 		relative_position_id = SND_eternal_warlord_state
 		mutually_exclusive = { }
-		cost = 6
+		cost = 5
 		ai_will_do = {
-			factor = 1
+			factor = 5
 		}
 		available = {
 			
@@ -1784,9 +1805,9 @@ focus_tree = {
 		y = 2
 		relative_position_id = SND_eternal_warlord_state
 		mutually_exclusive = { }
-		cost = 6
+		cost = 5
 		ai_will_do = {
-			factor = 1
+			factor = 5
 		}
 		available = {
 			
@@ -1812,9 +1833,9 @@ focus_tree = {
 		y = 2
 		relative_position_id = SND_eternal_warlord_state
 		mutually_exclusive = { }
-		cost = 6
+		cost = 5
 		ai_will_do = {
-			factor = 1
+			factor = 5
 		}
 		available = {
 			
@@ -1841,9 +1862,9 @@ focus_tree = {
 		y = 3
 		relative_position_id = SND_eternal_warlord_state
 		mutually_exclusive = { }
-		cost = 6
+		cost = 5
 		ai_will_do = {
-			factor = 1
+			factor = 5
 		}
 		available = {
 			
@@ -1862,6 +1883,7 @@ focus_tree = {
 			set_cosmetic_tag = SND_empire
 			add_stability = 0.1
 			add_war_support = 0.1
+			add_ideas = abs_monarchy
 		}
 	}
 }

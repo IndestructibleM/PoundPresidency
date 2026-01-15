@@ -1,0 +1,26 @@
+add_namespace = snd
+
+country_event = {
+	id = goc.1
+	title = goc.1.t
+	desc = goc.1.d
+	
+	trigger = {
+        tag = SND
+        has_government = neutrality 
+        has_war_with = JAP
+        OR = {
+        has_completed_focus = SND_warlord_against_empire
+        has_completed_focus = SND_march_on_korea
+        }
+	}
+    mean_time_to_happen = { days = 10 }
+	option = {
+		name = goc.1.a
+		add_political_power = 20
+        add_timed_idea = {
+			idea = SND_defense_of_interior
+			days = 300
+		}        
+	}
+}

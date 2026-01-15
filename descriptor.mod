@@ -6,4 +6,4 @@ tags={
 name="The Pound Presidency"
 picture="thumbnail.png"
 supported_version="1.17.3.0"
-remote_file_id="3636257287"
+remote_file_id="3637512747"

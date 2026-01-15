@@ -521,7 +521,7 @@ foreign_politics = {
 SND_balance_of_power_cat = {
 	SND_opium_bread_circuses = {
 	name = "Bread and Circuses with Opium"
-	days_re_enable = 80
+	days_re_enable = 60
 	icon = GFX_decision_gre_investment_decisions
     allowed = { 
 		tag = SND
@@ -529,22 +529,22 @@ SND_balance_of_power_cat = {
 	ai_will_do = {
        	factor = 90
     }
-	days_remove = 50
+	days_remove = 15
 	cost = 50
     complete_effect = {
-		add_popularity = { ideology = neutrality popularity = 0.05 }
+		add_timed_idea = {
+			idea = SND_zhang_zongchang_is_high
+			days = 15
+		}
 	}
 	remove_effect = {
-		add_power_balance_value = {
-			id = SND_power_balance
-			value = -0.15
-		}
+		add_popularity = { ideology = neutrality popularity = 0.05 }
 	}
 	}
 	
 	SND_crush_opposition = {
 	name = "Enforce Law without Order"
-	days_re_enable = 80
+	days_re_enable = 60
 	icon = GFX_decision_generic_police_action
     allowed = { 
 		tag = SND
@@ -552,7 +552,7 @@ SND_balance_of_power_cat = {
 	ai_will_do = {
        	factor = 90
     }
-	days_remove = 50
+	days_remove = 30
 	cost = 50
     complete_effect = {
 		add_war_support = 0.05

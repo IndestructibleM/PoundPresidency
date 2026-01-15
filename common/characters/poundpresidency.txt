@@ -7,7 +7,7 @@ characters = {
 			}
 		}
 		country_leader = {
-			ideology = fascism_ideology
+			ideology = socfash
 		}
 	}
 	
@@ -152,7 +152,7 @@ characters = {
 			}
 		}
 		country_leader = {
-			ideology = despotism
+			ideology = technocracy
 		}
 		advisor = {
 			slot = political_advisor

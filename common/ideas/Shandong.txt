@@ -93,5 +93,17 @@ ideas = {
 				industry_repair_factor = 0.2
 			}
 		}
+		
+		SND_defense_of_interior = {
+			name = "Defense of the Interior"
+			#picture = 
+			allowed = { tag = SND }
+			modifier = {
+				army_core_defence_factor = 0.2
+				army_core_attack_factor = 0.2
+				supply_combat_penalties_on_core_factor = -0.2
+				production_speed_bunker_factor = 0.2
+			}
+		}
     }
 }

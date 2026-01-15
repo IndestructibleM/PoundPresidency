@@ -7,6 +7,9 @@
  FRA_etat_DEF: "the French Popular State"
  FRA_etat_ADJ: "French"
  
+ FRA_legionary: "National-Legionary State of France"
+ FRA_legionary_DEF: "the National-Legionary State of France"
+ 
  FRA_NeoSocEuropa: "European Social Republic"
  FRA_NeoSocEuropa_DEF: "the European Social Republic"
  FRA_NeoSocEuropa_ADJ: "European"
@@ -115,8 +118,6 @@ FRA_neosocialists_side: "Néo-Socialistes Ascendent"
 FRA_milice_side: "La Milice leads the Storm"
 
 fascist_nationale: "Fascist Nationale"
-
-FRA_NeoSocEuropa: "European Social Republic"
 
 literally_charlemange: "§YLiterally Charlemange§!"
 joseph_the_carpenter: "§YJoseph the Carpenter§!"

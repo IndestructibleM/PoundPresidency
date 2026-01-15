@@ -57,7 +57,11 @@
  SND_china_must_never_be_weak: "China Must Never Be Weak Again"
  SND_the_dogmeat_dynasty: "The Dogmeat Dynasty"
 
+ SND_beijing: "Beiyang Government"
+ SND_beijing_ADJ: "Beiyang"
+ SND_beijing_DEF: "Beiyang Government"
  SND_empire: "Great Qi State"
+ SND_empire_ADJ: "Great Qi"
  SND_empire_DEF: "the Great Qi State"
  
  zhang_clique: "Zhang Clique"
