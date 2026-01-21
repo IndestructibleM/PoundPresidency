@@ -9,6 +9,10 @@ spriteTypes = {
 		texturefile = "gfx/leaders/FRA/Portrait_Marcel_Bucard.png"
 	}
 	SpriteType = {
+		name = "GFX_Portrait_Zhongchang_drip"
+		texturefile = "gfx/leaders/SND/Portrait_Zhongchang_drip.png"
+	}
+	SpriteType = {
 		name = "GFX_idea_USA_state_of_utopia"
 		texturefile = "gfx/interface/ideas/USA_state_of_utopia.png"
 	}
@@ -92,7 +96,68 @@ spriteTypes = {
 		name = "GFX_Portrait_Francis_Yockey_cap"
 		texturefile = "gfx/leaders/USA/Portrait_Francis_Yockey_cap.png"
 	}
+		
+	spriteType = {
+		name = "GFX_idea_SND_all_under_heaven"
+		texturefile = "gfx/interface/ideas/SND_all_under_heaven.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_SND_defense_of_interior"
+		texturefile = "gfx/interface/ideas/SND_defense_of_interior.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_SND_high_on_revenue"
+		texturefile = "gfx/interface/ideas/SND_high_on_revenue.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_SND_lord_of_war"
+		texturefile = "gfx/interface/ideas/SND_lord_of_war.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_SND_zhang_zongchang_is_high"
+		texturefile = "gfx/interface/ideas/SND_zhang_zongchang_is_high.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_SND_blood_and_sorrow"
+		texturefile = "gfx/interface/ideas/SND_blood_and_sorrow.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_SND_building_back_up"
+		texturefile = "gfx/interface/ideas/SND_building_back_up.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_SND_corruption_powered"
+		texturefile = "gfx/interface/ideas/SND_corruption_powered.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_SND_lord_of_war"
+		texturefile = "gfx/interface/ideas/SND_lord_of_war.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_SND_national_strength"
+		texturefile = "gfx/interface/ideas/SND_national_strength.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_SND_stable_silver_supply"
+		texturefile = "gfx/interface/ideas/SND_stable_silver_supply.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_SND_warlord_against_empire"
+		texturefile = "gfx/interface/ideas/SND_warlord_against_empire.dds"
+	}
 }
+
 spriteTypes = {
 
 	SpriteType = {
@@ -107,4 +172,13 @@ spriteTypes = {
 		name = "GFX_idea_state_capitalism"
 		texturefile = "gfx/interface/ideas/laws/state_capitalism.png"
 	}
+	SpriteType = {
+		name = "GFX_idea_decentralized_planning"
+		texturefile = "gfx/interface/ideas/laws/decentralized_planning.png"
+	}
+	SpriteType = {
+		name = "GFX_idea_state_capitalism"
+		texturefile = "gfx/interface/ideas/laws/state_capitalism.png"
+	}
 }
+

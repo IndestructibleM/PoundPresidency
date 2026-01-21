@@ -19,7 +19,6 @@
  SND_shandong_under_strongman: "Shandong Under the Strongman"
  SND_loyalty_bought_not_earned: "Loyalty Bought, Not Earned"
  SND_chaos_is_a_ladder: "Chaos is a Ladder"
- SND_rails_for_guns: "Rails for Guns"
  SND_shandong_arsenal: "The Shandong Arsenal"
  SND_industry_through_coercion: "Industrialization by Coercion"
  SND_country_won_by_shellfire: "A Country Won By Shellfire"
@@ -29,6 +28,24 @@
  SND_japanese_brokers: "Contact Japanese Brokers"
  SND_invite_white_russians: "Invite the White Russians"
  SND_concessions_for_cannons: "Concessions for Cannons"
+ SND_railway_takeover: "Takeover the Railways"
+ SND_found_dogmeat_economics: "Found "Dogmeat" Economics"
+ SND_opium_lifeline: "The Opium Lifeline"
+ SND_smugglers_in_uniform: "Smugglers in Uniform"
+ SND_dig_deep_dig_greedy: "Dig Deep, Dig Greedily"
+ SND_managed_kleptocracy: "Managed Kleptocracy"
+ SND_war_workshops: "War Workshops"
+ SND_nation_high_on_revenue: "A Nation High on Revenue"
+ SND_stabilize_silver: "Stabilize the Silver Supply"
+ SND_hire_men_who_count: "Hire Men Who Can Count"
+ SND_sieze_banks: "Sieze the Banks"
+ SND_dogmeat_model: "The Dogmeat Model Province"
+ 
+ SND_professional_bandit_brigades: "Professional Bandit Brigades"
+ SND_shell_the_skies: "Shell the Skies"
+ SND_our_merchant_marine: "Our Own Merchant Marine"
+ SND_warfare_by_improvision: "Warfare by Improvision"
+ SND_on_steel_wheels: "On Wheels of Steel"
 
  SND_test_neighboring_cliques: "Test the Neighboring Cliques"
  SND_war_the_only_diplomacy: "War, the Only Diplomacy"
@@ -65,3 +82,14 @@
  SND_empire_DEF: "the Great Qi State"
  
  zhang_clique: "Zhang Clique"
+
+ general_86: "General Eighty-Six"
+ three_dont_knows: "The Three Don't-Knows"
+ justice_and_might: "Great General of Justice and Might"
+ 
+ SND_mandate_of_the_gun_desc: "You tell me to do this, \nHe tells me to do that. \nYou're all bastards, \nGo fuck your mother. \n\n"Poem About Bastards"."
+ 
+ tt_cracked: "Your troops are cracked, literally."
+
+ SND_date_junnosuke: "Date Junnosuke"
+ the_ronin: "The Ronin"

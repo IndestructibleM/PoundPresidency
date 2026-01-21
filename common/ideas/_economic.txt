@@ -10,7 +10,7 @@ ideas = {
 				always = no
 			}
 			removal_cost = -1
-
+			level = 1
 			modifier = {
 				consumer_goods_expected_value = 0.50
 				production_speed_industrial_complex_factor = -0.5
@@ -58,7 +58,7 @@ ideas = {
 				always = no
 			}
 			removal_cost = -1
-
+			level = 1
 			modifier = {
 				consumer_goods_expected_value = 0.4
 				production_speed_industrial_complex_factor = -0.4
@@ -101,14 +101,14 @@ ideas = {
 
 		civilian_economy = {
 
-
 			cost = 150
 			removal_cost = -1
-
+			level = 1
 			modifier = {
 				consumer_goods_expected_value = 0.35
 				production_speed_arms_factory_factor = -0.35
 				production_speed_bunker_factor = -0.35
+				production_speed_industrial_complex_factor = -0.2
 				production_speed_coastal_bunker_factor = -0.35
 				production_speed_anti_air_building_factor = -0.35
 				conversion_cost_civ_to_mil_factor= 0.3
@@ -125,7 +125,7 @@ ideas = {
 		}
 
 		low_economic_mobilisation = {
-
+			level = 2
 			available = {
 				has_war_support > 0.15
 				
@@ -254,7 +254,7 @@ ideas = {
 		}
 
 		partial_economic_mobilisation = {
-
+			level = 3
 			available = {
 				has_war_support > 0.25
 
@@ -397,7 +397,7 @@ ideas = {
 		}
 
 		war_economy = {
-
+			level = 4
 
 			available = {
 				has_war_support > 0.5
@@ -595,7 +595,7 @@ ideas = {
 		}
 
 		tot_economic_mobilisation = {
-
+			level = 5
 			visible = {
 				if = {
 					limit = {
@@ -779,7 +779,7 @@ ideas = {
 		}
 
 		totaler_krieg_economy = {
-
+			level = 1
 			visible = {
 				original_tag = GER
 				has_completed_focus = GER_totaler_krieg
@@ -815,7 +815,7 @@ ideas = {
 		}
 
 		national_defense_state = { 
-
+			level = 1
 			picture = JAP_national_defense_state
 
 			visible = {
@@ -857,7 +857,7 @@ ideas = {
 		}
 
 		new_economic_policy = {
-
+			level = 1
 			picture = new_economic_policy
 
 			allowed = {
@@ -886,7 +886,7 @@ ideas = {
 		}
 		new_economic_policy_2 = {
 			name = new_economic_policy
-
+			level = 2
 			picture = new_economic_policy
 
 			allowed = {
@@ -917,7 +917,7 @@ ideas = {
 
 		capital_investment_model = {
 			name = capital_investment_model
-
+			level = 1
 			picture = RAJ_trickle_down_economy
 
 			allowed = {
@@ -948,7 +948,7 @@ ideas = {
 		}
 
 		JAP_war_communism_idea = {
-
+			level = 1
 			picture = new_economic_policy
 
 			allowed = {

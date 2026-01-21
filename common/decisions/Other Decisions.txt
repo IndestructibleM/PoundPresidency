@@ -830,9 +830,13 @@ SND_balance_of_power_cat = {
 	}
 	target_non_existing = yes
 	target_trigger = {
+		ROOT = {
+			has_completed_focus = SND_eternal_warlord_state
+		}
 		FROM = {
 			capital_scope = {
 				is_claimed_by = ROOT
+				is_core_of = CHI
 				is_owned_and_controlled_by = ROOT
 			}
 			NOT = {
