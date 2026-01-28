@@ -190,5 +190,14 @@ spriteTypes = {
 		name = "GFX_idea_state_capitalism"
 		texturefile = "gfx/interface/ideas/laws/state_capitalism.png"
 	}
+	
+	SpriteType = {
+		name = "GFX_ideology_reactionary_group"
+		texturefile = "gfx/interface/ideologies/reactionary_group.png"
+	}
+	SpriteType = {
+		name = "GFX_ideology_socialist_group"
+		texturefile = "gfx/interface/ideologies/socialist_group.png"
+	}
 }
 

@@ -51,5 +51,26 @@ buildings = {
 			state_max = 4
 		}
 	}
+	
+	ore_refinery = {
+		show_on_map = 1
+		base_cost = 5000
+		icon_frame = 2
+		per_level_extra_cost = 500
+		local_resources_steel = 4 # May use local_resources_ + any resource name
+		local_resources_aluminium = 2 # May use local_resources_ + any resource name
+		local_resources_tungsten = 2 # May use local_resources_ + any resource name
+		value = 3
+		infrastructure_construction_effect = yes
+		allied_build = no
+		show_modifier = yes
+		state_modifiers = {
+			local_resources = 0.15
+		}
+		level_cap = {
+			shares_slots = yes
+			state_max = 3
+		}
+	}
 
 }
