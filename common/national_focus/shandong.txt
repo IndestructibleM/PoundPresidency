@@ -62,7 +62,7 @@ focus_tree = {
     			long_name = zhang_clique
     			name = zhang_clique
 			}
-			add_stability = -0.5
+			country_event = { id = sndflav.1 days = 0 }
 		}
 	}
     focus = {
@@ -277,6 +277,9 @@ focus_tree = {
             	}
       		}
 			add_stability = -0.05
+			create_railway_gun = {
+				equipment = railway_gun_equipment_1
+			}
 		}
 	}
     
@@ -708,7 +711,6 @@ focus_tree = {
 		continue_if_invalid = no
 		available_if_capitulated = no
 		completion_reward = {
-			add_popularity = { ideology = neutrality popularity = 0.05 }
 			capital_scope = {
 				add_resource = {
 					type = steel
@@ -756,16 +758,25 @@ focus_tree = {
 		continue_if_invalid = no
 		available_if_capitulated = no
 		completion_reward = {
-			unlock_decision_tooltip = SND_raid_the_warlords
 			add_tech_bonus = {
             bonus = 0.5
             uses = 2
             category = support_tech
       		}
+			add_tech_bonus = {
+            bonus = 1
+            uses = 1
+            category = motorized_equipment
+      		}
 			add_equipment_to_stockpile = {
             type = infantry_equipment
             amount = 2500
         	}
+			add_unit_bonus = {
+  				militia = {
+					supply_consumption = -0.02
+  				}
+			}
 		}
 	}
 
@@ -1081,11 +1092,13 @@ focus_tree = {
 				remove_idea = SND_lord_of_war
 				add_idea = SND_lord_of_war2
 			}
-			add_unit_bonus = {
-  				category_support_battalions = {
+			add_equipment_bonus = {
+				bonus = {
+  				support_equipment = {
     				reliability = 0.05
 					supply_consumption = -0.04
   				}
+				}
 			}
 		}
 	}
@@ -1211,7 +1224,7 @@ focus_tree = {
 		x = 16
 		y = 0
 		mutually_exclusive = { }
-		cost = 5
+		cost = 4
 		ai_will_do = {
 			factor = 1
 		}
@@ -1283,55 +1296,7 @@ focus_tree = {
 			}
 		}
 	}
-	
-	focus = {
-		id = SND_march_on_korea
-		icon = GFX_focus_attack_japan
-		x = 3
-		y = 5
-		prerequisite = {
-			focus = SND_mandate_of_the_gun
-		}
-        relative_position_id = SND_test_neighboring_cliques
-		cost = 5
-		ai_will_do = {
-			factor = 1
-		}
-		mutually_exclusive = {
-			focus = SND_one_warlord_to_rule_them_all
-		}
-		available = {
-			NOT  = {
-				has_war_with = CHI
-			}
-			is_in_faction_with = JAP
-			OR = { 
-				CHI = { is_subject_of = ROOT }
-				NOT = {
-					country_exists = CHI
-				}
-			}
-		}
-		
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
-		will_lead_to_war_with = JAP
-		completion_reward = {
-			JAP = {
-				remove_from_faction = SND
-				end_puppet = SND
-			}
-			every_enemy_country = {
-				white_peace = ROOT
-			}
-			create_wargoal = {
-				target = JAP
-				type = annex_everything
-			}
-			add_command_power = 30
-		}
-	}
+
 	focus = {
 		id = SND_reckoning_with_chiangkaishek
 		icon = GFX_focus_CHI_denounce_feudalism
@@ -1367,7 +1332,7 @@ focus_tree = {
 					war_support_reduction_on_damage = 0.2
 					cannot_retreat_while_attacking = 1.0
 					
-					days = 50
+					days = 35
 					tooltip = tt_cracked
 				}
 			}
@@ -1398,6 +1363,10 @@ focus_tree = {
 		completion_reward = {
 			upgrade_economy_law = yes
 			army_experience = 30
+			add_power_balance_value = {
+    			id = SND_power_balance
+    			value = 0.1
+			}
 		}
 	}
 	
@@ -1825,8 +1794,8 @@ focus_tree = {
 	focus = {
 		id = SND_one_warlord_to_rule_them_all
 		icon = GFX_focus_CHI_cradle_of_civilization
-		x = -4
-		y = 4
+		x = -1
+		y = 3
 		relative_position_id = SND_march_down_yellow_river
 		mutually_exclusive = {
 			focus = SND_march_on_korea
@@ -1835,17 +1804,38 @@ focus_tree = {
 		ai_will_do = {
 			factor = 1
 		}
-		avai5able = {
-			has_war = no
+		available = {
+			NOT  = {
+				has_war_with = CHI
+			}
+			owns_state = 1035
+			owns_state = 608	
 		}
 		prerequisite = {
-			focus = SND_mandate_of_the_gun
-		}
+            focus = SND_no_more_frontier_kings 
+        }
+		prerequisite = {
+            focus = SND_crush_red_bandits 
+        }
+		prerequisite = {
+            focus = SND_end_southwest_cliques 
+        }
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
 		completion_reward = {
-	
+			JAP = {
+				remove_from_faction = SND
+				end_puppet = SND
+			}
+			every_enemy_country = {
+				white_peace = ROOT
+			}
+			create_wargoal = {
+				target = JAP
+				type = annex_everything
+			}
+			add_command_power = 30
 		}
 	}
 
@@ -1866,15 +1856,6 @@ focus_tree = {
 		prerequisite = {
 			focus = SND_crown_king_of_north
 		}
-		prerequisite = {
-            focus = SND_no_more_frontier_kings 
-        }
-		prerequisite = {
-            focus = SND_crush_red_bandits 
-        }
-		prerequisite = {
-            focus = SND_end_southwest_cliques 
-        }
 		prerequisite = {
             focus = SND_shells_against_rising_sun 
         }
@@ -1900,8 +1881,8 @@ focus_tree = {
 	focus = {
 		id = SND_eternal_warlord_state
 		icon = GFX_focus_CHI_victory_over_the_invaders
-		x = 18
-		y = 6
+		x = 19
+		y = 5
 		#relative_position_id = SND_march_down_yellow_river
 		mutually_exclusive = { }
 		cost = 5
@@ -1911,9 +1892,9 @@ focus_tree = {
 		
 		prerequisite = {
 			focus = SND_mandate_of_the_gun
+			focus = SND_one_warlord_to_rule_them_all
 		}
 		available = {
-			has_war = no
 			owns_state = 1035
 			owns_state = 608			
 		}
@@ -1956,7 +1937,8 @@ focus_tree = {
 		continue_if_invalid = no
 		available_if_capitulated = no
 		completion_reward = {
-			add_ideas = protectionism
+			add_ideas = export_focus
+			add_ideas = draft6
 			add_research_slot = 1
 		}
 	}
@@ -1986,6 +1968,8 @@ focus_tree = {
 				idea = SND_zhang_zongchang_is_high
 				days = 10
 			}
+			add_ideas = warlord_economy
+			custom_effect_tooltip = tt_BeCareful
 		}
 	}
 	
@@ -2049,9 +2033,10 @@ focus_tree = {
 		continue_if_invalid = no
 		available_if_capitulated = no
 		completion_reward = {
-			swap_ideas = {
-				remove_idea = SND_blood_and_sorrow
-				add_idea = SND_building_back_up
+			remove_ideas = SND_blood_and_sorrow
+			add_timed_idea = {
+				idea = SND_building_back_up
+				days = 500
 			}
 		}
 	}
@@ -2155,6 +2140,16 @@ focus_tree = {
 			TAN = {
 				every_core_state = { add_claim_by = SND }
 			}
+			add_state_claim = 409
+			add_state_claim = 408
+			add_state_claim = 561
+			add_state_claim = 657
+			add_state_claim = 560
+			add_state_claim = 563
+			add_state_claim = 564
+			add_state_claim = 434
+			add_state_claim = 787
+			add_state_claim = 441
 			set_country_leader_portrait = {
 				ideology = despotism
 				portrait = GFX_Portrait_Zhongchang_drip

@@ -1,4 +1,17 @@
 add_namespace = snd
+add_namespace = sndflav
+
+country_event = {
+	id = sndflav.1
+	title = sndflav.1.t
+	desc = sndflav.1.d
+	is_triggered_only = yes
+	option = {
+		name = sndflav.1.a
+		add_political_power = 10
+		add_stability = -0.5
+	}
+}
 
 country_event = {
 	id = snd.1

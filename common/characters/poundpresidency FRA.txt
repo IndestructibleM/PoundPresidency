@@ -51,6 +51,9 @@ characters = {
 			army = {
 				large = "gfx/leaders/SND/Portrait_SOV_grigory_semyonov.png"
 			}
+			civilian = {
+				small = "gfx/interface/advisors/SND/SND_grigory_semyonov.dds"
+			}
 		}
 
 		corps_commander = {
@@ -76,7 +79,10 @@ characters = {
 		name = SND_date_junnosuke
 		portraits = {
 			civilian = {
-				small = "gfx/interface/advisors/SND/SND_date_junnosuke.png" ## Get his minister soon
+				small = "gfx/interface/advisors/SND/SND_date_junnosuke.png"
+			}
+			army = {
+				large = "gfx/leaders/SND/Portrait_date_junnosuke.png"
 			}
 		}
 		corps_commander = {
@@ -85,6 +91,7 @@ characters = {
 			defense_skill = 2
 			planning_skill = 2
 			logistics_skill = 3
+			traits = { trickster }
 			visible = {
 				has_completed_focus = SND_loyalty_bought_not_earned
 			}

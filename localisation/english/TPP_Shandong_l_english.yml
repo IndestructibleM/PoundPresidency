@@ -6,7 +6,10 @@
 
  
  SND_power_balance: "The Swing of the Dogmeat"
+ SND_zhang_is_calm: "Zhang Zongchang is Calm"
  SND_crackpot_side: "Crackpot Dictator"
+ SND_crackpot_low_control_range: "Rising Crack Addiction"
+ SND_crackpot_high_control_range: "Total Crack Addict"
  SND_tyrannical_side: "Brutish Warlord"
  SND_tyrannical_low_control_range: "Rising Brutish Warlord"
  SND_tyrannical_high_control_range: "Total Brutish Warlord"
@@ -90,6 +93,14 @@
  SND_mandate_of_the_gun_desc: "You tell me to do this, \nHe tells me to do that. \nYou're all bastards, \nGo fuck your mother. \n\n"Poem About Bastards"."
  
  tt_cracked: "Your troops are cracked, literally."
+ tt_BeCareful: "§RBe careful what you wish for. China has been damned to 300 years of cruel, despotic leadership. The cycle will begin anew, warlord against warlord, in some centuries time, but for now, disorder reigns as the order over China.§!"
 
  SND_date_junnosuke: "Date Junnosuke"
  the_ronin: "The Ronin"
+
+ warlord_economy: "Warlord Economy"
+ warlord_economy_desc: "Due to our rule, warlordism is endemic and the norm within our country."
+ 
+ sndflav.1.t: "Zhang Zongchang Returns from the Dead!"
+ sndflav.1.d: "Against all expectations—and much to the disbelief of observers across China—Zhang Zongchang, the infamous “Dogmeat General,” has re-emerged to seize control of Shandong, despite having long been believed dead. \n\nRumors of Zhang’s demise had circulated for years, bolstered by reports of assassination, exile, or quiet execution. Yet today, those rumours have been shattered. Zhang appeared suddenly in Jinan, flanked by armed loyalists and mercenary troops, declaring himself the rightful ruler of Shandong once more. Local authorities collapsed almost immediately, either fleeing or pledging allegiance to the returning warlord. \n\nKnown for his brutality, eccentric behaviour, and utter disregard for convention, Zhang Zongchang once ruled Shandong as a personal fiefdom—financed through corruption, opium, and raw violence. His unexpected return has sent shockwaves through China’s already fragile political landscape, raising fears of renewed warlord conflict and unchecked chaos in the north. \n\nForeign observers are divided on how such a figure could reappear so suddenly. Some speculate foreign backing, others whisper of pure chance and opportunism. Whatever the truth, one thing is certain: a man the world thought buried has returned with a gun in his hand and a province at his feet."
+ sndflav.1.a: "The Impossible!"

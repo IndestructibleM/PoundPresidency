@@ -778,6 +778,37 @@ ideas = {
 			cancel_if_invalid = no
 		}
 
+		warlord_economy = {
+			level = 1
+			allowed = {
+				tag = SND
+			}
+			available = {
+				has_completed_focus = SND_decree_on_drunkenness
+			}
+
+			cost = 150
+			allowed_to_remove = {
+				always = no
+			}
+			removal_cost = -1
+			modifier = {
+				consumer_goods_expected_value = 0.2
+				production_speed_dockyard_factor = 0.1
+				production_speed_arms_factory_factor = 0.15
+				production_speed_infrastructure_factor = -0.15
+				production_speed_industrial_complex_factor = -0.15
+				stability_factor = -0.2
+				industrial_capacity_factory = 0.05
+				factory_energy_consumption = 0.2
+				political_power_cost = 0.15
+				fuel_gain_factor = -0.1
+				research_speed_factor = -0.1
+				trade_opinion_factor = 0.2
+			}
+			cancel_if_invalid = no
+		}
+		
 		totaler_krieg_economy = {
 			level = 1
 			visible = {

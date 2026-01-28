@@ -156,6 +156,16 @@ spriteTypes = {
 		name = "GFX_idea_SND_warlord_against_empire"
 		texturefile = "gfx/interface/ideas/SND_warlord_against_empire.dds"
 	}
+	
+	spriteType = {
+		name = "GFX_bop_SND_tyrannical_side"
+		texturefile = "gfx/interface/bop/death_men.png"
+	}
+
+	spriteType = {
+		name = "GFX_bop_SND_crackpot_side"
+		texturefile = "gfx/interface/bop/opium_spread.png"
+	}
 }
 
 spriteTypes = {
