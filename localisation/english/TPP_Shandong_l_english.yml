@@ -76,7 +76,26 @@
  SND_rebuild_what_we_broke: "Rebuild What We Broke"
  SND_china_must_never_be_weak: "China Must Never Be Weak Again"
  SND_the_dogmeat_dynasty: "The Dogmeat Dynasty"
-
+ 
+ SND_dogmeat_general_ascendent_desc: "No way, it's Zhang Zongchang, the real Dogmeat general!"
+ SND_rebuild_what_we_broke_desc: "Time to fix all the shit we broke"
+ SND_decree_on_drunkenness_desc: "I'm high as shit and it has ruined China."
+ SND_eternal_warlord_state_desc: "INFINITE WANSUI!"
+ SND_loyalty_bought_not_earned_desc: "We don't give a fuck we just buy our opps outright."
+ SND_mandate_of_the_gun_desc: "We rule our fife by might makes right."
+ SND_nation_high_on_revenue_desc: "Due to our cut-throat economic reforms, we can actually make a profit."
+ SND_centralize_the_cliques_desc: "It all belongs to me, everything that I see. It's mine mine mine mine mine!"
+ SND_test_neighboring_cliques_desc: "Let's get to work and start conquering stuff."
+ SND_war_the_only_diplomacy_desc: "War is our only path forwards!"
+ SND_crush_red_bandits_desc: "Third-worldists when the third world dictators aren't wholesome at all to each other moment."
+ SND_merge_the_cliques_desc: "We shall merge the Japanese puppet cliques under our direct rule!"
+ SND_poems_in_blood_and_sorrow_desc: "You tell me to do this, \nHe tells me to do that. \nYou're all bastards, \nGo fuck your mother. \n\n"Poem About Bastards"."
+ SND_chaos_is_a_ladder_desc: "Climbing to the top of China is no easy task, but we shall do it!"
+ SND_opium_lifeline_desc: "We literally love crack in this China hood. Give me that shit I need the smoke right now!"
+ SND_rule_by_rifle_whim_desc: "Zhang Zongchang can do whatever he so pleases damnit!"
+ SND_shandong_under_strongman_desc: "Time to whip some order and action into this country."
+ SND_reckoning_with_chiangkaishek_desc: "I once said my sword was a tool of justice. Used to protect the weak. But now - now I'm not so sure... And besides... This isn't my sword."
+ 
  SND_beijing: "Beiyang Government"
  SND_beijing_ADJ: "Beiyang"
  SND_beijing_DEF: "Beiyang Government"
@@ -90,7 +109,7 @@
  three_dont_knows: "The Three Don't-Knows"
  justice_and_might: "Great General of Justice and Might"
  
- SND_mandate_of_the_gun_desc: "You tell me to do this, \nHe tells me to do that. \nYou're all bastards, \nGo fuck your mother. \n\n"Poem About Bastards"."
+ 
  
  tt_cracked: "Your troops are cracked, literally."
  tt_BeCareful: "§RBe careful what you wish for. China has been damned to 300 years of cruel, despotic leadership. The cycle will begin anew, warlord against warlord, in some centuries time, but for now, disorder reigns as the order over China.§!"

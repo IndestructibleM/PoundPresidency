@@ -10,11 +10,12 @@ equipments = {
 		group_by = archetype
 		picture = archetype_infantry_equipment
 		interface_category = interface_category_land
-		reliability = 0.7
+		
 
 		#Space taken in convoy
 		lend_lease_cost = 1
-
+		reliability = 0.7
+		#supply_consumption = -0.10
 		build_cost_ic = 0.10
 		resources = {
 			coal = 2
