@@ -14,7 +14,7 @@ equipments = {
 
 		#Space taken in convoy
 		lend_lease_cost = 1
-		reliability = 0.7
+		reliability = 0.75
 		supply_consumption = -0.02
 		breakthrough = 0.15
 		build_cost_ic = 0.10
@@ -25,7 +25,7 @@ equipments = {
 
 	rations_eq = {
 		archetype = rations
-		priority = 200
+		priority = 600
 		active = yes
 	}
 

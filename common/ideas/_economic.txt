@@ -336,6 +336,7 @@ ideas = {
 				conversion_cost_civ_to_mil_factor= -0.1
 				conversion_cost_mil_to_civ_factor = -0.1
 				fuel_gain_factor = -0.1
+				factory_energy_consumption = 0.1
 				political_power_cost = 0.15
 			}
 
