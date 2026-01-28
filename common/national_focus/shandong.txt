@@ -1,0 +1,2162 @@
+focus_tree = {
+	id = dogmeat_focus
+	
+	country = {
+		factor = 0
+		
+		modifier = {
+			add = 20
+			tag = SND
+		}
+	}
+    continuous_focus_position = { x = 300 y = 2000 }
+	initial_show_position = {
+		x = 0
+	}
+
+	shared_focus = CHI_sea_invite_foreign_investors
+
+	
+	default = no
+	focus = {
+		id = SND_dogmeat_general_ascendent
+		icon = GFX_focus_CHI_meritocratic_principles
+		x = 2
+		y = 0
+		
+		prerequisite = {}
+		mutually_exclusive = { }
+		cost = 5
+			ai_will_do = {
+			factor = 1
+		}
+		available = {
+			
+		}
+		
+		bypass = {
+
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		completion_reward = {
+			promote_character = SND_zhang_zongchang
+			set_party_name = {
+    			ideology = neutrality
+    			long_name = zhang_clique
+    			name = zhang_clique
+			}
+			set_party_name = {
+    			ideology = democratic
+    			long_name = zhang_clique
+    			name = zhang_clique
+			}
+			set_party_name = {
+    			ideology = communism
+    			long_name = zhang_clique
+    			name = zhang_clique
+			}
+			set_party_name = {
+    			ideology = fascism
+    			long_name = zhang_clique
+    			name = zhang_clique
+			}
+			country_event = { id = sndflav.1 days = 0 }
+		}
+	}
+    focus = {
+		id = SND_rule_by_rifle_whim
+		icon = GFX_focus_generic_total_war
+		x = -1
+		y = 1
+		relative_position_id = SND_dogmeat_general_ascendent
+		prerequisite = { focus = SND_dogmeat_general_ascendent }
+		mutually_exclusive = { }
+		cost = 5
+			ai_will_do = {
+			factor = 1
+		}
+		available = {
+			
+		}
+		
+		bypass = {
+
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		completion_reward = {
+			add_equipment_to_stockpile = {
+            type = infantry_equipment
+            amount = 3000
+        	}
+			upgrade_draft_law = yes
+			add_political_power = 50
+		}
+	}
+    focus = {
+		id = SND_shandong_under_strongman
+		icon = GFX_focus_CHI_demonstrate_our_resolve
+		x = 1
+		y = 1
+		relative_position_id = SND_dogmeat_general_ascendent
+		prerequisite = { focus = SND_dogmeat_general_ascendent }
+		mutually_exclusive = { }
+		cost = 5
+			ai_will_do = {
+			factor = 1
+		}
+		available = {
+			
+		}
+		
+		bypass = {
+
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		completion_reward = {
+			add_ideas = warlordism
+			army_experience = 35
+			add_trait = {
+				character = SND_zhang_zongchang
+				ideology = despotism
+				trait = general_86
+			}
+		}
+	}
+    focus = {
+		id = SND_warlords_personal_fife
+		icon = GFX_focus_generic_military_dictatorship
+		x = 0
+		y = 2
+		relative_position_id = SND_dogmeat_general_ascendent
+		prerequisite = { 
+            focus = SND_rule_by_rifle_whim 
+        }
+        prerequisite = {
+            focus = SND_shandong_under_strongman 
+        }
+		mutually_exclusive = { }
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		completion_reward = {
+			every_owned_state = {
+       			add_extra_state_shared_building_slots = 2
+        	}
+			add_victory_points = {
+	        	province = 1069
+               value = 5
+       		}
+			set_power_balance = {
+    			id = SND_power_balance
+    			left_side = SND_crackpot_side
+    			right_side = SND_tyrannical_side
+			}
+			hidden_effect = { country_event = { id = snd.2 days = 100 random_days = 150 } }
+		}
+	}
+    focus = {
+		id = SND_chaos_is_a_ladder
+		icon = GFX_focus_generic_turning_a_blind_eye
+		x = -1
+		y = 3
+		relative_position_id = SND_dogmeat_general_ascendent
+		prerequisite = { 
+            focus = SND_warlords_personal_fife 
+        }
+		mutually_exclusive = { }
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			
+		}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		completion_reward = {
+			capital_scope = {
+        		add_extra_state_shared_building_slots = 1
+        		add_building_construction = {
+           		type = arms_factory
+            	level = 1
+           		instant_build = yes
+        		}
+				add_building_construction = {
+           		type = infrastructure
+            	level = 1
+           		instant_build = yes
+        		}
+        	}
+			add_timed_idea = {
+				idea = SND_zhang_zongchang_is_high
+				days = 10
+			}
+		}
+	}
+    focus = {
+		id = SND_loyalty_bought_not_earned
+		icon = GFX_focus_CHI_promote_national_currency
+		x = 1
+		y = 3
+		relative_position_id = SND_dogmeat_general_ascendent
+		prerequisite = { 
+            focus = SND_warlords_personal_fife 
+        }
+		mutually_exclusive = { }
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		completion_reward = {
+			add_equipment_to_stockpile = {
+            type = infantry_equipment
+            amount = 2000
+        	}
+			add_political_power = 35
+			activate_advisor = SND_date_junnosuke_idea
+		}
+	}
+    focus = {
+		id = SND_railway_takeover
+		icon = GFX_focus_generic_railroad
+		x = -2
+		y = 4
+		relative_position_id = SND_dogmeat_general_ascendent
+		prerequisite = { 
+            focus = SND_loyalty_bought_not_earned 
+        }
+		prerequisite = { 
+            focus = SND_chaos_is_a_ladder 
+        }
+		mutually_exclusive = { }
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			
+		}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		completion_reward = {
+			set_technology = {
+    			basic_train = 1
+			}
+			add_equipment_to_stockpile = {
+            type = train_equipment
+            amount = 15
+        	}
+			add_equipment_bonus = {
+           		bonus = {
+                train_equipment = {
+			        build_cost_ic  = -0.15
+                }
+            	}
+      		}
+			add_stability = -0.05
+			create_railway_gun = {
+				equipment = railway_gun_equipment_1
+			}
+		}
+	}
+    
+    focus = {
+		id = SND_shandong_arsenal
+		icon = GFX_focus_generic_combined_arms
+		x = 0
+		y = 4
+		relative_position_id = SND_dogmeat_general_ascendent
+		prerequisite = { 
+            focus = SND_loyalty_bought_not_earned 
+        }
+		prerequisite = { 
+            focus = SND_chaos_is_a_ladder 
+        }
+		prerequisite = { 
+            focus = SND_chaos_is_a_ladder 
+        }
+		mutually_exclusive = { }
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			
+		}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		completion_reward = {
+			add_tech_bonus = {
+            bonus = 0.35
+            uses = 2
+            category = infantry_weapons
+      		}
+			add_tech_bonus = {
+            bonus = 0.5
+            uses = 2
+            category = artillery
+      		}
+			capital_scope = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+           		type = arms_factory 
+            	level = 1
+           		instant_build = yes
+            	}
+			}
+		}
+	}
+    
+    focus = {
+		id = SND_industry_through_coercion
+		icon = GFX_focus_DEN_heavy_regulations
+		x = 2
+		y = 4
+		relative_position_id = SND_dogmeat_general_ascendent
+		prerequisite = { 
+            focus = SND_loyalty_bought_not_earned 
+        }
+		prerequisite = { 
+            focus = SND_chaos_is_a_ladder 
+        }
+		mutually_exclusive = { }
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			
+		}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		completion_reward = {
+			random_owned_controlled_state = {
+            add_extra_state_shared_building_slots = 2
+            add_building_construction = {
+            type = arms_factory 
+            level = 2
+            instant_build = yes
+            }
+			}
+			random_owned_controlled_state = {
+			add_extra_state_shared_building_slots = 2
+            add_building_construction = {
+            type = industrial_complex 
+            level = 2
+            instant_build = yes
+            }
+        	}
+		}
+	}
+    
+    focus = {
+		id = SND_country_won_by_shellfire
+		icon = GFX_goal_generic_army_artillery
+		x = -1
+		y = 5
+		relative_position_id = SND_dogmeat_general_ascendent
+		prerequisite = { 
+            focus = SND_loyalty_bought_not_earned 
+            focus = SND_chaos_is_a_ladder 
+        }
+		prerequisite = { 
+            focus = SND_shandong_arsenal 
+        }
+		mutually_exclusive = { }
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			
+		}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		completion_reward = {
+			set_technology = {
+    			gw_artillery = 1
+			}
+			add_equipment_to_stockpile = {
+            type = artillery_equipment
+            amount = 250
+        	}
+			add_stability = 0.1
+		}
+	}
+    
+    focus = {
+		id = SND_national_strength_above_all
+		icon = GFX_focus_generic_advanced_military_studies
+		x = 1
+		y = 5
+		relative_position_id = SND_dogmeat_general_ascendent
+		prerequisite = { 
+            focus = SND_loyalty_bought_not_earned 
+            focus = SND_chaos_is_a_ladder 
+        }
+		prerequisite = { 
+            focus = SND_shandong_arsenal 
+        }
+		mutually_exclusive = { }
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			
+		}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		completion_reward = {
+			add_ideas = SND_national_strength
+			army_experience = 30
+			add_power_balance_value = {
+    			id = SND_power_balance
+    			value = 0.1
+			}
+			add_stability = 0.1
+		}
+	}
+    
+    focus = {
+		id = SND_shandong_open_for_business
+		icon = GFX_focus_generic_devaluation
+		x = -1
+		y = 6
+		relative_position_id = SND_dogmeat_general_ascendent
+		prerequisite = { 
+            focus = SND_country_won_by_shellfire 
+        }
+        prerequisite = { 
+            focus = SND_shandong_arsenal 
+        }
+		mutually_exclusive = { }
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			
+		}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		completion_reward = {
+			upgrade_economy_law = yes
+			add_ideas = free_trade
+			add_trait = {
+				character = SND_zhang_zongchang
+				ideology = despotism
+				trait = three_dont_knows
+			}
+		}
+	}
+    
+    focus = {
+		id = SND_foreign_advisors_no_questions
+		icon = GFX_focus_generic_industrial_experts
+		x = 1
+		y = 6
+		relative_position_id = SND_dogmeat_general_ascendent
+        prerequisite = { 
+            focus = SND_national_strength_above_all 
+        }
+        prerequisite = { 
+            focus = SND_shandong_arsenal 
+        }
+		mutually_exclusive = { }
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			
+		}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		completion_reward = {
+			add_research_slot = 1
+			add_popularity = { ideology = neutrality popularity = -0.20 }
+			add_tech_bonus = {
+            bonus = 0.35
+            uses = 2
+            category = electronics
+      		}
+			air_experience = 35
+			navy_experience = 35
+		}
+	}
+    
+    focus = {
+		id = SND_japanese_brokers
+		icon = GFX_focus_chi_collaboration_with_the_japanese
+		x = -1
+		y = 7
+		relative_position_id = SND_dogmeat_general_ascendent
+		prerequisite = { 
+            focus = SND_foreign_advisors_no_questions 
+            focus = SND_shandong_open_for_business 
+        }
+		mutually_exclusive = { }
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			
+		}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		completion_reward = {
+			give_market_access = JAP
+			add_tech_bonus = {
+            bonus = 0.35
+            uses = 2
+            category = industry
+      		}
+			add_offsite_building = { type = industrial_complex level = 2 }
+		}
+	}
+    
+    focus = {
+		id = SND_invite_white_russians
+		icon = GFX_focus_SOV_approach_semyonov
+		x = 0
+		y = 8
+		relative_position_id = SND_dogmeat_general_ascendent
+		prerequisite = { 
+            focus = SND_foreign_advisors_no_questions 
+            focus = SND_shandong_open_for_business 
+        }
+		mutually_exclusive = { }
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			
+		}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		completion_reward = {
+			add_equipment_to_stockpile = {
+            type = infantry_equipment
+            amount = 2000
+        	}
+			add_manpower = 15000
+			army_experience = 30
+			custom_effect_tooltip = "Grigory Semyonov Will Become a General!"
+		}
+	}
+
+    focus = {
+		id = SND_concessions_for_cannons
+		icon = GFX_focus_PHI_small_arms_and_artillery_requisition
+		x = 1
+		y = 7
+		relative_position_id = SND_dogmeat_general_ascendent
+		prerequisite = { 
+            focus = SND_foreign_advisors_no_questions 
+            focus = SND_shandong_open_for_business 
+        }
+		mutually_exclusive = { }
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			
+		}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		completion_reward = {
+			add_equipment_to_stockpile = {
+            type = artillery_equipment
+            amount = 300
+        	}
+			give_market_access = ENG
+			give_market_access = USA
+		}
+	}
+
+    ### ECONOMY ###
+
+    focus = {
+		id = SND_found_dogmeat_economics
+		icon = GFX_focus_CHI_planned_economy
+		x = 9
+		y = 0
+		
+		prerequisite = {}
+		mutually_exclusive = { }
+		cost = 5
+			ai_will_do = {
+			factor = 1
+		}
+		available = {
+			has_completed_focus = SND_shandong_arsenal
+		}
+		
+		bypass = {
+
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		completion_reward = {
+			add_tech_bonus = {
+            bonus = 0.35
+            uses = 3
+            category = industry
+      		}
+		}
+	}
+    focus = {
+		id = SND_opium_lifeline
+		icon = GFX_focus_CHI_crackdown_on_illicit_goods
+		x = 9
+		y = 1
+		
+		prerequisite = { focus = SND_found_dogmeat_economics }
+		mutually_exclusive = { }
+		cost = 5
+			ai_will_do = {
+			factor = 1
+		}
+		available = {
+			
+		}
+		
+		bypass = {
+
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		completion_reward = {
+			add_resource = {
+				type = coal
+				amount = 10
+				state = 597
+			}
+			add_equipment_to_stockpile = {
+            type = rations_eq
+            amount = 4000
+        	}
+			add_timed_idea = {
+				idea = SND_zhang_zongchang_is_high
+				days = 10
+			}
+		}
+	}
+    focus = {
+		id = SND_dig_deep_dig_greedy
+		icon = GFX_focus_generic_mining_industry
+		x = -2
+		y = 2
+		relative_position_id = SND_found_dogmeat_economics
+		prerequisite = { 
+            focus = SND_opium_lifeline 
+        }
+		mutually_exclusive = { }
+		cost = 5
+		ai_will_do = {
+			factor = 5
+		}
+		available = {
+			
+		}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		completion_reward = {
+			capital_scope = {
+				add_resource = {
+					type = steel
+					amount = 16
+				}
+				add_resource = {
+					type = tungsten
+					amount = 8
+				}
+				add_resource = {
+					type = aluminium
+					amount = 5
+				}
+			}
+			add_tech_bonus = {
+            bonus = 0.5
+            uses = 2
+            category = excavation_tech
+      		}
+			add_power_balance_value = {
+    			id = SND_power_balance
+    			value = -0.1
+			}
+		}
+	}
+    focus = {
+		id = SND_smugglers_in_uniform
+		icon = GFX_focus_generic_smugglers
+		x = 0
+		y = 2
+		relative_position_id = SND_found_dogmeat_economics
+		prerequisite = { 
+            focus = SND_opium_lifeline 
+        }
+		mutually_exclusive = { }
+		cost = 5
+		ai_will_do = {
+			factor = 5
+		}
+		available = {
+			
+		}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		completion_reward = {
+			add_tech_bonus = {
+            bonus = 0.5
+            uses = 2
+            category = support_tech
+      		}
+			add_tech_bonus = {
+            bonus = 1
+            uses = 1
+            category = motorized_equipment
+      		}
+			add_equipment_to_stockpile = {
+            type = infantry_equipment
+            amount = 2500
+        	}
+			add_unit_bonus = {
+  				militia = {
+					supply_consumption = -0.02
+  				}
+			}
+		}
+	}
+
+    focus = {
+		id = SND_nation_high_on_revenue
+		icon = GFX_focus_generic_stockpile_currency
+		x = 2
+		y = 2
+		relative_position_id = SND_found_dogmeat_economics
+		prerequisite = { 
+            focus = SND_opium_lifeline 
+        }
+		mutually_exclusive = { }
+		cost = 5
+		ai_will_do = {
+			factor = 5
+		}
+		available = {
+			
+		}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		completion_reward = {
+			add_ideas = SND_high_on_revenue
+			add_timed_idea = {
+				idea = SND_zhang_zongchang_is_high
+				days = 10
+			}
+			add_power_balance_value = {
+    			id = SND_power_balance
+    			value = -0.1
+			}
+		}
+	}
+    
+    focus = {
+		id = SND_managed_kleptocracy
+		icon = GFX_focus_generic_sympathetic_judges
+		x = -1
+		y = 3
+		relative_position_id = SND_found_dogmeat_economics
+		prerequisite = { 
+            focus = SND_dig_deep_dig_greedy 
+        }
+		mutually_exclusive = { }
+		cost = 5
+		ai_will_do = {
+			factor = 5
+		}
+		available = {
+			
+		}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = PRC_government_corruption
+				add_idea = SND_corruption_powered
+			}
+		}
+	}
+    focus = {
+		id = SND_war_workshops
+		icon = GFX_focus_generic_military_industry
+		x = 1
+		y = 3
+		relative_position_id = SND_found_dogmeat_economics
+		prerequisite = { 
+            focus = SND_nation_high_on_revenue 
+        }
+		mutually_exclusive = { }
+		cost = 5
+		ai_will_do = {
+			factor = 5
+		}
+		available = {
+			
+		}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		completion_reward = {
+			add_offsite_building = { type = arms_factory level = 2 }
+            add_equipment_bonus = {
+                bonus = {
+                infantry_equipment = {
+                    build_cost_ic = -0.1
+                }
+                }
+            }
+		}
+	}
+    
+    focus = {
+		id = SND_hire_men_who_count
+		icon = GFX_focus_generic_commission
+		x = 0
+		y = 4
+		relative_position_id = SND_found_dogmeat_economics
+		prerequisite = { 
+            focus = SND_war_workshops 
+			focus = SND_managed_kleptocracy 
+        }
+        prerequisite = { 
+            focus = SND_smugglers_in_uniform 
+        }
+		mutually_exclusive = { }
+		cost = 5
+		ai_will_do = {
+			factor = 5
+		}
+		available = {
+			
+		}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		completion_reward = {
+			remove_ideas = CHI_ineffective_bureaucracy_warlord
+			add_political_power = 60
+			add_stability = 0.08
+		}
+	}
+    
+    focus = {
+		id = SND_sieze_banks
+		icon = GFX_focus_RAJ_war_taxes
+		x = -2
+		y = 4
+		relative_position_id = SND_found_dogmeat_economics
+		prerequisite = { 
+            focus = SND_managed_kleptocracy 
+        }
+		mutually_exclusive = { }
+		cost = 5
+		ai_will_do = {
+			factor = 5
+		}
+		available = {
+			
+		}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		completion_reward = {
+			every_owned_state = {
+				add_building_construction = {
+           		type = infrastructure
+            	level = 1
+           		instant_build = yes
+        		}
+			}
+			add_offsite_building = { type = industrial_complex level = 2 }
+			add_power_balance_value = {
+    			id = SND_power_balance
+    			value = 0.1
+			}
+		}
+	}
+    focus = {
+		id = SND_stabilize_silver
+		icon = GFX_focus_CHL_silverworking
+		x = 2
+		y = 4
+		relative_position_id = SND_found_dogmeat_economics
+		prerequisite = {
+            focus = SND_war_workshops 
+        }
+		mutually_exclusive = { }
+		cost = 5
+		ai_will_do = {
+			factor = 5
+		}
+		available = {
+			
+		}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		completion_reward = {
+			add_ideas = SND_stable_silver_supply
+		}
+	}
+
+    focus = {
+		id = SND_dogmeat_model
+		icon = GFX_focus_RAJ_special_economic_zones
+		x = 0
+		y = 5
+		relative_position_id = SND_found_dogmeat_economics
+		prerequisite = {
+            focus = SND_stabilize_silver 
+        }
+        prerequisite = {
+            focus = SND_sieze_banks 
+        }
+		prerequisite = {
+            focus = SND_hire_men_who_count 
+        }
+		mutually_exclusive = { }
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			
+		}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		completion_reward = {
+			add_ideas = state_capitalism
+			add_ideas = stratocracy
+		}
+	}
+	
+	focus = {
+		id = SND_war_the_only_diplomacy
+		icon = GFX_focus_CHI_prepare_war_zones
+		x = 9
+		y = 7
+		mutually_exclusive = { }
+		cost = 5
+		ai_will_do = {
+			factor = 2
+		}
+		available = {
+			OR = {
+				has_war_support > 0.6
+				has_war = yes
+			}
+		}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		completion_reward = {
+			add_ideas = SND_lord_of_war
+			add_power_balance_value = {
+    			id = SND_power_balance
+    			value = 0.1
+			}
+			army_experience = 50
+		}
+	}
+	
+	focus = {
+		id = SND_shell_the_skies
+		icon = GFX_focus_PRC_anti_air_effort
+		x = -2
+		y = 1
+		relative_position_id = SND_war_the_only_diplomacy
+		prerequisite = {
+			focus = SND_war_the_only_diplomacy
+		}
+		mutually_exclusive = { }
+		cost = 5
+		ai_will_do = {
+			factor = 2
+		}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		completion_reward = {
+			add_tech_bonus = {
+            bonus = 0.5
+            uses = 2
+            category = cat_anti_air
+      		}
+			air_experience = 20
+			add_daily_mastery = {
+				amount = 0.5
+				days = 90
+				folder = land
+				track = combat_support
+				index = 1
+			}	
+		}
+	}
+	
+	focus = {
+		id = SND_professional_bandit_brigades
+		icon = GFX_focus_CHI_decisive_battles
+		x = 0
+		y = 1
+		relative_position_id = SND_war_the_only_diplomacy
+		prerequisite = {
+			focus = SND_war_the_only_diplomacy
+		}
+		mutually_exclusive = { }
+		cost = 5
+		ai_will_do = {
+			factor = 2
+		}
+		available = {
+		}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = SND_lord_of_war
+				add_idea = SND_lord_of_war2
+			}
+			add_equipment_bonus = {
+				bonus = {
+  				support_equipment = {
+    				reliability = 0.05
+					supply_consumption = -0.04
+  				}
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = SND_our_merchant_marine
+		icon = GFX_focus_CHI_fund_marine_corp
+		x = 2
+		y = 1
+		relative_position_id = SND_war_the_only_diplomacy
+		prerequisite = {
+			focus = SND_war_the_only_diplomacy
+		}
+		mutually_exclusive = { }
+		cost = 5
+		ai_will_do = {
+			factor = 2
+		}
+		available = {
+		}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		completion_reward = {
+			add_equipment_to_stockpile = {
+				type = convoy
+				amount = 30
+				producer = SND
+			}
+			597 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+           		type = dockyard
+            	level = 2
+           		instant_build = yes
+        		}
+			}
+			navy_experience = 20
+		}
+	}
+	
+	focus = {
+		id = SND_warfare_by_improvision
+		icon = GFX_focus_MAN_restore_the_beiyang_army
+		x = -1
+		y = 2
+		relative_position_id = SND_war_the_only_diplomacy
+		prerequisite = {
+			focus = SND_professional_bandit_brigades
+		}
+		mutually_exclusive = { }
+		cost = 5
+		ai_will_do = {
+			factor = 2
+		}
+		available = {
+		}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = SND_lord_of_war2
+				add_idea = SND_lord_of_war3
+			}
+			SND_zhang_zongchang = {
+				add_planning = 2
+			}
+		}
+	}
+	
+	focus = {
+		id = SND_on_steel_wheels
+		icon = GFX_focus_SWE_lynx_armored_car
+		x = 1
+		y = 2
+		relative_position_id = SND_war_the_only_diplomacy
+		prerequisite = {
+			focus = SND_professional_bandit_brigades
+		}
+		mutually_exclusive = { }
+		cost = 5
+		ai_will_do = {
+			factor = 2
+		}
+		available = {
+		}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		completion_reward = {
+			add_tech_bonus = {
+            bonus = 1
+            uses = 1
+            category = motorized_equipment
+      		}
+			add_tech_bonus = {
+            bonus = 1
+            uses = 1
+            category = cat_mechanized_equipment
+      		}
+			add_tech_bonus = {
+            bonus = 0.5
+            uses = 2
+            category = cat_armored_cars
+      		}
+			add_equipment_bonus = {
+				bonus = {
+                armored_car_equipment = {
+			        build_cost_ic  = -0.20
+                }
+				}
+      		}
+		}
+	}
+	
+	focus = {
+		id = SND_test_neighboring_cliques
+		icon = GFX_goal_generic_territory_or_war
+		x = 16
+		y = 0
+		mutually_exclusive = { }
+		cost = 4
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			has_completed_focus = SND_shandong_arsenal
+		}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		completion_reward = {
+			create_wargoal = {
+            target = HBC
+            type = annex_everything
+        	}
+			HBC = {
+				every_owned_state = { add_claim_by = SND }
+			}
+			add_command_power = 30
+		}
+	}
+	
+	
+	focus = {
+		id = SND_shake_hands_with_devil
+		icon = GFX_focus_JAP_give_it_your_all_for_the_emperor
+		x = 7
+		y = 1
+		prerequisite = {
+            focus = SND_test_neighboring_cliques 
+        }
+        relative_position_id = SND_test_neighboring_cliques
+		mutually_exclusive = { focus = SND_march_down_yellow_river }
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			JAP = {
+				OR = {
+				has_government = neutrality
+				has_government = fascism
+				}
+			}
+		}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		completion_reward = {
+			add_power_balance_value = {
+    			id = SND_power_balance
+    			value = 0.2
+			}
+			JAP = {
+				set_autonomy = {
+   					target = ROOT
+    				autonomous_state = autonomy_wtt_imperial_associate
+    				end_wars = no
+   					end_civil_wars = no
+				}
+			}
+			CHI = {
+				every_owned_state = { add_claim_by = SND }
+			}
+			create_wargoal = {
+				target = CHI
+				type = annex_everything
+			}
+		}
+	}
+
+	focus = {
+		id = SND_reckoning_with_chiangkaishek
+		icon = GFX_focus_CHI_denounce_feudalism
+		x = -1
+		y = 2
+		relative_position_id = SND_test_neighboring_cliques
+		mutually_exclusive = { }
+		cost = 5
+		ai_will_do = {
+			factor = 5
+		}
+		prerequisite = { focus = SND_kingdom_of_gunfire }
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		completion_reward = {
+			add_doctrine_cost_reduction = {
+				cost_reduction = 0.5
+				uses = 2
+				category = land_doctrine
+			}
+			army_experience = 50
+			add_equipment_to_stockpile = {
+            type = infantry_equipment
+            amount = 5000
+        	}
+			SND_zhang_zongchang = {
+				add_temporary_buff_to_units = {
+					combat_offense = 0.3
+					combat_breakthrough = 0.25
+					org_damage_multiplier = -0.8
+					war_support_reduction_on_damage = 0.2
+					cannot_retreat_while_attacking = 1.0
+					
+					days = 35
+					tooltip = tt_cracked
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = SND_kingdom_of_gunfire
+		icon = GFX_focus_CHI_weaponise_the_faithful
+		x = 0
+		y = 1
+		prerequisite = {
+            focus = SND_test_neighboring_cliques 
+        }
+        relative_position_id = SND_test_neighboring_cliques
+		mutually_exclusive = { }
+		cost = 5
+		ai_will_do = {
+			factor = 5
+		}
+		available = {
+			
+		}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		completion_reward = {
+			upgrade_economy_law = yes
+			army_experience = 30
+			add_power_balance_value = {
+    			id = SND_power_balance
+    			value = 0.1
+			}
+		}
+	}
+	
+	focus = {
+		id = SND_warlord_against_empire
+		icon = GFX_focus_generic_limited_social_mobilization
+		x = -1
+		y = 1
+		prerequisite = {
+            focus = SND_march_down_yellow_river 
+        }
+        relative_position_id = SND_march_down_yellow_river
+		mutually_exclusive = { }
+		cost = 5
+		ai_will_do = {
+			factor = 5
+		}
+		available = {
+			
+		}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		completion_reward = {
+			add_ideas = SND_against_an_empire
+			add_war_support = 0.1
+		}
+	}
+
+	focus = {
+		id = SND_ghosts_of_zoulin
+		icon = GFX_focus_CHI_tongzi_jun
+		x = 1
+		y = 2
+		prerequisite = {
+            focus = SND_kingdom_of_gunfire 
+        }
+        relative_position_id = SND_test_neighboring_cliques
+		mutually_exclusive = { }
+		cost = 5
+		ai_will_do = {
+			factor = 5
+		}
+		available = {
+			
+		}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		completion_reward = {
+			MAN = { every_owned_state = { add_claim_by = SND } }
+			MEN = { every_owned_state = { add_claim_by = SND } }
+			SHX = { every_owned_state = { add_claim_by = SND } }
+			create_wargoal = {
+            target = MAN
+            type = annex_everything
+        	}
+			create_wargoal = {
+            target = MEN
+            type = annex_everything
+        	}
+			create_wargoal = {
+            target = SHX
+            type = annex_everything
+        	}
+			every_army_leader = {
+				add_logistics = 1
+			}
+		}
+	}
+	
+	focus = {
+		id = SND_shells_against_rising_sun
+		icon = GFX_goal_generic_army_artillery
+		x = -2
+		y = 3
+		prerequisite = {
+            focus = SND_reckoning_with_chiangkaishek 
+        }
+        relative_position_id = SND_test_neighboring_cliques
+		mutually_exclusive = { }
+		cost = 5
+		ai_will_do = {
+			factor = 5
+		}
+		available = {
+			
+		}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		completion_reward = {
+			add_equipment_to_stockpile = {
+            type = artillery_equipment
+            amount = 500
+        	}
+			add_equipment_bonus = {
+                bonus = {
+                artillery_equipment = {
+                    soft_attack = 0.10
+					breakthrough = 0.05
+                }
+                }
+            }
+		}
+	}
+	
+	focus = {
+		id = SND_merge_the_cliques
+		icon = GFX_focus_generic_military_dictatorship
+		x = 8
+		y = 2
+		prerequisite = {
+            focus = SND_shake_hands_with_devil 
+        }
+        relative_position_id = SND_test_neighboring_cliques
+		mutually_exclusive = { }
+		cost = 5
+		ai_will_do = {
+			factor = 5
+		}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		completion_reward = {
+			unlock_decision_tooltip = SND_merge_the_cliques_dec
+			add_war_support = 0.05
+		}
+	}
+
+	focus = {
+		id = SND_poems_in_blood_and_sorrow
+		icon = GFX_focus_generic_strike_at_democracy2
+		x = 0
+		y = 3
+		prerequisite = {
+            focus = SND_reckoning_with_chiangkaishek 
+        }
+		prerequisite = {
+            focus = SND_ghosts_of_zoulin 
+        }
+        relative_position_id = SND_test_neighboring_cliques
+		mutually_exclusive = { }
+		cost = 5
+		ai_will_do = {
+			factor = 5
+		}
+		available = {
+			
+		}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		completion_reward = {
+			add_ideas = SND_blood_and_sorrow
+			add_timed_idea = {
+				idea = SND_zhang_zongchang_is_high
+				days = 10
+			}
+		}
+	}
+
+	focus = {
+		id = SND_crown_king_of_north
+		icon = GFX_focus_CHI_a_second_empire_of_china
+		x = 2
+		y = 3
+		prerequisite = {
+            focus = SND_ghosts_of_zoulin 
+        }
+        relative_position_id = SND_test_neighboring_cliques
+		mutually_exclusive = { }
+		cost = 5
+		ai_will_do = {
+			factor = 5
+		}
+		available = {
+			count_triggers = {
+			amount = 2
+			owns_state = 715
+			owns_state = 608
+			owns_state = 611
+			}
+		}
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		completion_reward = {
+			every_state = {
+					limit = { 
+						OR = {
+							region = 155
+							region = 243
+							region = 242
+							region = 244
+							region = 143
+						}
+					}
+				add_core_of = SND
+			}
+			set_cosmetic_tag = SND_beijing
+			custom_effect_tooltip = "This will core all of Northern China!"
+		}
+	}
+	
+	focus = {
+		id = SND_march_down_yellow_river
+		icon = GFX_focus_attack_china
+		x = 21
+		y = 1
+		mutually_exclusive = { focus = SND_shake_hands_with_devil }
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+		prerequisite = { focus = SND_test_neighboring_cliques }
+		available = {
+			has_war = no
+		}
+		will_lead_to_war_with = CHI
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		completion_reward = {
+			create_wargoal = {
+				target = CHI
+				type = annex_everything
+			}
+			CHI = {
+				every_owned_state = { add_claim_by = SND }
+			}
+			add_command_power = 30
+		}
+	}
+
+	focus = {
+		id = SND_erase_sun_yat_sens_heirs
+		icon = GFX_focus_CHI_revise_the_national_curriculum
+		x = 1
+		y = 1
+		relative_position_id = SND_march_down_yellow_river
+		mutually_exclusive = { }
+		cost = 5
+		ai_will_do = {
+			factor = 5
+		}
+		available = {
+			
+		}
+		prerequisite = {
+            focus = SND_march_down_yellow_river 
+            focus = SND_shake_hands_with_devil 
+        }
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		completion_reward = {
+			create_wargoal = {
+				target = GXC
+				type = annex_everything
+        	}
+			GXC = { every_core_state = { add_claim_by = SND } }
+			create_wargoal = {
+				target = GDC
+				type = annex_everything
+        	}
+			GDC = { every_core_state = { add_claim_by = SND } }
+		}
+	}
+
+	focus = {
+		id = SND_no_more_frontier_kings
+		icon = GFX_focus_CHI_tour_the_west
+		x = -1
+		y = 2
+		relative_position_id = SND_march_down_yellow_river
+		mutually_exclusive = { }
+		cost = 5
+		ai_will_do = {
+			factor = 5
+		}
+		available = {
+			
+		}
+		bypass = {
+			XSM = {
+				capital_scope = { is_owned_by = ROOT }
+			}
+			GSM = {
+				capital_scope = { is_owned_by = ROOT }
+			}
+			NXM = {
+				capital_scope = { is_owned_by = ROOT }
+			}
+			KHM = {
+				capital_scope = { is_owned_by = ROOT }
+			}
+			SIK = {
+				capital_scope = { is_owned_by = ROOT }
+			}
+		}
+		prerequisite = {
+            focus = SND_erase_sun_yat_sens_heirs 
+        }
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		completion_reward = {
+			create_wargoal = {
+            target = XSM
+            type = annex_everything
+        	}
+			XSM = {
+				every_owned_state = { add_claim_by = SND }
+			}
+			create_wargoal = {
+            target = GSM
+            type = annex_everything
+        	}
+			GSM = {
+				every_owned_state = { add_claim_by = SND }
+			}
+			create_wargoal = {
+            target = NXM
+            type = annex_everything
+        	}
+			NXM = {
+				every_owned_state = { add_claim_by = SND }
+			}
+			create_wargoal = {
+            target = KHM
+            type = annex_everything
+        	}
+			KHM = {
+				every_owned_state = { add_claim_by = SND }
+			}
+			create_wargoal = {
+            target = SIK
+            type = annex_everything
+        	}
+			SIK = {
+				every_owned_state = { add_claim_by = SND }
+			}
+		}
+	}
+
+	focus = {
+		id = SND_crush_red_bandits
+		icon = GFX_focus_generic_attack_chinese_soviets
+		x = 1
+		y = 2
+		relative_position_id = SND_march_down_yellow_river
+		mutually_exclusive = { }
+		cost = 5
+		ai_will_do = {
+			factor = 5
+		}
+		available = {
+			
+		}
+		prerequisite = {
+            focus = SND_erase_sun_yat_sens_heirs 
+        }
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		completion_reward = {
+			create_wargoal = {
+            target = PRC
+            type = annex_everything
+        	}
+			PRC = { every_owned_state = { add_claim_by = SND } }
+			create_wargoal = {
+            target = XIC
+            type = annex_everything
+        	}
+			XIC = { every_core_state = { add_claim_by = SND } }
+		}
+	}
+	
+	focus = {
+		id = SND_end_southwest_cliques
+		icon = GFX_focus_CHI_tour_the_south
+		x = 3
+		y = 2
+		relative_position_id = SND_march_down_yellow_river
+		mutually_exclusive = { }
+		cost = 5
+		ai_will_do = {
+			factor = 5
+		}
+		available = {
+			
+		}
+		prerequisite = {
+            focus = SND_erase_sun_yat_sens_heirs 
+        }
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		completion_reward = {
+			create_wargoal = {
+            target = SIC
+            type = annex_everything
+        	}
+			SIC = { every_core_state = { add_claim_by = SND } }
+			create_wargoal = {
+            target = YUN
+            type = annex_everything
+        	}
+			YUN = { every_core_state = { add_claim_by = SND } }
+		}
+	}
+	
+	focus = {
+		id = SND_one_warlord_to_rule_them_all
+		icon = GFX_focus_CHI_cradle_of_civilization
+		x = -1
+		y = 3
+		relative_position_id = SND_march_down_yellow_river
+		mutually_exclusive = {
+			focus = SND_march_on_korea
+		}
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			NOT  = {
+				has_war_with = CHI
+			}
+			owns_state = 1035
+			owns_state = 608	
+		}
+		prerequisite = {
+            focus = SND_no_more_frontier_kings 
+        }
+		prerequisite = {
+            focus = SND_crush_red_bandits 
+        }
+		prerequisite = {
+            focus = SND_end_southwest_cliques 
+        }
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		completion_reward = {
+			JAP = {
+				remove_from_faction = SND
+				end_puppet = SND
+			}
+			every_enemy_country = {
+				white_peace = ROOT
+			}
+			create_wargoal = {
+				target = JAP
+				type = annex_everything
+			}
+			add_command_power = 30
+			add_state_core = 609
+			add_state_core = 745
+			add_state_core = 524
+		}
+	}
+
+	focus = {
+		id = SND_mandate_of_the_gun
+		icon = GFX_focus_AFG_against_kabul
+		x = -3
+		y = 3
+		relative_position_id = SND_march_down_yellow_river
+		mutually_exclusive = { }
+		cost = 5
+		ai_will_do = {
+			factor = 5
+		}
+		available = {
+			
+		}
+		prerequisite = {
+			focus = SND_crown_king_of_north
+		}
+		prerequisite = {
+            focus = SND_shells_against_rising_sun 
+        }
+		prerequisite = {
+            focus = SND_poems_in_blood_and_sorrow 
+        }
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		completion_reward = {
+			add_equipment_bonus = {
+                bonus = {
+                infantry_equipment = {
+                    soft_attack = 0.15
+                }
+                }
+            }
+			unlock_decision_tooltip = SND_core_FROM_territory
+		}
+	}
+	
+	focus = {
+		id = SND_eternal_warlord_state
+		icon = GFX_focus_CHI_victory_over_the_invaders
+		x = 19
+		y = 5
+		#relative_position_id = SND_march_down_yellow_river
+		mutually_exclusive = { }
+		cost = 5
+		ai_will_do = {
+			factor = 5
+		}
+		
+		prerequisite = {
+			focus = SND_mandate_of_the_gun
+			focus = SND_one_warlord_to_rule_them_all
+		}
+		available = {
+			owns_state = 1035
+			owns_state = 608			
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		completion_reward = {
+			set_rule = {
+    			can_create_factions = yes
+				can_declare_war_without_wargoal_when_in_war = yes
+			}
+			add_trait = {
+				character = SND_zhang_zongchang
+				ideology = despotism
+				trait = justice_and_might
+			}
+			set_major = yes
+		}
+	}
+	
+	focus = {
+		id = SND_institutionalize_warlordism
+		icon = GFX_focus_generic_expropriate_industrialist
+		x = -2
+		y = 1
+		relative_position_id = SND_eternal_warlord_state
+		mutually_exclusive = { }
+		cost = 5
+		ai_will_do = {
+			factor = 5
+		}
+		available = {
+			
+		}
+		prerequisite = {
+            focus = SND_eternal_warlord_state 
+        }
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		completion_reward = {
+			add_ideas = export_focus
+			add_ideas = draft6
+			add_research_slot = 1
+		}
+	}
+	focus = {
+		id = SND_decree_on_drunkenness
+		icon = GFX_focus_generic_happy_cheer
+		x = 2
+		y = 1
+		relative_position_id = SND_eternal_warlord_state
+		mutually_exclusive = { }
+		cost = 5
+		ai_will_do = {
+			factor = 5
+		}
+		available = {
+			
+		}
+		prerequisite = {
+            focus = SND_eternal_warlord_state 
+        }
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		completion_reward = {
+			add_timed_idea = {
+				idea = SND_zhang_zongchang_is_high
+				days = 10
+			}
+			add_ideas = warlord_economy
+			custom_effect_tooltip = tt_BeCareful
+		}
+	}
+	
+	focus = {
+		id = SND_centralize_the_cliques
+		icon = GFX_focus_generic_subjugation
+		x = 0
+		y = 1
+		relative_position_id = SND_eternal_warlord_state
+		mutually_exclusive = { }
+		cost = 5
+		ai_will_do = {
+			factor = 5
+		}
+		available = {
+			
+		}
+		prerequisite = {
+            focus = SND_eternal_warlord_state 
+        }
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = CHI_warlord_state_idea
+				add_idea = SND_all_under_heaven
+			}
+			every_claimed_state = {
+				add_core_of = ROOT
+			}
+			add_power_balance_value = {
+    			id = SND_power_balance
+    			value = 0.1
+			}
+		}
+	}
+	focus = {
+		id = SND_rebuild_what_we_broke
+		icon = GFX_focus_generic_full_employment
+		x = -1
+		y = 2
+		relative_position_id = SND_eternal_warlord_state
+		mutually_exclusive = { }
+		cost = 3
+		ai_will_do = {
+			factor = 5
+		}
+		available = {
+			
+		}
+		prerequisite = {
+            focus = SND_centralize_the_cliques 
+        }
+		prerequisite = {
+            focus = SND_institutionalize_warlordism 
+        }
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		completion_reward = {
+			remove_ideas = SND_blood_and_sorrow
+			add_timed_idea = {
+				idea = SND_building_back_up
+				days = 500
+			}
+		}
+	}
+	focus = {
+		id = SND_china_must_never_be_weak
+		icon = GFX_focus_generic_mass_production
+		x = 1
+		y = 2
+		relative_position_id = SND_eternal_warlord_state
+		mutually_exclusive = { }
+		cost = 3
+		ai_will_do = {
+			factor = 5
+		}
+		available = {
+			
+		}
+		prerequisite = {
+            focus = SND_centralize_the_cliques 
+        }
+		prerequisite = {
+            focus = SND_decree_on_drunkenness 
+        }
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		completion_reward = {
+			random_core_state = {
+            add_extra_state_shared_building_slots = 2
+            add_building_construction = {
+            type = arms_factory 
+            level = 2
+            instant_build = yes
+            }
+			}
+			random_core_state = {
+            add_extra_state_shared_building_slots = 2
+            add_building_construction = {
+            type = arms_factory 
+            level = 2
+            instant_build = yes
+            }
+			}
+			add_unit_bonus = {
+  				category_all_infantry = {
+    				breakthrough = 0.05
+					default_morale = 0.2
+  				}
+			}
+		}
+	}
+
+	focus = {
+		id = SND_the_dogmeat_dynasty
+		icon = GFX_focus_CHI_a_new_middle_kingdom
+		x = 0
+		y = 3
+		relative_position_id = SND_eternal_warlord_state
+		mutually_exclusive = { }
+		cost = 5
+		ai_will_do = {
+			factor = 5
+		}
+		available = {
+			
+		}
+		prerequisite = {
+            focus = SND_rebuild_what_we_broke 
+        }
+		prerequisite = {
+            focus = SND_china_must_never_be_weak 
+        }
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		completion_reward = {
+			set_cosmetic_tag = SND_empire
+			add_stability = 0.1
+			add_war_support = 0.1
+			add_ideas = abs_monarchy
+			create_wargoal = {
+            target = MON
+            type = annex_everything
+        	}
+			create_wargoal = {
+            target = TIB
+            type = annex_everything
+        	}
+			create_wargoal = {
+            target = TAN
+            type = annex_everything
+        	}
+			MON = {
+				every_core_state = { add_claim_by = SND }
+			}
+			TIB = {
+				every_core_state = { add_claim_by = SND }
+			}
+			TAN = {
+				every_core_state = { add_claim_by = SND }
+			}
+			add_state_claim = 409
+			add_state_claim = 408
+			add_state_claim = 561
+			add_state_claim = 657
+			add_state_claim = 560
+			add_state_claim = 563
+			add_state_claim = 564
+			add_state_claim = 434
+			add_state_claim = 787
+			add_state_claim = 441
+			set_country_leader_portrait = {
+				ideology = despotism
+				portrait = GFX_Portrait_Zhongchang_drip
+			}
+		}
+	}
+}

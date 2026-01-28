@@ -1,0 +1,137 @@
+characters = {
+	FRA_joseph_darnand = {
+		name = "Joseph Darnand"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/FRA/Portrait_Joseph_Darnand.png"
+			}
+		}
+		country_leader = {
+			ideology = fascism_ideology
+		}
+	}
+	
+	FRA_marcel_deat_leader = {
+		name = "Marcel Deat"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/FRA/Portrait_Marcel_Deat.png"
+			}
+		}
+		country_leader = {
+			ideology = fascism_ideology
+		}
+	}
+	SND_Zhang_Zongchang = {
+		name = "Zhang Zongchang"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/SND/Portrait_Zhang_Zongchang.png"
+			}
+			army = {
+				large = "gfx/leaders/SND/Portrait_Zhang_Zongchang.png"
+			}
+		}
+		country_leader = {
+			ideology = despotism
+			desc = Dogmeat_desc
+		}
+		corps_commander = {
+    		skill = 4
+    		attack_skill = 4
+    		defense_skill = 3
+    		planning_skill = 1
+   			logistics_skill = 2
+			traits = { reckless substance_abuser }
+		}
+	}
+	SND_grigory_semyonov = {
+		name = SOV_grigory_semyonov
+		portraits = {
+			army = {
+				large = "gfx/leaders/SND/Portrait_SOV_grigory_semyonov.png"
+			}
+			civilian = {
+				small = "gfx/interface/advisors/SND/SND_grigory_semyonov.dds"
+			}
+		}
+
+		corps_commander = {
+			traits = { cavalry_officer cavalry_leader }
+			skill = 3
+			attack_skill = 4
+			defense_skill = 2
+			planning_skill = 1
+			logistics_skill = 3
+			visible = {
+				has_completed_focus = SND_invite_white_russians
+			}
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = SND_grigory_semyonov_idea
+			available = { has_completed_focus = SND_invite_white_russians }
+			traits = { ataman_transbaikal_host }
+		}
+	}
+
+	SND_date_junnosuke = {
+		name = SND_date_junnosuke
+		portraits = {
+			civilian = {
+				small = "gfx/interface/advisors/SND/SND_date_junnosuke.png"
+			}
+			army = {
+				large = "gfx/leaders/SND/Portrait_date_junnosuke.png"
+			}
+		}
+		corps_commander = {
+			skill = 3
+			attack_skill = 3
+			defense_skill = 2
+			planning_skill = 2
+			logistics_skill = 3
+			traits = { trickster }
+			visible = {
+				has_completed_focus = SND_loyalty_bought_not_earned
+			}
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = SND_date_junnosuke_idea
+			available = { has_completed_focus = SND_loyalty_bought_not_earned }
+			traits = { the_ronin }
+		}
+	}
+	
+	FRA_pierre_la_rochelle = {
+		name = "Pierre Drieu La Rochelle"
+		portraits = {
+			civilian = {
+				small = "gfx/interface/advisors/FRA/FRA_pierre_la_rochelle.png"
+			}
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = FRA_pierre_la_rochelle_idea
+			available = { has_government = fascism }
+			traits = { ideological_crusader }
+		}
+	}
+
+	FRA_xavier_vallat = {
+		name = "Xavier Vallat"
+		portraits = {
+			civilian = {
+				small = "gfx/interface/advisors/FRA/FRA_xavier_vallat.png"
+			}
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = FRA_xavier_vallat_idea
+			available = { has_government = fascism }
+			traits = { ideological_crusader }
+		}
+	}
+
+}

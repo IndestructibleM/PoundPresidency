@@ -1,0 +1,92 @@
+FRA_power_balance = {
+	initial_value = 0.00
+	left_side = FRA_neosocialists_side
+	right_side = FRA_milice_side	
+	decision_category = FRA_balance_of_power_category
+
+	### Neutral status
+	range = {
+		id = FRA_bucard_range
+		min = -0.25
+		max = 0.25
+		modifier = {
+			political_power_factor = 0.05
+			stability_factor = 0.05
+		}
+		on_activate = {
+		}
+		on_deactivate = {
+			
+		}
+	}
+
+	side = {
+		id = FRA_neosocialists_side	
+		icon = GFX_bop_FRA_neosocialists_side
+
+		range = {
+			id = FRA_neosocialists_low_control_range
+			min = -0.6
+			max = -0.25
+			modifier = {
+				
+			}
+			on_activate = {
+				
+			}
+			on_deactivate = {
+				
+			}
+		}
+
+
+		range = {
+			id = FRA_neosocialists_high_control_range
+			min = -1
+			max = -0.6
+			modifier = {
+				
+			}
+			on_activate = {
+			}
+			on_deactivate = {
+				
+			}
+		}
+
+	}
+
+	side = {
+		id = FRA_milice_side	
+		icon = GFX_bop_FRA_milice_side
+
+		range = {
+			id = FRA_milice_low_control_range
+			min = 0.25
+			max = 0.6
+			modifier = {
+				
+			}
+			on_activate = {
+			}
+			on_deactivate = {
+				
+			}
+		}
+
+		range = {
+			id = FRA_milice_high_control_range
+			min = 0.6
+			max = 1
+			modifier = {
+			}
+			on_activate = {
+			}
+			on_deactivate = {
+				
+			}
+		}
+
+	}
+}
+

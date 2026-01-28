@@ -1,0 +1,157 @@
+on_actions = {
+	on_startup = {
+		effect = {
+			LIB = { recruit_character = LIB_Marcus_Garvey }
+			FRA = { 
+				recruit_character = FRA_joseph_darnand 
+				recruit_character = FRA_marcel_deat_leader 
+				recruit_character = FRA_pierre_la_rochelle 
+				recruit_character = FRA_xavier_vallat 
+			}
+			MEX = { recruit_character = MEX_Jose_Vasconcelos_PP }	
+			every_country = { country_event = { id = pound.0 days = 0 } }
+			18 = {
+				add_resource = {
+					type = coal 
+					amount = 50
+				}
+			}
+			383 = {
+				add_resource = {
+					type = coal 
+					amount = 50
+				}
+			}
+			447 = {
+				add_resource = {
+					type = coal 
+					amount = 30
+				}
+			}
+			221 = {
+				add_resource = {
+					type = coal 
+					amount = 60
+				}
+			}
+			161 = {
+				add_resource = {
+					type = coal 
+					amount = 20
+				}
+			}
+			620 = {
+				add_resource = {
+					type = coal 
+					amount = 30
+				}
+			}
+		}
+	}
+}
+on_actions = {
+	on_capitulation_immediate = {
+		effect = {
+			if = {
+				limit = {
+					ROOT = { tag = ENG }
+                    FROM = {
+						has_government = fascism
+                        OR = {
+                            tag = FRA 
+                            tag = ITA
+                        }	
+                    }	
+				}
+				FRA = {
+				white_peace = {
+					tag = ENG
+					message = tt_FraBeatEng
+				}
+				}
+				SCO = {
+					every_core_state = { transfer_state_to = PREV }
+				}
+				WLS = {
+					every_core_state = { transfer_state_to = PREV }
+				}
+				119 = {
+					transfer_state_to = IRE
+				}
+				FRA = {
+					country_event = { id = etatfopo.2 days = 15 }
+					transfer_state = 933
+					transfer_state = 932
+					set_autonomy = {
+					target = SCO
+					autonomous_state = collaborator_gov
+					}
+					set_autonomy = {
+					target = WLS
+					autonomous_state = collaborator_gov
+					}
+					set_autonomy = {
+					target = ENG
+					autonomous_state = puppet
+					}
+				}
+			
+			}
+		}
+	}
+	on_capitulation_immediate = {
+		effect = {
+			if = {
+				limit = {
+					ROOT = { tag = GER }
+                    FROM = {
+						has_government = fascism
+                        OR = {
+                            tag = FRA 
+                            tag = ITA
+                        }	
+                    }	
+				}
+				FRA = {
+				white_peace = {
+					tag = GER
+					message = tt_FraBeatGer
+				}
+				}
+				transfer_state = 51
+				transfer_state = 42
+				GER = { 
+					release = SHL
+					retire_country_leader = yes
+				}
+				PRE = {
+					transfer_state = 64
+					transfer_state = 62
+					transfer_state = 63
+					transfer_state = 68
+					transfer_state = 65
+					transfer_state = 61
+				}
+				FRA = {
+				set_autonomy = {
+					target = GER
+					autonomous_state = collaborator_gov
+				}
+				set_autonomy = {
+					target = SHL
+					autonomous_state = collaborator_gov
+				}
+				puppet = PRE
+				}
+				POL = {
+					transfer_state = 66
+					add_state_claim = 66
+					transfer_state = 67
+					add_state_claim = 67
+					transfer_state = 5
+					add_state_claim = 5
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,351 @@
+ideas = {
+
+	country = {
+
+		FRA_reborn_militarism = {
+			name = "Spirit of Militarism Reborn"
+			picture = FRA_spirit_of_vengeance
+			allowed = { always = no }
+			modifier = {
+				conscription = 0.01
+				army_morale_factor = 0.10
+			}
+		}
+
+		FRA_revolution_nationale = {
+			name = "Révolution Nationale!"
+			picture = FRA_revolution_nationale
+			allowed = { always = no }
+			modifier = {
+				surrender_limit = 0.10
+				political_power_gain = 0.10
+				industrial_capacity_factory = 0.10
+			}
+		}
+
+		FRA_party_divide = {
+			name = "Party Divide"
+			picture = FRA_party_divide
+			modifier = {
+				stability_weekly = -0.005
+				political_power_factor = -0.20
+				disabled_ideas = 1
+			}
+		}
+		
+		FRA_accesible_commodities = {
+			name = "Affordable Commodities"
+			allowed = { always = no }
+			modifier = {
+				army_fuel_consumption_factor = -0.05
+				stability_factor = 0.03
+				out_of_supply_factor = -0.05
+			}
+		}
+		
+		FRA_warrior_life = {
+			name = "Warrior Life"
+			#picture = FRA_party_divide
+			allowed = { always = no }
+			modifier = {
+				supply_consumption_factor = -0.05
+				resistance_growth_on_our_occupied_states = 0.10
+				land_reinforce_rate = 0.02
+				army_attack_factor = 0.05
+				production_lack_of_resource_penalty_factor = -0.10
+			}
+		}
+		FRA_spirit_of_vengeance_2 = {
+			name = "Spirit of Militarism Reborn"
+			picture = FRA_spirit_of_vengeance
+			modifier = {
+				army_morale_factor = 0.10
+				conscription = 0.01
+			}
+			targeted_modifier = {
+				tag = GER
+				attack_bonus_against = 0.1
+			}
+			targeted_modifier = {
+				tag = ENG
+				attack_bonus_against = 0.1
+			}
+		}
+
+		birth_programs = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea Capital_Ship_Primacy" }
+			name = "Birth Programs"
+			allowed = { always = no }
+			modifier = {
+				monthly_population = 0.20
+			}
+		}
+		
+		FRA_for_labor = {
+			name = "Labor Drive"
+			allowed = { always = no }
+			modifier = {
+				production_factory_max_efficiency_factor = 0.08
+				production_factory_efficiency_gain_factor = 0.10
+			}
+		}
+
+		FRA_national_socialism = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea Carrier_Primacy" }
+			# picture = gfx
+			allowed = { always = no }
+			name = "National Socialist Structure"
+			modifier = {
+				industrial_capacity_factory = 0.10
+				consumer_goods_factor = -0.05
+				production_factory_efficiency_gain_factor = 0.10
+			}
+		}
+
+		FRA_revolution_nationale_2 = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea FRA_fast_army_idea" }
+			picture = FRA_revolution_nationale
+			allowed = { always = no }
+			name = "Révolution Nationale!"
+			modifier = {
+				surrender_limit = 0.15
+				political_power_gain = 0.15
+				industrial_capacity_factory = 0.10
+				war_support_factor = 0.05
+			}
+		}
+
+		FRA_revolution_nationale_3 = {
+			name = "Revolution Nationale"
+			modifier = {
+				surrender_limit = 0.15
+				political_power_gain = 0.05
+				industrial_capacity_factory = 0.10
+				war_support_factor = 0.05
+				army_core_defence_factor = 0.08
+			}
+		}
+
+		united_for_france = {
+			picture = man_five_year_plan_tank
+			name = "United for France"
+			allowed = { always = no }
+			modifier = {
+				stability_factor = 0.10
+				weekly_manpower = 25
+			}
+		}
+
+		fra_legionary_workers_corps = {
+			picture = generic_fortify_the_borders
+			name = "French Legionary Workers Corps"
+			allowed = { always = no }
+			modifier = {
+				production_factory_max_efficiency_factor = 0.05
+				production_speed_buildings_factor = 0.10
+				conscription = 0.01
+			}
+		}
+
+		united_for_france_2 = {
+			allowed = { always = no }
+			name = "United for France"
+			modifier = {
+				stability_factor = 0.10
+				weekly_manpower = 25
+				war_support_factor = 0.10
+			}
+		}
+
+		national_socialist_worker_ethic = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea FRA_empower_rifleman_idea" }
+			picture = HOL_unionized_military
+			allowed = { always = no }
+			name = "French Legionary Workers Corps"
+			modifier = {
+				production_factory_max_efficiency_factor = 0.10
+				production_speed_buildings_factor = 0.10
+				conscription = 0.015
+				production_factory_start_efficiency_factor = 0.10
+			}
+		}
+		new_life_movement = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea FRA_empower_rifleman_idea" }
+			allowed = { always = no }
+			name = "New Life Movement"
+			modifier = {
+				monthly_population = 0.20
+				army_strength_factor = 0.05
+			}
+		}
+		new_life_movement_2 = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea FRA_empower_rifleman_idea" }
+			allowed = { always = no }
+			name = "New Life Movement"
+			modifier = {
+				monthly_population = 0.20
+				army_strength_factor = 0.05
+				conscription_factor = 0.10
+			}
+		}
+
+		FRA_grande_armee_fasciste = {
+			on_add = { log = "[GetDateText]: [Root.GetName]: add idea FRA_market_socialism_idea" }
+			name = "Grande Armee Fasciste"
+			allowed = { always = no }
+			modifier = {
+				max_planning = 0.10
+				army_speed_factor = 0.05
+				experience_gain_army_factor = 0.10
+			}
+		}
+		FRA_techno_totalism = {
+			name = "Techno-Totalism"
+			allowed = { always = no }
+			modifier = {
+				production_factory_max_efficiency_factor = 0.05
+				production_speed_buildings_factor = 0.10
+				encryption_factor = 0.15
+			}
+		}
+		FRA_techno_totalism_2 = {
+			name = "Techno-Totalism"
+			allowed = { always = no }
+			modifier = {
+				production_factory_max_efficiency_factor = 0.08
+				production_speed_buildings_factor = 0.10
+				encryption_factor = 0.20
+				drift_defence_factor = 0.10
+			}
+		}
+		FRA_sorelian_dawn = {
+			name = "Sorelian Dawn"
+			allowed = { always = no }
+			modifier = {
+				conscription = 0.01
+				war_support_factor = 0.10
+				stability_factor = -0.08
+				production_factory_start_efficiency_factor = 0.10
+			}
+		}
+		FRA_Military_communism = {
+			name = "Military Communism"
+			allowed = { always = no }
+			modifier = {
+				attrition = -0.10
+				max_dig_in = 3
+				army_morale_factor = 0.10
+			}
+		}
+		FRA_techno_totalism_3 = {
+			name = "Techno-Totalism"
+			allowed = { always = no }
+			modifier = {
+				production_factory_max_efficiency_factor = 0.10
+				production_speed_buildings_factor = 0.10
+				encryption_factor = 0.25
+				drift_defence_factor = 0.15
+				political_power_cost = -0.15
+			}
+		}
+		FRA_proletarian_corporatism = {
+			name = "Proletarian Corporatism"
+			allowed = { always = no }
+			modifier = {
+				consumer_goods_factor = -0.05
+				industrial_capacity_factory = 0.10
+				min_export = -0.15
+			}
+		}
+		FRA_proletarian_corporatism_2 = {
+			name = "Proletarian Corporatism"
+			allowed = { always = no }
+			modifier = {
+				consumer_goods_factor = -0.10
+				industrial_capacity_factory = 0.10
+				min_export = -0.15
+				production_speed_industrial_complex_factor = 0.08
+				production_speed_arms_factory_factor = 0.08
+				production_factory_efficiency_gain_factor = -0.10
+			}
+		}
+		FRA_proletarian_nationalism = {
+			name = "Proletarian Nationalism"
+			allowed = { always = no }
+			modifier = {
+				conscription_factor = 0.15
+				war_support_factor = 0.05
+				production_speed_buildings_factor = 0.10
+				army_core_defence_factor = 0.10
+			}
+		}
+		FRA_european_brotherhood = {
+			name = "European Brotherhood"
+			allowed = { always = no }
+			modifier = {
+				non_core_manpower = 0.12
+				political_power_gain = 0.10
+				trade_opinion_factor = 0.10
+			}
+		}
+		FRA_proletarian_corporatism_3 = {
+			name = "Proletarian Corporatism"
+			allowed = { always = no }
+			modifier = {
+				consumer_goods_factor = -0.10
+				industrial_capacity_factory = 0.10
+				min_export = -0.15
+				production_speed_industrial_complex_factor = 0.10
+				production_speed_arms_factory_factor = 0.10
+				production_factory_efficiency_gain_factor = -0.10
+				production_factory_max_efficiency_factor = 0.05
+			}
+		}
+		FRA_triumph_of_neosocialism = {
+			name = "Triumph of Neo-Socialism"
+			allowed = { always = no }
+			modifier = {
+				consumer_goods_factor = -0.10
+				industrial_capacity_factory = 0.10
+				min_export = -0.15
+				production_speed_industrial_complex_factor = 0.10
+				production_speed_arms_factory_factor = 0.10
+				production_factory_efficiency_gain_factor = -0.10
+				production_factory_max_efficiency_factor = 0.15
+				production_speed_buildings_factor = 0.20
+				encryption_factor = 0.25
+				drift_defence_factor = 0.15
+				political_power_cost = -0.15
+				non_core_manpower = 0.12
+				political_power_gain = 0.10
+				trade_opinion_factor = 0.10
+				conscription_factor = 0.15
+				war_support_factor = 0.05
+				army_core_defence_factor = 0.10
+			}
+		}
+
+		FRA_dominating_industry = {
+			name = FRA_dominating_industry
+			modifier = {
+				local_resources_factor = 0.15
+			}
+			targeted_modifier = {
+				tag = FRA
+				mic_to_target_factor = 0.75
+				cic_to_target_factor = 0.35
+			}
+		}
+
+	}
+
+	##############
+	# Ministers
+	##############
+
+	##############
+	# Companies
+	##############
+
+}
+

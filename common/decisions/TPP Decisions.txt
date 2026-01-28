@@ -1,0 +1,176 @@
+TPP_xp_to_mastery_cat = {
+	generic_army_xp_to_infantry_combat= {
+		name = "Convert Army XP to Infantry/Combat Support Mastery"
+		icon = GFX_decision_generic_military
+		available = { 
+			has_army_experience > 100
+			has_subdoctrine_in_track = infantry
+			has_subdoctrine_in_track = combat_support
+		}
+		days_remove = 50
+		days_re_enable = 50
+		ai_will_do = {
+			factor = 70
+		}
+		custom_cost_trigger = {
+			has_army_experience > 100
+		}
+		custom_cost_text = cost_ArmXP_100
+		complete_effect = { army_experience = -100 }
+		remove_effect = {
+			add_mastery = {
+				amount = 35
+				track = infantry
+			}
+			add_mastery = {
+				amount = 35
+				track = combat_support
+			}
+		}
+	}
+	generic_army_xp_to_armor_operations = {
+		name = "Convert Army XP to Armor/Operations Mastery"
+		icon = GFX_decision_generic_military
+		available = { 
+			has_army_experience > 100
+			has_subdoctrine_in_track = armor
+			has_subdoctrine_in_track = operations
+		}
+		days_remove = 50
+		days_re_enable = 50
+		ai_will_do = {
+			factor = 70
+		}
+		custom_cost_trigger = {
+			has_army_experience > 100
+		}
+		custom_cost_text = cost_ArmXP_100
+		complete_effect = { army_experience = -100 }
+		remove_effect = {
+			add_mastery = {
+				amount = 35
+				track = armor
+			}
+			add_mastery = {
+				amount = 35
+				track = operations
+			}
+		}
+	}
+	generic_air_xp_to_fighter_striker = {
+		name = "Convert Air XP to Fighter/Striker Mastery"
+		available = { 
+			has_air_experience > 100
+			has_subdoctrine_in_track = fighter_aircraft
+			has_subdoctrine_in_track = strike_aircraft
+		}
+		icon = GFX_decision_generic_air
+		days_remove = 50
+		days_re_enable = 50
+		ai_will_do = {
+			factor = 70
+		}
+		custom_cost_trigger = {
+			has_air_experience > 100
+		}
+		custom_cost_text = cost_AirXP_100
+		complete_effect = { air_experience = -100 }
+		remove_effect = {
+			add_mastery = {
+				amount = 35
+				track = fighter_aircraft
+			}
+			add_mastery = {
+				amount = 35
+				track = strike_aircraft
+			}
+		}
+	}
+	generic_air_xp_to_medium_heavy = {
+		name = "Convert Air XP to Medium/Heavy Mastery"
+		available = { 
+			has_air_experience > 100
+			has_subdoctrine_in_track = medium_aircraft
+			has_subdoctrine_in_track = heavy_aircraft
+		}
+		icon = GFX_decision_generic_air
+		days_remove = 50
+		days_re_enable = 50
+		ai_will_do = {
+			factor = 70
+		}
+		custom_cost_trigger = {
+			has_air_experience > 100
+		}
+		custom_cost_text = cost_AirXP_100
+		complete_effect = { air_experience = -100 }
+		remove_effect = {
+			add_mastery = {
+				amount = 35
+				track = medium_aircraft
+			}
+			add_mastery = {
+				amount = 35
+				track = heavy_aircraft
+			}
+		}
+	}
+	generic_navy_xp_to_submarine_screen = {
+		name = "Convert Naval XP to Submarine/Screen Mastery"
+		available = { 
+			has_navy_experience > 100
+			has_subdoctrine_in_track = submarines
+			has_subdoctrine_in_track = screens
+		}
+		days_remove = 50
+		days_re_enable = 50
+		ai_will_do = {
+			factor = 70
+		}
+		custom_cost_trigger = {
+			has_navy_experience > 100
+		}
+		icon = GFX_decision_generic_naval
+		custom_cost_text = cost_NavXP_100
+		complete_effect = { navy_experience = -100 }
+		remove_effect = {
+			add_mastery = {
+				amount = 35
+				track = submarines
+			}
+			add_mastery = {
+				amount = 35
+				track = screens
+			}
+		}
+	}
+	generic_navy_xp_to_carrier_capital = {
+		name = "Convert Naval XP to Carrier/Capital Mastery"
+		icon = GFX_decision_generic_naval
+		available = { 
+			has_navy_experience > 100
+			has_subdoctrine_in_track = carriers
+			has_subdoctrine_in_track = capital_ships
+		}
+		days_remove = 50
+		days_re_enable = 50
+		ai_will_do = {
+			factor = 70
+		}
+		custom_cost_trigger = {
+			has_navy_experience > 100
+		}
+		custom_cost_text = cost_NavXP_100
+		complete_effect = { navy_experience = -100 }
+		remove_effect = {
+			add_mastery = {
+				amount = 35
+				track = carriers
+			}
+			add_mastery = {
+				amount = 35
+				track = capital_ships
+			}
+		}
+	}
+}

@@ -24,7 +24,7 @@ autonomy_state = {
 		overlord_trade_cost_factor = -0.4
 		research_sharing_per_country_bonus_factor = -0.5
 		cic_to_overlord_factor = 0.1
-		mic_to_overlord_factor = 0.25
+		mic_to_overlord_factor = 0.1
 		peace_score_ratio_transferred_to_overlord = 0.2
 	}
 
@@ -38,7 +38,6 @@ autonomy_state = {
 
 	allowed = {
 		overlord = {
-			tag = USA
 			has_government = fascism
 		}
 	}

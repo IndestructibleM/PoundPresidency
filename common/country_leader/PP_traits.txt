@@ -88,10 +88,53 @@ leader_traits = {
 		war_support_factor = -0.1
 		political_power_cost = 0.2
 	}
+	
 	newagecrusader = {
 		random = no
 		stability_factor = 0.05
 		war_support_factor = 0.1
 		consumer_goods_expected_value = -0.1
 	}
+	
+### FRANCE STUFF ###
+	joseph_the_carpenter = {
+		random = no
+		stability_weekly = 0.0025
+		resistance_target = -0.1
+		production_speed_industrial_complex_factor = 0.05
+	}
+	
+	literally_charlemange = {
+		random = no
+		compliance_growth = 0.15
+		army_org = 5
+	}
+	
+### SHANDONG
+	general_86 = {
+		random = no
+		offensive_war_stability_factor = 0.10
+		production_speed_arms_factory_factor = 0.08
+	}
+	
+	three_dont_knows = {
+		random = no
+		stability_factor = -0.05
+		trade_opinion_factor = 0.2
+	}
+	
+	justice_and_might = {
+		random = no
+		war_support_weekly = 0.0025
+		army_org_regain = 0.1
+		breakthrough_factor = 0.1
+	}
+	
+	the_ronin = {
+		random = no
+		operative_slot = 2
+		land_reinforce_rate = 0.02
+		recon_factor = 0.15
+	}
+	
 }

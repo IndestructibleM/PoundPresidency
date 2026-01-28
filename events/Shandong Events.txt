@@ -1,0 +1,108 @@
+add_namespace = snd
+add_namespace = sndflav
+
+country_event = {
+	id = sndflav.1
+	title = sndflav.1.t
+	desc = sndflav.1.d
+	is_triggered_only = yes
+	option = {
+		name = sndflav.1.a
+		add_political_power = 10
+		add_stability = -0.5
+	}
+}
+
+country_event = {
+	id = snd.1
+	title = snd.1.t
+	desc = snd.1.d
+	
+	trigger = {
+        tag = SND
+        has_government = neutrality 
+        has_war_with = JAP
+        OR = {
+        has_completed_focus = SND_warlord_against_empire
+        has_completed_focus = SND_march_on_korea
+        }
+	}
+    mean_time_to_happen = { days = 10 }
+	option = {
+		name = snd.1.a
+		add_political_power = 20
+        add_timed_idea = {
+			idea = SND_defense_of_interior
+			days = 350
+		}        
+	}
+}
+
+country_event = {
+	id = snd.2
+	title = snd.2.t
+	desc = snd.2.d
+	is_triggered_only = yes
+	option = {
+		name = snd.2.a
+		add_timed_idea = { 
+			idea = SND_zhang_zongchang_is_high
+			days = 10
+		}
+      	hidden_effect = {
+			country_event = { id = snd.2 days = 100 random_days = 150 }
+		}  
+	}
+}
+
+country_event = {
+	id = snd.3
+	title = snd.3.t
+	desc = snd.3.d
+	trigger = {
+		tag = SND
+		has_war_with = JAP
+		NOT = {
+			any_owned_state = {
+				is_controlled_by = JAP
+			}
+		}
+		OR = {
+			NOT = { country_exists = MAN }
+			MAN = { has_capitulated = yes }
+			MAN = { is_ally_with = ROOT }
+		}
+
+		JAP = {
+			NOT = {
+				controls_state = 609
+				controls_state = 745
+				controls_state = 1031
+				controls_state = 1030
+				controls_state = 527
+			}
+			casualties_inflicted_by = {
+				opponent = SND
+				thousands > 100
+			}
+		}
+	}
+	mean_time_to_happen = { days = 100 }
+	option = {
+		name = snd.3.a
+		JAP = { 
+			dismantle_faction = yes 
+			leave_faction = yes 
+		}
+		faction_leader = { white_peace = JAP }
+		white_peace = JAP
+		JAP = { release = KOR }
+		ROOT = {
+			puppet = KOR
+			transfer_state = 609
+			transfer_state = 745
+			add_state_core = 609
+			add_state_core = 745
+		}
+	}
+}

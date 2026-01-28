@@ -42,6 +42,13 @@ if = {
 	}
 }
 
+IF = {
+	limit = {
+		has_dlc = "No Compromise, No Surrender"
+	}
+	create_faction_from_template = faction_template_usa_commonwealth
+}
+
 set_research_slots = 4
 set_stability = 0.75
 set_war_support = 0
@@ -57,9 +64,8 @@ set_variable = { var = quorum_high value = 58 }
 USA_recalc_congress_icon_frames = yes
 
 USA = {
-country_event = { id = usa.50 days = 2 }
-country_event = { id = usa.51 days = 2 }
-country_event = { id = pound.0 days = 0 } 
+	country_event = { id = usa.50 days = 2 }
+	country_event = { id = usa.51 days = 2 }
 }
 
 # Starting tech
@@ -72,8 +78,6 @@ set_technology = {
 	tech_engineers = 1
 	gw_artillery = 1
 	interwar_antiair = 1
-	superior_firepower = 1
-	base_strike = 1
 	motorised_infantry = 1
 	fuel_silos = 1
 	fuel_refining = 1
@@ -81,6 +85,9 @@ set_technology = {
 	basic_train = 1
 	engine_tech_1 = 1
 }
+
+set_grand_doctrine = superior_firepower
+set_grand_doctrine = new_base_strike
 
 add_breakthrough_progress = {
 	specialization = specialization_land
@@ -149,7 +156,7 @@ if = {
 		basic_ship_hull_carrier = 1
 		basic_battery = 1
 		basic_light_battery = 1
-		basic_medium_battery = 1
+		#basic_medium_battery = 1
 		basic_heavy_battery = 1
 		basic_torpedo = 1
 		sonar = 1
@@ -157,7 +164,7 @@ if = {
 		basic_cruiser_armor_scheme = 1
 		basic_heavy_armor_scheme = 1
 		mtg_transport = 1
-		improved_airplane_launcher = 1
+		#improved_airplane_launcher = 1
 		basic_dp_light_battery = 1
 	}
 	add_ideas = MTG_naval_treaty_adherent
@@ -224,7 +231,24 @@ if = {
 	complete_national_focus = USA_air_war_plans_division
 	complete_national_focus = USA_war_plans_division
 	complete_national_focus = USA_agricultural_adjustment_act
-	complete_national_focus = USA_neutrality_act
+	unlock_national_focus = USA_neutrality_act
+	#Dont want neutrality act event to fire
+	if = {
+		limit = {
+			has_dlc = "Arms Against Tyranny"
+		}
+		add_ideas = USA_neutrality_act_aat
+		hidden_effect = {
+			add_relation_rule_override = {
+				can_access_market = no
+				trigger = trade_partner_not_at_war
+				usage_desc = trade_partner_not_at_war_tt
+			}
+		}
+		else = {
+			add_ideas = USA_neutrality_act
+		}
+	}
 	complete_national_focus = USA_intervention_in_asia	
 	complete_national_focus = USA_war_plan_orange
 	complete_national_focus = USA_intervention_in_europe		
@@ -303,13 +327,9 @@ if = {
 
 		#doctrines
 		#Air
-		air_superiority = 1
-		infrastructure_destruction = 1
-		naval_strike_tactics = 1
-
-		sup_delay = 1
-		submarine_operations_bs = 1
-		carrier_primacy = 1
+		#air_superiority = 1
+		#infrastructure_destruction = 1
+		#naval_strike_tactics = 1
 
 		#electronics
 		electronic_mechanical_engineering = 1
@@ -359,7 +379,25 @@ if = {
 	}
 }
 
+set_grand_doctrine = superior_firepower
+set_grand_doctrine = new_base_strike
+set_grand_doctrine = new_strategic_destruction
 
+set_sub_doctrine = assault_infantry
+add_mastery = {
+    amount = 25
+    sub_doctrine = assault_infantry
+}
+set_sub_doctrine = line_of_battle
+add_mastery = {
+    amount = 25
+    sub_doctrine = line_of_battle
+}
+set_sub_doctrine = air_subdoctrine_escort_fighter
+add_mastery = {
+    amount = 25
+    sub_doctrine = air_subdoctrine_escort_fighter
+}
 
 
 set_convoys = 700
@@ -390,7 +428,7 @@ add_ideas = {
 # DIPLOMACY
 set_autonomy = {
 	target = PHI
-	autonomous_state =  autonomy_puppet
+	autonomous_state =  autonomy_colony
 }
 
 1939.1.1 = {
@@ -403,8 +441,7 @@ set_autonomy = {
 }
 
 recruit_character = USA_earl_browder
-recruit_character = USA_william_dudley_pelley 
-### ^He shows up as fascist leader at first but doesn't show up if you chose the third election option
+recruit_character = USA_william_dudley_pelley
 recruit_character = USA_franklin_delano_roosevelt
 recruit_character = USA_george_s_patton
 recruit_character = USA_omar_bradley
@@ -416,7 +453,6 @@ recruit_character = USA_douglas_macarthur
 recruit_character = USA_walter_krueger
 recruit_character = USA_lloyd_fredendall
 recruit_character = USA_leslie_mcnair
-recruit_character = USA_jonathan_wainwright
 recruit_character = USA_russell_hartle
 recruit_character = USA_leonard_gerow
 recruit_character = USA_edward_brooks
@@ -476,9 +512,7 @@ recruit_character = USA_andrew_mckee
 recruit_character = USA_john_walter_christie
 recruit_character = USA_vannevar_bush
 
-## Pound Presidency
 recruit_character = USA_Ezra_Pound
-recruit_character = USA_Ernest_Hemmingway
 recruit_character = USA_richard_child
 recruit_character = USA_howard_scott
 recruit_character = USA_francis_yockey
@@ -487,12 +521,13 @@ recruit_character = USA_George_Christians
 recruit_character = USA_charles_lindbergh_ac
 recruit_character = USA_willis_carto
 recruit_character = USA_revilo_oliver
-recruit_character = USA_max_eastman
-recruit_character = USA_upton_sinclair
 recruit_character = USA_george_s_patton_tpp
 
 
-
+if = {
+	limit = { not = { has_dlc = "No Compromise, No Surrender" } }
+	recruit_character = USA_jonathan_wainwright
+}
 
 if = {
 	limit = { has_dlc = "La Resistance" }
@@ -700,7 +735,7 @@ if = {
 			engine_type_slot = engine_2_1x
 			special_type_slot_1 = empty
 		}
-		icon = "GFX_USA_fighter1_medium"
+		icon = "GFX_light_plane_5_medium"
 	}
 	create_equipment_variant = {
 		name = "B-6A" #also covers other Keystone bombers
@@ -711,6 +746,7 @@ if = {
 			special_type_slot_1 = lmg_defense_turret
 		}
 		obsolete = yes
+		icon = GFX_USA_early_bomber_medium
 	}
 	create_equipment_variant = {
 		name = "B-10" #

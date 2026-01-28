@@ -1,0 +1,311 @@
+add_namespace = etat
+add_namespace = etatflav
+add_namespace = etatfopo
+
+country_event = {
+	id = etatfopo.1
+	title = etatfopo.1.t
+	is_triggered_only = yes
+	desc = etatfopo.1.d
+	option = {
+		ai_chance = {
+			factor = 30
+		}
+		name = "We Shall Fight for our Freedom!"
+		add_political_power = 100
+		FRA = { 	
+			create_wargoal = {
+			type = annex_everything
+			target = ROOT
+			}
+		}
+	}
+	option = {
+		ai_chance = {
+			factor = 50
+		}
+		name = "We have no choice but to give in."
+		FRA = {
+			transfer_state = 34
+			transfer_state = 980
+			set_autonomy = {
+				target = BEL
+				autonomous_state = collaborator_gov
+				end_wars = yes
+				end_civil_wars = yes
+			}
+		}
+	}
+}
+
+country_event = {
+	id = etatfopo.2
+	title = etatfopo.2.t
+	fire_only_once = yes
+	desc = etatfopo.2.d
+	is_triggered_only = yes
+	option = {
+		name = etatfopo.2.a
+		ai_chance = {
+			factor = 100
+		}
+		BAN = { every_core_state = { transfer_state_to = PAK } }
+		PAK = { every_core_state = { transfer_state_to = PAK } }
+		EGY = { every_core_state = { transfer_state_to = EGY } }
+		SUD = { every_core_state = { transfer_state_to = EGY } }
+		TZN = { every_core_state = { transfer_state_to = TZN } }
+		NGA = { every_core_state = { transfer_state_to = NGA } }
+		BRN = { every_core_state = { transfer_state_to = BRN } }
+		ENG = {
+			dismantle_faction = yes
+			end_puppet = RAJ
+			end_puppet = SAF
+			end_puppet = CAN
+			end_puppet = NZL
+			end_puppet = PAL
+			end_puppet = JOR
+			end_puppet = AST
+			end_puppet = BRM
+			end_puppet = MAL
+		}
+	}
+}
+
+country_event = {
+	id = etatfopo.3
+	title = etatfopo.3.t
+	fire_only_once = yes
+	desc = etatfopo.3.d
+	trigger = {
+		tag = FRA
+		has_completed_focus = the_great_lance
+	}
+	mean_time_to_happen = { days = 30 }
+	option = {
+		ai_chance = {
+			factor = 15
+		}
+		name = "On second thought..."
+		ENG = { give_guarantee = HOL }
+		remove_decision = fra_invade_hol
+	}
+	option = {
+		ai_chance = {
+			factor = 20
+		}
+		name = "GTFO Eternal Anglo"
+		ENG = { give_guarantee = HOL }
+		add_threat = 5
+	}
+}
+
+country_event = {
+	id = etat.1
+	title = etat.1.t
+	desc = etat.1.d
+	fire_only_once = yes
+	is_triggered_only = yes
+	option = {
+		name = etat.1.a
+	}
+}
+
+country_event = {
+	id = etat.3
+	title = etat.3.t
+	desc = etat.3.d
+	fire_only_once = yes
+	trigger = {
+		has_power_balance = {
+			id = FRA_power_balance
+		}
+		tag = FRA
+	}
+	mean_time_to_happen = { days = 60 }
+	option = {
+		name = etat.3.a
+		add_political_power = 20
+	}
+	option = {
+		name = etat.3.b
+		add_power_balance_value = {
+            id = FRA_power_balance
+            value = -0.1
+        }
+	}
+	option = {
+		name = etat.3.c
+		add_power_balance_value = {
+            id = FRA_power_balance
+            value = 0.1
+        }
+	}
+}
+
+
+country_event = {
+	id = etat.4
+	title = etat.4.t  
+	desc = etat.4.d
+	fire_only_once = yes
+	is_triggered_only = yes
+	option = {
+		name = etat.4.a
+		add_power_balance_value = {
+            id = FRA_power_balance
+            value = 0.2
+        }
+	}
+	option = {
+		name = etat.4.b
+		add_power_balance_value = {
+            id = FRA_power_balance
+            value = -0.2
+            
+        }
+	}
+}
+
+country_event = {
+	id = etat.5
+	title = etat.5.t
+	desc = etat.5.d
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = etat.5.a
+		add_power_balance_value = {
+            id = FRA_power_balance
+            value = 0.2
+        }
+	}
+	option = {
+		name = etat.5.b
+		add_power_balance_value = {
+            id = FRA_power_balance
+            value = -0.2
+            
+        }
+	}
+}
+country_event = {
+	id = etat.6
+	title = etat.6.t
+	desc = etat.6.d
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = etat.5.a
+		add_power_balance_value = {
+            id = FRA_power_balance
+            value = 0.2
+        }
+	}
+	option = {
+		name = etat.5.b
+		add_power_balance_value = {
+            id = FRA_power_balance
+            value = -0.2
+            
+        }
+	}
+}
+country_event = {
+	id = etat.7
+	title = etat.7.t
+	desc = etat.7.d
+	is_triggered_only = yes
+	option = {
+		name = etat.7.a
+		add_power_balance_value = {
+            id = FRA_power_balance
+            value = 0.25
+        }
+	}
+	option = {
+		name = etat.7.b
+		add_power_balance_value = {
+            id = FRA_power_balance
+            value = -0.25
+            
+        }
+	}
+}
+
+country_event = {
+	id = etat.10
+	title = etat.10.t
+	desc = etat.10.d
+	
+	is_triggered_only = yes
+	option = {
+		name = etat.10.a
+		trigger = {
+			power_balance_value = {
+    			id = FRA_power_balance
+    			value > 0.25
+			}
+		}
+		promote_character = FRA_joseph_darnand
+	}
+	option = {
+		name = etat.10.b
+		trigger = {
+			power_balance_value = {
+    			id = FRA_power_balance
+				value < -0.25
+			}
+		}
+		country_event = { id = etat.21 days = 2 }
+	}
+	option = {
+		name = etat.10.c
+		trigger = {
+			power_balance_value = {
+    		id = FRA_power_balance
+    		value > -0.25
+		}
+		power_balance_value = {
+    		id = FRA_power_balance
+    		value < 0.25
+		}
+		}
+		country_event = { id = etat.22 days = 2 }
+	}
+	
+}
+
+country_event = {
+	id = etat.11
+	title = etat.11.t
+	desc = etat.11.d
+	is_triggered_only = yes
+	option = {
+		name = etat.11.a
+		promote_character = FRA_joseph_darnand
+	}
+}
+
+country_event = {
+	id = etat.12
+	title = etat.12.t
+	desc = etat.12.d
+	is_triggered_only = yes
+	option = {
+		name = etat.12.a
+		promote_character = FRA_marcel_deat_leader
+	}
+}
+
+country_event = {
+	id = etatflav.1
+	title = etatflav.1.t
+	desc = etatflav.1.d
+	is_triggered_only = yes
+	option = {
+		name = etatflav.1.a
+		custom_effect_tooltip = "Crime will drop by 13%"
+	}
+}

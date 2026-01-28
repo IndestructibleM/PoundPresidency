@@ -1,0 +1,73 @@
+upgrade_conscript_law = {
+	if = {
+		limit = {
+			has_idea = disarmed_nation
+		}
+		add_ideas = volunteer_only
+	}
+	else_if = {
+		limit = {
+			has_idea = volunteer_only
+		}
+		add_ideas = limited_conscription
+	}
+	else_if = {
+		limit = {
+			has_idea = limited_conscription
+		}
+		add_ideas = extensive_conscription
+	}
+	else_if = {
+		limit = {
+			has_idea = extensive_conscription
+		}
+		add_ideas = service_by_requirement
+	}
+	else_if = {
+		limit = {
+			has_idea = service_by_requirement
+		}
+		add_ideas = all_adults_serve
+	}
+	else_if = {
+		limit = {
+			has_idea = all_adults_serve
+		}
+		add_ideas = scraping_the_barrel
+	}
+	else = {
+		add_political_power = 150
+	}
+}
+upgrade_draft_law = {
+	if = {
+		limit = {
+			has_idea = draft1
+		}
+		add_ideas = draft2
+	}
+	else_if = {
+		limit = {
+			has_idea = draft2
+		}
+		add_ideas = draft3
+	}
+	else_if = {
+		limit = {
+			has_idea = draft3
+		}
+		add_ideas = draft4
+	}
+	else_if = {
+		limit = {
+			has_idea = draft4
+		}
+		add_ideas = draft5
+	}
+	else_if = {
+		limit = {
+			has_idea = draft5
+		}
+		add_political_power = 100
+	}
+}

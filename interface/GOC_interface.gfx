@@ -1,0 +1,11 @@
+spriteTypes = {	
+	SpriteType = {
+		name = "GFX_rations_eq_medium"
+		texturefile = "gfx/interface/technologies/rations_eq.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_rations_medium"
+		texturefile = "gfx/interface/technologies/rations_eq.dds"
+	}
+}

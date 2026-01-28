@@ -1,0 +1,66 @@
+add_namespace = goc
+
+country_event = {
+	id = goc.1
+	title = goc.1.t
+	desc = goc.1.d
+	
+	trigger = {
+        has_resources_in_country = {
+            resource = coal
+            amount < 4
+            extracted = no
+        }
+        num_of_owned_factories > 9
+        NOT = { has_country_flag = Recent_Famine }
+        NOT = { has_country_flag = FamineLoomed }
+	}
+    mean_time_to_happen = { days = 20 }
+    immediate = {
+        set_country_flag = {
+            flag = FamineLooming
+            days = 35
+            value = 1
+        }
+        set_country_flag = {
+            flag = FamineLoomed
+            days = 150
+            value = 1
+        }
+    }
+	option = {
+		name = goc.1.a
+		add_political_power = -10
+        
+	}
+}
+country_event = {
+	id = goc.2
+	title = goc.2.t
+	desc = goc.2.d
+	
+	trigger = {
+        has_resources_in_country = {
+            resource = coal
+            amount < 4
+            extracted = no
+        }
+        num_of_owned_factories > 9
+        NOT = { has_country_flag = Recent_Famine }
+        NOT = { has_country_flag = FamineLooming }
+        has_country_flag = FamineLoomed
+	}
+    mean_time_to_happen = { days = 5 }
+	option = {
+		name = goc.2.a
+		add_timed_idea = {
+            idea = GOC_famine_moment
+            days = 100
+        }
+        set_country_flag = {
+    		flag = Recent_Famine
+			days = 200
+            value = 1
+		}
+	}
+}
