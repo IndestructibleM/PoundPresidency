@@ -2,6 +2,10 @@ SND_balance_of_power_cat = {
     allowed = { tag = SND }
 }
 
+
+release_decisions_cat = {
+}
+
 TPP_xp_to_mastery_cat = {
     icon = GFX_decision_category_military_operation
     priority = 5
