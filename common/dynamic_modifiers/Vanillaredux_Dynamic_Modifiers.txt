@@ -1,0 +1,6 @@
+econ_production_effect = {
+	enable = { always = yes }
+	icon = GFX_idea_unknown
+	industrial_capacity_factory = AmountOfCoal #FROM.resource@coal
+	production_cost_arms_factory_factor = NumberOfMilsBuilt #FROM.total_constructed_arms_factory
+}
