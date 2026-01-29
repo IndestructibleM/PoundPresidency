@@ -1,0 +1,91 @@
+foreign_politics = {
+	WGR_prepare_for_war = {
+		name = WGR_prepare_for_war
+		allowed = { 
+			tag = WGR
+		}
+		ai_will_do = {
+			base = 100
+		}
+		fire_only_once = yes 
+		cost = 100
+		available = {
+			has_army_manpower = {
+				size > 350000
+			}
+			arms_factory > 19
+		}
+		days_remove = 70
+		modifier = {
+			weekly_manpower = 200
+			industrial_capacity_factory = 0.1
+			experience_gain_army = 0.1
+		}
+		remove_effect = {
+			upgrade_economy_law = yes
+			upgrade_draft_law = yes
+		}
+	}
+	
+	WGR_anchluss = {
+		name = WGR_anchluss
+		allowed = { 
+			tag = WGR
+		}
+		ai_will_do = {
+			base = 120
+		}
+		fire_only_once = yes 
+		cost = 80
+		available = {
+			has_army_manpower = {
+				size > 450000
+			}
+			arms_factory > 24
+			has_war_support > 0.7
+		}
+		complete_effect = {
+			annex_country = {
+				target = AUS
+				transfer_troops = yes
+			}
+			AUS = {
+				every_core_state = { add_core_of = WGR }
+			}
+		}
+	}
+	
+	WGR_war_against_GER = {
+		name = WGR_war_against_GER
+		allowed = { 
+			tag = WGR
+		}
+		war_with_on_remove = GER
+		ai_will_do = {
+			base = 120
+		}
+		fire_only_once = yes 
+		cost = 80
+		available = {
+			has_army_manpower = {
+				size > 600000
+			}
+			arms_factory > 30
+			has_war_support > 0.7
+			date > 1937.6.1
+		}
+		complete_effect = {
+			upgrade_draft_law = yes
+		}
+		modifier = {
+			planning_speed = 0.2
+		}
+		days_remove = 35
+		remove_effect = {
+			declare_war_on = {
+				target = GER
+				type = annex_everything
+			}
+		}
+	}
+}

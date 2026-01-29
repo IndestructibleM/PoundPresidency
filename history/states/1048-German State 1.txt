@@ -1,0 +1,34 @@
+state={
+	id=1048
+	name="STATE_1048"
+	provinces={
+		3474 6421 6594 11404 11417 13116 
+	}
+	history = {
+
+		owner = GER
+		add_core_of = GER
+		add_core_of = BAY
+		add_claim_by = WGR
+
+		victory_points = {
+			6421 2 # Coburg
+		}
+
+		buildings = {
+			infrastructure = 4
+			industrial_complex = 2
+		}
+
+		1939.1.1 = {
+			buildings = {
+				air_base = 3
+			}
+		}
+	}
+
+	manpower=953365
+	state_category = city
+	buildings_max_level_factor=1
+	local_supplies=3.000
+}

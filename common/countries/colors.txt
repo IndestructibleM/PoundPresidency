@@ -1,8 +1,8 @@
 #reload countrycolors
 
 GER = {
-	color = rgb { 80 80 80 }
-	color_ui = rgb { 80 80 80 }
+	color = rgb { 105 105 105 }
+	color_ui = rgb { 105 105 105 }
 }
 ENG = {
 	color = rgb { 200 0 0 }
@@ -462,14 +462,17 @@ PAK = {
 	color = rgb { 0 102 0  }
 	color_ui = rgb { 0 102 0  }
 }
-#WGR = {
-#    color = rgb { 195 236 230 } # The colors are set to be more are less what we are used to
-#    color_ui = rgb { 225 255 255 }
-#}
+
+WGR = {
+    color = rgb { 75 75 75 } 
+    color_ui = rgb { 75 75 75 }
+}
+
 #DDR = {
 #    color = rgb { 120 150 80 }
 #    color_ui = rgb { 150 180 120 }
 #}
+
 KOR = {
 	color = rgb { 255  240  195 }
 	color_ui = rgb { 255 248 229 }	
