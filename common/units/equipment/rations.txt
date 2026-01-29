@@ -15,11 +15,11 @@ equipments = {
 		#Space taken in convoy
 		lend_lease_cost = 1
 		reliability = 0.75
-		supply_consumption = -0.02
-		breakthrough = 0.15
+		supply_consumption = -0.04
+		breakthrough = 0.1
 		build_cost_ic = 0.10
 		resources = {
-			coal = 2
+			grain = 2
 		}
 	}
 

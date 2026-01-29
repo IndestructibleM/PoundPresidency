@@ -17,3 +17,8 @@
  rations_eq_short: "Military Rations"
  farm_upgrade: "Improved Farming Techniques"
  farm_upgrade1: "Advanced Farming Techniques"
+ 
+ ######## GOC #########
+ PRODUCTION_MATERIALS_GRAIN:0 "Grain"
+ GRAIN_desc:0 "Grain is the harvested seeds of cereal crops like wheat, rice, corn, barley, and oats, which are staple foods for much of the world's population. It is used primarily for human consumption, animal feed, and as a raw material in products like rations."
+ 
