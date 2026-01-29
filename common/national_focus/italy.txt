@@ -23139,5 +23139,175 @@ focus_tree = {
 	}
 
 
-	### The Pound Presidency - Italy Expansion ###
+	### Imperial Eclipse - Marinetti's Italy Expansion ###
+	focus = {
+		id = ITA_the_engines_awaken
+		icon = GFX_focus_generic_industry_3
+		x = 0
+		y = 2
+		relative_position_id = ITA_supremacy_in_the_skies
+		available = {
+		}
+
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = ITA_the_futurist_state
+		icon = GFX_focus_ITA_generic_fascist_workers
+		prerequisite = { focus = ITA_the_engines_awaken }
+		x = -3
+		y = 1
+		relative_position_id = ITA_the_engines_awaken
+		available = {
+		}
+
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {
+		id = ITA_no_past_only_forward
+		icon = GFX_focus_generic_italy_propaganda
+		prerequisite = { focus = ITA_the_engines_awaken }
+		x = 0
+		y = 1
+		relative_position_id = ITA_the_engines_awaken
+		available = {
+		}
+
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {
+		id = ITA_marinettis_vision_triumphant
+		icon = GFX_focus_generic_spread_fascism
+		prerequisite = { focus = ITA_the_engines_awaken }
+		x = 3
+		y = 1
+		relative_position_id = ITA_the_engines_awaken
+		available = {
+		}
+
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {
+		id = ITA_a_nation_at_full_throttle
+		icon = GFX_focus_generic_truck
+		prerequisite = { focus = ITA_the_futurist_state }
+		prerequisite = { focus = ITA_no_past_only_forward }
+		prerequisite = { focus = ITA_marinettis_vision_triumphant }
+		x = 0
+		y = 1
+		relative_position_id = ITA_no_past_only_forward
+		available = {
+		}
+
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = ITA_the_engines_awaken
+		icon = GFX_focus_generic_industry_3
+		x = 0
+		y = 2
+		relative_position_id = ITA_supremacy_in_the_skies
+		available = {
+		}
+
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = ITA_the_engines_awaken
+		icon = GFX_focus_generic_industry_3
+		x = 0
+		y = 2
+		relative_position_id = ITA_supremacy_in_the_skies
+		available = {
+		}
+
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = ITA_the_engines_awaken
+		icon = GFX_focus_generic_industry_3
+		x = 0
+		y = 2
+		relative_position_id = ITA_supremacy_in_the_skies
+		available = {
+		}
+
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = ITA_the_engines_awaken
+		icon = GFX_focus_generic_industry_3
+		x = 0
+		y = 2
+		relative_position_id = ITA_supremacy_in_the_skies
+		available = {
+		}
+
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = ITA_the_engines_awaken
+		icon = GFX_focus_generic_industry_3
+		x = 0
+		y = 2
+		relative_position_id = ITA_supremacy_in_the_skies
+		available = {
+		}
+
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = ITA_the_engines_awaken
+		icon = GFX_focus_generic_industry_3
+		x = 0
+		y = 2
+		relative_position_id = ITA_supremacy_in_the_skies
+		available = {
+		}
+
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		completion_reward = {
+
+		}
+	}
 }
