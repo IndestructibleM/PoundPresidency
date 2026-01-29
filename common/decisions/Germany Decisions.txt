@@ -1,0 +1,108 @@
+foreign_politics = {
+	
+	WGR_war_against_GER = {
+		name = WGR_war_against_GER
+		allowed = { 
+			tag = WGR
+		}
+		war_with_on_remove = GER
+		ai_will_do = {
+			base = 120
+		}
+		fire_only_once = yes 
+		cost = 50
+		available = {
+			has_completed_focus = WGR_to_save_deutschland
+		}
+		complete_effect = {
+			upgrade_draft_law = yes
+		}
+		modifier = {
+			planning_speed = 0.2
+		}
+		days_remove = 35
+		remove_effect = {
+			declare_war_on = {
+				target = GER
+				type = annex_everything
+			}
+		}
+	}
+	
+	WGR_load_focus = {
+		allowed = { 
+			tag = WGR
+		}
+		ai_will_do = {
+			base = 120
+		}
+		fire_only_once = yes 
+		available = {
+			owns_state = 64
+			has_completed_focus = WGR_to_save_deutschland
+		}
+		complete_effect = {
+			load_focus_tree = german_focus
+		}
+	}
+
+	debug_add_econ_modifier = {
+		allowed = { 
+			always = yes
+			is_ai = no
+		}
+		ai_will_do = {
+			base = 120
+		}
+		available = { is_ai = no }
+		fire_only_once = yes 
+		complete_effect = {
+			every_country = {
+			add_dynamic_modifier = {
+				modifier = econ_production_effect 
+			}
+			econ_production_setup = yes
+			}
+		}
+	}
+}
+
+release_decisions_cat = {
+	TS_nuke_enemy_capital = {
+		name = TS_nuke_enemy_capital
+		allowed = {
+			always = no
+		}
+		state_target = yes
+		target_array = owned_states
+		target_trigger = {
+			ROOT = {
+				has_war = no
+			}
+			FROM = {
+				is_capital = yes
+				OWNER = {
+				NOT = {
+					is_in_faction_with = ROOT
+					is_ally_of = ROOT
+				}
+				}
+			}
+		}
+		available = { 
+		}
+		on_map_mode = map_only
+		days_remove = 30
+		days_re_enable = 30
+		ai_will_do = {
+			factor = 5
+		}
+		cost = 50
+		complete_effect = { 	
+			add_nuclear_bombs = -1
+		}
+		remove_effect = {
+			
+		}
+	}
+}
