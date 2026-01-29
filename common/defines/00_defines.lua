@@ -19,9 +19,9 @@ NGame = {
 	EVENT_TIMEOUT_DEFAULT = 13,						-- Default days before an event times out if not scripted
 	MISSION_REMOVE_FROM_INTERFACE_DEFAULT = 13,		-- Default days before a mission is removed from the interface after having failed or completed
 	DECISION_ALERT_TIMEOUT_DAYS = 30,				-- Days left when player will be alerted about timing out events or decisions
-	OIL_RESOURCE= "oil",							-- Name of the oil resource
+	OIL_RESOURCE= "coal",							-- Name of the oil resource
 	FUEL_RESOURCE = "oil",							-- resource that will give country fuel
-	ENERGY_RESOURCE = "coal",						-- resource that will give country energy 
+	ENERGY_RESOURCE = "grain",						-- resource that will give country energy 
 	MAX_EFFECT_ITERATION = 1000,					-- maximum allowed iteration for loop effects
 	MAX_SCRIPTED_LOC_RECURSION = 30,				-- max recursion for scripted localizations
 	HANDS_OFF_START_TAG = "HAI",					-- tag for player country for -hands_off runs. use an existing tag that is less likely to affect the game
@@ -3442,7 +3442,8 @@ NAI = {
 		0, -- tungsten
 		0, -- steel
 		0, -- chromium
-		10, -- coal
+		8, -- grain
+		0, -- coal
 	},
 	
 	SUGGESTED_NUM_MAX_CARRIERS = 4,							-- We don't know exactly how many planes we should use when evaluating AI build so we need a suggested number to start things off. ALso used for task force suggestions list.
