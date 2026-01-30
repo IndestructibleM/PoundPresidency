@@ -23222,11 +23222,12 @@ focus_tree = {
 	}
 
 	focus = {
-		id = ITA_the_engines_awaken
-		icon = GFX_focus_generic_industry_3
-		x = 0
-		y = 2
-		relative_position_id = ITA_supremacy_in_the_skies
+		id = ITA_steel_is_the_new_flesh
+		icon = GFX_focus_generic_steel
+		prerequisite = { focus = ITA_a_nation_at_full_throttle }
+		x = -4
+		y = 1
+		relative_position_id = ITA_a_nation_at_full_throttle
 		available = {
 		}
 
@@ -23237,11 +23238,12 @@ focus_tree = {
 	}
 
 	focus = {
-		id = ITA_the_engines_awaken
-		icon = GFX_focus_generic_industry_3
+		id = ITA_destroy_the_museums
+		icon = GFX_focus_generic_military_academy
+		prerequisite = { focus = ITA_a_nation_at_full_throttle }
 		x = 0
-		y = 2
-		relative_position_id = ITA_supremacy_in_the_skies
+		y = 1
+		relative_position_id = ITA_a_nation_at_full_throttle
 		available = {
 		}
 
@@ -23252,11 +23254,12 @@ focus_tree = {
 	}
 
 	focus = {
-		id = ITA_the_engines_awaken
-		icon = GFX_focus_generic_industry_3
-		x = 0
-		y = 2
-		relative_position_id = ITA_supremacy_in_the_skies
+		id = ITA_speed_is_sacred
+		icon = GFX_focus_generic_truck
+		prerequisite = { focus = ITA_a_nation_at_full_throttle }
+		x = 4
+		y = 1
+		relative_position_id = ITA_a_nation_at_full_throttle
 		available = {
 		}
 
@@ -23267,11 +23270,44 @@ focus_tree = {
 	}
 
 	focus = {
-		id = ITA_the_engines_awaken
+		id = ITA_cities_of_smoke_and_light
 		icon = GFX_focus_generic_industry_3
-		x = 0
-		y = 2
-		relative_position_id = ITA_supremacy_in_the_skies
+		prerequisite = { focus = ITA_steel_is_the_new_flesh }
+		x = -1
+		y = 1
+		relative_position_id = ITA_steel_is_the_new_flesh
+		available = {
+		}
+
+		search_filters = {FOCUS_FILTER_POLITICAL FOCUS_FILTER_INDUSTRY}
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = ITA_the_machine_age_accelerated
+		icon = GFX_focus_generic_tankette
+		prerequisite = { focus = ITA_steel_is_the_new_flesh }
+		x = 1
+		y = 1
+		relative_position_id = ITA_steel_is_the_new_flesh
+		available = {
+		}
+
+		search_filters = {FOCUS_FILTER_POLITICAL FOCUS_FILTER_INDUSTRY}
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = ITA_glorify_the_modern_man
+		icon = GFX_focus_ITA_strengthen_ascari_corps
+		prerequisite = { focus = ITA_destroy_the_museums }
+		x = -1
+		y = 1
+		relative_position_id = ITA_destroy_the_museums
 		available = {
 		}
 
@@ -23282,11 +23318,12 @@ focus_tree = {
 	}
 
 	focus = {
-		id = ITA_the_engines_awaken
+		id = ITA_the_cult_of_youth
 		icon = GFX_focus_generic_industry_3
-		x = 0
-		y = 2
-		relative_position_id = ITA_supremacy_in_the_skies
+		prerequisite = { focus = ITA_destroy_the_museums }
+		x = 1
+		y = 1
+		relative_position_id = ITA_destroy_the_museums
 		available = {
 		}
 
@@ -23297,11 +23334,145 @@ focus_tree = {
 	}
 
 	focus = {
-		id = ITA_the_engines_awaken
+		id = ITA_railways_of_the_future
+		icon = GFX_focus_generic_railroad
+		prerequisite = { focus = ITA_speed_is_sacred }
+		x = -1
+		y = 1
+		relative_position_id = ITA_speed_is_sacred
+		available = {
+		}
+
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = ITA_skyways_and_superhighways
+		icon = GFX_focus_generic_improve_roads
+		prerequisite = { focus = ITA_speed_is_sacred }
+		x = 1
+		y = 1
+		relative_position_id = ITA_speed_is_sacred
+		available = {
+		}
+
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = ITA_the_rhythm_of_industry
+		icon = GFX_focus_generic_industry_2
+		prerequisite = { focus = ITA_cities_of_smoke_and_light }
+		prerequisite = { focus = ITA_the_machine_age_accelerated }
+		x = 1
+		y = 1
+		relative_position_id = ITA_cities_of_smoke_and_light
+		available = {
+		}
+
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = ITA_art_as_a_weapon
+		icon = GFX_focus_ITA_albanian_fascist_militia
+		prerequisite = { focus = ITA_glorify_the_modern_man }
+		prerequisite = { focus = ITA_the_cult_of_youth }
+		x = 1
+		y = 1
+		relative_position_id = ITA_glorify_the_modern_man
+		available = {
+		}
+
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = ITA_the_nation_in_motion
+		icon = GFX_focus_generic_improve_roads
+		prerequisite = { focus = ITA_railways_of_the_future }
+		prerequisite = { focus = ITA_skyways_and_superhighways }
+		x = 1
+		y = 1
+		relative_position_id = ITA_railways_of_the_future
+		available = {
+		}
+
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = ITA_total_industrial_mobilization
 		icon = GFX_focus_generic_industry_3
+		prerequisite = { focus = ITA_the_rhythm_of_industry }
 		x = 0
-		y = 2
-		relative_position_id = ITA_supremacy_in_the_skies
+		y = 1
+		relative_position_id = ITA_the_rhythm_of_industry
+		available = {
+		}
+
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = ITA_the_end_of_decadence
+		icon = GFX_focus_generic_socialist_science
+		prerequisite = { focus = ITA_art_as_a_weapon}
+		x = 0
+		y = 1
+		relative_position_id = ITA_art_as_a_weapon
+		available = {
+		}
+
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = ITA_urban_titans_rise
+		icon = GFX_focus_generic_improve_roads
+		prerequisite = { focus = ITA_the_nation_in_motion }
+		x = 0
+		y = 1
+		relative_position_id = ITA_the_nation_in_motion
+		available = {
+		}
+
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = ITA_war_is_the_worlds_hygiene
+		icon = GFX_focus_ITA_albanian_fascist_militia
+		prerequisite = { focus = ITA_total_industrial_mobilization }
+		prerequisite = { focus = ITA_the_end_of_decadence }
+		prerequisite = { focus = ITA_urban_titans_rise }
+		x = 0
+		y = 1
+		relative_position_id = ITA_the_end_of_decadence
 		available = {
 		}
 
