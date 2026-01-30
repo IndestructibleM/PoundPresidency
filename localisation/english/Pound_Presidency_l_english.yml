@@ -259,6 +259,7 @@ ministers_slots: "Government Ministers"
 economy_model: "Economic Model"
 government_type: "Government Type"
 draft: "Draft Law"
+second_command: "Second-in-Command"
 
 protectionism: "Trade Protectionism"
 
@@ -285,3 +286,5 @@ cost_AirXP_100_tooltip: "It costs £aai_experience  §Y100§! to take the decisi
 cost_NavXP_100: "£navy_experience  §Y100§!"
 cost_NavXP_100_blocked: "£navy_experience  §R100§!"
 cost_NavXP_100_tooltip: "It costs £navy_experience  §Y100§! to take the decision"
+
+reactionary_marshal: "Reactionary Marshal"

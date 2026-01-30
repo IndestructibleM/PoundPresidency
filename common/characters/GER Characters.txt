@@ -1,0 +1,16 @@
+characters = {
+    GER_erich_ludendorff = {
+		name = "Erich Ludendorff"
+		portraits = {
+			civilian = {
+				small = "gfx/interface/advisors/GER/r56_idea_GER_advisor_erich_ludendorff.dds"
+			}
+		}
+		advisor = {
+			slot = second_command
+			idea_token = GER_erich_ludendorff_idea
+			traits = { reactionary_marshal }
+            can_be_fired = no
+		}
+	}
+}

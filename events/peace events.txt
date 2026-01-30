@@ -1,0 +1,42 @@
+add_namespace = peacedeal
+
+country_event = {
+	id = peacedeal.1
+	desc = peacedeal.1.d
+	title = peacedeal.1.t
+	fire_only_once = yes
+	trigger = {
+		tag = GER
+		has_war_with = SOV
+		controls_state = 217
+		controls_state = 219
+		controls_state = 195
+		SOV = {
+			surrender_progress > 0.25
+		}
+	}
+	option = {
+		name = peacedeal.1.a
+		SOV = {
+			every_owned_state = {
+				limit = { 
+					OR = {
+						is_on_continent = europe
+						region = 150
+						region = 133
+						region = 134
+					}
+				}
+				transfer_state_to = GER
+			}
+		}
+		transfer_state = 250
+		transfer_state = 829
+		transfer_state = 236
+		transfer_state = 239
+		whitepeace = {
+			tag = SOV
+			message = tt_GerBeatSov
+		}
+	}
+}
