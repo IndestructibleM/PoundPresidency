@@ -1894,6 +1894,12 @@ ideas = {
 				supply_consumption_factor = -0.1
 				line_change_production_efficiency_factor = 0.10
 			}
+			on_add = {
+				set_rule = { can_join_factions_not_allowed_diplomacy = yes }
+			}
+			on_remove = {
+				set_rule = { can_join_factions_not_allowed_diplomacy = no }
+			}
 			allowed_to_remove = {
 				always = no
 			}

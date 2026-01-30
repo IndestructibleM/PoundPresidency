@@ -21,4 +21,6 @@
  ######## GOC #########
  PRODUCTION_MATERIALS_GRAIN:0 "Grain"
  GRAIN_desc:0 "Grain is the harvested seeds of cereal crops like wheat, rice, corn, barley, and oats, which are staple foods for much of the world's population. It is used primarily for human consumption, animal feed, and as a raw material in products like rations."
- 
+ Vanillaredux_decisions_cat:0 "Vanillaredux Options Decisions"
+ debug_add_econ_modifier: "Enable Economies of Scale"
+ econ_production_effect: "§CEconomies of Scale Modifier§!"
