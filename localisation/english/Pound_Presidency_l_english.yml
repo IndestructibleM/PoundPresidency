@@ -259,6 +259,7 @@ ministers_slots: "Government Ministers"
 economy_model: "Economic Model"
 government_type: "Government Type"
 draft: "Draft Law"
+second_command: "Second-in-Command"
 
 protectionism: "Trade Protectionism"
 
@@ -276,12 +277,14 @@ totalitarianism: "Totalitarianism"
 ###### STATES ###
 STATE_1047:0 "Eastern Rhineland"
 
-cost_ArmXP_100: "£army_experience  §Y100§!"
-cost_ArmXP_100_blocked: "£army_experience  §R100§!"
-cost_ArmXP_100_tooltip: "It costs £army_experience  §Y100§! to take the decision"
+cost_ArmyXP_100: "£army_experience  §Y100§!"
+cost_ArmyXP_100_blocked: "£army_experience  §R100§!"
+cost_ArmyXP_100_tooltip: "It costs £army_experience  §Y100§! to take the decision"
 cost_AirXP_100: "£air_experience  §Y100§!"
 cost_AirXP_100_blocked: "£air_experience  §R100§!"
 cost_AirXP_100_tooltip: "It costs £aai_experience  §Y100§! to take the decision"
 cost_NavXP_100: "£navy_experience  §Y100§!"
 cost_NavXP_100_blocked: "£navy_experience  §R100§!"
 cost_NavXP_100_tooltip: "It costs £navy_experience  §Y100§! to take the decision"
+
+reactionary_marshal: "Reactionary Marshal"
