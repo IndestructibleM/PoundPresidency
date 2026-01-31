@@ -7,6 +7,10 @@ Vanillaredux_decisions_cat = {
     allowed = { is_ai = no }
 }
 
+release_decisions_cat = {
+    visible = { has_global_flag = Release_Decisions_Enabled }
+}
+
 TPP_xp_to_mastery_cat = {
     icon = GFX_decision_category_military_operation
     priority = 5

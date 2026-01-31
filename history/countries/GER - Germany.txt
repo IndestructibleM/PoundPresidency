@@ -420,11 +420,6 @@ set_variable = { GER_total_control_over_domestic_affairs_focus_advisor = 0 } # T
 
 set_variable = { GER_industrialist_prevailed = 0 } #For allowing only one Industrialist advisor to work on the ME focus
 
-set_power_balance = {
-	id = GER_power_balance
-}
-
-
 # Starting Stats of various kinds
 set_research_slots = 4
 set_convoys = 200

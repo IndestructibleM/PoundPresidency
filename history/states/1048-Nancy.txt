@@ -1,0 +1,25 @@
+state={
+	id=1048
+	name="Nancy"
+	provinces={
+		521 3560 5291 11516 
+	}
+	resources = {
+		coal = 16
+	}
+	history={
+		owner = FRA
+		victory_points = {
+			11516 5 
+		}
+		buildings = {
+			infrastructure = 4
+			industrial_complex = 1
+		}
+		add_core_of = FRA
+	}
+	manpower=387500
+	buildings_max_level_factor=1
+	state_category=city
+	local_supplies=0
+}

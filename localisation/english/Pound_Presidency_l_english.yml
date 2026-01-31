@@ -286,5 +286,7 @@ cost_AirXP_100_tooltip: "It costs £aai_experience  §Y100§! to take the decisi
 cost_NavXP_100: "£navy_experience  §Y100§!"
 cost_NavXP_100_blocked: "£navy_experience  §R100§!"
 cost_NavXP_100_tooltip: "It costs £navy_experience  §Y100§! to take the decision"
+Release_decisions_1: "Release [FROM.GetNameDef] as a Puppet"
 
 reactionary_marshal: "Reactionary Marshal"
+

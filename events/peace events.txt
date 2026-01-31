@@ -12,7 +12,7 @@ country_event = {
 		controls_state = 219
 		controls_state = 195
 		SOV = {
-			surrender_progress > 0.25
+			surrender_progress > 0.3
 		}
 	}
 	option = {
@@ -38,5 +38,9 @@ country_event = {
 			tag = SOV
 			message = tt_GerBeatSov
 		}
+	}
+	option = {
+		name = peacedeal.1.b
+		add_political_power = 25
 	}
 }

@@ -174,3 +174,80 @@ TPP_xp_to_mastery_cat = {
 		}
 	}
 }
+
+release_decisions_cat = {
+	Release_decisions_1 = {
+		name = Release_decisions_1
+		target_array = occupied_countries
+		fire_only_once = yes
+		target_non_existing = yes
+		target_trigger = {
+			FROM = {
+				capital_scope = {
+					NOT = { is_core_of = ROOT } 
+					NOT = { is_claimed_by = ROOT } 
+
+				}
+			}
+		}
+		available = { 
+			has_war = no
+		}
+		ai_will_do = {
+			factor = 5
+		}
+		cost = 0
+		complete_effect = { 	
+			release_puppet_on_controlled = FROM 
+			FROM = {
+				every_core_state = {
+					limit = {
+						OR = {
+						is_core_of = ROOT
+						is_claimed_by = ROOT
+						}
+					}
+					transfer_state_to = ROOT
+				}
+			}
+		}
+	}
+}
+
+Vanillaredux_decisions_cat = {
+
+	debug_add_econ_modifier = {
+		allowed = { 
+			always = yes
+			is_ai = no
+		}
+		ai_will_do = {
+			base = 120
+		}
+		available = { is_ai = no }
+		fire_only_once = yes 
+		complete_effect = {
+			every_country = {
+			add_dynamic_modifier = {
+				modifier = econ_production_effect 
+			}
+			econ_production_setup = yes
+			}
+		}
+	}
+	
+	debug_enable_release_decisions = {
+		allowed = { 
+			always = yes
+			is_ai = no
+		}
+		ai_will_do = {
+			base = 120
+		}
+		available = { is_ai = no }
+		fire_only_once = yes 
+		complete_effect = {
+			set_global_flag = Release_Decisions_Enabled
+		}
+	}
+}
