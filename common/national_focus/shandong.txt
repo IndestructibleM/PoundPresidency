@@ -63,6 +63,11 @@ focus_tree = {
     			name = zhang_clique
 			}
 			country_event = { id = sndflav.1 days = 0 }
+			hidden_effect = { 
+				set_technology = {
+    			gw_artillery = 1
+				}
+			}
 		}
 	}
     focus = {
