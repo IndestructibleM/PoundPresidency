@@ -128,7 +128,7 @@ ideas = {
 			modifier = {
 				expected_consumer_goods_value = -0.05
 				political_power_cost = -0.10
-				power_balance_weekly = 0.01
+				power_balance_weekly = 0.005
 				command_power_gain_mult = 0.15
 			}
 		}
