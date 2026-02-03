@@ -110,7 +110,7 @@
  justice_and_might: "Great General of Justice and Might"
  
  
- 
+ tt_UnlockTakeoverPorts: "Decisions to annex the Treaty Port cities in the south will become available."
  tt_cracked: "Your troops are cracked, literally."
  tt_BeCareful: "§RBe careful what you wish for. China has been damned to 300 years of cruel, despotic leadership. The cycle will begin anew, warlord against warlord, in some centuries time, but for now, disorder reigns as the order over China.§!"
 
@@ -123,3 +123,32 @@
  sndflav.1.t: "Zhang Zongchang Returns from the Dead!"
  sndflav.1.d: "Against all expectations—and much to the disbelief of observers across China—Zhang Zongchang, the infamous “Dogmeat General,” has re-emerged to seize control of Shandong, despite having long been believed dead. \n\nRumors of Zhang’s demise had circulated for years, bolstered by reports of assassination, exile, or quiet execution. Yet today, those rumours have been shattered. Zhang appeared suddenly in Jinan, flanked by armed loyalists and mercenary troops, declaring himself the rightful ruler of Shandong once more. Local authorities collapsed almost immediately, either fleeing or pledging allegiance to the returning warlord. \n\nKnown for his brutality, eccentric behaviour, and utter disregard for convention, Zhang Zongchang once ruled Shandong as a personal fiefdom—financed through corruption, opium, and raw violence. His unexpected return has sent shockwaves through China’s already fragile political landscape, raising fears of renewed warlord conflict and unchecked chaos in the north. \n\nForeign observers are divided on how such a figure could reappear so suddenly. Some speculate foreign backing, others whisper of pure chance and opportunism. Whatever the truth, one thing is certain: a man the world thought buried has returned with a gun in his hand and a province at his feet."
  sndflav.1.a: "The Impossible!"
+ 
+ sndflav.2.t: "Another Emperor"
+ sndflav.2.d: "The telegram is brief. Almost vulgar in its confidence. Zhang Zongchang has proclaimed himself Emperor. \n\nPuyi reads it twice, then a third time, as if the words might rearrange themselves into something more dignified. They do not. The Dogmeat General, a man of brothels, barracks, and obscene poems, now wears a crown. \n\nThe room is silent. No ministers remain to advise him. No court waits on his reaction. Only the soft hum of a world that has long since moved on. He thinks of the ceremonies that once defined emperorship: rites rehearsed for centuries, every movement sanctified by tradition. Zhang has replaced them with gunfire and liquor. \n\nAnd yet… Zhang holds territory. Zhang commands armies. Zhang is obeyed. \n\nPuyi set the telegram down carefully. He wonders, not for the first time, whether the Mandate ever cared for bloodlines at all."
+ sndflav.2.a: "I am the royal ringmaster now."
+ 
+ sndflav.3.t: "The Mandate is Drunk Tonight"
+ sndflav.3.d: "Zhang Zongchang stands amid incense, gun oil, and empty liquor bottles. Courtiers—some borrowed, some coerced—murmur nervously as he declares that China has grown weak under ghosts and puppets. Heaven, he says, favors strength. And no man alive has spilled more blood in its name than he has. \n\nWith a slurred but thunderous voice, Zhang announces the birth of a new dynasty: the Zhang. \n\n“Emperors are just warlords who lived long enough.” \n\nNo ancient regalia remains. The crown is assembled hastily, with Qing jewels stolen from vaults, foreign gold melted down, and the steel rim taken from an artillery casing. The symbolism is clear: this dynasty is born of war, not honor."
+ sndflav.3.a: "Some officers cheer. Others stare in disbelief."
+ 
+ sndflav.4.t: "The Dog Replaces the Dragon"
+ sndflav.4.d: "With the cliques merged and Manchuria firmly within Japan’s sphere, Tokyo has made a decisive choice. Puyi, the restored emperor-figurehead of Manchuria, is no longer sufficient. Too cautious, too ceremonial, too easily ignored. \n\nInstead, Japan has thrown its weight behind Zhang Zongchang. \n\nThe meeting between the two men was brief and deeply uncomfortable. Puyi arrived in formal dress, stiff-backed and silent, speaking carefully of legitimacy and tradition. Zhang arrived late, reeking of alcohol and confidence, flanked by armed men who paid no heed to imperial etiquette. \n\nObservers noted that Zhang barely acknowledged Puyi at all. At one point, the Dogmeat General reportedly waved him aside, remarking that Japan needed a man who could hold territory, not a relic who needed permission to speak. \n\nBy the end of the meeting, the outcome was clear. Puyi would remain useful as a symbol, perhaps, but power now rested elsewhere. The Rising Sun had chosen the gun over the crown."
+ sndflav.4.a: ""The year of the peacock- I mean dog, begins now!""
+ 
+ snd.1.t: "A Warlord Against an Empire"
+ snd.1.d: "We are at war with the Japanese menace! While we will surely be on the back foot, our people are more determined and more united than ever to hurl the foreign invader out of Chin. We expect that we will not even need to make a direct landfall on the Japanese Home Islands - rather, we must drive Japan out of China and Korea and hold steadfast until they surrender!"
+ snd.1.a: "Wansui!"
+ 
+ snd.2.t: "Zhang Zongchang Gets High Again!"
+ snd.2.d: "It is no secret that the Dogmeat General is a hedonistic man who's always seeking his next high. Literally. \n\nToday, Zongchang whipped out his trusty pipe and smoked opium, getting high off 'that good shit' as he reportedly was heard saying. While Zhang sure loves his fix of crack, he's also kind of the warlord autocrat of our country, and this will have profound effects on our politics while our leader is blasted!"
+ snd.2.a: "Holy smokes"
+ 
+ snd.3.t: "The Dragon Swallows The Sun"
+ snd.3.d: "The Dogmeat General is victorious, and his armies have routed that of the Rising Sun! \n\nToday, the Japanese have seen reason and no longer wish to continue to wage their failed and pointless war against China. With their armies beaten out of our country and Korea, [JAP.GetLeader] has sent a personal delegation to Zhang Zongchang requesting peace. We now have the choice to accept their surrender - in which case we will be granted their mainland Asian holdings as well as Taiwan - or we can shut down their cry for mercy and snuff out Japan once and for all!" 
+ snd.3.a: "Accept the Japanese armistice. Wansui!"
+ snd.3.b: "No mercy for thug and bandit armies! Wait-"
+
+ SND_fight_for_treaty_ports: "The Battle to Return Macau"
+ SND_fight_for_treaty_ports3: "Infiltrate and Takeover Hong Kong"
+ SND_fight_for_treaty_ports2: "The Mission to Reclaim [728.GetName]"

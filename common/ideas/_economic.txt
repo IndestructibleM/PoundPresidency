@@ -786,6 +786,7 @@ ideas = {
 			available = {
 				has_completed_focus = SND_decree_on_drunkenness
 			}
+			picture = GFX_idea_warlordism
 
 			cost = 150
 			allowed_to_remove = {

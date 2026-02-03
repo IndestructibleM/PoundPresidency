@@ -529,12 +529,12 @@ SND_balance_of_power_cat = {
 	ai_will_do = {
        	factor = 90
     }
-	days_remove = 15
+	days_remove = 10
 	cost = 50
     complete_effect = {
 		add_timed_idea = {
 			idea = SND_zhang_zongchang_is_high
-			days = 15
+			days = 10
 		}
 	}
 	remove_effect = {
@@ -552,7 +552,7 @@ SND_balance_of_power_cat = {
 	ai_will_do = {
        	factor = 90
     }
-	days_remove = 30
+	days_remove = 10
 	cost = 50
     complete_effect = {
 		add_war_support = 0.05
