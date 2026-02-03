@@ -14,6 +14,41 @@ country_event = {
 }
 
 country_event = {
+	id = sndflav.2
+	title = sndflav.2.t
+	desc = sndflav.2.d
+	is_triggered_only = yes
+	option = {
+		name = sndflav.2.a
+	}
+}
+
+country_event = {
+	id = sndflav.3
+	title = sndflav.3.t
+	desc = sndflav.3.d
+	is_triggered_only = yes
+	option = {
+		name = sndflav.3.a
+	}
+}
+
+country_event = {
+	id = sndflav.4
+	title = sndflav.4.t
+	desc = sndflav.4.d
+	fire_only_once = yes
+	trigger = {
+		tag = SND
+		has_completed_focus = SND_merge_the_cliques
+	}
+	mean_time_to_happen = { days = 30 }
+	option = {
+		name = sndflav.4.a
+	}
+}
+
+country_event = {
 	id = snd.1
 	title = snd.1.t
 	desc = snd.1.d
@@ -101,8 +136,16 @@ country_event = {
 			puppet = KOR
 			transfer_state = 609
 			transfer_state = 745
+			transfer_state = 524
 			add_state_core = 609
 			add_state_core = 745
+			add_state_core = 524
 		}
+	}
+	option = {
+		name = snd.3.b 
+		add_command_power = 50
+		add_war_support = 0.05
+		add_political_power = -50
 	}
 }

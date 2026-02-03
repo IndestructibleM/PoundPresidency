@@ -787,7 +787,6 @@ ideas = {
 			available = {
 				has_completed_focus = SND_decree_on_drunkenness
 			}
-
 			cost = 150
 			allowed_to_remove = {
 				always = no

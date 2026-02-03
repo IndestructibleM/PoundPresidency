@@ -15,7 +15,7 @@ TPP_xp_to_mastery_cat = {
 		custom_cost_trigger = {
 			has_army_experience > 100
 		}
-		custom_cost_text = cost_ArmXP_100
+		custom_cost_text = cost_ArmyXP_100
 		complete_effect = { army_experience = -100 }
 		remove_effect = {
 			add_mastery = {
@@ -44,7 +44,7 @@ TPP_xp_to_mastery_cat = {
 		custom_cost_trigger = {
 			has_army_experience > 100
 		}
-		custom_cost_text = cost_ArmXP_100
+		custom_cost_text = cost_ArmyXP_100
 		complete_effect = { army_experience = -100 }
 		remove_effect = {
 			add_mastery = {
@@ -186,7 +186,6 @@ release_decisions_cat = {
 				capital_scope = {
 					NOT = { is_core_of = ROOT } 
 					NOT = { is_claimed_by = ROOT } 
-
 				}
 			}
 		}
@@ -194,7 +193,7 @@ release_decisions_cat = {
 			has_war = no
 		}
 		ai_will_do = {
-			factor = 5
+			factor = 20
 		}
 		cost = 0
 		complete_effect = { 	
@@ -208,6 +207,95 @@ release_decisions_cat = {
 						}
 					}
 					transfer_state_to = ROOT
+				}
+			}
+		}
+	}
+}
+operations = {
+	SND_fight_for_treaty_ports = {
+		icon = GFX_decision_generic_operation
+		allowed = { tag = SND }
+		visible = { has_completed_focus = SND_china_must_never_be_weak }
+		state_target = yes
+		targets = { 729 }
+		cost = 50
+		ai_will_do = {
+			base = 50
+		}
+		fire_only_once = yes
+		war_with_target_on_complete = yes
+		complete_effect = {
+			start_border_war = {
+				change_state_after_war = yes
+				attacker = {
+					state = 592
+					num_provinces = 2
+					modifier = 0.2
+					dig_in_factor = 0
+					terrain_factor = 0
+				}	
+				defender = {
+					state = FROM.FROM
+					num_provinces = 1
+				}
+			}
+		}
+	}
+	SND_fight_for_treaty_ports2 = {
+		icon = GFX_decision_generic_operation
+		allowed = { tag = SND }
+		visible = { has_completed_focus = SND_china_must_never_be_weak }
+		state_target = yes
+		targets = { 728 }
+		cost = 50
+		ai_will_do = {
+			base = 50
+		}
+		fire_only_once = yes
+		war_with_target_on_complete = yes
+		complete_effect = {
+			start_border_war = {
+				change_state_after_war = yes
+				attacker = {
+					state = 1033
+					num_provinces = 2
+					modifier = 0.2
+					dig_in_factor = 0
+					terrain_factor = 0
+				}	
+				defender = {
+					state = FROM.FROM
+					num_provinces = 1
+				}
+			}
+		}
+	}
+	SND_fight_for_treaty_ports3 = {
+		icon = GFX_decision_generic_operation
+		allowed = { tag = SND }
+		visible = { has_completed_focus = SND_china_must_never_be_weak }
+		state_target = yes
+		targets = { 326 }
+		cost = 50
+		ai_will_do = {
+			base = 50
+		}
+		fire_only_once = yes
+		war_with_target_on_complete = yes
+		complete_effect = {
+			start_border_war = {
+				change_state_after_war = yes
+				attacker = {
+					state = 593
+					num_provinces = 1
+					modifier = 0.2
+					dig_in_factor = 0
+					terrain_factor = 0
+				}	
+				defender = {
+					state = FROM.FROM
+					num_provinces = 1
 				}
 			}
 		}

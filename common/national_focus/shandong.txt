@@ -63,6 +63,11 @@ focus_tree = {
     			name = zhang_clique
 			}
 			country_event = { id = sndflav.1 days = 0 }
+			hidden_effect = { 
+				set_technology = {
+    			gw_artillery = 1
+				}
+			}
 		}
 	}
     focus = {
@@ -264,6 +269,7 @@ focus_tree = {
 		completion_reward = {
 			set_technology = {
     			basic_train = 1
+				railway_gun = 1
 			}
 			add_equipment_to_stockpile = {
             type = train_equipment
@@ -316,16 +322,11 @@ focus_tree = {
             uses = 2
             category = infantry_weapons
       		}
-			add_tech_bonus = {
-            bonus = 0.5
-            uses = 2
-            category = artillery
-      		}
 			capital_scope = {
 				add_extra_state_shared_building_slots = 1
 				add_building_construction = {
            		type = arms_factory 
-            	level = 1
+            	level = 2
            		instant_build = yes
             	}
 			}
@@ -402,13 +403,15 @@ focus_tree = {
 		continue_if_invalid = no
 		available_if_capitulated = no
 		completion_reward = {
-			set_technology = {
-    			gw_artillery = 1
-			}
 			add_equipment_to_stockpile = {
             type = artillery_equipment
             amount = 250
         	}
+			add_tech_bonus = {
+            bonus = 0.5
+            uses = 1
+            category = artillery
+      		}
 			add_stability = 0.1
 		}
 	}
@@ -511,9 +514,13 @@ focus_tree = {
 		completion_reward = {
 			add_research_slot = 1
 			add_popularity = { ideology = neutrality popularity = -0.20 }
+			add_equipment_to_stockpile = {
+				type = convoy
+				amount = 10
+			}
 			add_tech_bonus = {
-            bonus = 0.35
-            uses = 2
+            bonus = 0.5
+            uses = 1
             category = electronics
       		}
 			air_experience = 35
@@ -903,7 +910,7 @@ focus_tree = {
 		completion_reward = {
 			remove_ideas = CHI_ineffective_bureaucracy_warlord
 			add_political_power = 60
-			add_stability = 0.08
+			add_stability = 0.05
 		}
 	}
     
@@ -999,6 +1006,11 @@ focus_tree = {
 		completion_reward = {
 			add_ideas = state_capitalism
 			add_ideas = stratocracy
+			add_tech_bonus = {
+            bonus = 0.35
+            uses = 3
+            category = electronics
+      		}
 		}
 	}
 	
@@ -1029,6 +1041,11 @@ focus_tree = {
     			value = 0.1
 			}
 			army_experience = 50
+			add_tech_bonus = {
+				bonus = 0.5
+				uses = 1
+				category = infantry_weapons
+      		}
 		}
 	}
 	
@@ -1199,11 +1216,6 @@ focus_tree = {
             category = motorized_equipment
       		}
 			add_tech_bonus = {
-            bonus = 1
-            uses = 1
-            category = cat_mechanized_equipment
-      		}
-			add_tech_bonus = {
             bonus = 0.5
             uses = 2
             category = cat_armored_cars
@@ -1211,7 +1223,7 @@ focus_tree = {
 			add_equipment_bonus = {
 				bonus = {
                 armored_car_equipment = {
-			        build_cost_ic  = -0.20
+			        build_cost_ic  = -0.15
                 }
 				}
       		}
@@ -1469,11 +1481,16 @@ focus_tree = {
 			add_equipment_bonus = {
                 bonus = {
                 artillery_equipment = {
-                    soft_attack = 0.10
+                    soft_attack = 0.08
 					breakthrough = 0.05
                 }
                 }
             }
+			add_tech_bonus = {
+				bonus = 0.5
+				uses = 1
+				category = artillery
+      		}
 		}
 	}
 	
@@ -1873,7 +1890,8 @@ focus_tree = {
 			add_equipment_bonus = {
                 bonus = {
                 infantry_equipment = {
-                    soft_attack = 0.15
+                    soft_attack = 0.1
+					ap_attack = 0.1
                 }
                 }
             }
@@ -1972,6 +1990,8 @@ focus_tree = {
 				days = 10
 			}
 			add_ideas = warlord_economy
+			country_event = { id = sndflav.3 days = 0 }
+	
 			custom_effect_tooltip = tt_BeCareful
 		}
 	}
@@ -2090,6 +2110,7 @@ focus_tree = {
 					default_morale = 0.2
   				}
 			}
+			custom_effect_tooltip = tt_UnlockTakeoverPorts
 		}
 	}
 
@@ -2118,6 +2139,7 @@ focus_tree = {
 		continue_if_invalid = no
 		available_if_capitulated = no
 		completion_reward = {
+			country_event = { id = sndflav.2 days = 0 }
 			set_cosmetic_tag = SND_empire
 			add_stability = 0.1
 			add_war_support = 0.1

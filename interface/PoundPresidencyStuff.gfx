@@ -143,6 +143,11 @@ spriteTypes = {
 	}
 
 	spriteType = {
+		name = "GFX_idea_warlord_economy"
+		texturefile = "gfx/interface/ideas/idea_totaler_krieg_economy.dds"
+	}
+	
+	spriteType = {
 		name = "GFX_idea_SND_national_strength"
 		texturefile = "gfx/interface/ideas/SND_national_strength.dds"
 	}
@@ -185,10 +190,6 @@ spriteTypes = {
 	SpriteType = {
 		name = "GFX_idea_decentralized_planning"
 		texturefile = "gfx/interface/ideas/laws/decentralized_planning.png"
-	}
-	SpriteType = {
-		name = "GFX_idea_state_capitalism"
-		texturefile = "gfx/interface/ideas/laws/state_capitalism.png"
 	}
 	
 	SpriteType = {
