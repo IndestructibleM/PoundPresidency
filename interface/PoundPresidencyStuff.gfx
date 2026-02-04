@@ -191,7 +191,6 @@ spriteTypes = {
 		name = "GFX_idea_decentralized_planning"
 		texturefile = "gfx/interface/ideas/laws/decentralized_planning.png"
 	}
-	
 	SpriteType = {
 		name = "GFX_ideology_reactionary_group"
 		texturefile = "gfx/interface/ideologies/reactionary_group.png"
