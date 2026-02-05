@@ -188,9 +188,18 @@ release_decisions_cat = {
 					NOT = { is_claimed_by = ROOT } 
 				}
 			}
+			core_resistance = {
+				occupied_country_tag = FROM
+				value > 10
+			}
+			core_compliance = {
+				occupied_country_tag = FROM
+				value > 10
+			}
 		}
 		available = { 
 			has_war = no
+			is_subject = no
 		}
 		ai_will_do = {
 			factor = 20
@@ -336,6 +345,21 @@ Vanillaredux_decisions_cat = {
 		fire_only_once = yes 
 		complete_effect = {
 			set_global_flag = Release_Decisions_Enabled
+		}
+	}
+	
+	debug_enable_scripted_peace = {
+		allowed = { 
+			always = yes
+			is_ai = no
+		}
+		ai_will_do = {
+			base = 120
+		}
+		available = { is_ai = no }
+		fire_only_once = yes 
+		complete_effect = {
+			set_global_flag = Scripted_Peace_Enabled
 		}
 	}
 }

@@ -4,7 +4,7 @@ SND_balance_of_power_cat = {
 
 
 Vanillaredux_decisions_cat = {
-    allowed = { is_ai = no }
+    visible = { is_ai = no }
 }
 
 release_decisions_cat = {
