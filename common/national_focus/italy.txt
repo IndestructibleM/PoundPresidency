@@ -23143,7 +23143,7 @@ focus_tree = {
 	focus = {
 		id = ITA_the_engines_awaken
 		icon = GFX_focus_generic_industry_3
-		x = 0
+		x = 3
 		y = 2
 		relative_position_id = ITA_supremacy_in_the_skies
 		available = {
@@ -23473,6 +23473,269 @@ focus_tree = {
 		x = 0
 		y = 1
 		relative_position_id = ITA_the_end_of_decadence
+		available = {
+		}
+
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = ITA_mechanized_glory
+		icon = GFX_focus_generic_mechanized
+		prerequisite = { focus = ITA_war_is_the_worlds_hygiene }
+		x = -3
+		y = 1
+		relative_position_id = ITA_war_is_the_worlds_hygiene
+		available = {
+		}
+
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {
+		id = ITA_armored_legions_of_tommorow
+		icon = GFX_focus_generic_tank_air_support
+		prerequisite = { focus = ITA_war_is_the_worlds_hygiene }
+		x = 0
+		y = 1
+		relative_position_id = ITA_war_is_the_worlds_hygiene
+		available = {
+		}
+
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {
+		id = ITA_steel_storm_doctrine
+		icon = GFX_focus_generic_tank_air_support
+		prerequisite = { focus = ITA_war_is_the_worlds_hygiene }
+		x = 3
+		y = 1
+		relative_position_id = ITA_war_is_the_worlds_hygiene
+		available = {
+		}
+
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {
+		id = ITA_the_cult_of_the_assault
+		icon = GFX_focus_ITA_strengthen_ascari_corps
+		prerequisite = { focus = ITA_mechanized_glory }
+		prerequisite = { focus = ITA_armored_legions_of_tommorow }
+		x = 1.5
+		y = 1
+		relative_position_id = ITA_mechanized_glory
+		available = {
+		}
+
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = ITA_violence_as_national_renewal
+		icon = GFX_focus_generic_industry_3
+		prerequisite = { focus = ITA_armored_legions_of_tommorow }
+		prerequisite = { focus = ITA_steel_storm_doctrine }
+		x = 1.5
+		y = 1
+		relative_position_id = ITA_armored_legions_of_tommorow
+		available = {
+		}
+
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = ITA_beauty_in_destruction
+		icon = GFX_focus_generic_railway_gun
+		prerequisite = { focus = ITA_the_cult_of_the_assault }
+		prerequisite = { focus = ITA_violence_as_national_renewal }
+		x = 1.5
+		y = 1
+		relative_position_id = ITA_the_cult_of_the_assault
+		available = {
+		}
+
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = ITA_the_world_must_modernize
+		icon = GFX_focus_ITA_strengthen_ascari_corps
+		prerequisite = { focus = ITA_beauty_in_destruction }
+		x = -1.5
+		y = 1
+		relative_position_id = ITA_beauty_in_destruction
+		available = {
+		}
+
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = ITA_smash_the_old_empires
+		icon = GFX_focus_generic_industry_3
+		prerequisite = { focus = ITA_beauty_in_destruction }
+		x = 1.5
+		y = 1
+		relative_position_id = ITA_beauty_in_destruction
+		available = {
+		}
+
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = ITA_no_borders_can_contain_speed
+		icon = GFX_focus_generic_mechanized
+		prerequisite = { focus = ITA_the_world_must_modernize }
+		x = -1.5
+		y = 1
+		relative_position_id = ITA_the_world_must_modernize
+		available = {
+		}
+
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {
+		id = ITA_a_new_roman_dynasty
+		icon = GFX_focus_generic_spread_fascism
+		prerequisite = { focus = ITA_the_world_must_modernize }
+		prerequisite = { focus = ITA_smash_the_old_empires}
+		x = 1.5
+		y = 1
+		relative_position_id = ITA_the_world_must_modernize
+		available = {
+		}
+
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {
+		id = ITA_force_history_to_move
+		icon = GFX_focus_generic_tank_air_support
+		prerequisite = { focus = ITA_smash_the_old_empires }
+		x = 1.5
+		y = 1
+		relative_position_id = ITA_smash_the_old_empires
+		available = {
+		}
+
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {
+		id = ITA_the_futurist_order
+		icon = GFX_focus_generic_spread_fascism
+		prerequisite = { focus = ITA_no_borders_can_contain_speed }
+		prerequisite = { focus = ITA_a_new_roman_dynasty }
+		prerequisite = { focus = ITA_force_history_to_move}
+		x = 0
+		y = 1
+		relative_position_id = ITA_a_new_roman_dynasty
+		available = {
+		}
+
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = ITA_permanent_revolution_of_motion
+		icon = GFX_focus_generic_steel
+		prerequisite = { focus = ITA_the_futurist_order }
+		x = 0
+		y = 1
+		relative_position_id = ITA_the_futurist_order
+		available = {
+		}
+
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = ITA_history_is_obsolete
+		icon = GFX_focus_generic_industry_3
+		prerequisite = { focus = ITA_permanent_revolution_of_motion }
+		x = -1
+		y = 1
+		relative_position_id = ITA_permanent_revolution_of_motion
+		available = {
+		}
+
+		search_filters = {FOCUS_FILTER_POLITICAL FOCUS_FILTER_INDUSTRY}
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = ITA_the_world_accelerates_or_dies
+		icon = GFX_focus_generic_tankette
+		prerequisite = { focus = ITA_permanent_revolution_of_motion }
+		x = 1
+		y = 1
+		relative_position_id = ITA_permanent_revolution_of_motion
+		available = {
+		}
+
+		search_filters = {FOCUS_FILTER_POLITICAL FOCUS_FILTER_INDUSTRY}
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = ITA_the_final_break_with_the_past
+		icon = GFX_focus_generic_industry_2
+		prerequisite = { focus = ITA_history_is_obsolete }
+		prerequisite = { focus = ITA_the_world_accelerates_or_dies }
+		x = 1
+		y = 1
+		relative_position_id = ITA_history_is_obsolete
 		available = {
 		}
 
