@@ -86,7 +86,7 @@ FRA_foriegn_policy = {
 		allowed = { tag = FRA }
 		cost = 30
 		days_remove = 10
-		targets = { ITA POL SPA IRE GRE ROM }
+		targets = { ITA POL SPA IRE ROM }
 		ai_will_do = {
         	factor = 80
     	}
@@ -207,7 +207,7 @@ FRA_balance_of_power_category = {
 	
 	FRA_resolve_the_party_crisis = {
 		allowed = { tag = FRA }
-		days_mission_timeout = 350
+		days_mission_timeout = 300
 		fire_only_once = yes
 		activation = {
 			has_completed_focus = FRA_viva_la_revolution_nationale
