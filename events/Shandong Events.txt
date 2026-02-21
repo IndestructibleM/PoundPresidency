@@ -122,7 +122,7 @@ country_event = {
 			}
 		}
 	}
-	mean_time_to_happen = { days = 100 }
+	mean_time_to_happen = { days = 120 }
 	option = {
 		name = snd.3.a
 		JAP = { 
