@@ -6,4 +6,13 @@
  ROS_white:0 "Russian State"
  ROS_white_ADJ:0 "Russian"
  ROS_white_DEF:0 "the Russian State"
+ RVA: "Second Russian Volunteer Army"
+ UKR_upr: "Ukrainian People's Republic"
+ SOV_communism_1:1 "Union of Soviet Socialist Republics"
  
+ 
+ UKR_GER_reactionary_subject: "Ukrainian State"
+ BLR_GER_reactionary_subject: "Belarusian Central Rada"
+ LIT_GER_reactionary_subject: "Kingdom of Lithuania"
+ GER_HRE_reactionary: "Heiliges Römisches Reich Deutscher Nation"
+ GER_reactionary_party: "DNVP"

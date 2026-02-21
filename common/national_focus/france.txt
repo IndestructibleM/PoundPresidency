@@ -9644,8 +9644,8 @@
             add_stability = 0.05
             add_ideas = autarkic_economy
 			add_resource = {
-   				type = coal
-    			amount = 35
+   				type = grain
+    			amount = 15
     			state = 18
 			}
 		}
@@ -10236,6 +10236,11 @@
 		cost = 5
         completion_reward = {
             add_ideas = FRA_techno_totalism
+			add_tech_bonus = {
+			bonus = 0.5
+			uses = 2
+			category = industry
+			}
 		}
     }
     focus = {
@@ -10291,6 +10296,7 @@
                 add_popularity = { ideology = fascism popularity = 1 }
             }
 			add_ideas = partystate
+			kill_character = FRA_joseph_darnand
 		}
     }
     focus = {
@@ -10306,6 +10312,12 @@
 		cost = 5
         completion_reward = {        
             add_ideas = FRA_Military_communism
+			add_tech_bonus = {
+			bonus = 1
+			uses = 1
+			category = engineer
+			}
+			upgrade_draft_law = yes
 		}
     }
     focus = {
