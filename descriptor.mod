@@ -1,4 +1,4 @@
-version="1.2.1"
+version="1.3"
 tags={
 	"Alternative History"
 	"National Focuses"
@@ -8,5 +8,5 @@ tags={
 }
 name="The Pound Presidency"
 picture="thumbnail.png"
-supported_version="1.17.3.0"
+supported_version="1.17.4.0"
 remote_file_id="3464682403"
