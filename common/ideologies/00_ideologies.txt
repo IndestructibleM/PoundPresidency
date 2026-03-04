@@ -29,6 +29,8 @@ ideologies = {
 			toteur = { can_be_randomly_selected = no }
 
 			neosoc = { can_be_randomly_selected = no }
+			
+			futurism = { can_be_randomly_selected = no }
 
 		}
 

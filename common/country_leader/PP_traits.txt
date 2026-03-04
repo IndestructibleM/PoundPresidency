@@ -146,4 +146,36 @@ leader_traits = {
 		political_power_factor = -0.15
 	}
 	
+	###
+
+	dem_sic_trait = {
+		random = no
+		democratic_drift = 0.03
+		stability_factor = 0.05
+		political_power_factor = 0.05
+	}
+
+	auth_sic_trait = {
+		random = no
+		neutrality_drift = 0.02
+		reactionary_drift = 0.02
+		stability_factor = 0.05
+		political_power_factor = 0.05
+	}
+
+	com_sic_trait = {
+		random = no
+		communism_drift = 0.02
+		socialist_drift = 0.02
+		stability_factor = 0.05
+		political_power_factor = 0.05
+	}
+
+	fash_sic_trait = {
+		random = no
+		fascism_drift = 0.03
+		stability_factor = 0.05
+		political_power_factor = 0.05
+	}
+	
 }

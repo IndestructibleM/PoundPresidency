@@ -8202,7 +8202,7 @@ focus_tree = {
 	### POUND SUCCESSORS 
 	focus = {
 		id = USA_fall_of_prometheus
-		x = 13
+		x = 20
 		y = 11
 		offset = {
 			x = 26
@@ -8238,7 +8238,7 @@ focus_tree = {
 	# Yockey
 	focus = {
 		id = USA_prophecy_of_imperium
-		x = 6
+		x = 3
 		y = 1
 		
 		cost = 5
@@ -8543,7 +8543,7 @@ focus_tree = {
 	## George Christians
 	focus = {
 		id = USA_away_from_gold
-		x = -6
+		x = -3
 		y = 1
 		
 		cost = 5
@@ -8867,23 +8867,20 @@ focus_tree = {
 		}
 	}
 
-	## Scott
+	### Scott Tree ###
 	focus = {
 		id = USA_revolt_of_engineers
-		x = 0
-		y = 1
+		x = 8
+		y = 10
 		
 		cost = 5
 		ai_will_do = {
 			factor = 10
 		}
-		relative_position_id = USA_fall_of_prometheus
-		prerequisite = { focus = USA_fall_of_prometheus }
 		icon = GFX_goal_generic_fortify_city
 		available = {
 			has_government = neutrality
 			has_country_leader = { ruling_only = yes character = USA_howard_scott }
-			has_country_flag = PoundDead
 		}
 
 		cancel_if_invalid = yes
@@ -8912,7 +8909,32 @@ focus_tree = {
 		available = {
 			has_government = neutrality
 			has_country_leader = { ruling_only = yes character = USA_howard_scott }
-			has_country_flag = PoundDead
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		completion_reward = {
+			remove_ideas = USA_national_syndicalism
+			remove_ideas = USA_national_syndicalism2
+			add_ideas = USA_technocratic_economy
+		}
+	}
+	focus = {
+		id = USA_scientific_corporatism
+		x = -4
+		y = 2
+		
+		cost = 5
+		ai_will_do = {
+			factor = 10
+		}
+		relative_position_id = USA_revolt_of_engineers
+		prerequisite = { focus = USA_geothermal_evolution }
+		icon = GFX_focus_GER_prioritize_the_four_year_plan
+		available = {
+			has_government = neutrality
+			has_country_leader = { ruling_only = yes character = USA_howard_scott }
 		}
 
 		cancel_if_invalid = yes
@@ -8939,7 +8961,6 @@ focus_tree = {
 		available = {
 			has_government = neutrality
 			has_country_leader = { ruling_only = yes character = USA_howard_scott }
-			has_country_flag = PoundDead
 		}
 
 		cancel_if_invalid = yes
@@ -8968,7 +8989,61 @@ focus_tree = {
 		available = {
 			has_government = neutrality
 			has_country_leader = { ruling_only = yes character = USA_howard_scott }
-			has_country_flag = PoundDead
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = USA_technocratic_economy
+				add_idea = USA_technocratic_economy2
+			}
+		}
+	}
+	focus = {
+		id = USA_rationalize_the_production
+		x = -3
+		y = 3
+		
+		cost = 5
+		ai_will_do = {
+			factor = 10
+		}
+		relative_position_id = USA_revolt_of_engineers
+		prerequisite = { focus = USA_scientific_corporatism }
+		prerequisite = { focus = USA_energy_credit_system }
+		icon = GFX_focus_GER_customs_union
+		available = {
+			has_government = neutrality
+			has_country_leader = { ruling_only = yes character = USA_howard_scott }
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = USA_technocratic_economy
+				add_idea = USA_technocratic_economy2
+			}
+		}
+	}
+	focus = {
+		id = USA_a_new_work_week
+		x = -3
+		y = 4
+		
+		cost = 5
+		ai_will_do = {
+			factor = 10
+		}
+		relative_position_id = USA_revolt_of_engineers
+		prerequisite = { focus = USA_rationalize_the_production }
+		icon = GFX_focus_GER_customs_union
+		available = {
+			has_government = neutrality
+			has_country_leader = { ruling_only = yes character = USA_howard_scott }
 		}
 
 		cancel_if_invalid = yes
@@ -8997,7 +9072,6 @@ focus_tree = {
 		available = {
 			has_government = neutrality
 			has_country_leader = { ruling_only = yes character = USA_howard_scott }
-			has_country_flag = PoundDead
 		}
 
 		cancel_if_invalid = yes
@@ -9013,7 +9087,7 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = USA_sober_up_and_study
+		id = USA_reinstate_prohibition
 		x = 2
 		y = 2
 		
@@ -9028,7 +9102,6 @@ focus_tree = {
 		available = {
 			has_government = neutrality
 			has_country_leader = { ruling_only = yes character = USA_howard_scott }
-			has_country_flag = PoundDead
 		}
 
 		cancel_if_invalid = yes
@@ -9056,6 +9129,97 @@ focus_tree = {
 		}
 	}
 	focus = {
+		id = USA_tech_inc_mass_party
+		x = 4
+		y = 2
+		
+		cost = 5
+		ai_will_do = {
+			factor = 10
+		}
+		relative_position_id = USA_revolt_of_engineers
+		prerequisite = { focus = USA_geothermal_evolution }
+		prerequisite = { focus = USA_dictatorship_of_logos }
+		icon = GFX_focus_generic_treaty
+		available = {
+			has_government = neutrality
+			has_country_leader = { ruling_only = yes character = USA_howard_scott }
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		completion_reward = {
+			army_experience = 75
+			air_experience = 75
+			navy_experience = 75
+			add_doctrine_cost_reduction = {
+				cost_reduction = 0.5
+				uses = 2
+				category = land_doctrine
+			}
+			add_doctrine_cost_reduction = {
+				cost_reduction = 0.5
+				uses = 2
+				category = naval_doctrine
+			}
+			add_doctrine_cost_reduction = {
+				cost_reduction = 0.5
+				uses = 2
+				category = air_doctrine
+			}
+		}
+	}
+	focus = {
+		id = USA_study_guide_in_every_hand
+		x = 3
+		y = 3
+		
+		cost = 5
+		ai_will_do = {
+			factor = 10
+		}
+		relative_position_id = USA_revolt_of_engineers
+		prerequisite = { focus = USA_reinstate_prohibition }
+		prerequisite = { focus = USA_tech_inc_mass_party }
+		icon = GFX_focus_generic_treaty
+		available = {
+			has_government = neutrality
+			has_country_leader = { ruling_only = yes character = USA_howard_scott }
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		completion_reward = {
+			
+		}
+	}
+	focus = {
+		id = USA_continental_director_ascendent
+		x = 3
+		y = 4
+		
+		cost = 5
+		ai_will_do = {
+			factor = 10
+		}
+		relative_position_id = USA_revolt_of_engineers
+		prerequisite = { focus = USA_study_guide_in_every_hand }
+		icon = GFX_focus_generic_treaty
+		available = {
+			has_government = neutrality
+			has_country_leader = { ruling_only = yes character = USA_howard_scott }
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		completion_reward = {
+			
+		}
+	}
+	focus = {
 		id = USA_wonders_of_mankind
 		x = -1
 		y = 3
@@ -9072,7 +9236,6 @@ focus_tree = {
 		available = {
 			has_government = neutrality
 			has_country_leader = { ruling_only = yes character = USA_howard_scott }
-			has_country_flag = PoundDead
 		}
 
 		cancel_if_invalid = yes
@@ -9107,12 +9270,11 @@ focus_tree = {
 		relative_position_id = USA_revolt_of_engineers
 		prerequisite = { focus = USA_energy_credit_system }
 		prerequisite = { focus = USA_hierarchical_meritocracy }
-		prerequisite = { focus = USA_sober_up_and_study }
+		prerequisite = { focus = USA_reinstate_prohibition }
 		icon = GFX_focus_research2
 		available = {
 			has_government = neutrality
 			has_country_leader = { ruling_only = yes character = USA_howard_scott }
-			has_country_flag = PoundDead
 		}
 
 		cancel_if_invalid = yes
@@ -9139,7 +9301,6 @@ focus_tree = {
 		available = {
 			has_government = neutrality
 			has_country_leader = { ruling_only = yes character = USA_howard_scott }
-			has_country_flag = PoundDead
 		}
 
 		cancel_if_invalid = yes
@@ -9175,6 +9336,128 @@ focus_tree = {
    					}
 				}			
 			}
+		}
+	}
+	focus = {
+		id = USA_request_north_american_dominionship
+		x = -1
+		y = 5
+		
+		cost = 5
+		ai_will_do = {
+			factor = 10
+		}
+		relative_position_id = USA_revolt_of_engineers
+		prerequisite = { focus = USA_panama_to_pole }
+		icon = GFX_focus_generic_diplomatic_treaty
+		mutually_exclusive = { focus = USA_kick_out_redcoats }
+		available = {
+			has_government = neutrality
+			has_country_leader = { ruling_only = yes character = USA_howard_scott }
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		completion_reward = {
+		
+		}
+	}
+	focus = {
+		id = USA_kick_out_redcoats
+		x = 1
+		y = 5
+		
+		cost = 5
+		ai_will_do = {
+			factor = 10
+		}
+		relative_position_id = USA_revolt_of_engineers
+		prerequisite = { focus = USA_panama_to_pole }
+		icon = GFX_focus_generic_diplomatic_treaty
+		mutually_exclusive = { focus = USA_request_north_american_dominionship }
+		available = {
+			has_government = neutrality
+			has_country_leader = { ruling_only = yes character = USA_howard_scott }
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		completion_reward = {
+			
+		}
+	}
+	focus = {
+		id = USA_neutralize_mexican_chaos
+		x = 0
+		y = 6
+		
+		cost = 5
+		ai_will_do = {
+			factor = 10
+		}
+		relative_position_id = USA_revolt_of_engineers
+		prerequisite = { focus = USA_panama_to_pole }
+		icon = GFX_focus_generic_diplomatic_treaty
+		available = {
+			has_government = neutrality
+			has_country_leader = { ruling_only = yes character = USA_howard_scott }
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		completion_reward = {
+			
+		}
+	}
+	focus = {
+		id = USA_the_banana_wars
+		x = -1
+		y = 7
+		
+		cost = 5
+		ai_will_do = {
+			factor = 10
+		}
+		relative_position_id = USA_revolt_of_engineers
+		prerequisite = { focus = USA_neutralize_mexican_chaos }
+		icon = GFX_focus_generic_diplomatic_treaty
+		available = {
+			has_government = neutrality
+			has_country_leader = { ruling_only = yes character = USA_howard_scott }
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		completion_reward = {
+			
+		}
+	}
+	focus = {
+		id = USA_demand_cuban_oversight
+		x = 1
+		y = 7
+		
+		cost = 5
+		ai_will_do = {
+			factor = 10
+		}
+		relative_position_id = USA_revolt_of_engineers
+		prerequisite = { focus = USA_neutralize_mexican_chaos }
+		icon = GFX_focus_generic_diplomatic_treaty
+		available = {
+			has_government = neutrality
+			has_country_leader = { ruling_only = yes character = USA_howard_scott }
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		completion_reward = {
+			
 		}
 	}
 }

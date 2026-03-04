@@ -1,0 +1,68 @@
+# For minor countries where advisors are not defined
+# Generate them from a generic template
+### Thank you KR4 Team -Indy
+
+# Generic Political Advisors
+every_possible_country = {
+	### this file doesn't accept scripted effects - make sure that the below are exactly the same as in generate_generic_sics
+	generate_character = {
+		token_base = empowered_legislative # token will be TAG_token_base
+		name = "Empowered Legislature"
+		advisor = {
+			slot = second_command
+			idea_token = Generic_dem_sic
+			traits = { dem_sic_trait }
+			cost = 50
+			can_be_fired = no
+			available = { OR = { has_government = democratic } }
+		}
+		portraits = {
+			army = { small = GFX_idea_generic_empowered_legislature }
+		}
+	}
+	generate_character = {
+		token_base = supreme_soviet # token will be TAG_token_base
+		name = "Supreme Soviet"
+		advisor = {
+			slot = second_command
+			idea_token = Generic_com_sic
+			traits = { com_sic_trait }
+			cost = 50
+			available = { OR = { has_government = socialist has_government = communism } }
+			can_be_fired = no
+		}
+		portraits = {
+			army = { small = GFX_idea_generic_empowered_executive }
+		}
+	}
+	generate_character = {
+		token_base = empowered_executive # token will be TAG_token_base
+		name = "Empowered Executive"
+		advisor = {
+			slot = second_command
+			idea_token = Generic_auth_sic
+			traits = { auth_sic_trait }
+			cost = 50
+			available = { OR = { has_government = neutrality has_government = reactionary } }
+			can_be_fired = no
+		}
+		portraits = {
+			army = { small = GFX_idea_generic_empowered_trade_unions }
+		}
+	}
+	generate_character = {
+		token_base = leaer_principle # token will be TAG_token_base
+		name = "Leader Principle"
+		advisor = {
+			slot = second_command
+			idea_token = Generic_fash_sic
+			traits = { fash_sic_trait }
+			cost = 50
+			can_be_fired = no
+			available = { OR = { has_government = fascism } }
+		}
+		portraits = {
+			army = { small = GFX_idea_generic_empowered_trade_unions }
+		}
+	}
+}

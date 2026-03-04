@@ -462,14 +462,14 @@ PAK = {
 	color = rgb { 0 102 0  }
 	color_ui = rgb { 0 102 0  }
 }
-#WGR = {
-#    color = rgb { 195 236 230 } # The colors are set to be more are less what we are used to
-#    color_ui = rgb { 225 255 255 }
-#}
-#DDR = {
-#    color = rgb { 120 150 80 }
-#    color_ui = rgb { 150 180 120 }
-#}
+WGR = {
+    color = rgb { 110 110 125 } # The colors are set to be more are less what we are used to
+    color_ui = rgb { 110 110 125 }
+}
+DDR = {
+    color = rgb { 120 150 80 }
+    color_ui = rgb { 150 180 120 }
+}
 KOR = {
 	color = rgb { 255  240  195 }
 	color_ui = rgb { 255 248 229 }	
@@ -683,8 +683,8 @@ D50 = {
 	color_ui = rgb { 255 138 61 }
 }
 BAY = {
-	color = rgb { 233  231  246 }
-	color_ui = rgb { 233  231  246 }
+	color = rgb { 85 85 85 }
+	color_ui = rgb { 85 85 85}
 }
 MEK = {
 	color = rgb { 186 245 86 }

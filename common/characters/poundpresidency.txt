@@ -87,8 +87,69 @@ characters = {
 		}
 	}
 	
-	### ADVISORS ####
+	### ADVISORS ###
+    ## Generic SIC ##
 
+	Generic_dem_SIC = {
+		name = "Empowered Legislature"
+		portraits = {
+			civilian = {
+				small = "gfx/interface/advisors/Generic_SIC.png"
+			}
+		}
+		advisor = {
+			slot = second_command
+			idea_token = Generic_dem_sic_token
+			available = { has_government = democratic }
+			traits = { dem_sic_trait }
+		}
+	}
+	
+	Generic_auth_SIC = {
+		name = "Empowered Executive"
+		portraits = {
+			civilian = {
+				small = "gfx/interface/advisors/Generic_SIC.png"
+			}
+		}
+		advisor = {
+			slot = second_command
+			idea_token = Generic_auth_sic_token
+			available = { OR = { has_government = neutrality has_government = reactionary } }
+			traits = { auth_sic_trait }
+		}
+	}
+	
+	Generic_com_SIC = {
+		name = "Supreme Soviet"
+		portraits = {
+			civilian = {
+				small = "gfx/interface/advisors/Generic_SIC.png"
+			}
+		}
+		advisor = {
+			slot = second_command
+			idea_token = Generic_com_sic_token
+			available = { OR = { has_government = communism has_government = socialist } }
+			traits = { com_sic_trait }
+		}
+	}
+	
+	Generic_fash_SIC = {
+		name = "Leader Principle"
+		portraits = {
+			civilian = {
+				small = "gfx/interface/advisors/Generic_SIC.png"
+			}
+		}
+		advisor = {
+			slot = second_command
+			idea_token = Generic_fash_sic_token
+			available = { OR = { has_government = fascism } }
+			traits = { fash_sic_trait }
+		}
+	}
+	
 	USA_willis_carto = {
 		name = "Willis Carto"
 		portraits = {
@@ -181,6 +242,33 @@ characters = {
 			idea_token = USA_francis_yockey_idea
 			visible = {
 				has_completed_focus = USA_2nd_american_revolution
+			}
+			traits = { youth_vanguard }
+		}
+	}
+
+	#### 
+	#### ITALY
+	####
+
+	ITA_filippo_marinetti = {
+		name = "Filippo T. Marinetti"
+		portraits = {
+			civilian = {
+				small = "gfx/interface/advisors/ITA/ITA_filippo_marinetti.png"
+			}
+			civilian = {
+				large = "gfx/leaders/ITA/Portrait_filippo_marinetti.png"
+			}
+		}
+		country_leader = {
+			ideology = futurism
+		}
+		advisor = {
+			slot = second_command
+			idea_token = ITA_filippo_marinetti_SiC
+			available = {
+				has_government = fascism
 			}
 			traits = { youth_vanguard }
 		}
