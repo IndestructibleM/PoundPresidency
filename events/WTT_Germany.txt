@@ -31,15 +31,8 @@ country_event = {
 					set_politics = {
 						ruling_party = democratic
 					}
-				}
-				BAY = {
-					transfer_state = 53
-					transfer_state = 52
-					add_state_core = 53
-					add_state_core = 52
-					set_politics = {
-						ruling_party = fascism
-					}
+					add_ideas = extensive_conscription
+					add_political_power = 250
 				}
 				RHI = {
 					transfer_state = 51
@@ -49,12 +42,16 @@ country_event = {
 					set_politics = {
 						ruling_party = communism
 					}
+					add_ideas = extensive_conscription
+					add_political_power = 250
 				}
 				WGR = {
 					transfer_state = 42
 					transfer_state = 1049
 					transfer_state = 50
 					transfer_state = 978
+					transfer_state = 52
+					add_state_core = 52
 					add_state_core = 42
 					add_state_core = 1049
 					add_state_core = 51
@@ -62,11 +59,13 @@ country_event = {
 					set_politics = {
 						ruling_party = democratic
 					}
+					add_ideas = extensive_conscription
+					add_political_power = 250
 				}
 				start_civil_war = {
 					ruling_party = neutrality
 					ideology = fascism
-					size = 0.4
+					size = 0.45
 					navy_ratio = 0.1
 					capital = 64
 					states = all
@@ -74,14 +73,19 @@ country_event = {
 					states_filter = {
 					    OR = {
 					    	state = 64
+					    	state = 52
+					    	state = 53
 					    	state = 54
 					    	state = 60
 					    	state = 65
-					    	state = 763
+					    	state = 66
+					    	state = 67
 					    	state = 68
 					    	state = 62
 					    	state = 63
+					    	state = 53
 					    	state = 5
+					    	state = 763
 					    }
 					    is_controlled_by = ROOT
 					}
@@ -258,15 +262,8 @@ country_event = {
 					set_politics = {
 						ruling_party = democratic
 					}
-				}
-				BAY = {
-					transfer_state = 53
-					transfer_state = 52
-					add_state_core = 53
-					add_state_core = 52
-					set_politics = {
-						ruling_party = fascism
-					}
+					add_ideas = extensive_conscription
+					add_political_power = 250
 				}
 				RHI = {
 					transfer_state = 51
@@ -276,12 +273,16 @@ country_event = {
 					set_politics = {
 						ruling_party = communism
 					}
+					add_ideas = extensive_conscription
+					add_political_power = 250
 				}
 				WGR = {
 					transfer_state = 42
 					transfer_state = 1049
 					transfer_state = 50
 					transfer_state = 978
+					transfer_state = 52
+					add_state_core = 52
 					add_state_core = 42
 					add_state_core = 1049
 					add_state_core = 51
@@ -289,11 +290,13 @@ country_event = {
 					set_politics = {
 						ruling_party = democratic
 					}
+					add_ideas = extensive_conscription
+					add_political_power = 250
 				}
 				start_civil_war = {
 					ruling_party = neutrality
 					ideology = fascism
-					size = 0.5
+					size = 0.45
 					navy_ratio = 0.8
 					capital = 64
 					states = all
@@ -311,6 +314,7 @@ country_event = {
 					    	state = 68
 					    	state = 62
 					    	state = 63
+					    	state = 53
 					    	state = 5
 					    	state = 763
 					    }
@@ -490,18 +494,84 @@ country_event = {
 			long_name = GER_neutrality_party_civil_war 
 			name = GER_neutrality_party_civil_war 
 		}
+		WGR ={ 
+			load_oob = GCW_democrats
+			declare_war_on = {
+				target = GER
+				type = annex_everything
+			}
+			declare_war_on = {
+				target = SIL
+				type = annex_everything
+			}
+			GER = {
+				every_core_state = {
+					add_core_of = WGR
+				}
+			}
+		}	
+		SIL = {
+			load_oob = GCW_silesia
+		}
+		RHI ={ 
+			load_oob = GCW_communists
+			declare_war_on = {
+				target = WGR
+				type = annex_everything
+			}
+			declare_war_on = {
+				target = SIL
+				type = annex_everything
+			}
+			GER = {
+				every_core_state = {
+					add_core_of = RHI
+				}
+			}
+		}	
+		declare_war_on = {
+			target = SIL
+			type = annex_everything
+		}
+		declare_war_on = {
+			target = RHI
+			type = annex_everything
+		}
 
 		hidden_effect = {
 			load_oob = "GER_German_Civil_War_neutrality"
-
+			every_core_state = {
+			teleport_armies = {
+				to_state_array = owned_controlled_states
+			}
+			}
 			random_other_country = {
 				limit = {
 					original_tag = GER
 					has_government = fascism
 				}
+				upgrade_draft_law = yes
+				upgrade_conscript_law = yes
+				declare_war_on = {
+				target = WGR
+				type = annex_everything
+				}
+				declare_war_on = {
+				target = RHI
+				type = annex_everything
+				}
+				declare_war_on = {
+				target = SIL
+				type = annex_everything
+				}
 				set_stability = 0.9
 				set_war_support = 0.8
 				load_oob = "GER_German_Civil_War_fascist"
+				every_core_state = {
+					teleport_armies = {
+						to_state_array = owned_controlled_states
+					}
+				}
 			}
 
 			if = {
