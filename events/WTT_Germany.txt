@@ -23,11 +23,50 @@ country_event = {
 				set_global_flag = GER_civil_war_has_started
 
 				set_capital = { state = 55 }
-
+				SIL = {
+					transfer_state = 66
+					transfer_state = 67
+					add_state_core = 66
+					add_state_core = 67
+					set_politics = {
+						ruling_party = democratic
+					}
+				}
+				BAY = {
+					transfer_state = 53
+					transfer_state = 52
+					add_state_core = 53
+					add_state_core = 52
+					set_politics = {
+						ruling_party = fascism
+					}
+				}
+				RHI = {
+					transfer_state = 51
+					transfer_state = 1047
+					add_state_core = 51
+					add_state_core = 1047
+					set_politics = {
+						ruling_party = communism
+					}
+				}
+				WGR = {
+					transfer_state = 42
+					transfer_state = 1049
+					transfer_state = 50
+					transfer_state = 978
+					add_state_core = 42
+					add_state_core = 1049
+					add_state_core = 51
+					add_state_core = 978
+					set_politics = {
+						ruling_party = democratic
+					}
+				}
 				start_civil_war = {
 					ruling_party = neutrality
 					ideology = fascism
-					size = 0.5
+					size = 0.4
 					navy_ratio = 0.1
 					capital = 64
 					states = all
@@ -35,14 +74,10 @@ country_event = {
 					states_filter = {
 					    OR = {
 					    	state = 64
-					    	state = 61
-					    	state = 52
-					    	state = 53
 					    	state = 54
 					    	state = 60
 					    	state = 65
-					    	state = 66
-					    	state = 67
+					    	state = 763
 					    	state = 68
 					    	state = 62
 					    	state = 63
@@ -215,7 +250,46 @@ country_event = {
 				set_global_flag = GER_civil_war_has_started
 
 				set_capital = { state = 55 }
-
+				SIL = {
+					transfer_state = 66
+					transfer_state = 67
+					add_state_core = 66
+					add_state_core = 67
+					set_politics = {
+						ruling_party = democratic
+					}
+				}
+				BAY = {
+					transfer_state = 53
+					transfer_state = 52
+					add_state_core = 53
+					add_state_core = 52
+					set_politics = {
+						ruling_party = fascism
+					}
+				}
+				RHI = {
+					transfer_state = 51
+					transfer_state = 1047
+					add_state_core = 51
+					add_state_core = 1047
+					set_politics = {
+						ruling_party = communism
+					}
+				}
+				WGR = {
+					transfer_state = 42
+					transfer_state = 1049
+					transfer_state = 50
+					transfer_state = 978
+					add_state_core = 42
+					add_state_core = 1049
+					add_state_core = 51
+					add_state_core = 978
+					set_politics = {
+						ruling_party = democratic
+					}
+				}
 				start_civil_war = {
 					ruling_party = neutrality
 					ideology = fascism
@@ -227,7 +301,6 @@ country_event = {
 					states_filter = {
 					    OR = {
 					    	state = 64
-					    	state = 61
 					    	state = 52
 					    	state = 53
 					    	state = 54
@@ -239,6 +312,7 @@ country_event = {
 					    	state = 62
 					    	state = 63
 					    	state = 5
+					    	state = 763
 					    }
 					    is_controlled_by = ROOT
 					}
