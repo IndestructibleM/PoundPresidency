@@ -27110,7 +27110,7 @@ focus_tree = {
 		prerequisite = { focus = GER_tend_to_the_future_of_germany }
 		mutually_exclusive = { focus = GER_start_the_proletarian_revolution focus = GER_monarchist_sentiment}
 
-		x = 50
+		x = 44
 		y = 1
 		relative_position_id = GER_tend_to_the_future_of_germany
 
@@ -27309,7 +27309,7 @@ focus_tree = {
 	focus = {
 		id = GER_meet_with_jung
 		icon = GFX
-		prerequisite = { focus = GER_neutralize_the_ss_leadership focus = GER_meet_with_jung }
+		prerequisite = { focus = GER_neutralize_the_ss_leadership focus = GER_the_prussian_standard }
 
 		x = 1
 		y = 1
@@ -27339,7 +27339,7 @@ focus_tree = {
 		icon = GFX
 		prerequisite = { focus = GER_the_german_national_revival }
 		mutually_exclusive = { focus = GER_revive_the_reich_eternal }
-		x = -4
+		x = -3.5
 		y = 1
 		relative_position_id = GER_the_german_national_revival
 		cost = 5
@@ -27353,7 +27353,7 @@ focus_tree = {
 		icon = GFX
 		prerequisite = { focus = GER_the_german_national_revival }
 		mutually_exclusive = { focus = GER_recall_the_hohenzollerns }
-		x = 4
+		x = 3.5
 		y = 1
 		relative_position_id = GER_the_german_national_revival
 		cost = 5
@@ -27519,7 +27519,7 @@ focus_tree = {
 	focus = {
 		id = GER_restore_the_officer_corps_prestige
 		icon = GFX
-		prerequisite = { focus = GER_complete_the_work_of_bismarck fpcus = GER_the_german_national_imperative }
+		prerequisite = { focus = GER_complete_the_work_of_bismarck focus = GER_the_german_national_imperative }
 
 		x = 1
 		y = 1
@@ -27589,11 +27589,11 @@ focus_tree = {
 	focus = {
 		id = GER_the_vienna_ultimatum
 		icon = GFX
-		prerequisite = { focus = GER_a_realm_of_blood_and_steel }
-
-		x = 0
-		y = 1
-		relative_position_id = GER_a_realm_of_blood_and_steel
+		prerequisite = { focus = GER_greater_germany }
+		prerequisite = { focus = GER_the_greater_germany_doctrine }
+		x = -4.5
+		y = 2
+		relative_position_id = GER_recall_the_hohenzollerns
 		cost = 5
 		completion_reward = {
 			
@@ -27659,11 +27659,12 @@ focus_tree = {
 	focus = {
 		id = GER_reclaim_the_austrian_crownlands
 		icon = GFX
-		prerequisite = { focus = GER_guardians_of_western_civilization focus = GER_protector_of_christendom }
+		prerequisite = { focus = GER_reforge_the_bundstat }
+		prerequisite = { focus = GER_rehabilitate_the_imperial_colors }
 
-		x = 1
-		y = 1
-		relative_position_id = GER_guardians_of_western_civilization
+		x = 7.5
+		y = 3
+		relative_position_id = GER_the_german_national_revival
 		cost = 5
 		completion_reward = {
 			
