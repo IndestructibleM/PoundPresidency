@@ -4662,13 +4662,6 @@ focus_tree = {
 		x = 56
 		y = 0
 		offset = {
-			x = -26
-			y = 0
-			trigger = {
-				NOT = { has_dlc = "Man the Guns" }
-			}
-		}
-		offset = {
 			x = -17
 			y = 0
 			trigger = {
@@ -8202,15 +8195,8 @@ focus_tree = {
 	### POUND SUCCESSORS 
 	focus = {
 		id = USA_fall_of_prometheus
-		x = 20
+		x = 39
 		y = 11
-		offset = {
-			x = 26
-			y = 0
-			trigger = {
-				has_dlc = "Man the Guns"
-			}
-		}
 		
 		cost = 2
 		ai_will_do = {
