@@ -1,6 +1,5 @@
 ﻿division_template = {
 	name = "Bundeswehr"
-	is_locked = yes
 	template_counter = 3 # The Crossed Rifles
 	division_names_group = GER_Inf_01
 
@@ -102,6 +101,26 @@ units = {
 	}
 	division = {
 		name = "18. Bundeswehr"
+		location = 692
+		division_template = "Bundeswehr"
+	}
+	division = {
+		name = "19. Bundeswehr"
+		location = 692
+		division_template = "Bundeswehr"
+	}
+	division = {
+		name = "20. Bundeswehr"
+		location = 692
+		division_template = "Bundeswehr"
+	}
+	division = {
+		name = "21. Bundeswehr"
+		location = 692
+		division_template = "Bundeswehr"
+	}
+	division = {
+		name = "22. Bundeswehr"
 		location = 692
 		division_template = "Bundeswehr"
 	}
