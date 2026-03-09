@@ -336,6 +336,36 @@ country_event = {
 		}
 		promote_character = USA_Ezra_Pound
 	}
+	option = {
+		name = "Technocracy Inc. Makes a Dark Horse Victory!"
+		ai_chance = {
+			factor = 10
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+				has_game_rule = {
+					rule = USA_ai_behavior
+					option = DEFAULT
+				}
+			}
+		}		
+		set_politics = {
+			ruling_party = neutrality
+			elections_allowed = no
+			last_election = "1936.11.5"
+			election_frequency = 48
+			long_name = "Technocracy Incorporated"
+			name = "Tech Inc."
+		}
+		hidden_effect = {
+			set_cosmetic_tag = USA_democratic
+		}
+		add_popularity = {
+			ideology = neutrality
+			popularity = 0.1	
+		}
+		promote_character = USA_howard_scott
+	}
 }
 
 # Election of 1940: Roosevelt vs Wendell Wilkie

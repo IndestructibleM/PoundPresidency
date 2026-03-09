@@ -380,7 +380,7 @@ characters = {
 				has_completed_focus = USA_artistic_imperialism
 			}
 			slot = army_chief
-			idea_token = george_patton
+			idea_token = george_patton_tpp
 			ledger = army
 			allowed = {
 				original_tag = USA

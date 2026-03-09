@@ -96,7 +96,7 @@ focus_tree = {
 
 		mutually_exclusive = { 
 			focus = USA_towards_national_utopia
-			focus = USA_reestablish_the_gold_standard
+			focus = USA_revolt_of_engineers
 		}
 		cost = 10
 
@@ -2920,1732 +2920,7 @@ focus_tree = {
 #     #  #  #  # #  # #    #    # #  #      #  #  # #       #  # #  # #   #  #       #  #  #  # #  # #  # #  # #  # #  # 
 ### ##   #  #  # ###  ### ### ##  #  #      #  #  # ###      ##   ##  ### ###      ##   #  #  # #  # ###  #  # #  # ###  
 
-	focus = {
-		id = USA_reestablish_the_gold_standard
-		icon = GFX_focus_usa_reestablish_the_gold_standard
-		x = 17
-		y = 0
-		offset = {
-			x = -12
-			y = 0
-			trigger = {
-				OR = {
-					NOT = { has_dlc = "Man the Guns" }
-					AND = {
-						has_game_rule = {
-							rule = obsolete_focus_branches_visibility
-							option = HIDE
-						}
-						has_completed_focus = USA_reestablish_the_gold_standard
-					}
-				}
-			}
-		}
-		offset = {
-			x = -1
-			y = 0
-			trigger = {
-				has_game_rule = {
-					rule = obsolete_focus_branches_visibility
-					option = HIDE
-				}
-				has_completed_focus = USA_reestablish_the_gold_standard
-			}
-		}
-		offset = {
-			x = -1
-			y = 0
-			trigger = {
-				has_game_rule = {
-					rule = obsolete_focus_branches_visibility
-					option = HIDE
-				}
-				has_completed_focus = USA_neutrality_act
-			}
-		}
-		offset = {
-			x = -1
-			y = 0
-			trigger = {
-				has_game_rule = {
-					rule = obsolete_focus_branches_visibility
-					option = HIDE
-				}
-				has_completed_focus = USA_reestablish_the_gold_standard
-				has_completed_focus = USA_neutrality_act
-			}
-		}
-		offset = {
-			x = -2
-			y = 0
-			trigger = {
-				has_game_rule = {
-					rule = obsolete_focus_branches_visibility
-					option = HIDE
-				}
-				has_completed_focus = USA_reestablish_the_gold_standard
-				has_completed_focus = USA_limited_intervention
-			}
-		}
-		cost = 10
-
-		ai_will_do = {
-			factor = 1
-		}
-		mutually_exclusive = { 
-			focus = USA_continue_the_new_deal
-			focus = USA_towards_national_utopia
-		}
-
-		allow_branch = {
-			if = {
-				limit = {
-					has_game_rule = {
-						rule = obsolete_focus_branches_visibility
-						option = HIDE
-					}
-				}
-				NOT = {
-					has_completed_focus = USA_continue_the_new_deal
-				}
-			}
-		}
-
-		available = {
-			has_government = democratic
-			NOT = {
-				has_country_leader = { ruling_only = yes character = USA_franklin_delano_roosevelt }
-			}
-		}
-		
-		bypass = {
-
-		}
-
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
-		search_filters = {FOCUS_FILTER_INDUSTRY FOCUS_FILTER_STABILITY FOCUS_FILTER_USA_CONGRESS}
-		completion_reward = {
-			add_ideas = USA_gold_standard
-			USA_congress_small_opposition = yes
-			hidden_effect = {
-				if = {
-					limit = {
-						has_game_rule = {
-							rule = obsolete_focus_branches_visibility
-							option = HIDE
-						}
-					}
-					mark_focus_tree_layout_dirty = yes
-				}
-			}
-		}
-	}
-	focus = {
-		id = USA_adjusted_compensation_act
-		icon = GFX_goal_generic_consumer_goods
-		x = 2
-		y = 1
-		prerequisite = { focus = USA_reestablish_the_gold_standard }
-		relative_position_id = USA_reestablish_the_gold_standard
-		cost = 10
-
-		ai_will_do = {
-			factor = 1
-		}
-
-		available = {
-			congress_medium_support_trigger = yes
-		}
-		
-		bypass = {
-
-		}
-
-		cancel_if_invalid = no
-		continue_if_invalid = yes
-		available_if_capitulated = no
-		search_filters = {FOCUS_FILTER_INDUSTRY FOCUS_FILTER_MANPOWER FOCUS_FILTER_USA_CONGRESS}
-		completion_reward = {
-			add_timed_idea = { idea = USA_adjusted_compensation_payment days = 180 }
-			USA_great_depression_level_down = yes
-			if = {
-				limit = {
-					not = { congress_medium_support_trigger = yes }
-				}
-				USA_congress_small_opposition = yes
-			}
-		}
-	}
-	focus = {
-		id = USA_labour_management_relations_act
-		icon = GFX_focus_generic_military_academy
-		x = 0
-		y = 1
-		prerequisite = { focus = USA_adjusted_compensation_act }
-		relative_position_id = USA_adjusted_compensation_act
-		cost = 10
-
-		ai_will_do = {
-			factor = 1
-		}
-
-		available = {
-			congress_medium_support_trigger = yes
-		}
-		
-		bypass = {
-
-		}
-
-		cancel_if_invalid = no
-		continue_if_invalid = yes
-		available_if_capitulated = no
-		search_filters = {FOCUS_FILTER_INDUSTRY FOCUS_FILTER_USA_CONGRESS}
-		completion_reward = {
-			add_ideas = USA_labour_management_relations_act
-			if = {
-				limit = {
-					communism < 0.1 
-				}
-				USA_congress_small_opposition = yes
-			}
-			else = {
-				USA_congress_medium_opposition = yes
-			}
-		}
-	}
-	focus = {
-		id = USA_protectionist_tariffs
-		icon = GFX_goal_generic_defence
-		x = 0
-		y = 2
-		prerequisite = { focus = USA_labour_management_relations_act }
-		relative_position_id = USA_adjusted_compensation_act
-		cost = 10
-
-		ai_will_do = {
-			factor = 1
-		}
-
-		available = {
-			
-		}
-		
-		bypass = {
-
-		}
-
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
-		search_filters = {FOCUS_FILTER_INDUSTRY FOCUS_FILTER_MANPOWER}
-		completion_reward = {
-			USA_great_depression_level_down = yes
-			if = {
-				limit = {
-					has_idea = free_trade
-				}
-				add_ideas = export_focus
-			}
-		}
-	}
-	focus = {
-		id = USA_income_tax_reform
-		icon = GFX_goal_generic_intelligence_exchange
-		x = 0
-		y = 4
-		prerequisite = { focus = USA_protectionist_tariffs }
-		relative_position_id = USA_adjusted_compensation_act
-		cost = 10
-
-		ai_will_do = {
-			factor = 1
-		}
-
-		available = {
-			congress_high_support_trigger = yes
-		}
-		
-		bypass = {
-
-		}
-
-		cancel_if_invalid = no
-		continue_if_invalid = yes
-		available_if_capitulated = no
-		search_filters = {FOCUS_FILTER_INDUSTRY FOCUS_FILTER_MANPOWER FOCUS_FILTER_USA_CONGRESS}
-		completion_reward = {
-			USA_great_depression_level_down = yes
-			USA_congress_medium_opposition = yes
-			unlock_decision_tooltip = { decision = USA_give_tax_break show_effect_tooltip = yes }
-		}
-	}
-	focus = {
-		id = USA_institute_of_american_sciences
-		icon = GFX_focus_research
-		x = 0
-		y = 6
-		prerequisite = { focus = USA_income_tax_reform }
-		relative_position_id = USA_adjusted_compensation_act
-		cost = 10
-
-		ai_will_do = {
-			factor = 1
-		}
-
-		available = {
-
-		}
-		
-		bypass = {
-
-		}
-
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
-		search_filters = {FOCUS_FILTER_RESEARCH}
-		completion_reward = {
-			add_research_slot = 1
-		}
-	}
- ## ### ###  ### #  #  ##  ### #  # ### #  #     ### #  # ###      ##  #   # ### ###  ###  ##   ##  #  #     #   ###  ##  ###  ##  #  # 
-#    #  #  # #   ## # #     #  #  # #   ## #      #  #  # #       #  # ## ## #   #  #  #  #  # #  # ## #     #   #   #     #  #  # ## # 
- #   #  ###  ##  # ## # ##  #  #### ##  # ##      #  #### ##      #### # # # ##  ###   #  #    #### # ##     #   ##  # ##  #  #  # # ## 
-  #  #  #  # #   #  # #  #  #  #  # #   #  #      #  #  # #       #  # #   # #   #  #  #  #  # #  # #  #     #   #   #  #  #  #  # #  # 
-##   #  #  # ### #  #  ##   #  #  # ### #  #      #  #  # ###     #  # #   # ### #  # ###  ##  #  # #  #     ### ###  ##  ###  ##  #  # 
-
-	focus = {
-		id = USA_america_first
-		icon = GFX_goal_generic_political_pressure
-		x = 4
-		y = 1
-		prerequisite = { focus = USA_reestablish_the_gold_standard }
-		relative_position_id = USA_reestablish_the_gold_standard
-		cost = 10
-
-		ai_will_do = {
-			factor = 1
-		}
-		allow_branch = {
-			has_dlc = "Man the Guns"
-			if = {
-				limit = {
-					has_game_rule = {
-						rule = obsolete_focus_branches_visibility
-						option = HIDE
-					}
-				}
-				NOT = {
-					has_completed_focus = USA_continue_the_new_deal
-				}
-			}
-		}
-		available = {
-
-		}
-		
-		bypass = {
-
-		}
-
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
-		search_filters = {FOCUS_FILTER_POLITICAL}
-		completion_reward = {
-			custom_effect_tooltip = available_political_advisor
-		    show_ideas_tooltip = charles_coughlin
-		    add_popularity = { ideology = fascism popularity = 0.05 }
-		     if = {
-		    	limit = {
-		    		is_ai = yes
-		    		OR = {
-						has_country_flag = USA_AI_RANDOM_FASCIST
-						has_game_rule = {
-							rule = USA_ai_behavior
-							option = FASCIST
-						}
-					}
-		    	}
-		    	add_ideas = charles_coughlin
-		    }
-		}
-	}
-	focus = {
-		id = USA_extend_the_chinese_exclusion_acts
-		icon = GFX_goal_generic_forceful_treaty
-		x = 0
-		y = 1
-		prerequisite = { focus = USA_america_first }
-		relative_position_id = USA_america_first
-		cost = 10
-
-		ai_will_do = {
-			factor = 1
-		}
-
-		available = {
-			congress_low_support_trigger = yes
-		}
-		
-		bypass = {
-
-		}
-
-		cancel_if_invalid = no
-		continue_if_invalid = yes
-		available_if_capitulated = no
-		search_filters = {FOCUS_FILTER_USA_CONGRESS}
-		completion_reward = {
-			USA_congress_large_support = yes
-			event_target:WTT_current_china_leader = {
-				add_opinion_modifier = { modifier = USA_extend_the_chinese_exclusion_acts target = ROOT }
-			}
-		}
-	}
-	focus = {
-		id = USA_empower_the_huac
-		icon = GFX_goal_generic_war_with_comintern
-		x = 0
-		y = 3
-		prerequisite = { focus = USA_extend_the_chinese_exclusion_acts }
-		prerequisite = { focus = USA_labour_management_relations_act }
-		relative_position_id = USA_america_first
-		cost = 10
-
-		ai_will_do = {
-			factor = 1
-		}
-
-		available = {
-
-		}
-		
-		bypass = {
-
-		}
-
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
-		search_filters = {FOCUS_FILTER_USA_CONGRESS}
-		completion_reward = {
-			custom_effect_tooltip = available_political_advisor
-		    show_ideas_tooltip = USA_joseph_mccarthy
-		    unlock_decision_tooltip = { decision = USA_use_huac show_effect_tooltip = yes }
-		}
-		
-	}
-	focus = {
-		id = USA_voter_registration_act
-		icon = GFX_focus_usa_voter_registration_act
-		x = 0
-		y = 5
-		prerequisite = { focus = USA_empower_the_huac }
-		relative_position_id = USA_america_first
-		cost = 10
-
-		ai_will_do = {
-			factor = 1
-		}
-
-		available = {
-			fascism > 0.15
-			congress_high_support_trigger = yes
-		}
-		
-		bypass = {
-
-		}
-
-		cancel_if_invalid = no
-		continue_if_invalid = yes
-		available_if_capitulated = no
-
-		completion_reward = {
-			USA_return_majority = yes
-			if = {
-				limit = {
-					democratic > 0.75
-				}
-				add_stability = -0.1
-			}
-			if = {
-				limit = {
-					has_country_flag = mtg_usa_civil_war_democrats_1
-					not = { has_country_flag = mtg_usa_civil_war_democrats_2 }
-				}
-				country_event = mtg_usa_civil_war_democrats.2
-				custom_effect_tooltip = mtg_usa_civil_war_warning_tt
-			}
-			else_if = {
-				limit = { not = { has_country_flag = mtg_usa_civil_war_democrats_1 } }
-				country_event = mtg_usa_civil_war_democrats.1
-				custom_effect_tooltip = mtg_usa_civil_war_warning_tt
-			}
-		}
-	}
-
- ##  #   #   #   #     #   # ### ### #  #     ### #  # ###      ## ### #   #   # ### ###       ## #  # ### ###  ###  ## 
-#  # #   #    # #      #   #  #   #  #  #      #  #  # #       #    #  #   #   # #   #  #     #   #  #  #  #  #  #  #   
-#### #   #     #       # # #  #   #  ####      #  #### ##       #   #  #    # #  ##  ###       #  ####  #  ###   #   #  
-#  # #   #     #       # # #  #   #  #  #      #  #  # #         #  #  #    # #  #   #  #       # #  #  #  #  #  #    # 
-#  # ### ###   #        # #  ###  #  #  #      #  #  # ###     ##  ### ###   #   ### #  #     ##  #  # ### #  #  #  ##  
-
-	focus = {
-		id = USA_ally_with_the_silver_shirts
-		icon = GFX_focus_generic_diplomatic_treaty
-		x = 5
-		y = 1
-		prerequisite = { focus = USA_america_first }
-		relative_position_id = USA_america_first
-		cost = 10
-
-		ai_will_do = {
-			factor = 1
-		}
-
-		available = {
-			fascism > 0.1
-			has_idea_with_trait = fascist_demagogue
-			not = { has_completed_focus = USA_limited_intervention }
-			not = { has_completed_focus = USA_neutrality_act }
-		}
-		
-		bypass = {
-			has_government = fascism
-		}
-
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
-		search_filters = {FOCUS_FILTER_POLITICAL FOCUS_FILTER_USA_CONGRESS}
-		completion_reward = {
-			USA_congress_medium_support = yes
-			unlock_decision_tooltip = { decision = USA_beat_up_opposition show_effect_tooltip = yes }
-			if = {
-				limit = {
-					has_country_flag = mtg_usa_civil_war_democrats_1
-					not = { has_country_flag = mtg_usa_civil_war_democrats_2 }
-				}
-				country_event = mtg_usa_civil_war_democrats.2
-				custom_effect_tooltip = mtg_usa_civil_war_warning_tt
-			}
-			else_if = {
-				limit = { not = { has_country_flag = mtg_usa_civil_war_democrats_1 } }
-				country_event = mtg_usa_civil_war_democrats.1
-				custom_effect_tooltip = mtg_usa_civil_war_warning_tt
-			}
-		}
-	}
-
-	focus = {
-		id = USA_national_prosperity_program
-		icon = GFX_goal_generic_consumer_goods
-		x = -2
-		y = 1
-		prerequisite = { focus = USA_ally_with_the_silver_shirts }
-		relative_position_id = USA_ally_with_the_silver_shirts
-		cost = 10
-
-		ai_will_do = {
-			factor = 1
-		}
-
-		available = {
-			fascism > 0.2
-		}
-		
-		bypass = {
-
-		}
-
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
-		search_filters = {FOCUS_FILTER_STABILITY}
-		completion_reward = {
-			add_stability = 0.05
-		}
-	}
-	focus = {
-		id = USA_privatize_the_TVA
-		icon = GFX_focus_generic_industry_1
-		x = -3
-		y = 2
-		prerequisite = { focus = USA_national_prosperity_program }
-		relative_position_id = USA_ally_with_the_silver_shirts
-		cost = 10
-
-		ai_will_do = {
-			factor = 1
-		}
-
-		available = {
-
-		}
-		
-		bypass = {
-
-		}
-
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
-
-		completion_reward = {
-			368 = {
-				add_extra_state_shared_building_slots = 2
-			}
-			add_ideas = USA_privatization
-		}
-	}
-	focus = {
-		id = USA_de_regulate_the_banking_sector
-		icon = GFX_focus_generic_industry_2
-		x = -1
-		y = 2
-		prerequisite = { focus = USA_national_prosperity_program }
-		relative_position_id = USA_ally_with_the_silver_shirts
-		cost = 10
-
-		ai_will_do = {
-			factor = 1
-		}
-
-		available = {
-
-		}
-		
-		bypass = {
-
-		}
-
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
-
-		completion_reward = {
-			add_ideas = USA_banking_sector_deregulation
-		}
-	}
-	focus = {
-		id = USA_national_employment_strategy
-		icon = GFX_focus_generic_industry_3
-		x = -2
-		y = 3
-		prerequisite = { focus = USA_privatize_the_TVA }
-		prerequisite = { focus = USA_de_regulate_the_banking_sector }
-		relative_position_id = USA_ally_with_the_silver_shirts
-		cost = 10
-
-		ai_will_do = {
-			factor = 1
-		}
-
-		available = {
-
-		}
-		
-		bypass = {
-
-		}
-
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
-		search_filters = {FOCUS_FILTER_MANPOWER FOCUS_FILTER_INDUSTRY}
-		completion_reward = {
-			swap_ideas = {
-				remove_idea = USA_banking_sector_deregulation
-				add_idea = USA_national_employment_strategy
-			}
-			USA_great_depression_level_down = yes
-		}
-	}
-	focus = {
-		id = USA_invite_foreign_support
-		icon = GFX_goal_generic_military_deal
-		x = 3
-		y = 1
-		prerequisite = { focus = USA_ally_with_the_silver_shirts }
-		relative_position_id = USA_ally_with_the_silver_shirts
-		cost = 10
-
-		ai_will_do = {
-			factor = 1
-		}
-
-		available = {
-
-		}
-		
-		bypass = {
-
-		}
-
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
-
-		completion_reward = {
-			unlock_decision_category_tooltip = USA_foreign_support
-			custom_effect_tooltip = USA_foreign_support_tt
-		}
-	}
-	focus = {
-		id = USA_send_lindbergh_to_germany
-		icon = GFX_focus_chi_mission_to_germany
-		x = 0
-		y = 1
-		prerequisite = { focus = USA_invite_foreign_support }
-		relative_position_id = USA_invite_foreign_support
-		cost = 10
-
-		ai_will_do = {
-			factor = 1
-		}
-
-		available = {
-
-		}
-		
-		bypass = {
-
-		}
-
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
-
-		completion_reward = {
-			air_experience = 75
-			custom_effect_tooltip = available_chief_of_airforce
-			show_ideas_tooltip = USA_charles_lindbergh
-		}
-	}
-	focus = {
-		id = USA_work_with_the_bund
-		icon = GFX_goal_generic_dangerous_deal
-		x = -2
-		y = 2
-		prerequisite = { focus = USA_send_lindbergh_to_germany }
-		relative_position_id = USA_invite_foreign_support
-		cost = 10
-
-		ai_will_do = {
-			factor = 1
-		}
-
-		available = {
-			not = {
-				has_war_with = GER
-			}
-		}
-		
-		bypass = {
-			has_civil_war = yes
-		}
-
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
-		search_filters = {FOCUS_FILTER_STABILITY}
-		completion_reward = {
-			add_stability = 0.05
-			GER = { add_opinion_modifier = { target = ROOT modifier = USA_work_with_the_bund } }
-			set_country_flag = MTG_work_with_the_bund # to check if the focus was completed regularly or bypassed
-			custom_effect_tooltip = USA_work_with_the_bund_tt
-		}
-	}
-	focus = {
-		id = USA_recruit_the_free_corps
-		icon = GFX_focus_usa_recruit_the_free_corps
-		x = 0
-		y = 2
-		prerequisite = { focus = USA_send_lindbergh_to_germany }
-		relative_position_id = USA_invite_foreign_support
-		cost = 10
-
-		ai_will_do = {
-			factor = 1
-		}
-
-		available = {
-
-		}
-		
-		bypass = {
-
-		}
-
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
-
-		completion_reward = {
-			unlock_decision_tooltip = USA_raise_the_free_corps 
-			custom_effect_tooltip = USA_raise_the_free_corps_tt
-		}
-	}
-	focus = {
-		id = USA_honor_the_confederacy
-		icon = GFX_focus_usa_honor_the_confederacy
-		x = -4
-		y = 3
-		prerequisite = { focus = USA_work_with_the_bund }
-		prerequisite = { focus = USA_national_employment_strategy }
-		relative_position_id = USA_invite_foreign_support
-		cost = 10
-
-		ai_will_do = {
-			factor = 1
-		}
-
-		available = {
-			OR = {
-				has_civil_war = yes
-				has_government = fascism
-				has_government = neutrality
-			}
-		}
-		
-		bypass = {
-
-		}
-
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
-
-		completion_reward = {
-			unlock_decision_category_tooltip = USA_honor_the_confederacy
-			custom_effect_tooltip = USA_honor_the_confederacy_tt
-		}
-	}
-
-
-
-#   #  ##  ###      ###   ##  #   # ### ###   ##      ##   ##  ### 
-#   # #  # #  #     #  # #  # #   # #   #  # #       #  # #  #  #  
-# # # #### ###      ###  #  # # # # ##  ###   #      #### #     #  
-# # # #  # #  #     #    #  # # # # #   #  #   #     #  # #  #  #  
- # #  #  # #  #     #     ##   # #  ### #  # ##      #  #  ##   #  
-
-	focus = {
-		id = USA_war_powers_act
-		icon = GFX_goal_generic_forceful_treaty
-		x = 11
-		y = 1
-		prerequisite = { focus = USA_america_first }
-		relative_position_id = USA_america_first
-		cost = 10
-
-		ai_will_do = {
-			factor = 1
-		}
-
-		available = {
-			congress_high_support_trigger = yes
-			fascism > 0.3
-		}
-		
-		bypass = {
-
-		}
-
-		cancel_if_invalid = no
-		continue_if_invalid = yes
-		available_if_capitulated = no
-
-		completion_reward = {
-			add_ideas = USA_war_powers_act
-			set_rule = {
-				can_create_factions = yes
-			}
-			hidden_effect = {
-				news_event = { id = mtg_news.5 days = 3 random_days = 6 }
-			}
-		}
-	}
-	focus = {
-		id = USA_seize_cuba
-		icon = GFX_goal_generic_occupy_states_ongoing_war
-		x = -1
-		y = 1
-		prerequisite = { focus = USA_war_powers_act }
-		relative_position_id = USA_war_powers_act
-		cost = 10
-
-		ai_will_do = {
-			factor = 1
-		}
-
-		available = {
-			has_war_support > 0.35
-		}
-		
-		bypass = {
-			OR = {
-				owns_state = 315
-				has_war_with = CUB
-				CUB = {is_subject_of = ROOT}
-				has_wargoal_against = {
-    				target = CUB
-    				type = annex_everything
-					}
-			}
-		}
-
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
-
-		completion_reward = {
-			if = {
-				limit = {
-					CUB = {
-						owns_state = 315
-					}
-				}
-				create_wargoal = {
-					type = annex_everything
-					target = CUB
-					expire = 0
-				}
-			}
-			else_if = {
-				limit = {
-					315 = { CONTROLLER = { not = { is_in_faction_with = ROOT } } }
-				}
-				315 = { 
-					CONTROLLER = {
-						ROOT = {
-							create_wargoal = {
-								type = take_state
-								target = PREV
-								expire = 0
-								generator = { 315 }
-							}
-						}
-					} 
-				}
-			}
-		}
-	}
-	focus = {
-		id = USA_manifest_destiny
-		icon = GFX_goal_generic_political_pressure
-		prerequisite = { focus = USA_war_powers_act }
-		available = { }
-		x = 1
-		y = 1
-		relative_position_id = USA_war_powers_act
-		cost = 10
-		ai_will_do = {
-			factor = 1
-		}
-		completion_reward = {
-			add_ideas = USA_world_police
-		}
-	}
-	focus = {
-		id = USA_eliminate_the_southern_threat
-		icon = GFX_goal_generic_military_sphere
-		x = -1
-		y = 2
-		prerequisite = { focus = USA_seize_cuba }
-		relative_position_id = USA_war_powers_act
-		cost = 10
-
-		ai_will_do = {
-			factor = 1
-		}
-
-		available = {
-
-		}
-		
-		bypass = {
-			MEX = {
-				OR = {
-					is_subject_of = ROOT
-					exists = no
-					has_War_with = ROOT
-				}
-			}
-		}
-
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
-
-		completion_reward = {
-			MEX = {
-				country_event = mtg_usa_southern_threat.1
-			}
-		}
-	}
-	focus = {
-		id = USA_the_canadian_corridor
-		icon = GFX_goal_generic_position_armies
-		x = 1
-		y = 2
-		prerequisite = { focus = USA_manifest_destiny }
-		relative_position_id = USA_war_powers_act
-		cost = 10
-
-		ai_will_do = {
-			factor = 1
-		}
-
-		available = {
-			any_other_country = {
-				owns_state = 473
-				owns_state = 471
-				owns_state = 864
-			}
-		}
-		
-		bypass = {
-			AND = {
-				473 = {
-					OR = {
-						is_controlled_by = ROOT 
-						is_owned_by = ROOT
-						OWNER = { has_war_with = ROOT }
-						OWNER = { is_subject_of = ROOT } 
-					}
-				}
-				471 = {
-					OR = {
-						is_controlled_by = ROOT 
-						is_owned_by = ROOT
-						OWNER = { has_war_with = ROOT }
-						OWNER = { is_subject_of = ROOT } 
-					}
-				}
-				864 = {
-					OR = {
-						is_controlled_by = ROOT 
-						is_owned_by = ROOT
-						OWNER = { has_war_with = ROOT }
-						OWNER = { is_subject_of = ROOT } 
-					}
-				}
-			}
-		}	
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
-
-		completion_reward = {
-			473 = { CONTROLLER = { country_event = mtg_usa_canadian_corridor.1 } }
-		}
-	}
-	focus = {
-		id = USA_north_american_dominion
-		icon = GFX_goal_generic_political_pressure
-		x = 0
-		y = 3
-		prerequisite = { focus = USA_the_canadian_corridor }
-		prerequisite = { focus = USA_eliminate_the_southern_threat }
-		relative_position_id = USA_war_powers_act
-		cost = 10
-
-		ai_will_do = {
-			factor = 1
-		}
-
-		available = {
-
-		}
-		
-		bypass = {
-
-				CUB = {
-					OR = {
-						exists = no
-						has_war_with = ROOT
-						is_subject_of = ROOT
-					}
-				}
-				HAI = {
-					OR = {
-						exists = no
-						has_war_with = ROOT
-						is_subject_of = ROOT
-					}
-				}
-				DOM = {
-					OR = {
-						exists = no
-						has_war_with = ROOT
-						is_subject_of = ROOT
-					}
-				}
-				GUA = {
-					OR = {
-						exists = no
-						has_war_with = ROOT
-						is_subject_of = ROOT
-					}
-				}
-				CAN = {
-					OR = {
-						exists = no
-						has_war_with = ROOT
-						is_subject_of = ROOT
-					}
-				}
-				MEX = {
-					OR = {
-						exists = no
-						has_war_with = ROOT
-						is_subject_of = ROOT
-					}
-				}
-				HON = {
-					OR = {
-						exists = no
-						has_war_with = ROOT
-						is_subject_of = ROOT
-					}
-				}
-				NIC = {
-					OR = {
-						exists = no
-						has_war_with = ROOT
-						is_subject_of = ROOT
-					}
-				}
-				PAN = {
-					OR = {
-						exists = no
-						has_war_with = ROOT
-						is_subject_of = ROOT
-					}
-				}
-				COS = {
-					OR = {
-						exists = no
-						has_war_with = ROOT
-						is_subject_of = ROOT
-					}
-				}
-				ELS = {
-					OR = {
-						exists = no
-						has_war_with = ROOT
-						is_subject_of = ROOT
-					}
-				}
-		}
-
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
-
-		completion_reward = {
-			every_country = {
-				limit = {
-					OR = {
-						original_tag = CUB
-						original_tag = HAI
-						original_tag = DOM
-						original_tag = GUA
-						original_tag = MEX
-						original_tag = CAN
-						original_tag = HON
-						original_tag = NIC
-						original_tag = PAN
-						original_tag = COS
-						original_tag = ELS
-					}
-					not = { has_war_with = ROOT }
-					not = { is_subject_of = ROOT }
-					exists = yes
-				}
-				country_event = mtg_usa_north_american_dominion.1
-			}
-		}
-	}
-	focus = {
-		id = USA_strategic_interests
-		icon = GFX_goal_generic_more_territorial_claims
-		x = -1
-		y = 4
-		prerequisite = { focus = USA_north_american_dominion }
-		relative_position_id = USA_war_powers_act
-		cost = 10
-
-		ai_will_do = {
-			factor = 1
-		}
-
-		available = {
-
-		}
-		
-		bypass = {
-				AND = {
-					336 = {
-						OR = {
-							is_controlled_by = ROOT
-							CONTROLLER = { has_war_with = ROOT }
-						}	
-					}
-					326 = {
-						OR = {
-							is_controlled_by = ROOT
-							CONTROLLER = { has_war_with = ROOT }
-						}	
-					}
-					118 = {
-						OR = {
-							is_controlled_by = ROOT
-							CONTROLLER = { has_war_with = ROOT }
-						}	
-					}
-				}
-		}
-
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
-
-		completion_reward = {
-			IF = {
-				limit = {
-					any_other_country = {
-						has_full_control_of_state = 118
-						has_full_control_of_state = 326
-						not = { has_war_with = ROOT }
-						336 = { 
-							CONTROLLER = { 
-								OR = {
-									is_subject_of = PREV.PREV 
-									tag = PREV.PREV
-								}
-							} 
-						}
-					}
-				}
-				118 = {
-					CONTROLLER = {
-						country_event = mtg_usa_strategic_interests.1
-					}
-				}
-			}
-			else = {
-				if = {
-					limit = {
-						336 = { 
-							CONTROLLER = { 
-								is_subject = no 
-								NOT = { has_full_control_of_state = 118 }
-								not = { has_war_with = ROOT }
-							} 
-						}
-					}
-					336 = { CONTROLLER = { country_event = mtg_usa_strategic_interests.1 } }
-					118 = { CONTROLLER = { country_event = mtg_usa_strategic_interests.1 } }
-					if = {
-						limit = {
-							336 = {
-								CONTROLLER = {
-									NOT = { has_full_control_of_state = 326 }
-									not = { has_war_with = ROOT }		
-								}
-							}
-							326 = { 
-								CONTROLLER = {
-									NOT = { has_full_control_of_state = 118 }
-									not = { has_war_with = ROOT }			
-								}
-							}
-						}
-						326 = { CONTROLLER = { country_event = mtg_usa_strategic_interests.1 } }
-					}
-				}
-				else_if = {
-					limit = {
-						336 = { 
-							CONTROLLER = { 
-								is_subject = yes 
-								not = { has_war_with = ROOT }
-							} 
-						}
-					}
-					336 = { CONTROLLER = { OVERLORD = { country_event = mtg_usa_strategic_interests.1 } } }
-					if = { 
-						limit = {
-							336 = { 
-								CONTROLLER = { 
-									OVERLORD = { 
-										not = { controls_state = 326 }
-										not = { has_war_with = ROOT }
-									} 
-								} 
-							}
-						}
-						326 = { CONTROLLER = { country_event = mtg_usa_strategic_interests.1 } }
-					}
-					if = { 
-						limit = {
-							336 = { 
-								CONTROLLER = { 
-									OVERLORD = { 
-										not = { controls_state = 118 }
-										not = { has_war_with = ROOT }
-									} 
-								} 
-							}
-						}
-						118 = { CONTROLLER = { country_event = mtg_usa_strategic_interests.1 } }
-					}
-				}
-			}
-		}
-	}
-	focus = {
-		id = USA_protect_south_america
-		icon = GFX_goal_generic_attack_allies
-		x = -1
-		y = 5
-		prerequisite = { focus = USA_strategic_interests }
-		relative_position_id = USA_war_powers_act
-		cost = 10
-
-		ai_will_do = {
-			factor = 1
-		}
-
-		available = {
-
-		}
-		bypass = {
-				AND = { 
-					BRA = { 
-						OR = {
-							exists = no
-							has_war_with = ROOT
-						}
-					}
-					VEN = { 
-						OR = {
-							exists = no
-							has_war_with = ROOT
-						}
-					}
-					COL = { 
-						OR = {
-							exists = no
-							has_war_with = ROOT
-						}
-					}
-					ECU = { 
-						OR = {
-							exists = no
-							has_war_with = ROOT
-						}
-					}
-					PRU = { 
-						OR = {
-							exists = no
-							has_war_with = ROOT
-						}
-					}
-					BOL = { 
-						OR = {
-							exists = no
-							has_war_with = ROOT
-						}
-					}
-					PAR = { 
-						OR = {
-							exists = no
-							has_war_with = ROOT
-						}
-					}
-					ARG = { 
-						OR = {
-							exists = no
-							has_war_with = ROOT
-						}
-					}
-					CHL = { 
-						OR = {
-							exists = no
-							has_war_with = ROOT
-						}
-					}
-					URG = { 
-						OR = {
-							exists = no
-							has_war_with = ROOT
-						}
-					}
-				}
-		}
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
-
-		completion_reward = {
-			every_country = {
-				limit = {
-					OR = {
-						original_tag = BRA
-						original_tag = VEN
-						original_tag = COL
-						original_tag = ECU
-						original_tag = PRU
-						original_tag = BOL
-						original_tag = PAR
-						original_tag = ARG
-						original_tag = CHL
-						original_tag = URG
-					}
-					not = { has_war_with = ROOT }
-					not = { is_subject_of = ROOT }
-					exists = yes
-				}
-				country_event = mtg_usa_protect_south_america.1
-			}
-		}
-	}
-	focus = {
-		id = USA_pacific_pacification
-		icon = GFX_focus_generic_coastal_fort
-		x = 1
-		y = 4
-		prerequisite = { focus = USA_north_american_dominion }
-		relative_position_id = USA_war_powers_act
-		cost = 10
-
-		ai_will_do = {
-			factor = 1
-		}
-
-		available = {
-			country_exists = AST
-			country_exists = NZL
-		}
-		
-		bypass = {
-			AND = { 
-				AST = {
-					OR = {
-						exists = no
-						is_subject_of = ROOT 
-						has_war_with = ROOT 	
-					}
-					
-				}
-				NZL = {
-					OR = {
-						exists = no
-						is_subject_of = ROOT 
-						has_war_with = ROOT 	
-					}
-					
-				}
-			}
-		}
-
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
-		
-		## AST is Subject, NZL is not ## 	
-		completion_reward = {
-			if = {
-				limit = {
-					AST = {
-						is_subject = yes
-						OVERLORD = {
-							not = { tag = NZL }
-							not = { tag = ROOT }
-						}
-					}
-					NZL = {
-						is_subject = no
-					}
-				}
-				##Checking if any of the coutries involved are at war with USA before triggering the event for them. 
-				if = {
-					limit = {
-						AST = { OVERLORD = { NOT = {has_war_with = ROOT}}}
-						}
-					AST = { OVERLORD = { country_event = mtg_usa_pacific_pacification.1 } }
-				}
-				if = {
-					limit = {
-						NZL = { NOT = { has_war_with = ROOT}}
-					}
-					NZL = { country_event = mtg_usa_pacific_pacification.1 }
-				}
-				
-				
-			}
-			## NZL is subject, AST is not ##
-			else_if = {
-				limit = {
-					AST = {
-						is_subject = no
-					}
-					NZL = {
-						is_subject = yes
-						OVERLORD = {
-							not = { tag = AST }
-							not = { tag = ROOT }
-						}
-					}
-				}
-				##Checking if any of the coutries involved are at war with USA before triggering the event for them. 
-				if = {
-					limit = {
-						NZL = { OVERLORD = { NOT = {has_war_with = ROOT }}}
-					}
-					NZL = { OVERLORD = { country_event = mtg_usa_pacific_pacification.1 } }
-				}
-				if = {
-					limit = {
-						AST = { NOT = { has_war_with = ROOT }}
-					}
-					AST = { country_event = mtg_usa_pacific_pacification.1 }
-				}
-			}
-			## NZL and AST are subjects ## 
-			else_if = {
-				limit = {
-					AST = {
-						is_subject = yes
-						OVERLORD = {
-							not = { tag = ROOT }
-						}
-					}
-					NZL = {
-						is_subject = yes
-						OVERLORD = {
-							not = { tag = ROOT }
-						}
-					}
-				}
-				if = {
-					limit = {
-						AST = { OVERLORD = { NOT = {has_war_with = ROOT }}}
-					}
-					AST = { OVERLORD = { country_event = mtg_usa_pacific_pacification.1 } }
-				}
-				if = {
-					limit = {
-						AST = { OVERLORD = { NZL = { OVERLORD = { not = { tag = PREV.PREV } } } } } #NZL and AST both subjects but of different people
-					}
-					if = {
-						limit = { 
-							NZL = { OVERLORD = { NOT = { has_war_with = ROOT }}}
-						}
-						NZL = { OVERLORD = { country_event = mtg_usa_pacific_pacification.1 } }
-					}
-					
-				}
-			}
-			## NZL and AST are independent. 
-			else = {
-				AST = { country_event = mtg_usa_pacific_pacification.1 }
-				NZL = { country_event = mtg_usa_pacific_pacification.1 }
-			}	
-		}
-	}
-	focus = {
-		id = USA_secure_asia
-		icon = GFX_focus_generic_strike_at_democracy1
-		x = 1
-		y = 5
-		prerequisite = { focus = USA_pacific_pacification }
-		relative_position_id = USA_war_powers_act
-		cost = 10
-
-		ai_will_do = {
-			factor = 1
-		}
-
-		available = {
-
-		}
-		
-		bypass = {
-			SIA = {
-				OR = {
-					has_war_with = ROOT
-					is_subject_of = ROOT
-					exists = no
-				}
-			}
-			INS = {
-				OR = {
-					has_war_with = ROOT
-					is_subject_of = ROOT
-					exists = no
-				}
-			}
-			671 = {
-				CONTROLLER = {
-					OR = {
-						has_war_with = ROOT
-						is_subject_of = ROOT
-					}
-				}
-			}
-			670 = {
-				CONTROLLER = {
-					OR = {
-						has_war_with = ROOT
-						is_subject_of = ROOT
-					}
-				}
-			}
-			741 = {
-				CONTROLLER = {
-					OR = {
-						has_war_with = ROOT
-						is_subject_of = ROOT
-					}
-				}
-			}
-		}
-
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
-
-		completion_reward = {
-			if = {
-				limit = { 
-					SIA = { 
-						is_subject = no 
-						not = { has_war_with = ROOT }
-					} 
-				}
-				SIA = {
-					country_event = mtg_usa_secure_asia.1
-				}
-			}
-			if = {
-				limit = {
-					INS = { is_subject = yes }
-				}
-				INS = { OVERLORD = { country_event = mtg_usa_secure_asia.4 } }
-			}
-			else = {
-				INS = { country_event = mtg_usa_secure_asia.1 }
-			}
-			if = {
-				limit = {
-					671 = { 
-						CONTROLLER = { 
-							is_subject = no 
-							controls_state = 670
-							controls_state = 286
-							controls_state = 741
-							not = { has_war_with = ROOT }
-						} 
-					}
-				}
-				671 = { CONTROLLER = { country_event = mtg_usa_secure_asia.7 } }
-			}
-			else = {
-				if = {
-					limit = {
-						country_exists = VIN
-						VIN = {
-							is_subject = no
-							not = { has_war_with = ROOT }
-						}
-					}
-					VIN = {
-						country_event = mtg_usa_secure_asia.1
-					}
-				}
-				if = {
-					limit = {
-						country_exists = LAO
-						LAO = {
-							is_subject = no
-							not = { has_war_with = ROOT }
-						}
-					}
-					LAO = {
-						country_event = mtg_usa_secure_asia.1
-					}
-				}
-				if = {
-					limit = {
-						country_exists = CAM
-						CAM = {
-							is_subject = no
-							not = { has_war_with = ROOT }
-						}
-					}
-					CAM = {
-						country_event = mtg_usa_secure_asia.1
-					}
-				}
-			}
-		}
-	}
-	focus = {
-		id = USA_global_hegemony
-		icon = GFX_focus_generic_diplomatic_treaty
-		x = 0
-		y = 6
-		prerequisite = { focus = USA_secure_asia }
-		prerequisite = { focus = USA_protect_south_america }
-		relative_position_id = USA_war_powers_act
-		cost = 10
-
-		ai_will_do = {
-			factor = 1
-		}
-
-		available = {
-
-		}
-		
-		bypass = {
-
-		}
-
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
-
-		completion_reward = {
-			every_country = {
-				limit = {
-					is_major = yes
-					is_subject = no
-					not = { original_tag = USA }
-					not = { has_war_with = ROOT }
-				}
-				hidden_effect = {
-					ROOT = {
-						create_wargoal = {
-							type = puppet_wargoal_focus
-							target = PREV
-							expire = 0
-						}
-					}
-				}
-				custom_effect_tooltip = create_puppet_wargoal_usa
-			}
-		}
-	}
+	
 
 
 
@@ -6860,8 +5135,7 @@ focus_tree = {
 	focus = {
 		id = USA_towards_national_utopia
 		icon = GFX_focus_generic_population_growth
-		relative_position_id = USA_reestablish_the_gold_standard
-		x = 22
+		x = 35
 		y = 0
 		
 		cost = 5
@@ -6871,7 +5145,7 @@ focus_tree = {
 		}
 		mutually_exclusive = { 
 			focus = USA_continue_the_new_deal
-			focus = USA_reestablish_the_gold_standard
+			focus = USA_revolt_of_engineers
 		}
 
 		available = {
@@ -8195,7 +6469,7 @@ focus_tree = {
 	### POUND SUCCESSORS 
 	focus = {
 		id = USA_fall_of_prometheus
-		x = 39
+		x = 35
 		y = 11
 		
 		cost = 2
@@ -8856,8 +7130,8 @@ focus_tree = {
 	### Scott Tree ###
 	focus = {
 		id = USA_revolt_of_engineers
-		x = 8
-		y = 10
+		x = 25
+		y = 0
 		
 		cost = 5
 		ai_will_do = {
@@ -8868,15 +7142,17 @@ focus_tree = {
 			has_government = neutrality
 			has_country_leader = { ruling_only = yes character = USA_howard_scott }
 		}
+		mutually_exclusive = { 
+			focus = USA_continue_the_new_deal
+			focus = USA_towards_national_utopia
+		}
 
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
 		completion_reward = {
-			remove_ideas = USA_state_of_utopia
-			remove_ideas = USA_american_blackshirts
-			set_cosmetic_tag = SCOT
 			add_political_power = 50
+			add_popularity = { ideology = democratic popularity = -0.15 }
 			add_popularity = { ideology = fascism popularity = -0.15 }
 		}
 	}
@@ -8885,7 +7161,7 @@ focus_tree = {
 		x = -1
 		y = 1
 		
-		cost = 5
+		cost = 6
 		ai_will_do = {
 			factor = 10
 		}
@@ -8901,9 +7177,8 @@ focus_tree = {
 		continue_if_invalid = no
 		available_if_capitulated = no
 		completion_reward = {
-			remove_ideas = USA_national_syndicalism
-			remove_ideas = USA_national_syndicalism2
-			add_ideas = USA_technocratic_economy
+			USA_great_depression_level_down = yes
+			add_ideas = dirigisme
 		}
 	}
 	focus = {
@@ -8911,13 +7186,13 @@ focus_tree = {
 		x = -4
 		y = 2
 		
-		cost = 5
+		cost = 6
 		ai_will_do = {
 			factor = 10
 		}
 		relative_position_id = USA_revolt_of_engineers
 		prerequisite = { focus = USA_geothermal_evolution }
-		icon = GFX_focus_GER_prioritize_the_four_year_plan
+		icon = GFX_focus_generic_full_employment
 		available = {
 			has_government = neutrality
 			has_country_leader = { ruling_only = yes character = USA_howard_scott }
@@ -8927,8 +7202,7 @@ focus_tree = {
 		continue_if_invalid = no
 		available_if_capitulated = no
 		completion_reward = {
-			remove_ideas = USA_national_syndicalism
-			remove_ideas = USA_national_syndicalism2
+			
 			add_ideas = USA_technocratic_economy
 		}
 	}
@@ -8937,7 +7211,7 @@ focus_tree = {
 		x = 1
 		y = 1
 		
-		cost = 5
+		cost = 6
 		ai_will_do = {
 			factor = 10
 		}
@@ -8954,7 +7228,7 @@ focus_tree = {
 		available_if_capitulated = no
 		completion_reward = {
 			swap_ideas = {
-			remove_idea = USA_revolutionary_destiny
+			remove_idea = home_of_the_free
 			add_idea = USA_nothing_against_everything_for_state
 			}
 		}
@@ -8964,7 +7238,7 @@ focus_tree = {
 		x = -2
 		y = 2
 		
-		cost = 5
+		cost = 6
 		ai_will_do = {
 			factor = 10
 		}
@@ -8981,10 +7255,7 @@ focus_tree = {
 		continue_if_invalid = no
 		available_if_capitulated = no
 		completion_reward = {
-			swap_ideas = {
-				remove_idea = USA_technocratic_economy
-				add_idea = USA_technocratic_economy2
-			}
+			USA_great_depression_level_down = yes
 		}
 	}
 	focus = {
@@ -8992,14 +7263,14 @@ focus_tree = {
 		x = -3
 		y = 3
 		
-		cost = 5
+		cost = 6
 		ai_will_do = {
 			factor = 10
 		}
 		relative_position_id = USA_revolt_of_engineers
 		prerequisite = { focus = USA_scientific_corporatism }
 		prerequisite = { focus = USA_energy_credit_system }
-		icon = GFX_focus_GER_customs_union
+		icon = GFX_focus_generic_mass_production
 		available = {
 			has_government = neutrality
 			has_country_leader = { ruling_only = yes character = USA_howard_scott }
@@ -9009,18 +7280,20 @@ focus_tree = {
 		continue_if_invalid = no
 		available_if_capitulated = no
 		completion_reward = {
-			swap_ideas = {
-				remove_idea = USA_technocratic_economy
-				add_idea = USA_technocratic_economy2
+			USA_great_depression_level_down = yes
+			add_tech_bonus = {
+				bonus = 0.5
+				uses = 2
+				category = industry
 			}
 		}
 	}
 	focus = {
-		id = USA_a_new_work_week
-		x = -3
+		id = USA_continental_autarky
+		x = -4
 		y = 4
 		
-		cost = 5
+		cost = 6
 		ai_will_do = {
 			factor = 10
 		}
@@ -9036,25 +7309,21 @@ focus_tree = {
 		continue_if_invalid = no
 		available_if_capitulated = no
 		completion_reward = {
-			swap_ideas = {
-				remove_idea = USA_technocratic_economy
-				add_idea = USA_technocratic_economy2
-			}
+			add_ideas = autarkic_economy
 		}
 	}
 	focus = {
-		id = USA_hierarchical_meritocracy
-		x = 0
-		y = 2
+		id = USA_a_new_work_week
+		x = -2
+		y = 4
 		
-		cost = 5
+		cost = 6
 		ai_will_do = {
 			factor = 10
 		}
 		relative_position_id = USA_revolt_of_engineers
-		prerequisite = { focus = USA_geothermal_evolution }
-		prerequisite = { focus = USA_dictatorship_of_logos }
-		icon = GFX_focus_generic_full_social_mobilization
+		prerequisite = { focus = USA_rationalize_the_production }
+		icon = GFX_focus_generic_worker_administration
 		available = {
 			has_government = neutrality
 			has_country_leader = { ruling_only = yes character = USA_howard_scott }
@@ -9064,12 +7333,39 @@ focus_tree = {
 		continue_if_invalid = no
 		available_if_capitulated = no
 		completion_reward = {
-			add_trait = {
-    			character = USA_howard_scott
-    			ideology = technocracy
-    			trait = nuclear_commander
+			USA_great_depression_level_down = yes
+			swap_ideas = {
+				remove_idea = USA_technocratic_economy
+				add_idea = USA_technocratic_economy2
 			}
-			
+		}
+	}
+	focus = {
+		id = USA_win_the_troops
+		x = 0
+		y = 2
+		
+		cost = 6
+		ai_will_do = {
+			factor = 10
+		}
+		relative_position_id = USA_revolt_of_engineers
+		prerequisite = { focus = USA_geothermal_evolution }
+		prerequisite = { focus = USA_dictatorship_of_logos }
+		icon = GFX_focus_generic_advanced_military_studies
+		available = {
+			has_government = neutrality
+			has_country_leader = { ruling_only = yes character = USA_howard_scott }
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		completion_reward = {
+			upgrade_draft_law = yes
+			set_grand_doctrine = grand_battleplan
+			army_experience = 75
+			add_war_support = 0.05
 		}
 	}
 	focus = {
@@ -9084,7 +7380,7 @@ focus_tree = {
 		relative_position_id = USA_revolt_of_engineers
 		prerequisite = { focus = USA_geothermal_evolution }
 		prerequisite = { focus = USA_dictatorship_of_logos }
-		icon = GFX_focus_generic_treaty
+		icon = GFX_focus_generic_prohibition
 		available = {
 			has_government = neutrality
 			has_country_leader = { ruling_only = yes character = USA_howard_scott }
@@ -9094,24 +7390,7 @@ focus_tree = {
 		continue_if_invalid = no
 		available_if_capitulated = no
 		completion_reward = {
-			army_experience = 75
-			air_experience = 75
-			navy_experience = 75
-			add_doctrine_cost_reduction = {
-				cost_reduction = 0.5
-				uses = 2
-				category = land_doctrine
-			}
-			add_doctrine_cost_reduction = {
-				cost_reduction = 0.5
-				uses = 2
-				category = naval_doctrine
-			}
-			add_doctrine_cost_reduction = {
-				cost_reduction = 0.5
-				uses = 2
-				category = air_doctrine
-			}
+			add_ideas = USA_new_prohibition
 		}
 	}
 	focus = {
@@ -9126,7 +7405,7 @@ focus_tree = {
 		relative_position_id = USA_revolt_of_engineers
 		prerequisite = { focus = USA_geothermal_evolution }
 		prerequisite = { focus = USA_dictatorship_of_logos }
-		icon = GFX_focus_generic_treaty
+		icon = GFX_focus_generic_worker_expansion
 		available = {
 			has_government = neutrality
 			has_country_leader = { ruling_only = yes character = USA_howard_scott }
@@ -9136,24 +7415,8 @@ focus_tree = {
 		continue_if_invalid = no
 		available_if_capitulated = no
 		completion_reward = {
-			army_experience = 75
-			air_experience = 75
-			navy_experience = 75
-			add_doctrine_cost_reduction = {
-				cost_reduction = 0.5
-				uses = 2
-				category = land_doctrine
-			}
-			add_doctrine_cost_reduction = {
-				cost_reduction = 0.5
-				uses = 2
-				category = naval_doctrine
-			}
-			add_doctrine_cost_reduction = {
-				cost_reduction = 0.5
-				uses = 2
-				category = air_doctrine
-			}
+			custom_effect_tooltip = "An Event Chain Will Fire Off Detailing the Codification of the Technocracy Movement!"
+			add_ideas = partystate
 		}
 	}
 	focus = {
@@ -9178,12 +7441,26 @@ focus_tree = {
 		continue_if_invalid = no
 		available_if_capitulated = no
 		completion_reward = {
-			
+			add_doctrine_cost_reduction = {
+				cost_reduction = 0.5
+				uses = 2
+				category = land_doctrine
+			}
+			add_doctrine_cost_reduction = {
+				cost_reduction = 0.5
+				uses = 2
+				category = naval_doctrine
+			}
+			add_doctrine_cost_reduction = {
+				cost_reduction = 0.5
+				uses = 2
+				category = air_doctrine
+			}
 		}
 	}
 	focus = {
-		id = USA_continental_director_ascendent
-		x = 3
+		id = USA_homo_technus
+		x = 2
 		y = 4
 		
 		cost = 5
@@ -9192,7 +7469,7 @@ focus_tree = {
 		}
 		relative_position_id = USA_revolt_of_engineers
 		prerequisite = { focus = USA_study_guide_in_every_hand }
-		icon = GFX_focus_generic_treaty
+		icon = GFX_focus_generic_public_works
 		available = {
 			has_government = neutrality
 			has_country_leader = { ruling_only = yes character = USA_howard_scott }
@@ -9202,7 +7479,50 @@ focus_tree = {
 		continue_if_invalid = no
 		available_if_capitulated = no
 		completion_reward = {
-			
+			add_unit_bonus = {
+				category_all_infantry = {
+					hardness = 0.15
+					supply_consumption = 0.04
+				}
+			}
+			add_tech_bonus = {
+				bonus = 0.35
+				uses = 3
+				category = armor
+			}
+			add_tech_bonus = {
+				bonus = 0.35
+				uses = 3
+				category = naval_equipment
+			}
+		}
+	}
+	focus = {
+		id = USA_continental_director_ascendent
+		x = 4
+		y = 4
+		
+		cost = 5
+		ai_will_do = {
+			factor = 10
+		}
+		relative_position_id = USA_revolt_of_engineers
+		prerequisite = { focus = USA_study_guide_in_every_hand }
+		icon = GFX_focus_generic_military_dictatorship
+		available = {
+			has_government = neutrality
+			has_country_leader = { ruling_only = yes character = USA_howard_scott }
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		completion_reward = {
+			add_trait = {
+    			character = USA_howard_scott
+    			ideology = technocracy
+    			trait = nuclear_commander
+			}
 		}
 	}
 	focus = {
@@ -9216,8 +7536,7 @@ focus_tree = {
 		}
 		relative_position_id = USA_revolt_of_engineers
 		prerequisite = { focus = USA_energy_credit_system }
-		prerequisite = { focus = USA_hierarchical_meritocracy }
-		prerequisite = { focus = USA_sober_up_and_study }
+		prerequisite = { focus = USA_win_the_troops }
 		icon = GFX_focus_GER_wunderwaffe
 		available = {
 			has_government = neutrality
@@ -9238,10 +7557,7 @@ focus_tree = {
 				uses = 2
 				category = rocketry
 			}
-			swap_ideas = {
-				remove_idea = USA_technocratic_economy2
-				add_idea = USA_technocratic_economy3
-			}
+			add_research_slot = 1
 		}
 	}
 	focus = {
@@ -9254,8 +7570,7 @@ focus_tree = {
 			factor = 10
 		}
 		relative_position_id = USA_revolt_of_engineers
-		prerequisite = { focus = USA_energy_credit_system }
-		prerequisite = { focus = USA_hierarchical_meritocracy }
+		prerequisite = { focus = USA_win_the_troops }
 		prerequisite = { focus = USA_reinstate_prohibition }
 		icon = GFX_focus_research2
 		available = {
@@ -9267,7 +7582,7 @@ focus_tree = {
 		continue_if_invalid = no
 		available_if_capitulated = no
 		completion_reward = {
-			set_research_slots = 7
+			add_research_slot = 1
 			add_ideas = USA_unleashed_science
 		}
 	}
@@ -9287,19 +7602,247 @@ focus_tree = {
 		available = {
 			has_government = neutrality
 			has_country_leader = { ruling_only = yes character = USA_howard_scott }
+			has_completed_focus = USA_continental_director_ascendent
 		}
 
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
 		completion_reward = {
+			set_cosmetic_tag = SCOT
 			every_state = { 
 				limit = { is_on_continent = north_america }
 				add_claim_by = USA
 			}
 			add_war_support = 0.15
+		}
+	}
+	focus = {
+		id = USA_request_north_american_dominionship
+		x = -1
+		y = 5
+		
+		cost = 5
+		ai_will_do = {
+			factor = 10
+		}
+		relative_position_id = USA_revolt_of_engineers
+		prerequisite = { focus = USA_panama_to_pole }
+		icon = GFX_focus_GER_establish_protectorates_in_america
+		mutually_exclusive = { focus = USA_kick_out_redcoats }
+		available = {
+			has_government = neutrality
+			has_country_leader = { ruling_only = yes character = USA_howard_scott }
+			OR = {
+				ENG = { has_government = neutrality }
+				ENG = { has_government = fascism }
+			}
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		completion_reward = {
+		
+		}
+	}
+	focus = {
+		id = USA_kick_out_redcoats
+		x = 1
+		y = 5
+		
+		cost = 5
+		ai_will_do = {
+			factor = 10
+		}
+		relative_position_id = USA_revolt_of_engineers
+		prerequisite = { focus = USA_panama_to_pole }
+		icon = GFX_focus_attack_britain
+		mutually_exclusive = { focus = USA_request_north_american_dominionship }
+		available = {
+			has_government = neutrality
+			has_country_leader = { ruling_only = yes character = USA_howard_scott }
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		completion_reward = {
+			add_state_claim = 331
+			add_state_claim = 332
+			add_state_claim = 730
+			CAN = {
+				every_core_state = {
+					add_claim_by = ROOT
+				}
+			}
+		}
+	}
+	focus = {
+		id = USA_neutralize_mexican_chaos
+		x = 0
+		y = 6
+		
+		cost = 5
+		ai_will_do = {
+			factor = 10
+		}
+		relative_position_id = USA_revolt_of_engineers
+		prerequisite = { focus = USA_panama_to_pole }
+		icon = GFX_focus_attack_mexico
+		available = {
+			has_government = neutrality
+			has_country_leader = { ruling_only = yes character = USA_howard_scott }
+		}
+		will_lead_to_war_with = MEX
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		completion_reward = {
+			MEX = {
+				every_core_state = {
+					add_claim_by = ROOT
+				}
+			}
+			declare_war_on = {
+				target = MEX
+				type = annex_everything
+			}
+		}
+	}
+	focus = {
+		id = USA_tectonic_integration
+		x = 0
+		y = 7
+		
+		cost = 5
+		ai_will_do = {
+			factor = 10
+		}
+		relative_position_id = USA_revolt_of_engineers
+		prerequisite = { focus = USA_panama_to_pole }
+		icon = GFX_focus_generic_subjugation
+		available = {
+			has_government = neutrality
+			has_country_leader = { ruling_only = yes character = USA_howard_scott }
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		completion_reward = {
 			unlock_decision_tooltip = SCOT_integrate_states
+		}
+	}
+	focus = {
+		id = USA_the_banana_wars
+		x = -2
+		y = 7
+		
+		cost = 5
+		ai_will_do = {
+			factor = 10
+		}
+		relative_position_id = USA_revolt_of_engineers
+		prerequisite = { focus = USA_neutralize_mexican_chaos }
+		icon = GFX_focus_por_recover_latin_america
+		available = {
+			has_government = neutrality
+			has_country_leader = { ruling_only = yes character = USA_howard_scott }
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		completion_reward = {
 			unlock_decision_tooltip = SCOT_towards_north_american_self_sufficiency
+		}
+	}
+	
+	focus = {
+		id = USA_demand_cuban_oversight
+		x = 2
+		y = 7
+		
+		cost = 5
+		ai_will_do = {
+			factor = 10
+		}
+		relative_position_id = USA_revolt_of_engineers
+		prerequisite = { focus = USA_neutralize_mexican_chaos }
+		icon = GFX_goal_generic_forceful_treaty
+		available = {
+			has_government = neutrality
+			has_country_leader = { ruling_only = yes character = USA_howard_scott }
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		completion_reward = {
+			add_state_claim = 315
+			add_state_claim = 690
+			add_state_claim = 693
+			add_state_claim = 689
+			create_wargoal = {
+   				type = annex_everything
+    			target = CUB
+			}
+		}
+	}
+
+	focus = {
+		id = USA_crush_the_yellow_empire
+		x = -1
+		y = 8
+		
+		cost = 5
+		ai_will_do = {
+			factor = 10
+		}
+		relative_position_id = USA_revolt_of_engineers
+		prerequisite = { focus = USA_neutralize_mexican_chaos }
+		icon = GFX_focus_attack_japan
+		available = {
+			has_government = neutrality
+			has_country_leader = { ruling_only = yes character = USA_howard_scott }
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		completion_reward = {
+			create_wargoal = {
+   				type = puppet_wargoal_focus
+    			target = JAP
+			}
+			add_state_claim = 633
+			add_state_claim = 639
+			add_state_claim = 684
+		}
+	}
+
+	focus = {
+		id = USA_secure_greenland
+		x = 1
+		y = 8
+		
+		cost = 5
+		ai_will_do = {
+			factor = 10
+		}
+		relative_position_id = USA_revolt_of_engineers
+		prerequisite = { focus = USA_neutralize_mexican_chaos }
+		icon = GFX_focus_DEN_protect_greenland
+		available = {
+			has_government = neutrality
+			has_country_leader = { ruling_only = yes character = USA_howard_scott }
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		completion_reward = {
 			101 = {
 				add_claim_by = USA
 				OWNER = { 
@@ -9322,128 +7865,6 @@ focus_tree = {
    					}
 				}			
 			}
-		}
-	}
-	focus = {
-		id = USA_request_north_american_dominionship
-		x = -1
-		y = 5
-		
-		cost = 5
-		ai_will_do = {
-			factor = 10
-		}
-		relative_position_id = USA_revolt_of_engineers
-		prerequisite = { focus = USA_panama_to_pole }
-		icon = GFX_focus_generic_diplomatic_treaty
-		mutually_exclusive = { focus = USA_kick_out_redcoats }
-		available = {
-			has_government = neutrality
-			has_country_leader = { ruling_only = yes character = USA_howard_scott }
-		}
-
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
-		completion_reward = {
-		
-		}
-	}
-	focus = {
-		id = USA_kick_out_redcoats
-		x = 1
-		y = 5
-		
-		cost = 5
-		ai_will_do = {
-			factor = 10
-		}
-		relative_position_id = USA_revolt_of_engineers
-		prerequisite = { focus = USA_panama_to_pole }
-		icon = GFX_focus_generic_diplomatic_treaty
-		mutually_exclusive = { focus = USA_request_north_american_dominionship }
-		available = {
-			has_government = neutrality
-			has_country_leader = { ruling_only = yes character = USA_howard_scott }
-		}
-
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
-		completion_reward = {
-			
-		}
-	}
-	focus = {
-		id = USA_neutralize_mexican_chaos
-		x = 0
-		y = 6
-		
-		cost = 5
-		ai_will_do = {
-			factor = 10
-		}
-		relative_position_id = USA_revolt_of_engineers
-		prerequisite = { focus = USA_panama_to_pole }
-		icon = GFX_focus_generic_diplomatic_treaty
-		available = {
-			has_government = neutrality
-			has_country_leader = { ruling_only = yes character = USA_howard_scott }
-		}
-
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
-		completion_reward = {
-			
-		}
-	}
-	focus = {
-		id = USA_the_banana_wars
-		x = -1
-		y = 7
-		
-		cost = 5
-		ai_will_do = {
-			factor = 10
-		}
-		relative_position_id = USA_revolt_of_engineers
-		prerequisite = { focus = USA_neutralize_mexican_chaos }
-		icon = GFX_focus_generic_diplomatic_treaty
-		available = {
-			has_government = neutrality
-			has_country_leader = { ruling_only = yes character = USA_howard_scott }
-		}
-
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
-		completion_reward = {
-			
-		}
-	}
-	focus = {
-		id = USA_demand_cuban_oversight
-		x = 1
-		y = 7
-		
-		cost = 5
-		ai_will_do = {
-			factor = 10
-		}
-		relative_position_id = USA_revolt_of_engineers
-		prerequisite = { focus = USA_neutralize_mexican_chaos }
-		icon = GFX_focus_generic_diplomatic_treaty
-		available = {
-			has_government = neutrality
-			has_country_leader = { ruling_only = yes character = USA_howard_scott }
-		}
-
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
-		completion_reward = {
-			
 		}
 	}
 }

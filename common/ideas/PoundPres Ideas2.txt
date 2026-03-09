@@ -90,14 +90,12 @@ ideas = {
 			}
 			name = "Technocratic Social Planning"
 			modifier = {
-				research_speed_factor = 0.05
-				consumer_goods_factor = -0.1
-				production_factory_start_efficiency_factor = -0.20
-				production_factory_efficiency_gain_factor = -0.15
-				production_factory_max_efficiency_factor = 0.05
-				line_change_production_efficiency_factor = -0.15
-				industrial_capacity_dockyard = 0.05
-				min_export = -0.05
+				consumer_goods_factor = -0.05
+				production_factory_start_efficiency_factor = -0.2
+				production_factory_efficiency_gain_factor = -0.2
+				production_factory_max_efficiency_factor = 0.025
+				line_change_production_efficiency_factor = -0.1
+				industrial_capacity_dockyard = 0.025
 			}
 		}
 		
@@ -107,14 +105,13 @@ ideas = {
 			}
 			name = "Technocratic Social Planning"
 			modifier = {
-				research_speed_factor = 0.1
-				consumer_goods_factor = -0.20
+				research_speed_factor = 0.05
+				consumer_goods_factor = -0.15
 				production_factory_start_efficiency_factor = -0.15
-				production_factory_efficiency_gain_factor = -0.15
-				production_factory_max_efficiency_factor = 0.1
-				line_change_production_efficiency_factor = -0.15
+				production_factory_efficiency_gain_factor = -0.2
+				production_factory_max_efficiency_factor = 0.05
+				line_change_production_efficiency_factor = -0.05
 				production_speed_industrial_complex_factor = 0.1
-				production_speed_arms_factory_factor = 0.1
 				industrial_capacity_dockyard = 0.05
 				min_export = -0.05
 			}
@@ -127,13 +124,12 @@ ideas = {
 			name = "Technocratic Social Planning"
 			modifier = {
 				research_speed_factor = 0.1
-				consumer_goods_expected_value = -0.20
-				production_factory_start_efficiency_factor = -0.10
+				consumer_goods_expected_value = -0.15
+				production_factory_start_efficiency_factor = -0.05
 				production_factory_efficiency_gain_factor = -0.2
-				line_change_production_efficiency_factor = -0.15
-				production_factory_max_efficiency_factor = 0.20
-				production_speed_industrial_complex_factor = 0.3
-				production_speed_arms_factory_factor = 0.3
+				production_factory_max_efficiency_factor = 0.15
+				production_speed_industrial_complex_factor = 0.2
+				production_speed_infrastructure_factor = 0.2
 				industrial_capacity_dockyard = 0.1
 				min_export = -0.05
 			}
@@ -354,6 +350,19 @@ ideas = {
 				army_attack_against_major_factor = 0.1
 				org_loss_when_moving = -0.1
 				offensive_war_stability_factor = 0.20
+			}
+		}
+
+		### HOWARD SCOTT TREEE ###
+
+		USA_new_prohibition = {
+			allowed_civil_war = {
+				always = yes
+			}
+			name = USA_new_prohibition
+			modifier = {
+				political_power_cost = 0.2
+				production_factory_efficiency_gain_factor = 0.15
 			}
 		}
 	}
