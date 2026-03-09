@@ -6644,7 +6644,6 @@ focus_tree = {
 		continue_if_invalid = no
 		available_if_capitulated = no
 		completion_reward = {
-			USA_great_depression_level_down = yes
 			swap_ideas = {
 				remove_idea = USA_technocratic_economy
 				add_idea = USA_technocratic_economy2
@@ -7155,17 +7154,6 @@ focus_tree = {
 		available_if_capitulated = no
 		completion_reward = {
 			101 = {
-				add_claim_by = USA
-				OWNER = { 
-    				ROOT = {
-       					create_wargoal = {
-           				target = PREV
-            			type = take_state_focus
-        				}
-   					}
-				}			
-			}
-			100 = {
 				add_claim_by = USA
 				OWNER = { 
     				ROOT = {
