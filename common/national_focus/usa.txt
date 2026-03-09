@@ -96,7 +96,7 @@ focus_tree = {
 		mutually_exclusive = { 
 			focus = USA_towards_national_utopia
 			focus = USA_revolt_of_engineers
-			focus = USA_popular_front_victory
+			focus = USA_the_workers_candidate
 		}
 		cost = 10
 
@@ -148,7 +148,7 @@ focus_tree = {
 	}
 
 	focus = {
-		id = USA_popular_front_victory
+		id = USA_the_workers_candidate
 		icon = GFX_focus_ITA_corpo_volontari_della_liberta
 		x = -13
 		y = 0
@@ -178,13 +178,13 @@ focus_tree = {
 
 	focus = {
 		id = USA_communism_as_american_apple_pie
-		icon = GFX_focus_ITA_corpo_volontari_della_liberta
+		icon = GFX_focus_por_workers_of_iberia
 		x = 3
 		y = 1
-		relative_position_id = USA_popular_front_victory
+		relative_position_id = USA_the_workers_candidate
 		cost = 6
 		prerequisite = {
-			focus = USA_popular_front_victory
+			focus = USA_the_workers_candidate
 		}
 		ai_will_do = {
 			factor = 1
@@ -207,10 +207,10 @@ focus_tree = {
 	
 	focus = {
 		id = USA_lincolns_america
-		icon = GFX_focus_ITA_corpo_volontari_della_liberta
+		icon = GFX_focus_generic_befriend_usa
 		x = 3
 		y = 2
-		relative_position_id = USA_popular_front_victory
+		relative_position_id = USA_the_workers_candidate
 		cost = 6
 		prerequisite = {
 			focus = USA_communism_as_american_apple_pie
@@ -235,11 +235,11 @@ focus_tree = {
 	}
 	
 	focus = {
-		id = USA_self_determination_for_black_belt
-		icon = GFX_focus_ITA_corpo_volontari_della_liberta
+		id = USA_end_segregation
+		icon = GFX_focus_NORDIC_com_institution_1
 		x = 3
 		y = 5
-		relative_position_id = USA_popular_front_victory
+		relative_position_id = USA_the_workers_candidate
 		cost = 6
 
 		ai_will_do = {
@@ -265,10 +265,10 @@ focus_tree = {
 	
 	focus = {
 		id = USA_the_peoples_deal
-		icon = GFX_focus_ITA_corpo_volontari_della_liberta
+		icon = GFX_focus_FIN_socialist_welfare
 		x = 5
 		y = 2
-		relative_position_id = USA_popular_front_victory
+		relative_position_id = USA_the_workers_candidate
 		cost = 6
 		prerequisite = {
 			focus = USA_communism_as_american_apple_pie
@@ -290,11 +290,11 @@ focus_tree = {
 	}
 	
 	focus = {
-		id = USA_our_enemy_is_wallstreet
-		icon = GFX_focus_ITA_corpo_volontari_della_liberta
+		id = USA_american_recovery_program
+		icon = GFX_focus_NORDIC_com_selector_civilian
 		x = 4
 		y = 3
-		relative_position_id = USA_popular_front_victory
+		relative_position_id = USA_the_workers_candidate
 		cost = 6
 		prerequisite = {
 			focus = USA_the_peoples_deal
@@ -314,11 +314,11 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = USA_browder1
-		icon = GFX_focus_ITA_corpo_volontari_della_liberta
+		id = USA_industrial_democracy
+		icon = GFX_focus_NORDIC_com_institution_2
 		x = 6
 		y = 3
-		relative_position_id = USA_popular_front_victory
+		relative_position_id = USA_the_workers_candidate
 		cost = 6
 		prerequisite = {
 			focus = USA_the_peoples_deal
@@ -338,14 +338,14 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = USA_browder2
-		icon = GFX_focus_ITA_corpo_volontari_della_liberta
+		id = USA_national_planning_councils
+		icon = GFX_focus_NORDIC_com_capstone_materiel
 		x = 6
 		y = 4
-		relative_position_id = USA_popular_front_victory
+		relative_position_id = USA_the_workers_candidate
 		cost = 6
 		prerequisite = {
-			focus = USA_browder1
+			focus = USA_industrial_democracy
 		}
 		ai_will_do = {
 			factor = 1
@@ -362,14 +362,14 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = USA_browder3
-		icon = GFX_focus_ITA_corpo_volontari_della_liberta
+		id = USA_public_industry
+		icon = GFX_focus_NORDIC_com_civilian
 		x = 4
 		y = 4
-		relative_position_id = USA_popular_front_victory
+		relative_position_id = USA_the_workers_candidate
 		cost = 6
 		prerequisite = {
-			focus = USA_our_enemy_is_wallstreet
+			focus = USA_american_recovery_program
 		}
 		ai_will_do = {
 			factor = 1
@@ -386,11 +386,11 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = USA_the_peoples_deal4
-		icon = GFX_focus_ITA_corpo_volontari_della_liberta
+		id = USA_forge_the_popular_front
+		icon = GFX_focus_generic_communism_anti_fascism
 		x = 1
 		y = 2
-		relative_position_id = USA_popular_front_victory
+		relative_position_id = USA_the_workers_candidate
 		cost = 6
 		prerequisite = {
 			focus = USA_communism_as_american_apple_pie
@@ -412,14 +412,14 @@ focus_tree = {
 	}
 	
 	focus = {
-		id = USA_our_enemy_is_wallstreet5
-		icon = GFX_focus_ITA_corpo_volontari_della_liberta
+		id = USA_alliance_with_new_dealers
+		icon = GFX_focus_generic_social_democracy
 		x = 0
 		y = 3
-		relative_position_id = USA_popular_front_victory
+		relative_position_id = USA_the_workers_candidate
 		cost = 6
 		prerequisite = {
-			focus = USA_the_peoples_deal4
+			focus = USA_forge_the_popular_front
 		}
 		ai_will_do = {
 			factor = 1
@@ -436,14 +436,14 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = USA_browder6
-		icon = GFX_focus_ITA_corpo_volontari_della_liberta
+		id = USA_suspend_the_persecution
+		icon = GFX_focus_AUS_lawmaking_leniency
 		x = 2
 		y = 3
-		relative_position_id = USA_popular_front_victory
+		relative_position_id = USA_the_workers_candidate
 		cost = 6
 		prerequisite = {
-			focus = USA_the_peoples_deal4
+			focus = USA_forge_the_popular_front
 		}
 		ai_will_do = {
 			factor = 1
@@ -460,14 +460,14 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = USA_browder7
+		id = USA_force_CIO_AFL_merger
 		icon = GFX_focus_ITA_corpo_volontari_della_liberta
 		x = 2
 		y = 4
-		relative_position_id = USA_popular_front_victory
+		relative_position_id = USA_the_workers_candidate
 		cost = 6
 		prerequisite = {
-			focus = USA_browder6
+			focus = USA_suspend_the_persecution
 		}
 		ai_will_do = {
 			factor = 1
@@ -484,14 +484,14 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = USA_browder8
-		icon = GFX_focus_ITA_corpo_volontari_della_liberta
+		id = USA_empower_the_voice_of_labor
+		icon = GFX_focus_generic_workers
 		x = 0
 		y = 4
-		relative_position_id = USA_popular_front_victory
+		relative_position_id = USA_the_workers_candidate
 		cost = 6
 		prerequisite = {
-			focus = USA_our_enemy_is_wallstreet5
+			focus = USA_alliance_with_new_dealers
 		}
 		ai_will_do = {
 			factor = 1
@@ -508,17 +508,17 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = USA_browder9
-		icon = GFX_focus_ITA_corpo_volontari_della_liberta
+		id = USA_socialism_the_american_way
+		icon = GFX_focus_usa_guarantee_the_american_dream
 		x = 1
 		y = 5
-		relative_position_id = USA_popular_front_victory
+		relative_position_id = USA_the_workers_candidate
 		cost = 6
 		prerequisite = {
-			focus = USA_browder8
+			focus = USA_empower_the_voice_of_labor
 		}
 		prerequisite = {
-			focus = USA_browder7
+			focus = USA_force_CIO_AFL_merger
 		}
 		ai_will_do = {
 			factor = 1
@@ -535,17 +535,17 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = USA_browder10
-		icon = GFX_focus_ITA_corpo_volontari_della_liberta
+		id = USA_federal_congress_of_labor
+		icon = GFX_focus_SOV_the_supreme_soviet
 		x = 5
 		y = 5
-		relative_position_id = USA_popular_front_victory
+		relative_position_id = USA_the_workers_candidate
 		cost = 6
 		prerequisite = {
-			focus = USA_browder3
+			focus = USA_public_industry
 		}
 		prerequisite = {
-			focus = USA_browder2
+			focus = USA_national_planning_councils
 		}
 		ai_will_do = {
 			factor = 1
@@ -559,6 +559,137 @@ focus_tree = {
 		available_if_capitulated = no
 		search_filters = {FOCUS_FILTER_POLITICAL}
 		completion_reward = {
+		}
+	}
+	focus = {
+		id = USA_peoples_unity_government
+		icon = GFX_goal_generic_national_unity
+		x = 1
+		y = 6
+		relative_position_id = USA_the_workers_candidate
+		cost = 6
+		prerequisite = {
+			focus = USA_socialism_the_american_way
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		completion_reward = {
+		}
+	}
+	focus = {
+		id = USA_a_popular_mandate
+		icon = GFX_focus_generic_soviet_politics
+		x = 3
+		y = 6
+		relative_position_id = USA_the_workers_candidate
+		cost = 6
+		prerequisite = {
+			focus = USA_end_segregation
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		completion_reward = {
+		}
+	}
+	focus = {
+		id = USA_farmer_labor_front
+		icon = GFX_focus_generic_workers_and_farmers_rise
+		x = 5
+		y = 6
+		relative_position_id = USA_the_workers_candidate
+		cost = 6
+		prerequisite = {
+			focus = USA_federal_congress_of_labor
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		completion_reward = {
+		}
+	}
+	focus = {
+		id = USA_a_brighter_shade_of_crimson
+		icon = GFX_focus_generic_spur_communist_revolutions
+		x = 4
+		y = 7
+		relative_position_id = USA_the_workers_candidate
+		cost = 6
+		prerequisite = {
+			focus = USA_a_popular_mandate
+			focus = USA_farmer_labor_front
+		}
+		mutually_exclusive = {
+			focus = USA_red_american_dream
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		completion_reward = {
+			set_cosmetic_tag = USA_red
+		}
+	}
+	
+	focus = {
+		id = USA_red_american_dream
+		icon = GFX_focus_JAP_a_free_asia_pacific
+		x = 2
+		y = 7
+		relative_position_id = USA_the_workers_candidate
+		cost = 6
+		prerequisite = {
+			focus = USA_a_popular_mandate
+			focus = USA_peoples_unity_government
+		}
+		mutually_exclusive = {
+			focus = USA_a_brighter_shade_of_crimson
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		completion_reward = {
+			set_cosmetic_tag = USA_PCA
 		}
 	}
 	
@@ -4455,7 +4586,7 @@ focus_tree = {
 		mutually_exclusive = { 
 			focus = USA_continue_the_new_deal
 			focus = USA_revolt_of_engineers
-			focus = USA_popular_front_victory
+			focus = USA_the_workers_candidate
 		}
 
 		available = {
@@ -6455,7 +6586,7 @@ focus_tree = {
 		mutually_exclusive = { 
 			focus = USA_continue_the_new_deal
 			focus = USA_towards_national_utopia
-			focus = USA_popular_front_victory
+			focus = USA_the_workers_candidate
 		}
 
 		cancel_if_invalid = yes
