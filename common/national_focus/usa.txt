@@ -7435,13 +7435,24 @@ focus_tree = {
 		continue_if_invalid = no
 		available_if_capitulated = no
 		completion_reward = {
+			hidden_effect = {
 			retire_character = USA_Ezra_Pound
 			retire_character = USA_william_dudley_pelley
 			retire_character = USA_George_Christians
 			retire_character = USA_francis_yockey
+			}
+			set_party_name = {
+				ideology = fascism 
+				name = "Order of Roosevelt"
+				long_name = "Order of Roosevelt"
+			}
 			set_politics = {
 				ruling_party = fascism
 				elections_allowed = no
+			}
+			set_country_leader_portrait = {
+				ideology = fascism
+				portrait = GFX_Portrait_FDR_fascism
 			}
 			promote_character = USA_franklin_delano_roosevelt
 		}

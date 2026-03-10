@@ -133,6 +133,10 @@ spriteTypes = {
 		name = "GFX_Portrait_Francis_Yockey_cap"
 		texturefile = "gfx/leaders/USA/Portrait_Francis_Yockey_cap.png"
 	}
+	SpriteType = {
+		name = "GFX_Portrait_FDR_fascism"
+		texturefile = "gfx/leaders/USA/Portrait_FDR_fascism.png"
+	}
 		
 	spriteType = {
 		name = "GFX_idea_SND_all_under_heaven"
@@ -306,6 +310,11 @@ spriteTypes = {
 		name = "GFX_idea_generic_taxation"
 		texturefile = "gfx/interface/ideas/laws/generic_taxation.png"
 	}
+	
+	spriteType = {
+		name = "GFX_idea_mixed_economy"
+		texturefile = "gfx/interface/ideas/laws/mixed_economy.png"
+	}
 
 	spriteType = {
 		name = "GFX_idea_rural_school"
@@ -316,6 +325,42 @@ spriteTypes = {
 		name = "GFX_idea_schools_burnt"
 		texturefile = "gfx/interface/ideas/laws/schools_burnt.png"
 	}
+
+	spriteType = {
+		name = "GFX_idea_generic_welfare_state"
+		texturefile = "gfx/interface/ideas/laws/generic_welfare_state.png"
+	}
+
+	spriteType = {
+		name = "GFX_idea_new_taxes"
+		texturefile = "gfx/interface/ideas/laws/new_taxes.png"
+	}
+
+	spriteType = {
+		name = "GFX_idea_fairer_taxes"
+		texturefile = "gfx/interface/ideas/laws/fairer_taxes.png"
+	}
+
+	spriteType = {
+		name = "GFX_idea_DSR_Welfare"
+		texturefile = "gfx/interface/ideas/laws/idea_DSR_Welfare.png"
+	}
+
+	spriteType = {
+		name = "GFX_idea_liberal_welfare_2"
+		texturefile = "gfx/interface/ideas/laws/liberal_welfare_2.png"
+	}
+
+	spriteType = {
+		name = "GFX_idea_HUN_social_welfare_idea"
+		texturefile = "gfx/interface/ideas/laws/HUN_social_welfare_idea.png"
+	}
+
+	spriteType = {
+		name = "GFX_idea_HOL_welfare_state"
+		texturefile = "gfx/interface/ideas/laws/HOL_welfare_state.png"
+	}
+
 
 }
 

@@ -244,13 +244,6 @@ add_ideas = {
 set_convoys = 1000
 
 # DIPLOMACY
-if = {
-	limit = {
-		OR = {
-			has_dlc = "Together for Victory"
-			has_dlc = "Man the Guns"
-		}
-	}
 	set_autonomy = {
 		target = MAL
 		autonomous_state = autonomy_integrated_puppet
@@ -290,11 +283,11 @@ if = {
 		autonomous_state = autonomy_colony
 		freedom_level = 0.2
 	}
-	#set_autonomy = {
-	#	target = EGY
-	#	autonomous_state = autonomy_dominion
-	#	freedom_level = 0.2
-	#}
+	set_autonomy = {
+		target = EGY
+		autonomous_state = autonomy_dominion
+		freedom_level = 0.2
+	}
 	set_autonomy = {
 		target = PAL
 		autonomous_state = autonomy_integrated_puppet
@@ -311,23 +304,8 @@ if = {
 		freedom_level = 0.5
 	}
 
-	else = {
-		puppet = MAL
-		puppet = RAJ
-		puppet = JOR
-		puppet = PAL
-		#puppet = EGY
-		puppet = KUW
-		puppet = OMA
-	}
-}
-
-
-if = {
-	limit = { has_dlc = "Together for Victory" }
-
 	add_to_tech_sharing_group = commonwealth_research
-}
+
 
 1939.1.1 = {
 

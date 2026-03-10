@@ -9,8 +9,8 @@ ENG = {
 	color_ui = rgb { 200 30 30 }
 }
 SOV = {
-	color = rgb { 125 13 24 }
-	color_ui = rgb { 163 17 31 }
+	color = rgb { 140 0 20 }
+	color_ui = rgb { 140 0 20 }
 }
 SWE = {
 	color = rgb { 40 70 140 }
@@ -49,12 +49,12 @@ LIT = {
 	color_ui = rgb { 60 130 40 }
 }
 EST = {
-	color = rgb { 50 110 230 }
-	color_ui = rgb { 70 150 255 }
+	color = rgb { 50 135 175 }
+	color_ui = rgb { 99 204 254 }
 }
 LAT = {
-	color = rgb { 110 15 40 }
-	color_ui = rgb { 110 15 40 }
+	color = rgb { 142 10 165 }
+	color_ui = rgb { 142 10 165 }
 }
 SPR = {
 	color = rgb { 115 60 130 }
@@ -261,8 +261,8 @@ YUN = {
 	color_ui = rgb { 222 247 198 }
 }
 USA = {
-	color = rgb { 20 133 237 }
-	color_ui = rgb { 87 160 255 }
+	color = rgb { 0 80 195 }
+	color_ui = rgb { 0 80 195 }
 }
 MON = {
 	#color = HSV { 0.1 0.15 0.4 }
@@ -430,8 +430,8 @@ BLR = {
 	color_ui = rgb { 180 220 190 }
 }
 MAN = {
-	color = rgb { 255 120 71 }
-	color_ui = rgb { 255 120 71 }
+	color = rgb { 255 50 0 }
+	color_ui = rgb { 255 50 0 }
 }
 ANG = {
 	color = rgb { 37 140 61 }

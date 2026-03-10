@@ -2163,10 +2163,9 @@ ideas = {
 			removal_cost = -1
 			taxation1 = {
 				name = taxation1
-				#picture = GFX_idea_healthcare_2
 				level = 1
 				cost = 100
-				picture = generic_taxation
+				picture = new_taxes
 				default = yes
 				cancel_if_invalid = no
 				modifier = {
@@ -2177,10 +2176,9 @@ ideas = {
 			} 
 			taxation2 = {
 				name = taxation2
-				#picture = GFX_idea_healthcare_2
 				level = 2
 				cost = 100
-				picture = generic_taxation
+				picture = fairer_taxes
 				cancel_if_invalid = yes
 				modifier = {
 					consumer_goods_factor = -0.1
@@ -2194,10 +2192,9 @@ ideas = {
 			} 
 			taxation3 = {
 				name = taxation3
-				#picture = GFX_idea_healthcare_2
 				level = 3
 				cost = 100
-				picture = generic_taxation
+				picture = fair_share_taxation
 				cancel_if_invalid = yes
 				modifier = {
 					consumer_goods_factor = -0.15
@@ -2212,7 +2209,6 @@ ideas = {
 			} 
 			taxation4 = {
 				name = taxation4
-				#picture = GFX_idea_healthcare_2
 				level = 4
 				cost = 100
 				picture = generic_taxation
@@ -2233,7 +2229,7 @@ ideas = {
 				#picture = GFX_idea_healthcare_2
 				level = 5
 				cost = 100
-				picture = generic_taxation
+				picture = radical_taxation
 				cancel_if_invalid = yes
 				modifier = {
 					consumer_goods_factor = -0.25
@@ -2257,17 +2253,12 @@ ideas = {
 				name = welfare1
 				level = 1
 				cost = 100
+				picture = HOL_welfare_state
 				default = yes
 				cancel_if_invalid = no
 				modifier = { 
 					consumer_goods_factor = -0.1
 					political_power_gain = -0.08
-				}
-				available = {
-					OR = { 
-						has_idea = welfare1
-						has_idea = welfare2
-					}
 				}
 				ai_will_do = { factor = 70 }
 			}
@@ -2276,19 +2267,13 @@ ideas = {
 				name = welfare2
 				level = 2
 				cost = 100
+				picture = DSR_Welfare
 				cancel_if_invalid = yes
 				modifier = {
 					stability_factor = 0.025
 					consumer_goods_factor = 0.06
 					political_power_gain = -0.04
 					monthly_population = 0.025
-				}
-				available = {
-					OR = { 
-						has_idea = welfare1
-						has_idea = welfare2
-						has_idea = welfare3
-					}
 				}
 				ai_will_do = { factor = 80 }
 			}
@@ -2297,6 +2282,7 @@ ideas = {
 				name = welfare3
 				level = 3
 				cost = 100
+				picture = HUN_social_welfare_idea
 				cancel_if_invalid = yes
 				modifier = {
 					stability_factor = 0.05
@@ -2304,13 +2290,7 @@ ideas = {
 					monthly_population = 0.05
 					political_power_gain = 0.04
 				}
-				available = {
-					OR = { 
-						has_idea = welfare2
-						has_idea = welfare3
-						has_idea = welfare4
-					}
-				}
+	
 				ai_will_do = { factor = 90 }
 			}
 
@@ -2318,6 +2298,7 @@ ideas = {
 				name = welfare4
 				level = 4
 				cost = 100
+				picture = liberal_welfare_2
 				cancel_if_invalid = yes
 				modifier = {
 					stability_factor = 0.075
@@ -2325,13 +2306,7 @@ ideas = {
 					monthly_population = 0.075
 					political_power_gain = 0.08
 				}
-				available = {
-					OR = { 
-						has_idea = welfare3
-						has_idea = welfare4
-						has_idea = welfare5
-					}
-				}
+				
 				ai_will_do = { factor = 100 }
 			}
 
@@ -2339,6 +2314,7 @@ ideas = {
 				name = welfare5
 				level = 5
 				cost = 100
+				picture = generic_welfare_state
 				cancel_if_invalid = yes
 				modifier = {
 					stability_factor = 0.1
@@ -2346,12 +2322,7 @@ ideas = {
 					monthly_population = 0.10
 					political_power_gain = 0.12
 				}
-				available = {
-					OR = { 
-						has_idea = welfare4
-						has_idea = welfare5
-					}
-				}
+			
 				ai_will_do = { factor = 110 }
 			}
 		}
@@ -2414,6 +2385,7 @@ ideas = {
 			name = labor4
 			level = 4
 			cost = 100
+			picture = mixed_economy
 			cancel_if_invalid = yes
 			modifier = {
 				stability_factor = 0.05
@@ -2471,6 +2443,7 @@ ideas = {
 			level = 2
 			cost = 100
 			default = yes
+			picture = generic_education
 			cancel_if_invalid = yes
 			modifier = {
 				equipment_conversion_speed = -0.05
@@ -2578,6 +2551,7 @@ ideas = {
 			level = 3
 			cost = 100
 			default = yes
+			picture = local_segregation
 			cancel_if_invalid = yes
 			modifier = {
 				stability_factor = -0.02
@@ -2643,6 +2617,7 @@ ideas = {
 			name = religion2
 			level = 2
 			cost = 100
+			picture = proletarian_religion_idea
 			cancel_if_invalid = yes
 			modifier = {
 				stability_factor = 0.02
@@ -2655,6 +2630,7 @@ ideas = {
 			level = 3
 			cost = 100
 			default = yes
+			picture = religious_freedom
 			cancel_if_invalid = yes
 			modifier = {
 				stability_factor = 0.04

@@ -14,8 +14,6 @@ focus_tree = {
 		x = 0
 	}
 
-	shared_focus = CHI_sea_invite_foreign_investors
-
 	
 	default = no
 	focus = {
