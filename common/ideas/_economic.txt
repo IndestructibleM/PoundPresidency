@@ -2156,4 +2156,417 @@ ideas = {
 			}
 		}
 	}
+
+	taxation = {
+		law = yes
+		use_list_view = yes
+		removal_cost = -1
+		taxation1 = {
+			name = taxation1
+			#picture = GFX_idea_healthcare_2
+			level = 1
+			cost = 75
+			default = yes
+			cancel_if_invalid = no
+			modifier = {
+				consumer_goods_factor = -0.05
+				political_power_cost = 0.03
+			}
+			ai_will_do = { factor = 100 }
+		} 
+		taxation2 = {
+			name = taxation2
+			#picture = GFX_idea_healthcare_2
+			level = 2
+			cost = 75
+			cancel_if_invalid = yes
+			modifier = {
+				consumer_goods_factor = -0.1
+				political_power_cost = 0.1
+				production_speed_buildings_factor = 0.04
+			}
+			available = { 
+				political_power_daily > 0.2
+			}
+			ai_will_do = { factor = 100 }
+		} 
+		taxation3 = {
+			name = taxation3
+			#picture = GFX_idea_healthcare_2
+			level = 3
+			cost = 75
+			cancel_if_invalid = yes
+			modifier = {
+				consumer_goods_factor = -0.15
+				political_power_cost = 0.15
+				production_speed_buildings_factor = 0.08
+				war_support_factor = -0.03
+			}
+			available = { 
+				political_power_daily > 0.3
+			}
+			ai_will_do = { factor = 100 }
+		} 
+		taxation4 = {
+			name = taxation4
+			#picture = GFX_idea_healthcare_2
+			level = 4
+			cost = 75
+			cancel_if_invalid = yes
+			modifier = {
+				consumer_goods_factor = -0.2
+				political_power_cost = 0.2
+				production_speed_buildings_factor = 0.12
+				war_support_factor = -0.06
+			}
+			available = { 
+				political_power_daily > 0.4
+			}
+			ai_will_do = { factor = 70 } #TEMP
+		} 
+		taxation5 = {
+			name = taxation5
+			#picture = GFX_idea_healthcare_2
+			level = 5
+			cost = 75
+			cancel_if_invalid = yes
+			modifier = {
+				consumer_goods_factor = -0.25
+				political_power_cost = 0.25
+				production_speed_buildings_factor = 0.15
+				war_support_factor = -0.09
+			}
+			available = { 
+				political_power_daily > 0.50
+			}
+			ai_will_do = { factor = 70 } # TEMP
+		} 
+	}
+
+	welfare = {
+		law = yes
+		use_list_view = yes
+		removal_cost = -1
+
+		welfare1 = {
+			name = welfare1
+			level = 1
+			cost = 75
+			default = yes
+			cancel_if_invalid = no
+			modifier = { }
+			ai_will_do = { factor = 100 }
+		}
+
+		welfare2 = {
+			name = welfare2
+			level = 2
+			cost = 75
+			cancel_if_invalid = yes
+			modifier = {
+				stability_factor = 0.03
+				consumer_goods_factor = 0.02
+			}
+			ai_will_do = { factor = 100 }
+		}
+
+		welfare3 = {
+			name = welfare3
+			level = 3
+			cost = 75
+			cancel_if_invalid = yes
+			modifier = {
+				stability_factor = 0.05
+				consumer_goods_factor = 0.04
+			}
+			ai_will_do = { factor = 100 }
+		}
+
+		welfare4 = {
+			name = welfare4
+			level = 4
+			cost = 75
+			cancel_if_invalid = yes
+			modifier = {
+				stability_factor = 0.07
+				consumer_goods_factor = 0.06
+			}
+			ai_will_do = { factor = 90 }
+		}
+
+		welfare5 = {
+			name = welfare5
+			level = 5
+			cost = 75
+			cancel_if_invalid = yes
+			modifier = {
+				stability_factor = 0.1
+				consumer_goods_factor = 0.08
+			}
+			ai_will_do = { factor = 80 }
+		}
+	}
+
+	labor_regulations = {
+	law = yes
+	use_list_view = yes
+	removal_cost = -1
+
+	labor1 = {
+		name = labor1
+		level = 1
+		cost = 75
+		cancel_if_invalid = no
+		modifier = {
+			production_factory_efficiency_gain_factor = 0.05
+		}
+		ai_will_do = { factor = 100 }
+	}
+
+	labor2 = {
+		name = labor2
+		level = 2
+		cost = 75
+		default = yes
+		cancel_if_invalid = yes
+		modifier = {
+			stability_factor = 0.02
+			production_factory_efficiency_gain_factor = 0.03
+		}
+		ai_will_do = { factor = 100 }
+	}
+
+	labor3 = {
+		name = labor3
+		level = 3
+		cost = 75
+		cancel_if_invalid = yes
+		modifier = {
+			stability_factor = 0.04
+			production_factory_efficiency_gain_factor = 0.01
+		}
+		ai_will_do = { factor = 100 }
+	}
+
+	labor4 = {
+		name = labor4
+		level = 4
+		cost = 75
+		cancel_if_invalid = yes
+		modifier = {
+			stability_factor = 0.05
+			production_speed_buildings_factor = -0.04
+		}
+		ai_will_do = { factor = 90 }
+	}
+
+	labor5 = {
+		name = labor5
+		level = 5
+		cost = 75
+		cancel_if_invalid = yes
+		modifier = {
+			stability_factor = 0.06
+			production_speed_buildings_factor = -0.08
+		}
+		ai_will_do = { factor = 80 }
+	}
+	}
+
+	education_development = {
+	law = yes
+	use_list_view = yes
+	removal_cost = -1
+
+	education1 = {
+		name = education1
+		level = 1
+		cost = 75
+		cancel_if_invalid = no
+		modifier = { }
+		ai_will_do = { factor = 100 }
+	}
+
+	education2 = {
+		name = education2
+		level = 2
+		cost = 75
+		default = yes
+		cancel_if_invalid = yes
+		modifier = {
+			research_speed_factor = 0.02
+		}
+		ai_will_do = { factor = 100 }
+	}
+
+	education3 = {
+		name = education3
+		level = 3
+		cost = 75
+		cancel_if_invalid = yes
+		modifier = {
+			research_speed_factor = 0.04
+			stability_factor = 0.02
+		}
+		ai_will_do = { factor = 100 }
+	}
+
+	education4 = {
+		name = education4
+		level = 4
+		cost = 75
+		cancel_if_invalid = yes
+		modifier = {
+			research_speed_factor = 0.06
+			stability_factor = 0.03
+			political_power_cost = -0.03
+		}
+		ai_will_do = { factor = 90 }
+	}
+
+	education5 = {
+		name = education5
+		level = 5
+		cost = 75
+		cancel_if_invalid = yes
+		modifier = {
+			research_speed_factor = 0.08
+			stability_factor = 0.05
+			political_power_cost = -0.05
+		}
+		ai_will_do = { factor = 80 }
+	}
+	}
+
+	segregation = {
+	law = yes
+	use_list_view = yes
+	removal_cost = -1
+
+	segregation1 = {
+		name = segregation1
+		level = 1
+		cost = 75
+		cancel_if_invalid = no
+		modifier = {
+			stability_factor = 0.05
+			resistance_target = -0.02
+		}
+		ai_will_do = { factor = 100 }
+	}
+
+	segregation2 = {
+		name = segregation2
+		level = 2
+		cost = 75
+		cancel_if_invalid = yes
+		modifier = {
+			stability_factor = 0.02
+			resistance_target = 0.01
+		}
+		ai_will_do = { factor = 100 }
+	}
+
+	segregation3 = {
+		name = segregation3
+		level = 3
+		cost = 75
+		default = yes
+		cancel_if_invalid = yes
+		modifier = {
+			stability_factor = -0.02
+			resistance_target = 0.03
+		}
+		ai_will_do = { factor = 90 }
+	}
+
+	segregation4 = {
+		name = segregation4
+		level = 4
+		cost = 75
+		cancel_if_invalid = yes
+		modifier = {
+			stability_factor = -0.05
+			resistance_target = 0.06
+			war_support_factor = -0.02
+		}
+		ai_will_do = { factor = 80 }
+	}
+
+	segregation5 = {
+		name = segregation5
+		level = 5
+		cost = 75
+		cancel_if_invalid = yes
+		modifier = {
+			stability_factor = -0.08
+			resistance_target = 0.1
+			war_support_factor = -0.04
+		}
+		ai_will_do = { factor = 70 }
+	}
+	}
+
+	religion_status = {
+	law = yes
+	use_list_view = yes
+	removal_cost = -1
+
+	religion1 = {
+		name = religion1
+		level = 1
+		cost = 75
+		cancel_if_invalid = no
+		modifier = { }
+		ai_will_do = { factor = 100 }
+	}
+
+	religion2 = {
+		name = religion2
+		level = 2
+		cost = 75
+		cancel_if_invalid = yes
+		modifier = {
+			stability_factor = 0.02
+		}
+		ai_will_do = { factor = 100 }
+	}
+
+	religion3 = {
+		name = religion3
+		level = 3
+		cost = 75
+		default = yes
+		cancel_if_invalid = yes
+		modifier = {
+			stability_factor = 0.04
+			war_support_factor = 0.02
+		}
+		ai_will_do = { factor = 100 }
+	}
+
+	religion4 = {
+		name = religion4
+		level = 4
+		cost = 75
+		cancel_if_invalid = yes
+		modifier = {
+			stability_factor = 0.06
+			war_support_factor = 0.04
+		}
+		ai_will_do = { factor = 90 }
+	}
+
+	religion5 = {
+		name = religion5
+		level = 5
+		cost = 75
+		cancel_if_invalid = yes
+		modifier = {
+			stability_factor = 0.08
+			war_support_factor = 0.06
+		}
+		ai_will_do = { factor = 80 }
+	}
+	}
 }

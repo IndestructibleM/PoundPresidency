@@ -77,6 +77,20 @@ idea_categories = {
 		removal_cost = 0
 	}
 
+	assorted_laws = {
+		slot = taxation
+		slot = welfare
+		slot = labor_regulations
+		slot = education_development
+		slot = segregation
+		slot = religion_status
+		
+		ledger = civilian
+		
+		cost = 100
+		removal_cost = -1
+	}
+
 	academy_spirit = {
 		type = army_spirit
 
