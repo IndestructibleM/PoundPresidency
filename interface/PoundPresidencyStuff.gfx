@@ -212,29 +212,110 @@ spriteTypes = {
 
 spriteTypes = {
 
-	SpriteType = {
+	spriteType = {
 		name = "GFX_idea_corporatism"
 		texturefile = "gfx/interface/ideas/laws/corporatism.png"
 	}
-	SpriteType = {
+	spriteType = {
 		name = "GFX_idea_decentralized_planning"
 		texturefile = "gfx/interface/ideas/laws/decentralized_planning.png"
 	}
-	SpriteType = {
+	spriteType = {
 		name = "GFX_idea_state_capitalism"
 		texturefile = "gfx/interface/ideas/laws/state_capitalism.png"
 	}
-	SpriteType = {
+	spriteType = {
 		name = "GFX_idea_decentralized_planning"
 		texturefile = "gfx/interface/ideas/laws/decentralized_planning.png"
 	}
-	SpriteType = {
+	spriteType = {
 		name = "GFX_ideology_reactionary_group"
 		texturefile = "gfx/interface/ideologies/reactionary_group.png"
 	}
-	SpriteType = {
+	spriteType = {
 		name = "GFX_ideology_socialist_group"
 		texturefile = "gfx/interface/ideologies/socialist_group.png"
 	}
+	
+	spriteType = {
+		name = "GFX_idea_fair_share_taxation"
+		texturefile = "gfx/interface/ideas/laws/fair_share_taxation.png"
+	}
+
+	spriteType = {
+		name = "GFX_idea_labor_econ"
+		texturefile = "gfx/interface/ideas/laws/labor_econ.png"
+	}
+
+	spriteType = {
+		name = "GFX_idea_forced_labor_economy"
+		texturefile = "gfx/interface/ideas/laws/forced_labor_economy.png"
+	}
+
+	spriteType = {
+		name = "GFX_idea_local_segregation"
+		texturefile = "gfx/interface/ideas/laws/local_segregation.png"
+	}
+
+	spriteType = {
+		name = "GFX_idea_new_labor_standards"
+		texturefile = "gfx/interface/ideas/laws/new_labor_standards.png"
+	}
+
+	spriteType = {
+		name = "GFX_idea_educational_spending"
+		texturefile = "gfx/interface/ideas/laws/educational_spending.png"
+	}
+
+	spriteType = {
+		name = "GFX_idea_radical_taxation"
+		texturefile = "gfx/interface/ideas/laws/radical_taxation.png"
+	}
+
+	spriteType = {
+		name = "GFX_idea_public_education"
+		texturefile = "gfx/interface/ideas/laws/public_education.png"
+	}
+
+	spriteType = {
+		name = "GFX_idea_labor_camps_2"
+		texturefile = "gfx/interface/ideas/laws/labor_camps_2.png"
+	}
+
+	spriteType = {
+		name = "GFX_idea_religious_freedom"
+		texturefile = "gfx/interface/ideas/laws/religious_freedom.png"
+	}
+
+	spriteType = {
+		name = "GFX_idea_proletarian_religion_idea"
+		texturefile = "gfx/interface/ideas/laws/proletarian_religion_idea.png"
+	}
+
+	spriteType = {
+		name = "GFX_idea_church_of_all_religions"
+		texturefile = "gfx/interface/ideas/laws/church_of_all_religions.png"
+	}
+
+	spriteType = {
+		name = "GFX_idea_generic_education"
+		texturefile = "gfx/interface/ideas/laws/generic_education.png"
+	}
+
+	spriteType = {
+		name = "GFX_idea_generic_taxation"
+		texturefile = "gfx/interface/ideas/laws/generic_taxation.png"
+	}
+
+	spriteType = {
+		name = "GFX_idea_rural_school"
+		texturefile = "gfx/interface/ideas/laws/rural_school.png"
+	}
+
+	spriteType = {
+		name = "GFX_idea_schools_burnt"
+		texturefile = "gfx/interface/ideas/laws/schools_burnt.png"
+	}
+
 }
 

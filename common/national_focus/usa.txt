@@ -7786,6 +7786,36 @@ focus_tree = {
 		
 		}
 	}
+
+	focus = {
+		id = USA_our_new_industrial_revolution
+		x = -1
+		y = 17
+		#allow_branch = {
+		#	has_country_flag = Roosevelt_Lived
+		#}
+		cost = 6
+		ai_will_do = {
+			factor = 10
+		}
+		prerequisite = {
+			focus = USA_institute_of_military_industrial_expansion
+		}
+
+		relative_position_id = USA_continue_the_new_deal
+		icon = GFX_focus_generic_mass_production
+		available = {
+			has_country_leader = { ruling_only = yes character = USA_franklin_delano_roosevelt }
+			has_country_flag = Roosevelt_4th_Term
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		completion_reward = {
+		
+		}
+	}
 	
 	focus = {
 		id = USA_perkins_mother_of_labor
@@ -7834,6 +7864,36 @@ focus_tree = {
 
 		relative_position_id = USA_continue_the_new_deal
 		icon = GFX_focus_generic_population_growth
+		available = {
+			has_country_leader = { ruling_only = yes character = USA_franklin_delano_roosevelt }
+			has_country_flag = Roosevelt_4th_Term
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		completion_reward = {
+		
+		}
+	}
+
+	focus = {
+		id = USA_workers_of_the_state
+		x = 1
+		y = 17
+		#allow_branch = {
+		#	has_country_flag = Roosevelt_Lived
+		#}
+		cost = 6
+		ai_will_do = {
+			factor = 10
+		}
+		prerequisite = {
+			focus = USA_the_cornucopia
+		}
+
+		relative_position_id = USA_continue_the_new_deal
+		icon = GFX_focus_ITA_generic_fascist_workers
 		available = {
 			has_country_leader = { ruling_only = yes character = USA_franklin_delano_roosevelt }
 			has_country_flag = Roosevelt_4th_Term
@@ -7942,6 +8002,36 @@ focus_tree = {
 		
 		}
 	}
+
+	focus = {
+		id = USA_for_pax_americana
+		x = 3
+		y = 17
+		#allow_branch = {
+		#	has_country_flag = Roosevelt_Lived
+		#}
+		cost = 6
+		ai_will_do = {
+			factor = 10
+		}
+		prerequisite = {
+			focus = USA_unleash_the_kraken
+		}
+
+		relative_position_id = USA_continue_the_new_deal
+		icon = GFX_focus_RAJ_to_shake_the_world
+		available = {
+			has_country_leader = { ruling_only = yes character = USA_franklin_delano_roosevelt }
+			has_country_flag = Roosevelt_4th_Term
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		completion_reward = {
+		
+		}
+	}
 	
 	focus = {
 		id = USA_byrnes_lord_of_the_machine
@@ -7990,6 +8080,66 @@ focus_tree = {
 
 		relative_position_id = USA_continue_the_new_deal
 		icon = GFX_focus_CZE_german_puppet
+		available = {
+			has_country_leader = { ruling_only = yes character = USA_franklin_delano_roosevelt }
+			has_country_flag = Roosevelt_4th_Term
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		completion_reward = {
+		
+		}
+	}
+	
+	focus = {
+		id = USA_panem_et_circenses
+		x = -3
+		y = 17
+		#allow_branch = {
+		#	has_country_flag = Roosevelt_Lived
+		#}
+		cost = 6
+		ai_will_do = {
+			factor = 10
+		}
+		prerequisite = {
+			focus = USA_a_perfectly_obediant_state
+		}
+
+		relative_position_id = USA_continue_the_new_deal
+		icon = GFX_focus_generic_happy_cheer
+		available = {
+			has_country_leader = { ruling_only = yes character = USA_franklin_delano_roosevelt }
+			has_country_flag = Roosevelt_4th_Term
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		completion_reward = {
+		
+		}
+	}
+	
+	focus = {
+		id = USA_the_pure_soveriengty
+		x = -5
+		y = 17
+		#allow_branch = {
+		#	has_country_flag = Roosevelt_Lived
+		#}
+		cost = 6
+		ai_will_do = {
+			factor = 10
+		}
+		prerequisite = {
+			focus = USA_CIA_FBI_merger
+		}
+
+		relative_position_id = USA_continue_the_new_deal
+		icon = GFX_focus_generic_strike_at_democracy1
 		available = {
 			has_country_leader = { ruling_only = yes character = USA_franklin_delano_roosevelt }
 			has_country_flag = Roosevelt_4th_Term
@@ -8109,7 +8259,135 @@ focus_tree = {
 		}
 
 		relative_position_id = USA_continue_the_new_deal
+		icon = GFX_focus_ITA_banda_carita
+		available = {
+			has_country_leader = { ruling_only = yes character = USA_franklin_delano_roosevelt }
+			has_country_flag = Roosevelt_4th_Term
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		completion_reward = {
+		
+		}
+	}
+
+	focus = {
+		id = USA_legions_of_the_republic
+		x = 5
+		y = 17
+		#allow_branch = {
+		#	has_country_flag = Roosevelt_Lived
+		#}
+		cost = 5
+		ai_will_do = {
+			factor = 10
+		}
+		prerequisite = {
+			focus = USA_army_commissars
+		}
+
+		relative_position_id = USA_continue_the_new_deal
 		icon = GFX_focus_generic_fascist_troops
+		available = {
+			has_country_leader = { ruling_only = yes character = USA_franklin_delano_roosevelt }
+			has_country_flag = Roosevelt_4th_Term
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		completion_reward = {
+		
+		}
+	}
+	
+	focus = {
+		id = USA_my_will_is_absolute
+		x = -4
+		y = 18
+		#allow_branch = {
+		#	has_country_flag = Roosevelt_Lived
+		#}
+		cost = 5
+		ai_will_do = {
+			factor = 10
+		}
+		prerequisite = {
+			focus = USA_the_pure_soveriengty
+		}
+		prerequisite = {
+			focus = USA_panem_et_circenses
+		}
+
+		relative_position_id = USA_continue_the_new_deal
+		icon = GFX_focus_generic_monarchy_2
+		available = {
+			has_country_leader = { ruling_only = yes character = USA_franklin_delano_roosevelt }
+			has_country_flag = Roosevelt_4th_Term
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		completion_reward = {
+		
+		}
+	}
+
+	focus = {
+		id = USA_my_body_is_full_of_life
+		x = 0
+		y = 18
+		#allow_branch = {
+		#	has_country_flag = Roosevelt_Lived
+		#}
+		cost = 5
+		ai_will_do = {
+			factor = 10
+		}
+		prerequisite = {
+			focus = USA_our_new_industrial_revolution
+		}
+		prerequisite = {
+			focus = USA_workers_of_the_state
+		}
+
+		relative_position_id = USA_continue_the_new_deal
+		icon = GFX_focus_generic_total_war
+		available = {
+			has_country_leader = { ruling_only = yes character = USA_franklin_delano_roosevelt }
+			has_country_flag = Roosevelt_4th_Term
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		completion_reward = {
+		
+		}
+	}
+	focus = {
+		id = USA_I_am_stronger_than_ever
+		x = 4
+		y = 18
+		#allow_branch = {
+		#	has_country_flag = Roosevelt_Lived
+		#}
+		cost = 5
+		ai_will_do = {
+			factor = 10
+		}
+		prerequisite = {
+			focus = USA_for_pax_americana
+		}
+		prerequisite = {
+			focus = USA_legions_of_the_republic
+		}
+
+		relative_position_id = USA_continue_the_new_deal
+		icon = GFX_focus_generic_advanced_military_studies
 		available = {
 			has_country_leader = { ruling_only = yes character = USA_franklin_delano_roosevelt }
 			has_country_flag = Roosevelt_4th_Term
