@@ -453,9 +453,6 @@ country_event = {
 		promote_character = USA_Ezra_Pound
 	}
 	option = {
-		trigger = {
-			neutrality > 0.25
-		}
 		name = "Technocracy Inc. Makes a Dark Horse Victory!"
 		ai_chance = {
 			factor = 10
