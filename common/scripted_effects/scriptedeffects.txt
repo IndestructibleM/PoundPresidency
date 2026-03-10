@@ -73,6 +73,35 @@ upgrade_draft_law = {
 	}
 }
 
+upgrade_taxation_law = {
+	if = { limit = { has_idea = taxation1 } add_ideas = taxation2 }
+	else_if = { limit = { has_idea = taxation2 } add_ideas = taxation3 }
+	else_if = { limit = { has_idea = taxation3 } add_ideas = taxation4 }
+	else_if = { limit = { has_idea = taxation4 } add_ideas = taxation5 }
+	else = { add_political_power = 100 }
+}
+upgrade_welfare_law = {
+	if = { limit = { has_idea = welfare1 } add_ideas = welfare2 }
+	else_if = { limit = { has_idea = welfare2 } add_ideas = welfare3 }
+	else_if = { limit = { has_idea = welfare3 } add_ideas = welfare4 }
+	else_if = { limit = { has_idea = welfare4 } add_ideas = welfare5 }
+	else = { add_political_power = 100 }
+}
+upgrade_labor_law = {
+	if = { limit = { has_idea = labor_regulations1 } add_ideas = labor_regulations2 }
+	else_if = { limit = { has_idea = labor_regulations2 } add_ideas = labor_regulations3 }
+	else_if = { limit = { has_idea = labor_regulations3 } add_ideas = labor_regulations4 }
+	else_if = { limit = { has_idea = labor_regulations4 } add_ideas = labor_regulations5 }
+	else = { add_political_power = 100 }
+}
+upgrade_education_law = {
+	if = { limit = { has_idea = education1 } add_ideas = education2 }
+	else_if = { limit = { has_idea = education2 } add_ideas = education3 }
+	else_if = { limit = { has_idea = education3 } add_ideas = education4 }
+	else_if = { limit = { has_idea = education4 } add_ideas = education5 }
+	else = { add_political_power = 100 }
+}
+
 econ_production_setup = {
 	set_variable = {
 		var = AmountOfCoal 
