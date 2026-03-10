@@ -60,12 +60,85 @@ focus_tree = {
 #
 #		}
 #	}
+	focus = {
+		id = USA_1936_presidential_campaign
+		icon = GFX_focus_generic_election
+		x = 16
+		y = 0
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = USA_defend_the_administration
+		icon = GFX_focus_generic_improve_the_administration
+		x = 15
+		y = 1
+		cost = 5
+		prerequisite = {
+			focus = USA_1936_presidential_campaign
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		completion_reward = {
+			add_political_power = 50
+			add_popularity = { ideology = democratic popularity = 0.05 }
+		}
+	}
+
+	focus = {
+		id = USA_rally_new_deal_coalition
+		icon = GFX_focus_generic_social_democracy
+		x = 17
+		y = 1
+		cost = 5
+		prerequisite = {
+			focus = USA_1936_presidential_campaign
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		completion_reward = {
+			add_popularity = { ideology = socialist popularity = 0.03 }
+			add_popularity = { ideology = democratic popularity = 0.08 }
+			add_political_power = party_popularity_100@socialist
+		}
+	}
 
 	focus = {
 		id = USA_continue_the_new_deal
 		icon = GFX_focus_generic_self_management
 		x = 16
-		y = 0
+		y = 2
 		offset = {
 			x = -12
 			y = 0
@@ -150,7 +223,7 @@ focus_tree = {
 	focus = {
 		id = USA_the_workers_candidate
 		icon = GFX_focus_ITA_corpo_volontari_della_liberta
-		x = -13
+		x = -14
 		y = 0
 		relative_position_id = USA_continue_the_new_deal
 		cost = 6
@@ -159,7 +232,11 @@ focus_tree = {
 			factor = 1
 		}
 		available = {
-
+			OR = {
+				has_government = communism
+				has_government = socialist
+			}
+			date > 1936.11.8
 		}
 		
 		mutually_exclusive = { 
@@ -173,13 +250,42 @@ focus_tree = {
 		available_if_capitulated = no
 		search_filters = {FOCUS_FILTER_POLITICAL}
 		completion_reward = {
+			
 		}
 	}
 
 	focus = {
+		id = USA_foster_path
+		icon = GFX_focus_por_workers_of_iberia
+		x = -4
+		y = 1
+		relative_position_id = USA_the_workers_candidate
+		cost = 6
+		prerequisite = {
+			focus = USA_the_workers_candidate
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		completion_reward = {
+		}
+	}
+	focus = {
 		id = USA_communism_as_american_apple_pie
 		icon = GFX_focus_por_workers_of_iberia
-		x = 3
+		x = 4
 		y = 1
 		relative_position_id = USA_the_workers_candidate
 		cost = 6
@@ -208,7 +314,7 @@ focus_tree = {
 	focus = {
 		id = USA_lincolns_america
 		icon = GFX_focus_generic_befriend_usa
-		x = 3
+		x = 4
 		y = 2
 		relative_position_id = USA_the_workers_candidate
 		cost = 6
@@ -237,7 +343,7 @@ focus_tree = {
 	focus = {
 		id = USA_end_segregation
 		icon = GFX_focus_NORDIC_com_institution_1
-		x = 3
+		x = 4
 		y = 5
 		relative_position_id = USA_the_workers_candidate
 		cost = 6
@@ -266,7 +372,7 @@ focus_tree = {
 	focus = {
 		id = USA_the_peoples_deal
 		icon = GFX_focus_FIN_socialist_welfare
-		x = 5
+		x = 6
 		y = 2
 		relative_position_id = USA_the_workers_candidate
 		cost = 6
@@ -292,7 +398,7 @@ focus_tree = {
 	focus = {
 		id = USA_american_recovery_program
 		icon = GFX_focus_NORDIC_com_selector_civilian
-		x = 4
+		x = 5
 		y = 3
 		relative_position_id = USA_the_workers_candidate
 		cost = 6
@@ -316,7 +422,7 @@ focus_tree = {
 	focus = {
 		id = USA_industrial_democracy
 		icon = GFX_focus_NORDIC_com_institution_2
-		x = 6
+		x = 7
 		y = 3
 		relative_position_id = USA_the_workers_candidate
 		cost = 6
@@ -340,7 +446,7 @@ focus_tree = {
 	focus = {
 		id = USA_national_planning_councils
 		icon = GFX_focus_NORDIC_com_capstone_materiel
-		x = 6
+		x = 7
 		y = 4
 		relative_position_id = USA_the_workers_candidate
 		cost = 6
@@ -364,7 +470,7 @@ focus_tree = {
 	focus = {
 		id = USA_public_industry
 		icon = GFX_focus_NORDIC_com_civilian
-		x = 4
+		x = 5
 		y = 4
 		relative_position_id = USA_the_workers_candidate
 		cost = 6
@@ -388,7 +494,7 @@ focus_tree = {
 	focus = {
 		id = USA_forge_the_popular_front
 		icon = GFX_focus_generic_communism_anti_fascism
-		x = 1
+		x = 2
 		y = 2
 		relative_position_id = USA_the_workers_candidate
 		cost = 6
@@ -414,7 +520,7 @@ focus_tree = {
 	focus = {
 		id = USA_alliance_with_new_dealers
 		icon = GFX_focus_generic_social_democracy
-		x = 0
+		x = 1
 		y = 3
 		relative_position_id = USA_the_workers_candidate
 		cost = 6
@@ -438,7 +544,7 @@ focus_tree = {
 	focus = {
 		id = USA_suspend_the_persecution
 		icon = GFX_focus_AUS_lawmaking_leniency
-		x = 2
+		x = 3
 		y = 3
 		relative_position_id = USA_the_workers_candidate
 		cost = 6
@@ -462,7 +568,7 @@ focus_tree = {
 	focus = {
 		id = USA_force_CIO_AFL_merger
 		icon = GFX_focus_ITA_corpo_volontari_della_liberta
-		x = 2
+		x = 3
 		y = 4
 		relative_position_id = USA_the_workers_candidate
 		cost = 6
@@ -486,7 +592,7 @@ focus_tree = {
 	focus = {
 		id = USA_empower_the_voice_of_labor
 		icon = GFX_focus_generic_workers
-		x = 0
+		x = 1
 		y = 4
 		relative_position_id = USA_the_workers_candidate
 		cost = 6
@@ -510,7 +616,7 @@ focus_tree = {
 	focus = {
 		id = USA_socialism_the_american_way
 		icon = GFX_focus_usa_guarantee_the_american_dream
-		x = 1
+		x = 2
 		y = 5
 		relative_position_id = USA_the_workers_candidate
 		cost = 6
@@ -537,7 +643,7 @@ focus_tree = {
 	focus = {
 		id = USA_federal_congress_of_labor
 		icon = GFX_focus_SOV_the_supreme_soviet
-		x = 5
+		x = 6
 		y = 5
 		relative_position_id = USA_the_workers_candidate
 		cost = 6
@@ -564,7 +670,7 @@ focus_tree = {
 	focus = {
 		id = USA_peoples_unity_government
 		icon = GFX_goal_generic_national_unity
-		x = 1
+		x = 2
 		y = 6
 		relative_position_id = USA_the_workers_candidate
 		cost = 6
@@ -588,7 +694,7 @@ focus_tree = {
 	focus = {
 		id = USA_a_popular_mandate
 		icon = GFX_focus_generic_soviet_politics
-		x = 3
+		x = 4
 		y = 6
 		relative_position_id = USA_the_workers_candidate
 		cost = 6
@@ -612,7 +718,7 @@ focus_tree = {
 	focus = {
 		id = USA_farmer_labor_front
 		icon = GFX_focus_generic_workers_and_farmers_rise
-		x = 5
+		x = 6
 		y = 6
 		relative_position_id = USA_the_workers_candidate
 		cost = 6
@@ -636,7 +742,7 @@ focus_tree = {
 	focus = {
 		id = USA_a_brighter_shade_of_crimson
 		icon = GFX_focus_generic_spur_communist_revolutions
-		x = 4
+		x = 5
 		y = 7
 		relative_position_id = USA_the_workers_candidate
 		cost = 6
@@ -666,7 +772,7 @@ focus_tree = {
 	focus = {
 		id = USA_red_american_dream
 		icon = GFX_focus_JAP_a_free_asia_pacific
-		x = 2
+		x = 3
 		y = 7
 		relative_position_id = USA_the_workers_candidate
 		cost = 6
@@ -1152,7 +1258,6 @@ focus_tree = {
 		x = -1
 		y = 3
 		prerequisite = { focus = USA_war_propaganda }
-		mutually_exclusive = { focus = USA_focus_on_asia }
 		relative_position_id = USA_limited_intervention
 
 		offset = {
@@ -1261,7 +1366,6 @@ focus_tree = {
 		x = 1
 		y = 3
 		prerequisite = { focus = USA_war_propaganda }
-		mutually_exclusive = { focus = USA_focus_on_europe }
 		relative_position_id = USA_limited_intervention
 
 		offset = {
@@ -4576,7 +4680,7 @@ focus_tree = {
 		id = USA_towards_national_utopia
 		icon = GFX_focus_generic_population_growth
 		x = 38
-		y = 0
+		y = 2
 		
 		cost = 5
 
@@ -4592,6 +4696,7 @@ focus_tree = {
 		available = {
 			has_government = fascism
 			has_country_leader = { ruling_only = yes character = USA_ezra_pound }
+			date > 1936.11.8
 		}
 		
 
@@ -5910,8 +6015,8 @@ focus_tree = {
 	### POUND SUCCESSORS 
 	focus = {
 		id = USA_fall_of_prometheus
-		x = 35
-		y = 11
+		x = 56
+		y = 7
 		
 		cost = 2
 		ai_will_do = {
@@ -6572,7 +6677,7 @@ focus_tree = {
 	focus = {
 		id = USA_revolt_of_engineers
 		x = 28
-		y = 0
+		y = 2
 		
 		cost = 5
 		ai_will_do = {
@@ -6582,6 +6687,7 @@ focus_tree = {
 		available = {
 			has_government = neutrality
 			has_country_leader = { ruling_only = yes character = USA_howard_scott }
+			date > 1936.11.8
 		}
 		mutually_exclusive = { 
 			focus = USA_continue_the_new_deal
@@ -6752,6 +6858,7 @@ focus_tree = {
 		available_if_capitulated = no
 		completion_reward = {
 			add_ideas = autarkic_economy
+			set_country_flag = CanRemoveUndisturbedIsolation
 		}
 	}
 	focus = {
@@ -6964,6 +7071,11 @@ focus_tree = {
     			ideology = technocracy
     			trait = nuclear_commander
 			}
+			clear_variable = senators_support
+			clear_variable = senators_total
+			clear_variable = representatives_support
+			clear_variable = representatives_total
+			custom_effect_tooltip = "You will no longer have to deal with the congress mechanic."
 		}
 	}
 	focus = {
@@ -7295,6 +7407,719 @@ focus_tree = {
    					}
 				}			
 			}
+		}
+	}
+	
+	#### ROOSEVELT LIVES?
+	
+	focus = {
+		id = USA_roosevelt_lives
+		x = 0
+		y = 10
+		#allow_branch = {
+		#	has_country_flag = Roosevelt_Lived
+		#}
+		cost = 5
+		ai_will_do = {
+			factor = 10
+		}
+		relative_position_id = USA_continue_the_new_deal
+		icon = GFX_focus_generic_strike_at_democracy2
+		available = {
+			has_country_leader = { ruling_only = yes character = USA_franklin_delano_roosevelt }
+			date > 1945.1.1
+			has_country_flag = Roosevelt_4th_Term
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		completion_reward = {
+			retire_character = USA_Ezra_Pound
+			retire_character = USA_william_dudley_pelley
+			retire_character = USA_George_Christians
+			retire_character = USA_francis_yockey
+			set_politics = {
+				ruling_party = fascism
+				elections_allowed = no
+			}
+			promote_character = USA_franklin_delano_roosevelt
+		}
+	}
+
+	focus = {
+		id = USA_overwhelming_executive_orders
+		x = -2
+		y = 11
+		#allow_branch = {
+		#	has_country_flag = Roosevelt_Lived
+		#}
+		cost = 5
+		ai_will_do = {
+			factor = 10
+		}
+		prerequisite = {
+			focus = USA_roosevelt_lives
+		}
+		relative_position_id = USA_continue_the_new_deal
+		icon = GFX_goal_generic_forceful_treaty
+		available = {
+			has_country_leader = { ruling_only = yes character = USA_franklin_delano_roosevelt }
+			has_country_flag = Roosevelt_4th_Term
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		completion_reward = {
+		
+		}
+	}
+	focus = {
+		id = USA_declare_martial_law
+		x = 0
+		y = 11
+		#allow_branch = {
+		#	has_country_flag = Roosevelt_Lived
+		#}
+		cost = 5
+		ai_will_do = {
+			factor = 10
+		}
+		prerequisite = {
+			focus = USA_roosevelt_lives
+		}
+		relative_position_id = USA_continue_the_new_deal
+		icon = GFX_focus_PHI_declare_military_emergency
+		available = {
+			has_country_leader = { ruling_only = yes character = USA_franklin_delano_roosevelt }
+			has_country_flag = Roosevelt_4th_Term
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		completion_reward = {
+		
+		}
+	}
+	focus = {
+		id = USA_pack_the_supreme_court
+		x = 2
+		y = 11
+		#allow_branch = {
+		#	has_country_flag = Roosevelt_Lived
+		#}
+		cost = 5
+		ai_will_do = {
+			factor = 10
+		}
+		prerequisite = {
+			focus = USA_roosevelt_lives
+		}
+		relative_position_id = USA_continue_the_new_deal
+		icon = GFX_focus_generic_court
+		available = {
+			has_country_leader = { ruling_only = yes character = USA_franklin_delano_roosevelt }
+			has_country_flag = Roosevelt_4th_Term
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		completion_reward = {
+		
+		}
+	}
+	focus = {
+		id = USA_godels_loophole
+		x = 0
+		y = 12
+		#allow_branch = {
+		#	has_country_flag = Roosevelt_Lived
+		#}
+		cost = 6
+		ai_will_do = {
+			factor = 10
+		}
+		prerequisite = {
+			focus = USA_declare_martial_law
+		}
+		prerequisite = {
+			focus = USA_overwhelming_executive_orders
+			focus = USA_pack_the_supreme_court
+		}
+		relative_position_id = USA_continue_the_new_deal
+		icon = GFX_focus_generic_military_dictatorship
+		available = {
+			has_country_leader = { ruling_only = yes character = USA_franklin_delano_roosevelt }
+			has_country_flag = Roosevelt_4th_Term
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		completion_reward = {
+		
+		}
+	}
+	focus = {
+		id = USA_rule_by_executive_decree
+		x = -2
+		y = 13
+		#allow_branch = {
+		#	has_country_flag = Roosevelt_Lived
+		#}
+		cost = 6
+		ai_will_do = {
+			factor = 10
+		}
+		prerequisite = {
+			focus = USA_godels_loophole
+		}
+		prerequisite = {
+			focus = USA_overwhelming_executive_orders
+		}
+		relative_position_id = USA_continue_the_new_deal
+		icon = GFX_goal_generic_political_pressure
+		available = {
+			has_country_leader = { ruling_only = yes character = USA_franklin_delano_roosevelt }
+			has_country_flag = Roosevelt_4th_Term
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		completion_reward = {
+		
+		}
+	}
+
+	focus = {
+		id = USA_republic_without_democracy
+		x = 2
+		y = 13
+		#allow_branch = {
+		#	has_country_flag = Roosevelt_Lived
+		#}
+		cost = 6
+		ai_will_do = {
+			factor = 10
+		}
+		prerequisite = {
+			focus = USA_godels_loophole
+		}
+		prerequisite = {
+			focus = USA_pack_the_supreme_court
+		}
+		relative_position_id = USA_continue_the_new_deal
+		icon = GFX_focus_generic_subjugation
+		available = {
+			has_country_leader = { ruling_only = yes character = USA_franklin_delano_roosevelt }
+			has_country_flag = Roosevelt_4th_Term
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		completion_reward = {
+		
+		}
+	}
+	focus = {
+		id = USA_nationalize_military_industry
+		x = 0
+		y = 13
+		#allow_branch = {
+		#	has_country_flag = Roosevelt_Lived
+		#}
+		cost = 6
+		ai_will_do = {
+			factor = 10
+		}
+		prerequisite = {
+			focus = USA_godels_loophole
+		}
+
+		relative_position_id = USA_continue_the_new_deal
+		icon = GFX_focus_DEN_heavy_regulations
+		available = {
+			has_country_leader = { ruling_only = yes character = USA_franklin_delano_roosevelt }
+			has_country_flag = Roosevelt_4th_Term
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		completion_reward = {
+		
+		}
+	}
+	focus = {
+		id = USA_COMMAND_OVERSEER
+		x = -4
+		y = 14
+		#allow_branch = {
+		#	has_country_flag = Roosevelt_Lived
+		#}
+		cost = 6
+		ai_will_do = {
+			factor = 10
+		}
+		prerequisite = {
+			focus = USA_republic_without_democracy
+		}
+		prerequisite = {
+			focus = USA_nationalize_military_industry
+		}
+		prerequisite = {
+			focus = USA_rule_by_executive_decree
+		}
+
+		relative_position_id = USA_continue_the_new_deal
+		icon = GFX_focus_GER_total_control_over_domestic_affairs
+		available = {
+			has_country_leader = { ruling_only = yes character = USA_franklin_delano_roosevelt }
+			has_country_flag = Roosevelt_4th_Term
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		completion_reward = {
+		
+		}
+	}
+	
+	focus = {
+		id = USA_COMMAND_TITAN
+		x = 0
+		y = 14
+		#allow_branch = {
+		#	has_country_flag = Roosevelt_Lived
+		#}
+		cost = 6
+		ai_will_do = {
+			factor = 10
+		}
+		prerequisite = {
+			focus = USA_republic_without_democracy
+		}
+		prerequisite = {
+			focus = USA_nationalize_military_industry
+		}
+		prerequisite = {
+			focus = USA_rule_by_executive_decree
+		}
+
+		relative_position_id = USA_continue_the_new_deal
+		icon = GFX_focus_GER_prioritize_the_four_year_plan
+		available = {
+			has_country_leader = { ruling_only = yes character = USA_franklin_delano_roosevelt }
+			has_country_flag = Roosevelt_4th_Term
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		completion_reward = {
+		
+		}
+	}
+	
+	focus = {
+		id = USA_ford_herald_of_smokestacks
+		x = -1
+		y = 15
+		#allow_branch = {
+		#	has_country_flag = Roosevelt_Lived
+		#}
+		cost = 6
+		ai_will_do = {
+			factor = 10
+		}
+		prerequisite = {
+			focus = USA_COMMAND_TITAN
+		}
+
+		relative_position_id = USA_continue_the_new_deal
+		icon = GFX_focus_GER_kdf_wagen
+		available = {
+			has_country_leader = { ruling_only = yes character = USA_franklin_delano_roosevelt }
+			has_country_flag = Roosevelt_4th_Term
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		completion_reward = {
+		
+		}
+	}
+	
+	focus = {
+		id = USA_institute_of_military_industrial_expansion
+		x = -1
+		y = 16
+		#allow_branch = {
+		#	has_country_flag = Roosevelt_Lived
+		#}
+		cost = 6
+		ai_will_do = {
+			factor = 10
+		}
+		prerequisite = {
+			focus = USA_ford_herald_of_smokestacks
+		}
+
+		relative_position_id = USA_continue_the_new_deal
+		icon = GFX_focus_generic_industrial_experts
+		available = {
+			has_country_leader = { ruling_only = yes character = USA_franklin_delano_roosevelt }
+			has_country_flag = Roosevelt_4th_Term
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		completion_reward = {
+		
+		}
+	}
+	
+	focus = {
+		id = USA_perkins_mother_of_labor
+		x = 1
+		y = 15
+		#allow_branch = {
+		#	has_country_flag = Roosevelt_Lived
+		#}
+		cost = 6
+		ai_will_do = {
+			factor = 10
+		}
+		prerequisite = {
+			focus = USA_COMMAND_TITAN
+		}
+
+		relative_position_id = USA_continue_the_new_deal
+		icon = GFX_goal_generic_war_with_comintern
+		available = {
+			has_country_leader = { ruling_only = yes character = USA_franklin_delano_roosevelt }
+			has_country_flag = Roosevelt_4th_Term
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		completion_reward = {
+		
+		}
+	}
+	
+	focus = {
+		id = USA_the_cornucopia
+		x = 1
+		y = 16
+		#allow_branch = {
+		#	has_country_flag = Roosevelt_Lived
+		#}
+		cost = 6
+		ai_will_do = {
+			factor = 10
+		}
+		prerequisite = {
+			focus = USA_perkins_mother_of_labor
+		}
+
+		relative_position_id = USA_continue_the_new_deal
+		icon = GFX_focus_generic_population_growth
+		available = {
+			has_country_leader = { ruling_only = yes character = USA_franklin_delano_roosevelt }
+			has_country_flag = Roosevelt_4th_Term
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		completion_reward = {
+		
+		}
+	}
+	
+	focus = {
+		id = USA_COMMAND_PRAETOR
+		x = 4
+		y = 14
+		#allow_branch = {
+		#	has_country_flag = Roosevelt_Lived
+		#}
+		cost = 6
+		ai_will_do = {
+			factor = 10
+		}
+		prerequisite = {
+			focus = USA_republic_without_democracy
+		}
+		prerequisite = {
+			focus = USA_nationalize_military_industry
+		}
+		prerequisite = {
+			focus = USA_rule_by_executive_decree
+		}
+
+		relative_position_id = USA_continue_the_new_deal
+		icon = GFX_focus_GER_expand_ss_security_duties
+		available = {
+			has_country_leader = { ruling_only = yes character = USA_franklin_delano_roosevelt }
+			has_country_flag = Roosevelt_4th_Term
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		completion_reward = {
+		
+		}
+	}
+	
+	focus = {
+		id = USA_leahy_american_poseidon
+		x = 3
+		y = 15
+		#allow_branch = {
+		#	has_country_flag = Roosevelt_Lived
+		#}
+		cost = 6
+		ai_will_do = {
+			factor = 10
+		}
+		prerequisite = {
+			focus = USA_COMMAND_PRAETOR
+		}
+
+		relative_position_id = USA_continue_the_new_deal
+		icon = GFX_focus_JAP_naval_armaments_program
+		available = {
+			has_country_leader = { ruling_only = yes character = USA_franklin_delano_roosevelt }
+			has_country_flag = Roosevelt_4th_Term
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		completion_reward = {
+		
+		}
+	}
+	
+	focus = {
+		id = USA_unleash_the_kraken
+		x = 3
+		y = 16
+		#allow_branch = {
+		#	has_country_flag = Roosevelt_Lived
+		#}
+		cost = 6
+		ai_will_do = {
+			factor = 10
+		}
+		prerequisite = {
+			focus = USA_leahy_american_poseidon
+		}
+
+		relative_position_id = USA_continue_the_new_deal
+		icon = GFX_focus_generic_battleship_guns
+		available = {
+			has_country_leader = { ruling_only = yes character = USA_franklin_delano_roosevelt }
+			has_country_flag = Roosevelt_4th_Term
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		completion_reward = {
+		
+		}
+	}
+	
+	focus = {
+		id = USA_byrnes_lord_of_the_machine
+		x = -3
+		y = 15
+		#allow_branch = {
+		#	has_country_flag = Roosevelt_Lived
+		#}
+		cost = 6
+		ai_will_do = {
+			factor = 10
+		}
+		prerequisite = {
+			focus = USA_COMMAND_OVERSEER
+		}
+
+		relative_position_id = USA_continue_the_new_deal
+		icon = GFX_focus_generic_strike_at_democracy3
+		available = {
+			has_country_leader = { ruling_only = yes character = USA_franklin_delano_roosevelt }
+			has_country_flag = Roosevelt_4th_Term
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		completion_reward = {
+		
+		}
+	}
+
+	focus = {
+		id = USA_a_perfectly_obediant_state
+		x = -3
+		y = 16
+		#allow_branch = {
+		#	has_country_flag = Roosevelt_Lived
+		#}
+		cost = 6
+		ai_will_do = {
+			factor = 10
+		}
+		prerequisite = {
+			focus = USA_byrnes_lord_of_the_machine
+		}
+
+		relative_position_id = USA_continue_the_new_deal
+		icon = GFX_focus_CZE_german_puppet
+		available = {
+			has_country_leader = { ruling_only = yes character = USA_franklin_delano_roosevelt }
+			has_country_flag = Roosevelt_4th_Term
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		completion_reward = {
+		
+		}
+	}
+	
+	focus = {
+		id = USA_J_hoover_all_seeing_eye
+		x = -5
+		y = 15
+		#allow_branch = {
+		#	has_country_flag = Roosevelt_Lived
+		#}
+		cost = 6
+		ai_will_do = {
+			factor = 10
+		}
+		prerequisite = {
+			focus = USA_COMMAND_OVERSEER
+		}
+
+		relative_position_id = USA_continue_the_new_deal
+		icon = GFX_focus_generic_secret_service_agency
+		available = {
+			has_country_leader = { ruling_only = yes character = USA_franklin_delano_roosevelt }
+			has_country_flag = Roosevelt_4th_Term
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		completion_reward = {
+		
+		}
+	}
+
+	focus = {
+		id = USA_CIA_FBI_merger
+		x = -5
+		y = 16
+		#allow_branch = {
+		#	has_country_flag = Roosevelt_Lived
+		#}
+		cost = 6
+		ai_will_do = {
+			factor = 10
+		}
+		prerequisite = {
+			focus = USA_J_hoover_all_seeing_eye
+		}
+
+		relative_position_id = USA_continue_the_new_deal
+		icon = GFX_focus_generic_annex_country_2
+		available = {
+			has_country_leader = { ruling_only = yes character = USA_franklin_delano_roosevelt }
+			has_country_flag = Roosevelt_4th_Term
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		completion_reward = {
+		
+		}
+	}
+	
+	focus = {
+		id = USA_marshall_god_of_war
+		x = 5
+		y = 15
+		#allow_branch = {
+		#	has_country_flag = Roosevelt_Lived
+		#}
+		cost = 6
+		ai_will_do = {
+			factor = 10
+		}
+		prerequisite = {
+			focus = USA_COMMAND_PRAETOR
+		}
+
+		relative_position_id = USA_continue_the_new_deal
+		icon = GFX_focus_generic_full_social_mobilization
+		available = {
+			has_country_leader = { ruling_only = yes character = USA_franklin_delano_roosevelt }
+			has_country_flag = Roosevelt_4th_Term
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		completion_reward = {
+		
+		}
+	}
+
+	focus = {
+		id = USA_army_commissars
+		x = 5
+		y = 16
+		#allow_branch = {
+		#	has_country_flag = Roosevelt_Lived
+		#}
+		cost = 6
+		ai_will_do = {
+			factor = 10
+		}
+		prerequisite = {
+			focus = USA_marshall_god_of_war
+		}
+
+		relative_position_id = USA_continue_the_new_deal
+		icon = GFX_focus_generic_fascist_troops
+		available = {
+			has_country_leader = { ruling_only = yes character = USA_franklin_delano_roosevelt }
+			has_country_flag = Roosevelt_4th_Term
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		completion_reward = {
+		
 		}
 	}
 }

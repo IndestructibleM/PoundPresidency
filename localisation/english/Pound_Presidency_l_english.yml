@@ -1,6 +1,9 @@
 ﻿l_english:
+### FOCUS TREE ###
+ USA_1936_presidential_campaign: "The 1936 Presidential Campaign"
+ USA_defend_the_administration: "Defend the Administration"
+ USA_rally_new_deal_coalition: "Rally the New Deal Coalition"
  ##### POUND ###
- ### Focus
  USA_towards_national_utopia: "Towards National Utopia!"
  USA_towards_national_utopia_desc: "Towards National Utopia!"
  USA_obliterate_the_banks: "Obliterate the Banks"
@@ -287,6 +290,7 @@ USA_secure_greenland: "Secure Greenland"
  neosoc: "Neosocialism"
  technocracy: "Technocracy"
  toteur: "Totalitarian Europeanism"
+ new_deal_ideology: "New Deal System"
 
  
  ### New Tags
@@ -332,3 +336,29 @@ Release_decisions_1: "Release [FROM.GetNameDef] as a Puppet"
 
 reactionary_marshal: "Reactionary Marshal"
 
+
+
+### ROOSEVELT lives
+ USA_roosevelt_lives: "Roosevelt Lives!"
+ USA_overwhelming_executive_orders: "Overwhelming Executive Orders"
+ USA_declare_martial_law: "Declare Martial Law"
+ USA_pack_the_supreme_court: "Pack the Supreme Court"
+ USA_godels_loophole: "Gödel's Loophole"
+ USA_rule_by_executive_decree: "Rule by Executive Decree"
+ USA_republic_without_democracy: "A Republic Without Democracy"
+ USA_nationalize_military_industry: "Nationalize all Military Industry"
+ USA_COMMAND_OVERSEER: "§tCOMMANDMENT: OVERSEER§!"
+ USA_COMMAND_TITAN: "§tCOMMANDMENT: TITAN§!"
+ USA_ford_herald_of_smokestacks: "Ford, Herald of Smokestacks"
+ USA_institute_of_military_industrial_expansion: "Institute of Heroic Capitalism"
+ USA_perkins_mother_of_labor: "Perkins, Mother of Labor"
+ USA_the_cornucopia: "The Cornucopia"
+ USA_COMMAND_PRAETOR: "§tCOMMANDMENT: PRAETOR§!"
+ USA_leahy_american_poseidon: "Leahy, American Poseidon"
+ USA_unleash_the_kraken: "Unleash the Kraken"
+ USA_byrnes_lord_of_the_machine: "Byrnes, Operator of the Machine"
+ USA_a_perfectly_obediant_state: "A Perfectly Obedient State"
+ USA_J_hoover_all_seeing_eye: "J. Edgar Hoover, The All-Seeing Eye"
+ USA_CIA_FBI_merger: "CIA–FBI Merger"
+ USA_marshall_god_of_war: "Marshall, God of War"
+ USA_army_commissars: "Army Commissars"

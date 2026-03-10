@@ -3,8 +3,115 @@
 ###########################
 
 add_namespace = usa
+add_namespace = VR_usa
 
-# Amelia Eartharts wants to join the USAAC
+# Poundists On March
+country_event = {
+	id = VR_usa.1
+	title = VR_usa.1.t
+	desc = VR_usa.1.d
+
+	fire_only_once = yes
+	
+	trigger = {
+		tag = USA
+		date > 1936.3.1
+		date < 1936.6.1
+	}
+
+	option = { 
+		name = VR_usa.1.a
+		add_political_power = -30
+		add_popularity = { ideology = fascism popularity = -0.05 }
+	}
+
+	option = { 
+		name = VR_usa.1.b
+		add_popularity = { ideology = fascism popularity = 0.05 }
+	}
+}
+
+country_event = {
+	id = VR_usa.2
+	title = VR_usa.2.t
+	desc = VR_usa.2.d
+
+	fire_only_once = yes
+	
+	trigger = {
+		tag = USA
+		date > 1936.6.1
+		date < 1936.9.1
+	}
+
+	option = { 
+		name = VR_usa.2.a
+		add_popularity = { ideology = socialist popularity = 0.04 }
+		add_popularity = { ideology = communism popularity = 0.04 }
+		set_party_name = {
+			ideology = socialist
+			long_name = PopularFront
+			name = PopularFront
+		}
+		set_party_name = {
+			ideology = communism
+			long_name = PopularFront
+			name = PopularFront
+		}
+		add_political_power = -25
+	}
+}
+
+country_event = {
+	id = VR_usa.3
+	title = VR_usa.3.t
+	desc = VR_usa.3.d
+
+	fire_only_once = yes
+	
+	trigger = {
+		tag = USA
+		date > 1936.8.20
+		date < 1936.11.1
+	}
+
+	option = { 
+		name = VR_usa.3.a
+		add_popularity = { ideology = socialist popularity = 0.05 }
+		add_popularity = { ideology = communism popularity = 0.02 }
+	}
+
+	option = { 
+		name = VR_usa.3.b
+		add_popularity = { ideology = reactionary popularity = 0.05 }
+		add_popularity = { ideology = fascism popularity = 0.02 }
+	}
+}
+
+country_event = {
+	id = VR_usa.4
+	title = VR_usa.4.t
+	desc = VR_usa.4.d
+
+	fire_only_once = yes
+	
+	trigger = {
+		tag = USA
+		date > 1936.5.1
+		date < 1936.8.1
+	}
+
+	option = { 
+		name = VR_usa.4.a
+		add_popularity = { ideology = democratic popularity = 0.05 }
+		add_popularity = { ideology = neutrality popularity = 0.05 }
+	}
+
+	option = { 
+		name = VR_usa.4.b
+		add_political_power = -25
+	}
+}
 country_event = {
 	id = usa.1
 	title = usa.1.t
@@ -226,6 +333,9 @@ country_event = {
 	}
 
 	option = { 	
+		trigger = {
+			democratic > 0.25
+		}
 		name = usa.6.a
 		ai_chance = {
 			factor = 75
@@ -262,6 +372,9 @@ country_event = {
 	}
 
 	option = {
+		trigger = {
+			democratic > 0.25
+		}
 		name = usa.6.b
 		ai_chance = {
 			factor = 25
@@ -308,6 +421,9 @@ country_event = {
 	}
 	option = {
 		name = "Lightning Strikes this Election!"
+		trigger = {
+			fascism > 0.25
+		}
 		ai_chance = {
 			factor = 20
 			modifier = {
@@ -337,6 +453,9 @@ country_event = {
 		promote_character = USA_Ezra_Pound
 	}
 	option = {
+		trigger = {
+			neutrality > 0.25
+		}
 		name = "Technocracy Inc. Makes a Dark Horse Victory!"
 		ai_chance = {
 			factor = 10
@@ -365,6 +484,43 @@ country_event = {
 			popularity = 0.1	
 		}
 		promote_character = USA_howard_scott
+	}
+	option = {
+		trigger = {
+			socialist > 0.25
+		}
+		name = "The Popular Front Wins the Vote!"
+		ai_chance = {
+			factor = 10
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+				has_game_rule = {
+					rule = USA_ai_behavior
+					option = DEFAULT
+				}
+			}
+		}		
+		set_politics = {
+			ruling_party = socialist
+			elections_allowed = no
+			last_election = "1936.11.5"
+			election_frequency = 48
+			long_name = "Communist Party USA"
+			name = "CPUSA"
+		}
+		hidden_effect = {
+			set_cosmetic_tag = USA_democratic
+		}
+		add_popularity = {
+			ideology = socialist
+			popularity = 0.1	
+		}
+		add_popularity = {
+			ideology = communism
+			popularity = 0.05	
+		}
+		promote_character = USA_earl_browder
 	}
 }
 

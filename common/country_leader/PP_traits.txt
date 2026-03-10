@@ -75,11 +75,11 @@ leader_traits = {
 		max_planning = 0.2
 	}
 	
-	soldier_author_sportsman = {
+	all_american_marxist = {
 		random = no
-		conscription_factor = 0.1
-		army_strength_factor = 0.1
-		political_power_cost = -0.2
+		socialist_drift = 0.03
+		consumer_goods_expected_value = -0.05
+		war_stability_factor = 0.05
 	}
 	
 	unproven_leader = {

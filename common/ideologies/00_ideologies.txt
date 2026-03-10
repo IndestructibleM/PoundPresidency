@@ -32,6 +32,8 @@ ideologies = {
 			
 			futurism = { can_be_randomly_selected = no }
 
+			new_deal_ideology = { color = { 0 0 0 } can_be_randomly_selected = no }
+
 		}
 
 		dynamic_faction_names = {

@@ -248,6 +248,12 @@ defined_text = {
 		}
 		localization_key = neosoc
 	}
+	text = {
+		trigger = {
+			has_country_leader_ideology = new_deal_ideology
+		}
+		localization_key = new_deal_ideology
+	}
 	
 }
 defined_text = {
