@@ -57,8 +57,8 @@ LAT = {
 	color_ui = rgb { 142 10 165 }
 }
 SPR = {
-	color = rgb { 115 60 130 }
-	color_ui = rgb { 105 1 186 }
+	color = rgb { 125 30 130 }
+	color_ui = rgb { 120 10 186 }
 }
 ITA = {
 	color = rgb { 10 130 30 }
@@ -233,8 +233,8 @@ SAF = {
 	color_ui = rgb { 198 169 248 }
 }
 SAU = {
-	color = rgb { 171 190 152 }
-	color_ui = rgb { 222 247 198 }
+	color = rgb { 0 100 0 }
+	color_ui = rgb { 0 120 0 }
 }
 SIA = {
 	color = rgb { 171 190 152 }
@@ -341,8 +341,8 @@ LBA = {
 }
 
 EGY = {
-	color = rgb { 230 230 70 }
-	color_ui = rgb { 230 230 70 }
+	color = rgb { 195 150 40 }
+	color_ui = rgb { 190 150 40 }
 }
 
 PAL = {

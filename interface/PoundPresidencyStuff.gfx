@@ -361,6 +361,25 @@ spriteTypes = {
 		texturefile = "gfx/interface/ideas/laws/HOL_welfare_state.png"
 	}
 
+	spriteType = {
+		name = "GFX_idea_IRE_secular"
+		texturefile = "gfx/interface/ideas/laws/IRE_secular.png"
+	}
+
+	spriteType = {
+		name = "GFX_idea_LIB_whiter_pale"
+		texturefile = "gfx/interface/ideas/laws/LIB_whiter_pale.png"
+	}
+
+	spriteType = {
+		name = "GFX_idea_SAF_Apartheid_2"
+		texturefile = "gfx/interface/ideas/laws/SAF_Apartheid_2.png"
+	}
+
+	spriteType = {
+		name = "GFX_idea_ZAM_segregation_idea"
+		texturefile = "gfx/interface/ideas/laws/ZAM_segregation_idea.png"
+	}
 
 }
 

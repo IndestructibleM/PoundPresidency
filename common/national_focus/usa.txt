@@ -7242,7 +7242,7 @@ focus_tree = {
 		}
 		relative_position_id = USA_revolt_of_engineers
 		prerequisite = { focus = USA_panama_to_pole }
-		icon = GFX_focus_attack_mexico
+		icon = GFX_focus_mex_jefe_maximo
 		available = {
 			has_government = neutrality
 			has_country_leader = { ruling_only = yes character = USA_howard_scott }
@@ -7549,7 +7549,7 @@ focus_tree = {
 		#allow_branch = {
 		#	has_country_flag = Roosevelt_Lived
 		#}
-		cost = 6
+		cost = 5
 		ai_will_do = {
 			factor = 10
 		}
@@ -7581,7 +7581,7 @@ focus_tree = {
 		#allow_branch = {
 		#	has_country_flag = Roosevelt_Lived
 		#}
-		cost = 6
+		cost = 5
 		ai_will_do = {
 			factor = 10
 		}
@@ -7613,7 +7613,7 @@ focus_tree = {
 		#allow_branch = {
 		#	has_country_flag = Roosevelt_Lived
 		#}
-		cost = 6
+		cost = 5
 		ai_will_do = {
 			factor = 10
 		}
@@ -7644,7 +7644,7 @@ focus_tree = {
 		#allow_branch = {
 		#	has_country_flag = Roosevelt_Lived
 		#}
-		cost = 6
+		cost = 5
 		ai_will_do = {
 			factor = 10
 		}
@@ -7673,7 +7673,7 @@ focus_tree = {
 		#allow_branch = {
 		#	has_country_flag = Roosevelt_Lived
 		#}
-		cost = 6
+		cost = 5
 		ai_will_do = {
 			factor = 10
 		}
@@ -7709,7 +7709,7 @@ focus_tree = {
 		#allow_branch = {
 		#	has_country_flag = Roosevelt_Lived
 		#}
-		cost = 6
+		cost = 5
 		ai_will_do = {
 			factor = 10
 		}
@@ -7745,7 +7745,7 @@ focus_tree = {
 		#allow_branch = {
 		#	has_country_flag = Roosevelt_Lived
 		#}
-		cost = 6
+		cost = 5
 		ai_will_do = {
 			factor = 10
 		}
@@ -7835,7 +7835,7 @@ focus_tree = {
 		#allow_branch = {
 		#	has_country_flag = Roosevelt_Lived
 		#}
-		cost = 6
+		cost = 5
 		ai_will_do = {
 			factor = 10
 		}
@@ -7925,7 +7925,7 @@ focus_tree = {
 		#allow_branch = {
 		#	has_country_flag = Roosevelt_Lived
 		#}
-		cost = 6
+		cost = 5
 		ai_will_do = {
 			factor = 10
 		}
@@ -7961,7 +7961,7 @@ focus_tree = {
 		#allow_branch = {
 		#	has_country_flag = Roosevelt_Lived
 		#}
-		cost = 6
+		cost = 5
 		ai_will_do = {
 			factor = 10
 		}
@@ -8231,7 +8231,7 @@ focus_tree = {
 		#allow_branch = {
 		#	has_country_flag = Roosevelt_Lived
 		#}
-		cost = 6
+		cost = 5
 		ai_will_do = {
 			factor = 10
 		}
@@ -8333,7 +8333,7 @@ focus_tree = {
 		}
 
 		relative_position_id = USA_continue_the_new_deal
-		icon = GFX_focus_generic_monarchy_2
+		icon = GFX_focus_GER_strafbataillon
 		available = {
 			has_country_leader = { ruling_only = yes character = USA_franklin_delano_roosevelt }
 			has_country_flag = Roosevelt_4th_Term
@@ -8399,6 +8399,459 @@ focus_tree = {
 
 		relative_position_id = USA_continue_the_new_deal
 		icon = GFX_focus_generic_advanced_military_studies
+		available = {
+			has_country_leader = { ruling_only = yes character = USA_franklin_delano_roosevelt }
+			has_country_flag = Roosevelt_4th_Term
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		completion_reward = {
+		
+		}
+	}
+
+	focus = {
+		id = USA_force_the_truth
+		x = -2
+		y = 19
+		#allow_branch = {
+		#	has_country_flag = Roosevelt_Lived
+		#}
+		cost = 5
+		ai_will_do = {
+			factor = 10
+		}
+		prerequisite = {
+			focus = USA_my_body_is_full_of_life
+		}
+		mutually_exclusive = {
+			focus = USA_declare_supreme_sovereignty
+		}
+		relative_position_id = USA_continue_the_new_deal
+		icon = GFX_focus_mex_triumph_over_the_cristeros
+		available = {
+			has_country_leader = { ruling_only = yes character = USA_franklin_delano_roosevelt }
+			has_country_flag = Roosevelt_4th_Term
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		completion_reward = {
+		
+		}
+	}
+	
+	focus = {
+		id = USA_the_supreme_beings_plan
+		x = -4
+		y = 20
+		#allow_branch = {
+		#	has_country_flag = Roosevelt_Lived
+		#}
+		cost = 5
+		ai_will_do = {
+			factor = 10
+		}
+		prerequisite = {
+			focus = USA_my_will_is_absolute
+		}
+		prerequisite = {
+			focus = USA_force_the_truth
+		}
+		relative_position_id = USA_continue_the_new_deal
+		icon = GFX_focus_RAJ_the_sun_sets
+		available = {
+			has_country_leader = { ruling_only = yes character = USA_franklin_delano_roosevelt }
+			has_country_flag = Roosevelt_4th_Term
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		completion_reward = {
+		
+		}
+	}
+
+	focus = {
+		id = USA_declare_supreme_sovereignty
+		x = 2
+		y = 19
+		#allow_branch = {
+		#	has_country_flag = Roosevelt_Lived
+		#}
+		cost = 5
+		ai_will_do = {
+			factor = 10
+		}
+		prerequisite = {
+			focus = USA_my_body_is_full_of_life
+		}
+		mutually_exclusive = {
+			focus = USA_force_the_truth
+		}
+		relative_position_id = USA_continue_the_new_deal
+		icon = GFX_focus_generic_monarchy_1
+		available = {
+			has_country_leader = { ruling_only = yes character = USA_franklin_delano_roosevelt }
+			has_country_flag = Roosevelt_4th_Term
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		completion_reward = {
+		
+		}
+	}
+	
+	focus = {
+		id = USA_imperator_reipublicae
+		x = 4
+		y = 20
+		#allow_branch = {
+		#	has_country_flag = Roosevelt_Lived
+		#}
+		cost = 5
+		ai_will_do = {
+			factor = 10
+		}
+		prerequisite = {
+			focus = USA_I_am_stronger_than_ever
+		}
+		prerequisite = {
+			focus = USA_declare_supreme_sovereignty
+		}
+		relative_position_id = USA_continue_the_new_deal
+		icon = GFX_focus_ITA_mare_nostrum
+		available = {
+			has_country_leader = { ruling_only = yes character = USA_franklin_delano_roosevelt }
+			has_country_flag = Roosevelt_4th_Term
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		completion_reward = {
+		
+		}
+	}
+
+	focus = {
+		id = USA_mobilization_against_old_world_order
+		x = 0
+		y = 20
+		#allow_branch = {
+		#	has_country_flag = Roosevelt_Lived
+		#}
+		cost = 5
+		ai_will_do = {
+			factor = 10
+		}
+		prerequisite = {
+			focus = USA_my_body_is_full_of_life
+		}
+		prerequisite = {
+			focus = USA_I_am_stronger_than_ever
+			focus = USA_my_will_is_absolute
+		}
+
+		relative_position_id = USA_continue_the_new_deal
+		icon = GFX_focus_generic_full_social_mobilization
+		available = {
+			has_country_leader = { ruling_only = yes character = USA_franklin_delano_roosevelt }
+			has_country_flag = Roosevelt_4th_Term
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		completion_reward = {
+		
+		}
+	}
+
+	focus = {
+		id = USA_secure_the_atlantic
+		x = 0
+		y = 21
+		#allow_branch = {
+		#	has_country_flag = Roosevelt_Lived
+		#}
+		cost = 6
+		ai_will_do = {
+			factor = 10
+		}
+		prerequisite = {
+			focus = USA_mobilization_against_old_world_order
+		}
+	
+
+		relative_position_id = USA_continue_the_new_deal
+		icon = GFX_focus_generic_north_atlantic_fleet
+		available = {
+			has_country_leader = { ruling_only = yes character = USA_franklin_delano_roosevelt }
+			has_country_flag = Roosevelt_4th_Term
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		completion_reward = {
+		
+		}
+	}
+	
+	focus = {
+		id = USA_reorganize_southern_hemisphere
+		x = -2
+		y = 21
+		#allow_branch = {
+		#	has_country_flag = Roosevelt_Lived
+		#}
+		cost = 6
+		ai_will_do = {
+			factor = 10
+		}
+		prerequisite = {
+			focus = USA_mobilization_against_old_world_order
+		}
+	
+
+		relative_position_id = USA_continue_the_new_deal
+		icon = GFX_focus_generic_south_america
+		available = {
+			has_country_leader = { ruling_only = yes character = USA_franklin_delano_roosevelt }
+			has_country_flag = Roosevelt_4th_Term
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		completion_reward = {
+		
+		}
+	}
+	
+	focus = {
+		id = USA_pacific_domain
+		x = 2
+		y = 21
+		#allow_branch = {
+		#	has_country_flag = Roosevelt_Lived
+		#}
+		cost = 6
+		ai_will_do = {
+			factor = 10
+		}
+		prerequisite = {
+			focus = USA_mobilization_against_old_world_order
+		}
+	
+
+		relative_position_id = USA_continue_the_new_deal
+		icon = GFX_focus_jap_strike_south
+		available = {
+			has_country_leader = { ruling_only = yes character = USA_franklin_delano_roosevelt }
+			has_country_flag = Roosevelt_4th_Term
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		completion_reward = {
+		
+		}
+	}
+	
+	focus = {
+		id = USA_conquer_kunlun_mountains
+		x = 1
+		y = 22
+		#allow_branch = {
+		#	has_country_flag = Roosevelt_Lived
+		#}
+		cost = 6
+		ai_will_do = {
+			factor = 10
+		}
+		prerequisite = {
+			focus = USA_secure_the_atlantic
+		}
+		prerequisite = {
+			focus = USA_pacific_domain
+		}
+	
+
+		relative_position_id = USA_continue_the_new_deal
+		icon = GFX_focus_RAJ_akhand_bharat
+		available = {
+			has_country_leader = { ruling_only = yes character = USA_franklin_delano_roosevelt }
+			has_country_flag = Roosevelt_4th_Term
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		completion_reward = {
+		
+		}
+	}
+	
+	focus = {
+		id = USA_conquer_mesopotamia
+		x = -1
+		y = 22
+		#allow_branch = {
+		#	has_country_flag = Roosevelt_Lived
+		#}
+		cost = 6
+		ai_will_do = {
+			factor = 10
+		}
+		
+		prerequisite = {
+			focus = USA_reorganize_southern_hemisphere
+		}
+		prerequisite = {
+			focus = USA_secure_the_atlantic
+		}
+	
+
+		relative_position_id = USA_continue_the_new_deal
+		icon = GFX_focus_IRQ_expand_membership
+		available = {
+			has_country_leader = { ruling_only = yes character = USA_franklin_delano_roosevelt }
+			has_country_flag = Roosevelt_4th_Term
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		completion_reward = {
+		
+		}
+	}
+	
+	focus = {
+		id = USA_rule_the_earth
+		x = 0
+		y = 23
+		#allow_branch = {
+		#	has_country_flag = Roosevelt_Lived
+		#}
+		cost = 6
+		ai_will_do = {
+			factor = 10
+		}
+		prerequisite = {
+			focus = USA_conquer_mesopotamia
+		}
+		prerequisite = {
+			focus = USA_conquer_kunlun_mountains
+		}
+	
+
+		relative_position_id = USA_continue_the_new_deal
+		icon = GFX_focus_RAJ_the_crown_and_the_world
+		available = {
+			has_country_leader = { ruling_only = yes character = USA_franklin_delano_roosevelt }
+			has_country_flag = Roosevelt_4th_Term
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		completion_reward = {
+		
+		}
+	}
+	
+	focus = {
+		id = USA_regency_of_the_supreme_being
+		x = 0
+		y = 25
+		#allow_branch = {
+		#	has_country_flag = Roosevelt_Lived
+		#}
+		cost = 6
+		ai_will_do = {
+			factor = 10
+		}
+		prerequisite = {
+			focus = USA_rule_the_earth
+		}
+	
+
+		relative_position_id = USA_continue_the_new_deal
+		icon = GFX_focus_generic_monarchy_2
+		available = {
+			has_country_leader = { ruling_only = yes character = USA_franklin_delano_roosevelt }
+			has_country_flag = Roosevelt_4th_Term
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		completion_reward = {
+		
+		}
+	}
+
+	focus = {
+		id = USA_above_time_and_space
+		x = 1
+		y = 24
+		#allow_branch = {
+		#	has_country_flag = Roosevelt_Lived
+		#}
+		cost = 6
+		ai_will_do = {
+			factor = 10
+		}
+		prerequisite = {
+			focus = USA_conquer_mesopotamia
+			focus = USA_conquer_kunlun_mountains
+		}
+	
+
+		relative_position_id = USA_continue_the_new_deal
+		icon = GFX_focus_RAJ_i_am_death
+		available = {
+			has_country_leader = { ruling_only = yes character = USA_franklin_delano_roosevelt }
+			has_country_flag = Roosevelt_4th_Term
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		completion_reward = {
+		
+		}
+	}
+
+	focus = {
+		id = USA_the_order_eternal
+		x = -1
+		y = 24
+		#allow_branch = {
+		#	has_country_flag = Roosevelt_Lived
+		#}
+		cost = 6
+		ai_will_do = {
+			factor = 10
+		}
+		prerequisite = {
+			focus = USA_conquer_mesopotamia
+			focus = USA_conquer_kunlun_mountains
+		}
+	
+
+		relative_position_id = USA_continue_the_new_deal
+		icon = GFX_focus_RAJ_kingmaker
 		available = {
 			has_country_leader = { ruling_only = yes character = USA_franklin_delano_roosevelt }
 			has_country_flag = Roosevelt_4th_Term

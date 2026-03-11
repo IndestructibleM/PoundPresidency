@@ -1,11 +1,11 @@
 autonomy_state = {
-	id = autonomy_colony
+	id = colony_autonomous
 	
 	is_puppet = yes
 	
 	min_freedom_level = 0.60
 	use_overlord_color = yes
-	manpower_influence = 0.7
+	manpower_influence = 0.5
 	
 	rule = {
 		desc = "RULE_DESC_IS_A_SUBJECT"
@@ -18,7 +18,7 @@ autonomy_state = {
 	}
 	
 	modifier = {
-		autonomy_manpower_share = 0.7
+		autonomy_manpower_share = 0.25
 		
 		extra_trade_to_overlord_factor = 0.5
 		overlord_trade_cost_factor = -0.5

@@ -4,8 +4,28 @@
 
 add_namespace = usa
 add_namespace = VR_usa
+add_namespace = FdrLives
 
 # Poundists On March
+country_event = {
+	id = FdrLives.1
+	title = FdrLives.1.t
+	desc = FdrLives.1.d
+
+	fire_only_once = yes
+	
+	trigger = {
+		tag = USA
+		date > 1936.3.1
+		date < 1936.6.1
+	}
+
+	option = { 
+		name = FdrLives.1.a
+		add_popularity = { ideology = fascism popularity = 0.05 }
+	}
+}
+
 country_event = {
 	id = VR_usa.1
 	title = VR_usa.1.t
