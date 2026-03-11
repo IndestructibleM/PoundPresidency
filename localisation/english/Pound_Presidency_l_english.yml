@@ -380,7 +380,9 @@ reactionary_marshal: "Reactionary Marshal"
 
 
 
-### ROOSEVELT lives
+### ROOSEVELT LIVES
+ Roosevelt_Lived: "§CRoosevelt Lived!§!"
+
  USA_roosevelt_lives: "Roosevelt Lives!"
  USA_overwhelming_executive_orders: "Overwhelming Executive Orders"
  USA_declare_martial_law: "Declare Martial Law"
@@ -520,6 +522,6 @@ USA_I_am_stronger_than_ever_desc:0 "From trial and rebirth, the President has em
  USA_the_order_eternal:0 "The Order Eternal"
  USA_the_order_eternal_desc:0 "What began as reform has become revelation. The chaos of nations, the petty struggles of factions, and the blindness of the old world have been swept aside. In their place stands a civilization united in purpose and guided by an unshakable truth. The Republic has become more than a state—it is the structure of human destiny itself. And so long as its people remember the will that created it, the Order Eternal shall endure beyond the rise and fall of time."
 
-FdrLives.1.t: "The Cure"
-FdrLives.1.d: "News coming out about President Roosevelt’s illness have grown quiet in recent weeks. \n\n Doctors and aides spoke in low voices as Franklin D. Roosevelt sat beside a table crowded with medicines that had long ago lost their promise. That night a doctor arrived carrying something unusual: a small vial brought back by an expedition to the monasteries of Bhutan. The men who delivered it claimed monks in the mountains had entrusted it to them: an herbal remedy, ancient and potent. \n\nThe other doctors protested, but Roosevelt only smiled and drank. For a moment, nothing happened. Then the vial slipped from his hand and shattered as his body lurched with a sudden, violent tremor. The room erupted in alarm. Physicians rushed forward, but Roosevelt pushed them back as the shaking worsened, his legs quivering under him with a force no one in the room had seen in years. \n\nThen Roosevelt stood up. \n\nFranklin Delano Roosevelt was standing upright for the first time in years. The tremors faded as he steadied himself, breathing hard, while the room fell silent around him. No one spoke. No one moved. They simply watched, scarcely daring to believe what they were seeing. But they would not need to merely “believe” for much longer. Soon, they could know, and be a part of the truth."
-FdrLives.1.a: "The Order is Born..."
+fdrlives.0.t: "The Cure"
+fdrlives.0.d: "News coming out about President Roosevelt’s illness have grown quiet in recent weeks. \n\n Doctors and aides spoke in low voices as Franklin D. Roosevelt sat beside a table crowded with medicines that had long ago lost their promise. That night a doctor arrived carrying something unusual: a small vial brought back by an expedition to the monasteries of Bhutan. The men who delivered it claimed monks in the mountains had entrusted it to them: an herbal remedy, ancient and potent. \n\nThe other doctors protested, but Roosevelt only smiled and drank. For a moment, nothing happened. Then the vial slipped from his hand and shattered as his body lurched with a sudden, violent tremor. The room erupted in alarm. Physicians rushed forward, but Roosevelt pushed them back as the shaking worsened, his legs quivering under him with a force no one in the room had seen in years. \n\nThen Roosevelt stood up. \n\nFranklin Delano Roosevelt was standing upright for the first time in years. The tremors faded as he steadied himself, breathing hard, while the room fell silent around him. No one spoke. No one moved. They simply watched, scarcely daring to believe what they were seeing. But they would not need to merely “believe” for much longer. Soon, they could know, and be a part of the truth."
+fdrlives.0.a: "The Order is Born..."

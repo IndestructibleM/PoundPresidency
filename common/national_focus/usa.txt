@@ -7416,9 +7416,9 @@ focus_tree = {
 		id = USA_roosevelt_lives
 		x = 0
 		y = 10
-		#allow_branch = {
-		#	has_country_flag = Roosevelt_Lived
-		#}
+		allow_branch = {
+			has_country_flag = Roosevelt_Lived
+		}
 		cost = 5
 		ai_will_do = {
 			factor = 10
@@ -7427,8 +7427,7 @@ focus_tree = {
 		icon = GFX_focus_generic_strike_at_democracy2
 		available = {
 			has_country_leader = { ruling_only = yes character = USA_franklin_delano_roosevelt }
-			date > 1945.1.1
-			has_country_flag = Roosevelt_4th_Term
+			has_country_flag = Roosevelt_Lived
 		}
 
 		cancel_if_invalid = yes
@@ -7476,14 +7475,14 @@ focus_tree = {
 		icon = GFX_goal_generic_forceful_treaty
 		available = {
 			has_country_leader = { ruling_only = yes character = USA_franklin_delano_roosevelt }
-			has_country_flag = Roosevelt_4th_Term
+			has_country_flag = Roosevelt_Lived
 		}
 
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
 		completion_reward = {
-		
+			
 		}
 	}
 	focus = {
@@ -7504,14 +7503,21 @@ focus_tree = {
 		icon = GFX_focus_PHI_declare_military_emergency
 		available = {
 			has_country_leader = { ruling_only = yes character = USA_franklin_delano_roosevelt }
-			has_country_flag = Roosevelt_4th_Term
+			has_country_flag = Roosevelt_Lived
 		}
 
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
 		completion_reward = {
-		
+			remove_ideas = home_of_the_free
+			add_stability = -0.25
+			add_political_power = 150
+			clear_variable = senators_support
+			clear_variable = senators_total
+			clear_variable = representatives_support
+			clear_variable = representatives_total
+			custom_effect_tooltip = "You will no longer have to deal with the congress mechanic."
 		}
 	}
 	focus = {
@@ -7532,7 +7538,7 @@ focus_tree = {
 		icon = GFX_focus_generic_court
 		available = {
 			has_country_leader = { ruling_only = yes character = USA_franklin_delano_roosevelt }
-			has_country_flag = Roosevelt_4th_Term
+			has_country_flag = Roosevelt_Lived
 		}
 
 		cancel_if_invalid = yes
@@ -7564,14 +7570,14 @@ focus_tree = {
 		icon = GFX_focus_generic_military_dictatorship
 		available = {
 			has_country_leader = { ruling_only = yes character = USA_franklin_delano_roosevelt }
-			has_country_flag = Roosevelt_4th_Term
+			has_country_flag = Roosevelt_Lived
 		}
 
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
 		completion_reward = {
-		
+			add_ideas = totalitarianism
 		}
 	}
 	focus = {
@@ -7595,7 +7601,7 @@ focus_tree = {
 		icon = GFX_goal_generic_political_pressure
 		available = {
 			has_country_leader = { ruling_only = yes character = USA_franklin_delano_roosevelt }
-			has_country_flag = Roosevelt_4th_Term
+			has_country_flag = Roosevelt_Lived
 		}
 
 		cancel_if_invalid = yes
@@ -7627,7 +7633,7 @@ focus_tree = {
 		icon = GFX_focus_generic_subjugation
 		available = {
 			has_country_leader = { ruling_only = yes character = USA_franklin_delano_roosevelt }
-			has_country_flag = Roosevelt_4th_Term
+			has_country_flag = Roosevelt_Lived
 		}
 
 		cancel_if_invalid = yes
@@ -7656,7 +7662,7 @@ focus_tree = {
 		icon = GFX_focus_DEN_heavy_regulations
 		available = {
 			has_country_leader = { ruling_only = yes character = USA_franklin_delano_roosevelt }
-			has_country_flag = Roosevelt_4th_Term
+			has_country_flag = Roosevelt_Lived
 		}
 
 		cancel_if_invalid = yes
@@ -7691,7 +7697,7 @@ focus_tree = {
 		icon = GFX_focus_GER_total_control_over_domestic_affairs
 		available = {
 			has_country_leader = { ruling_only = yes character = USA_franklin_delano_roosevelt }
-			has_country_flag = Roosevelt_4th_Term
+			has_country_flag = Roosevelt_Lived
 		}
 
 		cancel_if_invalid = yes
@@ -7727,7 +7733,7 @@ focus_tree = {
 		icon = GFX_focus_GER_prioritize_the_four_year_plan
 		available = {
 			has_country_leader = { ruling_only = yes character = USA_franklin_delano_roosevelt }
-			has_country_flag = Roosevelt_4th_Term
+			has_country_flag = Roosevelt_Lived
 		}
 
 		cancel_if_invalid = yes
@@ -7757,7 +7763,7 @@ focus_tree = {
 		icon = GFX_focus_GER_kdf_wagen
 		available = {
 			has_country_leader = { ruling_only = yes character = USA_franklin_delano_roosevelt }
-			has_country_flag = Roosevelt_4th_Term
+			has_country_flag = Roosevelt_Lived
 		}
 
 		cancel_if_invalid = yes
@@ -7787,7 +7793,7 @@ focus_tree = {
 		icon = GFX_focus_generic_industrial_experts
 		available = {
 			has_country_leader = { ruling_only = yes character = USA_franklin_delano_roosevelt }
-			has_country_flag = Roosevelt_4th_Term
+			has_country_flag = Roosevelt_Lived
 		}
 
 		cancel_if_invalid = yes
@@ -7817,7 +7823,7 @@ focus_tree = {
 		icon = GFX_focus_generic_mass_production
 		available = {
 			has_country_leader = { ruling_only = yes character = USA_franklin_delano_roosevelt }
-			has_country_flag = Roosevelt_4th_Term
+			has_country_flag = Roosevelt_Lived
 		}
 
 		cancel_if_invalid = yes
@@ -7847,7 +7853,7 @@ focus_tree = {
 		icon = GFX_goal_generic_war_with_comintern
 		available = {
 			has_country_leader = { ruling_only = yes character = USA_franklin_delano_roosevelt }
-			has_country_flag = Roosevelt_4th_Term
+			has_country_flag = Roosevelt_Lived
 		}
 
 		cancel_if_invalid = yes
@@ -7877,7 +7883,7 @@ focus_tree = {
 		icon = GFX_focus_generic_population_growth
 		available = {
 			has_country_leader = { ruling_only = yes character = USA_franklin_delano_roosevelt }
-			has_country_flag = Roosevelt_4th_Term
+			has_country_flag = Roosevelt_Lived
 		}
 
 		cancel_if_invalid = yes
@@ -7907,7 +7913,7 @@ focus_tree = {
 		icon = GFX_focus_ITA_generic_fascist_workers
 		available = {
 			has_country_leader = { ruling_only = yes character = USA_franklin_delano_roosevelt }
-			has_country_flag = Roosevelt_4th_Term
+			has_country_flag = Roosevelt_Lived
 		}
 
 		cancel_if_invalid = yes
@@ -7943,7 +7949,7 @@ focus_tree = {
 		icon = GFX_focus_GER_expand_ss_security_duties
 		available = {
 			has_country_leader = { ruling_only = yes character = USA_franklin_delano_roosevelt }
-			has_country_flag = Roosevelt_4th_Term
+			has_country_flag = Roosevelt_Lived
 		}
 
 		cancel_if_invalid = yes
@@ -7973,7 +7979,7 @@ focus_tree = {
 		icon = GFX_focus_JAP_naval_armaments_program
 		available = {
 			has_country_leader = { ruling_only = yes character = USA_franklin_delano_roosevelt }
-			has_country_flag = Roosevelt_4th_Term
+			has_country_flag = Roosevelt_Lived
 		}
 
 		cancel_if_invalid = yes
@@ -8003,7 +8009,7 @@ focus_tree = {
 		icon = GFX_focus_generic_battleship_guns
 		available = {
 			has_country_leader = { ruling_only = yes character = USA_franklin_delano_roosevelt }
-			has_country_flag = Roosevelt_4th_Term
+			has_country_flag = Roosevelt_Lived
 		}
 
 		cancel_if_invalid = yes
@@ -8033,7 +8039,7 @@ focus_tree = {
 		icon = GFX_focus_RAJ_to_shake_the_world
 		available = {
 			has_country_leader = { ruling_only = yes character = USA_franklin_delano_roosevelt }
-			has_country_flag = Roosevelt_4th_Term
+			has_country_flag = Roosevelt_Lived
 		}
 
 		cancel_if_invalid = yes
@@ -8063,7 +8069,7 @@ focus_tree = {
 		icon = GFX_focus_generic_strike_at_democracy3
 		available = {
 			has_country_leader = { ruling_only = yes character = USA_franklin_delano_roosevelt }
-			has_country_flag = Roosevelt_4th_Term
+			has_country_flag = Roosevelt_Lived
 		}
 
 		cancel_if_invalid = yes
@@ -8093,7 +8099,7 @@ focus_tree = {
 		icon = GFX_focus_CZE_german_puppet
 		available = {
 			has_country_leader = { ruling_only = yes character = USA_franklin_delano_roosevelt }
-			has_country_flag = Roosevelt_4th_Term
+			has_country_flag = Roosevelt_Lived
 		}
 
 		cancel_if_invalid = yes
@@ -8123,7 +8129,7 @@ focus_tree = {
 		icon = GFX_focus_generic_happy_cheer
 		available = {
 			has_country_leader = { ruling_only = yes character = USA_franklin_delano_roosevelt }
-			has_country_flag = Roosevelt_4th_Term
+			has_country_flag = Roosevelt_Lived
 		}
 
 		cancel_if_invalid = yes
@@ -8153,7 +8159,7 @@ focus_tree = {
 		icon = GFX_focus_generic_strike_at_democracy1
 		available = {
 			has_country_leader = { ruling_only = yes character = USA_franklin_delano_roosevelt }
-			has_country_flag = Roosevelt_4th_Term
+			has_country_flag = Roosevelt_Lived
 		}
 
 		cancel_if_invalid = yes
@@ -8183,7 +8189,7 @@ focus_tree = {
 		icon = GFX_focus_generic_secret_service_agency
 		available = {
 			has_country_leader = { ruling_only = yes character = USA_franklin_delano_roosevelt }
-			has_country_flag = Roosevelt_4th_Term
+			has_country_flag = Roosevelt_Lived
 		}
 
 		cancel_if_invalid = yes
@@ -8213,7 +8219,7 @@ focus_tree = {
 		icon = GFX_focus_generic_annex_country_2
 		available = {
 			has_country_leader = { ruling_only = yes character = USA_franklin_delano_roosevelt }
-			has_country_flag = Roosevelt_4th_Term
+			has_country_flag = Roosevelt_Lived
 		}
 
 		cancel_if_invalid = yes
@@ -8243,7 +8249,7 @@ focus_tree = {
 		icon = GFX_focus_generic_full_social_mobilization
 		available = {
 			has_country_leader = { ruling_only = yes character = USA_franklin_delano_roosevelt }
-			has_country_flag = Roosevelt_4th_Term
+			has_country_flag = Roosevelt_Lived
 		}
 
 		cancel_if_invalid = yes
@@ -8273,7 +8279,7 @@ focus_tree = {
 		icon = GFX_focus_ITA_banda_carita
 		available = {
 			has_country_leader = { ruling_only = yes character = USA_franklin_delano_roosevelt }
-			has_country_flag = Roosevelt_4th_Term
+			has_country_flag = Roosevelt_Lived
 		}
 
 		cancel_if_invalid = yes
@@ -8303,7 +8309,7 @@ focus_tree = {
 		icon = GFX_focus_generic_fascist_troops
 		available = {
 			has_country_leader = { ruling_only = yes character = USA_franklin_delano_roosevelt }
-			has_country_flag = Roosevelt_4th_Term
+			has_country_flag = Roosevelt_Lived
 		}
 
 		cancel_if_invalid = yes
@@ -8336,7 +8342,7 @@ focus_tree = {
 		icon = GFX_focus_GER_strafbataillon
 		available = {
 			has_country_leader = { ruling_only = yes character = USA_franklin_delano_roosevelt }
-			has_country_flag = Roosevelt_4th_Term
+			has_country_flag = Roosevelt_Lived
 		}
 
 		cancel_if_invalid = yes
@@ -8369,7 +8375,7 @@ focus_tree = {
 		icon = GFX_focus_generic_total_war
 		available = {
 			has_country_leader = { ruling_only = yes character = USA_franklin_delano_roosevelt }
-			has_country_flag = Roosevelt_4th_Term
+			has_country_flag = Roosevelt_Lived
 		}
 
 		cancel_if_invalid = yes
@@ -8401,7 +8407,7 @@ focus_tree = {
 		icon = GFX_focus_generic_advanced_military_studies
 		available = {
 			has_country_leader = { ruling_only = yes character = USA_franklin_delano_roosevelt }
-			has_country_flag = Roosevelt_4th_Term
+			has_country_flag = Roosevelt_Lived
 		}
 
 		cancel_if_invalid = yes
@@ -8433,7 +8439,7 @@ focus_tree = {
 		icon = GFX_focus_mex_triumph_over_the_cristeros
 		available = {
 			has_country_leader = { ruling_only = yes character = USA_franklin_delano_roosevelt }
-			has_country_flag = Roosevelt_4th_Term
+			has_country_flag = Roosevelt_Lived
 		}
 
 		cancel_if_invalid = yes
@@ -8465,7 +8471,7 @@ focus_tree = {
 		icon = GFX_focus_RAJ_the_sun_sets
 		available = {
 			has_country_leader = { ruling_only = yes character = USA_franklin_delano_roosevelt }
-			has_country_flag = Roosevelt_4th_Term
+			has_country_flag = Roosevelt_Lived
 		}
 
 		cancel_if_invalid = yes
@@ -8497,7 +8503,7 @@ focus_tree = {
 		icon = GFX_focus_generic_monarchy_1
 		available = {
 			has_country_leader = { ruling_only = yes character = USA_franklin_delano_roosevelt }
-			has_country_flag = Roosevelt_4th_Term
+			has_country_flag = Roosevelt_Lived
 		}
 
 		cancel_if_invalid = yes
@@ -8529,7 +8535,7 @@ focus_tree = {
 		icon = GFX_focus_ITA_mare_nostrum
 		available = {
 			has_country_leader = { ruling_only = yes character = USA_franklin_delano_roosevelt }
-			has_country_flag = Roosevelt_4th_Term
+			has_country_flag = Roosevelt_Lived
 		}
 
 		cancel_if_invalid = yes
@@ -8563,7 +8569,7 @@ focus_tree = {
 		icon = GFX_focus_generic_full_social_mobilization
 		available = {
 			has_country_leader = { ruling_only = yes character = USA_franklin_delano_roosevelt }
-			has_country_flag = Roosevelt_4th_Term
+			has_country_flag = Roosevelt_Lived
 		}
 
 		cancel_if_invalid = yes
@@ -8594,7 +8600,7 @@ focus_tree = {
 		icon = GFX_focus_generic_north_atlantic_fleet
 		available = {
 			has_country_leader = { ruling_only = yes character = USA_franklin_delano_roosevelt }
-			has_country_flag = Roosevelt_4th_Term
+			has_country_flag = Roosevelt_Lived
 		}
 
 		cancel_if_invalid = yes
@@ -8625,7 +8631,7 @@ focus_tree = {
 		icon = GFX_focus_generic_south_america
 		available = {
 			has_country_leader = { ruling_only = yes character = USA_franklin_delano_roosevelt }
-			has_country_flag = Roosevelt_4th_Term
+			has_country_flag = Roosevelt_Lived
 		}
 
 		cancel_if_invalid = yes
@@ -8656,7 +8662,7 @@ focus_tree = {
 		icon = GFX_focus_jap_strike_south
 		available = {
 			has_country_leader = { ruling_only = yes character = USA_franklin_delano_roosevelt }
-			has_country_flag = Roosevelt_4th_Term
+			has_country_flag = Roosevelt_Lived
 		}
 
 		cancel_if_invalid = yes
@@ -8690,7 +8696,7 @@ focus_tree = {
 		icon = GFX_focus_RAJ_akhand_bharat
 		available = {
 			has_country_leader = { ruling_only = yes character = USA_franklin_delano_roosevelt }
-			has_country_flag = Roosevelt_4th_Term
+			has_country_flag = Roosevelt_Lived
 		}
 
 		cancel_if_invalid = yes
@@ -8725,7 +8731,7 @@ focus_tree = {
 		icon = GFX_focus_IRQ_expand_membership
 		available = {
 			has_country_leader = { ruling_only = yes character = USA_franklin_delano_roosevelt }
-			has_country_flag = Roosevelt_4th_Term
+			has_country_flag = Roosevelt_Lived
 		}
 
 		cancel_if_invalid = yes
@@ -8759,7 +8765,7 @@ focus_tree = {
 		icon = GFX_focus_RAJ_the_crown_and_the_world
 		available = {
 			has_country_leader = { ruling_only = yes character = USA_franklin_delano_roosevelt }
-			has_country_flag = Roosevelt_4th_Term
+			has_country_flag = Roosevelt_Lived
 		}
 
 		cancel_if_invalid = yes
@@ -8790,7 +8796,7 @@ focus_tree = {
 		icon = GFX_focus_generic_monarchy_2
 		available = {
 			has_country_leader = { ruling_only = yes character = USA_franklin_delano_roosevelt }
-			has_country_flag = Roosevelt_4th_Term
+			has_country_flag = Roosevelt_Lived
 		}
 
 		cancel_if_invalid = yes
@@ -8822,7 +8828,7 @@ focus_tree = {
 		icon = GFX_focus_RAJ_i_am_death
 		available = {
 			has_country_leader = { ruling_only = yes character = USA_franklin_delano_roosevelt }
-			has_country_flag = Roosevelt_4th_Term
+			has_country_flag = Roosevelt_Lived
 		}
 
 		cancel_if_invalid = yes
@@ -8854,7 +8860,7 @@ focus_tree = {
 		icon = GFX_focus_RAJ_kingmaker
 		available = {
 			has_country_leader = { ruling_only = yes character = USA_franklin_delano_roosevelt }
-			has_country_flag = Roosevelt_4th_Term
+			has_country_flag = Roosevelt_Lived
 		}
 
 		cancel_if_invalid = yes
