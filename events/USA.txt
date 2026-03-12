@@ -156,8 +156,8 @@ country_event = {
 
 	option = { 
 		name = vr_usa.3.b
-		add_popularity = { ideology = reactionary popularity = 0.05 }
-		add_popularity = { ideology = fascism popularity = 0.02 }
+		add_popularity = { ideology = reactionary popularity = 0.04 }
+		add_popularity = { ideology = fascism popularity = 0.04 }
 	}
 }
 
@@ -187,13 +187,9 @@ country_event = {
 
 	option = { 
 		name = vr_usa.4.c
-		add_popularity = { ideology = fascism popularity = 0.05 }
+		add_popularity = { ideology = fascism popularity = 0.03 }
 	}
 	
-	option = { 
-		name = vr_usa.4.e
-		add_popularity = { ideology = neutrality popularity = 0.05 }
-	}
 }
 
 country_event = {

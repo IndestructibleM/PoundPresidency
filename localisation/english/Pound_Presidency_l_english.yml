@@ -287,7 +287,8 @@
  Imperium_DEF: "the Imperium of Faustian Europe"
  Imperium_ADJ: "Imperium"
  
- FDR_schizo: "The Sovereign State"
+ FDR_imperial: "The Sovereign State"
+ FDR_supreme: "Universal Republic of Supreme Virtue"
  
  QUE_USA_fascism_subject: "Borelian State of Quebec"
  QUE_USA_fascism_subject_DEF: "Borelian State of Quebec"
