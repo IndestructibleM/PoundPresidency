@@ -87,6 +87,7 @@ upgrade_welfare_law = {
 	else_if = { limit = { has_idea = welfare4 } add_ideas = welfare5 }
 	else = { add_political_power = 100 }
 }
+
 upgrade_labor_law = {
 	if = { limit = { has_idea = labor1 } add_ideas = labor2 }
 	else_if = { limit = { has_idea = labor2 } add_ideas = labor3 }

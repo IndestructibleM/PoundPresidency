@@ -20,6 +20,7 @@
  USA_administrative_management_bill: "Administrative Management Bill"
  
  USA_yet_another_4_more_years: "Draft Roosevelt Once Again"
+
  ##### POUND ###
  USA_towards_national_utopia: "Towards National Utopia!"
  USA_towards_national_utopia_desc: "Towards National Utopia!"
@@ -347,6 +348,13 @@
  yock.2.d: "They gathered not in reverence, but in rapture. The Capitol no longer housed democracy, but divinity—a state reborn in black and bronze. On a raised plinth, beneath fluttering banners stitched with the solar eagle and the iron fasces, Francis Parker Yockey addressed the American people. \n\n“We stand at the frontier—not of geography, but of destiny. The old republic is dead, its bones scattered from San Francisco to the Potomac. In its place, something greater rises. A state not built on votes or commerce, but on spirit, hierarchy, and vision. \n\nThis is not a war of armies alone. It is a war of metaphysics. London—the rotting core of Anglo-financial hypocrisy—shall burn. Moscow—the barbarian forge of materialist decadence—shall be ground to ash. Against both, we declare not opposition, but annihilation. \n\nYou, Americans of the Imperium, will become the sword. You will know hardship, yes. But from it, glory. Total Mobilization. Absolute devotion. Every hand forges victory; every voice affirms truth. \n\nWe are no longer a nation. We are an idea with steel sinews, marching across the continents. \n\nLet them call us mad. Let them call us monsters. They are not wrong. For only monsters can tear down the world that was. And only monsters, tempered in will and faith, can forge the world to come. \n\nAnd when they ask what we fight for, what we believe, what we dream—tell them: \n\nMore than anything you can even yet imagine.” \n\nThe crowd did not cheer—they howled. They chanted. \n“Imperium! Imperium! Imperium!” \n\nThe black banners of America marched toward total war."
  #butler.1.d: "Patience runs dry. No amount of sing-songy or artsy-fartsy display of national brilliance nor pride can win the masses if you do not provide their beloved bread and circuses. Pound's arrogance has caught up with him, and with a seeming inability to fix the great depression and "Surpass material strife", the people are more than outraged. The last straw came when Pound revealed several war plans, including potential alliances with fascist powers. While MacArthur and Patton were eager to hear Pound's ambitions, Smedley Butler was horrified; After an intense argument, Butler was sacked from the American Legion - A mistake no fool should make. The noble wrath of now not just the people, but the military and veterans who had supported Pound now too turn on him. \n\nThe people march down the Streets of the capitol shouting "Utopia? I don't give a damn!" to mock the fascist party. Now, Butler approaches with 10,000 American Legion men, the military and police tipped off and uncaring for the madman about to be deposed. As Butler Strode into the "Commander's Palace" - a decadent construction made for Pound's ego - He wondered how he might be remembered in history. He was doing the right thing, no? Yet now he was likely to be dictator - Roosevelt and the previous adminsitration lay dead or are missing persons, and the thought of so much power, so much responsibility irked the old Smedley. \n\n It was easy. Pound broke down as soon as the battalions broke into his quarters. He was grabbed and beat. Then held on the ground and handcuffed. "Former President- Forgive me God for saying this- Former 'Commander' of America, Ezra Loomis Pound, you are under arrest and sentenced to trial before the supreme court of the United States. You know what you have done, and we believe the power of popular will to be of due justice to you. You have the right to remain silent." \n\nPound didn't speak, merely staring down. It was over. And it was not coming back."
  
+ vr_usa.1.t: "American Political Chaos Event 1"
+ vr_usa.2.t: "American Political Chaos Event 2"
+ vr_usa.3.t: "American Political Chaos Event 3"
+ vr_usa.4.t: "American Political Chaos Event 4"
+ vr_usa.5.t: "American Political Chaos Event 5"
+ vr_usa.6.t: "American Political Chaos Event 6"
+
  
  collaborator_gov: "Collaborator Government"
  sister_republic: "Sister Republic"
