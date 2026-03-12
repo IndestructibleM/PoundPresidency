@@ -462,12 +462,13 @@ foreign_politics = {
 			is_owned_by = USA
 			is_claimed_by = USA
 			NOT = { is_core_of = USA }
+			is_on_continent = north_america
 			}
 		}
 		visible = {
 			tag = USA
 			has_government = neutrality 
-			has_completed_focus = USA_panama_to_pole
+			has_completed_focus = USA_tectonic_integration
 		}
 		fire_only_once = yes
 		on_map_mode = map_only
@@ -478,11 +479,11 @@ foreign_politics = {
 		days_remove = 20
 		available = { 
 			FROM = {
-				resistance < 10
-				compliance > 15
+				resistance < 15
+				compliance > 30
 			}
 		}
-		modifier = { political_power_factor = -0.2 }
+		modifier = { political_power_factor = -0.1 }
 		ai_will_do = {
 			factor = 90
 		}

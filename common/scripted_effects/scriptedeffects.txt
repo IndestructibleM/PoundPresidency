@@ -88,10 +88,10 @@ upgrade_welfare_law = {
 	else = { add_political_power = 100 }
 }
 upgrade_labor_law = {
-	if = { limit = { has_idea = labor_regulations1 } add_ideas = labor_regulations2 }
-	else_if = { limit = { has_idea = labor_regulations2 } add_ideas = labor_regulations3 }
-	else_if = { limit = { has_idea = labor_regulations3 } add_ideas = labor_regulations4 }
-	else_if = { limit = { has_idea = labor_regulations4 } add_ideas = labor_regulations5 }
+	if = { limit = { has_idea = labor1 } add_ideas = labor2 }
+	else_if = { limit = { has_idea = labor2 } add_ideas = labor3 }
+	else_if = { limit = { has_idea = labor3 } add_ideas = labor4 }
+	else_if = { limit = { has_idea = labor4 } add_ideas = labor5 }
 	else = { add_political_power = 100 }
 }
 upgrade_education_law = {
