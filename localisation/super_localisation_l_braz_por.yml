@@ -1,0 +1,459 @@
+﻿l_braz_por:
+l_english:
+sp_event_Second_World_War:0 "A Segunda Guerra Mundial"
+sp_event_Second_World_War_QUOTE:0 "Aqueles que querem viver, que lutem, e aqueles que não querem lutar neste mundo de luta eterna não merecem viver. \n- Adolf Hitler"
+sp_event_Second_World_War_REMARK:0 "Lá vamos nós de novo..."
+
+sp_event_Third_World_War:0 "A Terceira Guerra Mundial"
+sp_event_Third_World_War_QUOTE:0 "Quem não sente falta da União Soviética não tem coração. \n- Vladimir Putin"
+sp_event_Third_World_War_REMARK:0 "Oh Deus!"
+
+sp_event_Third_World_War_Allies:0 "Operação Impensável"
+sp_event_Third_World_War_Allies_QUOTE:0 "De Stettin, no Báltico, a Trieste, no Adriático, uma cortina de ferro desceu sobre o continente. \n- Winston Churchill"
+sp_event_Third_World_War_Allies_REMARK:0 "Este é o fim da NWO?"
+  
+sp_event_Sino_Japanese:0 "A Segunda Guerra Sino-Japonesa"
+sp_event_Sino_Japanese_QUOTE:0 "Nós, a nação chinesa, temos o espírito de lutar contra o inimigo até a última gota de sangue, a determinação de recuperar nosso território perdido com nossos próprios esforços e a capacidade de nos mantermos de pé na família das nações. \n- Mao Zedong"
+sp_event_Sino_Japanese_REMARK:0 "A China resistirá ao Sol Nascente?"
+
+sp_event_Spanish_Civil_War:0 "Guerra Civil Espanhola"
+sp_event_Spanish_Civil_War_QUOTE:0 "O que importa ao cadáver quem estava certo e quem estava errado? \n- Manuel Azana"
+sp_event_Spanish_Civil_War_REMARK:0 "O que será da Espanha?"
+
+sp_event_Pacific_War:0 "A Guerra do Pacífico"
+sp_event_Pacific_War_QUOTE:0 "Tora! Tora! Tora! \n- Mitsuo Fuchida"
+sp_event_Pacific_War_REMARK:0 "Banzai!!"
+
+sp_event_Barbarossa:0 "Operação Barbarossa"
+sp_event_Barbarossa_QUOTE:0 "Só precisamos chutar a porta e toda a estrutura podre virá abaixo. \n- Adolf Hitler"
+sp_event_Barbarossa_REMARK:0 "Endsieg?"
+
+sp_event_Nationalist:0 "Vitória Nacionalista na Espanha"
+sp_event_Nationalist_QUOTE:0 "Sou responsável apenas diante de Deus e da história. \n- Francisco Franco"
+sp_event_Nationalist_REMARK:0 "Uma Nova Espanha"
+
+sp_event_Republican:0 "Vitória Republicana na Espanha"   
+sp_event_Republican_QUOTE:0 "Eles entregaram tudo... e vieram e nos disseram: 'Estamos aqui, sua causa, a causa da Espanha, é nossa. É a causa de toda a humanidade avançada e progressista.' \n- Dolores Ibárruri"
+sp_event_Republican_REMARK:0 "A estabilidade retorna"
+
+sp_event_Anarchist:0 "Vitória Anarquista na Espanha"
+sp_event_Anarchist_QUOTE:0 "Acredito, como sempre acreditei, na liberdade. A liberdade que se baseia no senso de responsabilidade. Considero a disciplina indispensável, mas deve ser disciplina interior, motivada por um propósito comum e um forte sentimento de camaradagem. \n- Buenaventura Durruti"
+sp_event_Anarchist_REMARK:0 "A Espanha está livre"
+
+sp_event_Communist:0 "Vitória Comunista na Espanha"
+sp_event_Communist_QUOTE:0 "Havia uma crença na revolução e no futuro, um sentimento de ter emergido subitamente numa era de igualdade e liberdade. Os seres humanos tentavam se comportar como seres humanos e não como engrenagens da máquina capitalista. \n- George Orwell"
+sp_event_Communist_REMARK:0 "Uma Espanha Vermelha?"
+
+sp_event_Falangist:0 "Vitória Falangista na Espanha"
+sp_event_Falangist_QUOTE:0 "Num impulso poético ergueremos esta fervorosa devoção à Espanha; faremos sacrifícios, renunciaremos à vida fácil e triunfaremos. \n- José Antonio Primo de Rivera"
+sp_event_Falangist_REMARK:0 "¡Arriba España!"
+
+sp_event_Stalinist:0 "Vitória Stalinista na Espanha"
+sp_event_Stalinist_QUOTE:0 "A verdadeira coragem consiste em ser forte o suficiente para dominar e superar a si mesmo e subordinar a própria vontade à vontade do coletivo, à vontade do órgão superior do partido. \n- Joseph Stalin"
+sp_event_Stalinist_REMARK:0 "Soviéticos na Europa?"
+
+sp_event_Carlist:0 "Vitória Carlista na Espanha"
+sp_event_Carlist_QUOTE:0 "A Espanha é o país mais forte do mundo; os espanhóis tentaram destruir a Espanha por séculos e não conseguiram. \n- Otto von Bismark"
+sp_event_Carlist_REMARK:0 "O Retorno do Rei"
+
+sp_event_British_Collapse:0 "Colapso Britânico"
+sp_event_British_Collapse_QUOTE:0 "Nada pode salvar a Inglaterra se ela não salvar a si mesma. \n- Winston Churchill"
+sp_event_British_Collapse_REMARK:0 "O sol se põe"
+
+sp_event_Fall_Germany:0 "Queda da Alemanha"
+sp_event_Fall_Germany_QUOTE:0 "Hitlers vêm e vão, mas a Alemanha e o povo alemão permanecem. \n- Joseph Stalin"
+sp_event_Fall_Germany_REMARK:0 "Auf Wiedersehen!"
+
+sp_event_Soviet_End:0 "Fim da União Soviética"
+sp_event_Soviet_End_QUOTE:0 "A história mostra que não existem exércitos invencíveis e que nunca existiram. \n- Joseph Stalin"
+sp_event_Soviet_End_REMARK:0 "E agora?"
+
+sp_event_Japanese_Surrender:0 "A Rendição Japonesa"
+sp_event_Japanese_Surrender_QUOTE:0 "A situação da guerra não evoluiu necessariamente a favor do Japão. \n- Hirohito"
+sp_event_Japanese_Surrender_REMARK:0 "O Sol Nascente não existe mais"
+
+sp_event_Fall_America:0 "Queda da América"
+sp_event_Fall_America_QUOTE:0 "A guerra é a mais trágica e estúpida loucura da humanidade; buscá-la ou aconselhar sua provocação deliberada é um crime negro contra todos os homens. \n- Dwight D. Eisenhower"
+sp_event_Fall_America_REMARK:0 "O sonho destruído"
+
+sp_event_first_nuke:0 "Primeira Detonação Nuclear"
+sp_event_first_nuke_QUOTE:0 "Tornei-me a morte, o destruidor de mundos. \n- J. Robert Oppenheimer"
+sp_event_first_nuke_REMARK:0 "O mundo só pode assistir"
+
+sp_event_Imperial_Federation:0 "A Federação Imperial"
+sp_event_Imperial_Federation_QUOTE:0 "Como vai o Império? \n - George V"
+sp_event_Imperial_Federation_REMARK:0 "O sol nunca se põe"
+
+sp_event_Decolonization:0 "Descolonização do Império Britânico"
+sp_event_Decolonization_QUOTE:0 "Não existe liberdade lenta. Liberdade é como um nascimento. Enquanto não formos plenamente livres, somos escravos. \n- Mahatma Gandhi"
+sp_event_Decolonization_REMARK:0 "A Europa está cansada"
+
+sp_event_Uk_King:0 "Eduardo VIII Assume o Poder"
+sp_event_Uk_King_QUOTE:0 "Nunca houve uma democracia que não tenha cometido suicídio. \n- John Adams"
+sp_event_Uk_King_REMARK:0 "Reine sobre nós"
+ 
+sp_event_Mosley:0 "Marcha sobre Downing Street"  
+sp_event_Mosley_QUOTE:0 "Juntos na Grã-Bretanha acendemos uma chama que as eras não extinguirão. Guardem essa chama sagrada, meus irmãos Camisas-Negras, até que ilumine a Grã-Bretanha e novamente ilumine os caminhos da humanidade. \n- Oswald Mosley"
+sp_event_Mosley_REMARK:0 "Crepúsculo nas Ilhas"
+ 
+sp_event_Uk_Communist:0 "Revolução Britânica"
+sp_event_Uk_Communist_QUOTE:0 "Teremos de escolher se realmente acreditamos na aplicação do direito de autodeterminação para todas as nações ou se, por gerações ainda, preferimos permanecer ferramentas do imperialismo e escravos do lucro. \n- Arthur MacManus"
+sp_event_Uk_Communist_REMARK:0 "Marx ficaria orgulhoso"
+
+sp_event_Second_World_War_Kaiser:0 "O Mundo Está em Guerra Novamente"
+sp_event_Second_World_War_Kaiser_QUOTE:0 "Isto não é paz. É um armistício por vinte anos. \n- Ferdinand Foch, 1919"
+sp_event_Second_World_War_Kaiser_REMARK:0 "Em casa pelo Natal"
+  
+sp_event_German_Civil_War:0 "A Guerra Civil Alemã"
+sp_event_German_Civil_War_QUOTE:0 "É quase certo que vamos fracassar. Mas como a história futura julgará o povo alemão se nem mesmo um punhado de homens teve a coragem de pôr fim àquele criminoso? \n- Henning von Tresckow"
+sp_event_German_Civil_War_REMARK:0 "Então começa"
+  
+sp_event_Kaiser_Returns:0 "Retorno do Kaiser"
+sp_event_Kaiser_Returns_QUOTE:0 "Não conheço mais partidos, apenas alemães! \n- Wilhelm II"
+sp_event_Kaiser_Returns_REMARK:0 "Ele não ficou fora por muito tempo"
+  
+sp_event_German_Democracy:0 "Democracia na Alemanha"
+sp_event_German_Democracy_QUOTE:0 "Sem democracia não há liberdade. A violência, não importa quem a use, é sempre reacionária. \n- Friedrich Ebert"
+sp_event_German_Democracy_REMARK:0 "Uma segunda chance"
+
+sp_event_German_Communist:0 "Comunismo na Alemanha"
+sp_event_German_Communist_QUOTE:0 "Vamos mostrar aos nossos compatriotas e ao mundo inteiro o que os alemães podem fazer quando trabalham pela paz. \n- Walter Ulbricht"
+sp_event_German_Communist_REMARK:0 "A revolução marcha para o Oeste"
+  
+sp_event_Endsieg:0 "Endsieg"
+sp_event_Endsieg_QUOTE:0 "A Alemanha será uma potência mundial, ou não haverá Alemanha. \n- Adolf Hitler"
+sp_event_Endsieg_REMARK:0 "Über Alles"
+  
+sp_event_Fall_France:0 "Queda da França"
+sp_event_Fall_France_QUOTE:0 "A França perdeu uma batalha, mas a França não perdeu a guerra. \n- Charles de Gaulle"
+sp_event_Fall_France_REMARK:0 "Ainda assim, a batalha continua"
+  
+sp_event_Fall_Poland:0 "Queda da Polônia"
+sp_event_Fall_Poland_QUOTE:0 "Ser derrotado e não se submeter é vitória; ser vitorioso e descansar sobre os louros é derrota. \n- Józef Piłsudski"
+sp_event_Fall_Poland_REMARK:0 "A Polônia ainda não pereceu"
+  
+sp_event_Unholy_Alliance:0 "Eixo Berlim-Moscou"
+sp_event_Unholy_Alliance_QUOTE:0 "Parece ser a missão histórica das Quatro Potências adotar uma política de longo alcance e dirigir o desenvolvimento futuro de seus povos aos canais certos, delimitando seus interesses em escala mundial. \n- Joachim von Ribbentrop"
+sp_event_Unholy_Alliance_REMARK:0 "Más notícias para a Europa"
+  
+sp_event_Austria_Hungary:0 "Renascimento da Áustria-Hungria"
+sp_event_Austria_Hungary_QUOTE:0 "O povo jamais votou a favor da república. Permaneceu em silêncio enquanto estava exausto da longa luta e surpreendido pela audácia dos revolucionários de 1918 e 1919. \n- Otto von Habsburg"
+sp_event_Austria_Hungary_REMARK:0 "Irmãos reunidos"
+  
+sp_event_Eastern_Front:0 "Um Novo Front Oriental"
+sp_event_Eastern_Front_QUOTE:0 "Os eslavos sempre nos odiarão e permanecerão nossos inimigos! Eles só têm medo de um homem e só o respeitam se ele os golpeia com força! \n- Wilhelm II"
+sp_event_Eastern_Front_REMARK:0 "O Leste sangrará"
+  
+sp_event_Vicky_3:0 "Vitória Coroada Kaiserin"
+sp_event_Vicky_3_QUOTE:0 "Ou os ideais germânicos ou os anglo-saxões devem prevalecer. \n- Wilhelm II"
+sp_event_Vicky_3_REMARK:0 "Vitória III confirmada"
+
+sp_event_Hilter:0 "A Presidência Hilter"
+sp_event_Hilter_QUOTE:0 "Melhor do que dizer é fazer; melhor do que prometer é cumprir. \n- Juán Perón"
+sp_event_Hilter_REMARK:0 "Que sujeito familiar."
+
+sp_event_Antilles:0 "Unificação das Antilhas"
+sp_event_Antilles_QUOTE:0 "A escravidão era uma instituição econômica de primeira importância. Foi a base da economia grega e construiu o Império Romano. \n- Eric Williams"
+sp_event_Antilles_REMARK:0 "Avante!"
+
+sp_event_Fall_China:0 "Queda da China"
+sp_event_Fall_China_QUOTE:0 "Outros homens são a faca de trinchar e o prato de servir; nós somos o peixe e a carne. \n- Sun Yat-sen"
+sp_event_Fall_China_REMARK:0 "A humilhação continua"
+
+sp_event_Chinese_Civil_War:0 "Guerra Civil Chinesa"
+sp_event_Chinese_Civil_War_QUOTE:0 "Somente travando uma guerra popular como essa podemos derrotar o inimigo nacional. \n- Mao Zedong"
+sp_event_Chinese_Civil_War_REMARK:0 "O Oriente em chamas"
+
+sp_event_Communist_Unification:0 "Comunistas Unificam a China"
+sp_event_Communist_Unification_QUOTE:0 "Por que deve existir um partido revolucionário? Deve existir um partido revolucionário porque o mundo contém inimigos que oprimem o povo, e o povo quer derrubar essa opressão. \n- Mao Zedong"
+sp_event_Communist_Unification_REMARK:0 "A aurora vermelha no Oriente"
+
+sp_event_Nationalist_Unification:0 "Nacionalistas Unificam a China"
+sp_event_Nationalist_Unification_QUOTE:0 "A revolução ainda não teve sucesso. Trabalhem duro, camaradas! \n- Sun Yat-sen"
+sp_event_Nationalist_Unification_REMARK:0 "A China está inteira"
+
+sp_event_Beiyang_Government:0 "Exército de Fengtian Unifica a China"
+sp_event_Beiyang_Government_QUOTE:0 "Não se pode julgar um livro pela capa, não é? \n- Cao Cao"
+sp_event_Beiyang_Government_REMARK:0 "Zuolin vingado."
+
+sp_event_Russo_Japanese_War:0 "A Segunda Guerra Russo-Japonesa"
+sp_event_Russo_Japanese_War_QUOTE:0 "Dê-me uma divisão japonesa armada com lanças de bambu e eu exterminarei todo o Exército do Extremo Oriente Russo. \n- Sadao Araki"
+sp_event_Russo_Japanese_War_REMARK:0 "O Oriente está sob cerco"
+
+sp_event_Qing_Dynasty:0 "Dinastia Qing Reivindica a China"
+sp_event_Qing_Dynasty_QUOTE:0 "O povo é de suprema importância; os altares dos deuses da terra e do grão vêm em seguida; por último vem o governante. Por isso, aquele que conquista a confiança do numeroso povo será Imperador. \n- Mêncio"
+sp_event_Qing_Dynasty_REMARK:0 "O dragão ruge novamente"
+
+sp_event_JAP_GEACPS:0 "Hegemonia Japonesa no Leste Asiático"
+sp_event_JAP_GEACPS_QUOTE:0 "Cobrirei as oito direções e farei delas minha morada \n- Imperador Jimmu"
+sp_event_JAP_GEACPS_REMARK:0 "Uma nova ordem"
+
+sp_event_Japanese_Civil_War:0 "O Incidente de Miyazaki"
+sp_event_Japanese_Civil_War_QUOTE:0 "Como as coisas estão agora, os senhores feudais se contentam em observar enquanto o xogunato age de maneira arbitrária. Nem os senhores nem o xogum são confiáveis, e assim nossa única esperança está nos heróis de base. \n- Yoshida Shoin"
+sp_event_Japanese_Civil_War_REMARK:0 "Sol Nascente liberto?"
+
+sp_event_Chinese_Victory:0 "Japoneses se Retiram da China"
+sp_event_Chinese_Victory_QUOTE:0 "Se o imperialismo não for banido do país, a China perecerá como nação. Se a China não perecer, então o imperialismo não pode permanecer. \n- Chiang Kai-shek"
+sp_event_Chinese_Victory_REMARK:0 "O tigre desperta" 
+
+sp_event_RCWC:0 "A Segunda Guerra Civil Russa"
+sp_event_RCWC_QUOTE:0 "Para tornar o indivíduo sagrado, precisamos destruir a ordem social que o crucifica. E esse problema só pode ser resolvido por sangue e ferro. \n- Leon Trotsky"
+sp_event_RCWC_REMARK:0 "Lenin deixou um legado de caos..."
+
+sp_event_RCWW:0 "A Segunda Guerra Civil Russa"
+sp_event_RCWW_QUOTE:0 "Que o Senhor Deus ajude a Rússia! \n- Nicholas II"
+sp_event_RCWW_REMARK:0 "As purgas não foram suficientes"
+
+sp_event_Soviet_Coup:0 "Guerra Civil Soviética"
+sp_event_Soviet_Coup_QUOTE:0 "As ideias são mais poderosas do que armas. Não deixaríamos nossos inimigos terem armas; por que deixaríamos que tivessem ideias? \n- Joseph Stalin"
+sp_event_Soviet_Coup_REMARK:0 "Fim de uma era"
+
+sp_event_Soviet_Counter_Coup:0 "Guerra Civil Soviética"
+sp_event_Soviet_Counter_Coup_QUOTE:0 "Você não pode fazer uma revolução com luvas brancas. \n- Vladimir Lenin"
+sp_event_Soviet_Counter_Coup_REMARK:0 "Tudo por nada."
+
+sp_event_Fascist_Putsch:0 "Golpe Fascista na Rússia"
+sp_event_Fascist_Putsch_QUOTE:0 "\"O coração de um czar está nas mãos de Deus.\" Que assim seja. Por todas as leis estabelecidas por mim, carrego uma grande responsabilidade diante de Deus, e estou pronto para responder por minha decisão a qualquer momento. \n- Nicholas II"
+sp_event_Fascist_Putsch_REMARK:0 "Rússia fascista?"
+
+sp_event_Romanov:0 "Restauração dos Romanov"
+sp_event_Romanov_QUOTE:0 "\"O coração de um czar está nas mãos de Deus.\" Que assim seja. Por todas as leis estabelecidas por mim, carrego uma grande responsabilidade diante de Deus, e estou pronto para responder por minha decisão a qualquer momento. \n- Nicholas II"
+sp_event_Romanov_REMARK:0 "Uma Rússia estável?"
+
+sp_event_PLC:0 "Retorno da Comunidade"
+sp_event_PLC_QUOTE:0 "Se Deus está conosco, então quem está contra nós. \n- Lema da Comunidade Polaco-Lituana"
+sp_event_PLC_REMARK:0 "Chega de partilhas!"
+
+sp_event_Winter_War:0 "A Guerra de Inverno"
+sp_event_Winter_War_QUOTE:0 "Conquistamos terreno suficiente apenas para enterrar nossos mortos. \n- General do Exército Vermelho"
+sp_event_Winter_War_REMARK:0 "Vale a pena?"
+
+sp_event_Macedon:0 "Retorno do Império Macedônico"
+sp_event_Macedon_QUOTE:0 "Nada é impossível para aquele que tenta. \n- Alexandre, o Grande"
+sp_event_Macedon_REMARK:0 "O legado de Alexandre vive"
+
+sp_event_Byzantium:0 "Império Bizantino Retorna"
+sp_event_Byzantium_QUOTE:0 "Deus me livre de viver como Imperador sem Império. Quando minha cidade cair, eu cairei com ela. \n- Constantino XI, na queda de Constantinopla"
+sp_event_Byzantium_REMARK:0 "Deus vult!"
+
+sp_event_Ottoman:0 "Ressurreição do Império Otomano"
+sp_event_Ottoman_QUOTE:0 "Não temos medo da coruja, nós somos os falcões. \n- Mehmed II"
+sp_event_Ottoman_REMARK:0 "Não mais um saco de pancada!"
+
+sp_event_Turan:0 "Unificação Túrcica"
+sp_event_Turan_QUOTE:0 "Quão feliz é aquele que diz 'Sou turco'. \n- Mustafa Kemal Atatürk"
+sp_event_Turan_REMARK:0 "Agora todos vocês são turcos!"
+
+sp_event_Balkan:0 "Segunda Guerra Civil Americana"
+sp_event_Balkan_QUOTE:0 "A união e a mutualidade dos países e povos dos Bálcãs é o único caminho que leva à libertação econômica, nacional e política. \n- Dimitrije Tucović"
+sp_event_Balkan_REMARK:0 "Lá vamos nós de novo"
+
+sp_event_Fall_Brazil:0 "Colapso Brasileiro"
+sp_event_Fall_Brazil_QUOTE:0 "Que Deus me conceda estes últimos desejos, paz e prosperidade ao Brasil. \n- Pedro II"
+sp_event_Fall_Brazil_REMARK:0 "O gigante está morto"
+
+sp_event_American_Civil_War:0 "A Segunda Guerra Civil Americana"
+sp_event_American_Civil_War_QUOTE:0 "Não penso muito de um homem que não é mais sábio hoje do que foi ontem. \n- Abraham Lincoln"
+sp_event_American_Civil_War_REMARK:0 "Adeus América"
+
+sp_event_American_Civil_War_Fascist:0 "A Segunda Guerra Civil Americana"
+sp_event_American_Civil_War_Fascist_QUOTE:0 "A América é uma melodia. Deve ser cantada em conjunto. \n- Gerald Stanley Lee"
+sp_event_American_Civil_War_Fascist_REMARK:0 "Adeus América"
+
+sp_event_Fall_New_York:0 "Queda de Nova York"
+sp_event_Fall_New_York_QUOTE:0 "Quem controla o passado controla o presente e o futuro. \n- George Orwell"
+sp_event_Fall_New_York_REMARK:0 "Bastardos doentes."
+
+sp_event_Fall_Washington:0 "Queda de Washington"
+sp_event_Fall_Washington_QUOTE:0 "Nunca devemos deixar a América ser conduzida novamente a uma guerra fratricida como as duas últimas guerras mundiais, em prol de interesses alienígenas e minoritários. \n- George Lincoln Rockwell"
+sp_event_Fall_Washington_REMARK:0 "Oh Deus."
+
+sp_event_Fall_London:0 "Queda de Londres"
+sp_event_Fall_London_QUOTE:0 "Este lugar nunca deveria ter sido desenterrado. \n- Edward VIII"
+sp_event_Fall_London_REMARK:0 "Britannia jamais cairá!"
+
+sp_event_Fall_Los_Angeles:0 "Queda de Los Angeles"
+sp_event_Fall_Los_Angeles_QUOTE:0 "Bem, eu estraguei tudo bonito, não foi? \n- Richard Nixon"
+sp_event_Fall_Los_Angeles_REMARK:0 "Caiam fora, japas!"
+
+sp_event_Fall_Leopoldine:0 "Invasão Alemã do Brasil"
+sp_event_Fall_Leopoldine_QUOTE:0 "Independência ou morte! \n- Pedro I"
+sp_event_Fall_Leopoldine_REMARK:0 "Que Deus nos salve!"
+
+sp_event_China_Yellow_River:0 "A Catástrofe do Rio Amarelo"
+sp_event_China_Yellow_River_QUOTE:0 "Essa ruptura está ligada ao destino do país e da nação. Sem pequeno sacrifício, não há grande conquista. Neste momento crítico devemos abandonar a 'piedade feminina', romper todas as preocupações e alcançar todos os objetivos com determinação. \n- Chiang Kai-shek"
+sp_event_China_Yellow_River_REMARK:0 "Isso vai deter os japoneses?"
+
+sp_event_Bay_of_Pigs:0 "A Invasão da Baía dos Porcos"
+sp_event_Bay_of_Pigs_QUOTE:0 "A atual administração dos EUA fracassou totalmente em seus esforços de isolar e sufocar economicamente Cuba. Mas não aceita esse fracasso e se torna cada vez mais desesperada. \n- Fidel Castro"
+sp_event_Bay_of_Pigs_REMARK:0 "Ao combate, correi, bayameses!"
+
+sp_event_Second_American_Mexican_War:0 "A Segunda Guerra Mexicano-Americana"
+sp_event_Second_American_Mexican_War_QUOTE:0 "É melhor morrer de pé do que viver de joelhos. \n- Emiliano Zapata"
+sp_event_Second_American_Mexican_War_REMARK:0 "Ay, Dios Mio!"
+
+sp_event_PRC:0 "República Popular da China Proclamada"
+sp_event_PRC_QUOTE:0 "Nosso trabalho será escrito na história da humanidade. Prova que o povo chinês, que representa um quarto da população mundial, se levantou a partir de agora. \n- Mao Zedong"
+sp_event_PRC_REMARK:0 "Um novo poder no Oriente"
+
+sp_event_Italian_Civil_War:0 "A Guerra Civil Italiana"
+sp_event_Italian_Civil_War_QUOTE:0 "É mais fácil uma cobra fumar cachimbo do que a FEB ir para o front e lutar \n- Ditado popular brasileiro"
+sp_event_Italian_Civil_War_REMARK:0 "Seus dias estão contados"
+
+sp_event_Liberation_of_Paris:0 "A Libertação de Paris"
+sp_event_Liberation_of_Paris_QUOTE:0 "Nunca interrompa seu inimigo quando ele estiver cometendo um erro. \n- Napoleão Bonaparte"
+sp_event_Liberation_of_Paris_REMARK:0 "Estamos em casa novamente!"
+
+sp_event_FRA_napoleon:0 "Coroação de Napoleão VI"
+sp_event_FRA_napoleon_QUOTE:0 "Coragem não é ter força para continuar — é continuar quando você não tem força. \n- Napoleão Bonaparte"
+sp_event_FRA_napoleon_REMARK:0 "Interessante."
+
+sp_event_FRA_orleans:0 "Retorno dos Orleans"
+sp_event_FRA_orleans_QUOTE:0 "É vital que a monarquia mantenha contato com o povo. É o que eu tento fazer. \n- Princesa Diana de Gales"
+sp_event_FRA_orleans_REMARK:0 "Interessante."
+
+sp_event_FRA_legitime:0 "Legitimistas Tomam o Poder"
+sp_event_FRA_legitime_QUOTE:0 "Qualquer lei que viole os direitos inalienáveis do homem é essencialmente injusta e tirânica. \n- Maximilien Robespierre"
+sp_event_FRA_legitime_REMARK:0 "Interessante."
+
+sp_event_FRA_Commie:0 "Golpe Comunista na França"
+sp_event_FRA_Commie_QUOTE:0 "Não é o comunismo que expropria o campo do camponês ou a loja do comerciante, arruinando pequenos e médios industriais incapazes de suportar a concorrência dos trustes. \n- Maurice Thorez"
+sp_event_FRA_Commie_REMARK:0 "Interessante."
+
+sp_event_FRA_Petain:0 "O Marechal Toma o Poder"
+sp_event_FRA_Petain_QUOTE:0 "Nem a Alemanha nem a Itália têm dúvidas. Nossa crise não é material. Perdemos a fé em nosso destino... Somos como marinheiros sem piloto. \n- Philippe Pétain"
+sp_event_FRA_Petain_REMARK:0 "Interessante."
+
+sp_event_FRA_Franciste:0 "Marcha sobre Paris"
+sp_event_FRA_Franciste_QUOTE:0 "Entregamos a maior parte da Europa a Hitler. \n- Pierre Laval"
+sp_event_FRA_Franciste_REMARK:0 "Interessante."
+
+sp_event_Liberation_of_London:0 "A Libertação de Londres"
+sp_event_Liberation_of_London_QUOTE:0 "Se esta ilha ou grande parte dela fosse subjugada e faminta, então nosso Império além-mares, armado e guardado pela frota britânica, continuaria a luta até que o novo mundo, com todo o seu poder e força, avançasse para o resgate e a libertação do velho. \n- Winston Churchill"
+sp_event_Liberation_of_London_REMARK:0 "Abaixo a Alemanha!"
+
+sp_event_EU_Formed:0 "Unificação Europeia"
+sp_event_EU_Formed_QUOTE:0 "Uma guerra entre europeus é uma guerra civil. \n- Victor Hugo"
+sp_event_EU_Formed_REMARK:0 "Uau."
+
+sp_event_Rome_Formed:0 "Restauração Romana"
+sp_event_Rome_Formed_QUOTE:0 "O objetivo da vida não é estar do lado da maioria, mas escapar de se encontrar nas fileiras dos insanos. \n- Marco Aurélio"
+sp_event_Rome_Formed_REMARK:0 "Aeterna!"
+
+sp_event_Arab_Union_Formed:0 "República Árabe Unida Formada"
+sp_event_Arab_Union_Formed_QUOTE:0 "O que foi tomado pela força só pode ser recuperado pela força. \n- Gamal Abdel Nasser"
+sp_event_Arab_Union_Formed_REMARK:0 "Unidos para sempre!"
+
+sp_event_Gran_Colombia_Formed:0 "Gran Colômbia Formada"
+sp_event_Gran_Colombia_Formed_QUOTE:0 "Fuja do país onde um só homem detém todo o poder; é uma nação de escravos \n- Simón Bolívar"
+sp_event_Gran_Colombia_Formed_REMARK:0 "Por Deus e Pátria!"
+
+sp_event_German_Revolt:0 "Golpe Militar Alemão"
+sp_event_German_Revolt_QUOTE:0 "Suor economiza sangue, sangue economiza vidas, mas cérebro economiza ambos. \n- Erwin Rommel"
+sp_event_German_Revolt_REMARK:0 "Revolta, é?"
+
+sp_event_Fall_Tokyo_Soviet:0 "Queda de Tóquio"
+sp_event_Fall_Tokyo_Soviet_QUOTE:0 "Greves, boicotes, parlamentarismo, reuniões e manifestações são boas formas de luta como meios de preparar e organizar o proletariado. \n- Joseph Stalin"
+sp_event_Fall_Tokyo_Soviet_REMARK:0 "Comunismo no Japão?"
+
+sp_event_Fall_Tokyo_America:0 "Queda de Tóquio"
+sp_event_Fall_Tokyo_America_QUOTE:0 "Ontem, 7 de dezembro de 1941 — uma data que viverá na infâmia — os Estados Unidos da América foram repentina e deliberadamente atacados pelas forças navais e aéreas do Império do Japão. \n- Franklin Delano Roosevelt"
+sp_event_Fall_Tokyo_America_REMARK:0 "Onde está o Imperador agora?"
+
+sp_event_Fall_Tokyo_China:0 "Queda de Tóquio"
+sp_event_Fall_Tokyo_China_QUOTE:0 "Lembrem-se de que uma nação civilizada não pode ter apenas um partido; se houvesse apenas um partido, isso seria apenas uma ditadura. A política não poderia avançar. \n- Sun Yat-sen"
+sp_event_Fall_Tokyo_China_REMARK:0 "A humilhação terminou"
+
+sp_event_Fall_Moscow_Allies:0 "Queda de Moscou"
+sp_event_Fall_Moscow_Allies_QUOTE:0 "O mundo não aceitará ditadura nem dominação. \n- Mikhail Gorbachev"
+sp_event_Fall_Moscow_Allies_REMARK:0 "O urso está morrendo"
+
+sp_event_Ethiopian_Victory:0 "Derrota Italiana na Etiópia"
+sp_event_Ethiopian_Victory_QUOTE:0 "Todos buscamos um mundo no qual os homens estejam livres dos fardos da ignorância, pobreza, fome e doença. \n- Haile Selassie"
+sp_event_Ethiopian_Victory_REMARK:0 "A África está segura" 
+
+sp_event_Iraqi_War:0 "Invasão Britânica do Iraque"
+sp_event_Iraqi_War_QUOTE:0 "O Exército Britânico não teria atravessado ambas as guerras mundiais se não tivesse tido o Exército Indiano. \n- Claude Auchinleck"
+sp_event_Iraqi_War_REMARK:0 "O que é isso?"
+
+sp_event_The_New_Order:0 "A Nova Ordem"
+sp_event_The_New_Order_QUOTE:0 "Jesus chorou. \n- João 11:35"
+sp_event_The_New_Order_REMARK:0 "O sol fica negro."
+
+sp_event_Global_Hegemony:0 "Hegemonia Global"
+sp_event_Global_Hegemony_QUOTE:0 "Um homem pode morrer, nações podem surgir e cair, mas uma ideia vive. \n- John F. Kennedy"
+sp_event_Global_Hegemony_REMARK:0 "Paz mundial?"
+
+sp_event_World_Revolution:0 "Uma Revolução Mundial"
+sp_event_World_Revolution_QUOTE:0 "Que as classes dominantes tremam diante de uma revolução comunista. Os proletários nada têm a perder a não ser suas correntes; têm um mundo a ganhar. Trabalhadores de todos os países, uni-vos!"
+sp_event_World_Revolution_REMARK:0 "Marx sorri"
+
+sp_event_German_Invasion_of_Italy:0 "Invasão Alemã da Itália"
+sp_event_German_Invasion_of_Italy_QUOTE:0 "É bom confiar nos outros, mas não fazê-lo é muito melhor. \n- Benito Mussolini"
+sp_event_German_Invasion_of_Italy_REMARK:0 "Que amigo."
+
+sp_event_German_Invasion_of_Hungary:0 "Invasão Alemã da Hungria"
+sp_event_German_Invasion_of_Hungary_QUOTE:0 "À sua defesa e proteção dediquei minha vida. \n- Miklós Horthy"
+sp_event_German_Invasion_of_Hungary_REMARK:0 "Sob nova administração."
+
+sp_event_German_Invasion_of_Japan:0 "Invasão Alemã do Japão"
+sp_event_German_Invasion_of_Japan_QUOTE:0 "Nossos predecessores superaram muitos problemas e muito sofrimento, mas cada vez se levantaram mais fortes do que antes. \n- Shinzo Abe"
+sp_event_German_Invasion_of_Japan_REMARK:0 "Nuvens escuras sobre o Sol Nascente."
+
+sp_event_Paraguayan_War_Paraguay:0 "Invasão Paraguaia do Brasil"
+sp_event_Paraguayan_War_Paraguay_QUOTE:0 "Morro com minha pátria! \n- Solano López"
+sp_event_Paraguayan_War_Paraguay_REMARK:0 "Revanche"
+
+sp_event_Paraguayan_War_Brazil:0 "Invasão Brasileira do Paraguai"
+sp_event_Paraguayan_War_Brazil_QUOTE:0 "Digam ao povo brasileiro que a República acabou. \n- Deodoro da Fonseca"
+sp_event_Paraguayan_War_Brazil_REMARK:0 "Repeteco"
+
+sp_event_Communist_America:0 "Vitória Comunista na América"
+sp_event_Communist_America_QUOTE:0 "No cenário mundial, nossa posição é que há um ressurgimento do socialismo ocorrendo. \n- Gus Hall"
+sp_event_Communist_America_REMARK:0 "Uma América comunista?"
+
+sp_event_Fascist_America:0 "Vitória Fascista na América"
+sp_event_Fascist_America_QUOTE:0 "Como cristãos somos inclinados à bondade, generosidade, afeto e humildade em nossas relações com os outros. Como militantes, estamos dispostos a usar força física contra nossos inimigos. Como reconciliar essas duas filosofias aparentemente contraditórias? A resposta, claro, é purgar malícia, amargura e vingança de nossos corações. \n- Samuel Bowers"
+sp_event_Fascist_America_REMARK:0 "O Klan cavalga novamente"
+
+sp_event_Peru_Bolivia_Formed:0 "Formação da Confederação Peru-Boliviana"
+sp_event_Peru_Bolivia_Formed_QUOTE:0 "Um povo que ama a liberdade será no fim livre. \n- Simón Bolívar"
+sp_event_Peru_Bolivia_Formed_REMARK:0 "Avante!"
+
+sp_event_Centroamerica_Formed:0 "Formação da República Federal da América Central"
+sp_event_Centroamerica_Formed_QUOTE:0 "Em teu oriente pode-se ver, minha pátria, um novo sol que espalha luz brilhante; podemos agora com voz reverente proclamar: Deus, União, Liberdade. \n- Hino da República Federal da América Central"
+sp_event_Centroamerica_Formed_REMARK:0 "Unidos mais uma vez!"
+
+sp_event_Pacific_Union_Formed:0 "Formação da União Socialista do Pacífico"
+sp_event_Pacific_Union_Formed_QUOTE:0 "Está claro que a revolução popular deve combinar três exigências: uma vida estável para o povo, independência nacional e paz mundial. \n- Kyuichi Tokuda"
+sp_event_Pacific_Union_Formed_REMARK:0 "A Ásia é vermelha"
+
+sp_event_ULASR:0 "Formação da República Socialista da América Latina"
+sp_event_ULASR_QUOTE:0 "Já tivemos sucesso em criar um governo democrático e nacional que é revolucionário e popular. É assim que o socialismo começa, não com decretos. \n- Salvador Allende"
+sp_event_ULASR_REMARK:0 "A revolução cresce"
+
+sp_event_Argentina_Legionaria:0 "Formação da Sudamérica Legionaria"
+sp_event_Argentina_Legionaria_QUOTE:0 "Quantas pessoas forem necessárias devem morrer na Argentina para que o país volte a estar seguro. \n- Jorge Rafael Videla"
+sp_event_Argentina_Legionaria_REMARK:0 "Oh, uau."
+
+sp_event_Manchuria_Communist:0 "Proclamação da República Popular da China"
+sp_event_Manchuria_Communist_QUOTE:0 "Uma revolução não é um jantar, nem escrever um ensaio, nem pintar um quadro, nem fazer bordado; não pode ser tão refinada, tão tranquila e gentil. \n- Mao Zedong"
+sp_event_Manchuria_Communist_REMARK:0 "O Oriente está vermelho"
+
+sp_event_Manchuria_Republic:0 "Proclamação da República da China"
+sp_event_Manchuria_Republic_QUOTE:0 "O povo chinês tem apenas solidariedade familiar e de clã, não possui espírito nacional… são apenas um monte de areia solta. \n- Sun Yixian"
+sp_event_Manchuria_Republic_REMARK:0 "Os ventos mudaram."
+
+sp_event_China_Fascist:0 "Tomada Fascista na China"
+sp_event_China_Fascist_QUOTE:0 "Escrevemos nosso próprio destino; tornamo-nos aquilo que fazemos. \n- Chiang Kai-shek"
+sp_event_China_Fascist_REMARK:0 "Um novo reinado de terror?."
+
+
+super_info.1.t: "Vanilla Super Events Expanded"
+super_info.1.d: "Obrigado por jogar o Vanilla Super Events Expanded! \n\nO áudio dos eventos é controlado pelo player de música, o que significa que agora você pode controlar o volume da música e até pausá-la quando quiser (apenas não clique em estações diferentes nem pressione os botões de embaralhar ou pular música enquanto o áudio do evento estiver tocando). \nQuando um Super Evento for ativado no jogo, você também pode clicar no player de música para ver o nome da música que está tocando no momento. \n\nSe tiver alguma dúvida, fique à vontade para me perguntar na página Steam deste mod."
+super_info.1.a: "Ver as últimas mudanças."
+super_info.1.b: "Aproveite o mod!"
+
+super_info.2.t: "Registro de Atualizações VSEE"
+super_info.2.d: "Atualização 0.6\n\n1 Novos Super Eventos:\n\nA maioria das nações formáveis (que você verá durante sua campanha agora têm eventos (Gran Colômbia, Peru-Bolívia, América Central, Antilhas...). Novos eventos para a nova DLC chinesa e alemã, pequenos erros nos eventos japoneses corrigidos. Eventos alemães corrigidos. A França possui eventos para todos os caminhos monárquicos. Comunistas e fascistas também possuem eventos. \Eventos Alterados\n\n1 Novas músicas e imagens para::\n\n Todos os eventos originais agora foram alterados ou estão em processo de alteração."
+super_info.2.a: "Aproveite!"
