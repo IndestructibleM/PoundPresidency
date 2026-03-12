@@ -32,7 +32,7 @@ ideologies = {
 			
 			futurism = { can_be_randomly_selected = no }
 
-			new_deal_ideology = { color = { 0 0 0 } can_be_randomly_selected = no }
+			new_deal_ideology = { color = { 30 0 40 } can_be_randomly_selected = no }
 
 		}
 
@@ -44,7 +44,7 @@ ideologies = {
 			"FACTION_NAME_FASCIST_5"
 		}
 
-		color = { 150 75 0 }
+		color = { 25 25 25 }
 
 		war_impact_on_world_tension = 1.0			#evil!
 		faction_impact_on_world_tension = 1.0
@@ -91,7 +91,7 @@ ideologies = {
 			"FACTION_NAME_NONALIGNED_5"
 		}
 
-		color = { 75 75 75 }
+		color = { 80 80 80 }
 
 
 		war_impact_on_world_tension = 0.25		#no major danger
@@ -164,7 +164,7 @@ ideologies = {
 			"FACTION_NAME_NONALIGNED_5"
 		}
 
-		color = { 124 124 124 }
+		color = { 125 125 125 }
 
 
 		war_impact_on_world_tension = 0.25		#no major danger
@@ -228,7 +228,7 @@ ideologies = {
 			"FACTION_NAME_DEMOCRATIC_6"
 		}
 
-		color = { 0 0 255 }
+		color = { 0 93 160 }
 
 		rules = {
 			can_create_collaboration_government = no
@@ -285,7 +285,7 @@ ideologies = {
 			"FACTION_NAME_COMMUNIST_5"
 		}
 
-		color = { 240 60 75 }
+		color = { 234 81 83 }
 
 		war_impact_on_world_tension = 0.75		#Commie less threatening
 		faction_impact_on_world_tension = 0.5
@@ -355,7 +355,7 @@ ideologies = {
 			"FACTION_NAME_COMMUNIST_5"
 		}
 
-		color = { 200 0 0 }
+		color = { 227 6 19 }
 
 		war_impact_on_world_tension = 0.75		#Commie less threatening
 		faction_impact_on_world_tension = 0.5
