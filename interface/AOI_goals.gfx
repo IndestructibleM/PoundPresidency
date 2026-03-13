@@ -1,0 +1,58 @@
+spriteTypes = {
+	SpriteType = { 
+		name = "GFX_focus_ITA_king_umberto"
+		texturefile = "gfx/interface/goals/focus_ITA_king_umberto.dds"
+	}
+	SpriteType = { 
+		name = "GFX_focus_flag_kaiserreich"
+		texturefile = "gfx/interface/goals/flag_kaiserreich.png"
+	}
+	SpriteType = { 
+		name = "GFX_focus_GER_conservative_revolution"
+		texturefile = "gfx/interface/goals/GER_Conservative_Revolution.png"
+	}
+	SpriteType = { 
+		name = "GFX_focus_GER_SPD"
+		texturefile = "gfx/interface/goals/GER_SPD.png"
+	}
+	SpriteType = { 
+		name = "GFX_focus_GER_Zentrum"
+		texturefile = "gfx/interface/goals/GER_Zentrum.png"
+	}
+	SpriteType = { 
+		name = "GFX_focus_attack_kaiserreich"
+		texturefile = "gfx/interface/goals/KR_attack_germany.png"
+	}
+	SpriteType = { 
+		name = "GFX_focus_KR_Deutsches_Heer"
+		texturefile = "gfx/interface/goals/KR_Deutsches_Heer.png"
+	}
+	SpriteType = { 
+		name = "GFX_focus_KR_our_continent"
+		texturefile = "gfx/interface/goals/KR_our_continent.png"
+	}
+	SpriteType = { 
+		name = "GFX_focus_KR_renewed_militarism"
+		texturefile = "gfx/interface/goals/KR_renewed_militarism.png"
+	}
+	SpriteType = { 
+		name = "GFX_focus_KR_Staff"
+		texturefile = "gfx/interface/goals/KR_Staff.png"
+	}
+	SpriteType = { 
+		name = "GFX_focus_GER_vindicate"
+		texturefile = "gfx/interface/goals/GER_Woe_to_the_Vanquished.png"
+	}
+	SpriteType = { 
+		name = "GFX_focus_GER_pax"
+		texturefile = "gfx/interface/goals/GER_Pax_Germanica.png"
+	}
+	SpriteType = { 
+		name = "GFX_focus_KTG_Bookstack"
+		texturefile = "gfx/interface/goals/KTG_Bookstack.png"
+	}
+	SpriteType = { 
+		name = "GFX_focus_KTG_Educate_natives"
+		texturefile = "gfx/interface/goals/KTG_Educate_natives.png"
+	}
+}

@@ -1,0 +1,677 @@
+AOI_italy_tributes = {
+    priority = 50
+
+	icon = eng_concessions_to_the_trade_unions
+
+	allowed = {
+		original_tag = AOI
+	}
+
+    visible = {
+        has_completed_focus = AOI_italy_tributes
+        NOT = { has_completed_focus = AOI_increased_self_government }
+    }
+
+}
+GER_desparate_measures  = {
+    priority = 35
+    
+	icon = spr_political_assassination
+
+	allowed = {
+		original_tag = GER
+        has_dlc = "Waking the Tiger"
+	}
+
+    visible = {
+        has_completed_focus = GER_desparate_measures
+    }
+}
+HUN_autonomous_republics = {
+    icon = generic_formable_nations
+    allowed = {
+        original_tag = HUN
+        has_dlc = "Death or Dishonor"
+    }
+
+    visible =  {
+        has_completed_focus = HUN_remember_mistakes
+    }
+}
+CHI_lianguang_incident = {
+	icon = power_struggle
+	allowed = {
+        tag = GDG
+	}
+}
+YUG_plot_against_peter = {
+	icon = GFX_decision_spr_political_assassination
+	picture = GFX_decision_cat_picture_plot_against_boris
+
+	allowed = {
+		original_tag = YUG
+		has_dlc = "Death or Dishonor"
+	}
+	
+	visible = {
+		has_completed_focus = YUG_invite_german_military_mission
+        has_idea = king_peter_1
+	}
+}
+USA_national_reincarnation = {
+	icon = generic_formable_nations
+	allowed = {
+		original_tag = USA
+	}
+	visible = {
+		has_completed_focus = USA_national_reincarnation
+	}
+}
+JAP_union_of_east_asian_socialist_republics = {
+
+    icon = generic_formable_nations
+
+    allowed = {
+        original_tag = JAP
+    }
+    
+    visible = {
+        has_completed_focus = JAP_union_of_east_asian_socialist_republics
+    }
+}
+JAP_anti_colonial_rhetoric = {
+
+    icon = infiltration
+
+    allowed = {
+        original_tag = JAP
+    }
+    
+    visible = {
+        has_completed_focus = JAP_anti_colonial_rhetoric
+    }
+}
+SFSTE_PRC_infiltrate_wang_puppet = {
+	icon = infiltration
+	picture = GFX_decision_cat_picture_chi_infiltration
+	allowed = {
+		is_potentially_communist_china = yes
+	}
+
+	visible = {
+		has_completed_focus = PRC_infiltration		
+	}
+}
+TE_uranium_ore_category = {
+
+    icon = generic_economy
+
+    visible = {
+        has_tech = atomic_research
+    }
+}
+SFSTE_SOV_beaten_but_not_defeated_category = {
+
+    priority = 35
+    
+	icon = generic_formable_nations
+	picture = GFX_decision_cat_picture_soviet_civil_war
+
+	allowed = {
+		original_tag = SOV
+	}
+
+	visible = {
+        has_country_flag = SFSTE_SOV_beaten_but_not_defeated_flag
+	}
+    
+}
+SFSTE_SOV_new_union_treaty = {
+
+    priority = 30
+    
+	icon = generic_formable_nations
+	picture = GFX_decision_cat_picture_soviet_civil_war
+
+	allowed = {
+		original_tag = SOV
+	}
+
+	visible = {
+        has_country_flag = SFSTE_SOV_new_union_treaty
+	}
+    
+}
+SFSTE_free_britain = {
+    priority = 20
+    
+	icon = generic_formable_nations
+	picture = GFX_decision_cat_picture_government_in_exile
+
+	allowed = {
+		original_tag = ENG
+	}
+
+	visible = {
+        has_country_flag = free_ENG
+	}
+
+}
+SFSTE_GER_SWE_FIN_diplo = {
+    priority = 5
+    
+	icon = generic_foreign_policy
+
+	allowed = {
+		original_tag = GER
+	}
+
+	visible = {
+		has_completed_focus = GER_weserubung
+		OR = {
+			country_exists = FIN
+			country_exists = SWE
+		}
+        DEN = {
+            OR = {
+                has_capitulated = yes
+                exists = no
+                is_subject_of = ROOT
+            }
+        }
+        NOR = {
+            OR = {
+                has_capitulated = yes
+                exists = no
+                is_subject_of = ROOT
+            }
+        }
+		is_subject = no
+	}
+}
+YUG_partisani_management  = {
+	icon = spr_political_assassination
+
+	allowed = {
+		original_tag = YUG
+        has_dlc = "Death or Dishonor"
+	}
+
+	picture = GFX_decision_cat_picture_gateway_to_europe
+
+    visible = {
+        has_completed_focus = YUG_federal_defense_council
+    }
+}
+GER_werwolf_attacks  = {
+    priority = 20
+    
+	icon = spr_political_assassination
+
+	allowed = {
+		original_tag = GER
+        has_dlc = "Waking the Tiger"
+	}
+
+    visible = {
+        OR = {
+            has_country_flag = GER_werwolf_attacks_on
+            has_country_flag = GER_werwolf_organization_further
+        }
+        NOT = { has_completed_focus = GER_victory_in_the_civil_war }
+    }
+}
+GER_anti_werwolf_actions  = {
+    priority = 25
+
+	icon = spr_political_assassination
+
+	on_map_area = {
+		target_array = controlled_states
+		target_trigger = {
+			FROM = {
+                NOT = { is_core_of = ROOT }
+                has_state_flag = is_werwolf_state
+			}
+		}
+		name = GER_anti_werwolf_actions_map_management
+		zoom = 150
+	}
+
+	allowed = {
+		original_tag = GER
+        has_dlc = "Waking the Tiger"
+	}
+
+    visible = {
+        has_completed_focus = GER_rebuild_the_nation
+    }
+}
+AOI_exploit_minerals_2_decision = {
+    icon = spr_political_assassination
+
+    allowed = {
+        tag = AOI
+    }
+
+    visible = {
+        has_completed_focus = AOI_exploit_minerals_2
+    }
+}
+AOI_affirm_italian_ideals_category = {
+    icon = spr_political_assassination
+
+    allowed = {
+        tag = AOI
+    }
+
+    visible = {
+        has_completed_focus = AOI_affirm_italian_ideals
+    }
+}
+TE_USA_power_balance_decisions = {
+    allowed = {
+        original_tag = USA
+    }
+}
+SFSTE_GER_balance_of_power_category = {
+    allowed = {
+        original_tag = GER
+    }
+}
+AOI_approach_towards_natives_category = {
+    allowed = {
+        tag = AOI
+    }
+}
+SOV_democracy_in_the_party_category = {
+    allowed = {
+        original_tag = SOV
+    }
+}
+MAN_control_the_kwantung = {
+
+    icon = spr_political_assassination
+
+    allowed = {
+        original_tag = MAN
+    }
+
+    visible = {
+        has_country_flag = MAN_kwantung_uprising_flag
+    }
+}
+SPR_instate_personal_unions = {
+
+    icon = generic_foreign_policy
+
+    allowed = {
+        original_tag = SPR
+        has_dlc = "La Resistance"
+        has_dlc = "No Step Back"
+    }
+
+    visible = {
+        has_completed_focus = SPA_restore_the_empire
+    }
+}
+ROM_instate_personal_unions = {
+
+    icon = generic_foreign_policy
+
+    allowed = {
+        original_tag = ROM
+        has_dlc = "Death or Dishonor"
+        has_dlc = "No Step Back"
+    }
+
+    visible = {
+        has_completed_focus = ROM_balkans_dominance
+    }
+}
+POL_instate_personal_unions = {
+
+    icon = generic_foreign_policy
+
+    allowed = {
+        original_tag = POL
+        has_dlc = "No Step Back"
+    }
+
+    visible = {
+        has_completed_focus = POL_fulfil_fifth_of_november
+    }
+}
+GER_the_nazi_stranglehold_danzig = {
+
+    icon = generic_foreign_policy
+    
+	allowed = {
+		original_tag = GER
+	}
+
+	visible = {
+		NOT = { has_government = fascism }
+        POL = { has_completed_focus = POL_clamp_down_on_danzig }
+	}
+}
+MAC_support_macedonian_revolutionary_organizations = {
+	priority = 8
+
+	icon = spr_political_assassination
+
+	picture = GFX_decision_cat_picture_macedonian_organizations
+
+	allowed = {
+		original_tag = MAC
+		has_dlc = "Battle for the Bosporus"
+	}
+
+	visible = {
+        has_country_flag = MAC_support_imro
+	}
+}
+GER_reichskommissariat_territory_management = {
+	allowed = {
+		original_tag = GER
+	}
+
+	visible = {
+		has_government = fascism
+	}
+}
+SIK_use_soviet_aid = {
+
+    icon = army_reform
+
+    allowed = {
+        tag = SIK
+    }
+
+    visible = {
+        
+    }
+}
+GER_revised_war_plans = {
+
+    icon = army_reform
+
+    allowed = {
+        original_tag = GER
+    }
+
+    visible = {
+        has_government = neutrality
+    }
+}
+GER_colonial_ventures = {
+
+    icon = generic_political_actions
+
+    allowed = {
+        original_tag = GER
+    }
+
+    visible = {
+        has_government = neutrality
+    }
+}
+POL_renaming_states_cities = {
+
+    priority = 5
+
+    icon = generic_formable_nations
+
+    allowed = {
+        
+    }
+
+    visible = {
+        OR = {
+            original_tag = POL
+            AND = {
+                original_tag = LIT
+                has_cosmetic_tag = PLC_UNIFIED
+            }
+        }
+    }
+}
+GER_fascist_coring_category = {
+
+    icon = generic_formable_nations
+
+    allowed = {
+        original_tag = GER
+    }
+
+    visible = {
+        has_completed_focus = GER_rhineland
+    }
+}
+SOV_coring_category = {
+
+    icon = generic_formable_nations
+
+    allowed = {
+        original_tag = SOV
+    }
+
+    visible = {
+        OR = {
+            has_completed_focus = SOV_the_path_of_marxism_leninism
+            if = {
+                limit = {
+                    has_dlc = "No Step Back"
+                }
+                has_completed_focus = SOV_consolidate_power
+            }
+        }
+    }
+}
+SFSTE_franco_japanese_pact = {
+
+    icon = generic_political_actions
+
+    allowed = {
+        OR = {
+            original_tag = JAP
+            original_tag = FRA
+        }
+    }
+
+    visible = {
+        JAP = {
+            has_completed_focus = JAP_strike_south_doctrine
+        }
+        FRA = {
+            OR = {
+                AND = {
+                    if = {
+                        limit = {
+                            has_dlc = "La Resistance"
+                        }
+                        has_completed_focus = FRA_utilize_the_leagues
+                    }
+                    else = {
+                        has_completed_focus = FRA_right_wing_rhetoric
+                    }
+                }
+                has_government = fascism
+            }
+        }
+    }
+}
+CHI_secure_the_breakaway_states_category = {
+
+    icon = generic_political_actions 
+
+    allowed = {
+        tag = event_target:WTT_current_china_leader
+    }
+    
+    visible = {
+        is_subject = no
+        has_completed_focus = CHI_secure_the_breakaway_states
+    }
+}
+ITA_beat_up_african_nations = {
+
+    icon = generic_political_actions
+
+    allowed = {
+        original_tag = ITA
+    }
+
+    visible = {
+        OR = {
+            has_government = neutrality
+            has_government = fascism
+        }
+    }
+}
+SOV_RUS_baltic_governorates_finland = {
+
+    icon = generic_formable_nations
+
+    allowed = {
+        original_tag = SOV
+        has_dlc = "No Step Back"
+    }
+
+    visible = {
+        has_completed_focus = SOV_reconvene_the_zemsky_sobor
+    }
+}
+SFSTE_renaming_decisions = {
+
+    icon = generic_formable_nations
+}
+BREAKAWAY_erase_russian_ideals = {
+
+    icon = generic_propaganda
+
+    allowed = {
+        has_dlc = "No Step Back"
+    }
+
+    visible = {
+        OR = {
+            has_completed_focus = BREAKAWAY_erase_russian_ideals
+            has_completed_focus = UKR_the_end_of_our_struggle
+        }
+    }
+}
+ITA_civil_war = {
+
+    icon = generic_propaganda
+
+    allowed = {
+        always = yes
+    }
+
+    visible = {
+        
+    }
+}
+SFSTE_fascist_puppets = {
+
+    icon = generic_political_actions
+
+    allowed = {
+        always = yes
+    }
+
+    visible = {
+        has_government = fascism
+    }
+}
+MON_involvement_in_second_russian_civil_war = {
+
+    icon = generic_political_actions
+
+    allowed = {
+        original_tag = MON
+        has_dlc = "No Step Back"
+    }
+
+    visible = {
+        SOV = { has_completed_focus = SOV_the_hands_do }
+    }
+}
+FRA_hegemon_of_europe = {
+
+    icon = generic_political_actions
+
+    allowed = {
+        original_tag = FRA
+    }
+
+    visible = {
+        if = {
+            limit = {
+                has_dlc = "La Resistance"
+            }
+            OR = {
+                has_completed_focus = FRA_national_regeneration
+                has_completed_focus = FRA_repeal_the_law_of_exile
+            }
+        }
+        else = {
+            has_completed_focus = FRA_right_wing_rhetoric
+        }
+    }
+}
+FRA_decolonization = {
+
+    icon = generic_formable_nations
+
+    allowed = {
+        original_tag = FRA
+    }
+
+    visible = {
+        if = {
+            limit = {
+                has_dlc = "La Resistance"
+               }
+            has_completed_focus = FRA_force_the_issue
+        }
+        else = {
+            has_completed_focus = FRA_leftist_rhetoric
+        }
+    }
+}
+coring_category = {
+
+    icon = generic_formable_nations
+
+    allowed = {
+
+    }
+}
+DTR_acts = {
+
+    icon = generic_political_actions
+
+    allowed = {
+        tag = DTR
+    }
+}
+SFSTE_meme_decisions = {
+
+	icon = generic_political_actions
+
+    allowed = {
+
+    }
+
+    visible = {
+        if = {
+            limit = {
+                NOT = { has_country_flag = AI_go_putin }
+            }
+            is_ai = no
+        }
+        NOT = { has_global_flag = no_memes_please }
+    }
+}

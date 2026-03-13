@@ -1,0 +1,36 @@
+defined_text = {
+    name = InfantryBonusYesOrNo
+    text = {
+        trigger = {
+            has_completed_focus = AOI_means_of_warfare
+        }
+		localization_key = AOI_infantry_bonus_tt_yes
+    }
+    text = {
+        localization_key = generic_null
+    }
+}
+defined_text = {
+    name = TruckBonusYesOrNo
+    text = {
+        trigger = {
+            has_completed_focus = AOI_bicycles
+        }
+		localization_key = AOI_cheaper_trucks_tt_yes
+    }
+    text = {
+        localization_key = generic_null
+    }
+}
+defined_text = {
+    name = TankBonusYesOrNo
+    text = {
+        trigger = {
+            has_completed_focus = AOI_armoured_corps
+        }
+		localization_key = AOI_cheaper_tanks_tt_yes
+    }
+    text = {
+        localization_key = generic_null
+    }
+}

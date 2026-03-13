@@ -1,0 +1,1253 @@
+ideas = {
+    country = {
+		AOI_cement_industry = {
+			removal_cost = -1
+
+			picture = man_five_year_plan_industry
+				
+			allowed = {
+				tag = AOI
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = {
+				production_speed_buildings_factor = 0.1
+			}
+		}
+
+		AOI_exploit_minerals = {
+			removal_cost = -1
+
+			picture = generic_exploit_mines
+				
+			allowed = {
+				tag = AOI
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = {
+				local_resources_factor = 0.15
+			}
+		}
+
+		AOI_exploit_minerals_plus = {
+			name = AOI_exploit_minerals
+			removal_cost = -1
+
+			picture = generic_exploit_mines
+				
+			allowed = {
+				tag = AOI
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = {
+				local_resources_factor = 0.25
+			}
+		}
+
+		AOI_exploit_minerals_final = {
+			name = AOI_exploit_minerals
+			removal_cost = -1
+
+			picture = generic_exploit_mines
+				
+			allowed = {
+				tag = AOI
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = {
+				local_resources_factor = 0.35
+			}
+		}
+
+		AOI_transport_industry = {
+			removal_cost = -1
+
+			picture = generic_supply_lines
+				
+			allowed = {
+				tag = AOI
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = {
+				production_speed_infrastructure_factor = 0.1
+				army_speed_factor = 0.05
+			}
+		}
+
+		AOI_transport_industry_2 = {
+			name = AOI_transport_industry
+
+			removal_cost = -1
+
+			picture = generic_supply_lines
+				
+			allowed = {
+				tag = AOI
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = {
+				production_speed_infrastructure_factor = 0.2
+				army_speed_factor = 0.05
+			}
+		}
+
+		AOI_transport_industry_3 = {
+			name = AOI_transport_industry
+
+			removal_cost = -1
+
+			picture = generic_supply_lines
+				
+			allowed = {
+				tag = AOI
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = {
+				production_speed_infrastructure_factor = 0.2
+				army_speed_factor = 0.1
+				production_speed_industrial_complex_factor = 0.1
+				production_speed_arms_factory_factor = 0.1
+			}
+		}
+
+
+		AOI_africa_orientale_italiana_idea_2 = { 
+	
+			picture = ITA_aoi
+			name = AOI_africa_orientale_italiana_idea
+	
+			removal_cost = -1	
+	
+			allowed = { 
+				original_tag = AOI
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			
+			modifier = {
+				resistance_damage_to_garrison = -0.15
+				non_core_manpower = 0.25
+				industry_repair_factor = 0.3
+				consumer_goods_factor = -0.15
+				weekly_manpower = 150 
+				communism_drift = -0.25
+				democratic_drift = -0.25
+			}
+		}
+
+
+		AOI_africa_orientale_italiana_idea_seg = { 
+	
+			picture = ITA_aoi
+			name = AOI_africa_orientale_italiana_idea
+	
+			removal_cost = -1	
+	
+			allowed = { 
+				original_tag = AOI
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			
+			modifier = {
+				resistance_damage_to_garrison = -0.15
+				non_core_manpower = 0.2
+				industry_repair_factor = 0.3
+				consumer_goods_factor = -0.15
+				weekly_manpower = 150 
+				communism_drift = -0.25
+				democratic_drift = -0.25
+				conscription_factor = -0.1
+				resistance_growth = -0.15
+				political_power_factor = 0.15
+			}
+		}
+
+
+		AOI_africa_orientale_italiana_idea_seg_2 = { 
+	
+			picture = ITA_aoi
+			name = AOI_africa_orientale_italiana_idea
+	
+			removal_cost = -1	
+	
+			allowed = { 
+				original_tag = AOI
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			
+			modifier = {
+				resistance_damage_to_garrison = -0.25
+				non_core_manpower = 0.2
+				industry_repair_factor = 0.4
+				consumer_goods_factor = -0.2
+				weekly_manpower = 175
+				communism_drift = -0.5
+				democratic_drift = -0.5
+				conscription_factor = -0.1
+				resistance_growth = -0.25
+				political_power_factor = 0.25
+			}
+		}
+
+
+		AOI_africa_orientale_italiana_idea_int = { 
+	
+			picture = ITA_aoi
+			name = AOI_africa_orientale_italiana_idea
+	
+			removal_cost = -1	
+	
+			allowed = { 
+				original_tag = AOI
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			
+			modifier = {
+				resistance_damage_to_garrison = -0.15
+				non_core_manpower = 0.35
+				industry_repair_factor = 0.3
+				consumer_goods_factor = -0.15
+				weekly_manpower = 175
+				communism_drift = -0.25
+				democratic_drift = -0.25
+				compliance_growth = 0.15
+				political_power_factor = -0.15
+			}
+		}
+
+
+		AOI_africa_orientale_italiana_idea_int_2 = { 
+	
+			picture = ITA_aoi
+			name = AOI_africa_orientale_italiana_idea
+	
+			removal_cost = -1	
+	
+			allowed = { 
+				original_tag = AOI
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			
+			modifier = {
+				resistance_damage_to_garrison = -0.25
+				non_core_manpower = 0.4
+				industry_repair_factor = 0.3
+				consumer_goods_factor = -0.2
+				weekly_manpower = 250
+				communism_drift = -0.5
+				democratic_drift = -0.5
+				compliance_growth = 0.25
+				political_power_factor = -0.05
+			}
+		}
+
+        AOI_warm_weather_training = {
+
+            picture = generic_morale_bonus
+
+            allowed = {
+                always = no
+            }
+
+			allowed_civil_war = {
+				always = no
+			}
+			
+			modifier = {
+                heat_attrition_factor = -0.15
+                acclimatization_hot_climate_gain_factor = 0.2
+			}
+
+			removal_cost = -1
+        }
+
+		AOI_italian_high_command = {
+
+            picture = generic_army_war_college
+
+            allowed = {
+                always = no
+            }
+
+			allowed_civil_war = {
+				always = no
+			}
+			
+			modifier = {
+				army_leader_start_level = 1
+				army_leader_start_planning_level = 2
+				army_leader_start_logistics_level = 1
+			}
+
+			removal_cost = -1
+        }
+
+		AOI_colonial_high_command = {
+
+            picture = ETH_italian_settlers
+
+            allowed = {
+                always = no
+            }
+
+			allowed_civil_war = {
+				always = no
+			}
+			
+			modifier = {
+				army_leader_cost_factor = -0.15
+				army_leader_start_level = 1
+				army_leader_start_attack_level = 1
+				army_leader_start_defense_level = 1
+				experience_gain_factor = 0.1
+			}
+
+			removal_cost = -1
+        }
+
+
+		LIB_handling_refugees = { 
+	
+			picture = generic_manpower_bonus
+	
+			removal_cost = -1	
+	
+			allowed = { 
+				original_tag = LIB
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			
+			modifier = {
+				monthly_population = 0.5
+				stability_factor = -0.20
+			}
+			targeted_modifier = {
+				tag = AOI
+				attack_bonus_against = 0.1
+				defense_bonus_against = 0.1
+			}
+		}
+
+
+		AOI_italia_nova = { 
+	
+			picture = ITA_aoi
+	
+			removal_cost = -1	
+	
+			allowed = { 
+				original_tag = AOI
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			
+			modifier = {
+				monthly_population = 2.00
+				army_core_attack_factor = 0.20
+				army_core_defence_factor = 0.20
+				army_defence_factor = 0.10
+				conscription = 0.01
+				conscription_factor = 0.25
+				weekly_manpower = 1000
+				political_power_factor = 0.25
+				consumer_goods_factor = -0.10
+				resistance_damage_to_garrison = -0.25
+				required_garrison_factor = -0.25
+				resistance_garrison_penetration_chance = -0.50
+				resistance_target = -0.10
+				non_core_manpower = 0.10
+			}
+		}
+
+
+		AOI_develop_shewa_idea = { 
+	
+			picture = generic_foreign_capital
+	
+			removal_cost = -1	
+	
+			allowed = { 
+				original_tag = AOI
+			}
+
+			modifier = {
+				consumer_goods_factor = 0.2
+				custom_modifier_tooltip = AOI_develop_shewa_idea_removal
+			}
+		}
+
+		AOI_fake_colonial_police_law = { #Used for tooltip purposes
+			name = AOI_colonial_police
+			removal_cost = -1
+				
+			allowed = {
+				always = no
+			}
+
+			modifier = {
+				resistance_target 				= -0.3
+				compliance_gain 				= -0.02
+				required_garrison_factor 		= -0.3
+				resistance_damage_to_garrison	= -0.25
+			}
+		}
+
+		AOI_italian_settlers = {
+			name = ITA_ALB_italian_settlers
+		
+			picture = generic_production_bonus 
+		
+			removal_cost = -1	
+		
+			allowed = {
+				OR = {
+					original_tag = ITA 
+					tag = AOI 
+				}
+			}
+			
+			modifier = {
+				monthly_population = 0.2
+				conscription_factor = 0.1
+				production_speed_rail_way_factor = 0.3
+				production_speed_supply_node_factor = 0.3
+			}
+		}
+
+        SFSTE_AOI_anti_italian_rebellion = {
+
+			picture = generic_manpower_bonus
+
+			removal_cost = -1
+			
+			allowed = {
+                
+			}
+
+			allowed_civil_war = {
+                always = yes
+			}
+
+			rule = {
+				can_join_factions = no
+			}
+			
+			modifier = {
+				weekly_manpower = 75
+				conscription = 0.02
+				conscription_factor = 0.25
+				training_time_factor = -0.50
+				army_core_attack_factor = 0.05
+				army_core_defence_factor = 0.05
+				mobilization_speed = 0.75
+				consumer_goods_factor = -0.05
+			}
+        }
+		AOI_servizio_informazione_militare = {
+			removal_cost = -1
+
+			picture = generic_spy_intel
+				
+			allowed = {
+				original_tag = AOI
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+					
+			modifier = {
+				operative_slot = 1
+				intelligence_agency_defense = 0.3	
+				root_out_resistance_effectiveness_factor = 0.3
+				army_intel_to_others = -25 
+			}
+		}
+
+		AOI_servizio_informazione_militare_vanilla = {
+			name = AOI_servizio_informazione_militare
+			removal_cost = -1
+
+			picture = generic_spy_intel
+				
+			allowed = {
+				original_tag = AOI
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+					
+			modifier = {
+				foreign_subversive_activites = -0.25
+				subversive_activites_upkeep = -0.25
+			}
+		}
+		AOI_agricultural_reforms = {
+
+			picture = generic_agrarian_reform
+			allowed = {
+				always = no
+			}
+			removal_cost = -1
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			modifier = {
+				consumer_goods_factor = -0.05
+			}
+		}
+		AOI_model_governorate = {
+
+			picture = AOI_eritrea
+			allowed = {
+				always = no
+			}
+			removal_cost = -1
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			modifier = {
+				custom_modifier_tooltip = AOI_model_governorate_states
+				weekly_manpower = 50
+			}
+		}
+		AOI_somalia_edu = {
+
+			picture = generic_research_bonus
+			allowed = {
+				always = no
+			}
+			removal_cost = -1
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			modifier = {
+				research_speed_factor = 0.05
+			}
+		}
+		AOI_somalia_agriculture = {
+
+			picture = generic_agrarian_reform
+			allowed = {
+				always = no
+			}
+			removal_cost = -1
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			modifier = {
+				consumer_goods_factor = -0.05
+			}
+		}
+		AOI_somalia_jewel = {
+
+			picture = AOI_somalia
+			allowed = {
+				always = no
+			}
+			removal_cost = -1
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			modifier = {
+				custom_modifier_tooltip = AOI_somalia_jewel_states
+				weekly_manpower = 50
+			}
+		}
+		ITA_receiving_overseas_labour = {
+
+			picture = ARG_public_works_investment
+
+			allowed = {
+				always = no
+			}
+			removal_cost = -1
+
+			allowed_civil_war = {
+				has_subject = AOI
+			}
+			
+			modifier = {
+				consumer_goods_factor = -0.05
+			}
+		}
+		ITA_receiving_AOI_troops = {
+
+			picture = eng_imperial_conscription
+
+			allowed = {
+				always = no
+			}
+			removal_cost = -1
+
+			allowed_civil_war = {
+				has_subject = AOI
+			}
+			
+			modifier = {
+				conscription_factor = 0.1
+			}
+		}
+		ITA_receiving_AOI_police = {
+
+			picture = eng_imperial_conscription
+
+			allowed = {
+				always = no
+			}
+			removal_cost = -1
+
+			allowed_civil_war = {
+				has_subject = AOI
+			}
+			
+			modifier = {
+				conscription_factor = 0.05
+			}
+		}
+		ITA_AOI_price_controls = {
+
+			picture = can_wartime_prices_and_trade_board
+
+			allowed = {
+				always = no
+			}
+			removal_cost = -1
+
+			allowed_civil_war = {
+				has_subject = AOI
+			}
+			
+			modifier = {
+				consumer_goods_factor = -0.05
+			}
+		}
+		ITA_AOI_resources = {
+
+			picture = ARG_resource_extration_focus
+
+			allowed = {
+				always = no
+			}
+			removal_cost = -1
+
+			allowed_civil_war = {
+				has_subject = AOI
+			}
+			
+			modifier = {
+				country_resource_rubber = 20
+				country_resource_steel = 10
+			}
+		}
+		ITA_eth_treasure = {
+
+			picture = spr_seize_the_gold_reserves
+
+			allowed = {
+				always = no
+			}
+			removal_cost = -1
+
+			allowed_civil_war = {
+				has_subject = AOI
+			}
+			
+			modifier = {
+				consumer_goods_factor = -0.05
+			}
+		}
+		AOI_education_initiative = {
+
+			picture = jap_supremacy_of_technology
+			allowed = {
+				always = no
+			}
+			removal_cost = -1
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			modifier = {
+				compliance_gain = 0.05
+				industrial_capacity_factory = 0.05
+			}
+		}
+		AOI_education_initiative_2 = {
+
+			name = AOI_education_initiative
+
+			picture = jap_supremacy_of_technology
+			allowed = {
+				always = no
+			}
+			removal_cost = -1
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			modifier = {
+				compliance_gain = 0.05
+				industrial_capacity_factory = 0.10
+				research_speed_factor = 0.1
+			}
+		}
+		AOI_education_initiative_3 = {
+
+			name = AOI_education_initiative
+
+			picture = jap_supremacy_of_technology
+			allowed = {
+				always = no
+			}
+			removal_cost = -1
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			modifier = {
+				compliance_gain = 0.05
+				industrial_capacity_factory = 0.10
+				research_speed_factor = 0.1
+				production_factory_max_efficiency_factor = 0.1
+				production_factory_efficiency_gain_factor = 0.05
+			}
+		}
+		AOI_literacy_drive = {
+
+			name = AOI_education_initiative
+
+			picture = jap_supremacy_of_will
+			allowed = {
+				always = no
+			}
+			removal_cost = -1
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			modifier = {
+				political_power_cost = 0.15
+				consumer_goods_factor = 0.1
+				research_speed_factor = 0.1
+			}
+		}
+		AOI_higher_education = {
+
+			picture = generic_research_bonus
+			allowed = {
+				always = no
+			}
+			removal_cost = -1
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			modifier = {
+				research_speed_factor = 0.05
+			}
+		}
+		AOI_italian_schools = {
+
+			picture = generic_research_bonus
+			allowed = {
+				always = no
+			}
+			removal_cost = -1
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			modifier = {
+				stability_factor = 0.1
+				political_power_factor = 0.05
+			}
+		}
+		AOI_italian_schools_2 = {
+
+			name = AOI_italian_schools
+
+			picture = generic_research_bonus
+			allowed = {
+				always = no
+			}
+			removal_cost = -1
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			modifier = {
+				stability_factor = 0.1
+				political_power_factor = 0.05
+				army_org_factor = 0.05
+				experience_gain_army_factor = 0.1
+			}
+		}
+		AOI_italian_schools_3 = {
+
+			name = AOI_italian_schools
+
+			picture = generic_research_bonus
+			allowed = {
+				always = no
+			}
+			removal_cost = -1
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			modifier = {
+				stability_factor = 0.1
+				war_support_factor = 0.1
+				political_power_factor = 0.05
+				army_org_factor = 0.05
+				experience_gain_army_factor = 0.1
+				conscription_factor = 0.1
+			}
+		}
+		AOI_ammo_initiative = {
+
+			picture = generic_infantry_equipment_manufacturer_3
+			allowed = {
+				always = no
+			}
+			removal_cost = -1
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			modifier = {
+				production_speed_arms_factory_factor = 0.15
+				industrial_capacity_factory = 0.1
+			}
+		}
+		AOI_colonial_militia = {
+
+			picture = idea_chi_army_corruption3
+			allowed = {
+				always = no
+			}
+			removal_cost = -1
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			modifier = {
+				non_core_manpower = 0.05
+				conscription_factor = 0.15
+				army_morale_factor = 0.05
+			}
+		}
+		AOI_camicie_nere = {
+
+			picture = ITA_camicie_nere
+			allowed = {
+				always = no
+			}
+			removal_cost = -1
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			modifier = {
+				non_core_manpower = 0.05
+				conscription_factor = 0.15
+				army_morale_factor = 0.05
+                war_support_weekly = 0.001
+				modifier_army_sub_unit_militia_max_org_factor = 0.15
+				modifier_army_sub_unit_militia_attack_factor = 0.1
+				modifier_army_sub_unit_militia_defence_factor = 0.1
+			}
+		}
+		AOI_new_model_army = {
+
+			picture = ITA_regio_esercito_3
+			allowed = {
+				always = no
+			}
+			removal_cost = -1
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			modifier = {
+				planning_speed = 0.1
+				max_planning = 0.1
+				army_org_factor = 0.1
+				army_org_regain = 0.05
+				production_factory_max_efficiency_factor = 0.1
+				experience_gain_army_unit_factor = 0.15
+				experience_gain_factor = 0.1
+				experience_gain_army_factor = 0.1
+				production_lack_of_resource_penalty_factor = -0.1
+				org_loss_when_moving = -0.05
+				non_core_manpower = 0.05
+				conscription_factor = 0.15
+				army_morale_factor = 0.15
+                war_support_weekly = 0.001
+				modifier_army_sub_unit_militia_max_org_factor = 0.15
+				modifier_army_sub_unit_militia_attack_factor = 0.1
+				modifier_army_sub_unit_militia_defence_factor = 0.1
+				army_attack_factor = 0.05
+				army_defence_factor = 0.05
+				land_reinforce_rate = 0.05
+				max_command_power = 30
+			}
+
+			equipment_bonus = {
+				infantry_equipment = {
+					build_cost_ic = -0.10
+					instant = yes
+				}
+				motorized_equipment = {
+					build_cost_ic = -0.10
+					instant = yes
+				}
+				light_tank_chassis = {
+					build_cost_ic = -0.05
+					instant = yes
+				}
+			}
+		}
+		AOI_new_model_army_prussia = {
+
+			name = AOI_new_model_army
+
+			picture = ITA_regio_esercito_3
+			allowed = {
+				always = no
+			}
+			removal_cost = -1
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			modifier = {
+				planning_speed = 0.1
+				max_planning = 0.1
+				army_org_factor = 0.1
+				army_org_regain = 0.05
+				production_factory_max_efficiency_factor = 0.1
+				experience_gain_army_unit_factor = 0.15
+				experience_gain_factor = 0.1
+				experience_gain_army_factor = 0.1
+				production_lack_of_resource_penalty_factor = -0.1
+				org_loss_when_moving = -0.05
+				non_core_manpower = 0.05
+				conscription_factor = 0.15
+				army_morale_factor = 0.15
+                war_support_weekly = 0.001
+				modifier_army_sub_unit_militia_max_org_factor = 0.15
+				modifier_army_sub_unit_militia_attack_factor = 0.1
+				modifier_army_sub_unit_militia_defence_factor = 0.1
+				army_attack_factor = 0.05
+				army_defence_factor = 0.05
+				land_reinforce_rate = 0.05
+				max_command_power = 30
+				org_loss_at_low_org_factor = -0.15
+				attrition = -0.1
+			}
+
+			equipment_bonus = {
+				infantry_equipment = {
+					build_cost_ic = -0.10
+					instant = yes
+				}
+				motorized_equipment = {
+					build_cost_ic = -0.10
+					instant = yes
+				}
+				light_tank_chassis = {
+					build_cost_ic = -0.05
+					instant = yes
+				}
+			}
+		}
+		AOI_african_warfare = {
+
+			picture = ITA_regio_esercito_3
+			allowed = {
+				always = no
+			}
+			removal_cost = -1
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			modifier = {
+				modifier_army_sub_unit_irregular_infantry_attack_factor = 0.1
+			}
+
+			equipment_bonus = {
+				infantry_equipment = {
+					build_cost_ic = -0.10
+					instant = yes
+				}
+				motorized_equipment = {
+					build_cost_ic = -0.10
+					instant = yes
+				}
+				light_tank_chassis = {
+					build_cost_ic = -0.05
+					instant = yes
+				}
+			}
+		}
+		AOI_mainland_generals = {
+
+			picture = idea_chi_army_corruption3
+			allowed = {
+				always = no
+			}
+			removal_cost = -1
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			modifier = {
+				army_leader_start_level = 1 
+				army_leader_start_logistics_level = 1 
+				army_leader_start_planning_level = 2
+			}
+		}
+		AOI_settler_generals = {
+
+			picture = idea_chi_army_corruption3
+			allowed = {
+				always = no
+			}
+			removal_cost = -1
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			modifier = {
+				experience_gain_factor = 0.1
+				army_leader_cost_factor = -0.15
+				army_leader_start_level = 1 
+				army_leader_start_attack_level = 1 
+				army_leader_start_defense_level = 1
+			}
+		}
+    }
+	
+	hidden_ideas = {
+		
+		AOI_colonial_army_decoy = {
+			name = AOI_colonial_army
+
+			removal_cost = -1
+
+			allowed = {
+				always = yes
+			}
+
+			modifier = {
+				planning_speed = 0.1
+				max_planning = 0.1
+			}
+		}
+		AOI_infantry_bonus = {
+			name = AOI_colonial_army
+            allowed = {
+                always = yes
+            }
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			equipment_bonus = {
+				infantry_equipment = {
+					build_cost_ic = -0.10
+					instant = yes
+				}
+			}
+        }
+		AOI_cheaper_trucks = {
+			name = AOI_colonial_army
+            allowed = {
+                always = yes
+            }
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			equipment_bonus = {
+				motorized_equipment = {
+					build_cost_ic = -0.10
+					instant = yes
+				}
+			}
+        }
+		AOI_cheaper_tanks = {
+			name = AOI_colonial_army
+            allowed = {
+                always = yes
+            }
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			equipment_bonus = {
+				light_tank_chassis = {
+					build_cost_ic = -0.05
+					instant = yes
+				}
+			}
+        }
+
+	}
+
+	industrial_concern = {
+		
+		AOI_imperial_road = {
+
+			picture = railways_AOI
+
+			allowed = {
+				tag = AOI
+
+			}
+
+			visible = {
+				NOT = { has_completed_focus = AOI_imperial_railway_2 }
+			}
+
+			available = {
+				has_completed_focus = AOI_imperial_railway
+			}
+
+			cost = 75
+
+			research_bonus = {
+				train_tech = 0.1
+			}
+
+			traits = { railway_company }
+
+			modifier = {
+				custom_modifier_tooltip = AOI_road_tt
+			}
+		}
+
+		AOI_imperial_road_improved = {
+			name = AOI_imperial_road
+
+			picture = railways_AOI
+
+			allowed = {
+				tag = AOI
+
+			}
+
+			visible = {
+				has_completed_focus = AOI_imperial_railway_2
+			}
+
+			available = {
+				has_completed_focus = AOI_imperial_railway
+			}
+
+			cost = 35
+
+			research_bonus = {
+				train_tech = 0.2
+			}
+
+			traits = { railway_company }
+
+			modifier = {
+				mobilization_speed = 0.25
+			}
+		}
+	}
+}

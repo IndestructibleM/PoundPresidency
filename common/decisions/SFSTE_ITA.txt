@@ -1,0 +1,1929 @@
+AOI_italy_tributes = {
+
+    AOI_overseas_labour = {
+        
+        icon = generic_form_nation
+
+        visible = {
+            
+        }
+        
+
+		cancel_if_not_visible = yes
+
+        cancel_trigger = {
+            has_decision = AOI_cancel_overseas_labour
+        }
+
+        cancel_effect = {
+            OVERLORD = {
+                remove_ideas = ITA_receiving_overseas_labour
+            }
+        }
+
+        modifier = {
+            consumer_goods_factor = 0.1
+            mic_to_overlord_factor = -0.25
+        }
+
+        days_remove = -1
+
+        days_re_enable = 7
+
+        complete_effect = {
+            OVERLORD = {
+                add_ideas = ITA_receiving_overseas_labour
+            }
+        }
+    }
+
+    AOI_cancel_overseas_labour = {
+        
+        icon = generic_form_nation
+
+        visible = {
+            has_decision = AOI_overseas_labour
+        }
+
+        days_remove = 1
+    }
+
+    AOI_conscription_for_mainland = {
+        
+        icon = generic_form_nation
+
+        visible = {
+            
+        }
+        
+
+		cancel_if_not_visible = yes
+
+        cancel_trigger = {
+            has_decision = AOI_cancel_conscription
+        }
+
+        cancel_effect = {
+            OVERLORD = {
+                remove_ideas = ITA_receiving_AOI_troops
+            }
+        }
+
+        modifier = {
+            conscription_factor = -0.15
+            mic_to_overlord_factor = -0.25
+        }
+
+        days_remove = -1
+
+        days_re_enable = 7
+
+        complete_effect = {
+            OVERLORD = {
+                add_ideas = ITA_receiving_AOI_troops
+            }
+        }
+    }
+
+    AOI_cancel_conscription = {
+        
+        icon = generic_form_nation
+
+        visible = {
+            has_decision = AOI_conscription_for_mainland
+        }
+
+        days_remove = 1
+    }
+
+    AOI_conscript_colonial_police = {
+        
+        icon = generic_form_nation
+
+        visible = {
+            
+        }
+        
+
+		cancel_if_not_visible = yes
+
+        cancel_trigger = {
+            has_decision = AOI_cancel_conscripting_police
+        }
+
+        cancel_effect = {
+            OVERLORD = {
+                remove_ideas = ITA_receiving_AOI_police
+            }
+        }
+
+        modifier = {
+            resistance_target = 0.10
+            mic_to_overlord_factor = -0.15
+        }
+
+        days_remove = -1
+
+        days_re_enable = 7
+
+        complete_effect = {
+            OVERLORD = {
+                add_ideas = ITA_receiving_AOI_police
+            }
+        }
+    }
+
+    AOI_cancel_conscripting_police = {
+        
+        icon = generic_form_nation
+
+        visible = {
+            has_decision = AOI_conscript_colonial_police
+        }
+
+        days_remove = 1
+    }
+
+    AOI_price_controls = {
+        
+        icon = generic_form_nation
+
+        visible = {
+            
+        }
+        
+
+		cancel_if_not_visible = yes
+
+        cancel_trigger = {
+            has_decision = AOI_cancel_price_controls
+        }
+
+        cancel_effect = {
+            OVERLORD = {
+                remove_ideas = ITA_AOI_price_controls
+            }
+        }
+
+        modifier = {
+            stability_factor = -0.10
+            cic_to_overlord_factor = -0.15
+        }
+
+        days_remove = -1
+
+        days_re_enable = 7
+
+        complete_effect = {
+            OVERLORD = {
+                add_ideas = ITA_AOI_price_controls
+            }
+        }
+    }
+
+    AOI_cancel_price_controls = {
+        
+        icon = generic_form_nation
+
+        visible = {
+            has_decision = AOI_price_controls
+        }
+
+        days_remove = 1
+    }
+
+    AOI_resource_tribute = {
+        
+        icon = generic_form_nation
+
+        visible = {
+            
+        }
+        
+
+		cancel_if_not_visible = yes
+
+        cancel_trigger = {
+            has_decision = AOI_cancel_price_controls
+        }
+
+        cancel_effect = {
+            OVERLORD = {
+                remove_ideas = ITA_AOI_resources
+            }
+        }
+
+        modifier = {
+            country_resource_rubber = -20
+            country_resource_steel = -10
+            extra_trade_to_overlord_factor = -0.5
+        }
+
+        days_remove = -1
+
+        days_re_enable = 7
+
+        complete_effect = {
+            OVERLORD = {
+                add_ideas = ITA_AOI_resources
+            }
+        }
+    }
+
+    AOI_cancel_resource_tribute = {
+        
+        icon = generic_form_nation
+
+        visible = {
+            has_decision = AOI_resource_tribute
+        }
+
+        days_remove = 1
+    }
+
+    AOI_transfer_ascari = {
+        
+        icon = generic_form_nation
+
+        visible = {
+            
+        }
+
+        modifier = {
+            mic_to_overlord_factor = -0.10
+        }
+
+        days_remove = 180
+
+        days_re_enable = 180
+
+        complete_effect = {
+            add_manpower = -50000
+            OVERLORD = {
+                add_manpower = 50000
+            }
+        }
+    }
+
+    AOI_eth_treasure = {
+        
+        icon = generic_form_nation
+
+        visible = {
+            
+        }
+
+        modifier = {
+            consumer_goods_factor = 0.05
+            cic_to_overlord_factor = -0.10
+        }
+
+        days_remove = 360
+
+        days_re_enable = 5
+
+        complete_effect = {
+            OVERLORD = {
+                add_timed_idea = {
+                    idea = ITA_eth_treasure
+                    days = 360
+                }
+            }
+        }
+    }
+
+    AOI_transfer_weapons = {
+        
+        icon = generic_form_nation
+
+        visible = {
+            
+        }
+
+        modifier = {
+            conscription_factor = 0.10
+        }
+
+        days_remove = 180
+
+        days_re_enable = 180
+
+        complete_effect = {
+            send_equipment = {
+                equipment = infantry_equipment
+                amount = 3000
+                target = ITA
+            }
+        }
+    }
+}
+economy_decisions = {
+	AOI_expand_railroad = {
+		icon = GFX_decision_generic_train
+		target_trigger = {
+			FROM = {
+				has_state_flag = ETH_can_improve_communication_state_flag
+                has_state_flag = ETH_can_invest_local_industry_state_flag
+				is_fully_controlled_by = ROOT
+			}
+		}
+		target_root_trigger = { tag = AOI } # For now - change if making it generic
+		state_target = yes
+		on_map_mode = map_only
+		fire_only_once = yes # Only once per State
+		available = {
+			#NOT = { has_country_flag = ETH_investments_in_progress_flag }
+		}
+
+		visible = {
+			has_completed_focus = AOI_imperial_railway_2
+		}
+
+		cancel_trigger = {
+			NOT = { FROM = { is_fully_controlled_by = ROOT } }
+		}
+
+		cancel_effect = {
+			#clr_country_flag = ETH_investments_in_progress_flag
+		}
+
+		days_remove = 30
+
+		cost = 25
+
+		modifier = {
+			consumer_goods_factor = 0.05
+		}
+
+		complete_effect = {
+			#set_country_flag = ETH_investments_in_progress_flag
+		}
+
+		remove_effect = {
+            custom_effect_tooltip = AOI_expand_railroad_tt
+            FROM = {
+				add_to_variable = { ETH_state_development_production_speed = 0.2 }
+				add_to_variable = { ETH_state_development_local_building_slots_factor = 0.2 }
+                clr_state_flag = ETH_can_improve_communication_state_flag
+                clr_state_flag = ETH_can_invest_local_industry_state_flag
+            }
+		}
+
+		ai_will_do = {
+			base = 125
+			modifier = {
+				factor = 2
+				has_war = no
+			}
+			modifier = {
+				factor = 0
+				surrender_progress > 0.2
+			}
+		}
+	}
+	AOI_regional_development_in_state = {
+        name = ITA_regional_development_in_state
+		icon = GFX_decision_generic_construction
+		allowed = {
+			tag = AOI
+		}
+
+		available = {
+			has_tech = construction2
+			num_of_civilian_factories_available_for_projects > 0
+		}
+
+		state_target = yes
+
+		target_array = ROOT.owned_states
+
+		target_trigger = {
+			FROM = {
+				is_fully_controlled_by = ROOT
+                OR = {
+                    region = 17
+                    region = 273
+                    region = 274
+                }
+				OR = {
+					has_state_category = wasteland
+					has_state_category = pastoral
+				}
+			}
+		}
+
+		target_root_trigger = {
+			tag = AOI
+			has_completed_focus = AOI_develop_countryside
+			has_civil_war = no
+		}
+
+		cost = 50
+
+		days_remove = 120
+
+		modifier = {
+			civilian_factory_use = 1
+		}
+
+		remove_effect = {
+			FROM = {
+				add_compliance = 5
+				add_extra_state_shared_building_slots = 1
+				if = {
+					limit = {
+						has_state_category = wasteland
+					}
+					set_state_category = pastoral
+				}
+				else_if = {
+					limit = {
+						has_state_category = pastoral
+					}
+					set_state_category = rural
+				}
+			}
+		}
+
+		ai_will_do = {
+			base = 0
+		}
+	}
+}
+political_actions = {
+
+    SFSTE_ITA_grant_citizenship_to_libyans = {
+
+        icon = generic_form_nation
+
+        cosmetic_tag = LBA
+        cosmetic_ideology = neutrality
+
+        allowed = {
+            original_tag = ITA
+        }
+
+        visible = {
+            if = {
+                limit = {
+                    has_dlc = "By Blood Alone"
+                }
+                OR = { 
+                    has_completed_focus = ITA_develop_libya
+                    has_completed_focus = ITA_proclaim_the_italian_empire
+                    has_completed_focus = ITA_the_fourth_shore
+                }
+            }
+            if = {
+                limit = {
+                    NOT = { has_dlc = "By Blood Alone" }
+                    has_completed_focus = ITA_develop_libya
+                }
+            }
+            if = {
+                limit = {
+                    has_dlc = "By Blood Alone"
+                }
+                NOT = { has_completed_focus = ITA_defy_the_duce }
+            }
+            NOT = {
+                has_government = communism
+            }
+            NOT = {
+                448 = { is_core_of = ROOT }
+                449 = { is_core_of = ROOT }
+                450 = { is_core_of = ROOT }
+                451 = { is_core_of = ROOT }
+                661 = { is_core_of = ROOT }
+                662 = { is_core_of = ROOT }
+                663 = { is_core_of = ROOT }
+            }
+        }
+
+        available = {
+            controls_state = 448
+            controls_state = 449
+            controls_state = 450
+            controls_state = 451
+            controls_state = 661
+            controls_state = 662
+            controls_state = 663
+            OR = {
+                date > 1939.01.09
+                AND = {
+                    core_compliance = {
+                        occupied_country_tag = LBA
+                        value > 70
+                    }
+                    core_resistance = {
+                        occupied_country_tag = LBA
+                        value < 5
+                    }
+                }
+            }
+        }
+
+        fire_only_once = yes
+
+        cost = 50
+
+        complete_effect = {
+            every_state = {
+                limit = { region = 225 }
+                add_dynamic_modifier = {
+                    modifier = ITA_moslem_italians
+                    scope = ITA
+                }
+            }
+        }
+
+        ai_will_do = {
+            factor = 500
+            modifier = {
+                date < 1939.01.09
+                factor = 0
+            }
+        }
+    }
+
+    AOI_italianize_french_somaliland = {
+
+        icon = GFX_decision_generic_colonial_administration
+        
+        allowed = { tag = AOI }
+        
+        available = {
+            268 = { is_core_of = ROOT }
+        }
+        
+        fire_only_once = yes
+
+        cost = 15
+
+        fire_only_once = yes 
+
+		cosmetic_tag = DJI
+        cosmetic_ideology = neutrality
+        
+        complete_effect = {
+            268 = {
+                set_state_name = "Gibuti"
+                set_province_name = {
+                    id = 8124
+                    name = "Gibuti"
+                }
+            }
+        }
+
+        ai_will_do = {
+            factor = 100
+        }
+    }
+
+    AOI_italianize_british_somaliland = {
+
+        icon = GFX_decision_generic_colonial_administration
+
+        allowed = { tag = AOI }
+        
+        available = {
+            269 = { is_core_of = ROOT }
+        }
+        
+        fire_only_once = yes
+
+        cost = 15
+
+        fire_only_once = yes
+        
+        complete_effect = {
+            269 = {
+                if = {
+                    limit = {
+                        has_country_flag = ITALIANIZE_LITTLE_HARAR
+                    }
+                    set_province_name = {
+                        id = 5068
+                        name = "Piccola Città Santa"
+                    }
+                }
+                set_province_name = {
+                    id = 10833
+                    name = "Barbara"
+                }
+            }
+        }
+
+        ai_will_do = {
+            factor = 10
+        }
+    }
+    AOI_amedeo_is_coming_to_eat_your_pasta = {
+        priority = -25
+        icon = generic_political_discourse
+        allowed = { tag = AOI }
+        visible = {
+            has_country_flag = MAN_kwantung_uprising_flag
+        }
+        available = {
+            has_country_leader = {
+                character = AOI_prince_amedeo
+                ruling_only = yes
+            }
+        }
+        activation = {
+            has_completed_focus = AOI_secure_the_colony
+        }
+        cancel_if_not_visible = no
+        fire_only_once = yes
+        is_good = no
+        days_mission_timeout = 540
+        timeout_effect = {
+            retire_country_leader = yes
+        }
+    }
+    AOI_amedeo_move_faster_please = {
+
+        icon = generic_form_nation
+
+        priority = -26
+
+        allowed = {
+            original_tag = AOI
+        }
+
+        visible = {
+            has_completed_focus = AOI_secure_the_colony
+            has_active_mission = AOI_amedeo_is_coming_to_eat_your_pasta
+            NOT = {
+                has_country_leader = {
+                    character = AOI_prince_amedeo
+                    ruling_only = yes
+                }
+            }
+        }
+
+        available = {
+            NOT = {
+                has_country_leader = {
+                    character = AOI_prince_amedeo
+                    ruling_only = yes
+                }
+            }
+        }
+        
+        days_re_enable = 60
+
+        fixed_random_seed = no
+
+        cost = 20
+
+        complete_effect = {
+            random_list = {
+                5 = {
+                    
+                }
+                4 = {
+                    add_days_mission_timeout = {
+                        mission = AOI_amedeo_is_coming_to_eat_your_pasta
+                        days = -30
+                    }
+                }
+                3 = {
+                    add_days_mission_timeout = {
+                        mission = AOI_amedeo_is_coming_to_eat_your_pasta
+                        days = -60
+                    }
+                }
+                2 = {
+                    add_days_mission_timeout = {
+                        mission = AOI_amedeo_is_coming_to_eat_your_pasta
+                        days = -90
+                    }
+                }
+                1 = {
+                    add_days_mission_timeout = {
+                        mission = AOI_amedeo_is_coming_to_eat_your_pasta
+                        days = -180
+                    }
+                }
+            }
+        }
+
+        ai_will_do = {
+            factor = 0
+        }
+    }
+}
+ITA_beat_up_african_nations = {
+
+    ITA_invade_africa_nation = {
+
+        icon = generic_ignite_civil_war
+
+        target_trigger = {
+            FROM = {
+                NOT = { original_tag = TUR }
+                capital_scope = {
+                    OR = {
+                        is_on_continent = africa
+                        is_on_continent = middle_east
+                    }
+                }
+                OR = {
+                    original_tag = ALG
+                    original_tag = TUN
+                    original_tag = EGY
+                    original_tag = SUD
+                    original_tag = SOM
+                    original_tag = DJI
+                    original_tag = PAL
+                    original_tag = JOR
+                    original_tag = KEN
+                    original_tag = SYR
+                    original_tag = LEB
+                    original_tag = MOR
+                    original_tag = RIF
+                    any_owned_state = {
+                        OR = {
+                            is_claimed_by = AOI
+                            is_claimed_by = ROOT
+                        }
+                    }
+                }
+                is_subject = no
+                OR = {
+                    is_neighbor_of = ROOT
+                    is_neighbor_of = AOI
+                }
+                NOT = {
+                    has_war_with = ROOT
+                    has_war_with = AOI
+                }
+            }
+        }
+
+        cost = 15
+        
+        days_remove = 7
+
+        remove_effect = {
+            declare_war_on = {
+                target = FROM
+                type = annex_everything
+            }
+        }
+
+        war_with_target_on_remove = yes
+
+        ai_will_do = {
+            factor = 50
+            modifier = { #Don't be retarded and invade someone in a faction
+                FROM = { 
+                    is_in_faction = yes 
+                    faction_leader = {
+                        NOT = { has_war_with = ROOT }
+                    }
+                }
+                factor = 0
+            }
+            modifier =  { #Don't invade countries that France is influencing
+                FROM = { is_guaranteed_by = FRA }
+                NOT = { has_war_with = FRA }
+                factor = 0
+            }
+            modifier =  { #Don't invade Egypt when Britain is guaranteeing them
+                FROM = { is_guaranteed_by = ENG }
+                NOT = { has_war_with = ENG }
+                factor = 0
+            }
+        }
+    }
+}
+AOI_affirm_italian_ideals_category = {
+
+
+    AOI_affirm_italian_ideals_ERI = {
+
+        icon = eng_propaganda_campaigns
+        
+        available = {
+            owns_state = 550
+        }
+        
+        fire_only_once = yes
+
+        cost = 50
+
+        days_remove = 30
+
+		cosmetic_tag = ERI
+        cosmetic_ideology = democratic
+
+        modifier = {
+            political_power_factor = -0.10
+            stability_factor = -0.10
+        }
+        
+        remove_effect = {
+            hidden_effect = {
+                set_temp_variable = { AFA_state_count = 0 }
+                set_temp_variable = { AFA_compliance = 0 }
+                set_temp_variable = { AFA_average_compliance = 0 }
+                every_controlled_state = {
+                    limit = {
+                        is_core_of = AFA
+                        NOT = { state = 843 }
+                    }
+                    add_to_temp_variable = { AFA_state_count = 1 }
+                    add_to_temp_variable = { AFA_compliance = THIS.compliance }
+                }
+
+                set_temp_variable = { AFA_average_compliance = AFA_compliance }
+                divide_temp_variable = { AFA_average_compliance = AFA_state_count }
+                log = "Average Afar Compliance is [?AFA_average_compliance]"
+
+                set_temp_variable = { AFA_compliance_2 = AFA_average_compliance }
+                random_list = {
+                    1 = {
+                        modifier = {
+                            add = 2
+                            check_variable = { AFA_compliance_2 > 50 }
+                        }
+                        set_country_flag = AFA_separate_from_ERI
+                    }
+                    1 = {
+                        every_state = {
+                            limit = {
+                                is_core_of = AFA
+                                NOT = { state = 843 }
+                            }
+                            add_core_of = ERI
+                        }
+                    }
+                }
+            }
+            hidden_effect = {
+                set_temp_variable = { ERI_state_count = 0 }
+                set_temp_variable = { ERI_compliance = 0 }
+                set_temp_variable = { ERI_average_compliance = 0 }
+                every_controlled_state = {
+                    limit = {
+                        is_core_of = ERI
+                    }
+                    add_to_array = {
+                        array = ROOT.AOI_states_to_check
+                        #value = THIS #optional, if not defined adds scope
+                    }
+                    add_to_temp_variable = { ERI_state_count = 1 }
+                    add_to_temp_variable = { ERI_compliance = THIS.compliance }
+                }
+
+                set_temp_variable = { ERI_average_compliance = ERI_compliance }
+                divide_temp_variable = { ERI_average_compliance = ERI_state_count }
+                log = "Average Tigray-Tigrayina Compliance is [?ERI_average_compliance]"
+
+                set_variable = { ERI_compliance_2 = ERI_average_compliance }
+            }
+            random_list = {
+                4 = {
+					modifier = {
+						factor = 1.5
+						check_variable = { ERI_compliance_2 > 45 }
+					}
+					modifier = {
+						factor = 1.5
+						check_variable = { ERI_compliance_2 > 60 }
+					}
+                    if = {
+                        limit = {
+                            NOT = { has_completed_focus = AOI_integration }
+                        }
+                        country_event = te_italy.8
+                    }
+                    if = {
+                        limit = {
+                            has_completed_focus = AOI_integration
+                        }   
+                        every_owned_state = {
+                            limit = { is_core_of = ERI }
+                            add_core_of = ROOT
+                        }
+                    }
+                }
+                6 = {
+                    country_event = te_italy.7
+                }
+            }
+        }
+    }
+    AOI_affirm_italian_ideals_SOM = {
+
+        icon = eng_propaganda_campaigns
+        
+        available = {
+            owns_state = 559
+        }
+        
+        fire_only_once = yes
+
+        cost = 50
+
+        days_remove = 30
+
+		cosmetic_tag = SOM
+        cosmetic_ideology = neutrality
+
+        modifier = {
+            political_power_factor = -0.15
+            stability_factor = -0.10
+        }
+        
+        remove_effect = {
+            hidden_effect = {
+                set_temp_variable = { SOM_state_count = 0 }
+                set_temp_variable = { SOM_compliance = 0 }
+                set_temp_variable = { SOM_average_compliance = 0 }
+                every_controlled_state = {
+                    limit = {
+                        is_core_of = SOM
+                        NOT = { state = 268 }
+                    }
+                    add_to_array = {
+                        array = ROOT.AOI_states_to_check
+                        #value = THIS #optional, if not defined adds scope
+                    }
+                    add_to_temp_variable = { SOM_state_count = 1 }
+                    add_to_temp_variable = { SOM_state_count = THIS.compliance }
+                }
+
+                set_temp_variable = { SOM_average_compliance = SOM_compliance }
+                divide_temp_variable = { SOM_average_compliance = SOM_state_count }
+                log = "Average Somali Compliance is [?SOM_average_compliance]"
+
+                set_variable = { SOM_compliance_2 = SOM_average_compliance }
+            }
+            random_list = {
+                23 = {
+					modifier = {
+						factor = 1.5
+						check_variable = { SOM_compliance_2 > 45 }
+					}
+					modifier = {
+						factor = 1.5
+						check_variable = { SOM_compliance_2 > 60 }
+					}
+                    if = {
+                        limit = {
+                            NOT = { has_completed_focus = AOI_integration }
+                        }
+                        country_event = te_italy.6
+                    }
+                    if = {
+                        limit = {
+                            has_completed_focus = AOI_integration
+                        }   
+                        every_owned_state = {
+                            limit = { 
+                                is_core_of = SOM 
+                                NOT = { state = 268 }
+                            }
+                            add_core_of = ROOT
+                        }
+                    }
+                }
+                73 = {
+                    country_event = te_italy.5
+                }
+            }
+        }
+    }
+    AOI_affirm_italian_ideals_AFA = {
+
+        icon = eng_propaganda_campaigns
+
+        visible = {
+            has_country_flag = AFA_separate_from_ERI
+        }
+        
+        available = {
+            owns_state = 908
+        }
+        
+        fire_only_once = yes
+
+        cost = 50
+
+        days_remove = 30
+
+		cosmetic_tag = AFA
+        cosmetic_ideology = neutrality
+
+        modifier = {
+            political_power_factor = -0.10
+            stability_factor = -0.10
+        }
+        
+        remove_effect = {
+            hidden_effect = {
+                set_temp_variable = { AFA_state_count = 0 }
+                set_temp_variable = { AFA_compliance = 0 }
+                set_temp_variable = { AFA_average_compliance = 0 }
+                every_controlled_state = {
+                    limit = {
+                        is_core_of = AFA
+                        NOT = { state = 843 }
+                    }
+                    add_to_temp_variable = { AFA_state_count = 1 }
+                    add_to_temp_variable = { AFA_compliance = THIS.compliance }
+                }
+
+                set_temp_variable = { AFA_average_compliance = AFA_compliance }
+                divide_temp_variable = { AFA_average_compliance = AFA_state_count }
+                log = "Average Afar Compliance is [?AFA_average_compliance]"
+
+                set_temp_variable = { AFA_compliance_2 = AFA_average_compliance }
+            }
+            random_list = {
+                53 = {
+					modifier = {
+						factor = 1.5
+						check_variable = { AFA_compliance_2 > 45 }
+					}
+					modifier = {
+						factor = 1.5
+						check_variable = { AFA_compliance_2 > 60 }
+					}
+                    if = {
+                        limit = {
+                            NOT = { has_completed_focus = AOI_integration }
+                        }
+                        country_event = te_italy.10
+                    }
+                    if = {
+                        limit = {
+                            has_completed_focus = AOI_integration
+                        }   
+                        every_owned_state = {
+                            limit = { 
+                                is_core_of = AFA 
+                                NOT = { state = 843 }
+                            }
+                            add_core_of = ROOT
+                        }
+                    }
+                }
+                47 = {
+                    country_event = te_italy.9
+                }
+            }
+        }
+    }
+    AOI_destroy_the_idea_of_ethiopia = {
+
+        icon = eng_propaganda_campaigns
+
+        visible = {
+			NOT = { has_country_flag = AOI_destroyed_ETH }
+        }
+        
+        available = {
+            
+        }
+        
+        fire_only_once = yes
+
+        cost = 100
+
+        days_remove = 270
+
+		cosmetic_tag = ETH
+        cosmetic_ideology = neutrality
+
+        modifier = {
+            political_power_factor = -0.15
+        }
+        
+        remove_effect = {
+            hidden_effect = {
+                set_country_flag = AOI_destroyed_ETH
+                838 = {
+					add_core_of = SID
+					start_resistance = SID
+				}
+                839 = {
+					add_core_of = SID
+					start_resistance = SID
+				}
+                840 = {
+					add_core_of = QEM
+					start_resistance = QEM
+				}
+				843 = {
+					add_core_of = QEM
+					start_resistance = QEM
+				}
+                if = {
+                    limit = {
+                        271 = {
+                            NOT = { is_core_of = AOI }
+                        }
+                    }
+                    271 = {
+                        start_resistance = ORO
+                    }
+                }
+                QEM = {
+                    set_cosmetic_tag = QEM_amhara
+                }
+                every_state = {
+                    limit = {
+                        is_core_of = ETH
+                    }
+                    remove_core_of = ETH
+                }
+                every_state = {
+                    limit = {
+                        is_claimed_by = ETH
+                    }
+                    remove_claim_by = ETH
+                }
+            }
+        }
+
+        ai_will_do = {
+            factor = 1
+        }
+    }
+	DEBUG_destroy_ethiopian_identity_immediately = {
+		visible = {
+			NOT = { has_country_flag = AOI_destroyed_ETH }
+			is_debug = yes
+		}
+        
+        available = {
+            
+        }
+        
+        fire_only_once = yes
+        
+        complete_effect = {
+                set_country_flag = AOI_destroyed_ETH
+                838 = {
+					add_core_of = SID
+					start_resistance = SID
+				}
+                839 = {
+					add_core_of = SID
+					start_resistance = SID
+				}
+                840 = {
+					add_core_of = QEM
+					start_resistance = QEM
+				}
+				843 = {
+					add_core_of = QEM
+					start_resistance = QEM
+				}
+                if = {
+                    limit = {
+                        271 = {
+                            NOT = { is_core_of = AOI }
+                        }
+                    }
+                    271 = {
+                        start_resistance = ORO
+                    }
+                }
+                QEM = {
+                    set_cosmetic_tag = QEM_amhara
+                }
+                every_state = {
+                    limit = {
+                        is_core_of = ETH
+                    }
+                    remove_core_of = ETH
+                }
+                every_state = {
+                    limit = {
+                        is_claimed_by = ETH
+                    }
+                    remove_claim_by = ETH
+                }
+        }
+	}
+    AOI_affirm_italian_ideals_QEM = {
+
+        icon = eng_propaganda_campaigns
+
+        visible = {
+            has_country_flag = AOI_destroyed_ETH
+        }
+        
+        available = {
+            owns_state = 841
+        }
+        
+        fire_only_once = yes
+
+        cost = 50
+
+        days_remove = 30
+
+		cosmetic_tag = QEM
+        cosmetic_ideology = neutrality
+
+        modifier = {
+            political_power_factor = -0.10
+            stability_factor = -0.10
+        }
+        
+        remove_effect = {
+            hidden_effect = {
+                set_temp_variable = { QEM_state_count = 0 }
+                set_temp_variable = { QEM_compliance = 0 }
+                set_temp_variable = { QEM_average_compliance = 0 }
+                every_controlled_state = {
+                    limit = {
+                        is_core_of = QEM
+                    }
+                    add_to_temp_variable = { QEM_state_count = 1 }
+                    add_to_temp_variable = { QEM_compliance = THIS.compliance }
+                }
+
+                set_temp_variable = { QEM_average_compliance = QEM_compliance }
+                divide_temp_variable = { QEM_average_compliance = QEM_state_count }
+                log = "Average Amharic Compliance is [?AFA_average_compliance]"
+
+                set_temp_variable = { QEM_compliance_2 = QEM_average_compliance }
+            }
+            random_list = {
+                27 = {
+					modifier = {
+						factor = 1.5
+						check_variable = { QEM_compliance_2 > 45 }
+					}
+					modifier = {
+						factor = 1.5
+						check_variable = { QEM_compliance_2 > 60 }
+					}
+                    if = {
+                        limit = {
+                            NOT = { has_completed_focus = AOI_integration }
+                        }
+                        country_event = te_italy.12
+                    }
+                    if = {
+                        limit = {
+                            has_completed_focus = AOI_integration
+                        }   
+                        every_owned_state = {
+                            limit = { 
+                                is_core_of = QEM
+                            }
+                            add_core_of = ROOT
+                        }
+                    }
+                }
+                72 = {
+                    country_event = te_italy.11
+                }
+            }
+        }
+    }
+    AOI_affirm_italian_ideals_SID = {
+
+        icon = eng_propaganda_campaigns
+
+        visible = {
+            has_country_flag = AOI_destroyed_ETH
+        }
+        
+        available = {
+            owns_state = 837
+        }
+        
+        fire_only_once = yes
+
+        cost = 50
+
+        days_remove = 30
+
+		cosmetic_tag = SID
+        cosmetic_ideology = neutrality
+
+        modifier = {
+            political_power_factor = -0.10
+            stability_factor = -0.10
+        }
+        
+        remove_effect = {
+            hidden_effect = {
+                set_temp_variable = { SID_state_count = 0 }
+                set_temp_variable = { SID_compliance = 0 }
+                set_temp_variable = { SID_average_compliance = 0 }
+                every_controlled_state = {
+                    limit = {
+                        is_core_of = SID
+                    }
+                    add_to_temp_variable = { SID_state_count = 1 }
+                    add_to_temp_variable = { SID_compliance = THIS.compliance }
+                }
+
+                set_temp_variable = { SID_average_compliance = SID_compliance }
+                divide_temp_variable = { SID_average_compliance = SID_state_count }
+                log = "Average Oromo Compliance is [?AFA_average_compliance]"
+
+                set_temp_variable = { SID_compliance_2 = SID_average_compliance }
+            }
+            random_list = {
+                27 = {
+					modifier = {
+						factor = 1.5
+						check_variable = { SID_compliance_2 > 45 }
+					}
+					modifier = {
+						factor = 1.5
+						check_variable = { SID_compliance_2 > 60 }
+					}
+                    if = {
+                        limit = {
+                            NOT = { has_completed_focus = AOI_integration }
+                        }
+                        country_event = te_italy.14
+                    }
+                    if = {
+                        limit = {
+                            has_completed_focus = AOI_integration
+                        }   
+                        every_owned_state = {
+                            limit = { 
+                                is_core_of = SID
+                            }
+                            add_core_of = ROOT
+                        }
+                    }
+                }
+                69 = {
+                    country_event = te_italy.13
+                }
+            }
+        }
+    }
+
+    AOI_defeat_ERI = {
+		cosmetic_tag = ERI
+        cosmetic_ideology = democratic
+        icon = generic_prepare_civil_war
+        fire_only_once = yes
+		cancel_if_not_visible = yes
+        visible = {
+            has_war_with = ERI
+        }
+        available = {
+            OR = {
+                ERI = { exists = no }
+                ERI = { has_capitulated = yes }
+            }
+        }
+        activation = {
+            has_country_flag = ERI_revolt
+        }
+        is_good = no
+        days_mission_timeout = 45
+        timeout_effect = {
+            custom_effect_tooltip = AOI_defeat_ERI_tt
+            set_country_flag = ERI_revolt_1_failed
+        }
+        complete_effect = {
+            clr_country_flag = ERI_revolt
+            if = {
+                limit = {
+                    NOT = { has_completed_focus = AOI_integration }
+                }
+                every_state = {
+                    limit = {
+                        is_core_of = ERI
+                    }
+                    custom_effect_tooltip = be_able_to_auto_core_tt
+                    set_state_flag = be_able_to_auto_core
+                }
+            }
+            if = {
+                limit = {
+                    has_completed_focus = AOI_integration
+                }
+                set_country_flag = no_compliance_needed_for_ERI
+            }
+        }
+    }
+
+    AOI_defeat_ERI_no_italianization = {
+		cosmetic_tag = ERI
+        cosmetic_ideology = democratic
+        icon = generic_prepare_civil_war
+        fire_only_once = yes
+		cancel_if_not_visible = yes
+        visible = {
+            has_war_with = ERI
+        }
+        available = {
+            OR = {
+                ERI = { exists = no }
+                ERI = { has_capitulated = yes }
+            }
+        }
+        activation = {
+            has_country_flag = ERI_revolt_1_failed
+        }
+        is_good = no
+        days_mission_timeout = 45
+        timeout_effect = {
+            set_country_flag = ERI_revolt_2_failed
+        }
+        complete_effect = {
+            clr_country_flag = ERI_revolt
+        }
+    }
+
+    AOI_defeat_SOM = {
+		cosmetic_tag = SOM
+        cosmetic_ideology = neutrality
+        icon = generic_prepare_civil_war
+        fire_only_once = yes
+		cancel_if_not_visible = yes
+        visible = {
+            has_war_with = SOM
+        }
+        available = {
+            OR = {
+                SOM = { exists = no }
+                SOM = { has_capitulated = yes }
+            }
+        }
+        activation = {
+            has_country_flag = SOM_revolt
+        }
+        is_good = no
+        days_mission_timeout = 30
+        timeout_effect = {
+            custom_effect_tooltip = AOI_defeat_SOM_tt
+            set_country_flag = SOM_revolt_1_failed
+        }
+        complete_effect = {
+            clr_country_flag = SOM_revolt
+            if = {
+                limit = {
+                    NOT = { has_completed_focus = AOI_integration }
+                }
+                every_state = {
+                    limit = {
+                        is_core_of = SOM
+                        NOT = { state = 268 }
+                    }
+                    custom_effect_tooltip = be_able_to_auto_core_tt
+                    set_state_flag = be_able_to_auto_core
+                }
+            }
+            if = {
+                limit = {
+                    has_completed_focus = AOI_integration
+                }
+                set_country_flag = no_compliance_needed_for_SOM
+            }
+        }
+    }
+
+    AOI_defeat_SOM_no_italianization = {
+		cosmetic_tag = SOM
+        cosmetic_ideology = neutrality
+        icon = generic_prepare_civil_war
+        fire_only_once = yes
+		cancel_if_not_visible = yes
+        visible = {
+            has_war_with = SOM
+        }
+        available = {
+            OR = {
+                SOM = { exists = no }
+                SOM = { has_capitulated = yes }
+            }
+        }
+        activation = {
+            has_country_flag = SOM_revolt_1_failed
+        }
+        is_good = no
+        days_mission_timeout = 60
+        timeout_effect = {
+            set_country_flag = SOM_revolt_2_failed
+        }
+        complete_effect = {
+            clr_country_flag = SOM_revolt
+        }
+    }
+
+    AOI_defeat_AFA = {
+		cosmetic_tag = AFA
+        cosmetic_ideology = neutrality
+        icon = generic_prepare_civil_war
+        fire_only_once = yes
+		cancel_if_not_visible = yes
+        visible = {
+            has_war_with = AFA
+        }
+        available = {
+            OR = {
+                AFA = { exists = no }
+                AFA = { has_capitulated = yes }
+            }
+        }
+        activation = {
+            has_country_flag = AFA_revolt
+        }
+        is_good = no
+        days_mission_timeout = 30
+        timeout_effect = {
+            custom_effect_tooltip = AOI_defeat_AFA_tt
+            set_country_flag = AFA_revolt_1_failed
+        }
+        complete_effect = {
+            clr_country_flag = AFA_revolt
+            if = {
+                limit = {
+                    NOT = { has_completed_focus = AOI_integration }
+                }
+                every_state = {
+                    limit = {
+                        is_core_of = AFA
+                        NOT = { state = 843 }
+                    }
+                    custom_effect_tooltip = be_able_to_auto_core_tt
+                    set_state_flag = be_able_to_auto_core
+                }
+            }
+            if = {
+                limit = {
+                    has_completed_focus = AOI_integration
+                }
+                set_country_flag = no_compliance_needed_for_AFA
+            }
+        }
+    }
+
+    AOI_defeat_AFA_no_italianization = {
+		cosmetic_tag = AFA
+        cosmetic_ideology = neutrality
+        icon = generic_prepare_civil_war
+        fire_only_once = yes
+		cancel_if_not_visible = yes
+        visible = {
+            has_war_with = AFA
+        }
+        available = {
+            OR = {
+                AFA = { exists = no }
+                AFA = { has_capitulated = yes }
+            }
+        }
+        activation = {
+            has_country_flag = AFA_revolt_1_failed
+        }
+        is_good = no
+        days_mission_timeout = 60
+        timeout_effect = {
+            set_country_flag = AFA_revolt_2_failed
+        }
+        complete_effect = {
+            clr_country_flag = AFA_revolt
+        }
+    }
+
+    AOI_defeat_QEM = {
+		cosmetic_tag = QEM
+        cosmetic_ideology = neutrality
+        icon = generic_prepare_civil_war
+        fire_only_once = yes
+		cancel_if_not_visible = yes
+        visible = {
+            has_war_with = QEM
+        }
+        available = {
+            OR = {
+                QEM = { exists = no }
+                QEM = { has_capitulated = yes }
+            }
+        }
+        activation = {
+            has_country_flag = QEM_revolt
+        }
+        is_good = no
+        days_mission_timeout = 30
+        timeout_effect = {
+            custom_effect_tooltip = AOI_defeat_QEM_tt
+            set_country_flag = QEM_revolt_1_failed
+        }
+        complete_effect = {
+            clr_country_flag = QEM_revolt
+            if = {
+                limit = {
+                    NOT = { has_completed_focus = AOI_integration }
+                }
+                every_state = {
+                    limit = {
+                        is_core_of = QEM
+                    }
+                    custom_effect_tooltip = be_able_to_auto_core_tt
+                    set_state_flag = be_able_to_auto_core
+                }
+            }
+            if = {
+                limit = {
+                    has_completed_focus = AOI_integration
+                }
+                set_country_flag = no_compliance_needed_for_QEM
+            }
+        }
+    }
+
+    AOI_defeat_QEM_no_italianization = {
+		cosmetic_tag = QEM
+        cosmetic_ideology = neutrality
+        icon = generic_prepare_civil_war
+        fire_only_once = yes
+		cancel_if_not_visible = yes
+        visible = {
+            has_war_with = QEM
+        }
+        available = {
+            OR = {
+                QEM = { exists = no }
+                QEM = { has_capitulated = yes }
+            }
+        }
+        activation = {
+            has_country_flag = QEM_revolt_1_failed
+        }
+        is_good = no
+        days_mission_timeout = 60
+        timeout_effect = {
+            set_country_flag = QEM_revolt_2_failed
+        }
+        complete_effect = {
+            clr_country_flag = QEM_revolt
+        }
+    }
+
+    AOI_defeat_SID = {
+		cosmetic_tag = SID
+        cosmetic_ideology = neutrality
+        icon = generic_prepare_civil_war
+        fire_only_once = yes
+		cancel_if_not_visible = yes
+        visible = {
+            has_war_with = SID
+        }
+        available = {
+            OR = {
+                SID = { exists = no }
+                SID = { has_capitulated = yes }
+            }
+        }
+        activation = {
+            has_country_flag = SID_revolt
+        }
+        is_good = no
+        days_mission_timeout = 30
+        timeout_effect = {
+            custom_effect_tooltip = AOI_defeat_SID_tt
+            set_country_flag = SID_revolt_1_failed
+        }
+        complete_effect = {
+            clr_country_flag = SID_revolt
+            if = {
+                limit = {
+                    NOT = { has_completed_focus = AOI_integration }
+                }
+                every_state = {
+                    limit = {
+                        is_core_of = SID
+                    }
+                    custom_effect_tooltip = be_able_to_auto_core_tt
+                    set_state_flag = be_able_to_auto_core
+                }
+            }
+            if = {
+                limit = {
+                    has_completed_focus = AOI_integration
+                }
+                set_country_flag = no_compliance_needed_for_SID
+            }
+        }
+    }
+
+    AOI_defeat_SID_no_italianization = {
+		cosmetic_tag = SID
+        cosmetic_ideology = neutrality
+        icon = generic_prepare_civil_war
+        fire_only_once = yes
+		cancel_if_not_visible = yes
+        visible = {
+            has_war_with = SID
+        }
+        available = {
+            OR = {
+                SID = { exists = no }
+                SID = { has_capitulated = yes }
+            }
+        }
+        activation = {
+            has_country_flag = SID_revolt_1_failed
+        }
+        is_good = no
+        days_mission_timeout = 60
+        timeout_effect = {
+            set_country_flag = SID_revolt_2_failed
+        }
+        complete_effect = {
+            clr_country_flag = SID_revolt
+        }
+    }
+}
+AOI_exploit_minerals_2_decision = {
+	AOI_prospect_for_resources = {
+
+        name = ETH_prospect_for_resources
+
+		icon = GFX_decision_generic_construction
+		target_trigger = {
+			FROM = {
+				OR = {
+					state = 841
+					state = 842
+					state = 840
+				}
+			}
+		}
+		state_target = yes
+		on_map_mode = map_only
+		fire_only_once = yes # Only once per State
+
+		available = {
+			has_tech = excavation2
+			num_of_civilian_factories_available_for_projects > 2
+			FROM = { is_controlled_by = ROOT }
+			NOT = { has_country_flag = prospecting_ongoing_flag }
+		}
+
+
+		
+		visible = {
+			
+		}
+
+		#fire_only_once = yes
+
+		cost = 25
+		days_remove = 60
+
+		modifier = {
+			civilian_factory_use = 3
+		}
+
+		ai_will_do = {
+			base = 100
+			
+		}
+		complete_effect = {
+			set_country_flag = prospecting_ongoing_flag
+		}
+
+		remove_effect = {
+			clr_country_flag = prospecting_ongoing_flag
+			random_list = {
+				20 = {
+					FROM = {
+						add_resource = {
+							type = oil
+							amount = 4
+						}
+					}
+				}
+				20 = {
+					FROM = {
+						add_resource = {
+							type = steel
+							amount = 10
+						}
+					}
+				}
+				20 = {
+					FROM = {
+						add_resource = {
+							type = chromium
+							amount = 6
+						}
+					}
+				}
+				20 = {
+					FROM = {
+						add_resource = {
+							type = aluminium
+							amount = 6
+						}
+					}
+				}
+			}
+		}
+	}
+}
+AOI_approach_towards_natives_category = {
+
+    AOI_lobby_for_compliance = {
+        
+        icon = GFX_decision_SWI_swiss_democratic_tradition_campaign
+
+        available = {
+            power_balance_value = {
+                id = AOI_approach_towards_natives
+                value > -0.95
+            }
+            NOT = {
+                has_power_balance_modifier = {
+                    id = AOI_approach_towards_natives
+                    modifier = AOI_lobby_for_resistance
+                }
+            }
+        }
+
+        ai_will_do = {
+            factor = 50
+        }
+
+        cost = 50
+
+        days_remove = 45
+
+        days_re_enable = 15
+
+        complete_effect = {
+            add_power_balance_modifier = {
+                id = AOI_approach_towards_natives
+                modifier = AOI_lobby_for_compliance
+            }
+        }
+
+        remove_effect = {
+            remove_power_balance_modifier = {
+                id = AOI_approach_towards_natives
+                modifier = AOI_lobby_for_compliance
+            }
+        }
+    }
+    AOI_lobby_for_resistance = {
+        
+        icon = oppression
+
+        available = {
+            power_balance_value = {
+                id = AOI_approach_towards_natives
+                value < 0.95
+            }
+            NOT = {
+                has_power_balance_modifier = {
+                    id = AOI_approach_towards_natives
+                    modifier = AOI_lobby_for_compliance
+                }
+            }
+            if = {
+                limit = {
+                    has_completed_focus = AOI_italianization
+                }
+                NOT = { has_completed_focus = AOI_allow_intermixing }
+            }
+        }
+
+        ai_will_do = {
+            factor = 50
+        }
+
+        cost = 50
+
+        days_remove = 45
+
+        days_re_enable = 15
+
+        complete_effect = {
+            add_power_balance_modifier = {
+                id = AOI_approach_towards_natives
+                modifier = AOI_lobby_for_resistance
+            }
+        }
+
+        remove_effect = {
+            remove_power_balance_modifier = {
+                id = AOI_approach_towards_natives
+                modifier = AOI_lobby_for_resistance
+            }
+        }
+    }
+}

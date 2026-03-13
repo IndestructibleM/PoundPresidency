@@ -1,0 +1,170 @@
+AOI_COL_01 = 
+{
+    name = "Colonial Brigades"
+
+    for_countries = { AOI }
+
+    can_use = { always = yes }
+
+    division_types = { "infantry" }
+
+    fallback_name = "%s Brigata coloniale"
+
+    ordered =
+    {
+        1 = { "I Brigata coloniale" }
+        2 = { "II Brigata coloniale" }
+        3 = { "III Brigata coloniale" }
+        4 = { "IV Brigata coloniale" }
+        5 = { "V Brigata coloniale" }
+        6 = { "VI Brigata coloniale" }
+        7 = { "VII Brigata coloniale" }
+        8 = { "VIII Brigata coloniale" }
+        9 = { "IX Brigata coloniale" }
+        10 = { "X Brigata coloniale" }
+        11 = { "XI Brigata coloniale" }
+        12 = { "XII Brigata coloniale" }
+        13 = { "XIII Brigata coloniale" }
+        14 = { "XIV Brigata coloniale" }
+        15 = { "XV Brigata coloniale" }
+        16 = { "XVI Brigata coloniale" }
+        17 = { "XVII Brigata coloniale" }
+        18 = { "XVIII Brigata coloniale" }
+        19 = { "XIX Brigata coloniale" }
+        20 = { "XX Brigata coloniale" }
+        21 = { "XXI Brigata coloniale" }
+        22 = { "XXII Brigata coloniale" }
+        23 = { "XXII Brigata coloniale" }
+        25 = { "XXV Brigata coloniale" }
+        41 = { "XLI Brigata coloniale" }
+        85 = { "LXXXV Brigata coloniale" }
+        91 = { "XCI Brigata coloniale" }
+        92 = { "XCII Brigata coloniale" }
+
+    }
+}
+
+AOI_COL_02 = 
+{
+    name = "Colonial Divisions"
+
+    for_countries = { AOI }
+
+    can_use = { always = yes }
+
+    division_types = { "infantry" }
+
+    fallback_name = "%da Divisione coloniale"
+
+    ordered =
+    {
+        1 = { "1a Divisione coloniale Eritrea" }
+        2 = { "2a Divisione coloniale Eritrea" }
+        3 = { "3a Divisione coloniale" }
+        4 = { "4a Divisione coloniale" }
+        21 = { "21a Divisione coloniale" }
+        22 = { "22a Divisione coloniale" }
+        23 = { "23a Divisione coloniale" }
+        24 = { "24a Divisione coloniale" }
+        25 = { "25a Divisione coloniale" }
+        26 = { "26a Divisione coloniale" }
+        101 = { "101a Divisione coloniale somala" }
+        102 = { "102a Divisione coloniale somala" }
+        104 = { "Divisione coloniale dell'Harar" }
+
+
+    }
+}
+
+AOI_INF_01 = 
+{
+    name = "Infantry Divisions"
+
+    for_countries = { AOI }
+
+    can_use = { always = yes }
+
+    division_types = { "infantry" }
+
+    fallback_name = "%da Divisione di Fanteria"
+
+    ordered =
+    {
+        1 = { "40a Divisione di Fanteria 'Cacciatori d'Africa'" }
+        65 = { "65a Divisione di Fanteria 'Granatieri di Savoia'" }
+
+
+    }
+}
+
+AOI_CCNN_01 = 
+{
+    name = "Camicie Nere Legions"
+
+    for_countries = { AOI }
+
+    can_use = { always = yes }
+
+    division_types = { "infantry" }
+
+    fallback_name = "%da Legione CC. NN."
+
+    ordered =
+    {
+        1 = { "1a Legione CC. NN. 'Arnaldo Mussolini'" }
+        2 = { "2a Legione CC. NN. 'Ivo Oliveti'" }
+		3 = { "3a Legione CC. NN. 'Reginaldo Giuliani'" }
+		4 = { "4a Legione CC. NN. 'Filippo Corridoni" }
+		5 = { "5a Legione CC. NN. 'Luigi Razza'" }
+		6 = { "6a Legione CC. NN. 'Luigi Valcarenghi'" }
+		7 = { "7a Legione CC. NN. 'F. Battisti'" }
+		
+
+    }
+}
+
+AOI_TNK_01 = 
+{
+    name = "Armoured Companies"
+
+    for_countries = { AOI }
+
+    can_use = { always = yes }
+
+    division_types = { "light_armor" "medium_armor" "heavy_armor" "modern_armor" }
+
+    fallback_name = "%da Compagnia Corazzata Speciali"
+
+    ordered =
+    {
+        1 = { "1a Compagnia Corazzata Speciali 'L'" }
+        2 = { "2a Compagnia Corazzata Speciali 'M'" }
+
+
+    }
+}
+
+AOI_DBT_01 = 
+{
+    name = "Dubat Units"
+
+    for_countries = { AOI }
+
+    can_use = { always = yes }
+
+    division_types = { "infantry" }
+
+    fallback_name = "%s Gruppo Unità Dubat"
+
+    ordered =
+    {
+        1 = { "I Gruppo Unità Dubat" }
+        2 = { "II Gruppo Unità Dubat" }
+		3 = { "III Gruppo Unità Dubat" }
+		4 = { "IV Gruppo Unità Dubat" }
+		5 = { "V Gruppo Unità Dubat" }
+		6 = { "VI Gruppo Unità Dubat" }
+		
+
+    }
+}

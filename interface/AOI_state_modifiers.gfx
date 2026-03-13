@@ -1,0 +1,18 @@
+spriteTypes = {
+
+	SpriteType = {
+		name = "GFX_state_AOI_eritrea"
+		texturefile = "gfx/interface/state_modifiers/AOI_eritrea_state.png"
+	}
+
+	SpriteType = {
+		name = "GFX_state_AOI_somalia"
+		texturefile = "gfx/interface/state_modifiers/AOI_somalia_state.png"
+	}
+
+	SpriteType = {
+		name = "GFX_generic_agriculture"
+		texturefile = "gfx/interface/state_modifiers/generic_agriculture.png"
+	}
+	
+}

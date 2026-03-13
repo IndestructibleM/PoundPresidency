@@ -1,0 +1,73 @@
+#########################################################################
+# OPINION MODIFIERS
+##########################################################################
+# value
+# min_trust
+# max_trust
+# decay
+# months/years/days = timer
+# trade = yes/no
+
+opinion_modifiers = {
+
+    ENG_gave_our_territory_up = {
+        value = -30
+        months = 24
+    }
+
+    ENG_refused_to_give_territory = {
+        value = -30
+        decay = 1
+        months = 48
+    }
+
+    ENG_refused_to_give_territory_up = {
+        value = 30
+        decay = 1
+    }
+
+	ENG_enosis = {
+		value = 25
+	}
+
+	ENG_ceded_malta = {
+		value = 15
+	}
+
+	ENG_congress_of_london_small = {
+		value = 25
+	}
+
+	ENG_congress_of_london_big = {
+		value = 50
+	}
+
+	ENG_hashemite_arabia = {
+		value = 25
+	}
+
+	LIT_arrested_nazi_party = {
+		value = 20
+	}
+
+	POL_dealt_with_danzig = {
+		value = 20
+	}
+
+	AOI_colonial_affairs = {
+		value = 10
+	}
+
+    SOV_hey_you_recognized_me = {
+        value = 50
+        decay = 2
+    }
+
+    VIC_compatiblity_with_germany = {
+        value = 50
+    }
+
+    UKR_helping_out_BLR = {
+        value = 50
+    }
+}

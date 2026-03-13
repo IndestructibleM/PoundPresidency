@@ -1,0 +1,16 @@
+﻿l_english:
+
+ ETH_AOI_subject:0 "Autonomous Region of Etiopia"
+ ETH_AOI_subject_DEF:0 "the Autonomous Region of Etiopia"
+ ERI_AOI_subject:0 "Eritrea Autonomous Governorate"
+ ERI_AOI_subject_DEF:0 "Eritrea Autonomous Governorate"
+ SOM_AOI_subject:0 "Somalia Autonomous Governorate"
+ SOM_AOI_subject_DEF:0 "Somalia Autonomous Governorate"
+ SID_AOI_subject:0 "Galla-Sidamo Autonomous Governorate"
+ SID_AOI_subject_DEF:0 "Galla-Sidamo Autonomous Governorate"
+ QEM_AOI_subject:0 "Amara Autonomous Governorate"
+ QEM_AOI_subject_DEF:0 "Amara Autonomous Governorate"
+
+ AOI_new_italy:0 "Italia Nova"
+ AOI_new_italy_DEF:0 "Italia Nova"
+ AOI_new_italy_ADJ:0 "New-Italian"

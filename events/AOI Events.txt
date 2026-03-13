@@ -1,0 +1,1599 @@
+add_namespace = te_italy
+add_namespace = te_aoi_local
+
+country_event = { #Decide East Africa's path
+    id = te_italy.1
+    title = te_italy.1.t
+    desc = te_italy.1.d
+    picture = GFX_report_event_gre_italian_troops
+
+    is_triggered_only = yes
+
+    option = { #Italianize the colony
+        name = te_italy.1.a
+
+        AOI = {
+            set_country_flag = ITA_requests_italianization
+        }
+        ai_chance = {
+            factor = 1
+        }
+    }
+
+    option = { #Stabilize the colony
+        name = te_italy.1.b
+
+        AOI = {
+            set_country_flag = ITA_requests_stability
+        }
+        ai_chance = {
+            factor = 1
+        }
+    }
+}
+
+country_event = { #Which pizza
+    id = te_italy.2
+    title = te_italy.2.t
+    desc = te_italy.2.t
+    picture = GFX_report_event_generic_mussolini
+
+    is_triggered_only = yes
+
+    option = { #Pizza
+        name = te_italy.2.a
+    }
+
+    option = { #East African Pizza
+        name = te_italy.2.b
+        AOI = {
+            change_tag_from = ITA
+        }
+    }
+}
+
+country_event = { #Unofficial translations
+    id = te_italy.3
+    title = te_italy.3.t
+    desc = te_italy.3.d
+
+    is_triggered_only = yes
+
+    option = { #Only official please
+        name = te_italy.3.a
+    }
+
+    option = { #Sure
+        name = te_italy.3.b
+        841 = {
+			set_province_name = {
+				id = 1984
+				name = "Cametiope"
+			}
+        }
+        set_country_flag = ITALIANIZE_LITTLE_HARAR
+    }
+}
+
+country_event = { #Fate of Addis Ababa's name
+    id = te_italy.4
+    title = te_italy.4.t
+    desc = te_italy.4.desc
+
+    is_triggered_only = yes
+
+    option = { #Addis Ababa
+        name = te_italy.4.a
+        
+        271 = {
+			set_province_name = {
+				id = 5010
+				name = "Addis Abeba"
+			}
+        }
+    }
+
+    option = { #Nuovo Fiore
+        name = te_italy.4.b
+        
+        271 = {
+			set_province_name = {
+				id = 5010
+				name = "Nuovo Fiore"
+			}
+        }
+    }
+
+    option = { #Romiola
+        name = te_italy.4.c
+        
+        271 = {
+			set_province_name = {
+				id = 5010
+				name = "Romiola"
+			}
+        }
+    }
+
+    option = { #Piccola Roma
+        name = te_italy.4.d
+        
+        271 = {
+			set_province_name = {
+				id = 5010
+				name = "Piccola Roma"
+			}
+        }
+    }
+}
+
+country_event = { #Somalia revolts against Italianization
+    id = te_italy.5
+    title = te_italy.5.t
+    desc = te_italy.5.d
+    picture = GFX_report_event_gre_italian_troops
+
+    immediate = {
+        hidden_effect = {
+            set_country_flag = SOM_revolt
+            every_owned_state = {
+                limit = { 
+                    is_core_of = SOM 
+                    NOT = { state = 268 }
+                }
+                AOI = { start_resistance = SOM }
+                SOM = { transfer_state = PREV }
+            }
+            SOM = {
+				division_template = {
+				    name = "Resistance Fighters"
+					is_locked = yes
+					priority = 1
+					template_counter = 3
+					regiments = {
+						infantry = { x = 0 y = 0 }
+						infantry = { x = 0 y = 1 }
+						infantry = { x = 0 y = 2 }
+						infantry = { x = 1 y = 0 }
+						infantry = { x = 1 y = 1 }
+					}
+					is_locked = yes 
+				}
+				every_owned_state = {
+					limit = { is_core_of = SOM }
+					create_unit = { 
+						division = "name = \"Resistance Fighters\" division_template = \"Resistance Fighters\" start_experience_factor = 0.05 start_equipment_factor = 0.95" owner = SOM count = 2
+					}
+				}
+                set_politics = {
+                    ruling_party = neutrality
+                    last_election = "1936.1.1"
+                    election_frequency = 48
+                    elections_allowed = no
+                }
+                set_popularities = {
+                    democratic = 25
+                    fascism = 20
+                    communism = 5
+                    neutrality = 50
+                }
+
+                add_ideas = SFSTE_AOI_anti_italian_rebellion
+            }
+        }
+    }
+
+    is_triggered_only = yes
+
+    option = { #Let's a go
+        name = te_italy.5.a
+
+        declare_war_on = {
+            target = SOM
+            type = annex_everything
+        }
+        hidden_effect = {
+            every_state = {
+                limit = {
+                    is_owned_by = SOM
+                }
+                add_claim_by = ROOT
+            }
+        }
+    }
+}
+
+country_event = { #Somalia accepts Italianization
+    id = te_italy.6
+    title = te_italy.6.t
+    desc = te_italy.6.d
+    picture = GFX_report_event_gre_italian_troops
+
+    is_triggered_only = yes
+
+    option = { #Bueno
+        name = te_italy.6.a
+        
+        every_state = {
+            limit = {
+                is_core_of = SOM
+                NOT = { state = 268 }
+            }
+            custom_effect_tooltip = be_able_to_auto_core_tt
+            set_state_flag = be_able_to_auto_core
+        }
+    }
+}
+
+country_event = { #Eritrea revolts against Italianization
+    id = te_italy.7
+    title = te_italy.7.t
+    desc = te_italy.7.d
+    picture = GFX_report_event_gre_italian_troops
+
+    immediate = {
+        hidden_effect = {
+            set_country_flag = ERI_revolt
+            every_owned_state = {
+                limit = { is_core_of = ERI }
+                AOI = { start_resistance = ERI }
+                ERI = { transfer_state = PREV }
+            }
+            ERI = {
+				division_template = {
+				    name = "Resistance Fighters"
+					is_locked = yes
+					priority = 1
+					template_counter = 3
+					regiments = {
+						infantry = { x = 0 y = 0 }
+						infantry = { x = 0 y = 1 }
+						infantry = { x = 0 y = 2 }
+						infantry = { x = 1 y = 0 }
+						infantry = { x = 1 y = 1 }
+					}
+					is_locked = yes 
+				}
+				every_owned_state = {
+					limit = { is_core_of = ERI }
+					create_unit = { 
+						division = "name = \"Resistance Fighters\" division_template = \"Resistance Fighters\" start_experience_factor = 0.05 start_equipment_factor = 0.95" owner = ERI count = 2
+					}
+				}
+                set_politics = {
+                    ruling_party = democratic
+                    last_election = "1936.1.1"
+                    election_frequency = 48
+                    elections_allowed = yes
+                }
+                set_popularities = {
+                    democratic = 55
+                    fascism = 15
+                    communism = 5
+                    neutrality = 25
+                }
+                add_ideas = SFSTE_AOI_anti_italian_rebellion
+            }
+        }
+    }
+
+    is_triggered_only = yes
+
+    option = { #Let's a go
+        name = te_italy.7.a
+
+        declare_war_on = {
+            target = ERI
+            type = annex_everything
+        }
+        hidden_effect = {
+            every_state = {
+                limit = {
+                    is_owned_by = ERI
+                }
+                add_claim_by = ROOT
+            }
+        }
+    }
+}
+
+country_event = { #Eritrea accepts Italianization
+    id = te_italy.8
+    title = te_italy.8.t
+    desc = te_italy.8.d
+    picture = GFX_report_event_gre_italian_troops
+
+    is_triggered_only = yes
+
+    option = { #Bueno
+        name = te_italy.6.a
+        
+        every_state = {
+            limit = {
+                is_core_of = ERI
+            }
+            custom_effect_tooltip = be_able_to_auto_core_tt
+            set_state_flag = be_able_to_auto_core
+        }
+    }
+}
+
+country_event = { #Aussa revolts against Italianization
+    id = te_italy.9
+    title = te_italy.9.t
+    desc = te_italy.9.d
+    picture = GFX_report_event_gre_italian_troops
+
+    immediate = {
+        hidden_effect = {
+            set_country_flag = AFA_revolt
+            every_owned_state = {
+                limit = { 
+                    is_core_of = AFA 
+                    NOT = { state = 843 }
+                }
+                AOI = { start_resistance = AFA }
+                AFA = { transfer_state = PREV }
+            }
+            AFA = {
+				division_template = {
+				    name = "Resistance Fighters"
+					is_locked = yes
+					priority = 1
+					template_counter = 3
+					regiments = {
+						infantry = { x = 0 y = 0 }
+						infantry = { x = 0 y = 1 }
+						infantry = { x = 0 y = 2 }
+						infantry = { x = 1 y = 0 }
+						infantry = { x = 1 y = 1 }
+					}
+					is_locked = yes 
+				}
+				every_owned_state = {
+					limit = { is_core_of = AFA }
+					create_unit = { 
+						division = "name = \"Resistance Fighters\" division_template = \"Resistance Fighters\" start_experience_factor = 0.05 start_equipment_factor = 0.95" owner = AFA count = 2
+					}
+				}
+                set_politics = {
+                    ruling_party = neutrality
+                    last_election = "1936.1.1"
+                    election_frequency = 48
+                    elections_allowed = no
+                }
+                set_popularities = {
+                    democratic = 0
+                    fascism = 20
+                    communism = 5
+                    neutrality = 75
+                }
+                add_ideas = SFSTE_AOI_anti_italian_rebellion
+            }
+        }
+    }
+
+    is_triggered_only = yes
+
+    option = { #Let's a go
+        name = te_italy.7.a
+
+        declare_war_on = {
+            target = AFA
+            type = annex_everything
+        }
+        hidden_effect = {
+            every_state = {
+                limit = {
+                    is_owned_by = AFA
+                }
+                add_claim_by = ROOT
+            }
+        }
+    }
+}
+
+country_event = { #Aussa accepts Italianization
+    id = te_italy.10
+    title = te_italy.10.t
+    desc = te_italy.10.d
+    picture = GFX_report_event_gre_italian_troops
+
+    is_triggered_only = yes
+
+    option = { #Bueno
+        name = te_italy.6.a
+        
+        every_state = {
+            limit = {
+                is_core_of = AFA
+                NOT = { state = 843 }
+            }
+            custom_effect_tooltip = be_able_to_auto_core_tt
+            set_state_flag = be_able_to_auto_core
+        }
+    }
+}
+
+country_event = { #Amhara revolts against Italianization
+    id = te_italy.11
+    title = te_italy.11.t
+    desc = te_italy.11.d
+    picture = GFX_report_event_gre_italian_troops
+
+    immediate = {
+        hidden_effect = {
+            set_country_flag = QEM_revolt
+            every_owned_state = {
+                limit = { 
+                    is_core_of = QEM 
+                }
+                AOI = { start_resistance = QEM }
+                QEM = { transfer_state = PREV }
+            }
+            QEM = {
+				division_template = {
+				    name = "Resistance Fighters"
+					is_locked = yes
+					priority = 1
+					template_counter = 3
+					regiments = {
+						infantry = { x = 0 y = 0 }
+						infantry = { x = 0 y = 1 }
+						infantry = { x = 0 y = 2 }
+						infantry = { x = 1 y = 0 }
+						infantry = { x = 1 y = 1 }
+					}
+					is_locked = yes 
+				}
+				every_owned_state = {
+					limit = { is_core_of = QEM }
+					create_unit = { 
+						division = "name = \"Resistance Fighters\" division_template = \"Resistance Fighters\" start_experience_factor = 0.05 start_equipment_factor = 0.95" owner = QEM count = 2
+					}
+				}
+                set_politics = {
+                    ruling_party = neutrality
+                    last_election = "1936.1.1"
+                    election_frequency = 48
+                    elections_allowed = no
+                }
+                set_popularities = {
+                    democratic = 25
+                    fascism = 20
+                    communism = 5
+                    neutrality = 50
+                }
+                add_ideas = SFSTE_AOI_anti_italian_rebellion
+            }
+        }
+    }
+
+    is_triggered_only = yes
+
+    option = { #Let's a go
+        name = te_italy.7.a
+
+        declare_war_on = {
+            target = QEM
+            type = annex_everything
+        }
+        hidden_effect = {
+            every_state = {
+                limit = {
+                    is_owned_by = QEM
+                }
+                add_claim_by = ROOT
+            }
+        }
+    }
+}
+
+country_event = { #Amhara accepts Italianization
+    id = te_italy.12
+    title = te_italy.12.t
+    desc = te_italy.12.d
+    picture = GFX_report_event_gre_italian_troops
+
+    is_triggered_only = yes
+
+    option = { #Bueno
+        name = te_italy.6.a
+        
+        every_state = {
+            limit = {
+                is_core_of = QEM
+            }
+            custom_effect_tooltip = be_able_to_auto_core_tt
+            set_state_flag = be_able_to_auto_core
+        }
+    }
+}
+
+country_event = { #Galla-Sidamo revolts against Italianization
+    id = te_italy.13
+    title = te_italy.13.t
+    desc = te_italy.13.d
+    picture = GFX_report_event_gre_italian_troops
+
+    immediate = {
+        hidden_effect = {
+            set_country_flag = SID_revolt
+            every_owned_state = {
+                limit = { 
+                    is_core_of = SID 
+                }
+                AOI = { start_resistance = SID }
+                SID = { transfer_state = PREV }
+            }
+            SID = {
+				division_template = {
+				    name = "Resistance Fighters"
+					is_locked = yes
+					priority = 1
+					template_counter = 3
+					regiments = {
+						infantry = { x = 0 y = 0 }
+						infantry = { x = 0 y = 1 }
+						infantry = { x = 0 y = 2 }
+						infantry = { x = 1 y = 0 }
+						infantry = { x = 1 y = 1 }
+					}
+					is_locked = yes 
+				}
+				every_owned_state = {
+					limit = { is_core_of = SID }
+					create_unit = { 
+						division = "name = \"Resistance Fighters\" division_template = \"Resistance Fighters\" start_experience_factor = 0.05 start_equipment_factor = 0.95" owner = SID count = 2
+					}
+				}
+                set_politics = {
+                    ruling_party = neutrality
+                    last_election = "1936.1.1"
+                    election_frequency = 48
+                    elections_allowed = no
+                }
+                set_popularities = {
+                    democratic = 25
+                    fascism = 20
+                    communism = 5
+                    neutrality = 50
+                }
+                add_ideas = SFSTE_AOI_anti_italian_rebellion
+            }
+        }
+    }
+
+    is_triggered_only = yes
+
+    option = { #Let's a go
+        name = te_italy.7.a
+
+        declare_war_on = {
+            target = SID
+            type = annex_everything
+        }
+        hidden_effect = {
+            every_state = {
+                limit = {
+                    is_owned_by = SID
+                }
+                add_claim_by = ROOT
+            }
+        }
+    }
+}
+
+country_event = { #Galla-Sidamo accepts Italianization
+    id = te_italy.14
+    title = te_italy.14.t
+    desc = te_italy.14.d
+    picture = GFX_report_event_gre_italian_troops
+
+    is_triggered_only = yes
+
+    option = { #Bueno
+        name = te_italy.6.a
+        
+        every_state = {
+            limit = {
+                is_core_of = SID
+            }
+            custom_effect_tooltip = be_able_to_auto_core_tt
+            set_state_flag = be_able_to_auto_core
+        }
+    }
+}
+
+country_event = { #The surrender of Shewa
+    id = te_italy.15
+    title = te_italy.15.t
+    desc = te_italy.15.d
+    picture = GFX_report_event_gre_italian_troops
+
+    is_triggered_only = yes
+
+    trigger = {
+        has_country_leader = {
+            character = AOI_prince_amedeo
+            ruling_only = yes
+        }
+    }
+
+    option = { #Amedeo has been captured
+        name = te_italy.15.a
+        
+        retire_character = AOI_prince_amedeo #Permanently removes him
+        retire_character = AOI_giuseppe_daodice #Permanently removes him
+        retire_character = AOI_agenore_frangipani #Permanently removes him - he commits suicide
+        retire_character = AOI_gustavo_pesenti #He suggested the idea of surrender to Prince Amedeo
+		AOI_pietro_gazzera = {
+			add_country_leader_role = {
+				promote_leader = yes
+                country_leader = {
+                    ideology = fascism_ideology
+                    traits = { cornered_fox }
+                    expire = "1965.1.1.1"
+                    id = -1
+                }
+			}	
+			add_country_leader_role = {
+				promote_leader = yes
+                country_leader = {
+                    ideology = despotism
+                    traits = { cornered_fox }
+                    expire = "1965.1.1.1"
+                    id = -1
+                }
+			}
+            remove_advisor_role = {
+                slot = political_advisor
+            }	
+        }
+    }
+}
+
+country_event = { #Gazzera sacked
+    id = te_italy.16
+    title = te_italy.16.t
+    desc = te_italy.16.d
+    picture = GFX_report_event_gre_italian_troops
+
+    fire_only_once = yes
+
+    trigger = {
+        tag = AOI
+        NOT = {
+            controls_state = 271
+            has_full_control_of_state = 837
+            has_full_control_of_state = 838
+            has_full_control_of_state = 839
+        }
+    }
+
+	mean_time_to_happen = {
+		days = 1
+	}
+
+    option = { #Another loss
+        name = te_italy.15.a
+        
+        retire_character = AOI_pietro_gazzera #Permanently removes him
+		AOI_guglielmo_nasi = {
+			add_country_leader_role = {
+				promote_leader = yes
+                country_leader = {
+                    ideology = fascism_ideology
+                    traits = { AOI_last_hope }
+                    expire = "1965.1.1.1"
+                    id = -1
+                }
+			}	
+			add_country_leader_role = {
+				promote_leader = yes
+                country_leader = {
+                    ideology = despotism
+                    traits = { AOI_last_hope }
+                    expire = "1965.1.1.1"
+                    id = -1
+                }
+			}
+        }
+    }
+}
+
+country_event = { #House of Savoy flees to Sardinia
+    id = te_italy.17
+    title = te_italy.17.t
+    desc = te_italy.17.d
+    picture = GFX_report_event_gre_italian_troops
+
+    fire_only_once = yes
+
+    is_triggered_only = yes
+
+    immediate = {
+        hidden_effect = {
+            SPM = {
+                set_cosmetic_tag = SPM_sardinia
+                transfer_state = 114
+                set_party_name = {
+                    ideology = neutrality
+                    long_name = SPI_casa
+                    name = SPI_casa
+                }
+                set_party_name = {
+                    ideology = fascism
+                    long_name = ITA_fascism_party_long
+                    name = ITA_fascism_party
+                }
+            }
+            every_state = {
+                limit = {
+                    NOT = { is_core_of = SPM }
+                    is_core_of = ITA
+                }
+                add_claim_by = SPM
+            }
+            every_country_with_original_tag = {
+                original_tag_to_check = ITA
+                every_character = {
+                    limit = {
+                        OR = {
+                            is_character = ITA_vittorio_emanuele_iii
+                            is_character = ITA_prince_adalberto
+                            is_character = ITA_prince_aimone
+                            is_character = ITA_prince_filiberto
+                            is_character = ITA_prince_umberto
+                        }
+                    }
+                    set_nationality = SPM
+                }
+            }
+            SPM = {
+				load_focus_tree = sardinia_exiles_focus_tree
+                #set_character_name = {
+                #    character = ITA_prince_umberto
+                #    name = ITA_prince_umberto_king
+                #}
+                #ITA_prince_umberto = {
+                #    add_country_leader_role = {
+                #        promote_leader = yes
+                #        country_leader = {
+                #            ideology = despotism
+                #            traits = { inexperienced_monarch eager_commander ITA_vengeful_exile }
+                #            expire = "1965.1.1.1"
+                #            id = -1
+                #        }
+		        #    }
+                #}
+                ITA_vittorio_emanuele_iii = {
+                    add_country_leader_role = {
+                        promote_leader = yes
+                        country_leader = {
+                            ideology = despotism
+                            traits = { the_soldier_king }
+                            expire = "1965.1.1.1"
+                            id = -1
+                        }
+		            }
+                }
+            }
+        }
+    }
+
+    option = { #Restrain the military from going
+        name = te_italy.17.a
+        
+        add_ideas = ITA_disgruntled_military
+    }
+}
+
+country_event = { #Negotiations with fascists?
+    id = te_italy.18
+    title = te_italy.18.t
+    desc = te_italy.18.d
+    picture = GFX_report_event_gre_italian_troops
+
+    fire_only_once = yes
+
+    is_triggered_only = yes
+
+    option = { #Sure
+        name = te_italy.18.a
+    }
+
+    option = { #No.
+        name = te_italy.18.b
+        set_country_flag = SPM_negotiations_fail
+    }
+}
+
+### LOCAL RULERS FOR AOI
+# Local Rulers Approach Italian Officials - Haile Selassie Gugsa (Addis Ababa) - event for AOI
+unit_leader_event = {
+	id = te_aoi_local.1
+	title = BBA_italy_local_rulers.1.t
+	desc = BBA_italy_local_rulers.1.desc
+	picture = GFX_report_event_mussolini_hotel
+	
+	is_triggered_only = yes
+
+	# Concessions
+	option = { 
+		name = BBA_italy_local_rulers.1.a
+		ai_chance = {
+			base = 10
+			modifier = {
+				factor = 10
+				OR = {
+					271 = { compliance < 50 }
+					837 = { compliance < 50 }
+				}
+			}
+		}
+		
+		add_political_power = -15
+		if = {
+			limit = {
+				271 = {
+					is_fully_controlled_by = AOI
+					has_resistance = yes
+				}
+			}
+			271 = {
+				add_compliance = 10
+				add_resistance = 5
+			}
+		}
+		if = {
+			limit = {
+				837 = {
+					is_fully_controlled_by = AOI
+					has_resistance = yes
+				}
+			}
+			837 = {
+				add_compliance = 10
+				add_resistance = 5
+			}
+		}
+
+		#Ruler joins Italy as General
+		if = {
+			limit = {
+				country_exists = ETH
+			}
+			hidden_effect = {
+				FROM = { retire_character = ITA_haile_selassie_gugsa_doppleganger }
+			}
+			ETH = {
+				ETH_haile_selassie_gugsa = {
+					demote_leader = yes
+					if = {
+						limit = {
+							is_advisor = yes
+						}
+						remove_any_country_role_from_character = yes
+					}
+					set_nationality = AOI
+				}
+			}
+		}
+		else = {
+			show_unit_leaders_tooltip = ITA_haile_selassie_gugsa_doppleganger
+			hidden_effect = {
+				FROM = { retire_character = ITA_haile_selassie_gugsa_doppleganger }
+				for_each_scope_loop = {
+					array = global.countries
+					if = {
+						limit = {
+							original_tag = ETH
+							has_character = ETH_haile_selassie_gugsa
+						}
+						ETH_haile_selassie_gugsa = {
+							demote_leader = yes
+							if = {
+								limit = {
+									is_advisor = yes
+								}
+								remove_any_country_role_from_character = yes
+							}
+							set_nationality = AOI
+						}
+					}
+				}
+			}
+		}
+
+		#Send next event
+		hidden_effect = {
+			if = {
+				limit = {
+					OR = {
+						838 = {
+							is_fully_controlled_by = AOI
+						}
+						839 = {
+							is_fully_controlled_by = AOI
+						}
+					}
+				}
+				ITA_abba_jofir_doppleganger = { unit_leader_event = { id = te_aoi_local.2 days = 30 random_days = 10 } }
+			}
+			else_if = {
+				limit = {
+					OR = {
+						840 = {
+							is_fully_controlled_by = AOI
+						}
+						841 = {
+							is_fully_controlled_by = AOI
+						}
+					}
+				}
+				ITA_hailu_tekle_haymanot_doppleganger = { unit_leader_event = { id = te_aoi_local.3 days = 30 random_days = 10 } }
+			}
+			else_if = {
+				limit = {
+					OR = {
+						842 = {
+							is_fully_controlled_by = AOI
+						}
+						843 = {
+							is_fully_controlled_by = AOI
+						}
+					}
+				}
+				ITA_seyoum_mengesha_doppleganger = { unit_leader_event = { id = te_aoi_local.4 days = 30 random_days = 10 } }
+			}
+			else = {
+				custom_effect_tooltip = ITA_ends_event_chain_tt
+			}
+		}
+	}
+
+	# Nej tack
+	option = { 
+		name = BBA_italy_local_rulers.1.c
+		ai_chance = {
+			base = 10
+		}
+		
+		if = {
+			limit = {
+				271 = {
+					is_fully_controlled_by = AOI
+					has_resistance = yes
+				}
+			}
+			271 = {
+				add_resistance = -5
+			}
+		}
+		if = {
+			limit = {
+				837 = {
+					is_fully_controlled_by = AOI
+					has_resistance = yes
+				}
+			}
+			837 = {
+				add_resistance = -5
+			}
+		}
+
+		#Send next event
+		hidden_effect = {
+			if = {
+				limit = {
+					OR = {
+						838 = {
+							is_fully_controlled_by = AOI
+						}
+						839 = {
+							is_fully_controlled_by = AOI
+						}
+					}
+				}
+				ITA_abba_jofir_doppleganger = { unit_leader_event = { id = te_aoi_local.2 days = 30 random_days = 10 } }
+			}
+			else_if = {
+				limit = {
+					OR = {
+						840 = {
+							is_fully_controlled_by = AOI
+						}
+						841 = {
+							is_fully_controlled_by = AOI
+						}
+					}
+				}
+				ITA_hailu_tekle_haymanot_doppleganger = { unit_leader_event = { id = te_aoi_local.3 days = 30 random_days = 10 } }
+			}
+			else_if = {
+				limit = {
+					OR = {
+						842 = {
+							is_fully_controlled_by = AOI
+						}
+						843 = {
+							is_fully_controlled_by = AOI
+						}
+					}
+				}
+				ITA_seyoum_mengesha_doppleganger = { unit_leader_event = { id = te_aoi_local.4 days = 30 random_days = 10 } }
+			}
+			else = {
+				custom_effect_tooltip = ITA_ends_event_chain_tt
+			}
+		}
+	}
+
+	# NO TO ALL
+	option = { 
+		name = BBA_italy_local_rulers.1.d
+		ai_chance = {
+			base = 0
+		}
+		
+		every_controlled_state = { #Reduce resistance in all future states affected by the event chain (Somali cores in ETH are excluded)
+			limit = {
+				is_core_of = ETH
+				is_fully_controlled_by = AOI
+				NOT = { state = 835 } #HARARGHE
+				NOT = { state = 836 } #BALE
+			}
+			add_resistance = -5
+		}
+
+		custom_effect_tooltip = ITA_ends_event_chain_tt
+	}
+}
+
+# Local Rulers Approach Italian Officials - Abba Jofir (Illubabor-Kaffa) - event for AOI
+unit_leader_event = {
+	id = te_aoi_local.2
+	title = BBA_italy_local_rulers.2.t
+	desc = BBA_italy_local_rulers.2.desc
+	picture = GFX_report_event_mussolini_hotel
+	
+	is_triggered_only = yes
+
+	# Concessions
+	option = { 
+		name = BBA_italy_local_rulers.2.a
+		ai_chance = {
+			base = 10
+			modifier = {
+				factor = 10
+				OR = {
+					838 = { compliance < 50 }
+					839 = { compliance < 50 }
+				}
+			}
+		}
+		
+		add_political_power = -15
+		if = {
+			limit = {
+				838 = {
+					is_fully_controlled_by = AOI
+					has_resistance = yes
+				}
+			}
+			838 = {
+				add_compliance = 10
+				add_resistance = 5
+			}
+		}
+		if = {
+			limit = {
+				839 = {
+					is_fully_controlled_by = AOI
+					has_resistance = yes
+				}
+			}
+			839 = {
+				add_compliance = 10
+				add_resistance = 5
+			}
+		}
+
+		#Ruler joins Italy as General
+		if = {
+			limit = {
+				country_exists = ETH
+			}
+			hidden_effect = {
+				FROM = { retire_character = ITA_abba_jofir_doppleganger }
+			}
+			ETH = {
+				ETH_abba_jofir = {
+					demote_leader = yes
+					if = {
+						limit = {
+							is_advisor = yes
+						}
+						remove_any_country_role_from_character = yes
+					}
+					set_nationality = AOI
+				}
+			}
+		}
+		else = {
+			show_unit_leaders_tooltip = ITA_abba_jofir_doppleganger
+
+			hidden_effect = {
+				FROM = { retire_character = ITA_abba_jofir_doppleganger }
+				for_each_scope_loop = {
+					array = global.countries
+
+					if = {
+						limit = {
+							original_tag = ETH
+							has_character = ETH_abba_jofir
+						}
+						ETH_abba_jofir = {
+							demote_leader = yes
+							if = {
+								limit = {
+									is_advisor = yes
+								}
+								remove_any_country_role_from_character = yes
+							}
+							set_nationality = AOI
+						}
+					}
+				}
+			}
+		}
+
+		#Send next event
+		hidden_effect = {
+			if = {
+				limit = {
+					OR = {
+						840 = {
+							is_fully_controlled_by = AOI
+						}
+						841 = {
+							is_fully_controlled_by = AOI
+						}
+					}
+				}
+				ITA_hailu_tekle_haymanot_doppleganger = { unit_leader_event = { id = te_aoi_local.3 days = 30 random_days = 10 } }
+			}
+			else_if = {
+				limit = {
+					OR = {
+						842 = {
+							is_fully_controlled_by = AOI
+						}
+						843 = {
+							is_fully_controlled_by = AOI
+						}
+					}
+				}
+				ITA_seyoum_mengesha_doppleganger = { unit_leader_event = { id = te_aoi_local.4 days = 30 random_days = 10 } }
+			}
+			else = {
+				custom_effect_tooltip = ITA_ends_event_chain_tt
+			}
+		}
+	}
+
+	# Nej tack
+	option = { 
+		name = BBA_italy_local_rulers.2.c
+		ai_chance = {
+			base = 10
+		}
+		
+		if = {
+			limit = {
+				838 = {
+					is_fully_controlled_by = AOI
+					has_resistance = yes
+				}
+			}
+			838 = {
+				add_resistance = -5
+			}
+		}
+		if = {
+			limit = {
+				839 = {
+					is_fully_controlled_by = AOI
+					has_resistance = yes
+				}
+			}
+			839 = {
+				add_resistance = -5
+			}
+		}
+
+		#Send next event
+		hidden_effect = {
+			if = {
+				limit = {
+					OR = {
+						840 = {
+							is_fully_controlled_by = AOI
+						}
+						841 = {
+							is_fully_controlled_by = AOI
+						}
+					}
+				}
+				ITA_hailu_tekle_haymanot_doppleganger = { unit_leader_event = { id = te_aoi_local.3 days = 30 random_days = 10 } }
+			}
+			else_if = {
+				limit = {
+					OR = {
+						842 = {
+							is_fully_controlled_by = AOI
+						}
+						843 = {
+							is_fully_controlled_by = AOI
+						}
+					}
+				}
+				ITA_seyoum_mengesha_doppleganger = { unit_leader_event = { id = te_aoi_local.4 days = 30 random_days = 10 } }
+			}
+			else = {
+				custom_effect_tooltip = ITA_ends_event_chain_tt
+			}
+		}
+	}
+
+	# NO TO ALL
+	option = { 
+		name = BBA_italy_local_rulers.2.d
+		ai_chance = {
+			base = 0
+		}
+		
+		every_controlled_state = { #Reduce resistance in all future states affected by the event chain (Somali cores in ETH are excluded)
+			limit = {
+				is_core_of = ETH
+				is_fully_controlled_by = AOI
+				NOT = { state = 835 } #HARARGHE
+				NOT = { state = 836 } #BALE
+				NOT = { state = 271 } #SHEWA (already handled in previous event)
+				NOT = { state = 837 } #SIDAMO (already handled in previous event)
+			}
+			add_resistance = -5
+		}
+
+		custom_effect_tooltip = ITA_ends_event_chain_tt
+	}
+}
+
+# Local Rulers Approach Italian Officials - Hailu Tekle Haymanot (Gojjam) - event for AOI
+unit_leader_event = {
+	id = te_aoi_local.3
+	title = BBA_italy_local_rulers.3.t
+	desc = BBA_italy_local_rulers.3.desc
+	picture = GFX_report_event_mussolini_hotel
+	
+	is_triggered_only = yes
+
+	# Concessions
+	option = { 
+		name = BBA_italy_local_rulers.3.a
+		ai_chance = {
+			base = 10
+			modifier = {
+				factor = 10
+				OR = {
+					840 = { compliance < 50 }
+					841 = { compliance < 50 }
+				}
+			}
+		}
+		
+		add_political_power = -15
+		if = {
+			limit = {
+				840 = {
+					is_fully_controlled_by = AOI
+					has_resistance = yes
+				}
+			}
+			840 = {
+				add_compliance = 10
+				add_resistance = 5
+			}
+		}
+		if = {
+			limit = {
+				841 = {
+					is_fully_controlled_by = AOI
+					has_resistance = yes
+				}
+			}
+			841 = {
+				add_compliance = 10
+				add_resistance = 5
+			}
+		}
+
+		#Ruler joins Italy as General
+		if = {
+			limit = {
+				country_exists = ETH
+			}
+			hidden_effect = {
+				FROM = { retire_character = ITA_hailu_tekle_haymanot_doppleganger }
+			}
+			ETH = {
+				ETH_hailu_tekle_haymanot = {
+					demote_leader = yes
+					if = {
+						limit = {
+							is_advisor = yes
+						}
+						remove_any_country_role_from_character = yes
+					}
+					set_nationality = AOI
+				}
+			}
+		}
+		else = {
+			show_unit_leaders_tooltip = ITA_hailu_tekle_haymanot_doppleganger
+			hidden_effect = {
+				FROM = { retire_character = ITA_hailu_tekle_haymanot_doppleganger }
+				for_each_scope_loop = {
+					array = global.countries
+
+					if = {
+						limit = {
+							original_tag = ETH
+							has_character = ETH_hailu_tekle_haymanot
+						}
+						ETH_hailu_tekle_haymanot = {
+							demote_leader = yes
+							if = {
+								limit = {
+									is_advisor = yes
+								}
+								remove_any_country_role_from_character = yes
+							}
+							set_nationality = AOI
+						}
+					}
+				}
+			}
+		}
+
+		#Send next event
+		hidden_effect = {
+			if = {
+				limit = {
+					OR = {
+						842 = {
+							is_fully_controlled_by = AOI
+						}
+						843 = {
+							is_fully_controlled_by = AOI
+						}
+					}
+				}
+				ITA_seyoum_mengesha_doppleganger = { unit_leader_event = { id = te_aoi_local.4 days = 30 random_days = 10 } }
+			}
+			else = {
+				custom_effect_tooltip = ITA_ends_event_chain_tt
+			}
+		}
+	}
+
+	# Nej tack
+	option = { 
+		name = BBA_italy_local_rulers.3.c
+		ai_chance = {
+			base = 10
+		}
+		
+		if = {
+			limit = {
+				840 = {
+					is_fully_controlled_by = AOI
+					has_resistance = yes
+				}
+			}
+			840 = {
+				add_resistance = -5
+			}
+		}
+		if = {
+			limit = {
+				841 = {
+					is_fully_controlled_by = AOI
+					has_resistance = yes
+				}
+			}
+			841 = {
+				add_resistance = -5
+			}
+		}
+
+		#Send next event
+		hidden_effect = {
+			if = {
+				limit = {
+					OR = {
+						842 = {
+							is_fully_controlled_by = AOI
+						}
+						843 = {
+							is_fully_controlled_by = AOI
+						}
+					}
+				}
+				ITA_seyoum_mengesha_doppleganger = { unit_leader_event = { id = te_aoi_local.4 days = 30 random_days = 10 } }
+			}
+			else = {
+				custom_effect_tooltip = ITA_ends_event_chain_tt
+			}
+		}
+	}
+
+	# NO TO ALL
+	option = { 
+		name = BBA_italy_local_rulers.3.d
+		ai_chance = {
+			base = 0
+		}
+		
+		every_controlled_state = { #Reduce resistance in all future states affected by the event chain (Somali cores in ETH are excluded)
+			limit = {
+				is_core_of = ETH
+				is_fully_controlled_by = AOI
+				NOT = { state = 835 } #HARARGHE
+				NOT = { state = 836 } #BALE
+				NOT = { state = 271 } #SHEWA (already handled in previous event)
+				NOT = { state = 837 } #SIDAMO (already handled in previous event)
+				NOT = { state = 838 } #ILLUBABOR-KAFFA (already handled in previous event)
+				NOT = { state = 839 } #WELEGA (already handled in previous event)
+			}
+			add_resistance = -5
+		}
+
+		custom_effect_tooltip = ITA_ends_event_chain_tt
+	}
+}
+
+# Local Rulers Approach Italian Officials - Seyoum Mengesha (Tigray) - event for AOI
+unit_leader_event = {
+	id = te_aoi_local.4
+	title = BBA_italy_local_rulers.4.t
+	desc = BBA_italy_local_rulers.4.desc
+	picture = GFX_report_event_mussolini_hotel
+	
+	is_triggered_only = yes
+
+	# Concessions
+	option = { 
+		name = BBA_italy_local_rulers.4.a
+		ai_chance = {
+			base = 10
+			modifier = {
+				factor = 10
+				OR = {
+					842 = { compliance < 50 }
+					843 = { compliance < 50 }
+				}
+			}
+		}
+		
+		add_political_power = -15
+		if = {
+			limit = {
+				842 = {
+					is_fully_controlled_by = AOI
+					has_resistance = yes
+				}
+			}
+			842 = {
+				add_compliance = 10
+				add_resistance = 5
+			}
+		}
+		if = {
+			limit = {
+				843 = {
+					is_fully_controlled_by = AOI
+					has_resistance = yes
+				}
+			}
+			843 = {
+				add_compliance = 10
+				add_resistance = 5
+			}
+		}
+
+		#Ruler joins Italy as General
+		if = {
+			limit = {
+				country_exists = ETH
+			}
+			log = "ETH exists"
+			hidden_effect = {
+				FROM = { retire_character = ITA_seyoum_mengesha_doppleganger }
+			}
+			ETH = {
+				ETH_seyoum_mengesha = {
+					if = {
+						limit = {
+							is_advisor = yes
+						}
+						remove_any_country_role_from_character = yes
+					}
+					set_nationality = AOI
+				}
+			}
+		}
+		else = {
+			log = "ETH is gone"
+			show_unit_leaders_tooltip = ITA_seyoum_mengesha_doppleganger
+			hidden_effect = {
+				FROM = { retire_character = ITA_seyoum_mengesha_doppleganger }
+				for_each_scope_loop = {
+					array = global.countries
+
+					if = {
+						limit = {
+							original_tag = ETH
+							has_character = ETH_seyoum_mengesha
+						}
+						ETH_seyoum_mengesha = {
+							if = {
+								limit = {
+									is_advisor = yes
+								}
+								remove_any_country_role_from_character = yes
+							}
+							set_nationality = AOI
+						}
+					}
+				}
+			}
+		}
+
+		custom_effect_tooltip = ITA_ends_event_chain_tt
+	}
+
+	# Nej tack
+	option = { 
+		name = BBA_italy_local_rulers.4.c
+		ai_chance = {
+			base = 10
+		}
+		
+		if = {
+			limit = {
+				842 = {
+					is_fully_controlled_by = AOI
+					has_resistance = yes
+				}
+			}
+			842 = {
+				add_resistance = -5
+			}
+		}
+		if = {
+			limit = {
+				843 = {
+					is_fully_controlled_by = AOI
+					has_resistance = yes
+				}
+			}
+			843 = {
+				add_resistance = -5
+			}
+		}
+
+		custom_effect_tooltip = ITA_ends_event_chain_tt
+	}
+}

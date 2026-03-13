@@ -1,0 +1,5037 @@
+
+focus_tree = {
+	id = italian_east_africa_focus
+	
+	country = {
+		factor = 0
+		
+		modifier = {
+			add = 10
+			tag = AOI
+		}
+	}
+	
+	default = no
+
+    continuous_focus_position = { x = 0 y = 1250 }
+
+    focus = {
+        id = AOI_industry_effort
+        icon = GFX_goal_generic_production
+        x = 8
+        y = 0
+        cost = 10
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = industrial_bonus
+				bonus = 1.0
+				uses = 1
+				category = industry
+			}
+		}
+        ai_will_do = {
+            factor = 10
+        }
+    }
+
+	focus = {
+		id = AOI_develop_eritrea
+        text = ITA_develop_eritrea
+		icon = GFX_focus_generic_develop_eritrea
+		prerequisite = { focus = AOI_industry_effort }
+
+		x = -8
+		y = 1
+		relative_position_id = AOI_industry_effort
+		cost = 5
+		available = {
+			550 = {	is_fully_controlled_by = ROOT }
+		}
+
+		search_filters = {FOCUS_FILTER_INDUSTRY}
+
+		completion_reward = {
+			550 = { #ERITREA
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+				add_compliance = 10
+				add_extra_state_shared_building_slots = 1
+				add_dynamic_modifier = {
+					modifier = AOI_develop_eritrea
+					scope = AOI
+					days = 720
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = AOI_the_industrial_center
+		icon = GFX_focus_generic_modernize_industry
+		prerequisite = { focus = AOI_develop_eritrea }
+
+
+		y = 1
+		relative_position_id = AOI_develop_eritrea
+		cost = 10
+		available = {
+			550 = {	is_fully_controlled_by = ROOT }
+		}
+
+		search_filters = {FOCUS_FILTER_INDUSTRY}
+
+		completion_reward = {
+			550 = { #ERITREA
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+				add_extra_state_shared_building_slots = 3
+			}
+		}
+	}
+
+	focus = {
+		id = AOI_electrifying_eritrea
+		icon = GFX_focus_ARG_develop_the_electricity_sector
+		prerequisite = { focus = AOI_the_industrial_center }
+
+		x = -2
+		y = 1
+		relative_position_id = AOI_the_industrial_center
+		cost = 5
+		available = {
+			550 = {	is_fully_controlled_by = ROOT }
+		}
+
+		search_filters = {FOCUS_FILTER_INDUSTRY}
+
+		completion_reward = {
+			550 = { #ERITREA
+				add_dynamic_modifier = {
+					modifier = AOI_electrifying_eritrea
+					scope = AOI
+				}
+				add_extra_state_shared_building_slots = 2
+			}
+		}
+	}
+
+	focus = {
+		id = AOI_mechanical_industry
+		icon = GFX_focus_generic_industry_3
+		prerequisite = { focus = AOI_electrifying_eritrea }
+
+
+		y = 1
+		relative_position_id = AOI_electrifying_eritrea
+		cost = 10
+		available = {
+			OR = {
+				550 = {	is_fully_controlled_by = ROOT }
+				any_subject_country = {
+					has_full_control_of_state = 550
+				}
+			}
+		}
+
+		search_filters = {FOCUS_FILTER_INDUSTRY}
+
+		completion_reward = {
+			550 = { #ERITREA
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+				add_extra_state_shared_building_slots = 2
+			}
+			add_tech_bonus = {
+				bonus = 1
+				uses = 2
+				category = electronics
+			}
+		}
+	}
+
+	focus = {
+		id = AOI_little_rome
+		icon = GFX_focus_ITA_italian_irredentism
+		prerequisite = { focus = AOI_the_industrial_center }
+
+
+		y = 1
+		relative_position_id = AOI_the_industrial_center
+		cost = 5
+		available = {
+			OR = {
+				550 = {	is_fully_controlled_by = ROOT }
+				any_subject_country = {
+					has_full_control_of_state = 550
+				}
+			}
+		}
+
+		search_filters = {FOCUS_FILTER_INDUSTRY}
+
+		completion_reward = {
+			550 = {
+				add_victory_points = {
+					province = 13250
+					value = 2
+				}
+				set_state_category = town
+				effect_tooltip = {
+					add_extra_state_shared_building_slots = 2
+				}
+			}
+			add_manpower = 50000
+		}
+	}
+
+	focus = {
+		id = AOI_massaua_port
+		icon = GFX_goal_generic_construct_naval_dockyard
+		prerequisite = { focus = AOI_little_rome }
+
+
+		y = 1
+		relative_position_id = AOI_little_rome
+		cost = 5
+		available = {
+			OR = {
+				550 = {	is_fully_controlled_by = ROOT }
+				any_subject_country = {
+					has_full_control_of_state = 550
+				}
+			}
+		}
+
+		search_filters = {FOCUS_FILTER_INDUSTRY}
+
+		completion_reward = {
+			550 = {
+				add_building_construction = {
+					type = naval_base
+					level = 2
+					instant_build = yes
+					province = 12766
+				}
+				add_building_construction = {
+					type = dockyard
+					level = 1
+					instant_build = yes
+				}
+				add_extra_state_shared_building_slots = 1
+			}
+			navy_experience = 50
+		}
+	}
+
+	focus = {
+		id = AOI_agricultural_reforms
+		icon = GFX_focus_generic_agricultural_subsidies
+		prerequisite = { focus = AOI_the_industrial_center }
+
+		x = 2
+		y = 1
+		relative_position_id = AOI_the_industrial_center
+		cost = 5
+		available = {
+			OR = {
+				550 = {	is_fully_controlled_by = ROOT }
+				any_subject_country = {
+					has_full_control_of_state = 550
+				}
+			}
+		}
+
+		search_filters = {FOCUS_FILTER_INDUSTRY}
+
+		completion_reward = {
+			550 = {
+				add_dynamic_modifier = {
+					modifier = AOI_agricultural_reforms
+					scope = AOI
+				}
+				add_extra_state_shared_building_slots = 2
+			}
+			add_timed_idea = {
+				idea = AOI_agricultural_reforms
+				days = 720
+			}
+		}
+	}
+
+	focus = {
+		id = AOI_coffee_exports
+		icon = GFX_focus_generic_coffee
+		prerequisite = { focus = AOI_agricultural_reforms }
+
+
+		y = 1
+		relative_position_id = AOI_agricultural_reforms
+		cost = 10
+		available = {
+			OR = {
+				550 = {	is_fully_controlled_by = ROOT }
+				any_subject_country = {
+					has_full_control_of_state = 550
+				}
+			}
+		}
+
+		search_filters = {FOCUS_FILTER_INDUSTRY}
+
+		completion_reward = {
+			add_offsite_building = {
+				type = industrial_complex
+				level = 2
+			}
+			if = {
+				limit = {
+					has_idea = AOI_agricultural_reforms
+				}
+				modify_timed_idea = {
+					idea = AOI_agricultural_reforms
+					days = 360
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = AOI_model_governorate
+		icon = GFX_focus_generic_self_management
+		prerequisite = { focus = AOI_mechanical_industry }
+		prerequisite = { focus = AOI_massaua_port }
+		prerequisite = { focus = AOI_coffee_exports }
+		y = 1
+		relative_position_id = AOI_massaua_port
+		cost = 10
+		available = {
+			OR = {
+				550 = {	is_fully_controlled_by = ROOT }
+				any_subject_country = {
+					has_full_control_of_state = 550
+				}
+			}
+		}
+
+		search_filters = {FOCUS_FILTER_INDUSTRY}
+
+		completion_reward = {
+			add_ideas = AOI_model_governorate
+			hidden_effect = {
+				every_controlled_state = {
+					limit = {
+						region = 273
+						NOT = {
+							state = 843
+							state = 550
+						}
+					}
+					add_dynamic_modifier = { 
+						modifier = AOI_model_governorate_state 
+						scope = AOI
+					}
+				}
+				550 = {
+					remove_dynamic_modifier = {
+						modifier = AOI_electrifying_eritrea
+						scope = AOI 
+					}
+					remove_dynamic_modifier = {
+						modifier = AOI_agricultural_reforms
+						scope = AOI 
+					}
+					add_dynamic_modifier = { 
+						modifier = AOI_model_governorate_eritrea 
+						scope = AOI
+					}
+				}
+			}
+		}
+	}
+
+	focus = {
+        id = AOI_develop_ethiopia
+		text = ITA_develop_ethiopia
+		icon = GFX_focus_generic_develop_ethiopia
+		prerequisite = { focus = AOI_industry_effort }
+
+		y = 1
+		relative_position_id = AOI_industry_effort
+		cost = 5
+		available = {
+			any_controlled_state = {
+				OR = {
+					is_core_of = ETH
+					custom_trigger_tooltip = {
+						tooltip = joshua_in_canaan_done
+						has_state_flag = yes_this_is_ETH_core
+					}
+				}
+				is_fully_controlled_by = ROOT
+			}
+		}
+
+		search_filters = {FOCUS_FILTER_INDUSTRY}
+
+		completion_reward = {
+			if = {
+				limit = {
+					NOT = {
+						any_controlled_state = {
+							is_core_of = ETH
+							is_fully_controlled_by = ROOT
+						}
+						any_subject_country = { #FOR PUPPETS
+							any_controlled_state = {
+								is_core_of = ETH
+								is_fully_controlled_by = PREV
+							}
+						}
+					}
+				}
+				custom_effect_tooltip = ITA_develop_ethiopia_tt
+			}
+
+			if = {
+				limit = {
+					271 = { #SHEWA (Addis Ababa)
+						OR = {
+							is_fully_controlled_by = ROOT
+							controller = {
+								is_subject_of = ROOT
+								has_full_control_of_state = PREV
+							}
+						}
+					}
+				}
+				271 = { #SHEWA (Addis Ababa)
+					add_building_construction = {
+						type = infrastructure
+						level = 1
+						instant_build = yes
+					}
+					add_extra_state_shared_building_slots = 1
+				}
+			}
+			else_if = {
+				limit = {
+					ROOT = {
+						any_controlled_state = {
+							is_core_of = ETH
+							is_fully_controlled_by = ROOT
+						}
+					}
+				}
+				ROOT = {
+					random_controlled_state = {
+						prioritize = { 835 } #HARARGHE
+						limit = {
+							is_core_of = ETH
+							is_fully_controlled_by = ROOT
+						}
+						add_building_construction = {
+							type = infrastructure
+							level = 1
+							instant_build = yes
+						}
+						add_extra_state_shared_building_slots = 1
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					any_subject_country = { #FOR PUPPETS
+						any_controlled_state = {
+							is_core_of = ETH
+							is_fully_controlled_by = PREV
+						}
+					}
+				}
+				random_other_country = {
+					limit = {
+						is_subject_of = ROOT
+						any_controlled_state = {
+							is_core_of = ETH
+							is_fully_controlled_by = PREV
+						}
+					}
+					random_controlled_state = {
+						prioritize = { 835 } #HARARGHE
+						limit = {
+							is_core_of = ETH
+							is_fully_controlled_by = PREV
+						}
+						add_building_construction = {
+							type = infrastructure
+							level = 1
+							instant_build = yes
+						}
+						add_extra_state_shared_building_slots = 1
+					}
+				}
+			}
+			if = {
+				limit = {
+					843 = { #WELLO
+						OR = {
+							is_fully_controlled_by = ROOT
+							controller = {
+								is_subject_of = ROOT
+								has_full_control_of_state = PREV
+							}
+						}
+					}
+				}
+				843 = { #WELLO
+					add_building_construction = {
+						type = infrastructure
+						level = 1
+						instant_build = yes
+					}
+					add_extra_state_shared_building_slots = 1
+				}
+			}
+			else_if = {
+				limit = {
+					ROOT = {
+						any_controlled_state = {
+							is_core_of = ETH
+							is_fully_controlled_by = ROOT
+						}
+					}
+				}
+				ROOT = {
+					random_controlled_state = {
+						prioritize = { 837 } #SIDAMO
+						limit = {
+							is_core_of = ETH
+							is_fully_controlled_by = ROOT
+						}
+						set_state_flag = ITA_improved_infrastructure_in_state_flag
+						add_building_construction = {
+							type = infrastructure
+							level = 1
+							instant_build = yes
+						}
+						add_extra_state_shared_building_slots = 1
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					any_subject_country = { #FOR PUPPETS
+						any_controlled_state = {
+							is_core_of = ETH
+							is_fully_controlled_by = PREV
+						}
+					}
+				}
+				random_other_country = {
+					limit = {
+						is_subject_of = ROOT
+						any_controlled_state = {
+							is_core_of = ETH
+							is_fully_controlled_by = PREV
+						}
+					}
+					random_controlled_state = {
+						prioritize = { 837 } #SIDAMO
+						limit = {
+							is_core_of = ETH
+							is_fully_controlled_by = PREV
+						}
+						add_building_construction = {
+							type = infrastructure
+							level = 1
+							instant_build = yes
+						}
+						add_extra_state_shared_building_slots = 1
+					}
+				}
+			}
+
+			if = {
+				limit = {
+					842 = { #TIGRAY
+						OR = {
+							is_fully_controlled_by = ROOT
+							controller = {
+								is_subject_of = ROOT
+								has_full_control_of_state = PREV
+							}
+						}
+					}
+				}
+				842 = { #TIGRAY
+					add_building_construction = {
+						type = infrastructure
+						level = 1
+						instant_build = yes
+					}
+					add_extra_state_shared_building_slots = 1
+				}
+			}
+			else_if = {
+				limit = {
+					ROOT = {
+						any_controlled_state = {
+							is_core_of = ETH
+							is_fully_controlled_by = ROOT
+						}
+					}
+				}
+				ROOT = {
+					random_controlled_state = {
+						prioritize = { 841 } #BEGEMDER
+						limit = {
+							is_core_of = ETH
+							is_fully_controlled_by = ROOT
+						}
+						add_building_construction = {
+							type = infrastructure
+							level = 1
+							instant_build = yes
+						}
+						add_extra_state_shared_building_slots = 1
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					any_subject_country = { #FOR PUPPETS
+						any_controlled_state = {
+							is_core_of = ETH
+							is_fully_controlled_by = PREV
+							NOT = { has_state_flag = ITA_improved_infrastructure_in_state_flag }
+						}
+					}
+				}
+				random_other_country = {
+					limit = {
+						is_subject_of = ROOT
+						any_controlled_state = {
+							is_core_of = ETH
+							is_fully_controlled_by = PREV
+							NOT = { has_state_flag = ITA_improved_infrastructure_in_state_flag }
+						}
+					}
+					random_controlled_state = {
+						prioritize = { 841 } #BEGEMDER
+						limit = {
+							is_core_of = ETH
+							is_fully_controlled_by = PREV
+							NOT = { has_state_flag = ITA_improved_infrastructure_in_state_flag }
+						}
+						set_state_flag = ITA_improved_infrastructure_in_state_flag
+						add_building_construction = {
+							type = infrastructure
+							level = 1
+							instant_build = yes
+						}
+						add_extra_state_shared_building_slots = 1
+					}
+				}
+			}
+
+			every_controlled_state = {
+				limit = {
+					state_is_fully_controlled_by_ROOT_or_subject = yes
+					is_core_of = ETH
+					has_resistance = yes
+				}
+				add_compliance = 5
+			}
+		}
+	}
+
+	focus = {
+        id = AOI_cement_industry
+		icon = GFX_goal_generic_construction
+		prerequisite = { focus = AOI_develop_ethiopia }
+        
+        x = -2
+		y = 1
+		relative_position_id = AOI_develop_ethiopia
+		cost = 5
+
+		search_filters = {FOCUS_FILTER_INDUSTRY}
+
+        completion_reward = {
+            add_ideas = AOI_cement_industry
+        }
+	}
+
+	focus = {
+        id = AOI_electricity_industry
+		icon = GFX_goal_generic_construct_infrastructure
+		prerequisite = { focus = AOI_develop_ethiopia }
+        
+        x = 2
+		y = 1
+		relative_position_id = AOI_develop_ethiopia
+		cost = 5
+
+		search_filters = {FOCUS_FILTER_INDUSTRY}
+
+        completion_reward = {
+            unlock_decision_tooltip = AOI_electrify_state
+        }
+	}
+
+	focus = {
+        id = AOI_exploit_minerals
+		icon = GFX_goal_generic_construction2
+		prerequisite = { focus = AOI_cement_industry focus = AOI_electricity_industry }
+        
+        x = -1
+		y = 1
+		relative_position_id = AOI_cement_industry
+		cost = 5
+
+		search_filters = {FOCUS_FILTER_INDUSTRY}
+
+        completion_reward = {
+			add_tech_bonus = {
+				name = AOI_exploit_minerals
+				bonus = 0.75
+				uses = 3
+                category = excavation_tech
+			}
+            add_ideas = AOI_exploit_minerals
+        }
+	}
+
+	focus = {
+        id = AOI_exploit_minerals_2
+		icon = GFX_goal_generic_construction2
+		prerequisite = { focus = AOI_exploit_minerals }
+        
+        x = -1
+		y = 1
+		relative_position_id = AOI_exploit_minerals
+		cost = 10
+
+		available = {
+			owns_state = 550
+			owns_state = 559
+		}
+
+		search_filters = {FOCUS_FILTER_INDUSTRY}
+
+        completion_reward = {
+			add_tech_bonus = {
+				name = AOI_exploit_minerals_2
+				bonus = 0.5
+				uses = 2
+                category = excavation_tech
+			}
+			if = {
+				limit = {
+					has_idea = AOI_exploit_minerals
+				}
+				swap_ideas = {
+					remove_idea = AOI_exploit_minerals
+					add_idea = AOI_exploit_minerals_plus
+				}
+			}
+			else_if = {
+				limit = {
+					has_idea = AOI_exploit_minerals_plus
+				}
+				swap_ideas = {
+					remove_idea = AOI_exploit_minerals_plus
+					add_idea = AOI_exploit_minerals_final
+				}
+			}
+			add_resource = {
+				type = steel
+				amount = 8
+				state = 550
+			}
+			add_resource = {
+				type = steel
+				amount = 8
+				state = 559
+			}
+			550 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			559 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			custom_effect_tooltip = ETH_invite_foreign_prospectors_tt
+        }
+	}
+
+	focus = {
+        id = AOI_ogaden_oil
+		icon = GFX_goal_generic_oil_refinery
+		prerequisite = { focus = AOI_exploit_minerals_2 }
+		y = 1
+		relative_position_id = AOI_exploit_minerals_2
+		cost = 5
+
+		available = {
+			owns_state = 835
+			owns_state = 836
+		}
+
+		search_filters = {FOCUS_FILTER_INDUSTRY}
+
+        completion_reward = {
+			835 = {
+				add_resource = {
+					type = oil
+					amount = 5
+				}
+			}
+			836 = {
+				add_resource = {
+					type = oil
+					amount = 5
+				}
+			}
+        }
+	}
+
+	focus = {
+        id = AOI_transport_industry
+		icon = GFX_goal_generic_construct_infrastructure
+		prerequisite = { focus = AOI_cement_industry focus = AOI_electricity_industry }
+        
+        x = 1
+		y = 1
+		relative_position_id = AOI_cement_industry
+		cost = 5
+
+		search_filters = {FOCUS_FILTER_INDUSTRY}
+
+        completion_reward = {
+            add_ideas = AOI_transport_industry
+			IF = {
+				limit = { has_dlc = "Arms Against Tyranny" }
+				mio:AOI_transport_organization = {
+					add_mio_funds = 2000
+				}
+			}
+        }
+	}
+
+	focus = {
+        id = AOI_imperial_railway
+		icon = GFX_focus_generic_railroad
+		prerequisite = { focus = AOI_transport_industry }
+        
+        x = -1
+		y = 1
+		relative_position_id = AOI_transport_industry
+		cost = 10
+
+		search_filters = {FOCUS_FILTER_INDUSTRY}
+
+		available = {
+			controls_state = 271
+			controls_state = 550
+			controls_state = 559
+			controls_state = 836
+			controls_state = 837
+			controls_state = 841
+			controls_state = 843
+			controls_state = 908
+		}
+
+        completion_reward = {
+			build_railway = {
+				level = 1
+				start_province = 5010 
+				target_province = 5097
+			}
+			build_railway = {
+				level = 1
+				start_province = 5097 
+				target_province = 12766
+			}
+			841 = {
+				add_building_construction = {
+					type = supply_node
+					level = 1
+					instant_build = yes
+					province = 1984
+				}
+			}
+			build_railway = {
+				level = 1
+				start_province = 1984
+				target_province = 5097
+			}
+			build_railway = {
+				level = 1
+				start_province = 5097 
+				target_province = 8043
+			}
+			build_railway = {
+				level = 1
+				start_province = 5010 
+				target_province = 8062
+			}
+			build_railway = {
+				level = 1
+				start_province = 8062 
+				target_province = 12991
+			}
+			set_technology = {
+				wartime_train = 1
+			}
+			swap_ideas = {
+				remove_idea = AOI_transport_industry
+				add_idea = AOI_transport_industry_2
+			}
+			custom_effect_tooltip = available_designer
+			show_ideas_tooltip = AOI_imperial_road
+        }
+	}
+
+	focus = {
+        id = AOI_imperial_railway_2
+		icon = GFX_focus_generic_africa_infrastructure
+		prerequisite = { focus = AOI_imperial_railway }
+        
+		y = 1
+		relative_position_id = AOI_imperial_railway
+		cost = 10
+
+		search_filters = {FOCUS_FILTER_INDUSTRY}
+
+        completion_reward = {
+			swap_ideas = {
+				remove_idea = AOI_transport_industry_2
+				add_idea = AOI_transport_industry_3
+			}
+			unlock_decision_tooltip = AOI_expand_railroad
+			hidden_effect = {
+				if = {
+					limit = {
+						has_idea = AOI_imperial_road
+					}
+					swap_ideas = {
+						remove_idea = AOI_imperial_road
+						add_idea = AOI_imperial_road_improved
+					}
+				}
+			}
+			custom_effect_tooltip = AOI_railway_upgrade
+        }
+	}
+
+	focus = {
+        id = AOI_cotton_industry
+		icon = GFX_goal_generic_construct_civ_factory
+		prerequisite = { focus = AOI_cement_industry focus = AOI_electricity_industry }
+        
+        x = -1
+		y = 1
+		relative_position_id = AOI_electricity_industry
+		cost = 5
+
+		search_filters = {FOCUS_FILTER_INDUSTRY}
+
+
+		
+		ai_will_do = {
+			factor = 2
+		}
+
+		bypass = {
+			custom_trigger_tooltip = {
+				tooltip = construction_effort_tt
+				all_owned_state = {
+					free_building_slots = {
+						building = industrial_complex
+						size < 1
+						include_locked = yes
+					}					
+				}
+			}
+		}
+
+		complete_tooltip = {
+			add_extra_state_shared_building_slots = 1
+			add_building_construction = {
+				type = industrial_complex
+				level = 1
+				instant_build = yes
+			}			
+		}
+
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 0
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = industrial_complex
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	focus = {
+        id = AOI_armaments_industry
+		icon = GFX_goal_generic_construct_mil_factory
+		prerequisite = { focus = AOI_cement_industry focus = AOI_electricity_industry }
+        
+        x = 1
+		y = 1
+		relative_position_id = AOI_electricity_industry
+		cost = 5
+
+		search_filters = {FOCUS_FILTER_INDUSTRY}
+
+
+		ai_will_do = {
+			factor = 2			
+		}
+
+		bypass = {
+			
+		}
+
+		complete_tooltip = {
+			add_extra_state_shared_building_slots = 1
+			add_building_construction = {
+				type = arms_factory
+				level = 1
+				instant_build = yes
+			}
+		}
+
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = arms_factory
+						size > 0
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = arms_factory
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+			IF = {
+				limit = { has_dlc = "Arms Against Tyranny" }
+				mio:AOI_infantry_equipment_organization = {
+					add_mio_funds = 1000
+				}
+				mio:AOI_artillery_organization = {
+					add_mio_funds = 1000
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = AOI_dockyard_effort
+		icon = GFX_goal_generic_construct_naval_dockyard
+		prerequisite = { focus = AOI_cotton_industry focus = AOI_armaments_industry }
+        x = -1
+		y = 1
+		relative_position_id = AOI_armaments_industry
+		cost = 5
+
+		search_filters = {  FOCUS_FILTER_INDUSTRY }
+		
+		available_if_capitulated = yes
+
+
+		available = {
+			controls_state = 550
+			controls_state = 559
+		}
+
+		search_filters = {FOCUS_FILTER_INDUSTRY FOCUS_FILTER_NAVY_XP}
+
+		completion_reward = {
+			550 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = dockyard
+					level = 1
+					instant_build = yes
+				}
+			}
+			559 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = dockyard
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = AOI_comms_industry
+		icon = GFX_goal_generic_radar
+		prerequisite = { focus = AOI_armaments_industry }
+        x = 1
+		y = 1
+		relative_position_id = AOI_armaments_industry
+		cost = 5
+		available = {
+			has_tech = radio_detection
+			has_full_control_of_state = 550
+			has_full_control_of_state = 559
+		}
+
+		search_filters = {FOCUS_FILTER_INDUSTRY FOCUS_FILTER_RESEARCH}
+
+		completion_reward = {
+			550 = { #Eritrea
+				add_building_construction = {
+					type = radar_station
+					level = 1
+					instant_build = yes
+				}
+			}
+			559 = { #Somalia
+				add_building_construction = {
+					type = radar_station
+					level = 1
+					instant_build = yes
+				}
+			}
+			add_tech_bonus = {
+				name = AOI_comms_industry
+				bonus = 1
+				uses = 2
+				category = radar_tech
+			}
+		}
+	}
+
+    focus = {
+        id = AOI_expand_industrial_capacities
+        icon = GFX_focus_generic_industry_1
+		prerequisite = { focus = AOI_exploit_minerals }
+		prerequisite = { focus = AOI_transport_industry }
+		prerequisite = { focus = AOI_cotton_industry }
+		prerequisite = { focus = AOI_armaments_industry }
+		
+        y = 3
+        cost = 10
+		relative_position_id = AOI_develop_ethiopia
+
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = arms_factory
+						size > 0
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = arms_factory
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = arms_factory
+						size > 0
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = arms_factory
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+			set_country_flag = AOI_develop_scoia_flag
+		}
+        ai_will_do = {
+            factor = 10
+        }
+    }
+
+    focus = {
+        id = AOI_develop_scoia
+        icon = GFX_focus_generic_industry_3
+		prerequisite = { focus = AOI_expand_industrial_capacities }
+		
+        y = 1
+        cost = 20
+		relative_position_id = AOI_expand_industrial_capacities
+
+		cancel_if_invalid = no
+		continue_if_invalid = yes
+
+		available = {
+			OR = {
+				has_war = no
+				has_stability > 0.8
+			}
+			has_country_flag = {
+				flag = AOI_develop_scoia_flag
+				days > 180
+			}
+			custom_trigger_tooltip = {
+				tooltip = AOI_develop_scoia_flag_tt
+				has_country_flag = {
+					flag = AOI_develop_scoia_flag
+					days > 180
+				}
+			}
+			271 = {
+				is_owned_and_controlled_by = ROOT
+				OR= {
+					AND = {
+						compliance > 80
+						resistance < 10
+					}
+					is_core_of = ROOT
+				}
+			}
+		}
+
+		select_effect = {
+			add_ideas = AOI_develop_shewa_idea
+		}
+
+		completion_reward = {
+			#Tooltip purposes (Select Effect)
+			custom_effect_tooltip = SOV_focus_select_effect_tt
+			effect_tooltip = {
+				add_ideas = AOI_develop_shewa_idea
+			}
+
+			#(Complete Effect)
+			custom_effect_tooltip = SOV_focus_complete_effect_tt
+			hidden_effect = {
+				remove_ideas = AOI_develop_shewa_idea
+			}
+			add_resource = {
+				type = rubber
+				amount = 40
+				state = 271
+			}
+			271 = {
+				add_core_of = ROOT
+				add_victory_points = {
+					province = 5010
+					value = 45
+				}
+				set_state_category = city
+				add_extra_state_shared_building_slots = 6
+				add_building_construction = {
+					type = arms_factory
+					level = 3
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = industrial_complex
+					level = 3
+					instant_build = yes
+				}
+			}
+			country_event = te_italy.4
+		}
+        ai_will_do = {
+            factor = 10
+        }
+    }
+	
+
+	focus = {
+		id = AOI_develop_somalia
+        text = ITA_develop_somaliland
+		icon = GFX_focus_generic_develop_somaliland
+		prerequisite = { focus = AOI_industry_effort }
+
+		x = 8
+		y = 1
+		relative_position_id = AOI_industry_effort
+		cost = 5
+		available = {
+			559 = { is_fully_controlled_by = ROOT }
+		}
+
+		search_filters = {FOCUS_FILTER_INDUSTRY}
+
+		completion_reward = {
+			559 = { #SOMALILAND
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+				add_extra_state_shared_building_slots = 1
+				add_compliance = 5
+				add_dynamic_modifier = {
+					modifier = AOI_develop_somalia
+					scope = AOI
+					days = 360
+				}
+			}
+			if = {
+				limit = {
+					844 = { #JUBALAND
+						is_fully_controlled_by = ROOT
+					}
+				}
+				844 = { #JUBALAND
+					add_building_construction = {
+						type = infrastructure
+						level = 1
+						instant_build = yes
+					}
+					add_extra_state_shared_building_slots = 1
+					add_compliance = 5
+					add_dynamic_modifier = {
+						modifier = AOI_develop_somalia
+						scope = AOI
+						days = 360
+					}
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = AOI_somalian_nationalism
+		icon = GFX_focus_ETH_protector_of_the_somalis
+		prerequisite = { focus = AOI_develop_somalia }
+
+
+		y = 1
+		relative_position_id = AOI_develop_somalia
+		cost = 10
+		available = {
+			559 = { is_fully_controlled_by = ROOT }
+		}
+
+		search_filters = {FOCUS_FILTER_INDUSTRY}
+
+		completion_reward = {
+			every_controlled_state = {
+				limit = {
+					is_core_of = SOM
+				}
+				add_compliance = 10
+			}
+			add_state_claim = 268
+			add_state_claim = 269
+			add_state_claim = 903
+			add_political_power = 50
+			559 = {
+				create_unit = {
+					division = "division_template = \"Banda Indigena Irregolare\" start_experience_factor = 0.1 start_equipment_factor = 1.0"
+					owner = AOI
+					count = 2
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = AOI_somalia_infrastructure
+		icon = GFX_goal_generic_construct_infrastructure
+		prerequisite = { focus = AOI_somalian_nationalism }
+
+		x = -2
+		y = 1
+		relative_position_id = AOI_somalian_nationalism
+		cost = 5
+		available = {
+			559 = { is_fully_controlled_by = ROOT }
+			844 = { is_fully_controlled_by = ROOT }
+		}
+
+		search_filters = {FOCUS_FILTER_INDUSTRY}
+
+		completion_reward = {
+			559 = {
+				set_state_category = town
+				effect_tooltip = {
+					add_extra_state_shared_building_slots = 2
+				}
+			}
+			844 = {
+				set_state_category = rural
+				effect_tooltip = {
+					add_extra_state_shared_building_slots = 1
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = AOI_somalia_edu
+		icon = GFX_focus_research
+		prerequisite = { focus = AOI_somalia_infrastructure }
+
+		
+		y = 1
+		relative_position_id = AOI_somalia_infrastructure
+		cost = 5
+		available = {
+			559 = { is_fully_controlled_by = ROOT }
+		}
+
+		search_filters = {FOCUS_FILTER_INDUSTRY}
+
+		completion_reward = {
+			add_ideas = AOI_somalia_edu
+			559 = {
+				add_extra_state_shared_building_slots = 1
+			}
+		}
+	}
+
+	focus = {
+		id = AOI_somalia_navy
+		icon = GFX_focus_generic_refit_civilian_ships
+		prerequisite = { focus = AOI_somalian_nationalism }
+
+		
+		y = 1
+		relative_position_id = AOI_somalian_nationalism
+		cost = 5
+		available = {
+			559 = { is_fully_controlled_by = ROOT }
+		}
+
+		search_filters = {FOCUS_FILTER_INDUSTRY}
+
+		completion_reward = {
+			559 = {
+				add_building_construction = {
+					type = naval_base
+					level = 2
+					instant_build = yes
+					province = 12991
+				}
+				add_building_construction = {
+					type = dockyard
+					level = 1
+					instant_build = yes
+				}
+				add_extra_state_shared_building_slots = 1
+			}
+			navy_experience = 50
+		}
+	}
+
+	focus = {
+		id = AOI_somalia_connect
+		icon = GFX_focus_generic_road_investment
+		prerequisite = { focus = AOI_somalia_navy }
+
+		
+		y = 1
+		relative_position_id = AOI_somalia_navy
+		cost = 5
+		available = {
+			559 = { is_fully_controlled_by = ROOT }
+			844 = { is_fully_controlled_by = ROOT }
+		}
+
+		search_filters = {FOCUS_FILTER_INDUSTRY}
+
+		completion_reward = {
+			559 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			844 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = AOI_somalia_agriculture
+		icon = GFX_focus_generic_farmland
+		prerequisite = { focus = AOI_somalian_nationalism }
+
+		x = 2
+		y = 1
+		relative_position_id = AOI_somalian_nationalism
+		cost = 5
+		available = {
+			559 = { is_fully_controlled_by = ROOT }
+		}
+
+		search_filters = {FOCUS_FILTER_INDUSTRY}
+
+		completion_reward = {
+			559 = {
+				add_extra_state_shared_building_slots = 1
+				add_dynamic_modifier = {
+					modifier = AOI_somalia_agriculture
+					scope = AOI
+				}
+			}
+			add_timed_idea = {
+				idea = AOI_somalia_agriculture
+				days = 720
+			}
+		}
+	}
+
+	focus = {
+		id = AOI_somalia_salt
+		icon = GFX_focus_generic_industry_1
+		prerequisite = { focus = AOI_somalia_agriculture }
+
+		
+		y = 1
+		relative_position_id = AOI_somalia_agriculture
+		cost = 10
+		available = {
+			559 = { is_fully_controlled_by = ROOT }
+		}
+
+		search_filters = {FOCUS_FILTER_INDUSTRY}
+
+		completion_reward = {
+			add_offsite_building = {
+				type = industrial_complex
+				level = 2
+			}
+			modify_timed_idea = {
+				idea = AOI_somalia_agriculture
+				days = 360
+			}
+		}
+	}
+
+	focus = {
+		id = AOI_somalia_jewel
+		icon = GFX_focus_generic_self_management
+		prerequisite = { focus = AOI_somalia_edu }
+		prerequisite = { focus = AOI_somalia_connect }
+		prerequisite = { focus = AOI_somalia_salt }
+		y = 1
+		relative_position_id = AOI_somalia_connect
+		cost = 10
+		available = {
+			559 = { is_fully_controlled_by = ROOT }
+		}
+
+		search_filters = {FOCUS_FILTER_INDUSTRY}
+
+		completion_reward = {
+			add_ideas = AOI_somalia_jewel
+			hidden_effect = {
+				every_controlled_state = {
+					limit = {
+						region = 274
+						NOT = {
+							state = 559
+						}
+					}
+					add_dynamic_modifier = { 
+						modifier = AOI_somalia_jewel_state 
+						scope = AOI
+					}
+				}
+				559 = {
+					remove_dynamic_modifier = {
+						modifier = AOI_somalia_agriculture
+						scope = AOI 
+					}
+					add_dynamic_modifier = { 
+						modifier = AOI_somalia_jewel_somalia 
+						scope = AOI
+					}
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = AOI_secure_the_colony
+		icon = GFX_focus_ITA_ministry_of_italian_africa
+		x = 25
+		y = 0
+		cost = 5
+
+
+		ai_will_do = {
+			factor = 100
+		}
+		available = {
+			country_exists = ROOT
+		}
+
+		completion_reward = {
+			retire_country_leader = yes
+			if = {
+				limit = {
+					ITA = { has_government = fascism }
+				}
+				set_politics = {
+					ruling_party = fascism
+				}
+				create_country_leader  = {
+					name = "Rodolfo Graziani"
+					desc = "POLITICS_ÉDOUARD_DALADIER_DESC"
+					picture = GFX_portrait_ITA_rodolfo_graziani
+					expire = "1965.1.1"
+					ideology = fascism_ideology
+					traits = {
+						ITA_architect_of_death
+					}
+				}
+			}
+			add_stability = 0.025
+			add_political_power = 60
+			add_ideas = AOI_africa_orientale_italiana_idea_2
+			838 = {
+				add_victory_points = {
+					province = 7912
+					value = 4
+				}
+				set_province_name = {
+					id = 7912
+					name = "Jimma"
+				}
+			}
+			custom_effect_tooltip = ITA_ministry_of_italian_africa_occupation_law_tt
+			show_ideas_tooltip = AOI_fake_colonial_police_law
+			if = {
+				limit = {
+					is_ai = yes
+				}
+				AOI = { set_occupation_law_where_available = AOI_colonial_police } # Set law in all countries/states where it's available.
+			}
+		}
+	}
+
+	focus = {
+		id = AOI_topple_amhara_rulers
+		text = ITA_topple_amhara_rulers
+		icon = GFX_focus_ITA_topple_amhara_rulers
+		prerequisite = { focus = AOI_secure_the_colony }
+
+		x = 2
+		y = 1
+		relative_position_id = AOI_secure_the_colony
+		cost = 5
+		available = {
+			has_full_control_of_state = 835
+			has_full_control_of_state = 836
+			has_full_control_of_state = 837
+			has_full_control_of_state = 838
+		}
+
+		search_filters = {}
+
+		completion_reward = {#Changing stuff here will require changing stuff in History file for 1939 bookmark
+			effect_tooltip = {
+				if = {
+					limit = {
+						country_exists = ETH
+					}
+					ETH = {
+						add_legitimacy = -10
+					}
+				}
+			}
+			if = {
+				limit = {
+					835 = { has_resistance = yes } 
+				}
+				835 = { #HARARGHE
+					add_compliance = 10
+				}
+			}
+			else_if = {
+				limit = {
+					NOT = { controls_state = 835 }
+				}
+				effect_tooltip = {
+					835 = {
+						add_compliance = 10
+					}
+				}
+			}
+
+			if = {
+				limit = {
+					836 = { has_resistance = yes } 
+				}
+				836 = { #BALE
+					add_compliance = 10
+				}
+			}
+			else_if = {
+				limit = {
+					NOT = { controls_state = 836 }
+				}
+				effect_tooltip = {
+					836 = {
+						add_compliance = 10
+					}
+				}
+			}
+
+			if = {
+				limit = {
+					837 = { has_resistance = yes } 
+				}
+				837 = { #SIDAMO
+					add_compliance = 10
+				}
+			}
+			else_if = {
+				limit = {
+					NOT = { controls_state = 837 }
+				}
+				effect_tooltip = {
+					837 = {
+						add_compliance = 10
+					}
+				}
+			}
+
+			if = {
+				limit = {
+					838 = { has_resistance = yes } 
+				}
+				838 = { #ILLUBABOR
+					add_compliance = 10
+				}
+			}
+			else_if = {
+				limit = {
+					NOT = { controls_state = 838 }
+				}
+				effect_tooltip = {
+					838 = {
+						add_compliance = 10
+					}
+				}
+			}
+
+			if = {
+				limit = {
+					has_dlc = "By Blood Alone"
+				}
+				custom_effect_tooltip = ITA_topple_amhara_rulers_event_chain_tt
+				hidden_effect = {
+					ITA = {
+						# give all the dopplegangers to AOI
+						set_nationality = {
+							target_country = AOI
+							character = ITA_haile_selassie_gugsa_doppleganger
+						}
+						set_nationality = {
+							target_country = AOI
+							character = ITA_abba_jofir_doppleganger
+						}
+						set_nationality = {
+							target_country = AOI
+							character = ITA_hailu_tekle_haymanot_doppleganger
+						}
+						set_nationality = {
+							target_country = AOI
+							character = ITA_seyoum_mengesha_doppleganger
+						}
+					}
+					ITA_haile_selassie_gugsa_doppleganger = { 
+						unit_leader_event = te_aoi_local.1 
+					}
+				}
+			}
+			hidden_effect = {
+				ETH = {
+					country_event = { id = BBA_italo_ethiopian_war_events.510 hours = 6 }
+				}
+			}
+
+		}
+	}
+
+	focus = {
+		id = AOI_an_approach_to_administration
+		icon = GFX_focus_generic_improve_the_administration
+		prerequisite = { focus = AOI_secure_the_colony }
+
+		y = 1
+		relative_position_id = AOI_secure_the_colony
+		cost = 5
+
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		completion_reward = {
+			add_command_power = 20
+			if = {
+				limit = {
+					is_ai = yes
+				}
+				ITA = {
+					country_event = te_italy.1
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = AOI_italianization
+		icon = GFX_focus_ITA_italian_irredentism
+		prerequisite = { focus = AOI_an_approach_to_administration }
+		mutually_exclusive = { focus = AOI_stabilization }
+		x = -2
+		y = 1
+		relative_position_id = AOI_an_approach_to_administration
+		cost = 5
+
+
+		ai_will_do = {
+			factor = 5
+		}
+		available = {
+			if = {
+				limit = {
+					is_ai = yes
+				}
+				has_country_flag = ITA_requests_italianization
+			}
+            has_country_leader = {
+                character = AOI_prince_amedeo
+                ruling_only = yes
+            }
+		}
+
+		completion_reward = {
+			set_province_name = {
+				id = 13250
+				name = "L'Asmara"
+			}
+			271 = {
+				set_state_name = "Scioa"
+				set_province_name = {
+					id = 8036
+					name = "Asela"
+				}
+			}
+			835 = {
+				set_province_name = {
+					id = 7980
+					name = "Dire Daua"
+				}
+				set_province_name = {
+					id = 12812
+					name = "Ual-Ual"
+				}
+				set_province_name = {
+					id = 13249
+					name = "Harrar"
+				}
+			}
+			837 = {
+				set_province_name = {
+					id = 8019
+					name = "Iavello"
+				}
+				set_province_name = {
+					id = 12812
+					name = "Ual-Ual"
+				}
+			}
+			838 = {
+				set_state_name = "Gimma"
+				set_province_name = {
+					id = 7912
+					name = "Gimma"
+				}
+			}
+			840 = {
+				set_state_name = "Debra Marcos"
+				set_province_name = {
+					id = 13242
+					name = "Debra Marcos"
+				}
+			}
+			841 = { set_state_name = "Amara" }
+			842 = {
+				set_state_name = "Axum"
+				set_province_name = {
+					id = 13237
+					name = "Axum"
+				}
+				set_province_name = {
+					id = 13238
+					name = "Adua"
+				}
+			}
+			843 = {
+				set_state_name = "Dessiè"
+				set_province_name = {
+					id = 5097
+					name = "Dessiè"
+				}
+			}
+			844 = {
+				set_state_name = "Oltre Giuba"
+				set_province_name = {
+					id = 12941
+					name = "Chisimaio"
+				}
+			}
+			908 = {
+				set_state_name = "Ausa"
+				set_province_name = {
+					id = 13240
+					name = "Ausa"
+				}
+			}
+			if = {
+				limit = {
+					is_ai = no
+				}
+				country_event = te_italy.3
+			}
+			set_popularities = {
+				neutrality = 100
+			}
+			set_politics = {
+				ruling_party = neutrality
+			}
+			set_power_balance = {
+				id = AOI_approach_towards_natives
+				left_side = AOI_italianization_assimiliate
+				right_side = AOI_italianization_deport
+				set_value = 0.0
+			}
+		}
+	}
+
+	focus = {
+		id = AOI_entice_immigration
+		icon = GFX_focus_ETH_invite_italian_settlers
+		prerequisite = { focus = AOI_italianization }
+		x = -1
+		y = 1
+		relative_position_id = AOI_italianization
+		cost = 10
+
+
+		ai_will_do = {
+			factor = 5
+		}
+		available = {
+
+		}
+
+		completion_reward = {
+			add_stability = 0.05
+			add_timed_idea =  {
+				idea = AOI_italian_settlers
+				days = 540
+			}
+		}
+	}
+
+	focus = {
+		id = AOI_a_local_army
+		icon = GFX_focus_chi_army_reform
+		prerequisite = { focus = AOI_entice_immigration }
+		available = {
+		}
+
+		y = 1
+		relative_position_id = AOI_entice_immigration
+		cost = 5
+
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		completion_reward = {
+			if = {
+				limit = {
+					is_subject = yes
+				}
+				set_rule = {
+					units_deployed_to_overlord = no
+				}
+				set_rule = {
+					can_decline_call_to_war = yes
+				}
+			}
+			add_manpower = 10000
+		}
+	}
+
+	focus = {
+		id = AOI_DEPORT_DEPORT_DEPORT
+		icon = GFX_focus_ETH_boots_on_the_shore
+		prerequisite = { focus = AOI_a_local_army }
+		mutually_exclusive = { focus = AOI_affirm_italian_ideals }
+		x = -2
+		y = 1
+		relative_position_id = AOI_a_local_army
+		cost = 30
+		cancelable = no
+
+
+		ai_will_do = {
+			factor = 5
+		}
+		available = {
+			has_completed_focus = AOI_segregration
+			power_balance_value = {
+				id = AOI_approach_towards_natives
+				value > 0.6
+			}
+		}
+
+		completion_reward = {
+			every_state = {
+				limit = {
+					is_core_of = ETH
+				}
+				set_state_flag = yes_this_is_ETH_core
+			}
+			every_owned_state = {
+				limit = {
+					is_owned_and_controlled_by = ROOT
+					OR = {
+						is_core_of = ETH
+						is_core_of = SOM
+						is_core_of = ERI
+					}
+					NOT = {
+						state = 268
+						state = 269
+					}
+				}
+				add_core_of = ROOT
+				remove_core_of = ERI
+				remove_claim_by = ERI
+				remove_core_of = ETH
+				remove_core_of = SOM
+				remove_core_of = AFA
+				remove_core_of = ORO
+				remove_core_of = TIG
+				remove_core_of = HAR
+				remove_core_of = GBA
+				remove_core_of = QEM
+				remove_core_of = BEG
+				remove_core_of = SID
+				add_manpower = -500000
+			}
+			if = {
+				limit = {
+					268 = { is_owned_and_controlled_by = ROOT }
+				}
+				268 = {
+					add_core_of = ROOT
+					remove_core_of = DJI
+					remove_core_of = SOM
+					remove_core_of = AFA
+					add_manpower = -50000
+				}
+			}
+			if = {
+				limit = {
+					269 = { is_owned_and_controlled_by = ROOT }
+				}
+				269 = {
+					add_core_of = ROOT
+					remove_core_of = SOM
+					add_manpower = -200000
+				}
+			}
+			LIB = {
+				add_timed_idea = {
+					idea = LIB_handling_refugees
+					days = 1080
+				}
+			}
+			remove_power_balance = {
+				id = AOI_approach_towards_natives
+			}
+		}
+	}
+
+	focus = {
+		id = AOI_italia_nova
+		icon = GFX_focus_generic_italy_first
+		prerequisite = { focus = AOI_DEPORT_DEPORT_DEPORT }
+
+		y = 1
+		relative_position_id = AOI_DEPORT_DEPORT_DEPORT
+		cost = 10
+
+
+		ai_will_do = {
+			factor = 5
+		}
+		available = {
+			
+		}
+
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = AOI_africa_orientale_italiana_idea_seg
+				add_idea = AOI_italia_nova
+			}
+			if = {
+				limit = {
+					has_idea = AOI_italian_settlers
+				}
+				remove_ideas = AOI_italian_settlers
+			}
+			set_cosmetic_tag = AOI_new_italy
+			set_party_name = {
+				ideology = fascism
+				long_name = ITA_fascism_party_long
+				name = ITA_fascism_party
+			}
+			set_party_name = {
+				ideology = neutrality
+				long_name = ITA_neutrality_party_long
+				name = ITA_neutrality_party
+			}
+		}
+	}
+
+	focus = {
+		id = AOI_affirm_italian_ideals
+		icon = GFX_focus_generic_italy_propaganda
+		prerequisite = { focus = AOI_a_local_army }
+		mutually_exclusive = { focus = AOI_DEPORT_DEPORT_DEPORT }
+
+		y = 1
+		relative_position_id = AOI_a_local_army
+		cost = 5
+
+
+		ai_will_do = {
+			factor = 5
+		}
+		available = {
+
+		}
+
+		completion_reward = {
+			unlock_decision_category_tooltip = AOI_affirm_italian_ideals_category
+			hidden_effect = {
+				every_owned_state = {
+					limit = { 
+						is_core_of = SOM 
+						NOT = { occupied_country_tag = SOM }
+						NOT = { state = 268 }
+					}
+					start_resistance = SOM
+				}
+				every_owned_state = {
+					limit = { 
+						is_core_of = AFA 
+                        NOT = { state = 843 }
+						NOT = { occupied_country_tag = AFA }
+					}
+					start_resistance = AFA
+				}
+				842 = {
+					add_core_of = ERI
+					remove_claim_by = ERI
+					start_resistance = ERI 
+					remove_core_of = ETH
+					add_claim_by = ETH
+				}
+				if = {
+					limit = {
+						NOT = {
+							owns_state = 835
+							owns_state = 836
+							owns_state = 842
+						}
+					}
+					transfer_state = 835
+					transfer_state = 836
+					transfer_state = 842
+				}
+				ETH = {
+					remove_state_core = 835
+					remove_state_core = 836
+					remove_state_core = 908
+					add_state_claim = 835
+					add_state_claim = 836
+					add_state_claim = 908
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = AOI_integration
+		icon = GFX_focus_ITA_italian_hegemony
+		prerequisite = { focus = AOI_affirm_italian_ideals }
+
+		y = 1
+		relative_position_id = AOI_affirm_italian_ideals
+		cost = 5
+
+
+		ai_will_do = {
+			factor = 5
+		}
+		available = {
+
+		}
+
+		completion_reward = {
+			every_owned_state = {
+				limit = {
+					has_state_flag = be_able_to_auto_core
+				}
+				add_core_of = ROOT
+			}
+		}
+	}
+
+	focus = {
+		id = AOI_stabilization
+		icon = GFX_goal_generic_army_tanks
+		prerequisite = { focus = AOI_an_approach_to_administration }
+		mutually_exclusive = { focus = AOI_italianization }
+		x = 2
+		y = 1
+		relative_position_id = AOI_an_approach_to_administration
+		cost = 5
+
+
+		ai_will_do = {
+			factor = 5
+		}
+		available = {
+			if = {
+				limit = {
+					is_ai = yes
+				}
+				has_country_flag = ITA_requests_stability
+			}
+		}
+
+		completion_reward = {
+			add_stability = 0.05
+			set_popularities = {
+				fascism = 100
+			}
+			set_politics = {
+				ruling_party = fascism
+			}
+			set_power_balance = {
+				id = AOI_approach_towards_natives
+				left_side = AOI_stabilization_compliance
+				right_side = AOI_stabilization_resistance
+				set_value = 0.0
+			}
+		}
+	}
+
+	focus = {
+		id = AOI_servizio_informazione_militare
+		icon = GFX_focus_generic_secret_service_agency
+		prerequisite = { focus = AOI_stabilization }
+		x = 1
+		y = 1
+		relative_position_id = AOI_stabilization
+		cost = 10
+		available = {
+
+		}
+
+		search_filters = {}
+
+		completion_reward = {
+			if = {
+				limit = {
+					has_dlc = "La Resistance"
+				}
+				if = {
+					limit = {
+						has_intelligence_agency = no
+					}
+					create_intelligence_agency = yes
+				}
+				add_ideas = AOI_servizio_informazione_militare
+			}
+			else = {
+				add_ideas = AOI_servizio_informazione_militare_vanilla
+			}
+		}
+	}
+
+	focus = {
+		id = AOI_improve_resource_management
+		icon = GFX_goal_generic_construction2
+		prerequisite = { focus = AOI_servizio_informazione_militare }
+		x = 0
+		y = 1
+		relative_position_id = AOI_servizio_informazione_militare
+		cost = 5
+		available = {
+			has_completed_focus = AOI_exploit_minerals
+		}
+
+		search_filters = {}
+
+		completion_reward = {
+			if = {
+				limit = {
+					has_idea = AOI_exploit_minerals
+				}
+				swap_ideas = {
+					remove_idea = AOI_exploit_minerals
+					add_idea = AOI_exploit_minerals_plus
+				}
+			}
+			else_if = {
+				limit = {
+					has_idea = AOI_exploit_minerals_plus
+				}
+				swap_ideas = {
+					remove_idea = AOI_exploit_minerals_plus
+					add_idea = AOI_exploit_minerals_final
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = AOI_ensure_colonial_stability
+		icon = GFX_goal_generic_neutrality_focus
+		prerequisite = { focus = AOI_improve_resource_management }
+		prerequisite = { focus = AOI_strengthen_the_police_system }
+		x = 0
+		y = 1
+		relative_position_id = AOI_improve_resource_management
+		cost = 5
+		available = {
+			
+		}
+
+		search_filters = {}
+
+		completion_reward = {
+			set_country_flag = AOI_colonial_police_final_flag
+
+			custom_effect_tooltip = AOI_polizia_dell_africa_italiana_occupation_law_tt
+
+			add_stability = 0.05
+		}
+	}
+
+	focus = {
+		id = AOI_model_colony
+		icon = GFX_goal_generic_demand_territory
+		prerequisite = { focus = AOI_ensure_colonial_stability }
+		x = 0
+		y = 1
+		relative_position_id = AOI_ensure_colonial_stability
+		cost = 10
+		available = {
+			
+		}
+
+		search_filters = {}
+
+		completion_reward = {
+			add_stability = 0.15
+			if = {
+				limit = {
+					has_idea = AOI_africa_orientale_italiana_idea_seg
+				}
+				swap_ideas = {
+					remove_idea = AOI_africa_orientale_italiana_idea_seg
+					add_idea = AOI_africa_orientale_italiana_idea_seg_2
+				}
+			}
+			if = {
+				limit = {
+					has_idea = AOI_africa_orientale_italiana_idea_int
+				}
+				swap_ideas = {
+					remove_idea = AOI_africa_orientale_italiana_idea_int
+					add_idea = AOI_africa_orientale_italiana_idea_int_2
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = AOI_segregration
+		icon = GFX_focus_ITA_a_colonial_empire
+		prerequisite = { focus = AOI_italianization focus = AOI_stabilization }
+		mutually_exclusive = { focus = AOI_allow_intermixing }
+		x = 1
+		y = 1
+		relative_position_id = AOI_italianization
+		cost = 5
+
+
+		ai_will_do = {
+			factor = 4			
+		}
+
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = AOI_africa_orientale_italiana_idea_2
+				add_idea = AOI_africa_orientale_italiana_idea_seg
+			}
+			add_power_balance_value = {
+				id = AOI_approach_towards_natives
+				value = 0.1
+			}
+		}
+	}
+
+	focus = {
+		id = AOI_allow_intermixing
+		icon = GFX_focus_ITA_strengthen_ascari_corps
+		prerequisite = { focus = AOI_italianization focus = AOI_stabilization }
+		mutually_exclusive = { focus = AOI_segregration }
+		x = -1
+		y = 1
+		relative_position_id = AOI_stabilization
+		cost = 5
+
+		available = {
+            has_country_leader = {
+                character = AOI_prince_amedeo
+                ruling_only = yes
+            }
+		}
+
+
+		ai_will_do = {
+			factor = 2			
+		}
+
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = AOI_africa_orientale_italiana_idea_2
+				add_idea = AOI_africa_orientale_italiana_idea_int
+			}
+			add_power_balance_value = {
+				id = AOI_approach_towards_natives
+				value = -0.1
+			}
+		}
+	}
+
+	focus = {
+		id = AOI_strengthen_the_police_system
+		icon = GFX_goal_generic_military_sphere
+		prerequisite = { focus = AOI_segregration focus = AOI_allow_intermixing }
+		x = 1
+		y = 1
+		relative_position_id = AOI_segregration
+		cost = 5
+
+
+		ai_will_do = {
+			factor = 2			
+		}
+
+		completion_reward = {
+			set_country_flag = AOI_colonial_police_improved_flag
+
+			custom_effect_tooltip = ITA_regional_development_occupation_law_tt
+
+			add_stability = 0.05
+		}
+	}
+
+	focus = {
+		id = AOI_prepare_the_colony_for_war
+		icon = GFX_goal_generic_construct_mil_factory
+		prerequisite = { focus = AOI_strengthen_the_police_system }
+		x = 0
+		y = 1
+		relative_position_id = AOI_strengthen_the_police_system
+		cost = 10
+
+
+
+		ai_will_do = {
+			factor = 2			
+		}
+
+		bypass = {
+			custom_trigger_tooltip = {
+				tooltip = production_effort_tt
+				all_owned_state = {
+					free_building_slots = {
+						building = arms_factory
+						size < 2
+						include_locked = yes
+					}
+				}
+			}
+		}
+
+		complete_tooltip = {
+			add_war_support = 0.05
+			if = {
+				limit = {
+					NOT = { has_idea = partial_economic_mobilisation }
+					NOT = { has_idea = war_economy }
+					NOT = { has_idea = tot_economic_mobilisation }
+				}
+				add_ideas = partial_economic_mobilisation
+			}
+			else_if = {
+				limit = {
+					has_idea = partial_economic_mobilisation
+				}
+				add_ideas = war_economy
+			}
+			add_extra_state_shared_building_slots = 2
+			add_building_construction = {
+				type = arms_factory
+				level = 2
+				instant_build = yes
+			}
+		}
+
+		completion_reward = {
+			add_war_support = 0.05
+			if = {
+				limit = {
+					NOT = { has_idea = partial_economic_mobilisation }
+					NOT = { has_idea = war_economy }
+					NOT = { has_idea = tot_economic_mobilisation }
+				}
+				add_ideas = partial_economic_mobilisation
+			}
+			else_if = {
+				limit = {
+					has_idea = partial_economic_mobilisation
+				}
+				add_ideas = war_economy
+			}
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = arms_factory
+						size > 1
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = arms_factory
+										size > 1
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = AOI_greater_italian_east_africa
+		icon = GFX_focus_generic_italy_first
+		prerequisite = { focus = AOI_prepare_the_colony_for_war }
+		x = 0
+		y = 1
+		relative_position_id = AOI_prepare_the_colony_for_war
+		cost = 10
+
+
+
+		ai_will_do = {
+			factor = 2			
+		}
+
+		completion_reward = {
+			every_state = {
+				limit = {
+					OR = {
+						region = 216
+						AND = {
+							region = 217
+							NOT = { state = 903 }
+						}
+						region = 185
+						region = 181
+						AND = {
+							region = 85
+							NOT = { state = 713 }
+						}
+						state = 708
+						state = 709
+						state = 768
+						state = 769
+					}
+				}
+				add_claim_by = ROOT
+			}
+		}
+	}
+
+	focus = {
+		id = AOI_colonial_affairs
+		icon = GFX_focus_ITA_a_colonial_empire
+		x = 37
+		y = 0
+		cost = 5
+
+
+		ai_will_do = {
+			factor = 100
+		}
+		available = {
+			is_subject_of = ITA
+		}
+
+		completion_reward = {
+			add_political_power = 50
+			reverse_add_opinion_modifier = {
+				target = ITA
+				modifier = AOI_colonial_affairs
+			}
+			add_opinion_modifier = {
+				target = ITA
+				modifier = AOI_colonial_affairs
+			}
+		}
+	}
+
+	focus = {
+		id = AOI_italy_tributes
+		icon = GFX_focus_befriend_italy
+		prerequisite = { focus = AOI_colonial_affairs }
+		relative_position_id = AOI_colonial_affairs
+		x = -6
+		y = 1
+		cost = 5
+
+
+		ai_will_do = {
+			factor = 100
+		}
+		available = {
+			is_subject_of = ITA
+		}
+
+		completion_reward = {
+			unlock_decision_category_tooltip = AOI_italy_tributes
+		}
+	}
+
+	focus = {
+		id = AOI_mainland_investments
+		icon = GFX_focus_usa_reestablish_the_gold_standard
+		prerequisite = { focus = AOI_italy_tributes }
+		relative_position_id = AOI_italy_tributes
+		
+		y = 1
+		cost = 10
+
+
+		ai_will_do = {
+			factor = 100
+		}
+		available = {
+			is_subject_of = ITA
+		}
+
+		completion_reward = {
+			add_offsite_building = {
+				type = industrial_complex
+				level = 2
+			}
+			add_offsite_building = {
+				type = arms_factory
+				level = 2
+			}
+			add_political_power = -100
+			ITA = {
+				add_political_power = 50
+			}
+		}
+	}
+
+	focus = {
+		id = AOI_strengthen_industry
+		icon = GFX_focus_generic_modernize_industry
+		prerequisite = { focus = AOI_mainland_investments }
+		relative_position_id = AOI_mainland_investments
+		x = -1
+		y = 1
+		cost = 5
+
+
+		ai_will_do = {
+			factor = 100
+		}
+		available = {
+			OR = {
+				has_completed_focus = AOI_model_governorate
+				has_completed_focus = AOI_develop_scoia
+				has_completed_focus = AOI_somalia_jewel
+			}
+		}
+
+		completion_reward = {
+			if = {
+				limit = {
+					has_completed_focus = AOI_model_governorate
+				}
+				550 = {
+					add_dynamic_modifier = {
+						scope = ROOT
+						modifier = AOI_strengthen_industry
+					}
+				}
+			}
+			if = {
+				limit = {
+					has_completed_focus = AOI_develop_scoia
+				}
+				271 = {
+					add_dynamic_modifier = {
+						scope = ROOT
+						modifier = AOI_strengthen_industry
+					}
+				}
+			}
+			if = {
+				limit = {
+					has_completed_focus = AOI_somalia_jewel
+				}
+				559 = {
+					add_dynamic_modifier = {
+						scope = ROOT
+						modifier = AOI_strengthen_industry
+					}
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = AOI_develop_countryside
+		icon = GFX_goal_generic_construct_infrastructure
+		prerequisite = { focus = AOI_mainland_investments }
+		relative_position_id = AOI_mainland_investments
+		x = 1
+		y = 1
+		cost = 10
+
+
+		ai_will_do = {
+			factor = 100
+		}
+		available = {
+			has_completed_focus = AOI_transport_industry
+		}
+
+		completion_reward = {
+			every_controlled_state = {
+				limit = {
+					OR = {
+						region = 17
+						region = 273
+						region = 274
+					}
+					NOT = {
+						state = 550
+						state = 559
+						state = 268
+						state = 269
+						state = 844
+						state = 271
+					}
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = AOI_school_regen
+		icon = GFX_focus_KTG_Educate_natives
+		mutually_exclusive = { focus = AOI_italian_schools }
+		prerequisite = { focus = AOI_colonial_affairs }
+		relative_position_id = AOI_colonial_affairs
+		x = -2
+		y = 1
+		cost = 5
+
+
+		ai_will_do = {
+			factor = 100
+		}
+		available = {
+			
+		}
+
+		completion_reward = {
+			add_ideas = AOI_education_initiative
+		}
+	}
+
+	focus = {
+		id = AOI_literacy_drive
+		icon = GFX_focus_KTG_Bookstack
+		prerequisite = { focus = AOI_school_regen }
+		relative_position_id = AOI_school_regen
+		
+		y = 1
+		cost = 5
+
+
+		ai_will_do = {
+			factor = 100
+		}
+		available = {
+			
+		}
+
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = AOI_education_initiative
+				add_idea = AOI_education_initiative_2
+			}
+			add_timed_idea = {
+				idea = AOI_literacy_drive
+				days = 540
+			}
+		}
+	}
+
+	focus = {
+		id = AOI_higher_education
+		icon = GFX_focus_research
+		prerequisite = { focus = AOI_literacy_drive }
+		relative_position_id = AOI_literacy_drive
+		x = -1
+		y = 1
+		cost = 10
+
+
+		ai_will_do = {
+			factor = 100
+		}
+		available = {
+			
+		}
+
+		completion_reward = {
+			if = {
+				limit = {
+					amount_research_slots < 6
+				}
+				add_research_slot = 1
+			}
+			else = {
+				add_political_power = 50
+				add_ideas = AOI_higher_education
+			}
+		}
+	}
+
+	focus = {
+		id = AOI_trades_engineering
+		icon = GFX_goal_generic_construct_civ_factory
+		prerequisite = { focus = AOI_literacy_drive }
+		relative_position_id = AOI_literacy_drive
+		x = 1
+		y = 1
+		cost = 5
+
+
+		ai_will_do = {
+			factor = 100
+		}
+		available = {
+			
+		}
+
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = AOI_education_initiative_2
+				add_idea = AOI_education_initiative_3
+			}
+		}
+	}
+
+	focus = {
+		id = AOI_italian_schools
+		icon = GFX_focus_ARG_fascist_researchers
+		prerequisite = { focus = AOI_colonial_affairs }
+		mutually_exclusive = { focus = AOI_school_regen }
+		relative_position_id = AOI_colonial_affairs
+		x = 2
+		y = 1
+		cost = 5
+
+
+		ai_will_do = {
+			factor = 100
+		}
+		available = {
+			is_subject_of = ITA
+		}
+
+		completion_reward = {
+			add_ideas = AOI_italian_schools
+		}
+	}
+
+	focus = {
+		id = AOI_italian_officers
+		icon = GFX_focus_generic_military_academy
+		prerequisite = { focus = AOI_italian_schools }
+		relative_position_id = AOI_italian_schools
+		
+		y = 1
+		cost = 5
+
+
+		ai_will_do = {
+			factor = 100
+		}
+		available = {
+			is_subject_of = ITA
+		}
+
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = AOI_italian_schools
+				add_idea = AOI_italian_schools_2
+			}
+		}
+	}
+
+	focus = {
+		id = AOI_colonial_elite
+		icon = GFX_focus_ITA_a_colonial_empire
+		prerequisite = { focus = AOI_italian_officers }
+		relative_position_id = AOI_italian_officers
+		x = -1
+		y = 1
+		cost = 10
+
+
+		ai_will_do = {
+			factor = 100
+		}
+		available = {
+			is_subject_of = ITA
+		}
+
+		completion_reward = {
+			if = {
+				limit = {
+					amount_research_slots < 6
+				}
+				add_research_slot = 1
+			}
+			else = {
+				add_stability = 0.05
+				add_political_power = 100
+			}
+		}
+	}
+
+	focus = {
+		id = AOI_instill_loyalty
+		icon = GFX_focus_generic_fascist_propaganda
+		prerequisite = { focus = AOI_italian_officers }
+		relative_position_id = AOI_italian_officers
+		x = 1
+		y = 1
+		cost = 5
+
+
+		ai_will_do = {
+			factor = 100
+		}
+		available = {
+			is_subject_of = ITA
+		}
+
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = AOI_italian_schools_2
+				add_idea = AOI_italian_schools_3
+			}
+		}
+	}
+
+	focus = {
+		id = AOI_ammo_initiative
+		icon = GFX_goal_generic_army_artillery2
+		prerequisite = { focus = AOI_colonial_affairs }
+		relative_position_id = AOI_colonial_affairs
+		x = 6
+		y = 1
+		cost = 10
+
+
+		ai_will_do = {
+			factor = 100
+		}
+		available = {
+			
+		}
+
+		complete_tooltip = {
+			add_extra_state_shared_building_slots = 2
+			add_building_construction = {
+				type = arms_factory
+				level = 2
+				instant_build = yes
+			}
+			add_timed_idea = {
+				idea = AOI_ammo_initiative
+				days = 360
+			}
+		}
+
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = arms_factory
+						size > 1
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = arms_factory
+										size > 1
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+			add_timed_idea = {
+				idea = AOI_ammo_initiative
+				days = 360
+			}
+		}
+	}
+
+	focus = {
+		id = AOI_protecting_skies
+		icon = GFX_focus_generic_air_defense
+		prerequisite = { focus = AOI_ammo_initiative }
+		relative_position_id = AOI_ammo_initiative
+		
+		y = 1
+		cost = 5
+
+
+		ai_will_do = {
+			factor = 100
+		}
+		available = {
+			
+		}
+
+		completion_reward = {
+			every_controlled_state = {
+				add_building_construction = {
+					type = anti_air_building
+					level = 1
+					instant_build = yes
+				}
+			}
+			add_tech_bonus = {
+				bonus = 1
+				uses = 1
+				category = cat_anti_air
+			}
+		}
+	}
+
+	focus = {
+		id = AOI_defend_cities
+		icon = GFX_goal_generic_fortify_city
+		prerequisite = { focus = AOI_protecting_skies }
+		relative_position_id = AOI_protecting_skies
+		x = -1
+		y = 1
+		cost = 5
+
+
+		ai_will_do = {
+			factor = 100
+		}
+		available = {
+			controls_state = 271
+			controls_state = 835
+			controls_state = 844
+			controls_state = 550
+			controls_state = 838
+			controls_state = 840
+			controls_state = 841
+			controls_state = 843
+		}
+
+		completion_reward = {
+			every_owned_state = {
+				add_building_construction = {
+					type = coastal_bunker
+					level = 2
+					instant_build = yes
+					province = {
+						all_provinces = yes
+						limit_to_naval_base = yes
+					}
+				}
+			}
+			271 = {
+				add_building_construction = {
+					type = bunker
+					level = 2
+					instant_build = yes
+					province = 5010
+				}
+			}
+			835 = {
+				add_building_construction = {
+					type = bunker
+					level = 2
+					instant_build = yes
+					province = 13249
+				}
+			}
+			844 = {
+				add_building_construction = {
+					type = bunker
+					level = 2
+					instant_build = yes
+					province = 12941
+				}
+			}
+			550 = {
+				add_building_construction = {
+					type = bunker
+					level = 2
+					instant_build = yes
+					province = 12766
+				}
+				add_building_construction = {
+					type = bunker
+					level = 2
+					instant_build = yes
+					province = 13250
+				}
+			}
+			838 = {
+				add_building_construction = {
+					type = bunker
+					level = 2
+					instant_build = yes
+					province = 7912
+				}
+			}
+			840 = {
+				add_building_construction = {
+					type = bunker
+					level = 2
+					instant_build = yes
+					province = 13242
+				}
+			}
+			841 = {
+				add_building_construction = {
+					type = bunker
+					level = 2
+					instant_build = yes
+					province = 1984
+				}
+			}
+			843 = {
+				add_building_construction = {
+					type = bunker
+					level = 2
+					instant_build = yes
+					province = 5097
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = AOI_modern_weaponry
+		icon = GFX_goal_generic_small_arms
+		prerequisite = { focus = AOI_protecting_skies }
+		relative_position_id = AOI_protecting_skies
+		x = 1
+		y = 1
+		cost = 10
+
+
+		ai_will_do = {
+			factor = 100
+		}
+		available = {
+			
+		}
+
+		complete_tooltip = {
+			add_extra_state_shared_building_slots = 2
+			add_building_construction = {
+				type = arms_factory
+				level = 2
+				instant_build = yes
+			}
+			add_war_support = 0.1
+		}
+
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = arms_factory
+						size > 1
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = arms_factory
+										size > 1
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+			add_war_support = 0.1
+		}
+	}
+
+	focus = {
+		id = AOI_increased_self_government
+		icon = GFX_focus_ITA_ministry_of_italian_africa
+		prerequisite = { focus = AOI_strengthen_industry focus = AOI_develop_countryside }
+		prerequisite = { focus = AOI_higher_education focus = AOI_trades_engineering focus = AOI_colonial_elite focus = AOI_instill_loyalty }
+		prerequisite = { focus = AOI_defend_cities focus = AOI_modern_weaponry }
+		relative_position_id = AOI_colonial_affairs
+		y = 4
+		cost = 10
+
+
+		ai_will_do = {
+			factor = 100
+		}
+		available = {
+			is_subject_of = ITA
+		}
+
+		completion_reward = {
+			add_autonomy_score = {
+				value = 1000
+				localization = AOI_increased_self_government
+			}
+		}
+	}
+
+	focus = {
+		id = AOI_military_effort
+		icon = GFX_goal_generic_axis_build_infantry
+        x = 64
+        y = 0
+        cost = 5
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 2			
+		}
+
+		completion_reward = {
+			army_experience = 5
+			add_doctrine_cost_reduction = {
+				name = land_doc_bonus
+				cost_reduction = 0.5
+				uses = 1
+				category = land_doctrine
+			}
+		}
+	}
+
+	focus = {
+		id = AOI_army_effort
+		icon = GFX_goal_generic_axis_build_infantry
+		prerequisite = { focus = AOI_military_effort }
+        x = -12
+        y = 1
+        cost = 5
+		relative_position_id = AOI_military_effort
+		
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 2			
+		}
+
+		completion_reward = {
+			army_experience = 50
+			add_doctrine_cost_reduction = {
+				name = land_doc_bonus
+				cost_reduction = 0.5
+				uses = 1
+				category = land_doctrine
+			}
+		}
+	}
+
+	focus = {
+		id = AOI_colonial_army
+		icon = GFX_goal_generic_axis_build_infantry
+		prerequisite = { focus = AOI_army_effort }
+		mutually_exclusive = { focus = AOI_ascari }
+        x = -4
+        y = 1
+        cost = 5
+		relative_position_id = AOI_army_effort
+		
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 2			
+		}
+
+		completion_reward = {
+			army_experience = 50
+			effect_tooltip = {
+				add_ideas = AOI_colonial_army_decoy
+			}
+			hidden_effect = {
+				add_dynamic_modifier = {
+					modifier = AOI_colonial_army
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = AOI_reorganize_RCTC
+		icon = GFX_goal_generic_axis_build_infantry
+		prerequisite = { focus = AOI_colonial_army }
+		
+        y = 2
+        cost = 5
+		relative_position_id = AOI_colonial_army
+		
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 2			
+		}
+
+		completion_reward = {
+			add_to_variable = { AOI_org_RCTC = 0.1 }
+			add_to_variable = { AOI_org_regain = 0.05 }
+
+			custom_effect_tooltip = AOI_reorganize_RCTC_tt
+		}
+	}
+
+	focus = {
+		id = AOI_colonial_militia
+		icon = GFX_goal_generic_axis_build_infantry
+		prerequisite = { focus = AOI_reorganize_RCTC }
+		x = -2
+        y = 1
+        cost = 5
+		relative_position_id = AOI_reorganize_RCTC
+		
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 2			
+		}
+
+		completion_reward = {
+			add_ideas = AOI_colonial_militia
+
+			division_template = {
+				name = "Camicie Nere" 
+				division_names_group = ITA_INF_02
+				template_counter = 68
+				is_locked = yes
+				force_allow_recruiting = yes
+				division_cap = 12
+				regiments = { 
+					militia = { x = 0 y = 0 }
+					militia = { x = 0 y = 1 }
+					militia = { x = 1 y = 0 }
+					militia = { x = 1 y = 1 }
+					militia = { x = 2 y = 0 }
+					militia = { x = 2 y = 1 }
+				}
+				support = { 
+					engineer = { x = 0 y = 0 }
+				}
+			}
+			capital_scope = {
+				create_unit = {
+					division = "division_template = \"Camicie Nere\" start_experience_factor = 0.1 start_equipment_factor = 1.0"
+					owner = AOI
+					count = 3
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = AOI_camicie_nere
+		icon = GFX_goal_generic_axis_build_infantry
+		prerequisite = { focus = AOI_colonial_militia }
+		
+        y = 1
+        cost = 5
+		relative_position_id = AOI_colonial_militia
+		
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 2			
+		}
+
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = AOI_colonial_militia
+				add_idea = AOI_camicie_nere
+			}
+			custom_effect_tooltip = ITA_battaglioni_d_assalto_tt
+			hidden_effect = {
+				set_division_template_cap = {  division_template = "Camicie Nere" division_cap = 24 }
+				set_technology = { blackshirt_assault_battalion_tech = 1 popup = no }
+			}
+			custom_effect_tooltip = ITA_strengthen_the_blackshirts_template_tt
+			add_units_to_division_template = {
+				template_name = "Camicie Nere"
+				support = { 
+					artillery = 0
+					blackshirt_assault_battalion_tech = 0
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = AOI_means_of_warfare
+		icon = GFX_goal_generic_axis_build_infantry
+		prerequisite = { focus = AOI_reorganize_RCTC }
+		
+        y = 1
+        cost = 5
+		relative_position_id = AOI_reorganize_RCTC
+		
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 2			
+		}
+
+		completion_reward = {
+			hidden_effect = {
+				add_ideas = AOI_infantry_bonus
+			}
+			add_to_variable = { AOI_prod_cap = 0.1 }
+
+			custom_effect_tooltip = AOI_means_of_warfare_tt
+		}
+	}
+
+	focus = {
+		id = AOI_learning_from_masters
+		icon = GFX_goal_generic_axis_build_infantry
+		prerequisite = { focus = AOI_means_of_warfare }
+		
+        y = 1
+        cost = 5
+		relative_position_id = AOI_means_of_warfare
+		
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 2			
+		}
+
+		completion_reward = {
+			add_to_variable = { AOI_div_xp_gain = 0.15 }
+			add_to_variable = { AOI_xp_gain = 0.1 }
+
+			custom_effect_tooltip = AOI_learning_from_masters_tt
+			add_doctrine_cost_reduction = {
+				name = land_doc_bonus
+				cost_reduction = 0.5
+				uses = 1
+				category = land_doctrine
+			}
+		}
+	}
+
+	focus = {
+		id = AOI_bicycles
+		icon = GFX_focus_ITA_bersaglieri
+		prerequisite = { focus = AOI_reorganize_RCTC }
+		x = 2
+        y = 1
+        cost = 5
+		relative_position_id = AOI_reorganize_RCTC
+		
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 2			
+		}
+
+		completion_reward = {
+			hidden_effect = {
+				add_ideas = AOI_cheaper_trucks
+			}
+			
+			custom_effect_tooltip = AOI_bicycles_tt
+
+			add_tech_bonus = {
+				name = AOI_bicycles
+				bonus = 1
+				uses = 2
+				category = motorized_equipment
+			}
+
+			set_technology = { bicycle_infantry = 1 popup = no }
+
+			division_template = { 
+				name = "Reggimento Bersaglieri" 
+				division_names_group = ITA_INF_01 #TODO_Manu: Namelist: 1º,2º... Reggimento Bersaglieri
+				regiments = { 
+					bicycle_battalion = { x = 0 y = 0 }
+					bicycle_battalion = { x = 0 y = 1 }
+					bicycle_battalion = { x = 1 y = 0 }
+					bicycle_battalion = { x = 1 y = 1 }
+				}
+				support = { 
+					engineer = { x = 0 y = 0 }
+					artillery = { x = 0 y = 1 }
+					#anti_tank = { x = 0 y = 2 }
+				}
+			}
+			capital_scope = {
+				create_unit = {
+					division = "division_template = \"Reggimento Bersaglieri\" start_experience_factor = 0.5 start_equipment_factor = 1.0"
+					owner = ROOT
+					count = 3
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = AOI_armoured_corps
+		icon = GFX_goal_generic_axis_build_infantry
+		prerequisite = { focus = AOI_bicycles }
+		
+        y = 1
+        cost = 5
+		relative_position_id = AOI_bicycles
+		
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 2			
+		}
+
+		completion_reward = {
+			hidden_effect = {
+				add_ideas = AOI_cheaper_tanks
+			}
+			add_to_variable = { AOI_resource_lack = -0.1 }
+			add_to_variable = { AOI_org_loss = -0.05 }
+
+			custom_effect_tooltip = AOI_armoured_corps_tt
+
+			add_tech_bonus = {
+				name = AOI_bicycles
+				bonus = 1
+				uses = 2
+				category = motorized_equipment
+			}
+		}
+	}
+
+	focus = {
+		id = AOI_new_model_army
+		icon = GFX_goal_generic_axis_build_infantry
+		prerequisite = { focus = AOI_camicie_nere }
+		prerequisite = { focus = AOI_learning_from_masters }
+		prerequisite = { focus = AOI_armoured_corps }
+		
+        y = 1
+        cost = 5
+		relative_position_id = AOI_learning_from_masters
+		
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 2			
+		}
+
+		completion_reward = {
+			hidden_effect = {
+				remove_ideas = {
+					AOI_infantry_bonus
+					AOI_cheaper_tanks
+					AOI_cheaper_trucks
+				}
+				if = {
+					limit = {
+						has_completed_focus = AOI_prussia_of_africa
+					}
+					remove_dynamic_modifier = { modifier = AOI_colonial_army_prussia }
+					replace_ideas = {
+						remove_idea = AOI_camicie_nere
+						add_idea = AOI_new_model_army_prussia
+					}
+				}
+				else = {
+					remove_dynamic_modifier = { modifier = AOI_colonial_army }
+					replace_ideas = {
+						remove_idea = AOI_camicie_nere
+						add_idea = AOI_new_model_army
+					}
+				}
+			}
+			custom_effect_tooltip = AOI_new_model_army_tt
+		}
+	}
+
+	focus = {
+		id = AOI_ascari
+		icon = GFX_goal_generic_axis_build_infantry
+		prerequisite = { focus = AOI_army_effort }
+		mutually_exclusive = { focus = AOI_colonial_army }
+        x = 4
+        y = 1
+        cost = 5
+		relative_position_id = AOI_army_effort
+		
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 2			
+		}
+
+		completion_reward = {
+			army_experience = 5
+			add_doctrine_cost_reduction = {
+				name = land_doc_bonus
+				cost_reduction = 0.5
+				uses = 1
+				category = land_doctrine
+			}
+		}
+	}
+
+	focus = {
+		id = AOI_localized_training_centers
+		icon = GFX_goal_generic_axis_build_infantry
+		prerequisite = { focus = AOI_ascari }
+		
+        y = 2
+        cost = 5
+		relative_position_id = AOI_ascari
+		
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 2			
+		}
+
+		completion_reward = {
+			army_experience = 5
+			add_doctrine_cost_reduction = {
+				name = land_doc_bonus
+				cost_reduction = 0.5
+				uses = 1
+				category = land_doctrine
+			}
+		}
+	}
+
+	focus = {
+		id = AOI_hard_irregulars
+		icon = GFX_goal_generic_axis_build_infantry
+		prerequisite = { focus = AOI_localized_training_centers }
+		x = -2
+        y = 1
+        cost = 5
+		relative_position_id = AOI_localized_training_centers
+		
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 2			
+		}
+
+		completion_reward = {
+			army_experience = 5
+			add_doctrine_cost_reduction = {
+				name = land_doc_bonus
+				cost_reduction = 0.5
+				uses = 1
+				category = land_doctrine
+			}
+		}
+	}
+
+	focus = {
+		id = AOI_shifta
+		icon = GFX_goal_generic_axis_build_infantry
+		prerequisite = { focus = AOI_hard_irregulars }
+		
+        y = 1
+        cost = 5
+		relative_position_id = AOI_hard_irregulars
+		
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 2			
+		}
+
+		completion_reward = {
+			army_experience = 5
+			add_doctrine_cost_reduction = {
+				name = land_doc_bonus
+				cost_reduction = 0.5
+				uses = 1
+				category = land_doctrine
+			}
+		}
+	}
+
+	focus = {
+		id = AOI_zaptie
+		icon = GFX_goal_generic_axis_build_infantry
+		prerequisite = { focus = AOI_localized_training_centers }
+		
+        y = 1
+        cost = 5
+		relative_position_id = AOI_localized_training_centers
+		
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 2			
+		}
+
+		completion_reward = {
+			army_experience = 5
+			add_doctrine_cost_reduction = {
+				name = land_doc_bonus
+				cost_reduction = 0.5
+				uses = 1
+				category = land_doctrine
+			}
+		}
+	}
+
+	focus = {
+		id = AOI_expand_RCTC
+		icon = GFX_goal_generic_axis_build_infantry
+		prerequisite = { focus = AOI_zaptie }
+		
+        y = 1
+        cost = 5
+		relative_position_id = AOI_zaptie
+		
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 2			
+		}
+
+		completion_reward = {
+			army_experience = 5
+			add_doctrine_cost_reduction = {
+				name = land_doc_bonus
+				cost_reduction = 0.5
+				uses = 1
+				category = land_doctrine
+			}
+		}
+	}
+
+	focus = {
+		id = AOI_local_guides
+		icon = GFX_goal_generic_axis_build_infantry
+		prerequisite = { focus = AOI_localized_training_centers }
+		x = 2
+        y = 1
+        cost = 5
+		relative_position_id = AOI_localized_training_centers
+		
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 2			
+		}
+
+		completion_reward = {
+			army_experience = 5
+			add_doctrine_cost_reduction = {
+				name = land_doc_bonus
+				cost_reduction = 0.5
+				uses = 1
+				category = land_doctrine
+			}
+		}
+	}
+
+	focus = {
+		id = AOI_regional_specialists
+		icon = GFX_goal_generic_axis_build_infantry
+		prerequisite = { focus = AOI_local_guides }
+		
+        y = 1
+        cost = 5
+		relative_position_id = AOI_local_guides
+		
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 2			
+		}
+
+		completion_reward = {
+			army_experience = 5
+			add_doctrine_cost_reduction = {
+				name = land_doc_bonus
+				cost_reduction = 0.5
+				uses = 1
+				category = land_doctrine
+			}
+		}
+	}
+
+	focus = {
+		id = AOI_african_warfare
+		icon = GFX_goal_generic_axis_build_infantry
+		prerequisite = { focus = AOI_shifta }
+		prerequisite = { focus = AOI_expand_RCTC }
+		prerequisite = { focus = AOI_regional_specialists }
+		
+        y = 1
+        cost = 5
+		relative_position_id = AOI_expand_RCTC
+		
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 2			
+		}
+
+		completion_reward = {
+			army_experience = 5
+			add_doctrine_cost_reduction = {
+				name = land_doc_bonus
+				cost_reduction = 0.5
+				uses = 1
+				category = land_doctrine
+			}
+		}
+	}
+
+	focus = {
+		id = AOI_mainland_generals
+		icon = GFX_goal_generic_axis_build_infantry
+		prerequisite = { focus = AOI_colonial_army focus = AOI_ascari }
+		mutually_exclusive = { focus = AOI_settler_generals }
+        x = 3
+        y = 1
+        cost = 5
+		relative_position_id = AOI_colonial_army
+		
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 2			
+		}
+
+		completion_reward = {
+			add_ideas = AOI_mainland_generals
+		}
+	}
+
+	focus = {
+		id = AOI_settler_generals
+		icon = GFX_goal_generic_axis_build_infantry
+		prerequisite = { focus = AOI_colonial_army focus = AOI_ascari }
+		mutually_exclusive = { focus = AOI_mainland_generals }
+        x = 5
+        y = 1
+        cost = 5
+		relative_position_id = AOI_colonial_army
+		
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 2			
+		}
+
+		completion_reward = {
+			add_ideas = AOI_settler_generals
+		}
+	}
+
+	focus = {
+		id = AOI_warm_weather_training
+		icon = GFX_focus_por_luso_tropicalism
+		prerequisite = { focus = AOI_mainland_generals focus = AOI_settler_generals }
+		x = 1
+		y = 1
+		cost = 5
+		relative_position_id = AOI_mainland_generals
+
+		ai_will_do = {
+			factor = 8			
+		}
+		
+		available_if_capitulated = yes
+
+		search_filters = { }
+
+		completion_reward = {
+			add_ideas = AOI_warm_weather_training
+		}
+	}
+
+	focus = {
+		id = AOI_prussia_of_africa
+		icon = GFX_focus_por_luso_tropicalism
+		prerequisite = { focus = AOI_warm_weather_training }
+		y = 1
+		cost = 5
+		relative_position_id = AOI_warm_weather_training
+
+		ai_will_do = {
+			factor = 8			
+		}
+		
+		available_if_capitulated = yes
+
+		search_filters = { }
+
+		completion_reward = {
+			if = {
+				limit = {
+					has_completed_focus = AOI_colonial_army
+				}
+				if = {
+					limit = {
+						has_completed_focus = AOI_new_model_army
+					}
+					replace_ideas = {
+						remove_idea = AOI_new_model_army
+						add_idea = AOI_new_model_army_prussia
+					}
+				}
+				else = {
+					custom_effect_tooltip = AOI_prussia_of_africa_tt_1
+					hidden_effect = {
+						remove_dynamic_modifier = { modifier = AOI_colonial_army }
+						add_dynamic_modifier = { modifier = AOI_colonial_army_prussia }
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					has_completed_focus = AOI_ascari
+				}
+			}
+			else = {
+				custom_effect_tooltip = AOI_prussia_of_africa_tt
+			}
+		}
+	}
+
+	focus = {
+		id = AOI_air_effort
+		icon = GFX_goal_generic_axis_build_infantry
+		prerequisite = { focus = AOI_military_effort }
+        x = 0
+        y = 1
+        cost = 5
+		relative_position_id = AOI_military_effort
+		
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 2			
+		}
+
+		completion_reward = {
+			army_experience = 5
+			add_doctrine_cost_reduction = {
+				name = land_doc_bonus
+				cost_reduction = 0.5
+				uses = 1
+				category = land_doctrine
+			}
+		}
+	}
+
+	focus = {
+		id = AOI_imperial_airline
+		icon = GFX_goal_generic_axis_build_infantry
+		prerequisite = { focus = AOI_air_effort }
+		x = 6
+        y = 1
+        cost = 5
+		relative_position_id = AOI_air_effort
+		
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 2			
+		}
+
+		completion_reward = {
+			army_experience = 5
+			add_doctrine_cost_reduction = {
+				name = land_doc_bonus
+				cost_reduction = 0.5
+				uses = 1
+				category = land_doctrine
+			}
+		}
+	}
+
+	focus = {
+		id = AOI_encourage_tourism
+		icon = GFX_goal_generic_axis_build_infantry
+		prerequisite = { focus = AOI_imperial_airline }
+		
+        y = 1
+        cost = 5
+		relative_position_id = AOI_imperial_airline
+		
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 2			
+		}
+
+		completion_reward = {
+			army_experience = 5
+			add_doctrine_cost_reduction = {
+				name = land_doc_bonus
+				cost_reduction = 0.5
+				uses = 1
+				category = land_doctrine
+			}
+		}
+	}
+
+	focus = {
+		id = AOI_mogadishu_air
+		icon = GFX_goal_generic_axis_build_infantry
+		prerequisite = { focus = AOI_encourage_tourism }
+		
+        y = 1
+        cost = 5
+		relative_position_id = AOI_encourage_tourism
+		
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 2			
+		}
+
+		completion_reward = {
+			army_experience = 5
+			add_doctrine_cost_reduction = {
+				name = land_doc_bonus
+				cost_reduction = 0.5
+				uses = 1
+				category = land_doctrine
+			}
+		}
+	}
+
+	focus = {
+		id = AOI_fiat_taglierro
+		icon = GFX_goal_generic_axis_build_infantry
+		prerequisite = { focus = AOI_air_effort }
+		
+        y = 1
+        cost = 5
+		relative_position_id = AOI_air_effort
+		
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 2			
+		}
+
+		completion_reward = {
+			army_experience = 5
+			add_doctrine_cost_reduction = {
+				name = land_doc_bonus
+				cost_reduction = 0.5
+				uses = 1
+				category = land_doctrine
+			}
+		}
+	}
+
+	focus = {
+		id = AOI_acknowledging_practicalities
+		icon = GFX_goal_generic_axis_build_infantry
+		prerequisite = { focus = AOI_fiat_taglierro }
+		
+        y = 1
+        cost = 5
+		relative_position_id = AOI_fiat_taglierro
+		
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 2			
+		}
+
+		completion_reward = {
+			army_experience = 5
+			add_doctrine_cost_reduction = {
+				name = land_doc_bonus
+				cost_reduction = 0.5
+				uses = 1
+				category = land_doctrine
+			}
+		}
+	}
+
+	focus = {
+		id = AOI_defend_skies
+		icon = GFX_goal_generic_axis_build_infantry
+		prerequisite = { focus = AOI_acknowledging_practicalities }
+		mutually_exclusive = { focus = AOI_hamper_their_efforts }
+		x = -2
+        y = 1
+        cost = 5
+		relative_position_id = AOI_acknowledging_practicalities
+		
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 2			
+		}
+
+		completion_reward = {
+			army_experience = 5
+			add_doctrine_cost_reduction = {
+				name = land_doc_bonus
+				cost_reduction = 0.5
+				uses = 1
+				category = land_doctrine
+			}
+		}
+	}
+
+	focus = {
+		id = AOI_air_supplies
+		icon = GFX_goal_generic_axis_build_infantry
+		prerequisite = { focus = AOI_defend_skies }
+		x = -2
+        y = 1
+        cost = 5
+		relative_position_id = AOI_defend_skies
+		
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 2			
+		}
+
+		completion_reward = {
+			army_experience = 5
+			add_doctrine_cost_reduction = {
+				name = land_doc_bonus
+				cost_reduction = 0.5
+				uses = 1
+				category = land_doctrine
+			}
+		}
+	}
+
+	focus = {
+		id = AOI_paratroopers
+		icon = GFX_goal_generic_axis_build_infantry
+		prerequisite = { focus = AOI_air_supplies }
+		
+        y = 1
+        cost = 5
+		relative_position_id = AOI_air_supplies
+		
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 2			
+		}
+
+		completion_reward = {
+			army_experience = 5
+			add_doctrine_cost_reduction = {
+				name = land_doc_bonus
+				cost_reduction = 0.5
+				uses = 1
+				category = land_doctrine
+			}
+		}
+	}
+
+	focus = {
+		id = AOI_fighters
+		icon = GFX_goal_generic_axis_build_infantry
+		prerequisite = { focus = AOI_defend_skies }
+		
+        y = 1
+        cost = 5
+		relative_position_id = AOI_defend_skies
+		
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 2			
+		}
+
+		completion_reward = {
+			army_experience = 5
+			add_doctrine_cost_reduction = {
+				name = land_doc_bonus
+				cost_reduction = 0.5
+				uses = 1
+				category = land_doctrine
+			}
+		}
+	}
+
+	focus = {
+		id = AOI_nighttime_training
+		icon = GFX_goal_generic_axis_build_infantry
+		prerequisite = { focus = AOI_fighters }
+		
+        y = 1
+        cost = 5
+		relative_position_id = AOI_fighters
+		
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 2			
+		}
+
+		completion_reward = {
+			army_experience = 5
+			add_doctrine_cost_reduction = {
+				name = land_doc_bonus
+				cost_reduction = 0.5
+				uses = 1
+				category = land_doctrine
+			}
+		}
+	}
+
+	focus = {
+		id = AOI_spare_parts
+		icon = GFX_goal_generic_axis_build_infantry
+		prerequisite = { focus = AOI_defend_skies focus = AOI_hamper_their_efforts }
+		x = 2
+        y = 1
+        cost = 5
+		relative_position_id = AOI_defend_skies
+		
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 2			
+		}
+
+		completion_reward = {
+			army_experience = 5
+			add_doctrine_cost_reduction = {
+				name = land_doc_bonus
+				cost_reduction = 0.5
+				uses = 1
+				category = land_doctrine
+			}
+		}
+	}
+
+	focus = {
+		id = AOI_advancing_aviation
+		icon = GFX_goal_generic_axis_build_infantry
+		prerequisite = { focus = AOI_spare_parts }
+		
+        y = 1
+        cost = 5
+		relative_position_id = AOI_spare_parts
+		
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 2			
+		}
+
+		completion_reward = {
+			army_experience = 5
+			add_doctrine_cost_reduction = {
+				name = land_doc_bonus
+				cost_reduction = 0.5
+				uses = 1
+				category = land_doctrine
+			}
+		}
+	}
+
+	focus = {
+		id = AOI_hamper_their_efforts
+		icon = GFX_goal_generic_axis_build_infantry
+		prerequisite = { focus = AOI_acknowledging_practicalities }
+		mutually_exclusive = { focus = AOI_defend_skies }
+		x = 2
+        y = 1
+        cost = 5
+		relative_position_id = AOI_acknowledging_practicalities
+		
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 2			
+		}
+
+		completion_reward = {
+			army_experience = 5
+			add_doctrine_cost_reduction = {
+				name = land_doc_bonus
+				cost_reduction = 0.5
+				uses = 1
+				category = land_doctrine
+			}
+		}
+	}
+
+	focus = {
+		id = AOI_assisting_our_troops
+		icon = GFX_goal_generic_axis_build_infantry
+		prerequisite = { focus = AOI_hamper_their_efforts }
+		
+        y = 1
+        cost = 5
+		relative_position_id = AOI_hamper_their_efforts
+		
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 2			
+		}
+
+		completion_reward = {
+			army_experience = 5
+			add_doctrine_cost_reduction = {
+				name = land_doc_bonus
+				cost_reduction = 0.5
+				uses = 1
+				category = land_doctrine
+			}
+		}
+	}
+
+	focus = {
+		id = AOI_bombing_their_stuff
+		icon = GFX_goal_generic_axis_build_infantry
+		prerequisite = { focus = AOI_assisting_our_troops }
+		
+        y = 1
+        cost = 5
+		relative_position_id = AOI_assisting_our_troops
+		
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 2			
+		}
+
+		completion_reward = {
+			army_experience = 5
+			add_doctrine_cost_reduction = {
+				name = land_doc_bonus
+				cost_reduction = 0.5
+				uses = 1
+				category = land_doctrine
+			}
+		}
+	}
+
+	focus = {
+		id = AOI_air_navy_coop
+		icon = GFX_goal_generic_axis_build_infantry
+		prerequisite = { focus = AOI_hamper_their_efforts }
+		x = 2
+        y = 1
+        cost = 5
+		relative_position_id = AOI_hamper_their_efforts
+		
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 2			
+		}
+
+		completion_reward = {
+			army_experience = 5
+			add_doctrine_cost_reduction = {
+				name = land_doc_bonus
+				cost_reduction = 0.5
+				uses = 1
+				category = land_doctrine
+			}
+		}
+	}
+
+	focus = {
+		id = AOI_aerial_mine_war
+		icon = GFX_goal_generic_axis_build_infantry
+		prerequisite = { focus = AOI_air_navy_coop }
+		
+        y = 1
+        cost = 5
+		relative_position_id = AOI_air_navy_coop
+		
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 2			
+		}
+
+		completion_reward = {
+			army_experience = 5
+			add_doctrine_cost_reduction = {
+				name = land_doc_bonus
+				cost_reduction = 0.5
+				uses = 1
+				category = land_doctrine
+			}
+		}
+	}
+
+	focus = {
+		id = AOI_true_colonial_airforce
+		icon = GFX_goal_generic_axis_build_infantry
+		prerequisite = { focus = AOI_paratroopers focus = AOI_bombing_their_stuff }
+		prerequisite = { focus = AOI_advancing_aviation }
+		prerequisite = { focus = AOI_nighttime_training focus = AOI_aerial_mine_war }
+        y = 1
+        cost = 5
+		relative_position_id = AOI_advancing_aviation
+		
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 2			
+		}
+
+		completion_reward = {
+			army_experience = 5
+			add_doctrine_cost_reduction = {
+				name = land_doc_bonus
+				cost_reduction = 0.5
+				uses = 1
+				category = land_doctrine
+			}
+		}
+	}
+
+	focus = {
+		id = AOI_naval_effort
+		icon = GFX_goal_generic_axis_build_infantry
+		prerequisite = { focus = AOI_military_effort }
+        x = 12
+        y = 1
+        cost = 5
+		relative_position_id = AOI_military_effort
+		
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 2			
+		}
+
+		completion_reward = {
+			army_experience = 5
+			add_doctrine_cost_reduction = {
+				name = land_doc_bonus
+				cost_reduction = 0.5
+				uses = 1
+				category = land_doctrine
+			}
+		}
+	}
+
+	focus = {
+		id = AOI_expand_naval_capabilities
+		icon = GFX_goal_generic_axis_build_infantry
+		prerequisite = { focus = AOI_naval_effort }
+		
+        y = 1
+        cost = 5
+		relative_position_id = AOI_naval_effort
+		
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 2			
+		}
+
+		completion_reward = {
+			army_experience = 5
+			add_doctrine_cost_reduction = {
+				name = land_doc_bonus
+				cost_reduction = 0.5
+				uses = 1
+				category = land_doctrine
+			}
+		}
+	}
+
+	focus = {
+		id = AOI_strengthen_merchants
+		icon = GFX_goal_generic_axis_build_infantry
+		prerequisite = { focus = AOI_expand_naval_capabilities }
+		
+        y = 1
+        cost = 5
+		relative_position_id = AOI_expand_naval_capabilities
+		
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 2			
+		}
+
+		completion_reward = {
+			army_experience = 5
+			add_doctrine_cost_reduction = {
+				name = land_doc_bonus
+				cost_reduction = 0.5
+				uses = 1
+				category = land_doctrine
+			}
+		}
+	}
+
+	focus = {
+		id = AOI_indian_ocean
+		icon = GFX_goal_generic_axis_build_infantry
+		prerequisite = { focus = AOI_strengthen_merchants }
+		mutually_exclusive = { focus = AOI_red_sea }
+		x = -2
+        y = 1
+        cost = 5
+		relative_position_id = AOI_strengthen_merchants
+		
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 2			
+		}
+
+		completion_reward = {
+			army_experience = 5
+			add_doctrine_cost_reduction = {
+				name = land_doc_bonus
+				cost_reduction = 0.5
+				uses = 1
+				category = land_doctrine
+			}
+		}
+	}
+
+	focus = {
+		id = AOI_strength_thru_numbers
+		icon = GFX_goal_generic_axis_build_infantry
+		prerequisite = { focus = AOI_indian_ocean }
+		x = -2
+        y = 1
+        cost = 5
+		relative_position_id = AOI_indian_ocean
+		
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 2			
+		}
+
+		completion_reward = {
+			army_experience = 5
+			add_doctrine_cost_reduction = {
+				name = land_doc_bonus
+				cost_reduction = 0.5
+				uses = 1
+				category = land_doctrine
+			}
+		}
+	}
+
+	focus = {
+		id = AOI_marines
+		icon = GFX_goal_generic_axis_build_infantry
+		prerequisite = { focus = AOI_strength_thru_numbers }
+		
+        y = 1
+        cost = 5
+		relative_position_id = AOI_strength_thru_numbers
+		
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 2			
+		}
+
+		completion_reward = {
+			army_experience = 5
+			add_doctrine_cost_reduction = {
+				name = land_doc_bonus
+				cost_reduction = 0.5
+				uses = 1
+				category = land_doctrine
+			}
+		}
+	}
+
+	focus = {
+		id = AOI_convert_merchant
+		icon = GFX_goal_generic_axis_build_infantry
+		prerequisite = { focus = AOI_indian_ocean }
+		
+        y = 1
+        cost = 5
+		relative_position_id = AOI_indian_ocean
+		
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 2			
+		}
+
+		completion_reward = {
+			army_experience = 5
+			add_doctrine_cost_reduction = {
+				name = land_doc_bonus
+				cost_reduction = 0.5
+				uses = 1
+				category = land_doctrine
+			}
+		}
+	}
+
+	focus = {
+		id = AOI_mainland_designs
+		icon = GFX_goal_generic_axis_build_infantry
+		prerequisite = { focus = AOI_convert_merchant }
+		
+        y = 1
+        cost = 5
+		relative_position_id = AOI_convert_merchant
+		
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 2			
+		}
+
+		completion_reward = {
+			army_experience = 5
+			add_doctrine_cost_reduction = {
+				name = land_doc_bonus
+				cost_reduction = 0.5
+				uses = 1
+				category = land_doctrine
+			}
+		}
+	}
+
+	focus = {
+		id = AOI_naval_academy
+		icon = GFX_goal_generic_axis_build_infantry
+		prerequisite = { focus = AOI_indian_ocean focus = AOI_red_sea }
+		x = 2
+        y = 1
+        cost = 5
+		relative_position_id = AOI_indian_ocean
+		
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 2			
+		}
+
+		completion_reward = {
+			army_experience = 5
+			add_doctrine_cost_reduction = {
+				name = land_doc_bonus
+				cost_reduction = 0.5
+				uses = 1
+				category = land_doctrine
+			}
+		}
+	}
+
+	focus = {
+		id = AOI_navy_training
+		icon = GFX_goal_generic_axis_build_infantry
+		prerequisite = { focus = AOI_naval_academy }
+		
+        y = 1
+        cost = 5
+		relative_position_id = AOI_naval_academy
+		
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 2			
+		}
+
+		completion_reward = {
+			army_experience = 5
+			add_doctrine_cost_reduction = {
+				name = land_doc_bonus
+				cost_reduction = 0.5
+				uses = 1
+				category = land_doctrine
+			}
+		}
+	}
+
+	focus = {
+		id = AOI_red_sea
+		icon = GFX_goal_generic_axis_build_infantry
+		prerequisite = { focus = AOI_strengthen_merchants }
+		mutually_exclusive = { focus = AOI_indian_ocean }
+		x = 2
+        y = 1
+        cost = 5
+		relative_position_id = AOI_strengthen_merchants
+		
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 2			
+		}
+
+		completion_reward = {
+			army_experience = 5
+			add_doctrine_cost_reduction = {
+				name = land_doc_bonus
+				cost_reduction = 0.5
+				uses = 1
+				category = land_doctrine
+			}
+		}
+	}
+
+	focus = {
+		id = AOI_evasion
+		icon = GFX_goal_generic_axis_build_infantry
+		prerequisite = { focus = AOI_red_sea }
+		
+        y = 1
+        cost = 5
+		relative_position_id = AOI_red_sea
+		
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 2			
+		}
+
+		completion_reward = {
+			army_experience = 5
+			add_doctrine_cost_reduction = {
+				name = land_doc_bonus
+				cost_reduction = 0.5
+				uses = 1
+				category = land_doctrine
+			}
+		}
+	}
+
+	focus = {
+		id = AOI_long_raiding
+		icon = GFX_goal_generic_axis_build_infantry
+		prerequisite = { focus = AOI_evasion }
+		
+        y = 1
+        cost = 5
+		relative_position_id = AOI_evasion
+		
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 2			
+		}
+
+		completion_reward = {
+			army_experience = 5
+			add_doctrine_cost_reduction = {
+				name = land_doc_bonus
+				cost_reduction = 0.5
+				uses = 1
+				category = land_doctrine
+			}
+		}
+	}
+
+	focus = {
+		id = AOI_submarines
+		icon = GFX_goal_generic_axis_build_infantry
+		prerequisite = { focus = AOI_red_sea }
+		x = 2
+        y = 1
+        cost = 5
+		relative_position_id = AOI_red_sea
+		
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 2			
+		}
+
+		completion_reward = {
+			army_experience = 5
+			add_doctrine_cost_reduction = {
+				name = land_doc_bonus
+				cost_reduction = 0.5
+				uses = 1
+				category = land_doctrine
+			}
+		}
+	}
+
+	focus = {
+		id = AOI_mine_war
+		icon = GFX_goal_generic_axis_build_infantry
+		prerequisite = { focus = AOI_submarines }
+		
+        y = 1
+        cost = 5
+		relative_position_id = AOI_submarines
+		
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 2			
+		}
+
+		completion_reward = {
+			army_experience = 5
+			add_doctrine_cost_reduction = {
+				name = land_doc_bonus
+				cost_reduction = 0.5
+				uses = 1
+				category = land_doctrine
+			}
+		}
+	}
+
+	focus = {
+		id = AOI_southern_jewel
+		icon = GFX_goal_generic_axis_build_infantry
+		prerequisite = { focus = AOI_marines focus = AOI_long_raiding }
+		prerequisite = { focus = AOI_navy_training }
+		prerequisite = { focus = AOI_mainland_designs focus = AOI_mine_war }
+        y = 1
+        cost = 5
+		relative_position_id = AOI_navy_training
+		
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 2			
+		}
+
+		completion_reward = {
+			army_experience = 5
+			add_doctrine_cost_reduction = {
+				name = land_doc_bonus
+				cost_reduction = 0.5
+				uses = 1
+				category = land_doctrine
+			}
+		}
+	}
+
+}

@@ -1,0 +1,163 @@
+FRA_anti_decolonization = {
+	valid_relation_trigger = {
+		ROOT = {
+			has_government = communism
+		}
+	}
+	resistance_growth = 0.6
+	resistance_target = 0.6
+	resistance_damage_to_garrison = 0.75
+	compliance_gain = -0.5
+	resistance_decay = -0.75
+}
+VIN_guerilla_activities = {
+	valid_relation_trigger = {
+		ROOT = {
+			NOT = { has_government = communism }
+		}
+	}
+	resistance_growth = 0.6
+	resistance_target = 1
+	resistance_damage_to_garrison = 0.95
+	compliance_gain = -0.75
+	resistance_decay = -0.75
+}
+LAO_guerilla_activities = {
+	valid_relation_trigger = {
+		ROOT = {
+			NOT = { has_government = communism }
+		}
+	}
+	resistance_growth = 0.25
+	resistance_target = 1
+	resistance_damage_to_garrison = 0.5
+	compliance_gain = -0.25
+	resistance_decay = -0.25
+}
+CAM_guerilla_activities = {
+	valid_relation_trigger = {
+		ROOT = {
+			NOT = { has_government = communism }
+		}
+	}
+	resistance_growth = 0.25
+	resistance_target = 1
+	resistance_damage_to_garrison = 0.5
+	compliance_gain = -0.25
+	resistance_decay = -0.25
+}
+SOV_RUS_autonomy_granted = {
+	valid_relation_trigger = {
+		ROOT = {
+			OR = {
+				has_government = neutrality
+				has_government = fascism
+			}
+		}
+	}
+	compliance_growth = 0.15
+	resistance_decay = 0.25
+	required_garrison_factor = -0.1
+}
+SOV_RUS_autonomy_stifled = {
+	valid_relation_trigger = {
+		ROOT = {
+			OR = {
+				has_government = neutrality
+				has_government = fascism
+			}
+		}
+	}
+	compliance_growth = -0.3
+	resistance_decay = -0.3
+	resistance_target = 0.5
+}
+BALTIC_forest_brothers_modifier = {
+	valid_relation_trigger = {
+		ROOT = {
+			has_government = communism
+		}
+	}
+	resistance_growth = 0.1
+	resistance_target = 0.25
+	resistance_damage_to_garrison = 0.5
+	resistance_decay = -0.25
+}
+MAN_five_equal_peoples = {
+	valid_relation_trigger = {
+		ROOT = {
+			original_tag = MAN
+		}
+	}
+	resistance_target = -0.25
+	resistance_damage_to_garrison = -0.5
+	compliance_gain = 0.01
+	compliance_growth = 0.1
+}
+MAN_five_equal_peoples_RUS = {
+	valid_relation_trigger = {
+		ROOT = {
+			original_tag = MAN
+		}
+	}
+	resistance_target = -0.15
+	resistance_damage_to_garrison = -0.25
+	compliance_growth = 0.05
+}
+CHI_five_races_under_one_union = {
+	valid_relation_trigger = {
+		ROOT = {
+			original_tag = CHI
+		}
+	}
+	resistance_target = -0.25
+	resistance_damage_to_garrison = -0.5
+	compliance_gain = 0.01
+	compliance_growth = 0.1
+}
+CHI_five_races_under_one_union_2 = {
+	valid_relation_trigger = {
+		ROOT = {
+			original_tag = MAN
+		}
+	}
+	resistance_target = -0.15
+	resistance_damage_to_garrison = -0.25
+	compliance_growth = 0.05
+}
+
+diff_strong_ai_com_res = {
+	compliance_gain = 0.01
+	compliance_growth = 0.10
+	resistance_growth = -0.10
+	resistance_target = -0.10
+	resistance_decay = 0.10
+	required_garrison_factor = -0.25
+	resistance_damage_to_garrison = -0.10
+}
+#BOP BELOW
+
+SOV_lobby_for_trotskyists = {
+	power_balance_daily = -0.004
+}
+
+SOV_lobby_for_bukharinists = {
+	power_balance_daily = 0.004
+}
+AOI_lobby_for_compliance = {
+	power_balance_daily = -0.006
+}
+
+AOI_lobby_for_resistance = {
+	power_balance_daily = 0.006
+}
+
+USA_expanding_the_executive_branch = {
+	power_balance_daily = 0.005
+}
+USA_secure_state_rights = {
+	power_balance_daily = -0.001
+}
+USA_replace_the_presidency_with_the_chief = {
+	power_balance_daily = 0.001
+}

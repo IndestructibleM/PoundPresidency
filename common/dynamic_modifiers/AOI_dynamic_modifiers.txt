@@ -1,0 +1,847 @@
+#	Example:
+# 
+#	example_dynamic_modifier = {
+#		icon = "GFX_idea_unknown" # optional, will show up in guis if icon is specified
+#		enable = { always = yes } #optional, the modifier won't apply if not enabled
+#		remove_trigger = { always = no } #optional, will remove the modifier if true
+#       attacker_modifier = no  # if yes this modifier will also be read in combat for 
+#                               # people engaging in the combat even if not in the state
+#
+#		# list of modifiers
+#		fuel_cost = 321
+#		max_fuel = var_max_fuel # will be taken from a variable
+#	}
+#
+#
+#	In a script file:
+#
+#	effect = {
+#		add_dynamic_modifier = {
+#			modifier = example_dynamic_modifier
+#			scope = GER # optional, if you specify this your dynamic modifier scoped to this scope (root is the effect scope)
+#			days = 14 # optional, will be removed after this many days passes
+#		}
+#	}
+#
+#	can be added to countries, states or unit leaders
+#	will only updated daily, unless forced by force_update_dynamic_modifier effect
+
+moroccan_nationalism = {
+	enable = { always = yes }
+	remove_trigger = {
+		OR = {
+			NOT = { has_state_flag = moroccan_nationalism }
+			is_controlled_by = MOR
+		}
+	}
+
+	icon = GFX_morocco_nationalism
+
+	resistance_growth = 0.3
+	compliance_gain = -0.025
+}
+georgian_liberation_committee = {
+	enable = { always = yes }
+	remove_trigger = {
+		NOT = {
+			OR = {
+				is_core_of = GEO
+				CONTROLLER = {
+					has_country_flag = GEO_liberation_committee
+				}
+			}
+		}
+	}
+
+	icon = GFX_modifiers_sabotaged_resource
+
+	resistance_growth = -0.3
+	required_garrison_factor = -0.2
+	compliance_gain = 0.05
+    resistance_target = -0.4
+	resistance_decay = 0.25
+	local_factories = 0.75
+	local_manpower = 0.75
+	local_resources = 0.5
+}
+armenian_liberation_committee = {
+	enable = { always = yes }
+	remove_trigger = {
+		NOT = {
+			OR = {
+				is_core_of = ARM
+				CONTROLLER = {
+					has_country_flag = ARM_liberation_committee
+				}
+			}
+		}
+	}
+
+	icon = GFX_modifiers_sabotaged_resource
+
+	resistance_growth = -0.3
+	required_garrison_factor = -0.2
+	compliance_gain = 0.05
+    resistance_target = -0.4
+	resistance_decay = 0.25
+	local_factories = 0.75
+	local_manpower = 0.75
+	local_resources = 0.5
+}
+azerbaijani_liberation_committee = {
+	enable = { always = yes }
+	remove_trigger = {
+		NOT = {
+			OR = {
+				is_core_of = AZR
+				CONTROLLER = {
+					has_country_flag = AZR_liberation_committee
+				}
+			}
+		}
+	}
+
+	icon = GFX_modifiers_sabotaged_resource
+
+	resistance_growth = -0.3
+	required_garrison_factor = -0.2
+	compliance_gain = 0.05
+    resistance_target = -0.4
+	resistance_decay = 0.25
+	local_factories = 0.75
+	local_manpower = 0.75
+	local_resources = 0.5
+}
+GER_anti_nazi_propaganda = {
+	enable = { always = yes }
+
+	icon = GFX_modifiers_sabotaged_resource
+	
+	compliance_gain = 0.8
+}
+
+POL_recently_united_CZE = {
+	enable = { tag = POL }
+
+	icon = GFX_modifiers_sabotaged_resource
+	
+	state_production_speed_industrial_complex_factor = -0.25
+	state_production_speed_rail_way_factor = -0.25
+	state_production_speed_arms_factory_factor = -0.25
+	local_factories = -0.3
+}
+POL_recently_united_CZE_2_railway = {
+	enable = { tag = POL }
+
+	icon = GFX_modifiers_sabotaged_resource
+	
+	state_production_speed_industrial_complex_factor = -0.25
+	state_production_speed_arms_factory_factor = -0.25
+	local_factories = -0.3
+}
+POL_recently_united_CZE_2_industry = {
+	enable = { tag = POL }
+
+	icon = GFX_modifiers_sabotaged_resource
+	
+	state_production_speed_rail_way_factor = -0.25
+	state_production_speed_arms_factory_factor = -0.25
+	local_factories = -0.15
+}
+POL_recently_united_CZE_3 = {
+	enable = { tag = POL }
+
+	icon = GFX_modifiers_sabotaged_resource
+	
+	state_production_speed_arms_factory_factor = -0.25
+	local_factories = -0.15
+}
+
+POL_recently_united_ROM = {
+	enable = { tag = POL }
+
+	icon = GFX_modifiers_sabotaged_resource
+	
+	state_production_speed_buildings_factor = -0.25
+	local_factories = -0.25
+	local_resources = -0.5
+}
+
+POL_recently_united_ROM_2 = {
+	enable = { tag = POL }
+
+	icon = GFX_modifiers_sabotaged_resource
+	
+	local_resources = -0.5
+}
+
+GER_werwolf_resistance = {
+	enable = { always = yes }
+
+	icon = GFX_modifiers_generic_fascist_corporatism
+	
+	compliance_growth = -0.2
+	resistance_target = 0.15
+}
+
+GER_werwolf_resistance_2 = {
+	enable = { always = yes }
+
+	icon = GFX_modifiers_generic_fascist_corporatism
+	
+	compliance_growth = -0.4
+	resistance_target = 0.3
+}
+
+GER_werwolf_resistance_3 = {
+	enable = { always = yes }
+
+	icon = GFX_modifiers_generic_fascist_corporatism
+	
+	compliance_growth = -0.5
+	resistance_target = 0.7
+	resistance_growth = 0.1
+}
+
+
+GER_skirmishes_against_werwolf = {
+	enable = { always = yes }
+
+	icon = GFX_modifiers_generic_military_plans
+	
+	state_resources_factor = -0.75
+	state_production_speed_buildings_factor = -0.75
+	army_speed_factor_for_controller = -0.25
+	attrition_for_controller = 1
+	local_org_regain = -0.75
+	disable_strategic_redeployment = 1
+}
+
+GER_police_state = {
+	enable = { always = yes }
+
+	icon = GFX_modifiers_sabotaged_resource
+	
+	compliance_gain = 0.2
+}
+
+GER_werwolf_resistance_increased = {
+	enable = { always = yes }
+
+	icon = GFX_modifiers_generic_fascist_corporatism
+	
+	resistance_growth = 0.3
+	resistance_target = 0.15
+}
+
+GER_unstable_state = {
+	enable = { always = yes }
+
+	icon = GFX_modifiers_sabotaged_resource
+	
+	compliance_gain = -0.05
+}
+CHI_anti_communism_modifier = {
+	enable = { always = yes }
+
+	icon = GFX_modifiers_generic_military_plans
+	
+	state_production_speed_infrastructure_factor = 0.25
+	state_production_speed_rail_way_factor = 0.25
+	state_production_speed_supply_node_factor = 0.25
+}
+
+PRC_anti_communism_modifier = {
+	enable = { always = yes }
+
+	icon = GFX_unplanned_offensive
+	
+	pocket_penalty = 0.25
+}
+
+GER_pan_germanism = {
+	enable = { 
+		NOT = {
+			is_core_of = NZI
+		}
+	}
+	remove_trigger = {
+		is_core_of = NZI
+	}
+
+	icon = GFX_decision_generic_civil_support
+	
+	compliance_gain = 0.2
+	resistance_decay = 0.2
+	resistance_growth = -0.2
+	compliance_growth = 0.1
+}
+
+YUG_partisani_base_is_here = {
+	enable = { always = yes }
+
+	icon = GFX_unplanned_offensive
+
+	compliance_growth = -0.1
+	resistance_damage_to_garrison = 0.25
+	resistance_decay = -0.15
+	resistance_growth = 0.15
+	resistance_target = 0.15
+	resistance_garrison_penetration_chance = 0.25
+	required_garrison_factor = 0.35
+}
+
+YUG_partisani_base_is_here_defense = {
+	enable = { always = yes }
+
+	icon = GFX_modifiers_generic_military_plans
+	
+	army_defence_factor = 0.1
+}
+
+FIN_continuation_war_phase_1 = {
+	enable = { always = yes }
+
+	icon = GFX_decision_generic_ignite_civil_war
+	
+	army_attack_factor = 0.1
+	army_defence_factor = 0.05
+	breakthrough_factor = 0.15
+	army_org_regain = 0.10
+	army_morale_factor = 0.15
+	resistance_target = -0.15
+	resistance_growth = -0.15
+	resistance_damage_to_garrison = -0.1
+}
+
+FIN_continuation_war_phase_1_dont_attack_here_195 = {
+	enable = { always = yes }
+
+	icon = GFX_unplanned_offensive
+	
+	army_attack_factor = -0.50
+	army_org_regain = -0.50
+	army_speed_factor = -0.50
+	breakthrough_factor = -0.50
+	army_defence_factor = -0.75
+}
+
+FIN_continuation_war_phase_1_dont_attack_here_213 = {
+	enable = { always = yes }
+
+	icon = GFX_unplanned_offensive
+	
+	army_attack_factor = -0.25
+	army_org_regain = -0.25
+	army_speed_factor = -0.75
+	army_defence_factor = -0.15
+	breakthrough_factor = -0.15
+}
+
+FIN_continuation_war_phase_2 = {
+	enable = { always = yes }
+
+	icon = GFX_modifiers_generic_military_plans
+	
+	army_defence_factor = 0.1
+	army_attack_factor = -0.05
+	dig_in_speed_factor = 0.15
+	local_manpower = 0.1
+	required_garrison_factor = -0.1
+	compliance_growth = 0.25
+	compliance_gain = 0.01
+}
+
+ITA_moslem_italians = {
+	enable = { always = yes }
+
+	icon = GFX_decision_generic_colonial_administration
+	
+	local_non_core_manpower = 0.35
+	local_factories = 0.15
+	compliance_gain = 0.01
+}
+
+GER_protektorat_bohmen_mahren = {
+	enable = { always = yes }
+
+	icon = GFX_modifiers_generic_fascist_corporatism
+	
+	resistance_target = -0.1
+	resistance_growth = -0.05
+	resistance_damage_to_garrison = -0.20
+	compliance_gain = 0.01
+	compliance_growth = -0.1
+}
+GER_generalgouvernment = {
+	enable = { always = yes }
+
+	icon = GFX_modifiers_generic_fascist_corporatism
+	
+	resistance_target = -0.15
+	resistance_growth = -0.10
+	resistance_damage_to_garrison = -0.30
+	resistance_decay = 0.25
+	compliance_growth = -0.1
+	local_non_core_manpower = -0.15
+}
+GER_military_district_siberia = {
+	enable = { always = yes }
+
+	icon = GFX_modifiers_generic_fascist_corporatism
+
+	required_garrison_factor = -0.25
+}
+GER_reichskommissariat_norwegen = {
+	enable = { always = yes }
+
+	icon = GFX_modifiers_generic_fascist_corporatism
+	
+	resistance_target = -0.15
+	resistance_growth = -0.10
+	resistance_damage_to_garrison = -0.30
+	resistance_decay = 0.25
+}
+GER_reichskommissariat_schweden = {
+	enable = { always = yes }
+
+	icon = GFX_modifiers_generic_fascist_corporatism
+	
+	resistance_target = -0.15
+	resistance_growth = -0.10
+	resistance_damage_to_garrison = -0.30
+	resistance_decay = 0.25
+}
+GER_reichskommissariat_niederlande = {
+	enable = { always = yes }
+
+	icon = GFX_modifiers_generic_fascist_corporatism
+	
+	resistance_target = -0.15
+	resistance_growth = -0.10
+	resistance_damage_to_garrison = -0.30
+	resistance_decay = 0.25
+}
+GER_reichskommissariat_belgien_nordfrankreich = {
+	enable = { always = yes }
+
+	icon = GFX_modifiers_generic_fascist_corporatism
+	
+	resistance_target = -0.15
+	resistance_growth = -0.10
+	resistance_damage_to_garrison = -0.30
+	resistance_decay = 0.25
+}
+GER_reichskommissariat_ostland = {
+	enable = { always = yes }
+
+	icon = GFX_modifiers_generic_fascist_corporatism
+	
+	resistance_target = -0.15
+	resistance_growth = -0.10
+	resistance_damage_to_garrison = -0.30
+	resistance_decay = 0.25
+	compliance_growth = -0.05
+	local_non_core_manpower = -0.15
+}
+GER_reichskommissariat_ukraine = {
+	enable = { always = yes }
+
+	icon = GFX_modifiers_generic_fascist_corporatism
+	
+	resistance_target = -0.15
+	resistance_growth = -0.10
+	resistance_damage_to_garrison = -0.30
+	resistance_decay = 0.25
+	compliance_growth = -0.05
+	local_non_core_manpower = -0.15
+}
+GER_reichskommissariat_moskowien = {
+	enable = { always = yes }
+
+	icon = GFX_modifiers_generic_fascist_corporatism
+	
+	resistance_target = -0.25
+	resistance_growth = -0.25
+	resistance_damage_to_garrison = -0.30
+	resistance_decay = 0.25
+	compliance_growth = -0.15
+	local_non_core_manpower = -0.25
+}
+GER_reichskommissariat_kaukasus = {
+	enable = { always = yes }
+
+	icon = GFX_modifiers_generic_fascist_corporatism
+	
+	resistance_target = -0.25
+	resistance_growth = -0.25
+	resistance_damage_to_garrison = -0.30
+	resistance_decay = 0.25
+	compliance_growth = 0.05
+	local_non_core_manpower = 0.05
+}
+GER_reichskommissariat_turkestan = {
+	enable = { always = yes }
+
+	icon = GFX_modifiers_generic_fascist_corporatism
+	
+	resistance_target = -0.15
+	resistance_growth = -0.10
+	resistance_damage_to_garrison = -0.30
+	resistance_decay = 0.25
+}
+GER_sickle_cut = {
+	enable = { always = yes }
+
+	icon = GFX_decision_generic_army_support
+	
+	army_attack_factor = 0.25
+	army_armor_attack_factor = 0.25
+	army_speed_factor = 0.15
+	army_armor_speed_factor = 0.10
+}
+
+SOV_defend_leningrad = {
+	enable = { always = yes }
+
+	icon = GFX_modifiers_generic_military_plans
+	
+	recruitable_population_factor = 0.25
+	army_core_defence_factor = 0.1
+	local_factories = -1
+	supply_factor = 0.15
+	pocket_penalty = -0.40
+	dig_in_speed_factor = 0.5
+}
+
+SOV_defend_stalingrad = {
+	enable = { always = yes }
+
+	icon = GFX_modifiers_generic_military_plans
+	
+	recruitable_population_factor = 0.25
+	army_core_defence_factor = 0.1
+	local_factories = -1
+	supply_factor = 0.15
+	pocket_penalty = -0.40
+	dig_in_speed_factor = 0.5
+}
+
+SOV_defend_crimea = {
+	enable = { always = yes }
+
+	icon = GFX_modifiers_generic_military_plans
+	
+	recruitable_population_factor = 0.25
+	army_core_defence_factor = 0.1
+	local_factories = -1
+	supply_factor = 0.15
+	pocket_penalty = -0.40
+	dig_in_speed_factor = 0.5
+}
+
+SOV_supporting_resistance_modifier = {
+	enable = { always = yes }
+
+	icon = GFX_modifiers_bul_macedonian_revolutionaries
+
+	resistance_damage_to_garrison = 0.15
+	resistance_activity = 0.2
+	resistance_growth = 0.35
+	resistance_target = 0.5
+	resistance_decay = -0.05
+	resistance_garrison_penetration_chance = 0.50
+	compliance_growth = -0.25
+	compliance_gain = -0.01
+	required_garrison_factor = 0.1
+}
+SOV_supporting_resistance_modifier_elsewhere = {
+	enable = { always = yes }
+
+	icon = GFX_modifiers_generic_military_plans
+
+	resistance_damage_to_garrison = -0.1
+	resistance_activity = -0.1
+	resistance_growth = -0.1
+	resistance_target = -0.1
+	resistance_decay = 0.05
+}
+SOV_supporting_resistance_modifier_elsewhere_strong = {
+	enable = { always = yes }
+
+	icon = GFX_modifiers_generic_military_plans
+
+	resistance_damage_to_garrison = -0.2
+	resistance_activity = -0.2
+	resistance_growth = -0.2
+	resistance_target = -0.2
+	resistance_decay = 0.15
+}
+
+PRC_base_area_made = {
+	enable = { always = yes }
+
+	icon = GFX_modifiers_generic_military_plans
+
+	pocket_penalty = -0.25
+	army_defence_factor = 0.5
+	supply_node_range = 0.15
+	local_supplies = 0.15
+	out_of_supply_factor = -0.25
+	supply_consumption_factor = -0.25
+	enemy_army_bonus_air_superiority_factor = -0.25
+}
+
+JAP_prov_china = {
+	enable = { always = yes }
+
+	icon = GFX_decision_generic_civil_support
+
+	required_garrison_factor = -0.25
+	resistance_damage_to_garrison = -0.15
+}
+JAP_reformed_china = {
+	enable = { always = yes }
+
+	icon = GFX_decision_generic_civil_support
+
+	required_garrison_factor = -0.25
+	resistance_damage_to_garrison = -0.15
+}
+JAP_supply_issues_in_china = {
+	enable = { always = yes }
+
+	icon = GFX_unplanned_offensive
+
+	local_supplies = -0.75
+	supply_node_range = -0.5
+	out_of_supply_factor = 0.25
+	resistance_damage_to_garrison = 0.75
+	resistance_garrison_penetration_chance = 0.85
+	army_attack_factor = -0.15
+	attrition = 0.25
+	disable_strategic_redeployment = 1
+}
+
+SOVPARTISAN_the_organization_of_partisans = {
+	enable = { always = yes }
+
+	icon = GFX_decision_generic_civil_support
+
+	resistance_target = 0.25
+	resistance_growth = 0.25
+	resistance_decay = -0.25
+}
+SOVPARTISAN_the_organization_of_partisans_2 = {
+	enable = { always = yes }
+
+	icon = GFX_decision_generic_civil_support
+
+	resistance_target = 0.25
+	resistance_growth = 0.5
+	resistance_decay = -0.5
+}
+
+SOVPARTISAN_landmines = {
+	enable = { always = yes }
+
+	icon = GFX_decision_generic_ignite_civil_war
+
+	attrition = 0.10
+	truck_attrition_factor = 0.25
+}
+JAP_state_supporting_resistance_modifier = {
+	enable = { always = yes  }
+	icon = GFX_modifiers_bul_macedonian_revolutionaries
+	resistance_damage_to_garrison = 0.15
+	resistance_activity = 0.2
+	resistance_growth = 0.5
+	resistance_target = 0.8
+	compliance_growth = -0.1
+}
+YUG_resistance = {
+	enable = { always = yes  }
+	icon = GFX_idea_chi_war_of_resistance3
+	max_command_power = 60
+	command_power_gain_mult = YUG_resistance_compower_gain
+	compliance_growth_on_our_occupied_states = YUG_resistance_compliance_malus
+	resistance_target_on_our_occupied_states = YUG_resistance_target
+	resistance_growth_on_our_occupied_states = YUG_resistance_growth
+	resistance_decay_on_our_occupied_states = YUG_resistance_decay
+	resistance_damage_to_garrison_on_our_occupied_states = YUG_resistance_damage
+	resistance_activity = YUG_resistance_activity
+}
+YUG_deportations = {
+	enable = { always = yes }
+
+	icon = GFX_modifiers_generic_fascist_corporatism
+	
+	local_manpower = -0.5
+}
+SOV_replace_local_officials = {
+	enable = { always = yes }
+
+	icon = GFX_decision_generic_arrest
+	
+	compliance_gain = 0.1
+	resistance_decay = 0.1
+	resistance_growth = -0.1
+	compliance_growth = 0.05
+	required_garrison_factor = -0.15
+}
+
+CHI_here_defend = {
+	enable = { always = yes }
+
+	icon = GFX_modifiers_generic_military_plans
+	
+	army_defence_factor = 0.15
+}
+HUN_slovak_autonomous_republic = {
+	enable = { always = yes }
+
+	icon = GFX_decision_generic_civil_support
+
+	local_manpower = -0.25
+	local_factories = -0.25
+	state_production_speed_buildings_factor = -0.10
+}
+HUN_transylvanian_autonomous_republic = {
+	enable = { always = yes }
+
+	icon = GFX_decision_generic_civil_support
+
+	local_manpower = -0.25
+	local_factories = -0.25
+	state_production_speed_buildings_factor = -0.10
+}
+HUN_banat_autonomous_republic = {
+	enable = { always = yes }
+
+	icon = GFX_decision_generic_civil_support
+
+	local_manpower = -0.25
+	local_factories = -0.25
+	state_production_speed_buildings_factor = -0.10
+}
+AOI_develop_eritrea = {
+	enable = { always = yes }
+
+	icon = GFX_modifiers_generic_construction
+
+	state_production_speed_buildings_factor = 0.25
+}
+AOI_develop_somalia = {
+	enable = { always = yes }
+
+	icon = GFX_modifiers_generic_construction
+
+	state_production_speed_buildings_factor = 0.25
+}
+AOI_electrifying_eritrea = {
+	enable = { always = yes }
+
+	icon = GFX_decision_generic_electricity
+
+	state_production_speed_buildings_factor = 0.05
+}
+AOI_agricultural_reforms = {
+	enable = { always = yes }
+
+	icon = GFX_generic_agriculture
+
+	local_supplies = 0.15
+	local_supply_impact_factor = -0.15
+}
+AOI_model_governorate_eritrea = {
+	enable = { always = yes }
+
+	icon = GFX_state_AOI_eritrea
+
+	local_supplies = 0.15
+	local_supply_impact_factor = -0.15
+	state_production_speed_buildings_factor = 0.2
+	local_building_slots = 2
+}
+AOI_model_governorate_state = {
+	enable = { always = yes }
+
+	icon = GFX_state_AOI_eritrea
+
+	state_production_speed_buildings_factor = 0.15
+	local_building_slots = 2
+}
+AOI_somalia_agriculture = {
+	enable = { always = yes }
+
+	icon = GFX_generic_agriculture
+
+	local_supplies = 0.15
+	local_supply_impact_factor = -0.15
+}
+AOI_somalia_jewel_somalia = {
+	enable = { always = yes }
+
+	icon = GFX_state_AOI_somalia
+
+	local_supplies = 0.15
+	local_supply_impact_factor = -0.15
+	state_production_speed_buildings_factor = 0.15
+	local_building_slots = 3
+}
+AOI_somalia_jewel_state = {
+	enable = { always = yes }
+
+	icon = GFX_state_AOI_somalia
+
+	state_production_speed_buildings_factor = 0.15
+	local_building_slots = 3
+}
+AOI_strengthen_industry = {
+	enable = { always = yes }
+
+	icon = GFX_modifiers_generic_construction
+
+	state_production_speed_buildings_factor = 0.25
+	local_building_slots_factor = 0.25
+}
+AOI_colonial_army = {
+	enable = { always = yes }
+
+	icon = GFX_idea_ITA_regio_esercito_1
+
+	planning_speed = 0.1
+	max_planning = 0.1
+	army_org_factor = AOI_org_RCTC
+	army_org_regain = AOI_org_regain
+	production_factory_max_efficiency_factor = AOI_prod_cap
+	experience_gain_army_unit_factor = AOI_div_xp_gain
+	experience_gain_factor = AOI_xp_gain
+	experience_gain_army_factor = AOI_xp_gain
+	production_lack_of_resource_penalty_factor = AOI_resource_lack
+	org_loss_when_moving = AOI_org_loss
+	custom_modifier_tooltip = AOI_infantry_bonus_tt
+	custom_modifier_tooltip = AOI_cheaper_trucks_tt
+	custom_modifier_tooltip = AOI_cheaper_tanks_tt
+}
+AOI_colonial_army_prussia = {
+	enable = { always = yes }
+
+	icon = GFX_idea_ITA_regio_esercito_2
+
+	planning_speed = 0.1
+	max_planning = 0.1
+	org_loss_at_low_org_factor = -0.15
+	attrition = -0.1
+	army_org_factor = AOI_org_RCTC
+	army_org_regain = AOI_org_regain
+	production_factory_max_efficiency_factor = AOI_prod_cap
+	experience_gain_army_unit_factor = AOI_div_xp_gain
+	experience_gain_factor = AOI_xp_gain
+	experience_gain_army_factor = AOI_xp_gain
+	production_lack_of_resource_penalty_factor = AOI_resource_lack
+	org_loss_when_moving = AOI_org_loss
+	custom_modifier_tooltip = AOI_infantry_bonus_tt
+	custom_modifier_tooltip = AOI_cheaper_trucks_tt
+	custom_modifier_tooltip = AOI_cheaper_tanks_tt
+}

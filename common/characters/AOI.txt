@@ -1,0 +1,430 @@
+characters = {
+
+	# AMEDEO UMBERTO ISABELLA LUIGI FILIPPO MARIA GIUSEPPE GIOVANNI DI SAVOIA-AOSTA
+	AOI_prince_amedeo = { 
+		name = AOI_prince_amedeo
+		portraits = {
+			civilian = {
+				large = GFX_portrait_AOI_amedeo_di_savoia_aosta
+				small = GFX_portrait_AOI_amedeo_di_savoia_aosta_small
+			}
+		}
+
+		country_leader = {
+			ideology = fascism_ideology
+			traits = { duke_of_aosta iron_duke }
+			expire = "1965.1.1.1"
+			id = -1
+		}
+		country_leader = {
+			ideology = despotism
+			traits = { duke_of_aosta viceroy_of_aoi }
+			expire = "1965.1.1.1"
+			id = -1
+		}
+
+		field_marshal = {
+			traits = { politically_connected inflexible_strategist }
+			skill = 2
+			attack_skill = 2
+			defense_skill = 2
+			planning_skill = 2
+			logistics_skill = 2
+			legacy_id = -1
+			visible = {
+				NOT = {
+					has_government = communism
+					has_government = democratic
+				}
+			}
+		}
+	}
+
+	AOI_comitato_di_liberazione_nazionale = {
+		name = ITA_comitato_di_liberazione_nazionale
+		portraits = {
+			civilian = {
+				large = GFX_portrait_ITA_cln
+			}
+		}
+		country_leader = {
+			ideology = marxism
+			expire = 1965.1.1
+			traits = { anti_fascist_committee }
+		}
+		country_leader = {
+			ideology = socialism
+			expire = 1965.1.1
+			traits = { anti_fascist_committee }
+		}
+	}
+
+	# ENRICO CERULLI
+	AOI_enrico_cerulli = {
+		name = AOI_enrico_cerulli
+		portraits = {
+			army = {
+				small = GFX_portrait_AOI_enrico_cerulli_small
+			}
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = AOI_enrico_cerulli
+			allowed  = { 
+				original_tag  = AOI
+			}
+			traits  = {
+				scholar_of_ethiopian_and_somali_studies
+			}
+			available = {
+				NOT = {
+					has_government = communism
+				}
+			}
+			ai_will_do = {
+				factor = 1.000
+			}			
+		}
+	}
+
+
+	# GUGLIELMO NASI
+	AOI_guglielmo_nasi = {
+		name = AOI_guglielmo_nasi
+		portraits = {
+			civilian = {
+				large = GFX_portrait_AOI_gugliemo_nasi
+			}
+			army = {
+				large = GFX_portrait_AOI_gugliemo_nasi
+				small = GFX_idea_AOI_guglielmo_nasi_small
+			}
+		}
+
+		corps_commander = {
+			traits = { brilliant_strategist irregulars_officer }
+			skill = 2
+			attack_skill = 2
+			defense_skill = 2
+			planning_skill = 2
+			logistics_skill = 2
+			legacy_id = -1
+
+			visible = {
+				NOT = {
+					has_government = communism
+				}
+			}
+		}
+	}
+
+	# RUGGERO SANTINI
+	AOI_ruggero_santini = {
+		name = AOI_ruggero_santini
+		portraits = {
+			army = {
+				large = GFX_Portrait_Italy_Generic_land_7
+				small = GFX_idea_ITA_generic_land_7
+			}
+		}
+
+		corps_commander = {
+			traits = { trait_mountaineer hill_fighter adaptable }
+			skill = 1
+			attack_skill = 1
+			defense_skill = 1
+			planning_skill = 1
+			logistics_skill = 1
+			legacy_id = -1
+
+			visible = {
+				NOT = {
+					has_government = communism
+				}
+			}
+		}
+	}
+
+	# VINCENZO DE FEO
+	AOI_vincenzo_de_feo = {
+		name = AOI_vincenzo_de_feo
+		portraits = {
+			army = {
+				large = GFX_Portrait_Italy_Generic_navy_3
+				small = "GFX_idea_ITA_generic_navy_3"
+			}
+		}
+
+		navy_leader = {
+			traits = { spotter seawolf }
+			skill = 1
+			attack_skill = 1
+			defense_skill = 1
+			maneuvering_skill = 1
+			coordination_skill = 1
+			legacy_id = -1
+		}
+
+		advisor = {
+			slot = high_command
+			idea_token = AOI_vincenzo_de_feo
+			ledger = navy
+			allowed = {
+				original_tag  = AOI
+			}
+			traits = {
+				AOI_submarine_conn
+			}
+			cost = 100
+			ai_will_do = {
+				base = 1.000
+			}
+		}
+	}
+	#Pietro Gazzera
+	AOI_pietro_gazzera = { 
+		name = "Pietro Gazzera"
+		portraits = {
+			civilian = {
+				large ="gfx/leaders/AOI/pietro_gazerra.dds"
+				small = "gfx/interface/ideas/idea_AOI_pietro_gazzera.dds"
+			}
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = AOI_pietro_gazzera
+			allowed  = { 
+				original_tag  = AOI
+			}
+			traits  = {
+				AOI_minister_of_war
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 1.000
+			}			
+		}
+	}
+	AOI_francesco_martini = { 
+		name = "Francesco de Martini"
+		portraits = {
+			civilian = {
+				small = "gfx/interface/ideas/idea_AOI_francesco_de_martini.png"
+			}
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = AOI_francesco_martini
+			allowed  = { 
+				original_tag  = AOI
+			}
+			traits  = {
+				head_of_intelligence
+			}
+			cost = 150
+			ai_will_do = {
+				factor = 1.000
+			}			
+		}
+	}
+	AOI_giuseppe_daodice = { 
+		name = "Giuseppe Daodice"
+		portraits = {
+			
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = AOI_giuseppe_daodice
+			allowed  = { 
+				original_tag  = AOI
+			}
+			traits  = {
+				AOI_maurice
+			}
+			cost = 150
+			ai_will_do = {
+				factor = 1.000
+			}			
+		}
+	}
+	AOI_agenore_frangipani = { 
+		name = "Agenore Frangipani"
+		portraits = {
+			
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = AOI_agenore_frangipani
+			allowed  = { 
+				original_tag  = AOI
+			}
+			traits  = {
+				AOI_veteran_fascist
+			}
+			cost = 150
+			ai_will_do = {
+				factor = 1.000
+			}			
+		}
+	}
+	AOI_luigi_frusci = {
+		name = "Luigi Frusci"
+		portraits = {
+			civilian = {
+				small = "gfx/interface/ideas/idea_AOI_luigi_frusci.png"
+			}
+		}
+
+		advisor = {
+			slot = high_command
+			idea_token = AOI_luigi_frusci
+			ledger = army
+			allowed = {
+				original_tag  = AOI
+			}
+			traits = {
+				AOI_lion_ERI
+			}
+			cost = 100
+			ai_will_do = {
+				base = 1.000
+			}
+		}
+	}
+	AOI_carlo_geloso = { 
+		name = "Carlo Geloso"
+		portraits = {
+			civilian = {
+				small = "gfx/interface/ideas/idea_AOI_carlo_geloso.png"
+			}
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = AOI_carlo_geloso
+			allowed  = { 
+				original_tag  = AOI
+			}
+			traits  = {
+				AOI_gallant_butcher
+			}
+			cost = 150
+			ai_will_do = {
+				factor = 1.000
+			}			
+		}
+	}
+	AOI_carlo_de_simone = {
+		name = "Carlo De Simone"
+		portraits = {
+			
+		}
+
+		advisor = {
+			slot = high_command
+			idea_token = AOI_carlo_de_simone
+			ledger = army
+			allowed = {
+				original_tag  = AOI
+			}
+			traits = {
+				AOI_arty_quartermaster
+			}
+			cost = 150
+			ai_will_do = {
+				base = 1.000
+			}
+		}
+	}
+	AOI_gustavo_pesenti = { 
+		name = "Gustavo Pesenti"
+		portraits = {
+			civilian = {
+				small = "gfx/interface/ideas/idea_AOI_gustavo_pesenti.png"
+			}
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = AOI_gustavo_pesenti
+			allowed  = { 
+				original_tag  = AOI
+			}
+			traits  = {
+				AOI_war_hero
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 1.000
+			}			
+		}
+	}
+
+	AOI_claudio_trezzani={
+		name = "Claudio Trezzani"
+		portraits={
+			army={
+				small="gfx/interface/ideas/idea_AOI_claudio_trezzani.png"
+			}
+		}
+		advisor = {
+			slot = army_chief
+			idea_token = AOI_claudio_trezzani
+			allowed = {
+				original_tag = AOI
+			}
+			traits = {
+				army_chief_morale_2
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+	}
+	#CARLO BALSAMO DI SPECCHIA-NORMANDIA
+	AOI_carlo_balsamo={
+		name = "Carlo Balsamo"
+		portraits={
+			army={
+				small="gfx/interface/ideas/idea_AOI_carlo_balsamo.png"
+			}
+		}
+		advisor = {
+			slot = navy_chief
+			idea_token = AOI_carlo_balsamo
+			allowed = {
+				original_tag = AOI
+			}
+			traits = {
+				navy_chief_commerce_raiding_2
+			}
+			cost = 100
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+	}
+	AOI_pietro_piacentini={
+		name = "Pietro Piacentini"
+		portraits={
+			army={
+				small="gfx/interface/ideas/idea_AOI_pietro_piacentini.png"
+			}
+		}
+		advisor = {
+			slot = air_chief
+			idea_token = AOI_pietro_piacentini
+			allowed = {
+				original_tag = AOI
+			}
+			traits = {
+				air_chief_ground_support_3
+			}
+			cost = 200
+			ai_will_do = {
+				factor = 1.000
+			}
+		}
+	}
+	
+	
+}

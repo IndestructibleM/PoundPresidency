@@ -1,0 +1,28 @@
+spriteTypes = {	
+
+	SpriteType = {
+		name = "GFX_idea_king_otto_von_habsburg"
+		texturefile = "gfx/interface/ideas/king_otto_von_habsburg.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_idea_railways_AOI"
+		texturefile = "gfx/interface/ideas/AOI_railways.png"
+	}
+
+	SpriteType = {
+		name = "GFX_idea_AOI_eritrea"
+		texturefile = "gfx/interface/ideas/AOI_eritrea_idea.png"
+	}
+
+	SpriteType = {
+		name = "GFX_idea_AOI_somalia"
+		texturefile = "gfx/interface/ideas/AOI_somalia_idea.png"
+	}
+
+	SpriteType = {
+		name = "GFX_idea_GER_germany_vindicated"
+		texturefile = "gfx/interface/ideas/GER_shield.png"
+	}
+	
+}
