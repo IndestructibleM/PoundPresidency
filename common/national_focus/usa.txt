@@ -803,7 +803,7 @@ focus_tree = {
 
 	focus = {
 		id = USA_wpa
-		icon = GFX_focus_generic_social_democracy
+		icon = GFX_focus_generic_public_works
 		x = -5
 		y = 1
 		relative_position_id = USA_continue_the_new_deal
@@ -829,7 +829,7 @@ focus_tree = {
 	
 	focus = {
 		id = USA_fair_labor_standards_act
-		icon = GFX_focus_generic_social_democracy
+		icon = GFX_focus_ICE_embrace_the_workers_revolution
 		x = -7
 		y = 2
 		relative_position_id = USA_continue_the_new_deal
@@ -856,7 +856,7 @@ focus_tree = {
 
 	focus = {
 		id = USA_social_security_act
-		icon = GFX_focus_generic_social_democracy
+		icon = GFX_focus_generic_welfare
 		x = -5
 		y = 2
 		relative_position_id = USA_continue_the_new_deal
@@ -884,7 +884,7 @@ focus_tree = {
 
 	focus = {
 		id = USA_wagner_act_enforcement
-		icon = GFX_focus_generic_social_democracy
+		icon = GFX_focus_generic_workers
 		x = -3
 		y = 2
 		relative_position_id = USA_continue_the_new_deal
@@ -910,7 +910,7 @@ focus_tree = {
 
 	focus = {
 		id = USA_united_states_housing_act
-		icon = GFX_focus_generic_social_democracy
+		icon = GFX_focus_usa_guarantee_the_american_dream
 		x = -6
 		y = 3
 		relative_position_id = USA_continue_the_new_deal
@@ -936,7 +936,7 @@ focus_tree = {
 
 	focus = {
 		id = USA_farm_security_administration
-		icon = GFX_focus_generic_social_democracy
+		icon = GFX_focus_generic_farmland
 		x = -4
 		y = 3
 		relative_position_id = USA_continue_the_new_deal
@@ -962,7 +962,7 @@ focus_tree = {
 	
 	focus = {
 		id = USA_consolidate_the_dem_majority
-		icon = GFX_focus_generic_social_democracy
+		icon = GFX_focus_ARG_defense_and_democracy
 		x = -5
 		y = 4
 		relative_position_id = USA_continue_the_new_deal
@@ -994,7 +994,7 @@ focus_tree = {
 	
 	focus = {
 		id = USA_judicial_reform_proposal
-		icon = GFX_focus_generic_social_democracy
+		icon = GFX_focus_generic_court
 		x = -7
 		y = 5
 		relative_position_id = USA_continue_the_new_deal
@@ -1021,7 +1021,7 @@ focus_tree = {
 	
 	focus = {
 		id = USA_the_reorganization_act
-		icon = GFX_focus_generic_social_democracy
+		icon = GFX_focus_CHI_demonstrate_our_resolve
 		x = -5
 		y = 5
 		relative_position_id = USA_continue_the_new_deal
@@ -1047,7 +1047,7 @@ focus_tree = {
 
 	focus = {
 		id = USA_reassure_american_business
-		icon = GFX_focus_generic_social_democracy
+		icon = GFX_focus_generic_american_investments
 		x = -3
 		y = 5
 		relative_position_id = USA_continue_the_new_deal
@@ -1075,7 +1075,7 @@ focus_tree = {
 	
 	focus = {
 		id = USA_expand_white_house_staff
-		icon = GFX_focus_generic_social_democracy
+		icon = GFX_focus_generic_commission
 		x = -6
 		y = 6
 		relative_position_id = USA_continue_the_new_deal
@@ -1101,7 +1101,7 @@ focus_tree = {
 	
 	focus = {
 		id = USA_administrative_management_bill
-		icon = GFX_focus_generic_social_democracy
+		icon = GFX_focus_generic_improve_the_administration_2
 		x = -4
 		y = 6
 		relative_position_id = USA_continue_the_new_deal
