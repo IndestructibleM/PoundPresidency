@@ -1,0 +1,28 @@
+﻿capital = 1632 #Fort Hall
+
+#oob = "SBT_1936"
+
+# Starting tech
+set_technology = {
+	infantry_weapons = 1
+	tech_support = 1		
+	tech_engineers = 1
+	tech_trucks = 1
+	gw_artillery = 1
+	interwar_antiair = 1
+}
+
+set_politics = {
+	ruling_party = neutrality
+	last_election = "1934.2.11"
+	election_frequency = 48
+	elections_allowed = yes
+}
+set_popularities = {
+	democratic = 15
+	communism = 0
+	neutrality = 80
+	fascism = 5
+}
+
+recruit_character = SBT_shoshone_bannock_council

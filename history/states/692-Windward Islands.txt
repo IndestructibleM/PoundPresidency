@@ -1,0 +1,27 @@
+state={
+	id=692
+	name="STATE_692"
+	manpower=194230
+	state_category = rural
+
+	history={
+		add_core_of = BRB
+		add_core_of = BAS
+		owner = ENG
+		buildings = {
+			infrastructure = 2
+			11350 = {
+				naval_base = 1
+			}
+		}
+		victory_points = {
+			11350 2
+		}
+	}
+	
+	provinces={
+		11350
+	}
+
+	local_supplies=4.0 
+}

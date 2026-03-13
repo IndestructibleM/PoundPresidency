@@ -1,0 +1,27 @@
+state = {
+	id = 466
+	name = "STATE_466"
+	manpower = 8860
+	resources = {
+		aluminium = 4.000
+	}
+
+	history = {
+
+		owner = CAN
+		add_core_of = CAN
+		add_core_of = QUE
+
+		buildings = {
+			infrastructure = 1
+		}
+
+	}
+
+	provinces = {
+		490 3208 6740 7364 10176 12147 13196 13314 14459 14460 14461 14462 14463 14464 14465 14466 14467 14468 14470 14471
+	}
+	
+	state_category = rural
+	local_supplies = 0.000
+}

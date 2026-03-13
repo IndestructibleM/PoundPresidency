@@ -1,0 +1,41 @@
+state = {
+	id = 972
+	name = "STATE_972"
+	manpower = 203750
+	
+	state_category = pastoral
+	
+	resources = {
+		steel = 2
+	}
+	
+	history = {
+
+		owner = CZE
+		add_core_of = CZE
+
+		buildings = {
+		
+			infrastructure = 3
+			anti_air_building = 1
+
+			5283 = {
+				bunker = 1
+			}
+
+		}
+
+		1938.9.30 = {
+			owner = GER
+			controller = GER
+			add_core_of = GER
+		}
+
+	}
+
+	provinces = {
+		543 5283 7857 
+	}
+	local_supplies = 0.0 
+
+}

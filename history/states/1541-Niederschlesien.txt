@@ -1,0 +1,32 @@
+
+state={
+	id=1541
+	name="STATE_1541"
+	manpower = 693200
+	resources={
+		steel=16 # was: 110
+		aluminium=4 # was: 38
+	}
+	
+	state_category = town
+
+	history={
+		owner = GER
+		victory_points = {
+			3283 1 #Trebnitz
+		}
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 1
+		}
+		add_core_of = GER
+		add_core_of = PRE
+		add_core_of = SIL
+	}
+
+	provinces={
+		3283 3510 6462 9470
+	}
+
+	local_supplies=0.0 
+}

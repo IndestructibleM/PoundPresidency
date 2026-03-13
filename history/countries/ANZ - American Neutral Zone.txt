@@ -1,0 +1,30 @@
+capital = 382
+
+set_research_slots = 1
+
+add_ideas = {
+	disarmed_nation
+}
+
+set_politics = {
+	ruling_party = neutrality
+	last_election = "1935.12.9"
+	election_frequency = 120
+	elections_allowed = no
+}
+set_popularities = {
+	democratic = 10
+	neutrality = 90
+}
+
+
+create_country_leader = {
+	name = "Ralph Lawrence Carr"
+	desc = ""
+	picture = "GFX_portrait_europe_generic_5"
+	expire = "1965.1.1"
+	ideology = despotism
+	traits = {
+		#
+	}
+}

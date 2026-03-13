@@ -1,0 +1,28 @@
+
+state={
+	id=1249
+	name="STATE_1249"
+	manpower = 425600
+	state_category = rural
+
+	history={
+		owner = GER
+		controller = GER
+		
+		victory_points = {
+			281 1 #Tilsit
+		}
+
+		buildings = {
+			infrastructure = 3 #was: 6
+		}
+		add_core_of = GER
+		add_core_of = PRE
+	}
+
+	provinces={
+		281 348 13635
+	}
+
+	local_supplies=0.0 
+}

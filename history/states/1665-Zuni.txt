@@ -1,0 +1,30 @@
+
+state={
+	id=1665
+	name="STATE_1665"
+	manpower = 2754
+	
+	state_category = wasteland
+	
+
+
+	history={
+		owner = USA
+		buildings = {
+			infrastructure = 2
+		}
+		victory_points = {
+			14831 1 #Zuni
+		}
+		add_core_of = USA
+		add_core_of = NMS
+		add_core_of = ZUN
+	}
+
+	provinces={
+		14831
+	}
+	
+
+	local_supplies=0.0 
+}

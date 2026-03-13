@@ -1,0 +1,25 @@
+state={
+	id=1245
+	name="STATE_1245"
+
+	history={
+		owner = POL
+		victory_points = {
+			11329 3 #Łomża
+		}
+		buildings = {
+			infrastructure = 3
+		}
+		add_core_of = POL
+
+	}
+
+	provinces={
+		11274 11329 14727
+	}
+	manpower=185200
+	buildings_max_level_factor=1.000
+	state_category=rural
+
+	local_supplies=0.0 
+}

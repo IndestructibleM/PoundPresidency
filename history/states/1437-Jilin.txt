@@ -1,0 +1,27 @@
+
+state={
+	id=1437
+	name="STATE_1437"
+	manpower = 907712
+	
+	state_category = town
+
+	history={
+		owner = MAN
+		add_core_of = CHI
+		add_core_of = MAN
+		add_core_of = PRC
+		buildings = {
+			infrastructure = 2
+		}
+		victory_points = {
+			7663 5
+		}
+	}
+
+	provinces={
+		946 3932 6947 7663 9913 11850 11864
+	}
+
+	local_supplies=0.0 
+}

@@ -1,0 +1,24 @@
+
+state={
+	id=1656
+	name="STATE_1656"
+	manpower = 105
+	
+	state_category = wasteland
+
+	history={
+		owner = USA
+		buildings = {
+			infrastructure = 1
+		}
+		add_core_of = USA
+		add_core_of = NMS
+	}
+
+	provinces={
+		14823
+	}
+	
+
+	local_supplies=0.0 
+}

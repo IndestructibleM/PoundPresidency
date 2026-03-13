@@ -1,0 +1,33 @@
+
+state={
+	id=1296
+	name="STATE_1296"
+	manpower = 352700
+
+	state_category = town
+
+
+	history={
+		owner = YUG
+		victory_points = { #Dubrovnik
+			6889 3 
+		}		
+		buildings = {
+			infrastructure = 3
+			dockyard = 1
+			industrial_complex = 1
+			6889 = {
+				naval_base = 1
+			}
+		}
+		add_core_of = YUG
+		add_core_of = CRO
+		add_core_of = DAL
+	}
+
+	provinces={
+		3868 6889
+	}
+
+	local_supplies=4.0 
+}

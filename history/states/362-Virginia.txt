@@ -1,0 +1,47 @@
+
+state={
+	id=362
+	name="STATE_362"
+
+	history={
+		owner = USA
+		buildings = {
+			infrastructure = 3 #was: 6
+			industrial_complex = 1
+			fuel_silo = 1
+		}
+		1939.1.1 = {
+			buildings = {
+				industrial_complex = 2
+			}
+		}
+		victory_points = {
+			3823 6 #Richmond
+		}
+		victory_points = {
+			865 3 #Newport News
+		}
+		victory_points = {
+			951 2 #Winchester
+		}
+		victory_points = {
+			10343 2 #Staunton
+		}
+		add_core_of = USA
+		add_core_of = CSA
+		add_core_of = VAS
+	}
+
+	provinces={
+		865 873 951 3823 6846 10343 11873 
+	}
+
+	local_supplies=11.0
+	manpower=870270
+
+	resources = {
+		coal = 11 #initial distribution = with infra 28.8 / 1280 total
+	}
+	buildings_max_level_factor=1.000
+	state_category=town
+}

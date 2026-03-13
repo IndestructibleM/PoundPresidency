@@ -1,0 +1,30 @@
+
+state={
+	id=203
+	name="STATE_203"
+	manpower = 2155190
+	
+	state_category = town
+
+	history={
+		victory_points = {
+			9491 4 #Cherkasy
+		}
+		victory_points = {
+			11424 3 #Uman
+		}
+		owner = SOV
+		buildings = {
+			infrastructure = 3 #was: 5
+			industrial_complex = 1
+		}
+		add_core_of = SOV
+		add_core_of = UKR
+	}
+
+	provinces={
+		434 458 488 9451 9491 11409 11424 11438 11454 
+	}
+
+	local_supplies=0.0 
+}

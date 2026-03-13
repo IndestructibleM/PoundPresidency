@@ -1,0 +1,27 @@
+
+state={
+	id=1648
+	name="STATE_1648"
+	manpower = 1210
+	
+	state_category = wasteland
+
+	history={
+		owner = USA
+		buildings = {
+			infrastructure = 1
+		}
+		victory_points = {
+			14813 1 #Parker
+		}
+		add_core_of = USA
+		add_core_of = AZS
+		add_core_of = CRT
+	}
+
+	provinces={
+		14813
+	}
+
+	local_supplies=0.0 
+}

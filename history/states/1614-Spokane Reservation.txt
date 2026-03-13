@@ -1,0 +1,28 @@
+
+state={
+	id=1614
+	name="STATE_1614"
+	manpower = 1350
+	
+	state_category = wasteland
+
+	history={
+		owner = USA
+		buildings = {
+			infrastructure = 1
+		}
+		victory_points = {
+			14764 1 #Wellpinit
+		}
+		add_core_of = USA
+		add_core_of = WAS
+		add_core_of = CSC
+		add_core_of = STI
+	}
+
+	provinces={
+		14764
+	}
+
+	local_supplies=0.0 
+}

@@ -1,0 +1,21 @@
+state={
+	id=1051
+	name="STATE_1051"
+	manpower = 32560
+	
+	state_category = wasteland
+
+	history={
+		owner = JOR
+		buildings = {
+			infrastructure = 1
+		}
+		add_core_of = JOR
+	}
+	
+	provinces={
+		1544 4440 
+	}
+
+	local_supplies=0.0 
+}

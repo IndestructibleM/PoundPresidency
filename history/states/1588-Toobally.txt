@@ -1,0 +1,14 @@
+state={
+	id=1588
+	name="STATE_1588"
+	provinces={
+		13951 14364 
+	}
+	history = {
+		owner = CAN
+		add_core_of = CAN
+	}
+	manpower=3
+	state_category = wasteland
+	local_supplies=0.000
+}

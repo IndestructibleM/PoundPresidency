@@ -1,0 +1,26 @@
+state={
+	id=1173
+	name="STATE_1173"
+	manpower = 34560
+	
+	state_category = wasteland
+	
+	history={
+		victory_points = {
+			13631 2 #Braslaw
+		}
+		owner = POL
+		buildings = {
+			infrastructure = 2
+		}
+		add_core_of = POL
+		add_core_of = BLR
+		add_claim_by = LIT
+	}
+
+	provinces={
+		13631
+	}
+
+	local_supplies=0.0 
+}

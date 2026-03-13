@@ -1,0 +1,23 @@
+
+state={
+	id=245
+	name="STATE_245" # Millerovo
+	manpower = 491769
+	
+	state_category = rural
+
+	history={
+		owner = SOV
+		buildings = {
+			infrastructure = 3 #was: 5
+		}
+		add_core_of = SOV
+		add_core_of = DON
+	}
+
+	provinces={
+		449 484 500 509 533 3431 3478 3489 3505 6544 6566 9516 9540 11501 11527 11555 
+	}
+
+	local_supplies=0.0 
+}

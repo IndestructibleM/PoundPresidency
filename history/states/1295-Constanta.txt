@@ -1,0 +1,33 @@
+
+state={
+	id=1295
+	name="STATE_1295"
+	manpower = 138260
+	resources={
+		oil=5
+	}
+
+	state_category = town
+
+	history={
+		owner = ROM
+		victory_points = { 
+			657 4 #Constanta
+		}
+		buildings = {
+			infrastructure = 3
+			arms_factory = 1
+			657 = {
+				naval_base = 8
+			}
+			dockyard = 1
+		}
+		add_core_of = ROM
+	}
+
+	provinces={
+		657
+	}
+
+	local_supplies=0.0 
+}

@@ -1,0 +1,28 @@
+
+state={
+	id=1715
+	name="STATE_1715"
+
+	history={
+		victory_points = {
+			9890 1 
+		}
+		owner = YUG
+		buildings = {
+			infrastructure = 1
+		}
+		add_core_of = YUG
+		add_core_of = KOS
+		add_core_of = SER
+
+	}
+
+	provinces={
+		9890 
+	}
+	manpower=153000
+	buildings_max_level_factor=1.000
+	state_category=pastoral
+
+	local_supplies=0.0 
+}

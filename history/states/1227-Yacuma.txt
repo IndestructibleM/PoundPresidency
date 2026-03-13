@@ -1,0 +1,26 @@
+
+state={
+	id=1227
+	name="STATE_1227"
+	manpower = 86230
+	
+	state_category = rural
+
+	history={
+		owner = BOL
+		buildings = {
+			infrastructure = 1
+		}
+		victory_points = {
+			13586 1
+		}
+		add_core_of = BOL
+	}
+
+	provinces={
+		8211 10996 13586 13587 13588 13589
+	}
+	
+
+	local_supplies=0.0 
+}

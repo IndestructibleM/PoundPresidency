@@ -1,0 +1,22 @@
+state={
+	id=819
+	name="STATE_819"
+	provinces={
+		1743 4792 10578 10708 12557 12665 13925 13932
+	}
+
+	history={
+		owner = MON
+		buildings = {
+			infrastructure = 1
+		}
+		victory_points = {
+			12557 1
+		}
+		add_core_of = MON
+	}
+	manpower=16447
+	buildings_max_level_factor=1.000
+	state_category=pastoral
+	local_supplies=0.000
+}

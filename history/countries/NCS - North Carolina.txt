@@ -1,0 +1,32 @@
+﻿capital = 363
+
+set_research_slots = 2
+set_stability = 0.70
+set_war_support = 0.20
+
+# Starting tech
+set_technology = {
+	infantry_weapons = 1
+	infantry_weapons1 = 1
+}
+
+set_politics = {
+	ruling_party = democratic
+	last_election = "1932.11.8"
+	election_frequency = 48
+	elections_allowed = yes
+}
+set_popularities = {
+	democratic = 75
+	communism = 5
+	fascism = 5
+	neutrality = 15
+}
+
+add_ideas = {
+	civilian_economy
+	volunteer_only
+	free_trade
+}
+
+recruit_character = NCS_john_c_b_ehringhaus

@@ -1,0 +1,29 @@
+state={
+	id=1239
+	name="STATE_1239"
+
+	history={
+		victory_points = {
+			3393 5 #Grodno
+		}
+		owner = POL
+		buildings = {
+			infrastructure = 3
+			air_base = 3
+
+		}
+		add_core_of = POL
+		add_core_of = BLR
+		add_claim_by = LIT
+
+	}
+
+	provinces={
+		3393 13206 14734
+	}
+	manpower=475260
+	buildings_max_level_factor=1.000
+	state_category=town
+
+	local_supplies=3.0 
+}

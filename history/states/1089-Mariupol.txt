@@ -1,0 +1,26 @@
+
+state={
+	id=1089
+	name="STATE_1089"
+	manpower = 852300
+	
+	state_category = rural
+
+	history={
+		owner = SOV
+		buildings = {
+			infrastructure = 3 #was: 5
+		}
+		victory_points = {
+			6420 7 #Mariupol
+		}
+		add_core_of = SOV
+		add_core_of = UKR
+	}
+
+	provinces={
+		3449 6420 6776 
+	}
+
+	local_supplies=0.0 
+}

@@ -1,0 +1,27 @@
+
+state={
+	id=1099
+	name="STATE_1099"
+	manpower = 265600
+	
+	state_category = rural
+	
+	resources={
+		steel=7 # was: 56
+	}
+
+	history={
+		owner = SOV
+		buildings = {
+			infrastructure = 3 
+		}
+		add_core_of = SOV
+		add_core_of = UKR
+	}
+
+	provinces={
+		3409 6517 9531 11439 11541 
+	}
+
+	local_supplies=0.0 
+}

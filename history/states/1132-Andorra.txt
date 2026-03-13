@@ -1,0 +1,26 @@
+
+state={
+	id=1132
+	name="STATE_1132"
+	manpower = 5290
+	
+	
+	state_category = rural
+	
+	history={
+		owner = ADR
+		buildings = {
+
+		}
+		victory_points = {
+			13678 1
+		}
+		add_core_of = ADR
+	}
+
+	provinces={
+		13678
+	}
+
+	local_supplies=0.0 
+}

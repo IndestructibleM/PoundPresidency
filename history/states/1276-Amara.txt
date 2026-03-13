@@ -1,0 +1,29 @@
+
+state={
+	id=1276
+	name="STATE_1276"
+	manpower = 112560
+	
+	state_category = pastoral
+	
+	resources={
+		oil=3
+	}
+
+	history={
+		owner = IRQ
+		victory_points = {
+			13723 1
+		}
+		buildings = {
+			infrastructure = 2
+		}
+		add_core_of = IRQ
+	}
+
+	provinces={
+		78 12855 13722 13723 13724 
+	}
+
+	local_supplies=0.0 
+}

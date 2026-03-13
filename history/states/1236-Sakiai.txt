@@ -1,0 +1,22 @@
+
+state={
+	id=1236
+	name="STATE_1236"
+
+	history={
+		owner = LIT
+		buildings = {
+			infrastructure = 2
+		}
+		add_core_of = LIT
+		add_core_of = SMG
+
+	}
+
+	provinces={
+		6407
+	}
+	manpower=30698
+	buildings_max_level_factor=1.000
+	state_category=rural
+}

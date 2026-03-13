@@ -1,0 +1,34 @@
+
+state={
+	id=213
+	name="STATE_213"
+	manpower = 152751
+	state_category = rural
+	resources={
+		steel=7
+		chromium=8
+	}
+
+	history={
+		owner = SOV
+		victory_points = {
+			3134 5 
+		}
+		buildings = {
+			infrastructure = 1
+			air_base = 2
+			3134 = {
+				naval_base = 4
+				coastal_bunker = 1
+			}
+		}
+		add_core_of = SOV
+		add_core_of = SMI
+	}
+
+	provinces={
+		98 116 3012 3134 3170 6140 6194 9059 9115 9165 9179 9201 9215 9217 11088 11117 11140 11196 
+	}
+
+	local_supplies=3.0 
+}

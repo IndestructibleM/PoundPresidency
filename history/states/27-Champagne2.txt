@@ -1,0 +1,31 @@
+
+state={
+	id=27
+	name="STATE_27" # Bourgogne
+	manpower = 810800
+	
+	state_category = town
+	
+	resources={
+		aluminium=8
+	}
+
+	history={
+		owner = FRA
+		victory_points = {
+			9490 3 
+		}
+		buildings = {
+			infrastructure = 4
+			industrial_complex = 1
+			air_base = 2
+		}
+		add_core_of = FRA
+	}
+
+	provinces={
+		648 667 3506 3669 3681 9490 9609 9625 9644 11628 
+	}
+
+	local_supplies=0.0 
+}

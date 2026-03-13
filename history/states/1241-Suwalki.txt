@@ -1,0 +1,23 @@
+state={
+	id=1241
+	name="STATE_1241"
+
+	history={
+		owner = POL
+		victory_points = {
+			3254 3 #Suwalki
+		}
+		buildings = {
+			infrastructure = 3
+		}
+		add_core_of = POL
+		add_claim_by = LIT
+	}
+
+	provinces={
+		3254
+	}
+	manpower=139620
+	buildings_max_level_factor=1.000
+	state_category=rural
+}

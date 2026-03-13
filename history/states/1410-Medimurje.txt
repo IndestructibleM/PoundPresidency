@@ -1,0 +1,23 @@
+state=
+{
+	id=1410
+	name="STATE_1410"
+	manpower = 13210
+	
+	state_category = pastoral
+	
+	history =
+	{
+		owner = YUG
+		buildings = {
+			infrastructure = 3
+		}
+		add_core_of = YUG
+		add_core_of = CRO
+	}
+	provinces={
+		13882
+	}
+	
+	local_supplies=0.0 
+}

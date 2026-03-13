@@ -1,0 +1,29 @@
+capital = 358
+
+set_research_slots = 2
+
+add_ideas = {
+	limited_conscription
+}
+
+set_politics = {
+	ruling_party = fascism
+	last_election = "1935.12.9"
+	election_frequency = 120
+	elections_allowed = no
+}
+set_popularities = {
+	fascism = 100
+}
+
+
+create_country_leader = {
+	name = "George Lincoln Rockwell"
+	desc = ""
+	picture = "gfx/leaders/GER/Portrait_Germany_Generic_land_7.dds"
+	expire = "1965.1.1"
+	ideology = nazism
+	traits = {
+		#
+	}
+}

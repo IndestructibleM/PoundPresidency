@@ -1,0 +1,36 @@
+
+state={
+	id=1635
+	name="STATE_1635"
+	manpower = 341050
+	
+	state_category = rural
+	
+	resources={
+		steel=7
+		tungsten=6
+	}
+
+	history={
+		owner = USA
+		buildings = {
+			infrastructure = 2
+		}
+		victory_points = {
+			12535 2 #Pocatello
+		}
+		victory_points = {
+			14788 2 #Idaho Falls
+		}
+		add_core_of = USA
+		add_core_of = IDS
+		add_core_of = CSC
+	}
+
+	provinces={
+		1789 9695 10602 10672 12535 14788 
+	}
+	
+
+	local_supplies=7.0 
+}

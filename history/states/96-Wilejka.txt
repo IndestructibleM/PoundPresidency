@@ -1,0 +1,28 @@
+state={
+	id=96
+	name="STATE_96"
+	manpower = 566000
+	
+	state_category = rural
+	
+	history={
+		victory_points = {
+			277 2 #Molodeczno
+		}
+		victory_points = {
+			406 2 #Wilejka
+		}
+		owner = POL
+		buildings = {
+			infrastructure = 2
+		}
+		add_core_of = POL
+		add_core_of = BLR
+	}
+
+	provinces={
+		233 277 358 406 9341
+	}
+
+	local_supplies=0.0 
+}

@@ -1,0 +1,23 @@
+
+state={
+	id=1398
+	name="STATE_1398"
+	manpower = 7210
+	
+	state_category = wasteland
+
+	history={
+		owner = ECU
+		buildings = {
+			infrastructure = 2
+		}
+		add_core_of = ECU
+		add_core_of = PRU
+	}
+
+	provinces={
+		13862
+	}
+
+	local_supplies=0.0 
+}

@@ -1,0 +1,27 @@
+
+state={
+	id=1699
+	name="STATE_1699"
+
+	history={
+		owner = USA
+		buildings = {
+			infrastructure = 2
+		}
+		victory_points = {
+			3917 1 #Cape Charles
+		}
+		add_core_of = USA
+		add_core_of = CSA
+		add_core_of = VAS
+	}
+
+	provinces={
+		3917
+	}
+
+	local_supplies=0.0
+	manpower=21056
+	buildings_max_level_factor=1.000
+	state_category=wasteland
+}

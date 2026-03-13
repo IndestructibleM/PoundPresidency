@@ -1,0 +1,34 @@
+state={
+	id=1531
+	name="STATE_1531"
+	manpower = 1423980
+	
+	state_category = town
+	
+	history={
+		owner = POL
+		victory_points = {
+			3483 3 #Tarnopol
+		}
+		victory_points = {
+			3562 2 #Czortków
+		}
+		victory_points = {
+			491 2 #Brzeżany
+		}
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 1
+		}
+		add_core_of = POL
+		add_core_of = UKR
+		add_core_of = GAL
+		add_core_of = WUK
+	}
+
+	provinces={
+		438 491 3483 3562 9454 9558 11427 
+	}
+
+	local_supplies=0.0 
+}

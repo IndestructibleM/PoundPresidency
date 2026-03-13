@@ -1,0 +1,26 @@
+
+state={
+	id=1213
+	name="STATE_1213" # Miranda
+	
+	state_category = rural
+	
+	manpower = 215300
+	resources={
+		oil=19
+	}
+
+	history={
+		owner = VEN
+		buildings = {
+			infrastructure = 2
+		}
+		add_core_of = VEN
+	}
+
+	provinces={
+		7968 8024 8080 13525 13526 13528 13530 
+	}
+
+	local_supplies=0.0 
+}

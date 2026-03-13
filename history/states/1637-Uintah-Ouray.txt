@@ -1,0 +1,29 @@
+state= {
+	id=1637
+	name="STATE_1637"
+	manpower = 945
+	
+	state_category = pastoral
+	
+	resources={
+		tungsten=7
+	}
+
+	history={
+		owner = USA
+		buildings = {
+			infrastructure = 2
+		}
+		victory_points = {
+			4668 1 #Fort Duchesne
+		}
+		add_core_of = USA
+		add_core_of = UTS
+		add_core_of = UIT
+	}
+	provinces={
+		4668 14792 14793
+	}
+
+	local_supplies=0.0 
+}

@@ -1,0 +1,28 @@
+
+state={
+	id=1536
+	name="STATE_1536"
+	manpower = 825600
+	
+	state_category = rural
+
+	history={
+		owner = SOV
+		victory_points = {
+			11452 3 #Pavlograd
+		}
+		buildings = {
+			infrastructure = 3 #was: 5
+			industrial_complex = 1
+			air_base = 2
+		}
+		add_core_of = SOV
+		add_core_of = UKR
+	}
+
+	provinces={
+		453 486 3508 9479 11452 11461 14758 14762
+	}
+
+	local_supplies=0.0 
+}

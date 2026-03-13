@@ -1,0 +1,37 @@
+
+state = {
+	id = 1406
+	name = "STATE_1406"
+	manpower = 632420
+	
+	state_category = town
+
+	history = {
+		owner = ITA
+		
+		victory_points = {
+			3885 5 #Perugia
+		}
+		victory_points = {
+			9794 3
+		}
+		victory_points = {
+			13874 2
+		}
+		victory_points = {
+			6926 2
+		}
+
+		buildings = {
+			infrastructure = 3 #was: 6
+		}
+		add_core_of = ITA
+		add_core_of = PAP
+	}
+
+	provinces = {
+		3885 6926 9794 11861 13874
+	}
+
+	local_supplies = 0.0 
+}

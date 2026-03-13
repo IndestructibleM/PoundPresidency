@@ -1,0 +1,21 @@
+state={
+	id=1580
+	name="STATE_1580"
+
+	history={
+		owner = USA
+		buildings = {
+			infrastructure = 1
+		}
+		#add_core_of = USA
+		add_core_of = AKS
+	}
+
+	provinces={
+		13069 14334 14335 14336 14346 14350 
+	}
+	manpower=360
+	state_category=wasteland
+
+	local_supplies=0.0 
+}

@@ -1,0 +1,8 @@
+﻿division_template = {
+	name = "Palatine Guard"
+
+	regiments = {
+		infantry = { x = 0 y = 0 }
+	}
+	priority = 1
+}

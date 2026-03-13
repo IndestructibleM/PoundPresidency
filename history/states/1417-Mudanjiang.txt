@@ -1,0 +1,31 @@
+state={
+	id=1417
+	name="STATE_1417"
+	
+	state_category = town
+	
+	resources = {
+		coal = 11
+	}
+
+	history={
+		owner = MAN
+		add_core_of = CHI
+		add_core_of = MAN
+		add_core_of = PRC
+		buildings = {
+			infrastructure = 2
+		}
+		victory_points = {
+			3791 5
+		}
+	}
+
+	provinces={
+		783 3791 6811 9766 10376 11893 11906 12482 13893 13894
+	}
+	manpower=1242300
+	buildings_max_level_factor=1.000
+
+	local_supplies=0.0 
+}

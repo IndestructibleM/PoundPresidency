@@ -1,0 +1,28 @@
+state={
+	id=1422
+	name="STATE_1422"
+	
+	state_category = large_town
+
+	history={
+		owner = MAN
+		add_core_of = CHI
+		add_core_of = MAN
+		add_core_of = PRC
+		buildings = {
+			infrastructure = 2
+
+		}
+		victory_points = {
+			10433 8 #Harbin
+		}
+	}
+
+	provinces={
+		7591 7670 9782 10433 10503 12412 12355 
+	}
+	manpower=2321230
+	buildings_max_level_factor=1.000
+
+	local_supplies=0.0 
+}

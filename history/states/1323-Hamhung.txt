@@ -1,0 +1,30 @@
+
+state={
+	id=1323
+	name="STATE_1323"
+	manpower = 795230
+	state_category = town
+	resources={
+		steel=3
+		tungsten=4
+	}
+
+	history={
+		owner = JAP
+		buildings = {
+			infrastructure = 2
+		}
+		
+		victory_points = {
+			6928 3
+		}	
+
+		add_core_of = KOR
+	}
+
+	provinces={
+		6928 7171 10083 11770 
+	}
+
+	local_supplies=0.0 
+}

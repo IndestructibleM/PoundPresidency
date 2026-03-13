@@ -1,0 +1,29 @@
+
+state={
+	id=1549
+	name="STATE_1549"
+	manpower = 265300
+	resources={
+		aluminium=5
+	}
+	
+	state_category = rural
+
+	history={
+		owner = GER
+		victory_points = {
+			3688 1
+		}
+		buildings = {
+			infrastructure = 3
+		}
+		add_core_of = GER
+		add_core_of = BAY
+	}
+
+	provinces={
+		707 3688 
+	}
+
+	local_supplies=0.0 
+}

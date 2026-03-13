@@ -1,0 +1,34 @@
+
+state={
+	id=1508
+	name="STATE_1508"
+	manpower = 316200
+	resources={
+	
+	}
+
+	state_category = town
+
+
+	history={
+		owner = SWI
+		victory_points = {
+			663 10
+		}
+		victory_points = {
+			11623 3
+		}
+		buildings = {
+			infrastructure = 4
+			arms_factory = 1
+			industrial_complex = 1
+		}
+		add_core_of = SWI
+	}
+
+	provinces={
+		663 11623 13973 14579
+	}
+
+	local_supplies=0.0 
+}

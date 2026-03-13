@@ -1,0 +1,34 @@
+
+state={
+	id=234
+	name="STATE_234"
+	manpower = 1853371
+	
+	state_category = large_town
+	resources={
+		tungsten=10 # was: 26
+		oil=7 # was: 18
+	}
+
+	history={
+		owner = SOV
+		victory_points = {
+			3720 1 
+		}
+		victory_points = {
+			3734 5
+		}
+		buildings = {
+			infrastructure = 3 #was: 5
+			industrial_complex = 1
+		}
+		add_core_of = SOV
+		add_core_of = KUB
+	}
+
+	provinces={
+		735 765 3717 3720 3734 3752 3765 6736 6738 6768 6781 9691 9694 9709 9744 11681
+	}
+
+	local_supplies=9.0 
+}

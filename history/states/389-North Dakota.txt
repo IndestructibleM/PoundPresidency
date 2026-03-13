@@ -1,0 +1,40 @@
+
+state={
+	id=389
+	name="STATE_389"
+	manpower = 390844
+	state_category = rural
+	resources={
+		steel=10
+		oil=4
+		coal = 12 # initial distribution = with infra 25.2 / 1280 total
+	}
+
+	history={
+		owner = USA
+		buildings = {
+			infrastructure = 2
+			industrial_complex = 1
+		}
+		add_core_of = USA
+		add_core_of = NDS
+		victory_points = {
+			1836 2 #Bismarck
+		}
+		victory_points = {
+			1752 1 #Jamestown
+		}
+		victory_points = {
+			4759 1 #Williston
+		}
+		victory_points = {
+			6722 1 #Dickinson
+		}
+	}
+
+	provinces={
+		1752 1836 4759 4772 6722 7877 10709 12566 13828 
+	}
+
+	local_supplies=9.0 
+}

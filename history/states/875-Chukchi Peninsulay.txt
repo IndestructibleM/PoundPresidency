@@ -1,0 +1,30 @@
+state = {
+	id = 875
+	name = "STATE_875" #Chukchi Peninsula
+
+	history = {
+		owner = SOV
+		victory_points = {
+			14610 1 #Lavrentsiya
+		}
+		buildings = {
+			infrastructure = 1
+			14610 ={
+				naval_base = 1
+			}
+		}
+		add_core_of = SOV
+		add_core_of = CKK
+		add_core_of = FER
+
+	}
+
+	provinces = {
+		13204 13254 14610 14611
+	}
+	manpower = 4890
+	buildings_max_level_factor = 1
+	state_category = "pastoral"
+
+	local_supplies = 0.0 
+}

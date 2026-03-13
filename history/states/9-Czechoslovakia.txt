@@ -1,0 +1,41 @@
+state={
+	id=9
+	name="STATE_9"
+	manpower = 2792600
+	resources={
+		steel=5 # was: 8
+	}
+	
+	state_category = city
+	
+	history={
+		owner = CZE
+		victory_points = {
+			11542 20 #Praha
+		}
+		victory_points = {
+			3462 4 #Hradec Kralove
+		}
+		victory_points = {
+			583 3 #Pardubice
+		}
+		buildings = {
+			infrastructure = 4
+			arms_factory = 4
+			industrial_complex = 1
+			anti_air_building = 5
+		}
+		add_core_of = CZE
+
+		1939.3.14 = {
+			owner = RKH
+			controller = RKH
+		}
+	}
+
+	provinces={
+		445 494 583 3462 6440 9414 9429 11542 14523 14524
+	}
+
+	local_supplies=0.0 
+}

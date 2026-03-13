@@ -1,0 +1,29 @@
+
+state={
+	id=103
+	name="STATE_103" # Dalmatia
+	manpower = 476600 #TODO_Manu: Check if pop need to go down after Fiume split
+
+	state_category = rural
+
+
+	history={
+		owner = YUG
+		victory_points = {
+			11816 1
+		}		
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 1
+		}
+		add_core_of = YUG
+		add_core_of = CRO
+		add_core_of = DAL
+	}
+
+	provinces={
+		3924 3974 11816
+	}
+
+	local_supplies=0.0 
+}

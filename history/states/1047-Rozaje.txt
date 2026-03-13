@@ -1,0 +1,26 @@
+state = {
+	id = 1047
+	name = "STATE_1047"
+	
+	state_category = pastoral
+
+	history = {
+		owner = YUG
+		add_core_of = YUG
+		add_core_of = MNT
+		buildings = {
+			infrastructure = 1
+		}
+		victory_points = {
+			13650 1
+		}
+	}
+
+	provinces = {
+		13650
+	}
+	manpower = 6530
+	buildings_max_level_factor = 1.000
+
+	local_supplies = 0.0 
+}

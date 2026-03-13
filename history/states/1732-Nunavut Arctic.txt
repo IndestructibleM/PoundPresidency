@@ -1,0 +1,22 @@
+state={
+	id=1732
+	name="STATE_1732"
+	resources={
+	
+	}
+
+	history={
+		owner = CAN
+		buildings = {
+			infrastructure = 0
+		}
+		add_core_of = CAN
+	}
+
+	provinces={
+		15339 15340 15342 15345 15346 15348 15349 15351 15353 15355 15356 15358 15359 15364 15365 15366 15367 15368 15369 15370 15371 15372 15373 
+	}
+	manpower=156
+	state_category=wasteland
+	local_supplies=0.000
+}

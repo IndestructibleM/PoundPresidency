@@ -1,0 +1,33 @@
+state={
+	id=1683
+	name="STATE_1683"
+
+	state_category = rural
+
+	history={
+		owner = USA
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 1
+		}
+		victory_points = {
+			4854 2 #Marquette
+		}
+		victory_points = {
+			709 1 #Iron Mountain
+		}
+		victory_points = {
+			10599 1 #Houghton
+		}
+		add_core_of = USA
+		add_core_of = MCS
+	}
+
+	provinces={
+		709 751 4854 5205 10599 
+	}
+	manpower=375630
+	buildings_max_level_factor=1.000
+
+	local_supplies=0.0 
+}

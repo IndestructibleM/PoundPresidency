@@ -1,0 +1,27 @@
+
+state={
+	id=1479
+	name="STATE_1479"
+	manpower = 429570
+	resources={
+		aluminium=4 # was: 6
+	}
+	
+	state_category = rural
+
+	history={
+		owner = ROM
+		buildings = {
+			infrastructure = 3
+		}
+		add_core_of = ROM
+		add_core_of = TRA
+		add_core_of = BNT
+	}
+
+	provinces={
+		662 3649 11592 
+	}
+
+	local_supplies=0.0 
+}

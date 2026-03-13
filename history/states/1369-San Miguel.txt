@@ -1,0 +1,27 @@
+state=
+{
+	id=1369
+	name="STATE_1369"
+	manpower = 572300
+	
+	state_category = rural
+	
+	history=
+	{
+		owner = ELS
+		buildings = {
+			infrastructure = 2
+			industrial_complex = 1
+		}
+		add_core_of = ELS
+		victory_points = {
+			13093 2
+		}
+
+	}
+	provinces={
+		13093 13836
+	}
+
+	local_supplies=0.0 
+}

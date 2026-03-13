@@ -1,0 +1,27 @@
+
+state={
+	id=1636
+	name="STATE_1636"
+	manpower = 19200
+	
+	state_category = pastoral
+
+	history={
+		owner = USA
+		buildings = {
+			infrastructure = 3
+		}
+		victory_points = {
+			7721 1 #Ontario
+		}
+		add_core_of = USA
+		add_core_of = ORS
+		add_core_of = CSC
+	}
+
+	provinces={
+		7721
+	}
+
+	local_supplies=0.0 
+}

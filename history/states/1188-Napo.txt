@@ -1,0 +1,22 @@
+
+state={
+	id=1188
+	name="STATE_1188"
+	manpower = 182300
+	
+	state_category = rural
+
+	history={
+		owner = ECU
+		buildings = {
+			infrastructure = 2
+		}
+		add_core_of = ECU
+	}
+
+	provinces={
+		8075 10888 13416 13417 13418 13859 13860 13861
+	}
+
+	local_supplies=0.0 
+}

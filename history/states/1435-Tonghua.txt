@@ -1,0 +1,31 @@
+
+state={
+	id=1435
+	name="STATE_1435"
+	manpower = 501413
+	
+	state_category = town
+
+	resources={
+		aluminium=5
+	}
+
+	history={
+		owner = MAN
+		add_core_of = CHI
+		add_core_of = MAN
+		add_core_of = PRC
+		buildings = {
+			infrastructure = 2
+		}
+		victory_points = {
+			9759 3 #Tonghua
+		}
+	}
+
+	provinces={
+		3888 3949 9759 9866
+	}
+
+	local_supplies=0.0 
+}

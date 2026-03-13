@@ -1,0 +1,29 @@
+
+state={
+	id=1642
+	name="STATE_1642"
+	manpower = 10270
+	
+	state_category = pastoral
+
+	history={
+		owner = USA
+		buildings = {
+			infrastructure = 1
+		}
+		
+		victory_points = {
+			14807 1 #Sells
+		}
+		
+		add_core_of = USA
+		add_core_of = AZS
+		add_core_of = PPG
+	}
+
+	provinces={
+		14807
+	}
+
+	local_supplies=0.0 
+}

@@ -1,0 +1,41 @@
+state = {
+	id = 1043
+	name = "STATE_1043"
+	manpower = 3500
+	state_category = pastoral
+
+	resources = {
+		coal = 1 #initial distribution
+	}
+
+	history = {
+
+		owner = JAP
+		add_core_of = SHX
+		add_core_of = CHI
+		add_core_of = PRC
+
+		buildings = {
+			infrastructure = 1
+			industrial_complex = 1
+		}
+		
+		1936.5.12 = {
+			owner = MEN
+			controller = MEN
+			add_core_of = MEN
+		}
+
+		victory_points = {
+			12331 1 # Pailingmiao
+		}
+
+	}
+
+	provinces = {
+		7048 12331 
+	}
+
+	buildings_max_level_factor = 1.000
+	local_supplies = 0.0
+}

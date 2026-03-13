@@ -1,0 +1,19 @@
+
+state={
+	id=1513
+	name="STATE_1513"
+	manpower = 8520
+	state_category = wasteland
+	history={
+		owner = SWI
+		buildings = {
+			infrastructure = 1 
+		}
+		add_core_of = SWI
+		add_claim_by = RMN
+	}
+	provinces={
+		13979
+	}
+	local_supplies=0.0 
+}

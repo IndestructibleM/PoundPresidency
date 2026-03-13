@@ -1,0 +1,23 @@
+state={
+	id=1248
+	name="STATE_1248"
+	manpower = 9620
+	
+	state_category = wasteland
+	
+	history={
+		owner = POL
+		buildings = {
+			infrastructure = 3
+		}
+		add_core_of = POL
+		add_core_of = LIT
+		add_core_of = RCL
+	}
+
+	provinces={
+		13633
+	}
+
+	local_supplies=0.0 
+}

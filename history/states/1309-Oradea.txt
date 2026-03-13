@@ -1,0 +1,26 @@
+
+state={
+	id=1309
+	name="STATE_1309"
+	manpower=125600
+	
+	state_category = rural
+	
+	history={
+		owner = ROM
+		buildings = {
+			infrastructure = 2
+		}
+		victory_points = {
+			3696 3 #Oradea 
+		}
+		add_core_of = ROM
+		add_core_of = TRA
+	}
+
+	provinces={
+		713 3696 13763
+	}
+
+	local_supplies=0.0 
+}

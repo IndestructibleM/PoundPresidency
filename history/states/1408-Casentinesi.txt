@@ -1,0 +1,24 @@
+
+state = {
+	id = 1408
+	name = "STATE_1408"
+	manpower = 17560
+	
+	state_category = pastoral
+
+	history = {
+		owner = ITA
+		
+		buildings = {
+			infrastructure = 3
+		}
+		add_core_of = ITA
+		add_core_of = TOS
+	}
+
+	provinces = {
+		13878
+	}
+
+	local_supplies = 0.0 
+}

@@ -1,0 +1,79 @@
+capital = 1092
+
+oob = "GGZ_1936"
+
+set_research_slots = 2
+
+add_ideas = {
+	limited_conscription
+}
+
+set_technology = {
+	infantry_weapons = 1
+}
+
+set_politics = {
+	ruling_party = democratic
+	last_election = "1935.12.9"
+	election_frequency = 120
+	elections_allowed = no
+}
+set_popularities = {
+	democratic = 65
+	fascism = 6
+	communism = 2
+	neutrality = 27
+}
+
+1939.1.1 = {
+	set_politics = {
+		ruling_party = neutrality
+		last_election = "1936.6.10"
+		election_frequency = 120
+		elections_allowed = no
+	}
+}
+
+create_country_leader = {
+	name = "Gamze Bayraktar"
+	desc = ""
+	picture = "GFX_Portrait_Europe_Generic_land_5"
+	expire = "1965.1.1"
+	ideology = despotism
+	traits = {
+		#
+	}
+}
+
+create_country_leader = {
+	name = "Kivanç Tuncel"
+	desc = ""
+	picture = "GFX_portrait_europe_generic_land_13"
+	expire = "1965.1.1"
+	ideology = conservatism
+	traits = {
+		#
+	}
+}
+
+create_country_leader = {
+	name = "Toygar Sezer"
+	desc = ""
+	picture = "GFX_Portrait_Europe_Generic_1"
+	expire = "1965.1.1"
+	ideology = marxism
+	traits = {
+		#
+	}
+}
+
+create_country_leader = {
+	name = "Hakan Vural"
+	desc = ""
+	picture = "GFX_portrait_europe_generic_4"
+	expire = "1965.1.1"
+	ideology = nazism
+	traits = {
+		#
+	}
+}

@@ -1,0 +1,23 @@
+
+state={
+	id=1068
+	name="STATE_1068"
+
+	history={
+		owner = EST
+		buildings = {
+			infrastructure = 3
+		}
+		add_core_of = EST
+
+	}
+
+	provinces={
+		308 11291
+	}
+
+	local_supplies=0.0 
+	manpower=29560
+	buildings_max_level_factor=1.000
+	state_category=pastoral
+}

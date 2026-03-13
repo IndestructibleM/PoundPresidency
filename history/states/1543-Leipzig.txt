@@ -1,0 +1,45 @@
+
+state={
+	id=1543
+	name="STATE_1543"
+	manpower = 3492576
+	resources={
+		steel=32 # was: 90
+	}
+
+	state_category = city
+
+
+	history={
+		owner = GER
+		buildings = {
+			infrastructure = 4
+			arms_factory = 1
+			industrial_complex = 4
+		}
+		victory_points = {
+			3535 15 #Leipzig
+		}
+		victory_points = {
+			14525 15 #Dresden 
+		}
+		victory_points = {
+			9471 10 #Chemnitz
+		}
+		add_core_of = GER
+		add_core_of = SAX
+		1939.1.1 = {
+			buildings = {
+				synthetic_refinery = 2
+				arms_factory = 3
+				industrial_complex = 7
+			}
+		}
+	}
+
+	provinces={
+		3535 6559 9441 9471 11481 11545 14525 14526
+	}
+
+	local_supplies=0.0 
+}

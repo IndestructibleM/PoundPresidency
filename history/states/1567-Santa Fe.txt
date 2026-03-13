@@ -1,0 +1,27 @@
+
+state={
+	id=1567
+	name="STATE_1567"
+	manpower = 41230
+	
+	state_category = pastoral
+
+	history={
+		owner = USA
+		buildings = {
+			infrastructure = 2
+		}
+		victory_points = {
+			14003 2 #Santa Fe
+		}
+		add_core_of = USA
+		add_core_of = NMS
+	}
+
+	provinces={
+		10642 14003
+	}
+	
+
+	local_supplies=0.0 
+}

@@ -1,0 +1,40 @@
+
+state={
+	id=1641
+	name="STATE_1641"
+	manpower = 105630
+	
+	state_category = rural
+	
+	resources={
+		steel=6
+		oil=3
+		aluminium=2
+	}
+
+	history={
+		owner = USA
+		buildings = {
+			infrastructure = 2
+		}
+		
+		victory_points = {
+			14805 3 #Tucson
+		}
+		victory_points = {
+			10783 1 #Yuma
+		}
+		victory_points = {
+			14806 1 #Douglas
+		}
+		
+		add_core_of = USA
+		add_core_of = AZS
+	}
+
+	provinces={
+		3834 7920 10783 14804 14805 14806
+	}
+
+	local_supplies=0.0 
+}

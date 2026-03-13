@@ -1,0 +1,23 @@
+state = {
+	id = 1325
+	name = "STATE_1325"
+	
+	state_category = wasteland
+
+	history = {
+		owner = YUG
+		add_core_of = YUG
+		add_core_of = CRO
+		add_core_of = DAL
+		buildings = {
+			infrastructure = 1
+		}
+	}
+
+	provinces = {
+		13647
+	}
+	manpower = 23540
+
+	local_supplies = 0.0 
+}

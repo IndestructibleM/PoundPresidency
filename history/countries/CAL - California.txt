@@ -1,0 +1,56 @@
+﻿capital = 1563
+
+oob = "USA_1936"
+
+set_research_slots = 2
+set_stability = 0.75
+set_war_support = 0.20
+
+# Starting tech
+set_technology = {
+	infantry_weapons = 1
+	infantry_weapons1 = 1
+}
+
+set_politics = {
+	ruling_party = democratic
+	last_election = "1932.11.8"
+	election_frequency = 48
+	elections_allowed = yes
+}
+set_popularities = {
+	democratic = 65
+	fascism = 10
+	communism = 25
+}
+
+add_ideas = {
+	civilian_economy
+	volunteer_only
+	free_trade
+}
+
+1939.1.1 = {
+	set_politics = {
+		ruling_party = democratic
+		last_election = "1936.11.3"
+		election_frequency = 48
+		elections_allowed = yes
+	}
+	set_popularities = {
+		democratic = 65
+		fascism = 10
+		communism = 25
+	}
+}
+
+create_country_leader = {
+	name = "Frank Merriam"
+	desc = "POLITICS_WILLIAM_DUDLEY_PELLEY_DESC"
+	picture = "gfx/leaders/Europe/portrait_europe_generic_5.dds"
+	expire = "1965.1.1"
+	ideology = liberalism
+	traits = {
+		
+	}
+}

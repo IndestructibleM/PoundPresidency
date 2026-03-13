@@ -1,0 +1,26 @@
+state={
+	id=1142
+	name="STATE_1142"
+	manpower = 192300
+	
+	state_category = rural
+	history={
+		owner = POL
+		buildings = {
+			infrastructure = 3
+		}
+		victory_points = {
+			13691 5 #Częstochowa
+		}
+		victory_points = {
+			13689 4 #Piotrków Trybunalski
+		}
+		add_core_of = POL
+	}
+
+	provinces={
+		13689 13690 13691
+	}
+
+	local_supplies=0.0 
+}

@@ -1,0 +1,32 @@
+
+state={
+	id=1540
+	name="STATE_1540"
+	manpower = 459850
+	resources={
+		steel=11
+		aluminium=2
+		coal = 25 # initial distribution / 660 total
+	}
+	
+	state_category = rural
+
+	history={
+		victory_points = {
+			6512 3 #Neisse
+		}
+		owner = GER
+		buildings = {
+			infrastructure = 3
+		}
+		add_core_of = GER
+		add_core_of = PRE
+		add_core_of = SIL
+	}
+
+	provinces={
+		6512 9457 
+	}
+
+	local_supplies=0.0 
+}

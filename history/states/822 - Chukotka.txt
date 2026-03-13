@@ -1,0 +1,26 @@
+state = {
+	id = 822
+	name = "STATE_822" #Chukotka
+
+	history = {
+		owner = SOV
+		buildings = {
+			infrastructure = 1
+		}
+		victory_points = {
+			14619 1 #Anadyr
+		}
+		add_core_of = SOV
+		add_core_of = CKK
+		add_core_of = FER
+	}
+
+	provinces = {
+		4744 5264 13062 13063 14612 14613 14614 14615 14616 14617 14619 14620 14621 14622 14623 14624 14625 14626 14627 14628 14629 14630 14631
+	}
+	manpower = 14260
+	buildings_max_level_factor = 1
+	state_category = "pastoral"
+
+	local_supplies = 0.0 
+}

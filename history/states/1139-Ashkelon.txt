@@ -1,0 +1,27 @@
+
+state={
+	id=1139
+	name="STATE_1139" #Ashkelon
+	manpower = 19820
+	
+	state_category = pastoral
+
+	history={
+		owner = PAL
+		buildings = {
+			infrastructure = 3
+		}
+		add_core_of = PAL
+		add_claim_by = ISR
+
+		victory_points = {
+			13687 1
+		}
+	}
+
+	provinces={
+		13687
+	}
+
+	local_supplies=0.0 
+}

@@ -1,0 +1,32 @@
+state={
+	id=1149
+	name="STATE_1149"
+	manpower = 653600
+	
+	state_category = rural
+	
+	history={
+		victory_points = {
+			13888 2 #Prešov
+		}
+		owner = CZE
+		buildings = {
+			infrastructure = 2
+			industrial_complex = 2
+		}
+		add_core_of = CZE
+		add_core_of = SLO
+
+		1939.3.14 = {
+			owner = SLO
+			controller = SLO
+			add_core_of = SLO
+		}
+	}
+
+	provinces={
+		3581 6586 6604 13888
+	}
+
+	local_supplies=0.0 
+}

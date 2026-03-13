@@ -1,0 +1,33 @@
+
+state={
+	id=1270
+	name="STATE_1270"
+	manpower = 652300
+	resources={
+		chromium = 3 # was: 4
+	}
+	
+	state_category = town
+
+	history={
+		owner = GER
+		victory_points = { 3561 5 }
+		buildings = {
+			infrastructure = 3
+		}
+		add_core_of = GER
+		add_core_of = THU
+		add_core_of = PRE
+		1939.1.1 = {
+			buildings = {
+				arms_factory = 1
+			}
+		}
+	}
+
+	provinces={
+		3500 3561 14004
+	}
+
+	local_supplies=0.0 
+}

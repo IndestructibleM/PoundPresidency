@@ -1,0 +1,29 @@
+
+state={
+	id=1558
+	name="STATE_1558"
+	manpower = 95632
+	
+	state_category = pastoral
+
+	history={
+		owner = GER
+		
+		buildings = {
+			infrastructure = 2
+		}
+		add_core_of = GER
+		add_core_of = PRE
+		add_core_of = SIL
+		
+		victory_points = {
+			3485 1
+		}
+	}
+
+	provinces={
+		3485
+	}
+
+	local_supplies=0.0 
+}

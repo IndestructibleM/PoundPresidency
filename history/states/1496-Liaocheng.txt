@@ -1,0 +1,42 @@
+state=
+{
+	id=1496
+	name="STATE_1496"
+	manpower = 392560
+	state_category = town
+	
+	
+	history=
+	{
+		owner = CHI
+		add_core_of = CHI
+		add_core_of = PRC
+		
+		1936.1.1 = {
+			IF = {
+				limit = {
+					has_dlc = "No Compromise, No Surrender"
+				}
+				transfer_state_to = SND
+				add_core_of = SND
+			}
+		}
+		
+		victory_points = {
+			9987 3 #Liaocheng 
+		}
+		buildings = {
+			infrastructure = 2
+		}
+
+		1938.10.25 = {
+			owner = CHI
+			controller = JAP
+		}
+	}
+	provinces={
+		9987 11933 13958 13959 
+	}
+
+	local_supplies=0.0 
+}

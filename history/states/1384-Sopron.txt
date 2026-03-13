@@ -1,0 +1,25 @@
+
+state={
+	id=1384
+	name="STATE_1384"
+	manpower = 41253
+	
+	state_category = wasteland
+	
+	history={
+		owner = HUN
+		victory_points = {
+			13846 2
+		}
+		buildings = {
+			infrastructure = 3
+		}
+		add_core_of = HUN
+	}
+
+	provinces={
+		13846
+	}
+
+	local_supplies=0.0 
+}

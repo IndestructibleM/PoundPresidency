@@ -1,0 +1,25 @@
+
+state={
+	id=1717
+	name="STATE_1717"
+	manpower = 9230
+
+	state_category = pastoral
+
+
+	history={
+		owner = YUG
+		buildings = {
+			infrastructure = 3
+		}
+		add_core_of = YUG
+		#add_claim_by = ITA #added by focus
+		add_core_of = BOS
+	}
+
+	provinces={
+		13643
+	}
+
+	local_supplies=0.0 
+}

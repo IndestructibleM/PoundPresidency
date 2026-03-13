@@ -1,0 +1,23 @@
+state={
+	id=1141
+	name="STATE_1141"
+	manpower = 78620
+	
+	state_category = rural
+	history={
+		victory_points = {
+			11385 2 #Ostrów Mazowiecka
+		}
+		owner = POL
+		buildings = {
+			infrastructure = 3
+		}
+		add_core_of = POL
+	}
+
+	provinces={
+		11385 
+	}
+
+	local_supplies=0.0 
+}

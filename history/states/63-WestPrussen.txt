@@ -1,0 +1,47 @@
+
+state={
+	id=63
+	name="STATE_63"
+	manpower = 624417
+	resources={
+		steel=18 # was: 36
+		aluminium=6 # was: 12
+	}
+	
+	state_category = town
+
+	history={
+		owner = GER
+		victory_points = {
+			11372 3 #Stolp
+		}
+		victory_points = {
+			9361 3 #Koslin
+		}
+		victory_points = {
+			6309 3 #Stargard
+		}
+		victory_points = {
+			6334 2 #Swinemünde
+		}
+		victory_points = {
+			9306 2 #Neustettin
+		}
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 1
+			11372 = {
+				naval_base = 1
+			}
+			air_base = 3
+		}
+		add_core_of = GER
+		add_core_of = PRE
+	}
+
+	provinces={
+		6309 6334 6390 9277 9306 9334 9361 11372 
+	}
+
+	local_supplies=4.0 
+}

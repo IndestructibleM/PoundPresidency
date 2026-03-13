@@ -1,0 +1,28 @@
+state = {
+	id=1566
+	name="STATE_1566"
+	manpower = 3650
+	
+	state_category = wasteland
+
+	history = {
+
+		owner = USA
+
+		buildings = {
+			infrastructure = 2
+		}
+
+		victory_points = {
+			14002 1 #Carson City
+		}
+		add_core_of = USA
+		add_core_of = NVS
+	}
+
+	provinces = {
+		14002
+	}
+
+	local_supplies = 0.0 
+}

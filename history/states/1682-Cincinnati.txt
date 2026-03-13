@@ -1,0 +1,41 @@
+state={
+	id=1682
+	name="STATE_1682"
+	resources={
+		steel=8
+		aluminium=3
+	}
+	
+	state_category = town
+
+	history={
+		owner = USA
+		buildings = {
+			infrastructure = 4 #was: 7
+			industrial_complex = 2
+
+		}
+		victory_points = {
+			4601 10 #Cincinnati
+		}
+		victory_points = {
+			689 8 #Toledo
+		}
+		victory_points = {
+			11776 7 #Dayton
+		}
+		victory_points = {
+			3872 3 #Lima
+		}
+		add_core_of = USA
+		add_core_of = OHS
+	}
+
+	provinces={
+		659 689 831 3685 3872 4601 9775 11760 11776 11791 11890
+	}
+	manpower=2606530
+	buildings_max_level_factor=1.000
+
+	local_supplies=0.0 
+}

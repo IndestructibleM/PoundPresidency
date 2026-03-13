@@ -1,0 +1,25 @@
+
+state={
+	id=1509
+	name="STATE_1509"
+	manpower = 41230
+	state_category = pastoral
+	resources={
+		aluminium=2
+	}
+	history={
+		owner = SWI
+		victory_points = {
+			13975 1
+		}
+		buildings = {
+			infrastructure = 1 
+		}
+		add_core_of = SWI
+		add_core_of = RMN
+	}
+	provinces={
+		13974 13975
+	}
+	local_supplies=0.0 
+}

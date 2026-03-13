@@ -1,0 +1,25 @@
+
+state={
+	id=1361
+	name="STATE_1361"
+	manpower = 36250
+	state_category = rural
+
+	history={
+		owner = USA
+		buildings = {
+			infrastructure = 2
+		}
+		victory_points = {
+			4741 1 #Bozeman
+		}
+		add_core_of = USA
+		add_core_of = MTS
+	}
+
+	provinces={
+		1851 4741 12585
+	}
+
+	local_supplies=0.0 
+}

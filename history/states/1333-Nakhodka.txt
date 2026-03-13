@@ -1,0 +1,30 @@
+
+state = {
+	id = 1333
+	name = "STATE_1333"
+	manpower = 139520
+	resources = {
+		chromium=5
+	}
+	
+	state_category = rural
+
+	history={
+		owner = SOV
+		victory_points = {
+			6961 1
+		}
+		buildings = {
+			infrastructure = 2
+		}
+		add_core_of = SOV
+		add_core_of = FER
+		add_core_of = VLA
+	}
+
+	provinces = {
+		6961 9895 9926
+	}
+
+	local_supplies = 0.0 
+}

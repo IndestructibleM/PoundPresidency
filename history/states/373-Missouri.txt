@@ -1,0 +1,41 @@
+
+state={
+	id=373
+	name="STATE_373"
+	manpower = 2632600
+	
+	state_category = city
+
+	resources={
+		coal = 5 # initial distribution = with infra 8 / 1280 total
+	}
+
+	history={
+		owner = USA
+		buildings = {
+			infrastructure = 3 #was: 5
+			industrial_complex = 4
+		}
+		
+		victory_points = {
+			4569 20 #St. Louis
+		}
+		victory_points = {
+			10717 10 #Kansas City
+		}
+		victory_points = {
+			10370 4 #Springfield
+		}
+		victory_points = {
+			1534 3 #Joplin
+		}
+		add_core_of = USA
+		add_core_of = MOS
+	}
+
+	provinces={
+		1441 1534 1564 1621 4449 4540 4569 10370 10717 12346 12463 
+	}
+
+	local_supplies=7.0 
+}

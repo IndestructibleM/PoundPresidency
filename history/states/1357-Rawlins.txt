@@ -1,0 +1,26 @@
+
+state={
+	id=1357
+	name="STATE_1357"
+	manpower = 23270
+	state_category = pastoral
+	
+	history={
+		owner = USA
+		buildings = {
+			infrastructure = 2
+		}
+		victory_points = {
+			13816 1 #Rawlins
+		}
+		add_core_of = USA
+		add_core_of = WYS
+	}
+
+	provinces={
+		13384 13816
+	}
+	
+
+	local_supplies=0.0 
+}

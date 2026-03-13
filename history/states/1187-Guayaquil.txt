@@ -1,0 +1,30 @@
+
+state={
+	id=1187
+	name="STATE_1187"
+	manpower = 625300
+	
+	state_category = town
+
+	history={
+		owner = ECU
+		buildings = {
+			infrastructure = 2
+			industrial_complex = 2
+			8252 = {
+				naval_base = 4
+			}
+		}
+		add_core_of = ECU
+		victory_points = {
+			8252 5
+		}
+
+	}
+
+	provinces={
+		8047 8252 13415
+	}
+
+	local_supplies=0.0 
+}

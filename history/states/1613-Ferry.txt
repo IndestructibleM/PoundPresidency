@@ -1,0 +1,24 @@
+
+state={
+	id=1613
+	name="STATE_1613"
+	manpower = 5620
+	
+	state_category = pastoral
+
+	history={
+		owner = USA
+		buildings = {
+			infrastructure = 3
+		}
+		add_core_of = USA
+		add_core_of = WAS
+		add_core_of = CSC
+	}
+
+	provinces={
+		13712
+	}
+
+	local_supplies=0.0 
+}

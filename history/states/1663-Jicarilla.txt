@@ -1,0 +1,27 @@
+state={
+	id=1663
+	name="STATE_1663"
+	manpower = 1398
+	
+	state_category = wasteland
+
+	history={
+		owner = USA
+		buildings = {
+			infrastructure = 1
+		}
+		victory_points = {
+			14829 1 #Dulce
+		}
+		add_core_of = USA
+		add_core_of = NMS
+		add_core_of = JIC
+	}
+
+	provinces={
+		14829
+	}
+	
+
+	local_supplies=0.0 
+}

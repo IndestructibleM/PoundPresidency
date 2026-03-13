@@ -1,0 +1,26 @@
+
+state={
+	id=1178
+	name="STATE_1178"
+	manpower = 42530
+	
+	state_category = pastoral
+
+	history={
+		owner = USA
+		buildings = {
+			infrastructure = 2
+		}
+		victory_points = {
+			1738 1 #Lamar
+		}
+		add_core_of = USA
+		add_core_of = CLS
+	}
+
+	provinces={
+		1738
+	}
+
+	local_supplies=0.0 
+}

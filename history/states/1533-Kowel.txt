@@ -1,0 +1,35 @@
+state={
+	id=1533
+	name="STATE_1533"
+
+	history={
+		victory_points = {
+			3412 3 #Kowel
+		}
+		victory_points = {
+			422 3 #Włodzimierz
+		}
+		victory_points = {
+			513 2 #Łuck
+		}
+		victory_points = {
+			9520 1 #Ratno
+		}
+		owner = POL
+		buildings = {
+			infrastructure = 3
+		}
+		add_core_of = POL
+		add_core_of = UKR
+
+	}
+
+	provinces={
+		422 513 3412 6546 9520 11441 14490 14729
+	}
+	manpower=795230
+	buildings_max_level_factor=1.000
+	state_category=town
+
+	local_supplies=0.0 
+}

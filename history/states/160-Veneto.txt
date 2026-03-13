@@ -1,0 +1,51 @@
+state = {
+	id = 160
+	name = "STATE_160"
+	resources = {
+		steel=14 # was: 32.000
+		aluminium=7 # was: 18.000
+	}
+	
+	state_category = city
+
+	history = {
+		owner = ITA
+		victory_points = { 
+			11584 8 #Venezia
+		}
+		victory_points = {
+			603 6 #Verona
+		}
+		victory_points = {
+			3604 6 #Padova
+		}
+
+		buildings = {
+			infrastructure = 3 #was: 6
+			arms_factory = 1
+			industrial_complex = 3
+			dockyard = 1
+			air_base = 3
+			11584 = {
+				naval_base = 6
+			}
+		}
+		add_core_of = ITA
+		add_core_of = LBV
+		1939.1.1 = {
+			buildings = {
+				dockyard = 2
+				industrial_complex = 4
+			}
+		}
+
+	}
+
+	provinces = {
+		603 656 3604 6656 9582 11584 13989 13997 14600
+	}
+	manpower = 3343151
+	buildings_max_level_factor = 1.000
+
+	local_supplies = 5.0 
+}

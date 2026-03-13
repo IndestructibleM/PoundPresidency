@@ -1,0 +1,31 @@
+state={
+	id=97
+	name="STATE_97"
+
+	history={
+		owner = POL
+		victory_points = {
+			11301 5 #Bialystok
+		}
+		victory_points = {
+			347 1 #Dąbrowa Białostocka
+		}
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 1
+			air_base = 3
+
+		}
+		add_core_of = POL
+
+	}
+
+	provinces={
+		290 347 11247 11301 11357 14726
+	}
+	manpower=705800
+	buildings_max_level_factor=1.000
+	state_category=town
+
+	local_supplies=5.0 
+}

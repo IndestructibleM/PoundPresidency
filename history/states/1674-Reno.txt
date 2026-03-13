@@ -1,0 +1,37 @@
+state = {
+	id = 1674
+	name = "STATE_1674"
+	manpower = 19045
+	
+	state_category = rural
+	
+	resources = {
+		steel = 28
+		tungsten = 9
+		aluminium = 7
+	}
+
+	history = {
+
+		owner = USA
+
+		buildings = {
+			infrastructure = 2
+		}
+
+		victory_points = {
+			10422 2 #Reno
+		}
+		victory_points = {
+			4736 1 #Winnemucca
+		}
+		add_core_of = USA
+		add_core_of = NVS
+	}
+
+	provinces = {
+		4736 10422 12134 14776 14777
+	}
+
+	local_supplies = 0.0 
+}

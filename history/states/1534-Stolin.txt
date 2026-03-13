@@ -1,0 +1,26 @@
+state={
+	id=1534
+	name="STATE_1534"
+
+	history={
+		owner = POL
+		buildings = {
+			infrastructure = 2
+
+		}
+		victory_points = {
+			13995 1 #Stolin
+		}
+		add_core_of = POL
+		add_core_of = BLR
+	}
+
+	provinces={
+		6579 13995
+	}
+	manpower=86320
+	buildings_max_level_factor=1.000
+	state_category=pastoral
+
+	local_supplies=0.0 
+}

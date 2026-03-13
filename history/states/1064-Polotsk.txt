@@ -1,0 +1,29 @@
+
+state={
+	id=1064
+	name="STATE_1064"
+	manpower =  52302
+	
+	state_category = rural
+
+	history={
+		owner = SOV
+		buildings = {
+			infrastructure = 3
+		}
+		victory_points = {
+			6326 3 #Polotsk
+		}
+		victory_points = {
+			3219 1 #Verkhnedvinsk
+		}
+		add_core_of = SOV
+		add_core_of = BLR
+	}
+
+	provinces={
+		3219 6326 
+	}
+
+	local_supplies=0.0 
+}

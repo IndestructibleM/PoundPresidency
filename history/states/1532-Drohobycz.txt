@@ -1,0 +1,27 @@
+state={
+	id=1532
+	name="STATE_1532"
+
+	history={
+		owner = POL
+		buildings = {
+			infrastructure = 3
+		}
+		victory_points = {
+			6483 3 #Drohobycz
+		}
+		add_core_of = POL
+		add_core_of = UKR
+		add_core_of = GAL
+		add_core_of = WUK
+	}
+
+	provinces={
+		6431 6460 6483 13885
+	}
+	manpower=743200
+	buildings_max_level_factor=1.000
+	state_category=rural
+
+	local_supplies=0.0 
+}

@@ -1,0 +1,35 @@
+
+state={
+	id=1346
+	name="STATE_1346"
+	manpower = 475230
+	
+	state_category = town
+	
+	resources={
+		oil=18
+	}
+
+	history={
+		owner = USA
+		buildings = {
+			infrastructure = 3 #was: 5
+			industrial_complex = 1
+			7552 = {
+				naval_base = 5
+			}
+		}
+		victory_points = {
+			7552 15 #New Orleans
+		}
+		add_core_of = USA
+		add_core_of = CSA
+		add_core_of = LAS
+	}
+
+	provinces={
+		7552
+	}
+
+	local_supplies=0.0 
+}

@@ -1,0 +1,38 @@
+
+state={
+	id=1563
+	name="STATE_1563"
+	manpower = 1793560
+	
+	state_category = town
+	
+	resources={
+		oil=70
+		aluminium=2
+	}
+
+	history={
+		owner = USA
+		buildings = {
+			infrastructure = 3
+			arms_factory = 1
+			industrial_complex = 1
+		}
+		add_core_of = USA
+		add_core_of = CAL
+		victory_points = {
+			9713 5 #Sacramento
+		}
+		1939.1.1 = {
+			buildings = {
+				industrial_complex = 2
+			}
+		}
+	}
+
+	provinces={
+		710 6745 9713 14000
+	}
+
+	local_supplies=0.0 
+}

@@ -1,0 +1,61 @@
+state = {
+	id = 2
+	name = "STATE_2" # Latium
+	manpower = 3231971
+	
+	state_category = city
+
+	history = {
+		owner = ITA
+		victory_points = {
+			9904 25 #Roma
+		}
+		victory_points = {
+			6862 4 #Viterbo
+		}
+		victory_points = {
+			11846 2
+		}
+		victory_points = {
+			11751 2
+		}
+		victory_points = {
+			13873 1
+		}
+		
+		buildings = {
+			infrastructure = 4
+			air_base = 8
+			arms_factory = 1
+			industrial_complex = 4
+			11751 = {
+				naval_base = 5
+			}
+			11846 = {
+				naval_base = 2
+			}
+			9904 = {
+                landmark_colosseum = {
+                    level = 1
+                    allowed = {
+                        has_dlc = "Gotterdammerung"
+                    }
+                }
+            }
+		}
+		add_core_of = ITA
+		add_core_of = PAP
+		1939.1.1 = {
+			buildings = {
+				arms_factory = 2
+				industrial_complex = 5
+			}
+		}
+	}
+
+	provinces = {
+		6862 9904 11751 11846 13873 14593 14594 14595
+ 	}
+
+	local_supplies = 0.0 
+}

@@ -1,0 +1,81 @@
+capital = 1132
+
+set_research_slots = 2
+
+give_military_access = FRA
+FRA = { give_guarantee = ADR }
+
+add_ideas = {
+	limited_conscription
+	neutrality_idea
+}
+
+set_technology = {
+	infantry_weapons = 1
+}
+
+set_politics = {
+	ruling_party = neutrality
+	last_election = "1935.12.9"
+	election_frequency = 48
+	elections_allowed = no
+}
+set_popularities = {
+	democratic = 10
+	fascism = 6
+	communism = 4
+	neutrality = 80
+}
+
+1939.1.1 = {
+	set_politics = {
+		ruling_party = neutrality
+		last_election = "1936.6.10"
+		election_frequency = 48
+		elections_allowed = no
+	}
+}
+
+create_country_leader = {
+	name = "Justí Guitart i Vilardebó"
+	desc = ""
+	picture = "GFX_portrait_europe_generic_6"
+	expire = "1965.1.1"
+	ideology = despotism
+	traits = {
+		#
+	}
+}
+
+create_country_leader = {
+	name = "Gustavo Lopez"
+	desc = ""
+	picture = "GFX_Portrait_San_Marino_Regency"
+	expire = "1965.1.1"
+	ideology = conservatism
+	traits = {
+		#
+	}
+}
+
+create_country_leader = {
+	name = "Chema Bautista"
+	desc = ""
+	picture = "GFX_Portrait_Europe_Generic_1"
+	expire = "1965.1.1"
+	ideology = marxism
+	traits = {
+		#
+	}
+}
+
+create_country_leader = {
+	name = "Justí Guitart i Vilardebó"
+	desc = ""
+	picture = "GFX_Portrait_Europe_Generic_land_6"
+	expire = "1965.1.1"
+	ideology = nazism
+	traits = {
+		#
+	}
+}

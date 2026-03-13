@@ -1,0 +1,24 @@
+state={
+	id=1600
+	name="STATE_1600"
+	resources={
+	
+	}
+
+	history={
+		owner = CAN
+		buildings = {
+			infrastructure = 1
+
+		}
+		add_core_of = CAN
+
+	}
+
+	provinces={
+		14302
+	}
+	manpower=8
+	state_category=wasteland
+	local_supplies=0.000
+}

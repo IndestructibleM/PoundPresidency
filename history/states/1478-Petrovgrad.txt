@@ -1,0 +1,29 @@
+
+state={
+	id=1478
+	name="STATE_1478"
+	manpower = 321560
+	state_category = rural
+
+	history={
+		owner = YUG
+		controller = YUG
+		victory_points = {
+			11787 3
+		}
+
+		buildings = {
+			infrastructure = 3 #was: 6
+		}
+		add_core_of = YUG
+		add_core_of = SER
+		add_core_of = TRA
+		add_core_of = BNT
+	}
+
+	provinces={
+		6643 11787 
+	}
+
+	local_supplies=0.0 
+}

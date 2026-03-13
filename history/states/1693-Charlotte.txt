@@ -1,0 +1,36 @@
+state={
+	id=1693
+	name="STATE_1693"
+	manpower = 1623650
+	
+	state_category = town
+
+	history={
+		owner = USA
+		buildings = {
+			infrastructure = 3 #was: 6
+			industrial_complex = 2
+		}
+		victory_points = {
+			7138 4 #Charlotte
+		}
+		victory_points = {
+			10081 4 #Greensboro
+		}
+		victory_points = {
+			10096 4 #Winston-Salem
+		}
+		victory_points = {
+			7643 4 #Asheville
+		}
+		add_core_of = USA
+		add_core_of = CSA
+		add_core_of = NCS
+	}
+
+	provinces={
+		7138 7643 9967 10081 10096 10468 10495 12445 
+	}
+
+	local_supplies=0.0 
+}

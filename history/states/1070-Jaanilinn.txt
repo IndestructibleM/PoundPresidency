@@ -1,0 +1,23 @@
+
+state={
+	id=1070
+	name="STATE_1070"
+
+	history={
+		owner = EST
+		buildings = {
+			infrastructure = 2
+		}
+		add_core_of = EST
+
+	}
+
+	provinces={
+		13662
+	}
+
+	local_supplies=0.0 
+	manpower=8600
+	buildings_max_level_factor=1.000
+	state_category=wasteland
+}

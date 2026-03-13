@@ -1,0 +1,26 @@
+state={
+	id=1240
+	name="STATE_1240"
+
+	history={
+		owner = POL
+		buildings = {
+			infrastructure = 3
+		}
+		add_core_of = POL
+		add_core_of = BLR
+
+		victory_points = {
+			318 2 #Wolkowysk
+		}
+	}
+
+	provinces={
+		318 3281 13954
+	}
+	manpower=81250
+	buildings_max_level_factor=1.000
+	state_category=rural
+
+	local_supplies=0.0 
+}

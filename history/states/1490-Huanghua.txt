@@ -1,0 +1,48 @@
+
+state={
+	id=1490
+	name="STATE_1490" # Hebei
+	manpower = 1412350
+	
+	state_category = town
+
+	history={
+		owner = CHI
+		add_core_of = CHI
+		add_core_of = PRC
+		1936.1.1 = {
+			IF = {
+				limit = {
+					has_dlc = "No Compromise, No Surrender"
+				}
+				transfer_state_to = HBC
+				add_core_of = HBC
+			}
+		}
+		buildings = {
+			infrastructure = 2
+			4137 = {
+				naval_base = 2
+			}
+		}
+		
+		victory_points = {
+			11944 2
+		}
+		
+		victory_points = {
+			4137 3
+		}
+
+		1938.10.25 = {
+			owner = CHI
+			controller = JAP
+		}
+	}
+
+	provinces={
+		4137 11944
+	}
+
+	local_supplies=0.0 
+}

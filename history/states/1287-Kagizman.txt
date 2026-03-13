@@ -1,0 +1,28 @@
+
+state={
+	id=1287
+	name="STATE_1287"
+	manpower = 31230
+	
+	state_category = pastoral
+
+	history={
+		owner = TUR
+		
+		victory_points = {
+			3979 3 
+		}
+		buildings = {
+			infrastructure = 2
+		}
+		add_core_of = TUR
+		add_core_of = KUR
+		add_claim_by = ARM
+	}
+
+	provinces={
+		13742 13743
+	}
+
+	local_supplies=0.0 
+}

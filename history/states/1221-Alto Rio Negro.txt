@@ -1,0 +1,26 @@
+
+state={
+	id=1221
+	name="STATE_1221"
+	manpower = 26230
+	
+	state_category = pastoral
+	
+	resources={
+		aluminium=1
+	}
+
+	history={
+		owner = BRA
+		buildings = {
+			infrastructure = 0
+		}
+		add_core_of = BRA
+	}
+
+	provinces={
+		13345 13346 13560 13561 13562 
+	}
+
+	local_supplies=0.0 
+}

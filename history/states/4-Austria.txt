@@ -1,0 +1,58 @@
+state = {
+	id = 4
+	name = "STATE_4"
+	manpower = 1987983
+
+	resources = {
+		oil = 2 
+	}
+	
+	state_category = large_city
+	
+	history = {
+
+		owner = AUS
+		add_core_of = AUS
+
+		victory_points = {
+			11666 30 #Wien
+		}
+		victory_points = {
+			704 2 #Sankt Polten
+		}
+
+		buildings = {
+			infrastructure = 4
+			arms_factory = 3
+			industrial_complex = 4
+			air_base = 6
+            11666 = {
+                landmark_hofburg_palace = {
+                    level = 1
+                    allowed = {
+                        has_dlc = "Gotterdammerung"
+                    }
+                }
+            }
+		}
+		
+		1938.3.12 = {
+			owner = GER
+			controller = GER
+			add_core_of = GER
+		}
+
+		1939.1.1 = {
+			buildings = {
+				anti_air_building = 5
+			}
+		}
+
+	}
+
+	provinces = {
+		704 6690 9661 11651 11666 14576
+	}
+
+	local_supplies = 0.0 
+}

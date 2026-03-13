@@ -1,0 +1,24 @@
+
+state = {
+	id = 1523
+	name = "STATE_1523"
+	manpower = 91230
+	state_category = pastoral
+	resources = {
+		aluminium = 5 # was: 10
+	}
+
+	history = {
+		owner = SOV
+		buildings = {
+			infrastructure = 3 #was: 6
+		}
+		add_core_of = SOV
+	}
+
+	provinces = {
+		4874 7824 10216 12659 
+	}
+
+	local_supplies = 0.0 
+}

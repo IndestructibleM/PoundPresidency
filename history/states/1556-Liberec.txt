@@ -1,0 +1,36 @@
+state=
+{
+	id=1556
+	name="STATE_1556"
+	manpower = 1123560
+	
+	state_category = town
+	
+	history={
+		victory_points = {
+			11401 4 #Liberec
+		}
+		owner = CZE
+		buildings = {
+			infrastructure = 4
+			industrial_complex = 2
+			anti_air_building = 1
+			469 =
+			{
+				bunker = 1
+			}
+		}
+		add_core_of = CZE
+
+		1938.9.30 = {
+			owner = GER
+			controller = GER
+		}
+	}
+	provinces=
+	{
+		469 11401 11414 14489
+	}
+
+	local_supplies=0.0 
+}

@@ -1,0 +1,28 @@
+
+state={
+	id=191
+	name="STATE_191"
+
+	history={
+		owner = EST
+		victory_points = {
+			9221 4 #Tartu
+		}
+		victory_points = {
+			6178 2 #Viljandi
+		}
+		buildings = {
+			infrastructure = 3 #was: 5
+		}
+		add_core_of = EST
+
+	}
+
+	provinces={
+		6178 9221 
+	}
+	manpower=135840
+	buildings_max_level_factor=1.000
+	local_supplies=0.0 
+	state_category=rural
+}

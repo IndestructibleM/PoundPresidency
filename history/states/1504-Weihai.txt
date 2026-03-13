@@ -1,0 +1,43 @@
+state=
+{
+	id=1504
+	name="STATE_1504"
+	manpower = 152300
+	state_category = pastoral
+	
+	
+	history=
+	{
+		owner = CHI
+		add_core_of = CHI
+		add_core_of = PRC
+		add_core_of = WEI
+		
+		1936.1.1 = {
+			IF = {
+				limit = {
+					has_dlc = "No Compromise, No Surrender"
+				}
+				transfer_state_to = SND
+				add_core_of = SND
+			}
+		}
+		
+		victory_points = {
+			13964 3 #Weihai
+		}
+		buildings = {
+			infrastructure = 2
+		}
+
+		1938.10.25 = {
+			owner = CHI
+			controller = JAP
+		}
+	}
+	provinces={
+		13964
+	}
+
+	local_supplies=0.0 
+}

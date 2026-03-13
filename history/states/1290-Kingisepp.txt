@@ -1,0 +1,38 @@
+
+state={
+	id=1290
+	name="STATE_1290"
+	manpower = 162300
+	
+	state_category = rural
+
+	history={
+		owner = SOV
+		buildings = {
+			infrastructure = 3 #was: 5
+		}
+		add_core_of = SOV
+		add_core_of = ING
+		victory_points = {
+			3120 2 #Kingisepp
+		}
+		victory_points = {
+			9097 1 #Sosnovy Bor
+		}
+		victory_points = {
+			104 1 #Koskolovo
+		}
+		victory_points = {
+			126 1 #Slantsy
+		}
+		victory_points = {
+			181 1 #Volosovo
+		}
+	}
+
+	provinces={
+		104 126 181 3120 9097 11080 11186 
+	}
+
+	local_supplies=0.0 
+}

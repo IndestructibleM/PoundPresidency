@@ -1,0 +1,32 @@
+
+state={
+	id=1344
+	name="STATE_1344"
+	manpower = 894100
+	resources={
+		chromium=4 # was: 6
+	}
+	
+	state_category = rural
+
+	history={
+		owner = GUA
+		buildings = {
+			infrastructure = 2
+			arms_factory = 1
+			industrial_complex = 1 
+		}
+		add_core_of = GUA
+		victory_points = {
+			10842 3 
+		}
+
+	}
+
+	provinces={
+		10842 13788 13789 13790 13791
+	}
+	
+
+	local_supplies=0.0 
+}

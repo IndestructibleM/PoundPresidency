@@ -1,0 +1,29 @@
+
+state={
+	id=1277
+	name="STATE_1277"
+	manpower = 343250
+	
+	state_category = rural
+	
+	resources={
+		oil=4
+	}
+
+	history={
+		owner = IRQ
+		victory_points = {
+			12726 1
+		}
+		buildings = {
+			infrastructure = 3
+		}
+		add_core_of = IRQ
+	}
+
+	provinces={
+		7977 12726 13725 13726
+	}
+
+	local_supplies=0.0 
+}

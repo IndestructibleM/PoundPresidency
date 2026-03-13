@@ -1,0 +1,29 @@
+
+state={
+	id=1352
+	name="STATE_1352"
+	manpower = 19230
+	
+	state_category = pastoral
+	
+	resources={
+		aluminium=1
+	}
+
+
+	history={
+		owner = USA
+		buildings = {
+			infrastructure = 2
+		}
+		add_core_of = USA
+		add_core_of = NMS
+	}
+
+	provinces={
+		2102 13810 13811
+	}
+	
+
+	local_supplies=0.0 
+}

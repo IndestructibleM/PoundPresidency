@@ -1,0 +1,37 @@
+
+state={
+	id=1157
+	name="STATE_1157"
+	manpower = 85230
+
+	resources = {
+		coal = 3 #initial distributionn = with infra 12.6 / 1280 total
+	}
+
+	state_category = rural
+	
+	history={
+		owner = USA
+		buildings = {
+			infrastructure = 2
+		}
+		victory_points = {
+			13707 2 #Casper
+		}
+		victory_points = {
+			4610 1 #Sheridan
+		}
+		victory_points = {
+			4820 1 #Gillette
+		}
+		add_core_of = USA
+		add_core_of = WYS
+	}
+
+	provinces={
+		4610 4794 4820 7814 13706 13707 
+	}
+	
+
+	local_supplies=0.0 
+}

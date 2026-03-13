@@ -1,0 +1,31 @@
+state={
+	id=1530
+	name="STATE_1530"
+
+	history={
+		victory_points = {
+			3521 2 #Łuków
+		}
+		victory_points = {
+			11466 2 #Biała Podlaska
+		}
+		victory_points = {
+			3559 2 #Puławy
+		}
+		owner = POL
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 1
+
+		}
+		add_core_of = POL
+	}
+
+	provinces={
+		3521 6484 9544 11466
+	}
+	manpower=895230
+	state_category=town
+
+	local_supplies=0.0 
+}

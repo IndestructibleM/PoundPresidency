@@ -1,0 +1,37 @@
+
+state={
+	id=473
+	name="STATE_473"
+	manpower = 488165
+	resources={
+		oil=1 # was: 2
+		coal = 5 # initial distribution = with infra 9.6 / 36 total
+	}
+	
+	state_category = town
+
+	history={
+		owner = CAN
+		buildings = {
+			infrastructure = 3 #was: 5
+			arms_factory = 1
+			industrial_complex = 1
+			dockyard = 1
+			air_base = 3
+			1408 = {
+				naval_base = 5
+			}
+		}
+		victory_points = {
+			1408 15 #Vancouver
+		}
+		add_core_of = CAN
+		add_core_of = CSC
+	}
+
+	provinces={
+		1323 1393 1408 1858 4385 4413 4428 4870 7753 10228 10258 10273 12231 13714 13715 13716 13717
+	}
+
+	local_supplies=4.0 
+}

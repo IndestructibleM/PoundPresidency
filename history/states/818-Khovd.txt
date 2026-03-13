@@ -1,0 +1,22 @@
+state={
+	id=818
+	name="STATE_818"
+	provinces={
+		1774 7808 7870 12520 13942 13943
+	}
+
+	history={
+		owner = MON
+		buildings = {
+			infrastructure = 1
+		}
+		victory_points = {
+			1774 1
+		}
+		add_core_of = MON
+	}
+	manpower=20246
+	buildings_max_level_factor=1.000
+	state_category=pastoral
+	local_supplies=0.000
+}

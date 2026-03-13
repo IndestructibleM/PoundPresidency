@@ -1,0 +1,33 @@
+
+state={
+	id=813
+	name="STATE_813"
+
+	history={
+		owner = EST
+		victory_points = {
+			11443 2 #Kohtla-Järve
+		}
+		victory_points = {
+			11127 1 #Rakvere
+		}
+		victory_points = {
+			9079 1 #Paide
+		}
+		victory_points = {
+			6099 1 #Jõgeva
+		}
+		buildings = {
+			infrastructure = 3 #was: 5
+		}
+		add_core_of = EST
+
+	}
+
+	provinces={
+		6099 9079 11057 11127 11443
+	}
+	manpower=123560
+	buildings_max_level_factor=1.000
+	state_category=rural
+}

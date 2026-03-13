@@ -1,0 +1,30 @@
+
+state={
+	id=1088
+	name="STATE_1088"
+	manpower = 75630
+	
+	state_category = rural
+
+	history={
+		owner = SOV
+		victory_points = {
+			9680 3 #Kerch
+		}
+		buildings = {
+			infrastructure = 3
+			9680 ={
+				naval_base = 1
+				coastal_bunker = 1
+			}
+		}
+		add_core_of = SOV
+		add_core_of = CRI
+	}
+
+	provinces={
+		9680
+	}
+
+	local_supplies=0.0 
+}

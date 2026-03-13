@@ -1,0 +1,29 @@
+
+state={
+	id=330
+	name="STATE_330"
+
+	history={
+		owner = MON
+		victory_points = {
+			4801 5
+		}
+		buildings = {
+			infrastructure = 1
+			arms_factory = 1
+			industrial_complex = 2
+			air_base = 1
+
+		}
+		add_core_of = MON
+
+	}
+
+	provinces={
+		4732 4801 4862 7752
+	}
+	manpower=368784
+	buildings_max_level_factor=1.000
+	state_category=large_town
+	local_supplies=0.000
+}

@@ -1,0 +1,30 @@
+
+state={
+	id=207
+	name="STATE_207"
+	manpower =  443200
+	
+	state_category = town
+
+	history={
+		owner = SOV
+		victory_points = {
+			11241 6 #Vitebsk
+		}
+		victory_points = {
+			11220 3 #Orsha
+		}
+		buildings = {
+			infrastructure = 3 #was: 5
+			air_base = 5
+		}
+		add_core_of = SOV
+		add_core_of = BLR
+	}
+
+	provinces={
+		323 6249 9323 11220 11241 14505
+	}
+
+	local_supplies=5.0 
+}

@@ -1,0 +1,79 @@
+capital = 1290
+
+oob = "ING_1936"
+
+set_research_slots = 2
+
+add_ideas = {
+	limited_conscription
+}
+
+set_technology = {
+	infantry_weapons = 1
+}
+
+set_politics = {
+	ruling_party = democratic
+	last_election = "1935.12.9"
+	election_frequency = 120
+	elections_allowed = no
+}
+set_popularities = {
+	democratic = 67
+	fascism = 6
+	communism = 2
+	neutrality = 25
+}
+
+1939.1.1 = {
+	set_politics = {
+		ruling_party = democratic
+		last_election = "1936.6.10"
+		election_frequency = 120
+		elections_allowed = no
+	}
+}
+
+create_country_leader = {
+	name = "Lenni Hämäläinen"
+	desc = ""
+	picture = "GFX_Portrait_Europe_Generic_2"
+	expire = "1937.1.1"
+	ideology = liberalism
+	traits = {
+		#
+	}
+}
+
+create_country_leader = {
+	name = "Ahti Paasio"
+	desc = ""
+	picture = "GFX_portrait_europe_generic_land_13"
+	expire = "1965.1.1"
+	ideology = despotism
+	traits = {
+		#
+	}
+}
+
+create_country_leader = {
+	name = "Ossi Venäläinen"
+	desc = ""
+	picture = "GFX_Portrait_Europe_Generic_1"
+	expire = "1965.1.1"
+	ideology = marxism
+	traits = {
+		#
+	}
+}
+
+create_country_leader = {
+	name = "Taisto Joutsen"
+	desc = ""
+	picture = "GFX_portrait_europe_generic_4"
+	expire = "1965.1.1"
+	ideology = nazism
+	traits = {
+		#
+	}
+}

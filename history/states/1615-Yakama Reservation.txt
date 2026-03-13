@@ -1,0 +1,28 @@
+
+state={
+	id=1615
+	name="STATE_1615"
+	manpower = 14260
+	
+	state_category = wasteland
+
+	history={
+		owner = USA
+		buildings = {
+			infrastructure = 1
+		}
+		victory_points = {
+			14765 1 #Toppenish
+		}
+		add_core_of = USA
+		add_core_of = WAS
+		add_core_of = CSC
+		add_core_of = YIN
+	}
+
+	provinces={
+		14765
+	}
+
+	local_supplies=0.0 
+}

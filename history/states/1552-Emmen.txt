@@ -1,0 +1,23 @@
+state={
+	id=1552
+	name="STATE_1552"
+
+	history={
+		owner = HOL
+		add_core_of = HOL
+		victory_points = {
+			9363 1 
+		}
+		buildings = {
+			infrastructure = 2
+		}
+	}
+
+	provinces={
+		9309 9363 9403 11318
+	}
+	manpower=398560
+	state_category=rural
+
+	local_supplies=0.0 
+}

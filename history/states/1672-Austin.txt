@@ -1,0 +1,38 @@
+
+state={
+	id=1672
+	name="STATE_1672"
+	manpower = 760360
+	
+	
+	state_category = town
+	
+	resources={
+		oil=10
+	}
+
+
+	history={
+		owner = USA
+		buildings = {
+			infrastructure = 3 #was: 6
+			industrial_complex = 2
+			air_base = 3
+		}
+		add_core_of = USA
+		add_core_of = CSA
+		add_core_of = TEX
+		victory_points = {
+			12341 4 #Austin
+		}
+		victory_points = {
+			5022 3 #Waco
+		}
+	}
+
+	provinces={
+		5022 12341 12410 
+	}
+
+	local_supplies=0.0 
+}

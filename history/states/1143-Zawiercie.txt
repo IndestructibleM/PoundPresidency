@@ -1,0 +1,24 @@
+state={
+	id=1143
+	name="STATE_1143"
+	manpower = 46530
+	
+	state_category = wasteland
+
+	history={
+		victory_points = {
+			13692 3 #Zawiercie
+		}
+		owner = POL
+		buildings = {
+			infrastructure = 3
+		}
+		add_core_of = POL
+	}
+
+	provinces={
+		13692
+	}
+
+	local_supplies=0.0 
+}

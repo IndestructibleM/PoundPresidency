@@ -1,0 +1,37 @@
+
+state={
+	id=218
+	name="STATE_218"
+	manpower = 1101076
+	
+	state_category = city
+
+	history={
+		owner = SOV
+		victory_points = {
+			9417 15 
+		}
+		buildings = {
+			infrastructure = 3 #was: 5
+			arms_factory = 1
+			industrial_complex = 1
+			air_base = 3
+			9417 ={
+				naval_base = 5
+			}
+		}
+		add_core_of = SOV
+		add_core_of = DON
+		1939.1.1 = {
+			buildings = {
+				arms_factory = 2
+			}
+		}
+	}
+
+	provinces={
+		585 9417 9430 11559 
+	}
+
+	local_supplies=3.0 
+}

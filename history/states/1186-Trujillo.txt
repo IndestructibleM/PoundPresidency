@@ -1,0 +1,30 @@
+
+state={
+	id=1186
+	name="STATE_1186"
+	manpower = 525350
+	
+	state_category = town
+
+	history={
+		owner = PRU
+		buildings = {
+			infrastructure = 2
+			industrial_complex = 2
+		}
+		add_core_of = PRU
+		victory_points = {
+			13413 2
+		}
+		victory_points = {
+			2156 2
+		}
+
+	}
+
+	provinces={
+		2156 8199 13413 13545
+	}
+
+	local_supplies=0.0 
+}

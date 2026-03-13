@@ -1,0 +1,36 @@
+
+state={
+	id=1633
+	name="STATE_1633"
+	manpower = 108460
+	
+	state_category = rural
+	
+	resources={
+		steel=5
+		tungsten=6
+	}
+
+	history={
+		owner = USA
+		buildings = {
+			infrastructure = 2
+		}
+		victory_points = {
+			14791 2 #Lewiston
+		}
+		victory_points = {
+			14785 1 #Coeur d'Alene
+		}
+		add_core_of = USA
+		add_core_of = IDS
+		add_core_of = CSC
+	}
+
+	provinces={
+		1832 12124 14785 14786 14791
+	}
+	
+
+	local_supplies=0.0 
+}

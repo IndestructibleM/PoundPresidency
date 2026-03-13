@@ -1,0 +1,26 @@
+
+state={
+	id=1685
+	name="STATE_1685"
+	manpower = 634230
+	state_category = rural
+
+	history={
+		owner = USA
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 1
+		}
+		victory_points = {
+			12357 15 #Milwaukee
+		}
+		add_core_of = USA
+		add_core_of = WCS
+	}
+
+	provinces={
+		12357
+	}
+
+	local_supplies=0.0 
+}

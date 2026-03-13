@@ -1,0 +1,30 @@
+﻿capital = 1509
+
+# Starting tech
+set_technology = {
+	infantry_weapons = 1
+}
+
+
+set_research_slots = 2
+set_stability = 0.60
+
+
+set_politics = {
+	ruling_party = democratic
+	last_election = "1936.1.1"
+	election_frequency = 48
+	elections_allowed = yes
+}
+
+set_popularities = {
+	democratic = 58
+	communism = 10
+	fascism = 5
+	neutrality = 27
+}
+
+recruit_character = RMN_democratic_leader
+recruit_character = RMN_communism_leader
+recruit_character = RMN_fascism_leader
+recruit_character = RMN_neutrality_leader

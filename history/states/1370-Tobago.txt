@@ -1,0 +1,31 @@
+state={
+	id=1370
+	name="STATE_1370"
+	manpower = 23600
+	resources={
+		oil=2
+	}
+	
+	state_category = small_island
+
+
+	history={
+		add_core_of = TRI
+		owner = ENG
+		victory_points = {
+			13012 1
+		}
+		buildings = {
+			infrastructure = 2
+			13012 = {
+				naval_base = 1
+			}
+		}
+	}
+	
+	provinces = {
+		13012
+	}
+
+	local_supplies=0.0 
+}

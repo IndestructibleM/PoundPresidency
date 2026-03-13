@@ -1,0 +1,30 @@
+state={
+	id=93
+	name="STATE_93"
+
+	history={
+		victory_points = {
+			6435 3 #Równe
+		}
+		victory_points = {
+			6520 1 #Sarny
+		}
+		owner = POL
+		buildings = {
+			infrastructure = 3
+
+		}
+		add_core_of = POL
+		add_core_of = UKR
+
+	}
+
+	provinces={
+		474 535 572 3496 6435 6520 6557 11503 11543 14491
+	}
+	manpower=1156320
+	buildings_max_level_factor=1.000
+	state_category=town
+
+	local_supplies=0.0 
+}

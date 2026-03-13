@@ -1,0 +1,21 @@
+
+state={
+	id=1382
+	name="STATE_1382"
+
+	history={
+		owner = BRA
+		add_core_of = BRA
+		buildings = {
+			infrastructure = 1
+		}
+	}
+
+	provinces={
+		13842 13843 13844
+	}
+	manpower=2630
+	
+	state_category=pastoral
+	local_supplies=0.0
+}

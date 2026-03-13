@@ -1,0 +1,19 @@
+state={
+	id=1053
+	name="STATE_1053"
+	history = {
+		owner = SAU
+		add_core_of = SAU
+		
+		victory_points = {
+			5027 3
+		}
+	}
+	provinces={
+		5027 7970 12455 
+	}
+	manpower=45000
+	state_category = pastoral
+	buildings_max_level_factor=1.000
+	local_supplies=0.000
+}

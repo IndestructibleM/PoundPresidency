@@ -1,0 +1,48 @@
+
+state = {
+	id = 1409
+	name = "STATE_1409"
+	manpower = 842300
+	
+	state_category = large_town
+	
+	resources = {
+		aluminium=2
+	}
+
+	history = {
+		owner = ITA
+		
+		victory_points = {
+			6606 8 #Bologna
+		}
+		victory_points = {
+			13880 5 #Modena
+		}
+		victory_points = {
+			782 5 #Ravena
+		}
+		victory_points = {
+			13879 5 #Ferrara
+		}
+		victory_points = {
+			9924 2
+		}
+		
+		buildings = {
+			infrastructure = 4
+			air_base = 2
+			782 = {
+				naval_base = 2
+			}
+		}
+		add_core_of = ITA
+		add_core_of = PAP
+	}
+
+	provinces = {
+		782 6606 6793 9924 13879 13880 13881
+	}
+
+	local_supplies = 0.0 
+}

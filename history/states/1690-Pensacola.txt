@@ -1,0 +1,31 @@
+
+state={
+	id=1690
+	name="STATE_1690"
+	manpower = 76250
+	
+	state_category = pastoral
+
+	history={
+		owner = USA
+		buildings = {
+			infrastructure = 2
+			10352 = {
+				naval_base = 1
+			}
+		}
+		victory_points = {
+			10352 3 #Pensacola
+		}
+		add_core_of = USA
+		add_core_of = CSA
+		add_core_of = FLS
+	}
+
+	provinces={
+		10352 10380
+	}
+	
+
+	local_supplies=0.0 
+}

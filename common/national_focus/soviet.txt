@@ -412,19 +412,19 @@ focus_tree = {
 		completion_reward = {
 			# Moscow - Rostov on Don
 			build_railway = {
-				path = { 9330 3356 6279 6230 6398 6341 413 3527 11475 11412 6591 3540 3519 11459 11450 11434 9417 }
+				path = { 9330 3356 6279 6230 6398 6341 413 9448 3527 11475 3469 3567 547 13666 11459 9476 3519 11434 9417 }
 			}
 			# Stalingrad-Rostov on Don
 			build_railway = {
-				path = { 3529 9504 533 9516 509 500 11459 } #(Stalingrad - Conjunction near Millerovo)
+				path = { 3529 9504 533 9516 6544 500 11450 3519 } #(Stalingrad - Conjunction near Millerovo)
 			}
 			# Stalingrad-Mikhaylovka 
 			build_railway = {
-				path = { 9504 3582 9436 11485 3539 9564 11408 } #(Conjunction right next to Stalingrad - Conjunction in West Saratov)
+				path = { 3529 9504 3582 9436 11485 3539 9564 11408 } #(Conjunction right next to Stalingrad - Conjunction in West Saratov)
 			}
 			# Stalingrad - Astrakhan
 			build_railway = {
-				path = { 3529 11474 520 6516 6486 9455 11429 6620 9753 }
+				path = { 3529 11474 520 6516 6486 9455 11429 6620 9592 9753 }
 			}
 			# Tbilisi - Yerevan
 			build_railway = {
@@ -441,7 +441,7 @@ focus_tree = {
 				}
 			}
 			#Supply Hub in Kandalaksha
-			213 = {
+			1714 = {
 				add_building_construction = {
 					type = supply_node
 					level = 1
@@ -953,7 +953,7 @@ focus_tree = {
 					}
 					# Moscow - Voronezh
 					build_railway = {
-						path = { 6380 6414 9348 9282 11268 9330 3356 6279 6230 6398 6341 413 3527 }
+						path = { 6380 13668 6414 9348 9282 11268 9330 3356 6279 6230 6398 6341 413 9448 3527 }
 					}
 				}
 			}
@@ -971,7 +971,7 @@ focus_tree = {
 				}
 				# Moscow - Tula
 				build_railway = {
-					path = { 6380 6414 9348 6290 6396 6262 }
+					path = { 6380 13668 6414 6290 6396 6262 }
 				}
 			}
 			add_tech_bonus = {
@@ -1039,12 +1039,14 @@ focus_tree = {
 			if = {
 				limit = {
 					has_full_control_of_state = 229 #BAKU
+					has_full_control_of_state = 1118
+					has_full_control_of_state = 1122
 					has_full_control_of_state = 230 #ARMENIA
 					has_full_control_of_state = 231 #GEORGIA
 				}
 				# Baku - Tbilisi
 				build_railway = {
-					path = { 7661 1536 4614 4477 11645 11674 1539 11708 1599 }
+					path = { 7661 1536 4614 4477 11645 11674 1539 13669 1599 }
 				}
 			}
 			if = {
@@ -1485,6 +1487,36 @@ focus_tree = {
 					}
 				}
 			}
+			1332 = {
+				is_fully_controlled_by = ROOT
+				NOT = {
+					infrastructure < 5
+				}
+			}
+			1333 = {
+				is_fully_controlled_by = ROOT
+				NOT = {
+					infrastructure < 5
+				}
+			}
+			1334 = {
+				is_fully_controlled_by = ROOT
+				NOT = {
+					infrastructure < 5
+				}
+			}
+			1335 = {
+				is_fully_controlled_by = ROOT
+				NOT = {
+					infrastructure < 5
+				}
+			}
+			1336 = {
+				is_fully_controlled_by = ROOT
+				NOT = {
+					infrastructure < 5
+				}
+			}
 			409 = { #KHABAROVSK
 				is_fully_controlled_by = ROOT
 				is_fully_controlled_by = ROOT
@@ -1526,6 +1558,21 @@ focus_tree = {
 		available = {
 			OR = {
 				408 = { #VLADIVOSTOK
+					is_fully_controlled_by = ROOT
+				}
+				1332 = {
+					is_fully_controlled_by = ROOT
+				}
+				1333 = {
+					is_fully_controlled_by = ROOT
+				}
+				1334 = {
+					is_fully_controlled_by = ROOT
+				}
+				1335 = {
+					is_fully_controlled_by = ROOT
+				}
+				1336 = {
 					is_fully_controlled_by = ROOT
 				}
 				409 = { #KHABAROVSK
@@ -1652,6 +1699,86 @@ focus_tree = {
 						instant_build = yes
 					}
 				}
+			}
+			if = {
+				limit = {
+					1332 = {
+						is_fully_controlled_by = ROOT
+						infrastructure < 5
+					}
+				}
+				1332 = {
+					add_building_construction = {
+						type = infrastructure
+						level = 1
+						instant_build = yes
+					}
+				}
+				add_to_temp_variable = { SOV_states_targeted_eastern_development = 1 }
+			}
+			if = {
+				limit = {
+					1333 = {
+						is_fully_controlled_by = ROOT
+						infrastructure < 5
+					}
+				}
+				1333 = {
+					add_building_construction = {
+						type = infrastructure
+						level = 1
+						instant_build = yes
+					}
+				}
+				add_to_temp_variable = { SOV_states_targeted_eastern_development = 1 }
+			}
+			if = {
+				limit = {
+					1334 = {
+						is_fully_controlled_by = ROOT
+						infrastructure < 5
+					}
+				}
+				1334 = {
+					add_building_construction = {
+						type = infrastructure
+						level = 1
+						instant_build = yes
+					}
+				}
+				add_to_temp_variable = { SOV_states_targeted_eastern_development = 1 }
+			}
+			if = {
+				limit = {
+					1335 = {
+						is_fully_controlled_by = ROOT
+						infrastructure < 5
+					}
+				}
+				1335 = {
+					add_building_construction = {
+						type = infrastructure
+						level = 1
+						instant_build = yes
+					}
+				}
+				add_to_temp_variable = { SOV_states_targeted_eastern_development = 1 }
+			}
+			if = {
+				limit = {
+					1336 = {
+						is_fully_controlled_by = ROOT
+						infrastructure < 5
+					}
+				}
+				1336 = {
+					add_building_construction = {
+						type = infrastructure
+						level = 1
+						instant_build = yes
+					}
+				}
+				add_to_temp_variable = { SOV_states_targeted_eastern_development = 1 }
 			}
 		}
 	}
@@ -2852,11 +2979,11 @@ focus_tree = {
 					set_state_flag = SOV_naval_bases_reinforced_flag
 				}
 			}
-			if = { #PALANGA (ŽEMAITIJA)
+			if = { #Palanga
 				limit = {
-					has_full_control_of_state = 189
+					has_full_control_of_state = 1058
 				}
-				189 = {
+				1058 = {
 					add_building_construction = {
 						type = anti_air_building
 						level = 2
@@ -2866,7 +2993,7 @@ focus_tree = {
 						type = coastal_bunker
 						level = 2
 						instant_build = yes
-						province = 6314
+						province = 13657
 					}
 					set_state_flag = SOV_naval_bases_reinforced_flag
 				}
@@ -5365,16 +5492,27 @@ focus_tree = {
 
 		available = {
 			OR = {
+				has_full_control_of_state = 1058
 				has_full_control_of_state = 188
-				has_full_control_of_state = 189
+				has_full_control_of_state = 1237
+				has_full_control_of_state = 1172
+				has_full_control_of_state = 1236
 				has_full_control_of_state = 814
+				has_full_control_of_state = 1242
 				has_full_control_of_state = 97
-				has_full_control_of_state = 94
-				has_full_control_of_state = 93
+				has_full_control_of_state = 1245
+				has_full_control_of_state = 1535
+				has_full_control_of_state = 1484
+				has_full_control_of_state = 1533
 				has_full_control_of_state = 91
+				has_full_control_of_state = 1400
+				has_full_control_of_state = 1483
+				has_full_control_of_state = 1532
+				has_full_control_of_state = 1399
 				has_full_control_of_state = 89
 				has_full_control_of_state = 80
 				has_full_control_of_state = 78
+				has_full_control_of_state = 1291
 				has_full_control_of_state = 766
 			}
 		}
@@ -5404,7 +5542,7 @@ focus_tree = {
 				}
 			}
 			else = {
-				189 = { #ZEMAITIJA
+				1237 = { #Telsiai
 					if = {
 						limit = { is_fully_controlled_by = ROOT }
 						custom_effect_tooltip = SOV_molotov_line_forts_3
@@ -5415,10 +5553,61 @@ focus_tree = {
 								province = {
 									id = 6314
 									id = 9499
+								}
+								instant_build = yes
+							}
+						}
+					}
+				}
+			}
+			if = { #If Silute is controlled, then add forts in Silute, if not, then go to Telsiai
+				limit = {
+					1172 = { is_fully_controlled_by = ROOT }
+				}
+				custom_effect_tooltip = SOV_molotov_line_forts_3
+				hidden_effect = {
+					1172 = {
+						add_building_construction = {
+							type = bunker
+							level = 3
+							province = {
+								id = 14838
+							}
+							instant_build = yes
+						}
+					}
+				}
+			}
+			else = {
+				1237 = { #Telsiai
+					if = {
+						limit = { is_fully_controlled_by = ROOT }
+						custom_effect_tooltip = SOV_molotov_line_forts_3
+						hidden_effect = {
+							add_building_construction = {
+								type = bunker
+								level = 1
+								province = {
 									id = 3337
 								}
 								instant_build = yes
 							}
+						}
+					}
+				}
+			}
+			1236 = { #Sakiai
+				if = {
+					limit = { is_fully_controlled_by = ROOT }
+					custom_effect_tooltip = SOV_molotov_line_forts_2
+					hidden_effect = {
+						add_building_construction = {
+							type = bunker
+							level = 1
+							province = {
+								id = 6407
+							}
+							instant_build = yes
 						}
 					}
 				}
@@ -5432,16 +5621,30 @@ focus_tree = {
 							type = bunker
 							level = 1
 							province = {
-								id = 6407
 								id = 11312
+								id = 6281
 							}
 							instant_build = yes
 						}
 					}
 				}
 			}
-
-			### POLAND ###
+			1242 = {
+				if = {
+					limit = { is_fully_controlled_by = ROOT }
+					custom_effect_tooltip = SOV_molotov_line_forts_6
+					hidden_effect = {
+						add_building_construction = {
+							type = bunker
+							level = 1
+							province = {
+								id = 400
+							}
+							instant_build = yes
+						}
+					}
+				}
+			}
 			97 = { #Bialystok
 				if = {
 					limit = { is_fully_controlled_by = ROOT }
@@ -5451,11 +5654,7 @@ focus_tree = {
 							type = bunker
 							level = 1
 							province = {
-								id = 3254
-								id = 400
 								id = 11357
-								id = 11329
-								id = 11274
 								id = 290
 							}
 							instant_build = yes
@@ -5463,7 +5662,24 @@ focus_tree = {
 					}
 				}
 			}
-			94 = { #Polesie
+			1245 = {
+				if = {
+					limit = { is_fully_controlled_by = ROOT }
+					custom_effect_tooltip = SOV_molotov_line_forts_6
+					hidden_effect = {
+						add_building_construction = {
+							type = bunker
+							level = 1
+							province = {
+								id = 11329
+								id = 11274
+							}
+							instant_build = yes
+						}
+					}
+				}
+			}
+			1535 = { #Brzecz
 				if = {
 					limit = { is_fully_controlled_by = ROOT }
 					custom_effect_tooltip = SOV_molotov_line_forts_2
@@ -5480,7 +5696,23 @@ focus_tree = {
 					}
 				}
 			}
-			93 = { #Wolyn
+			1484 = { #Kamieniec
+				if = {
+					limit = { is_fully_controlled_by = ROOT }
+					custom_effect_tooltip = SOV_molotov_line_forts_2
+					hidden_effect = {
+						add_building_construction = {
+							type = bunker
+							level = 1
+							province = {
+								id = 13632
+							}
+							instant_build = yes
+						}
+					}
+				}
+			}
+			1533 = {
 				if = {
 					limit = { is_fully_controlled_by = ROOT }
 					custom_effect_tooltip = SOV_molotov_line_forts_2
@@ -5507,14 +5739,46 @@ focus_tree = {
 							level = 1
 							province = {
 								id = 536
-								id = 9468
 							}
 							instant_build = yes
 						}
 					}
 				}
 			}
-			89 = { #Stanislawow
+			1400 = {
+				if = {
+					limit = { is_fully_controlled_by = ROOT }
+					custom_effect_tooltip = SOV_molotov_line_forts_2
+					hidden_effect = {
+						add_building_construction = {
+							type = bunker
+							level = 1
+							province = {
+								id = 13864
+							}
+							instant_build = yes
+						}
+					}
+				}
+			}
+			1483 = {
+				if = {
+					limit = { is_fully_controlled_by = ROOT }
+					custom_effect_tooltip = SOV_molotov_line_forts_2
+					hidden_effect = {
+						add_building_construction = {
+							type = bunker
+							level = 1
+							province = {
+								id = 9494
+								id = 3434
+							}
+							instant_build = yes
+						}
+					}
+				}
+			}
+			1532 = {
 				if = {
 					limit = { is_fully_controlled_by = ROOT }
 					custom_effect_tooltip = SOV_molotov_line_forts_4
@@ -5525,6 +5789,37 @@ focus_tree = {
 							province = {
 								id = 6431
 								id = 6460
+							}
+							instant_build = yes
+						}
+					}
+				}
+			}
+			1399 = {
+				if = {
+					limit = { is_fully_controlled_by = ROOT }
+					custom_effect_tooltip = SOV_molotov_line_forts_4
+					hidden_effect = {
+						add_building_construction = {
+							type = bunker
+							level = 1
+							province = {
+								id = 13863
+							}
+							instant_build = yes
+						}
+					}
+				}
+			}
+			89 = {
+				if = {
+					limit = { is_fully_controlled_by = ROOT }
+					custom_effect_tooltip = SOV_molotov_line_forts_4
+					hidden_effect = {
+						add_building_construction = {
+							type = bunker
+							level = 1
+							province = {
 								id = 9425
 								id = 3743
 							}
@@ -5562,11 +5857,28 @@ focus_tree = {
 							type = bunker
 							level = 1
 							province = {
-								id = 3407
 								id = 3577
 								id = 565
 								id = 3707
 								id = 3724
+								id = 13664
+							}
+							instant_build = yes
+						}
+					}
+				}
+			}
+			1291 = { #Bessarabia
+				if = {
+					limit = { is_fully_controlled_by = ROOT }
+					custom_effect_tooltip = SOV_molotov_line_forts_5
+					hidden_effect = {
+						add_building_construction = {
+							type = bunker
+							level = 1
+							province = {
+								id = 3407
+								id = 13748
 							}
 							instant_build = yes
 						}
@@ -5905,7 +6217,6 @@ focus_tree = {
 						level = 3
 						province = {
 							id = 3151
-							id = 6174
 						}
 						instant_build = yes
 					}
@@ -5914,6 +6225,34 @@ focus_tree = {
 						level = 3
 						province = {
 							id = 3151
+						}
+						instant_build = yes
+					}
+					add_dynamic_modifier = { modifier = SOV_krasnaya_gorka_battery scope = SOV }
+				}
+			}
+			if = {
+				limit = {
+					has_full_control_of_state = 1289
+				}
+				1289 = { 
+					add_building_construction = {
+						type = anti_air_building
+						level = 1
+						instant_build = yes
+					}
+					add_building_construction = {
+						type = bunker
+						level = 3
+						province = {
+							id = 6174
+						}
+						instant_build = yes
+					}
+					add_building_construction = {
+						type = coastal_bunker
+						level = 3
+						province = {
 							id = 6174
 						}
 						instant_build = yes
@@ -5925,7 +6264,7 @@ focus_tree = {
 				limit = {
 					has_full_control_of_state = 208 #LUGA
 				}
-				208 = { #LUGA
+				1290 = { #LUGA
 					add_building_construction = {
 						type = anti_air_building
 						level = 1
@@ -5989,6 +6328,7 @@ focus_tree = {
 			has_full_control_of_state = 216 #OLONETS
 			has_full_control_of_state = 264 #TIKHVIN
 			has_full_control_of_state = 195 #LENINGRAD
+			has_full_control_of_state = 1289
 		}
 		
 		search_filters = {}
@@ -6080,6 +6420,20 @@ focus_tree = {
 						level = 1
 						province = {
 							id = 149
+						}
+						instant_build = yes
+					}
+				}
+			}
+			if = {
+				limit = {
+					has_full_control_of_state = 1289
+				}
+				1289 = {
+					add_building_construction = {
+						type = bunker
+						level = 1
+						province = {
 							id = 11068
 							id = 79
 						}
@@ -6106,6 +6460,9 @@ focus_tree = {
 				has_full_control_of_state = 657
 				has_full_control_of_state = 409
 				has_full_control_of_state = 408
+				has_full_control_of_state = 1336
+				has_full_control_of_state = 1335
+				has_full_control_of_state = 1332
 			}
 		}
 		
@@ -6216,7 +6573,7 @@ focus_tree = {
 					}
 				}
 			}
-			408 = { #VLADIVOSTOK
+			1336 = {
 				if = {
 					limit = { is_fully_controlled_by = ROOT }
 					custom_effect_tooltip = SOV_far_east_fortification_forts_10
@@ -6228,17 +6585,56 @@ focus_tree = {
 								id = 11643
 								id = 6686
 								id = 664
-								id = 6684
-								id = 3787
-								id = 6838
 							}
 							instant_build = yes
 						}
+					}
+				}
+			}
+			1335 = {
+				if = {
+					limit = { is_fully_controlled_by = ROOT }
+					custom_effect_tooltip = SOV_far_east_fortification_forts_10
+					hidden_effect = {
+						add_building_construction = {
+							type = bunker
+							level = 1
+							province = {
+								id = 6684
+								id = 3787
+								id = 3843
+								id = 810
+							}
+							instant_build = yes
+						}
+					}
+				}
+			}
+			1332 = {
+				if = {
+					limit = { is_fully_controlled_by = ROOT }
+					custom_effect_tooltip = SOV_far_east_fortification_forts_10
+					hidden_effect = {
 						add_building_construction = {
 							type = bunker
 							level = 2
 							province = {
 								id = 3977
+							}
+							instant_build = yes
+						}
+					}
+				}
+			}
+			408 = {
+				if = {
+					limit = { is_fully_controlled_by = ROOT }
+					custom_effect_tooltip = SOV_far_east_fortification_forts_10
+					hidden_effect = {
+						add_building_construction = {
+							type = bunker
+							level = 2
+							province = {
 								id = 957
 							}
 							instant_build = yes
@@ -8702,10 +9098,13 @@ focus_tree = {
 						OR = {
 							state = 399
 							state = 398
+							state = 1523
 							state = 400
 							state = 406 
+							state = 1527
 							state = 402
 							state = 407
+							state = 1526
 						}
 						#NOT = { has_state_flag = SOV_left_opposition_state }
 						#NOT = { has_state_flag = SOV_right_opposition_state }
@@ -8719,10 +9118,13 @@ focus_tree = {
 						OR = {
 							state = 399
 							state = 398
+							state = 1523
 							state = 400
 							state = 406 
+							state = 1527
 							state = 402
 							state = 407
+							state = 1526
 						}
 						#NOT = { has_state_flag = SOV_left_opposition_state }
 						#NOT = { has_state_flag = SOV_right_opposition_state }
@@ -8867,7 +9269,9 @@ focus_tree = {
 						OR = {
 							state = 236
 							state = 406
+							state = 1527
 							state = 407
+							state = 1526
 							state = 249 
 							state = 250
 							state = 401
@@ -10655,11 +11059,16 @@ focus_tree = {
 				custom_effect_tooltip = if_they_accept
 				effect_tooltip = {
 					add_ideas = SOV_for_the_common_good_allies
-					add_relation_modifier = {
-						target = ROOT
-						modifier = SOV_for_the_common_good_relation
+
+					if = {
+						limit = {
+							has_dlc = "Death or Dishonor"
+						}
+						add_relation_modifier = {
+							target = ROOT
+							modifier = SOV_for_the_common_good_relation
+						}
 					}
-					
 				}
 			}
 		}
@@ -12241,9 +12650,24 @@ focus_tree = {
 			MON = {
 				is_in_faction_with = ROOT
 				has_full_control_of_state = 330
+				has_full_control_of_state = 1470
+				has_full_control_of_state = 1471
+				has_full_control_of_state = 1472
+				has_full_control_of_state = 1473
 				has_full_control_of_state = 819
+				has_full_control_of_state = 1442
+				has_full_control_of_state = 1457
+				has_full_control_of_state = 1460
+				has_full_control_of_state = 1461
 				has_full_control_of_state = 817
+				has_full_control_of_state = 1463
+				has_full_control_of_state = 1464
+				has_full_control_of_state = 1465
+				has_full_control_of_state = 1466
+				has_full_control_of_state = 1467
 				has_full_control_of_state = 818
+				has_full_control_of_state = 1468
+				has_full_control_of_state = 1469
 
 			}
 			is_subject = no
@@ -13250,6 +13674,20 @@ focus_tree = {
 
 		bypass = {
 			463 = { is_owned_by = ROOT }
+			1568 = { is_owned_by = ROOT }
+			1569 = { is_owned_by = ROOT }
+			1570 = { is_owned_by = ROOT }
+			1571 = { is_owned_by = ROOT }
+			1572 = { is_owned_by = ROOT }
+			1573 = { is_owned_by = ROOT }
+			1574 = { is_owned_by = ROOT }
+			1575 = { is_owned_by = ROOT }
+			1576 = { is_owned_by = ROOT }
+			1577 = { is_owned_by = ROOT }
+			1578 = { is_owned_by = ROOT }
+			1579 = { is_owned_by = ROOT }
+			1580 = { is_owned_by = ROOT }
+			1581 = { is_owned_by = ROOT }
 			650 = { is_owned_by = ROOT }
 		}
 		
@@ -13264,88 +13702,140 @@ focus_tree = {
 			}
 			if = {
 				limit = {
+					1568 = { NOT = { is_claimed_by = ROOT } }
+				}
+				add_state_claim = 1568
+			}
+			if = {
+				limit = {
+					1569 = { NOT = { is_claimed_by = ROOT } }
+				}
+				add_state_claim = 1569
+			}
+			if = {
+				limit = {
+					1570 = { NOT = { is_claimed_by = ROOT } }
+				}
+				add_state_claim = 1570
+			}
+			if = {
+				limit = {
+					1571 = { NOT = { is_claimed_by = ROOT } }
+				}
+				add_state_claim = 1571
+			}
+			if = {
+				limit = {
+					1572 = { NOT = { is_claimed_by = ROOT } }
+				}
+				add_state_claim = 1572
+			}
+			if = {
+				limit = {
+					1573 = { NOT = { is_claimed_by = ROOT } }
+				}
+				add_state_claim = 1573
+			}
+			if = {
+				limit = {
+					1574 = { NOT = { is_claimed_by = ROOT } }
+				}
+				add_state_claim = 1574
+			}
+			if = {
+				limit = {
+					1575 = { NOT = { is_claimed_by = ROOT } }
+				}
+				add_state_claim = 1575
+			}
+			if = {
+				limit = {
+					1576 = { NOT = { is_claimed_by = ROOT } }
+				}
+				add_state_claim = 1576
+			}
+			if = {
+				limit = {
+					1577 = { NOT = { is_claimed_by = ROOT } }
+				}
+				add_state_claim = 1577
+			}
+			if = {
+				limit = {
+					1578 = { NOT = { is_claimed_by = ROOT } }
+				}
+				add_state_claim = 1578
+			}
+			if = {
+				limit = {
+					1579 = { NOT = { is_claimed_by = ROOT } }
+				}
+				add_state_claim = 1579
+			}
+			if = {
+				limit = {
+					1580 = { NOT = { is_claimed_by = ROOT } }
+				}
+				add_state_claim = 1580
+			}
+			if = {
+				limit = {
+					1581 = { NOT = { is_claimed_by = ROOT } }
+				}
+				add_state_claim = 1581
+			}
+			if = {
+				limit = {
 					650 = { NOT = { is_claimed_by = ROOT } }
 				}
 				add_state_claim = 650
 				custom_effect_tooltip = generic_skip_one_line_tt
 			}
-
-			if = { #ONE CONTROLLER
+			
+			every_country = {
 				limit = {
-					463 = {
-						controller = {
-							controls_state = 650
-						}
+					OR = {
+						owns_state = 463
+						owns_state = 1568
+						owns_state = 1569
+						owns_state = 1570
+						owns_state = 1571
+						owns_state = 1572
+						owns_state = 1573
+						owns_state = 1574
+						owns_state = 1575
+						owns_state = 1576
+						owns_state = 1577
+						owns_state = 1578
+						owns_state = 1579
+						owns_state = 1580
+						owns_state = 1581
+						owns_state = 650
 					}
 				}
-				if = {
-					limit = {
-						463 = {
-							controller = {
-								NOT = { has_war_with = ROOT }
-							}
-						}
-					}
-					463 = {
-						controller = {
-							country_event = { id = NSB_soviet_foreign_politics_events.30 hours = 4 random_hours = 2 }
-							custom_effect_tooltip = if_they_accept
-							effect_tooltip = {
-								ROOT = { transfer_state = 463 } #ALASKA
-								ROOT = { transfer_state = 650 } #ATTU ISLAND
-								add_opinion_modifier = {
-									target = ROOT
-									modifier = SOV_pressured_our_government
-								}
-							}
-						}
-					}
-				}
+				country_event = { id = NSB_soviet_foreign_politics_events.30 hours = 4 random_hours = 2 }
 			}
-			else = { #TWO DIFFERENT CONTROLLERS
-				if = {
-					limit = {
-						463 = {
-							controller = {
-								NOT = { has_war_with = ROOT }
-							}
-						}
-					}
-					463 = {
-						controller = {
-							country_event = { id = NSB_soviet_foreign_politics_events.30 hours = 4 random_hours = 2 }
-							custom_effect_tooltip = if_they_accept
-							effect_tooltip = {
-								ROOT = { transfer_state = 463 } #ALASKA
-								add_opinion_modifier = {
-									target = ROOT
-									modifier = SOV_pressured_our_government
-								}
-							}
-						}
-					}
-				}
-				if = {
-					limit = {
-						650 = {
-							controller = {
-								NOT = { has_war_with = ROOT }
-							}
-						}
-					}
-					650 = {
-						controller = {
-							country_event = { id = NSB_soviet_foreign_politics_events.30 hours = 4 random_hours = 2 }
-							custom_effect_tooltip = if_they_accept
-							effect_tooltip = {
-								ROOT = { transfer_state = 650 } #ATTU ISLAND
-								add_opinion_modifier = {
-									target = ROOT
-									modifier = SOV_pressured_our_government
-								}
-							}
-						}
-					}
+			custom_effect_tooltip = if_they_accept
+			effect_tooltip = {
+				ROOT = { transfer_state = 463 } #ALASKA
+				ROOT = { transfer_state = 1568 }
+				ROOT = { transfer_state = 1569 }
+				ROOT = { transfer_state = 1570 }
+				ROOT = { transfer_state = 1571 }
+				ROOT = { transfer_state = 1572 }
+				ROOT = { transfer_state = 1573 }
+				ROOT = { transfer_state = 1574 }
+				ROOT = { transfer_state = 1575 }
+				ROOT = { transfer_state = 1576 }
+				ROOT = { transfer_state = 1577 }
+				ROOT = { transfer_state = 1578 }
+				ROOT = { transfer_state = 1579 }
+				ROOT = { transfer_state = 1580 }
+				ROOT = { transfer_state = 1581 }
+				ROOT = { transfer_state = 650 } #ATTU ISLAND
+				add_opinion_modifier = {
+					target = ROOT
+					modifier = SOV_pressured_our_government
 				}
 			}
 		}
@@ -13980,6 +14470,10 @@ focus_tree = {
 						91 = { is_claimed_by = ROOT }
 					}
 					OR = { 
+						owns_state = 1400
+						1400 = { is_claimed_by = ROOT }
+					}
+					OR = { 
 						owns_state = 93
 						93 = { is_claimed_by = ROOT }
 					}
@@ -14000,6 +14494,78 @@ focus_tree = {
 						89 = { is_claimed_by = ROOT }
 					}
 					OR = { 
+						owns_state = 1238
+						1238 = { is_claimed_by = ROOT }
+					}
+					OR = { 
+						owns_state = 1239
+						1239 = { is_claimed_by = ROOT }
+					}
+					OR = { 
+						owns_state = 1240
+						1240 = { is_claimed_by = ROOT }
+					}
+					OR = { 
+						owns_state = 1243
+						1243 = { is_claimed_by = ROOT }
+					}
+					OR = { 
+						owns_state = 1244
+						1244 = { is_claimed_by = ROOT }
+					}
+					OR = { 
+						owns_state = 1246
+						1246 = { is_claimed_by = ROOT }
+					}
+					OR = { 
+						owns_state = 1247
+						1247 = { is_claimed_by = ROOT }
+					}
+					OR = { 
+						owns_state = 1248
+						1248 = { is_claimed_by = ROOT }
+					}
+					OR = { 
+						owns_state = 1261
+						1261 = { is_claimed_by = ROOT }
+					}
+					OR = { 
+						owns_state = 1610
+						1610 = { is_claimed_by = ROOT }
+					}
+					OR = { 
+						owns_state = 1531
+						1531 = { is_claimed_by = ROOT }
+					}
+					OR = { 
+						owns_state = 1532
+						1532 = { is_claimed_by = ROOT }
+					}
+					OR = { 
+						owns_state = 1399
+						1399 = { is_claimed_by = ROOT }
+					}
+					OR = { 
+						owns_state = 1533
+						1533 = { is_claimed_by = ROOT }
+					}
+					OR = { 
+						owns_state = 1534
+						1534 = { is_claimed_by = ROOT }
+					}
+					OR = { 
+						owns_state = 1535
+						1535 = { is_claimed_by = ROOT }
+					}
+					OR = { 
+						owns_state = 1484
+						1484 = { is_claimed_by = ROOT }
+					}
+					OR = { 
+						owns_state = 1173
+						1173 = { is_claimed_by = ROOT }
+					}
+					OR = { 
 						owns_state = 784
 						784 = { is_claimed_by = ROOT }
 					}
@@ -14015,7 +14581,26 @@ focus_tree = {
 			add_state_claim = 94
 			add_state_claim = 93
 			add_state_claim = 91
+			add_state_claim = 1400
 			add_state_claim = 89
+			add_state_claim = 1238
+			add_state_claim = 1239
+			add_state_claim = 1240
+			add_state_claim = 1243
+			add_state_claim = 1244
+			add_state_claim = 1246
+			add_state_claim = 1247
+			add_state_claim = 1248
+			add_state_claim = 1261
+			add_state_claim = 1610
+			add_state_claim = 1531
+			add_state_claim = 1532
+			add_state_claim = 1399
+			add_state_claim = 1533
+			add_state_claim = 1534
+			add_state_claim = 1535
+			add_state_claim = 1484
+			add_state_claim = 1173
 			add_state_claim = 784
 			add_named_threat = { threat = 3 name = SOV_claims_on_poland }
 
@@ -14027,7 +14612,26 @@ focus_tree = {
 						owns_state = 94
 						owns_state = 93
 						owns_state = 91
+						owns_state = 1400
 						owns_state = 89
+						owns_state = 1238
+						owns_state = 1239
+						owns_state = 1240
+						owns_state = 1243
+						owns_state = 1244
+						owns_state = 1246
+						owns_state = 1247
+						owns_state = 1248
+						owns_state = 1261
+						owns_state = 1610
+						owns_state = 1531
+						owns_state = 1532
+						owns_state = 1399
+						owns_state = 1533
+						owns_state = 1534
+						owns_state = 1535
+						owns_state = 1484
+						owns_state = 1173
 						owns_state = 784
 					}
 				}
@@ -14093,7 +14697,26 @@ focus_tree = {
 				94 = { is_owned_and_controlled_by = POL }
 				93 = { is_owned_and_controlled_by = POL }
 				91 = { is_owned_and_controlled_by = POL }
+				1400 = { is_owned_and_controlled_by = POL }
 				89 = { is_owned_and_controlled_by = POL }
+				1238 = { is_owned_and_controlled_by = POL }
+				1239 = { is_owned_and_controlled_by = POL }
+				1240 = { is_owned_and_controlled_by = POL }
+				1243 = { is_owned_and_controlled_by = POL }
+				1244 = { is_owned_and_controlled_by = POL }
+				1246 = { is_owned_and_controlled_by = POL }
+				1247 = { is_owned_and_controlled_by = POL }
+				1248 = { is_owned_and_controlled_by = POL }
+				1261 = { is_owned_and_controlled_by = POL }
+				1610 = { is_owned_and_controlled_by = POL }
+				1531 = { is_owned_and_controlled_by = POL }
+				1532 = { is_owned_and_controlled_by = POL }
+				1399 = { is_owned_and_controlled_by = POL }
+				1533 = { is_owned_and_controlled_by = POL }
+				1534 = { is_owned_and_controlled_by = POL }
+				1535 = { is_owned_and_controlled_by = POL }
+				1484 = { is_owned_and_controlled_by = POL }
+				1173 = { is_owned_and_controlled_by = POL }
 				784 = { is_owned_and_controlled_by = POL }
 			}
 		}
@@ -14127,8 +14750,84 @@ focus_tree = {
 						transfer_state = 91
 					}
 					if = {
+						limit = { POL = { owns_state = 1400 controls_state = 1400 } }
+						transfer_state = 1400
+					}
+					if = {
 						limit = { POL = { owns_state = 89 controls_state = 89 } }
 						transfer_state = 89
+					}
+					if = {
+						limit = { POL = { owns_state = 1238 controls_state = 1238 } }
+						transfer_state = 1238
+					}
+					if = {
+						limit = { POL = { owns_state = 1239 controls_state = 1239 } }
+						transfer_state = 1239
+					}
+					if = {
+						limit = { POL = { owns_state = 1240 controls_state = 1240 } }
+						transfer_state = 1240
+					}
+					if = {
+						limit = { POL = { owns_state = 1243 controls_state = 1243 } }
+						transfer_state = 1243
+					}
+					if = {
+						limit = { POL = { owns_state = 1244 controls_state = 1244 } }
+						transfer_state = 1244
+					}
+					if = {
+						limit = { POL = { owns_state = 1246 controls_state = 1246 } }
+						transfer_state = 1246
+					}
+					if = {
+						limit = { POL = { owns_state = 1247 controls_state = 1247 } }
+						transfer_state = 1247
+					}
+					if = {
+						limit = { POL = { owns_state = 1248 controls_state = 1248 } }
+						transfer_state = 1248
+					}
+					if = {
+						limit = { POL = { owns_state = 1261 controls_state = 1261 } }
+						transfer_state = 1261
+					}
+					if = {
+						limit = { POL = { owns_state = 1610 controls_state = 1610 } }
+						transfer_state = 1610
+					}
+					if = {
+						limit = { POL = { owns_state = 1531 controls_state = 1531 } }
+						transfer_state = 1531
+					}
+					if = {
+						limit = { POL = { owns_state = 1532 controls_state = 1532 } }
+						transfer_state = 1532
+					}
+					if = {
+						limit = { POL = { owns_state = 1399 controls_state = 1399 } }
+						transfer_state = 1399
+					}
+					if = {
+						limit = { POL = { owns_state = 1533 controls_state = 1533 } }
+						transfer_state = 1533
+					}
+					if = {
+						limit = { POL = { owns_state = 1534 controls_state = 1534 } }
+						transfer_state = 1534
+					}
+					if = {
+						limit = { POL = { owns_state = 1535 controls_state = 1535 } }
+						transfer_state = 1535
+					}
+					if = {
+						limit = { POL = { owns_state = 1484 controls_state = 1484 } }
+						transfer_state = 1484
+					}
+					if = {
+						limit = { POL = { owns_state = 1173 controls_state = 1173 } }
+						transfer_state = 1173
 					}
 					if = {
 						limit = { POL = { owns_state = 784 controls_state = 784 } }
@@ -14201,10 +14900,19 @@ focus_tree = {
 				custom_effect_tooltip = needs_approval
 				effect_tooltip = {
 					add_state_claim = 5
+					add_state_claim = 1288
+					add_state_claim = 1557
+					add_state_claim = 1701
+					add_state_claim = 1702
 					add_state_claim = 63
 					add_state_claim = 68
 					add_state_claim = 66
 					add_state_claim = 67
+					add_state_claim = 1538
+					add_state_claim = 1539
+					add_state_claim = 1540
+					add_state_claim = 1541
+					add_state_claim = 1558
 					custom_effect_tooltip = SOV_offer_poland_protection_tt
 					#This will also make Poland and Soviet be more more keen on cooperating
 				}
@@ -14232,8 +14940,84 @@ focus_tree = {
 						transfer_state = 91
 					}
 					if = {
+						limit = { POL = { owns_state = 1400 controls_state = 1400 } }
+						transfer_state = 1400
+					}
+					if = {
 						limit = { POL = { owns_state = 89 controls_state = 89 } }
 						transfer_state = 89
+					}
+					if = {
+						limit = { POL = { owns_state = 1238 controls_state = 1238 } }
+						transfer_state = 1238
+					}
+					if = {
+						limit = { POL = { owns_state = 1239 controls_state = 1239 } }
+						transfer_state = 1239
+					}
+					if = {
+						limit = { POL = { owns_state = 1240 controls_state = 1240 } }
+						transfer_state = 1240
+					}
+					if = {
+						limit = { POL = { owns_state = 1243 controls_state = 1243 } }
+						transfer_state = 1243
+					}
+					if = {
+						limit = { POL = { owns_state = 1244 controls_state = 1244 } }
+						transfer_state = 1244
+					}
+					if = {
+						limit = { POL = { owns_state = 1246 controls_state = 1246 } }
+						transfer_state = 1246
+					}
+					if = {
+						limit = { POL = { owns_state = 1247 controls_state = 1247 } }
+						transfer_state = 1247
+					}
+					if = {
+						limit = { POL = { owns_state = 1248 controls_state = 1248 } }
+						transfer_state = 1248
+					}
+					if = {
+						limit = { POL = { owns_state = 1261 controls_state = 1261 } }
+						transfer_state = 1261
+					}
+					if = {
+						limit = { POL = { owns_state = 1610 controls_state = 1610 } }
+						transfer_state = 1610
+					}
+					if = {
+						limit = { POL = { owns_state = 1531 controls_state = 1531 } }
+						transfer_state = 1531
+					}
+					if = {
+						limit = { POL = { owns_state = 1532 controls_state = 1532 } }
+						transfer_state = 1532
+					}
+					if = {
+						limit = { POL = { owns_state = 1399 controls_state = 1399 } }
+						transfer_state = 1399
+					}
+					if = {
+						limit = { POL = { owns_state = 1533 controls_state = 1533 } }
+						transfer_state = 1533
+					}
+					if = {
+						limit = { POL = { owns_state = 1534 controls_state = 1534 } }
+						transfer_state = 1534
+					}
+					if = {
+						limit = { POL = { owns_state = 1535 controls_state = 1535 } }
+						transfer_state = 1535
+					}
+					if = {
+						limit = { POL = { owns_state = 1484 controls_state = 1484 } }
+						transfer_state = 1484
+					}
+					if = {
+						limit = { POL = { owns_state = 1173 controls_state = 1173 } }
+						transfer_state = 1173
 					}
 					if = {
 						limit = { POL = { owns_state = 784 controls_state = 784 } }
@@ -14287,6 +15071,18 @@ focus_tree = {
 						}
 					}
 					OR = {
+						owns_state = 1291 #Hotin
+						1291 = {
+							owner = { is_in_faction_with = ROOT }
+						}
+					}
+					OR = {
+						owns_state = 1092 #Gagauzia
+						1092 = {
+							owner = { is_in_faction_with = ROOT }
+						}
+					}
+					OR = {
 						owns_state = 80 #Bucovina
 						80 = {
 							owner = { is_in_faction_with = ROOT }
@@ -14301,6 +15097,8 @@ focus_tree = {
 				}
 				any_country = {
 					owns_state = 78
+					owns_state = 1291
+					owns_state = 1092
 					owns_state = 80
 					owns_state = 766
 					has_war_with = ROOT
@@ -14315,6 +15113,14 @@ focus_tree = {
 			if = {
 				limit = { 78 = { OWNER = { NOT = { is_in_faction_with = ROOT} } } }
 				add_state_claim = 78
+			}
+			if = {
+				limit = { 1291 = { OWNER = { NOT = { is_in_faction_with = ROOT } } } }
+				add_state_claim = 1291
+			}
+			if = {
+				limit = { 1092 = { OWNER = { NOT = { is_in_faction_with = ROOT} } } }
+				add_state_claim = 1092
 			}
 			if = {
 				limit = { 766 = { OWNER = { NOT = { is_in_faction_with = ROOT} } } }
@@ -14653,6 +15459,16 @@ ai_will_do = {
 			IRQ = {
 				NOT = { owns_state = 676 }
 				NOT = { owns_state = 291 }
+				NOT = { owns_state = 1276 }
+				NOT = { owns_state = 1277 }
+				NOT = { owns_state = 1011 }
+				NOT = { owns_state = 1279 }
+				NOT = { owns_state = 1280 }
+				NOT = { owns_state = 1281 }
+				NOT = { owns_state = 1282 }
+				NOT = { owns_state = 1283 }
+				NOT = { owns_state = 1284 }
+				NOT = { owns_state = 1285 }
 			}
 			AFG = {
 				NOT = { owns_state = 267 }
@@ -14702,6 +15518,16 @@ ai_will_do = {
 						OR = {
 							owns_state = 676
 							owns_state = 291
+							owns_state = 1276
+							owns_state = 1277
+							owns_state = 1011
+							owns_state = 1279
+							owns_state = 1280
+							owns_state = 1281
+							owns_state = 1282
+							owns_state = 1283
+							owns_state = 1284
+							owns_state = 1285
 						}
 					} 
 				}			
@@ -14709,7 +15535,7 @@ ai_will_do = {
 					type = take_state_focus
 					target = IRQ
 					expire = 0
-					generator = { 676 291 }
+					generator = { 676 291 1276 1277 1011 1279 1280 1281 1282 1283 1284 1285 }
 				}
 			}
 			if = {
@@ -15114,12 +15940,6 @@ ai_will_do = {
 				}
 			}
 		}
-		historical_ai = { # Setting this so that they can actually go down the Gobi gambit if CHI doesn't exist.
-			OR = {
-				country_exists = CHI
-				NOT = { has_subject = SIK }
-			}
-		}
 		
 		mutually_exclusive = { focus = SOV_the_gobi_gambit focus = SOV_two_red_flags }
 
@@ -15337,7 +16157,7 @@ ai_will_do = {
 			country_exists = JAP
 			NOT = { is_in_faction_with = JAP }
 			NOT = { has_war_together_with = JAP }
-			761 = { #Hulunbuir
+			1432 = { #Khalkin
 				controller = {
 					NOT = { is_in_faction_with = ROOT }
 				}
@@ -15369,7 +16189,7 @@ ai_will_do = {
 				}
 			}
 
-			add_state_claim = 761 #Hulunbuir
+			add_state_claim = 1432 #Khalkin
 
 			custom_effect_tooltip = generic_skip_one_line_tt
 			
@@ -15425,7 +16245,14 @@ ai_will_do = {
 				}
 				MON = {
 					add_state_claim = 612 #Chahar
+					add_state_claim = 1474
+					add_state_claim = 1475
 					add_state_claim = 611 #South Chahar
+					add_state_claim = 1476
+					add_state_claim = 1455
+					add_state_claim = 1456
+					add_state_claim = 1458
+					add_state_claim = 1459
 				}
 			}
 		}
@@ -15704,7 +16531,21 @@ ai_will_do = {
 
 				#Claims
 				463 = { add_claim_by = SOV } #Alaska
-				650 = { add_claim_by = SOV } #Atu Island
+				650 = { add_claim_by = SOV }
+				1568 = { add_claim_by = SOV }
+				1569 = { add_claim_by = SOV }
+				1570 = { add_claim_by = SOV }
+				1571 = { add_claim_by = SOV }
+				1572 = { add_claim_by = SOV }
+				1573 = { add_claim_by = SOV }
+				1574 = { add_claim_by = SOV }
+				1575 = { add_claim_by = SOV }
+				1576 = { add_claim_by = SOV }
+				1577 = { add_claim_by = SOV }
+				1578 = { add_claim_by = SOV }
+				1579 = { add_claim_by = SOV }
+				1580 = { add_claim_by = SOV }
+				1581 = { add_claim_by = SOV }
 				632 = { add_claim_by = JAP } #Wake Island
 				631 = { add_claim_by = JAP } #Midway Island
 				629 = { add_claim_by = JAP } #Hawaii
@@ -16568,6 +17409,7 @@ ai_will_do = {
 				days = 365
 			}
 			custom_effect_tooltip = SOV_consolidate_power_tt
+			hidden_effect = { ksr_update_naming_localisation = yes }
 		}
 	}
 
@@ -17007,6 +17849,7 @@ ai_will_do = {
 					var = dismantle_the_zemsky_sobor_var
 					value = 0.5
 				}
+				country_event = { id = ksr.11 days = 2 }
 			}
 			custom_effect_tooltip = SOV_dismantle_the_zemsky_sobor_tt
 			add_stability = dismantle_the_zemsky_sobor_var
@@ -17467,6 +18310,7 @@ ai_will_do = {
     		}   			
     		add_state_claim = 2
    			add_state_claim = 797
+   			add_state_claim = 1223
    			add_state_claim = 454
 		}
 	}
@@ -17642,7 +18486,7 @@ ai_will_do = {
 		available = {
 			has_full_control_of_state = 213
 			has_full_control_of_state = 214
-			has_full_control_of_state = 208
+			has_full_control_of_state = 1290
 		}
 
 		completion_reward = {
@@ -17779,8 +18623,8 @@ ai_will_do = {
 					}
 				}
 			}
-			#Supply Hub in Luga
-			208 = {
+			#Supply Hub in Kingisepp
+			1290 = {
 				add_building_construction = {
 					type = supply_node
 					level = 1
@@ -17790,7 +18634,7 @@ ai_will_do = {
 			}
 			#Volkhov-Murmansk
 			build_railway = {
-				path = { 3134 11117 9201 6181 3121 9162 3008 86 3189 9159 94 6021 11175 155 11092 3033 9118 11159 90 6057 11153 11059 70 }
+				path = { 3134 11117 9201 6181 3121 9162 3008 86 3189 9195 94 6021 11175 155 11092 3033 9118 11159 90 6057 11153 11059 70 }
 			}
 			#Leningrad-Volkhov
 			build_railway = {
@@ -18148,11 +18992,11 @@ ai_will_do = {
     				OR = {
     					controls_state = 9
 						controls_state = 69
-						controls_state = 972
 						controls_state = 70
 						controls_state = 71
 						controls_state = 72
 						controls_state = 73
+						controls_state = 1294
 						controls_state = 74
 						controls_state = 75
 						controls_state = 664
@@ -18167,6 +19011,7 @@ ai_will_do = {
 						controls_state = 88
 						controls_state = 92
 						controls_state = 91
+						controls_state = 1400
 						controls_state = 95
 						controls_state = 94
 						controls_state = 86
@@ -18174,27 +19019,102 @@ ai_will_do = {
 						controls_state = 89
 						controls_state = 10
 						controls_state = 96
-						controls_state = 784
 						controls_state = 93
 						controls_state = 87
 						controls_state = 104
 						controls_state = 109
 						controls_state = 103
+						controls_state = 1296
 						controls_state = 804
 						controls_state = 802
 						controls_state = 106
-						controls_state = 970
+						controls_state = 1412
+						controls_state = 1307
+						controls_state = 1298
 						controls_state = 105
 						controls_state = 108
 						controls_state = 107
 						controls_state = 102
 						controls_state = 853
 						controls_state = 803
+						controls_state = 1411
+						controls_state = 1299
+						controls_state = 1300
 						controls_state = 45
+						controls_state = 1477
 						controls_state = 764
+						controls_state = 1478
 						controls_state = 736
 						controls_state = 852
 						controls_state = 163
+						controls_state = 1555
+						controls_state = 1556
+						controls_state = 972
+						controls_state = 1608
+						controls_state = 1560
+						controls_state = 1719
+						controls_state = 1720
+						controls_state = 1243
+						controls_state = 1239
+						controls_state = 1246
+						controls_state = 1240
+						controls_state = 1261
+						controls_state = 1610
+						controls_state = 1535
+						controls_state = 1484
+						controls_state = 1534
+						controls_state = 1533
+						controls_state = 1531
+						controls_state = 1532
+						controls_state = 1399
+						controls_state = 1241
+						controls_state = 1242
+						controls_state = 1245
+						controls_state = 1554
+						controls_state = 1389
+						controls_state = 1481
+						controls_state = 1252
+						controls_state = 1482
+						controls_state = 1256
+						controls_state = 1483
+						controls_state = 1528
+						controls_state = 1529
+						controls_state = 1385
+						controls_state = 1386
+						controls_state = 1530
+						controls_state = 1704
+						controls_state = 1410
+						controls_state = 1705
+						controls_state = 1706
+						controls_state = 1707
+						controls_state = 1709
+						controls_state = 1710
+						controls_state = 1711
+						controls_state = 1712
+						controls_state = 1713
+						controls_state = 1714
+						controls_state = 1715
+						controls_state = 1716
+						controls_state = 1717
+						controls_state = 1718
+						controls_state = 1388
+						controls_state = 1721
+						controls_state = 1314
+						controls_state = 1325
+						controls_state = 1339
+						controls_state = 1046
+						controls_state = 1047
+						controls_state = 1048
+						controls_state = 1141
+						controls_state = 1142
+						controls_state = 1143
+						controls_state = 1144
+						controls_state = 1145
+						controls_state = 1146
+						controls_state = 1147
+						controls_state = 1148
+						controls_state = 1149
+						controls_state = 1173
 					}
     			}
     			every_state = {
@@ -18202,11 +19122,11 @@ ai_will_do = {
 						OR = {
 							state = 9
 							state = 69
-							state = 972
 							state = 70
 							state = 71
 							state = 72
 							state = 73
+							state = 1294
 							state = 74
 							state = 75
 							state = 664
@@ -18221,6 +19141,7 @@ ai_will_do = {
 							state = 88
 							state = 92
 							state = 91
+							state = 1400
 							state = 95
 							state = 94
 							state = 86
@@ -18228,27 +19149,102 @@ ai_will_do = {
 							state = 89
 							state = 10
 							state = 96
-							state = 784
 							state = 93
 							state = 87
 							state = 104
 							state = 109
 							state = 103
+							state = 1296
 							state = 804
 							state = 802
 							state = 106
-							state = 970
+							state = 1412
+							state = 1307
+							state = 1298
 							state = 105
 							state = 108
 							state = 107
 							state = 102
 							state = 853
 							state = 803
+							state = 1411
+							state = 1299
+							state = 1300
 							state = 45
+							state = 1477
 							state = 764
+							state = 1478
 							state = 736
 							state = 852
 							state = 163
+							state = 1555
+							state = 1556
+							state = 972
+							state = 1608
+							state = 1560
+							state = 1719
+							state = 1720
+							state = 1243
+							state = 1239
+							state = 1246
+							state = 1240
+							state = 1261
+							state = 1610
+							state = 1535
+							state = 1484
+							state = 1534
+							state = 1533
+							state = 1531
+							state = 1532
+							state = 1399
+							state = 1241
+							state = 1242
+							state = 1245
+							state = 1554
+							state = 1389
+							state = 1481
+							state = 1252
+							state = 1482
+							state = 1256
+							state = 1483
+							state = 1528
+							state = 1529
+							state = 1385
+							state = 1386
+							state = 1530
+							state = 1704
+							state = 1410
+							state = 1705
+							state = 1706
+							state = 1707
+							state = 1709
+							state = 1710
+							state = 1711
+							state = 1712
+							state = 1713
+							state = 1714
+							state = 1715
+							state = 1716
+							state = 1717
+							state = 1718
+							state = 1388
+							state = 1721
+							state = 1314
+							state = 1325
+							state = 1339
+							state = 1260
+							state = 1047
+							state = 1048
+							state = 1141
+							state = 1142
+							state = 1143
+							state = 1144
+							state = 1145
+							state = 1146
+							state = 1147
+							state = 1148
+							state = 1149
+							state = 1173
 						}
 					}
 					ROOT = { add_state_claim = PREV } 
@@ -18257,7 +19253,7 @@ ai_will_do = {
 #    			ROOT = {
 #    				create_wargoal = {
 #					    type = take_state_focus
-#					    generator = { 9 69 70 71 72 73 74 75 664 48 211 212 801 97 85 762 90 88 92 91 95 94 86 98 89 10 96 784 93 87 104 109 103 804 802 106 105 108 107 102 853 803 #45 764 736 852 163 }
+#					    generator = { 9 69 70 71 72 73 1294 74 75 664 48 211 212 801 97 85 762 90 88 92 91 1400 95 94 86 98 89 10 96 784 93 87 104 109 103 1296 804 802 106 1412 1307 1298 105 108 107 102 853 803 1411 1299 1300 45 1477 764 1478 736 852 163 }
 #					    target = PREV
 #					}
 #				}
@@ -18586,12 +19582,12 @@ ai_will_do = {
 			create_wargoal = { 
 				type = take_state_focus 
 				target = CAN 
-				generator = { 471 739 740 473 864 }
+				generator = { 471 739 740 473 864 1586 1588 }
 			}
 			create_wargoal = { 
 				type = take_state_focus 
 				target = USA 
-				generator = { 463 386 385 }
+				generator = { 463 386 1564 1565 1613 1415 385 1616 1617 1618 1619 1620 1621 1561 }
 			}
 		}
 	}
@@ -18677,7 +19673,7 @@ ai_will_do = {
 			create_wargoal = { 
 				type = take_state_focus 
 				target = FRA
-				generator = { 553 554 677 680 799 }
+				generator = { 553 554 677 680 1330 799 }
 			}
 			if = {
 				limit = {
@@ -19146,6 +20142,7 @@ ai_will_do = {
 #						state = 195
 #						state = 196
 #						state = 197
+#						state = 1606
 #						state = 198
 #						state = 199
 #						state = 200
@@ -19184,6 +20181,7 @@ ai_will_do = {
 #						state = 195
 #						state = 196
 #						state = 197
+#						state = 1606
 #						state = 198
 #						state = 199
 #						state = 200
@@ -19221,6 +20219,7 @@ ai_will_do = {
 #						state = 195
 #						state = 196
 #						state = 197
+#						state = 1606
 #						state = 198
 #						state = 199
 #						state = 200
@@ -19523,6 +20522,7 @@ ai_will_do = {
 #						state = 195
 #						state = 196
 #						state = 197
+#						state = 1606
 #						state = 198
 #						state = 199
 #						state = 200
@@ -19563,6 +20563,7 @@ ai_will_do = {
 #						state = 195
 #						state = 196
 #						state = 197
+#						state = 1606
 #						state = 198
 #						state = 199
 #						state = 200
