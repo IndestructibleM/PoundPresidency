@@ -1,0 +1,58 @@
+characters = {
+	CNN_democratic_leader = {
+		name = "Olivier Duchamp"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/Africa/Portrait_Africa_Generic_land_3.dds"
+			}
+		}
+		country_leader = {
+			ideology = liberalism
+			expire = "1950.1.1.1"
+			id = -1
+		}
+	}
+	
+	CNN_communism_leader = {
+		name = "Matthieu Cahun"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/Africa/Portrait_Africa_Generic_1.dds"
+			}
+		}
+		country_leader = {
+			ideology = marxism
+			expire = "1950.1.1.1"
+			id = -1
+		}
+	}
+	
+	CNN_fascism_leader = {
+		name = "Louis Pichard"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/Africa/Portrait_Africa_Generic_land_2.dds"
+			}
+		}
+		country_leader = {
+			ideology = nazism
+			expire = "1950.1.1.1"
+			id = -1
+		}
+	}
+	
+	CNN_neutrality_leader = {
+		name = "Norbert Gardet"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/Africa/Portrait_Africa_Generic_3.dds"
+			}
+		}
+		country_leader = {
+			ideology = despotism
+			expire = "1950.1.1.1"
+			id = -1
+		}
+	}
+}
+	

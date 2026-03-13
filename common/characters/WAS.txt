@@ -1,0 +1,58 @@
+characters = {
+	WAS_democratic_leader = {
+		name = "Clarence D. Martin"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/Europe/portrait_europe_generic_4.dds"
+			}
+		}
+		country_leader = {
+			ideology = liberalism
+			expire = "1950.1.1.1"
+			id = -1
+		}
+	}
+	
+	WAS_neutrality_leader = {
+		name = "James Kingston"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/Europe/Portrait_Europe_Generic_2.dds"
+			}
+		}
+		country_leader = {
+			ideology = despotism
+			expire = "1950.1.1.1"
+			id = -1
+		}
+	}
+	
+	WAS_fascism_leader = {
+		name = "Frederick Jersey"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/Europe/portrait_europe_generic_land_13.dds"
+			}
+		}
+		country_leader = {
+			ideology = nazism
+			expire = "1950.1.1.1"
+			id = -1
+		}
+	}
+	
+	WAS_communism_leader = {
+		name = "Franklin Moone"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/Europe/Portrait_Europe_Generic_1.dds"
+			}
+		}
+		country_leader = {
+			ideology = marxism
+			expire = "1950.1.1.1"
+			id = -1
+		}
+	}
+}
+	

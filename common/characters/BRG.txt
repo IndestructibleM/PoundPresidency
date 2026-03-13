@@ -1,0 +1,58 @@
+characters = {
+	BRG_democratic_leader = {
+		name = "Robin Gerstmann"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/GER/Portrait_Germany_Generic_3.dds"
+			}
+		}
+		country_leader = {
+			ideology = liberalism
+			expire = "1950.1.1.1"
+			id = -1
+		}
+	}
+	
+	BRG_communism_leader = {
+		name = "Johan Bergler"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/GER/Portrait_Germany_Generic_1.dds"
+			}
+		}
+		country_leader = {
+			ideology = marxism
+			expire = "1950.1.1.1"
+			id = -1
+		}
+	}
+	
+	BRG_fascism_leader = {
+		name = "Ernst Kaltenbrunner"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/GER/Portrait_Germany_Generic_land_6.dds"
+			}
+		}
+		country_leader = {
+			ideology = nazism
+			expire = "1950.1.1.1"
+			id = -1
+		}
+	}
+	
+	BRG_neutrality_leader = {
+		name = "Stephan Johner"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/GER/Portrait_Germany_Generic_land_6.dds"
+			}
+		}
+		country_leader = {
+			ideology = despotism
+			expire = "1950.1.1.1"
+			id = -1
+		}
+	}
+}
+	

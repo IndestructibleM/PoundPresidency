@@ -1,0 +1,58 @@
+characters = {
+	WEI_democratic_leader = {
+		name = "Reginald Johnston"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/Europe/portrait_europe_generic_5.dds"
+			}
+		}
+		country_leader = {
+			ideology = liberalism
+			expire = "1950.1.1.1"
+			id = -1
+		}
+	}
+	
+	WEI_communism_leader = {
+		name = "Zhan Guanyu"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/Asia/Portrait_Asia_Generic_1.dds"
+			}
+		}
+		country_leader = {
+			ideology = stalinism
+			expire = "1950.1.1.1"
+			id = -1
+		}
+	}
+	
+	WEI_fascism_leader = {
+		name = "Geng Yun"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/Asia/Portrait_Asia_Generic_land_5.dds"
+			}
+		}
+		country_leader = {
+			ideology = nazism
+			expire = "1950.1.1.1"
+			id = -1
+		}
+	}
+	
+	WEI_neutrality_leader = {
+		name = "Xuan Yuhan"
+		portraits = {
+			civilian = {
+				large = GFX_portrait_Yi_Kang
+			}
+		}
+		country_leader = {
+			ideology = despotism
+			expire = "1950.1.1.1"
+			id = -1
+		}
+	}
+}
+	

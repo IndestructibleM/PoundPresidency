@@ -1,0 +1,16 @@
+characters = {
+	KSS_alf_landon = {
+		name = "Alf Landon"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/USA/portrait_USA_alf_landon.dds"
+			}
+		}
+		country_leader = {
+			ideology = liberalism
+			expire = "1950.1.1.1"
+			id = -1
+		}
+	}
+}
+	

@@ -1,0 +1,58 @@
+characters = {
+	UTS_democratic_leader = {
+		name = "Henry Hooper Blood"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/Europe/Portrait_Europe_Generic_land_1.dds"
+			}
+		}
+		country_leader = {
+			ideology = liberalism
+			expire = "1950.1.1.1"
+			id = -1
+		}
+	}
+	
+	UTS_neutrality_leader = {
+		name = "Josh Ward"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/Europe/Portrait_Europe_Generic_2.dds"
+			}
+		}
+		country_leader = {
+			ideology = despotism
+			expire = "1950.1.1.1"
+			id = -1
+		}
+	}
+	
+	UTS_fascism_leader = {
+		name = "Michael Francis"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/Europe/portrait_europe_generic_land_13.dds"
+			}
+		}
+		country_leader = {
+			ideology = nazism
+			expire = "1950.1.1.1"
+			id = -1
+		}
+	}
+	
+	UTS_communism_leader = {
+		name = "Patrick Kennedy"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/Europe/Portrait_Europe_Generic_1.dds"
+			}
+		}
+		country_leader = {
+			ideology = marxism
+			expire = "1950.1.1.1"
+			id = -1
+		}
+	}
+}
+	

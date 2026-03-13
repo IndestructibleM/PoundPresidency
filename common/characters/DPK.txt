@@ -1,0 +1,89 @@
+characters = {
+	DPK_democratic_leader = {
+		name = "Cho Man-Sik"
+		portraits = {
+			civilian = {
+				large = GFX_portrait_Syngman_Rhee
+			}
+		}
+		country_leader = {
+			ideology = liberalism
+			expire = "1950.1.1.1"
+			id = -1
+		}
+	}
+	
+	DPK_neutrality_leader = {
+		name = "Kim Ku"
+		portraits = {
+			civilian = {
+				large = GFX_portrait_Yi_Kang
+			}
+		}
+		country_leader = {
+			ideology = despotism
+			expire = "1950.1.1.1"
+			id = -1
+		}
+	}
+	
+	DPK_fascism_leader = {
+		name = "Kim Kyu-sik"
+		portraits = {
+			civilian = {
+				large = GFX_portrait_Yi_Un
+			}
+		}
+		country_leader = {
+			ideology = nazism
+			expire = "1950.1.1.1"
+			id = -1
+		}
+	}
+	
+	# Kim Il-sung
+	DPK_kim_il_sung = {
+		name = DPK_kim_il_sung
+		portraits = {
+			civilian = {
+				large = GFX_portrait_KOR_kim_il_sung
+				small = GFX_portrait_KOR_kim_il_sung_small
+			}
+		}
+		country_leader = {
+			ideology = stalinism
+			traits = { KOR_suryong }
+			expire = "1965.1.1.1"
+			id = -1
+		}
+	}
+	
+	DPK_terenty_shtykov = {
+		name = "Terenty Shtykov"
+		portraits = {
+			civilian = {
+				large = GFX_Portrait_DPK_Terenty_Shtykov
+			}
+		}
+		country_leader = {
+			ideology = stalinism
+			expire = "1950.1.1.1"
+			id = -1
+		}
+	}
+	
+	DPK_gao_gang = {
+		name = "Gao Gang"
+		portraits = {
+			civilian = {
+				large = GFX_Portrait_DPK_Gao_Gang
+			}
+		}
+		country_leader = {
+			ideology = stalinism
+			expire = "1950.1.1.1"
+			id = -1
+		}
+	}
+}
+	

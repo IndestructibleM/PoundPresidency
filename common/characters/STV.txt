@@ -1,0 +1,58 @@
+characters = {
+	STV_democratic_leader = {
+		name = "Errol Sutton"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/Africa/Portrait_Africa_Generic_land_3.dds"
+			}
+		}
+		country_leader = {
+			ideology = liberalism
+			expire = "1950.1.1.1"
+			id = -1
+		}
+	}
+	
+	STV_communism_leader = {
+		name = "Ainsley Manwaring"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/Africa/Portrait_Africa_Generic_1.dds"
+			}
+		}
+		country_leader = {
+			ideology = marxism
+			expire = "1950.1.1.1"
+			id = -1
+		}
+	}
+	
+	STV_fascism_leader = {
+		name = "Zachary Pierpoint"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/Africa/Portrait_Africa_Generic_land_2.dds"
+			}
+		}
+		country_leader = {
+			ideology = nazism
+			expire = "1950.1.1.1"
+			id = -1
+		}
+	}
+	
+	STV_neutrality_leader = {
+		name = "Shane Saunders"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/Africa/Portrait_Africa_Generic_3.dds"
+			}
+		}
+		country_leader = {
+			ideology = despotism
+			expire = "1950.1.1.1"
+			id = -1
+		}
+	}
+}
+	

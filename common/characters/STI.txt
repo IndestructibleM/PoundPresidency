@@ -1,0 +1,39 @@
+characters = {
+
+	# Spokane Tribe of Indians COUNCIL
+	STI_spokane_council = { 
+		name = STI_spokane_council
+		portraits = {
+			civilian = {
+				large = GFX_Portrait_STI_Council
+			}
+			
+		}
+		country_leader = {
+			ideology = despotism
+			traits = { non_aligned_council_trait }
+			expire = "1980.1.1.1"
+			id = -1
+		}
+		country_leader = {
+			ideology = conservatism
+			traits = { democratic_council_trait }
+			expire = "1980.1.1.1"
+			id = -1
+		}
+		country_leader = {
+			ideology = marxism
+			traits = { communist_council_trait }
+			expire = "1980.1.1.1"
+			id = -1
+		}
+		country_leader = {
+			ideology = falangism
+			traits = { fascist_council_trait }
+			expire = "1980.1.1.1"
+			id = -1
+		}
+	}
+
+	
+}

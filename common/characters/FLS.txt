@@ -1,0 +1,16 @@
+characters = {
+	FLS_david_sholtz = {
+		name = "David Sholtz"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/Europe/portrait_europe_generic_land_19.dds"
+			}
+		}
+		country_leader = {
+			ideology = liberalism
+			expire = "1950.1.1.1"
+			id = -1
+		}
+	}
+}
+	
