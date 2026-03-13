@@ -208,9 +208,11 @@ ideologies = {
 			}
 
 			liberalism = {
+				color = { 240 170 0 }
 			}
 
 			socialism = {
+				color = { 255 170 0 }
 			}
 
 			populism = {
