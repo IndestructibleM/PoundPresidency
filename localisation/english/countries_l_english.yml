@@ -1105,6 +1105,9 @@
  YUN_autonomy_sea_warlord_subject_DEF: "the Yunnan Clique"
  YUN_autonomy_sea_integrated_warlord_subject: "Yunnan Province"
  YUN_autonomy_sea_integrated_warlord_subject_DEF: "the Yunnan Province"
+ IDC: "French Indochina"
+ IDC_DEF: "French Indochina"
+ IDC_DEF: "French Indochina"
 
  AST_fascism:0 "Centralist Australia"
  AST_fascism_DEF:0 "Centralist Australia"

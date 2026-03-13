@@ -20,6 +20,10 @@ FRA = {
 	color = rgb { 20 90 200 }
 	color_ui = rgb { 30 100 215 }
 }
+IDC = {
+	color = rgb { 20 90 200 }
+	color_ui = rgb { 30 100 215 }
+}
 LUX = {
 	color = rgb { 65 175 179 }
 	color_ui = rgb { 85 228 233 }
