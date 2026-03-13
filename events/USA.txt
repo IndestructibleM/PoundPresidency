@@ -156,8 +156,7 @@ country_event = {
 
 	option = { 
 		name = vr_usa.3.b
-		add_popularity = { ideology = reactionary popularity = 0.04 }
-		add_popularity = { ideology = fascism popularity = 0.04 }
+		add_popularity = { ideology = fascism popularity = 0.06 }
 	}
 }
 
@@ -175,9 +174,9 @@ country_event = {
 
 	option = { 
 		name = vr_usa.4.a
-		add_popularity = { ideology = reactionary popularity = 0.08 }
+		add_popularity = { ideology = conservative popularity = 0.03 }
 		add_popularity = { ideology = democratic popularity = 0.05 }
-		add_political_power = -20
+		add_political_power = -10
 	}
 
 	option = { 
@@ -212,7 +211,7 @@ country_event = {
 
 	option = { 
 		name = vr_usa.5.b
-		add_popularity = { ideology = fascism popularity = 0.08 }
+		add_popularity = { ideology = fascism popularity = 0.07 }
 	}
 }
 
@@ -230,14 +229,14 @@ country_event = {
 
 	option = { 
 		name = vr_usa.4.a
-		add_popularity = { ideology = democratic popularity = 0.04 }
-		add_popularity = { ideology = neutrality popularity = 0.08 }
+		add_popularity = { ideology = democratic popularity = 0.03 }
+		add_popularity = { ideology = neutrality popularity = 0.06 }
 	}
 
 	option = { 
 		name = vr_usa.4.b
-		add_political_power = -25
-		add_popularity = { ideology = neutrality popularity = 0.03 }
+		add_political_power = 15
+		add_popularity = { ideology = democratic popularity = 0.02 }
 	}
 }
 country_event = {
@@ -445,6 +444,14 @@ country_event = {
 	immediate = {
 		hidden_effect = {
 		remove_ideas = USA_rise_of_pound
+		set_temp_variable = {
+			 var = PopFrontSupport
+			 value = party_popularity@socialist
+		}
+		add_to_temp_variable = {
+			var = PopFrontSupport
+			value = party_popularity@communism
+		}
 			if = {
 				limit = {
 					OR = {
@@ -501,7 +508,7 @@ country_event = {
 
 	option = {
 		trigger = {
-			democratic > 0.25
+			conservative > 0.25
 		}
 		name = usa.6.b
 		ai_chance = {
@@ -515,7 +522,9 @@ country_event = {
 				}
 			}
 		}		
-		set_party_name = { ideology = democratic long_name = USA_republican_party name = USA_republican_party }
+		set_politics = {
+			ruling_party = conservative 
+		}
 		set_variable = { election_factor = random }
 		add_to_variable = { election_factor = -0.6 }
 		USA_election_senate = yes
@@ -581,38 +590,10 @@ country_event = {
 		promote_character = USA_Ezra_Pound
 	}
 	option = {
-		name = "Technocracy Inc. Makes a Dark Horse Victory!"
-		ai_chance = {
-			factor = 10
-			modifier = {
-				factor = 0
-				is_historical_focus_on = yes
-				has_game_rule = {
-					rule = USA_ai_behavior
-					option = DEFAULT
-				}
-			}
-		}		
-		set_politics = {
-			ruling_party = neutrality
-			elections_allowed = no
-			last_election = "1936.11.5"
-			election_frequency = 48
-			long_name = "Technocracy Incorporated"
-			name = "Tech Inc."
-		}
-		hidden_effect = {
-			set_cosmetic_tag = USA_democratic
-		}
-		add_popularity = {
-			ideology = neutrality
-			popularity = 0.1	
-		}
-		promote_character = USA_howard_scott
-	}
-	option = {
 		trigger = {
-			socialist > 0.25
+			check_variable = {
+				PopFrontSupport > 0.25
+			}
 		}
 		name = "The Popular Front Wins the Vote!"
 		ai_chance = {

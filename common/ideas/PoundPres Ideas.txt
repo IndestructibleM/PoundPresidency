@@ -6,11 +6,11 @@ ideas = {
 				always = yes
 			}
 			modifier = {
-				stability_factor = -0.2
-				fascism_drift = 0.03
-				socialist_drift = 0.03
-				reactionary_drift = 0.02
-				communism_drift = 0.02
+				stability_factor = -0.25
+				fascism_drift = 0.04
+				socialist_drift = 0.04
+				reactionary_drift = 0.03
+				communism_drift = 0.03
 			}
 		}
 		USA_war_against_degeneration = {

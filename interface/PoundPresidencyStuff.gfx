@@ -242,6 +242,11 @@ spriteTypes = {
 	}
 	
 	spriteType = {
+		name = "GFX_ideology_conservative_group"
+		texturefile = "gfx/interface/ideologies/conservative_group.png"
+	}
+	
+	spriteType = {
 		name = "GFX_idea_fair_share_taxation"
 		texturefile = "gfx/interface/ideas/laws/fair_share_taxation.png"
 	}
