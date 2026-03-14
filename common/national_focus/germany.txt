@@ -1044,6 +1044,9 @@ focus_tree = {
 				has_full_control_of_state = 59 #Hannover
 				has_full_control_of_state = 60 #Thüringen
 				has_full_control_of_state = 54 #Franken
+				has_full_control_of_state = 1544
+				has_full_control_of_state = 1546
+				has_full_control_of_state = 1270
 			}
 		}
 		bypass = {
@@ -1052,6 +1055,9 @@ focus_tree = {
 			NOT = {	has_full_control_of_state = 59 }
 			NOT = {	has_full_control_of_state = 60 }
 			NOT = {	has_full_control_of_state = 54 }
+			NOT = {	has_full_control_of_state = 1544 }
+			NOT = {	has_full_control_of_state = 1546 }
+			NOT = {	has_full_control_of_state = 1270 }
 		}
 
 		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_HISTORICAL }
@@ -1093,6 +1099,39 @@ focus_tree = {
 				54 = {
 					if = {
 						limit = { is_controlled_by = ROOT }
+						add_building_construction = {
+							type = infrastructure
+							level = 5
+							instant_build = yes
+						}
+					}
+				}
+				1544 = {
+					if = {
+						limit = { is_controlled_by = ROOT }
+
+						add_building_construction = {
+							type = infrastructure
+							level = 5
+							instant_build = yes
+						}
+					}
+				}
+				1546 = {
+					if = {
+						limit = { is_controlled_by = ROOT }
+
+						add_building_construction = {
+							type = infrastructure
+							level = 5
+							instant_build = yes
+						}
+					}
+				}
+				1270 = {
+					if = {
+						limit = { is_controlled_by = ROOT }
+
 						add_building_construction = {
 							type = infrastructure
 							level = 5
@@ -1330,6 +1369,9 @@ focus_tree = {
 				4 = { #Lower Austria
 					state_is_fully_controlled_by_ROOT_or_subject = yes
 				}
+				1548 = {
+					state_is_fully_controlled_by_ROOT_or_subject = yes
+				}
 			}
 		}
 		bypass = {
@@ -1400,6 +1442,21 @@ focus_tree = {
 					}
 				}
 			}
+			if = {
+				limit = {
+					1548 = {
+						infrastructure < 5
+						state_is_fully_controlled_by_ROOT_or_subject = yes
+					}
+				}
+				1548 = { 
+					add_building_construction = {
+						type = infrastructure
+						level = 1
+						instant_build = yes
+					}
+				}
+			}
 
 			if = {
 				limit = {
@@ -1410,6 +1467,9 @@ focus_tree = {
 						state_is_fully_controlled_by_ROOT_or_subject = yes
 					}
 					4 = { #Lower Austria
+						state_is_fully_controlled_by_ROOT_or_subject = yes
+					}
+					1548 = { #Regensburg
 						state_is_fully_controlled_by_ROOT_or_subject = yes
 					}
 				}
@@ -1442,6 +1502,9 @@ focus_tree = {
 					state_is_fully_controlled_by_ROOT_or_subject = yes
 				}
 				85 = { #Danzig
+					state_is_fully_controlled_by_ROOT_or_subject = yes
+				}
+				1538 = {
 					state_is_fully_controlled_by_ROOT_or_subject = yes
 				}
 			}
@@ -1514,10 +1577,28 @@ focus_tree = {
 					}
 				}
 			}
+			if = {
+				limit = {
+					1538 = {
+						infrastructure < 5
+						state_is_fully_controlled_by_ROOT_or_subject = yes
+					}
+				}
+				1538 = { 
+					add_building_construction = {
+						type = infrastructure
+						level = 1
+						instant_build = yes
+					}
+				}
+			}
 
 			if = {
 				limit = {
 					63 = { #Hinterpommern
+						state_is_fully_controlled_by_ROOT_or_subject = yes
+					}
+					1538 = {
 						state_is_fully_controlled_by_ROOT_or_subject = yes
 					}
 					807 = { #Gdynia
@@ -1529,7 +1610,7 @@ focus_tree = {
 				}
 				#Köslin - Danzig
 				build_railway = {
-					path = { 11372 11343 9263 362 }
+					path = { 9361 11372 11343 9263 362 }
 				}
 			}
 		}
@@ -3467,15 +3548,12 @@ focus_tree = {
 
 			custom_effect_tooltip = generic_skip_one_line_tt
 
-			custom_effect_tooltip = GER_salvage_captured_equipment_custom_tt
-			hidden_effect = {
-				every_army_leader = {
-					limit = {
-						NOT = { has_trait = scavenger }
-					}
-					random_select_amount = 2
-					add_trait = { trait = scavenger }
+			every_army_leader = {
+				limit = {
+					NOT = { has_trait = scavenger }
 				}
+				random_select_amount = 2
+				add_trait = { trait = scavenger }
 			}
 		}
 	}
@@ -4287,6 +4365,7 @@ focus_tree = {
 				bonus = 0.1
 				days = 240
 				track = armor
+				grand_doctrine = new_mobile_warfare
 			}
 			add_mastery_bonus = {
 				name = GER_adopt_new_panzer_doctrine
@@ -4577,12 +4656,12 @@ focus_tree = {
 						suspension_type_slot = tank_interleaved_suspension
 						armor_type_slot = tank_welded_armor
 						engine_type_slot = tank_gasoline_engine
-						special_type_slot_1 = tank_radio_2 
+						special_type_slot_1 = tank_radio_1
 						special_type_slot_2 = sloped_armor
 						special_type_slot_3 = smoke_launchers
 					}
 					upgrades = {
-						tank_nsb_engine_upgrade = 5
+						tank_nsb_engine_upgrade = 6
 						tank_nsb_armor_upgrade = 4
 					}
 					icon = "GFX_GER_advanced_medium_tank_medium"
@@ -4930,15 +5009,10 @@ focus_tree = {
 
 			add_mastery_bonus = {
 				name = GER_dive_bombers
-				bonus = 0.05
-				days = 180
-				grand_doctrine = new_battlefield_support
-			}
-			add_mastery_bonus = {
-				name = GER_dive_bombers
-				bonus = 0.15
+				bonus = 0.2
 				days = 180
 				track = strike_aircraft
+				grand_doctrine = new_battlefield_support
 			}
 			add_doctrine_cost_reduction = {
 				name = GER_dive_bombers
@@ -4953,21 +5027,20 @@ focus_tree = {
 				category = light_air
 			}
 
-			# On historical, this focus is completed mid-late 1939
 			if = {
 				limit = {
 					has_dlc = "By Blood Alone"
 				}
 				custom_effect_tooltip = generic_skip_one_line_tt
 				create_equipment_variant = { 
-					name = "Ju 87 D" 
+					name = "Ju 87 G" 
 					type = small_plane_cas_airframe_2
 					allow_without_tech = no
 					design_team = mio:GER_junkers_organization
 					modules = {
 						fixed_main_weapon_slot = bomb_locks
-						fixed_auxiliary_weapon_slot_1 = bomb_locks
-						engine_type_slot = engine_2_1x
+						fixed_auxiliary_weapon_slot_1 = tank_buster_1
+						engine_type_slot = engine_3_1x
 						special_type_slot_1 = lmg_defense_turret
 						special_type_slot_2 = empty
 					}
@@ -5076,14 +5149,9 @@ focus_tree = {
 
 			add_mastery_bonus = {
 				name = GER_tactical_bombers
-				bonus = 0.15
+				bonus = 0.2
 				days = 180
 				grand_doctrine = new_operational_integrity
-			}
-			add_mastery_bonus = {
-				name = GER_tactical_bombers
-				bonus = 0.05
-				days = 180
 				track = medium_aircraft
 			}
 
@@ -5114,7 +5182,7 @@ focus_tree = {
 						fixed_main_weapon_slot = medium_bomb_bay
 						fixed_auxiliary_weapon_slot_1 = medium_bomb_bay
 						fixed_auxiliary_weapon_slot_2 = torpedo_mounting
-						engine_type_slot = engine_2_2x
+						engine_type_slot = engine_3_2x
 						special_type_slot_1 = lmg_defense_turret_2x
 						special_type_slot_2 = empty	
 					}
@@ -5221,14 +5289,9 @@ focus_tree = {
 
 			add_mastery_bonus = {
 				name = GER_uralbomber_program
-				bonus = 0.05
+				bonus = 0.2
 				days = 180
 				grand_doctrine = new_strategic_destruction
-			}
-			add_mastery_bonus = {
-				name = GER_uralbomber_program
-				bonus = 0.15
-				days = 180
 				track = heavy_aircraft
 			}
 			add_doctrine_cost_reduction = {
@@ -5481,8 +5544,7 @@ focus_tree = {
 				tooltip = air_agility_factor_tt
 			}
 
-			# On historical, this focus is completed late 1939
-			#This one is not really needed, first 'FW 190'
+
 			if = {
 				limit = {
 					has_dlc = "By Blood Alone"
@@ -5495,8 +5557,10 @@ focus_tree = {
 					design_team = mio:GER_messerschmitt_organization
 					modules = {
 						fixed_main_weapon_slot = light_mg_4x
-						fixed_auxiliary_weapon_slot_1 = light_mg_2x
-						engine_type_slot = engine_2_1x
+						fixed_auxiliary_weapon_slot_1 = aircraft_cannon_1_2x
+						engine_type_slot = engine_3_1x
+						special_type_slot_1 = armor_plate_small
+						special_type_slot_2 = drop_tanks	
 					}
 					icon = "GFX_GER_fighter2_medium"
 					model = "GER_fighter_equipment_2_entity"
@@ -5841,13 +5905,22 @@ focus_tree = {
 					912 = { #Sonderjylland
 						state_is_fully_controlled_by_ROOT_or_subject = yes
 					}
+					1552 = {
+						state_is_fully_controlled_by_ROOT_or_subject = yes
+					}
 					36 = { #Friesland
 						state_is_fully_controlled_by_ROOT_or_subject = yes
 					}
 					7 = { #Holland
 						state_is_fully_controlled_by_ROOT_or_subject = yes
 					}
+					1292 = {
+						state_is_fully_controlled_by_ROOT_or_subject = yes
+					}
 					35 = { #Brabant
+						state_is_fully_controlled_by_ROOT_or_subject = yes
+					}
+					1297 = {
 						state_is_fully_controlled_by_ROOT_or_subject = yes
 					}
 					6 = { #Vlaanderen
@@ -5856,7 +5929,10 @@ focus_tree = {
 					29 = { #Nord-Pas-de_calais
 						state_is_fully_controlled_by_ROOT_or_subject = yes
 					}
-					785 = { #Picardy
+					1401 = {
+						state_is_fully_controlled_by_ROOT_or_subject = yes
+					}
+					1403 = {
 						state_is_fully_controlled_by_ROOT_or_subject = yes
 					}
 					15 = { #Normandy
@@ -5903,13 +5979,17 @@ focus_tree = {
 						state = 58 
 						state = 59
 						state = 56
+						state = 1552
 						state = 36
 						state = 7
+						state = 1292
 						state = 35
+						state = 1297
 						state = 6
 						state = 977
 						state = 29
-						state = 785
+						state = 1401
+						state = 1403
 						state = 15
 						state = 14
 					}
@@ -6784,7 +6864,7 @@ focus_tree = {
 						}
 					}
 					create_equipment_variant = {
-						name = "Graf Zeppelin"				
+						name = "Graf Zeppelin Class"				
 						name_group = GER_CV_HISTORICAL
 						type = ship_hull_carrier_conversion_ca
 						modules = {
@@ -6800,7 +6880,7 @@ focus_tree = {
 						equipment = {
 							type = ship_hull_carrier_conversion_ca
 							creator = "GER"
-							version_name = "Graf Zeppelin"
+							version_name = "Graf Zeppelin Class"
 						}
 						name = "Graf Zeppelin"
 						requested_factories = 1
@@ -6817,7 +6897,7 @@ focus_tree = {
 						}
 					}
 					create_equipment_variant = {
-						name = "Graf Zeppelin"				
+						name = "Graf Zeppelin Class"				
 						name_group = GER_CV_HISTORICAL
 						type = ship_hull_carrier_1
 						modules = {
@@ -6834,7 +6914,7 @@ focus_tree = {
 						equipment = {
 							type = ship_hull_carrier_1
 							creator = "GER"
-							version_name = "Graf Zeppelin"
+							version_name = "Graf Zeppelin Class"
 						}
 						name = "Graf Zeppelin"
 						requested_factories = 1
@@ -6848,7 +6928,7 @@ focus_tree = {
 						has_tech = improved_ship_hull_carrier
 					}
 					create_equipment_variant = {
-						name = "Graf Zeppelin"				
+						name = "Graf Zeppelin Class"				
 						name_group = GER_CV_HISTORICAL
 						type = ship_hull_carrier_2
 						modules = {
@@ -6866,7 +6946,7 @@ focus_tree = {
 						equipment = {
 							type = ship_hull_carrier_2
 							creator = "GER"
-							version_name = "Graf Zeppelin"
+							version_name = "Graf Zeppelin Class"
 						}
 						name = "Graf Zeppelin"
 						requested_factories = 1
@@ -7360,6 +7440,9 @@ focus_tree = {
 					914 = { #Jan Mayen
 						state_is_fully_controlled_by_ROOT_or_subject = yes
 					}
+					1724 = { #Svalbard
+						state_is_fully_controlled_by_ROOT_or_subject = yes
+					}
 					100 = { #Iceland
 						state_is_fully_controlled_by_ROOT_or_subject = yes
 					}
@@ -7416,6 +7499,7 @@ focus_tree = {
 					naval_base < 10
 					OR = { #Atlantic Islands from Greenland to Cape Verde
 						state = 914
+						state = 1724
 						state = 101
 						state = 100
 						state = 337
@@ -7693,7 +7777,7 @@ focus_tree = {
 				}
 				custom_effect_tooltip = generic_skip_one_line_tt
 				create_equipment_variant = {
-					name = "Panzerschiff"
+					name = "Panzer Class"
 					type = ship_hull_cruiser_3
 					name_group = GER_CA_HISTORICAL
 					modules = {
@@ -7759,25 +7843,12 @@ focus_tree = {
 
 		completion_reward = {
 			
-			if = {
-				limit = {
-					has_doctrine = wolfpacks
-				}
-
-				add_mastery_bonus = {
-					name = GER_wolfpack_tactics
-					bonus = 0.20
-					days = 240
-					sub_doctrine = wolfpacks
-				}
-				else = {
-					add_mastery_bonus = {
-						name = GER_wolfpack_tactics
-						bonus = 0.1
-						days = 240
-						track = submarines
-					}
-				}
+			add_mastery_bonus = {
+				name = GER_wolfpack_tactics
+				bonus = 0.1
+				days = 240
+				grand_doctrine = new_convoy_raiding
+				track = submarines
 			}
 			
 
@@ -8098,6 +8169,11 @@ focus_tree = {
 			42 = { is_demilitarized_zone = no } #RHINELAND
 			51 = { is_demilitarized_zone = no } #MOSSELLAND
 			978 = { is_demilitarized_zone = no } #BADEN
+			1551 = { is_demilitarized_zone = no }
+			1251 = { is_demilitarized_zone = no }
+			1253 = { is_demilitarized_zone = no }
+			1254 = { is_demilitarized_zone = no }
+			1414 = { is_demilitarized_zone = no }
 		}
 
 		available = {
@@ -8106,6 +8182,11 @@ focus_tree = {
 			42 = { is_fully_controlled_by = ROOT } #RHINELAND
 			51 = { is_fully_controlled_by = ROOT } #MOSSELLAND
 			978 = { is_fully_controlled_by = ROOT } #BADEN
+			1551 = { is_fully_controlled_by = ROOT }
+			1251 = { is_fully_controlled_by = ROOT }
+			1253 = { is_fully_controlled_by = ROOT }
+			1254 = { is_fully_controlled_by = ROOT }
+			1414 = { is_fully_controlled_by = ROOT }
 		}
 		
 		ai_will_do = {
@@ -8119,6 +8200,11 @@ focus_tree = {
 			42 = { set_demilitarized_zone = no }
 			51 = { set_demilitarized_zone = no }
 			978 = { set_demilitarized_zone = no }
+			1551 = { set_demilitarized_zone = no }
+			1251 = { set_demilitarized_zone = no }
+			1253 = { set_demilitarized_zone = no }
+			1254 = { set_demilitarized_zone = no }
+			1414 = { set_demilitarized_zone = no }
 			set_global_flag = rhineland_remilitarized
 			custom_effect_tooltip = GER_rhineland_ultimatum
 			custom_effect_tooltip = generic_skip_one_line_tt
@@ -8762,6 +8848,19 @@ focus_tree = {
 			}
 			if = {
 				limit = {
+					1608 = {
+						controller = {
+							NOT = {
+								tag = ROOT
+								is_subject_of = ROOT
+							}
+						}
+					}
+				}
+				add_state_claim = 1608
+			}
+			if = {
+				limit = {
 					74 = {
 						controller = {
 							NOT = {
@@ -8772,6 +8871,19 @@ focus_tree = {
 					}
 				}
 				add_state_claim = 74
+			}
+			if = {
+				limit = {
+					1556 = {
+						controller = {
+							NOT = {
+								tag = ROOT
+								is_subject_of = ROOT
+							}
+						}
+					}
+				}
+				add_state_claim = 1556
 			}
 			if = {
 				limit = {
@@ -8797,7 +8909,9 @@ focus_tree = {
 							OR = {
 								state = 69
 								state = 972
+								state = 1608
 								state = 74
+								state = 1556
 							}
 						}
 						add_core_of = PREV
@@ -8866,6 +8980,8 @@ focus_tree = {
 					owns_state = 848
 					owns_state = 975
 					owns_state = 976
+					owns_state = 1553
+					owns_state = 1390
 				}
 			}
 		}
@@ -8956,6 +9072,8 @@ focus_tree = {
 							owns_state = 848
 							owns_state = 975
 							owns_state = 976
+							owns_state = 1553
+							owns_state = 1390
 						}
 					}
 				}
@@ -8999,7 +9117,7 @@ focus_tree = {
 						create_wargoal = {
 							type = take_state_focus
 							target = AUS
-							generator = { 4 152 153 848 975 976 }
+							generator = { 4 152 153 848 975 976 1553 1390 }
 						}
 					}
 				}
@@ -9016,6 +9134,8 @@ focus_tree = {
 							owns_state = 848
 							owns_state = 975
 							owns_state = 976
+							owns_state = 1553
+							owns_state = 1390
 						}
 						
 					}
@@ -9145,6 +9265,36 @@ focus_tree = {
 					}
 				}
 				add_state_core = 976
+			}
+			IF = {
+				limit = {
+					1553 = {
+						owner = {
+							NOT = {
+								tag = AUS
+							}
+							NOT = {
+								is_in_faction_with = ROOT
+							}
+						}
+					}
+				}
+				add_state_core = 1553
+			}
+			IF = {
+				limit = {
+					1390 = {
+						owner = {
+							NOT = {
+								tag = AUS
+							}
+							NOT = {
+								is_in_faction_with = ROOT
+							}
+						}
+					}
+				}
+				add_state_core = 1390
 			}
 		}
 	}
@@ -9748,38 +9898,43 @@ focus_tree = {
 		will_lead_to_war_with = FRA
 
 		bypass = {
-			OR = {
-				AND = {
-					69 = { #NORTH SUDETENLAND
-						controller = {
-							OR = {
-								has_war_with = GER
-								tag = ROOT
-							}
-						}
-					}
-					972 = { #EASTERN SUDETENLAND
-						controller = {
-							OR = {
-								has_war_with = GER
-								tag = ROOT
-							}
-						}
-					}
-					74 = { #SOUTH SUDETENLAND
-						controller = {
-							OR = {
-								has_war_with = GER
-								tag = ROOT
-							}
-						}
+			69 = { #NORTH SUDETENLAND
+				controller = {
+					OR = {
+						has_war_with = GER
+						tag = ROOT
 					}
 				}
-				CZE = { 
-					is_subject_of = ROOT
+			}
+			972 = { #EASTERN SUDETENLAND
+				controller = {
 					OR = {
-						has_completed_focus = CZE_german_minor_ally
-						has_completed_focus = CZE_german_puppet
+						has_war_with = GER
+						tag = ROOT
+					}
+				}
+			}
+			1608 = {
+				controller = {
+					OR = {
+						has_war_with = GER
+						tag = ROOT
+					}
+				}
+			}
+			74 = { #SOUTH SUDETENLAND
+				controller = {
+					OR = {
+						has_war_with = GER
+						tag = ROOT
+					}
+				}
+			}
+			1556 = {
+				controller = {
+					OR = {
+						has_war_with = GER
+						tag = ROOT
 					}
 				}
 			}
@@ -9838,6 +9993,19 @@ focus_tree = {
 			}
 			if = {
 				limit = {
+					1608 = {
+						controller = {
+							NOT = {
+								tag = ROOT
+								is_subject_of = ROOT
+							}
+						}
+					}
+				}
+				add_state_claim = 1608
+			}
+			if = {
+				limit = {
 					74 = {
 						controller = {
 							NOT = {
@@ -9849,6 +10017,19 @@ focus_tree = {
 				}
 				add_state_claim = 74
 			}
+			if = {
+				limit = {
+					1556 = {
+						controller = {
+							NOT = {
+								tag = ROOT
+								is_subject_of = ROOT
+							}
+						}
+					}
+				}
+				add_state_claim = 1556
+			}
 
 			### EVENT CHAIN - MUNICH CONFERENCE (CZE is always involved) ###
 			if = {
@@ -9857,7 +10038,9 @@ focus_tree = {
 						OR = {
 							controls_state = 69
 							controls_state = 972
+							controls_state = 1608
 							controls_state = 74
+							controls_state = 1556
 						}
 					}
 				}
@@ -9906,7 +10089,9 @@ focus_tree = {
 							OR = {
 								controls_state = 69
 								controls_state = 972
+								controls_state = 1608
 								controls_state = 74
+								controls_state = 1556
 							}
 						}
 						OR = {
@@ -9957,7 +10142,9 @@ focus_tree = {
 						OR = {
 							controls_state = 69
 							controls_state = 972
+							controls_state = 1608
 							controls_state = 74
+							controls_state = 1556
 						}
 						NOT = { has_war_with = ROOT }
 					}
@@ -9968,7 +10155,9 @@ focus_tree = {
 						OR = {
 							controls_state = 69
 							controls_state = 972
+							controls_state = 1608
 							controls_state = 74
+							controls_state = 1556
 						}
 						NOT = { has_war_with = ROOT }
 					}
@@ -10008,15 +10197,17 @@ focus_tree = {
 
 		bypass = {
 			OR = {
-				AND = {
-					NOT = { CZE = { controls_state = 664 } }
-					NOT = { owns_state = 664 }
-				}
-				HUN = { 
-					OR = {
-						is_friend_or_potential_friend_of_GER = no
-						has_government = communism
-						has_government = democratic
+				NOT = {
+					any_state = {
+						OR = {
+							state = 664
+							state = 1560
+							state = 1294
+						}
+						OR = {
+							is_controlled_by = ROOT
+							is_controlled_by = CZE
+						}
 					}
 				}
 				CZE = { is_puppet_of = GER }
@@ -10036,6 +10227,9 @@ focus_tree = {
 			OR = {
 				owns_state = 69
 				owns_state = 972
+				owns_state = 1608
+				owns_state = 74
+				owns_state = 1556
 			}
 		}
 
@@ -10112,6 +10306,7 @@ focus_tree = {
 					country_exists = CZE
 					9 = { is_controlled_by = ROOT }
 					75 = { is_controlled_by = ROOT }
+					1555 = { is_controlled_by = ROOT }
 				}
 				any_allied_country = {
 					has_subject = CZE
@@ -10163,9 +10358,14 @@ focus_tree = {
 						is_controlled_by = ROOT
 						NOT = { is_claimed_by = ROOT }
 					}
+					1555 = {
+						is_controlled_by = ROOT
+						NOT = { is_claimed_by = ROOT }
+					}
 				}
 				add_state_claim = 9
 				add_state_claim = 75
+				add_state_claim = 1555
 				if = { #Don't get claims or wargoal on Romania or its puppet if you agreed to split CZE with them
 					limit = {
 						NOT = {
@@ -10246,6 +10446,7 @@ focus_tree = {
 				}
 				add_state_claim = 9
 				add_state_claim = 75
+				add_state_claim = 1555
 				create_wargoal = {
 					type = annex_everything
 					target = CZE
@@ -10519,10 +10720,10 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 
 		completion_reward = {
-			add_victory_points = {
-				province = 6680
-				value = 1
-			}
+			#add_victory_points = {
+			#	province = 6680
+			#	value = 1
+			#}
 			848 = {
 				add_extra_state_shared_building_slots = 1
 				add_building_construction = {
@@ -10535,7 +10736,7 @@ focus_tree = {
 				limit = {
 					controls_province = 9655
 				}
-				build_railway = { #Lietchenstein connected to Supply depot West of München
+				build_railway = { #Voralberg connected to Supply depot West of München
 					level = 2
 					path = { 6680 9655 }
 				}
@@ -10555,6 +10756,7 @@ focus_tree = {
 		
 		bypass = {
 			188 = { is_owned_by = GER }
+			1172 = { is_owned_by = GER }
 			85 = { is_owned_by = GER }
 			86 = { is_owned_by = GER }
 		}
@@ -10585,19 +10787,27 @@ focus_tree = {
 		completion_reward = {
 
 			188 = { add_claim_by = GER }
+			1172 = { add_claim_by = GER }
 			85 = { add_claim_by = GER }
 			807 = { add_claim_by = GER }
 			86 = { add_claim_by = GER }
 			762 = { add_claim_by = GER }
+			1554 = { add_claim_by = GER }
+			1389 = { add_claim_by = GER }
 
 			add_named_threat = { threat = 3 name = GER_demand_memel_threat }
 
-			random_other_country = {
+			every_country = {
 				limit = {
-					owns_state = 188
-					controls_state = 188
-					NOT = {
-						has_war_with = ROOT
+					OR = {
+						AND = {
+							owns_state = 188
+							controls_state = 188
+						}
+						AND = {
+							owns_state = 1172
+							controls_state = 1172
+						}
 					}
 				}
 				country_event = { 
@@ -10950,6 +11160,8 @@ focus_tree = {
 			add_state_claim = 853
 			add_state_claim = 852
 			add_state_claim = 736
+			add_state_claim = 1708
+			add_state_claim = 1169
 
 			custom_effect_tooltip = generic_skip_one_line_tt
 
@@ -11579,6 +11791,8 @@ focus_tree = {
 					add_state_core = 807
 					remove_state_claim = 86
 					remove_state_claim = 762
+					remove_state_claim = 1554
+					remove_state_claim = 1389
 				}
 				POL = {
 					country_event = { id = germany.86 }
@@ -12385,9 +12599,20 @@ focus_tree = {
 			}
 
 			add_state_claim = 845
+			add_state_claim = 1514
 			add_state_claim = 3
 			add_state_claim = 151
+			add_state_claim = 1507
+			add_state_claim = 1508
+			add_state_claim = 1509
+			add_state_claim = 1510
+			add_state_claim = 1511
+			add_state_claim = 1512
+			add_state_claim = 1513
+			add_state_claim = 1515
+			add_state_claim = 1516
 			add_state_claim = 847
+			add_state_claim = 1506
 
 			if = {
 				limit = {
@@ -13197,8 +13422,8 @@ focus_tree = {
 
 		available = {
 			is_subject = no
-			controls_state = 4
-			controls_state = 152
+			controls_state = 976
+			controls_state = 1390
 			has_army_manpower = { size > 749999 } #ca 80 div
 		}
 
@@ -13417,17 +13642,9 @@ focus_tree = {
 							owns_state = 803
 							803 = { owner = { is_subject_of = YUG } }
 						}
-						OR = { #Herzegovina
-							owns_state = 804
-							804 = { owner = { is_subject_of = YUG } }
-						}
 						OR = { #Kosovo
 							owns_state = 802
 							802 = { owner = { is_subject_of = YUG } }
-						}
-						OR = {
-							owns_state = 103
-							103 = { owner = { is_subject_of = YUG } }
 						}
 						OR = {
 							owns_state = 105
@@ -13436,6 +13653,78 @@ focus_tree = {
 						OR = {
 							owns_state = 970
 							970 = { owner = { is_subject_of = YUG } }
+						}
+						OR = {
+							owns_state = 1388
+							1388 = { owner = { is_subject_of = YUG } }
+						}
+						OR = {
+							owns_state = 1314
+							1314 = { owner = { is_subject_of = YUG } }
+						}
+						OR = {
+							owns_state = 1325
+							1325 = { owner = { is_subject_of = YUG } }
+						}
+						OR = {
+							owns_state = 1339
+							1339 = { owner = { is_subject_of = YUG } }
+						}
+						OR = {
+							owns_state = 1716
+							1716 = { owner = { is_subject_of = YUG } }
+						}
+						OR = {
+							owns_state = 1260
+							1260 = { owner = { is_subject_of = YUG } }
+						}
+						OR = {
+							owns_state = 1047
+							1047 = { owner = { is_subject_of = YUG } }
+						}
+						OR = {
+							owns_state = 1048
+							1048 = { owner = { is_subject_of = YUG } }
+						}
+						OR = {
+							owns_state = 1412
+							1412 = { owner = { is_subject_of = YUG } }
+						}
+						OR = {
+							owns_state = 1477
+							1477 = { owner = { is_subject_of = YUG } }
+						}
+						OR = {
+							owns_state = 1704
+							1704 = { owner = { is_subject_of = YUG } }
+						}
+						OR = {
+							owns_state = 1705
+							1705 = { owner = { is_subject_of = YUG } }
+						}
+						OR = {
+							owns_state = 1410
+							1410 = { owner = { is_subject_of = YUG } }
+						}
+						OR = {
+							owns_state = 1307
+							1307 = { owner = { is_subject_of = YUG } }
+						}
+						OR = {
+							owns_state = 1298
+							1298 = { owner = { is_subject_of = YUG } }
+						}
+						OR = {
+							owns_state = 1411
+							1411 = { owner = { is_subject_of = YUG } }
+						}
+						OR = {
+							owns_state = 1299
+							1299 = { owner = { is_subject_of = YUG } }
+						}
+						OR = {
+							owns_state = 1300
+							1300 = { owner = { is_subject_of = YUG } }
 						}
 					}
 				}
@@ -13477,6 +13766,14 @@ focus_tree = {
 							OR = {
 								45 = { is_owned_by = YUG }
 								45 = { is_owned_by = GER }
+								1704 = { is_owned_by = YUG }
+								1704 = { is_owned_by = GER }
+								1705 = { is_owned_by = YUG }
+								1705 = { is_owned_by = GER }
+								1410 = { is_owned_by = YUG }
+								1410 = { is_owned_by = GER }
+								1477 = { is_owned_by = YUG }
+								1477 = { is_owned_by = GER }
 							}
 						}
 						HUN = {
@@ -13492,11 +13789,34 @@ focus_tree = {
 								OR = {
 									45 = { is_owned_by = YUG }
 									45 = { is_owned_by = GER }
+									1704 = { is_owned_by = YUG }
+									1704 = { is_owned_by = GER }
+									1705 = { is_owned_by = YUG }
+									1705 = { is_owned_by = GER }
+									1410 = { is_owned_by = YUG }
+									1410 = { is_owned_by = GER }
+									1477 = { is_owned_by = YUG }
+									1477 = { is_owned_by = GER }
 								}
 						}
 						HUN = {
 							add_opinion_modifier = { target = GER modifier = GER_first_ljubljana_award_GER }
-							transfer_state = 45
+							every_state = {
+								limit = {
+									OR = {
+										state = 45
+										state = 1704
+										state = 1705
+										state = 1410
+										state = 1477
+									}
+									OR = {
+										is_owned_by = GER
+										is_owned_by = YUG
+									}
+								}
+								HUN = { transfer_state = PREV }
+							}
 						}
 					}
 				}
@@ -13523,6 +13843,16 @@ focus_tree = {
 								106 = { is_owned_by = GER }
 								803 = { is_owned_by = YUG }
 								803 = { is_owned_by = GER }
+								1298 = { is_owned_by = YUG }
+								1298 = { is_owned_by = GER }
+								1299 = { is_owned_by = YUG }
+								1299 = { is_owned_by = GER }
+								1300 = { is_owned_by = YUG }
+								1300 = { is_owned_by = GER }
+								1307 = { is_owned_by = YUG }
+								1307 = { is_owned_by = GER }
+								1411 = { is_owned_by = YUG }
+								1411 = { is_owned_by = GER }
 							}
 						}
 						BUL = { 
@@ -13540,6 +13870,16 @@ focus_tree = {
 								106 = { is_owned_by = GER }
 								803 = { is_owned_by = YUG }
 								803 = { is_owned_by = GER }
+								1298 = { is_owned_by = YUG }
+								1298 = { is_owned_by = GER }
+								1299 = { is_owned_by = YUG }
+								1299 = { is_owned_by = GER }
+								1300 = { is_owned_by = YUG }
+								1300 = { is_owned_by = GER }
+								1307 = { is_owned_by = YUG }
+								1307 = { is_owned_by = GER }
+								1411 = { is_owned_by = YUG }
+								1411 = { is_owned_by = GER }
 							}
 						}
 						BUL = {
@@ -13551,12 +13891,23 @@ focus_tree = {
 								}
 								transfer_state = 106
 							}
-							if = {
+							every_state = {
 								limit = {
-									803 = { is_owned_by = YUG }
-									803 = { is_owned_by = GER }
+									OR = {
+										state = 106
+										state = 803
+										state = 1298
+										state = 1299
+										state = 1300
+										state = 1307
+										state = 1411
+									}
+									OR = {
+										is_owned_by = GER
+										is_owned_by = YUG
+									}
 								}
-								transfer_state = 803
+								BUL = { transfer_state = PREV }
 							}
 						}
 					}
@@ -13592,6 +13943,7 @@ focus_tree = {
 						if = {
 							limit = { has_completed_focus = ITA_balkan_ambition }
 							transfer_state = 103
+							transfer_state = 1718
 						}
 						if = {
 							limit = { owns_state = 44 }
@@ -13608,6 +13960,42 @@ focus_tree = {
 						if = {
 							limit = { owns_state = 44 }
 							transfer_state = 970
+						}
+						if = {
+							limit = { owns_state = 44 }
+							transfer_state = 1412
+						}
+						if = {
+							limit = { owns_state = 44 }
+							transfer_state = 1314
+						}
+						if = {
+							limit = { owns_state = 44 }
+							transfer_state = 1325
+						}
+						if = {
+							limit = { owns_state = 44 }
+							transfer_state = 1339
+						}
+						if = {
+							limit = { owns_state = 44 }
+							transfer_state = 1260
+						}
+						if = {
+							limit = { owns_state = 44 }
+							transfer_state = 1047
+						}
+						if = {
+							limit = { owns_state = 44 }
+							transfer_state = 1048
+						}
+						if = {
+							limit = { owns_state = 44 }
+							transfer_state = 1716
+						}
+						if = {
+							limit = { owns_state = 44 }
+							transfer_state = 1388
 						}
 					}
 				}
@@ -13716,9 +14104,11 @@ focus_tree = {
 					has_war = yes
 					is_subject = yes
 				}
-				NOT = { owns_state = 731 }
-				NOT = { owns_state = 184 }
-				NOT = { owns_state = 185 }
+				NOT = { controls_state = 1607 }
+				NOT = { controls_state = 184 }
+				NOT = { controls_state = 185 }
+				NOT = { controls_state = 1319 }
+				NOT = { controls_state = 1181 }
 			}
 			NOT = {
 				GRE = {
@@ -13766,8 +14156,10 @@ focus_tree = {
 				has_war = no 
 				is_subject = no
 				controls_state = 185 #Epirus
-				controls_state = 731 #Central Macedonia
+				controls_state = 1607
 				controls_state = 184 #Thrace
+				controls_state = 1319
+				controls_state = 1181
 			}
 			OR = {
 				AND = {
@@ -13978,12 +14370,39 @@ focus_tree = {
 					}
 					if = {
 						limit = {
+							1607 = {
+								is_fully_controlled_by = GRE
+							}
+						}
+						GER = { transfer_state = 1607 }
+						set_global_flag = GER_second_ljubljana_award_GER_1607
+					}
+					if = {
+						limit = {
 							184 = { #Thrace
 								is_fully_controlled_by = GRE
 							}
 						}
 						GER = { transfer_state = 184 }
 						set_global_flag = GER_second_ljubljana_award_GER_184
+					}
+					if = {
+						limit = {
+							1319 = {
+								is_fully_controlled_by = GRE
+							}
+						}
+						GER = { transfer_state = 1319 }
+						set_global_flag = GER_second_ljubljana_award_GER_1319
+					}
+					if = {
+						limit = {
+							1181 = {
+								is_fully_controlled_by = GRE
+							}
+						}
+						GER = { transfer_state = 1181 }
+						set_global_flag = GER_second_ljubljana_award_GER_1181
 					}
 				}
 				hidden_effect = {
@@ -14005,11 +14424,35 @@ focus_tree = {
 					}
 					if = {
 						limit = {
+							1607 = {
+								is_fully_controlled_by = GRE
+							}
+						}
+						set_global_flag = GER_second_ljubljana_award_GER_1607
+					}
+					if = {
+						limit = {
 							184 = { #Thrace
 								is_fully_controlled_by = GRE
 							}
 						}
 						set_global_flag = GER_second_ljubljana_award_GER_184
+					}
+					if = {
+						limit = {
+							1319 = {
+								is_fully_controlled_by = GRE
+							}
+						}
+						set_global_flag = GER_second_ljubljana_award_GER_1319
+					}
+					if = {
+						limit = {
+							1181 = {
+								is_fully_controlled_by = GRE
+							}
+						}
+						set_global_flag = GER_second_ljubljana_award_GER_1181
 					}
 				}
 			}			
@@ -20998,23 +21441,23 @@ focus_tree = {
 			if = {
 				limit = {
 					capital_scope = {
-						state = 64 #BRANDENBURG
+						state = 1269 #EAST BERLIN
 					}
-					controls_province = 6521 #BERLIN
-					64 = {
+					controls_province = 13637 #BERLIN
+					1269 = {
 						free_building_slots = {
 							building = bunker
 							size > 1
-							province = 6521
+							province = 13637
 						}
 					}
 				}
-				64 = {
+				1269 = {
 					add_building_construction = {
 						type = bunker
 						level = 2
 						instant_build = yes
-						province =  6521
+						province =  13637
 					}
 				}
 			}
@@ -21133,6 +21576,11 @@ focus_tree = {
 			42 = { set_demilitarized_zone = no }
 			51 = { set_demilitarized_zone = no }
 			978 = { set_demilitarized_zone = no }
+			1551 = { set_demilitarized_zone = no }
+			1251 = { set_demilitarized_zone = no }
+			1253 = { set_demilitarized_zone = no }
+			1254 = { set_demilitarized_zone = no }
+			1414 = { set_demilitarized_zone = no }
 
 			custom_effect_tooltip = generic_skip_one_line_tt
 
@@ -21375,7 +21823,7 @@ focus_tree = {
 		id = GER_start_the_proletarian_revolution
 		icon = GFX_focus_SWE_refuge_for_revolutionaries
 		prerequisite = { focus = GER_tend_to_the_future_of_germany }
-		mutually_exclusive = { focus = GER_monarchist_sentiment focus = GER_rule_by_decree }
+		mutually_exclusive = { focus = GER_monarchist_sentiment }
 
 		x = -11
 		y = 1
@@ -21461,8 +21909,10 @@ focus_tree = {
 								modifier = GER_proletariat_uprising_modifier
 							}
 							state = 65 #Sachsen
+							state = 1543
 							state = 60 #Thüringen
 							state = 51 #Rhineland
+							state = 1414
 						}
 					}
 
@@ -21498,8 +21948,10 @@ focus_tree = {
 								modifier = GER_proletariat_uprising_modifier
 							}
 							state = 65 #Sachsen
+							state = 1543
 							state = 60 #Thüringen
 							state = 51 #Rhineland
+							state = 1414
 						}
 					}
 
@@ -21535,8 +21987,10 @@ focus_tree = {
 								modifier = GER_proletariat_uprising_modifier
 							}
 							state = 65 #Sachsen
+							state = 1543
 							state = 60 #Thüringen
 							state = 51 #Rhineland
+							state = 1414
 						}
 					}
 
@@ -22992,7 +23446,7 @@ focus_tree = {
 					has_war_with = ROOT
 				}
 			}
-			64 = {
+			1269 = {
 				is_fully_controlled_by = ROOT
 			}
 		}
@@ -23102,17 +23556,17 @@ focus_tree = {
 				custom_effect_tooltip = generic_skip_one_line_tt
 				custom_effect_tooltip = GER_build_volkshalle_landmark_tt
 				hidden_effect = {
-					64 = {
+					1269 = {
 						remove_building = {
 						    type = landmark_berlin_reichstag
 						    level = 1
-						    province = 6521
+						    province = 13637
 						}
 						add_building_construction = {
 						    type = landmark_berlin_volkshalle
 						    level = 1
 						    instant_build = yes
-						    province = 6521
+						    province = 13637
 						}
 					}
 				}
@@ -23927,10 +24381,13 @@ focus_tree = {
 				OR = {
 					controls_state = 69
 					controls_state = 972
+					controls_state = 1608
 					controls_state = 9
 					controls_state = 75
 					controls_state = 74
 					controls_state = 72
+					controls_state = 1555
+					controls_state = 1556
 				}
 			}
 		}
@@ -23961,10 +24418,13 @@ focus_tree = {
 					AND = {
 						NOT = { controls_state = 69 }
 						NOT = { controls_state = 972 }
+						NOT = { controls_state = 1608 }
 						NOT = { controls_state = 9 }
 						NOT = { controls_state = 75 }
 						NOT = { controls_state = 74 }
 						NOT = { controls_state = 72 }
+						NOT = { controls_state = 1555 }
+						NOT = { controls_state = 1556 }
 					}
 				}
 			}	
@@ -24016,17 +24476,20 @@ focus_tree = {
 						OR = {
 							controls_state = 69
 							controls_state = 972
+							controls_state = 1608
 							controls_state = 9
 							controls_state = 75
 							controls_state = 74
 							controls_state = 72
+							controls_state = 1555
+							controls_state = 1556
 						}
 					}
 				}
 				create_wargoal = {
 					type = take_claimed_state
 					target = CZE
-					generator = { 69 972 9 75 74 72 } 
+					generator = { 69 972 1608 9 75 74 72 1555 1556 } 
 				}
 			}
 
@@ -24098,6 +24561,24 @@ focus_tree = {
 					controls_state = 98
 					controls_state = 10
 					controls_state = 762
+					controls_state = 1528
+					controls_state = 1529
+					controls_state = 1530
+					controls_state = 1554
+					controls_state = 1141
+					controls_state = 1142
+					controls_state = 1143
+					controls_state = 1144
+					controls_state = 1145
+					controls_state = 1252
+					controls_state = 1256
+					controls_state = 1385
+					controls_state = 1386
+					controls_state = 1389
+					controls_state = 1399
+					controls_state = 1481
+					controls_state = 1482
+					controls_state = 1483
 				}
 			}
 		}
@@ -24136,6 +24617,24 @@ focus_tree = {
 						NOT = { controls_state = 98 }
 						NOT = { controls_state = 10 }
 						NOT = { controls_state = 762 }
+						NOT = { controls_state = 1528 }
+						NOT = { controls_state = 1529 }
+						NOT = { controls_state = 1530 }
+						NOT = { controls_state = 1554 }
+						NOT = { controls_state = 1141 }
+						NOT = { controls_state = 1142 }
+						NOT = { controls_state = 1143 }
+						NOT = { controls_state = 1144 }
+						NOT = { controls_state = 1145 }
+						NOT = { controls_state = 1252 }
+						NOT = { controls_state = 1256 }
+						NOT = { controls_state = 1385 }
+						NOT = { controls_state = 1386 }
+						NOT = { controls_state = 1389 }
+						NOT = { controls_state = 1399 }
+						NOT = { controls_state = 1481 }
+						NOT = { controls_state = 1482 }
+						NOT = { controls_state = 1483 }
 					}
 				}
 			}	
@@ -24199,13 +24698,31 @@ focus_tree = {
 							controls_state = 98
 							controls_state = 10
 							controls_state = 762
+							controls_state = 1528
+							controls_state = 1529
+							controls_state = 1530
+							controls_state = 1554
+							controls_state = 1141
+							controls_state = 1142
+							controls_state = 1143
+							controls_state = 1144
+							controls_state = 1145
+							controls_state = 1252
+							controls_state = 1256
+							controls_state = 1385
+							controls_state = 1386
+							controls_state = 1389
+							controls_state = 1399
+							controls_state = 1481
+							controls_state = 1482
+							controls_state = 1483
 						}
 					}
 				}
 				create_wargoal = {
 					type = take_claimed_state
 					target = POL
-					generator = { 807 85 86 87 88 90 92 98 10 762 } # optional 
+					generator = { 807 85 86 87 88 90 92 98 10 762 1528 1529 1530 1554 1141 1142 1143 1144 1145 1252 1256 1385 1386 1389 1399 1481 1482 1483 } # optional 
 				}
 			}
 
@@ -24267,10 +24784,15 @@ focus_tree = {
 				}
 				OR = {
 					controls_state = 155
-					controls_state = 174
+					controls_state = 974
 					controls_state = 973
 					controls_state = 43
 					controls_state = 154
+					controls_state = 1278
+					controls_state = 1235
+					controls_state = 1700
+					controls_state = 1703
+					controls_state = 1384
 				}
 			}
 		}
@@ -24300,10 +24822,15 @@ focus_tree = {
 					}
 					AND = {
 						NOT = { controls_state = 155 }
-						NOT = { controls_state = 174 }
+						NOT = { controls_state = 974 }
 						NOT = { controls_state = 973 }
 						NOT = { controls_state = 43 }
 						NOT = { controls_state = 154 }
+						NOT = { controls_state = 1278 }
+						NOT = { controls_state = 1235 }
+						NOT = { controls_state = 1700 }
+						NOT = { controls_state = 1703 }
+						NOT = { controls_state = 1384 }
 					}
 				}
 			}	
@@ -24355,10 +24882,15 @@ focus_tree = {
 					HUN = {
 						OR = {
 							controls_state = 155
-							controls_state = 174
+							controls_state = 974
 							controls_state = 973
 							controls_state = 43
 							controls_state = 154
+							controls_state = 1278
+							controls_state = 1235
+							controls_state = 1700
+							controls_state = 1703
+							controls_state = 1384
 						}
 					}
 				}
@@ -25155,6 +25687,8 @@ focus_tree = {
 
 
 
+
+
 	################################
 	################################
 	#### NON-ALIGNED/DEMOCRATIc ####
@@ -25165,7 +25699,7 @@ focus_tree = {
 		id = GER_monarchist_sentiment
 		icon = GFX_focus_generic_monarchist_sentiment
 		prerequisite = { focus = GER_tend_to_the_future_of_germany }
-		mutually_exclusive = { focus = GER_start_the_proletarian_revolution focus = GER_rule_by_decree }
+		mutually_exclusive = { focus = GER_start_the_proletarian_revolution }
 
 		x = 11
 		y = 1
@@ -25508,7 +26042,7 @@ focus_tree = {
 					limit = {
 						has_completed_focus = GER_the_monarchy_compromise_ww
 					}
-					set_cosmetic_tag = GER_german_monarchy_conservative
+					#set_cosmetic_tag = GER_german_monarchy_conservative
 				}
 			}
 
@@ -26235,7 +26769,10 @@ focus_tree = {
 			add_named_threat = { threat = 5 name = GER_revive_the_kaiserreich }
 
 			custom_effect_tooltip = GER_revive_the_kaiserreich_tt
-			hidden_effect = { set_cosmetic_tag = GER_german_empire }
+			hidden_effect = { 
+				set_cosmetic_tag = GER_german_empire 
+				country_event = { id = ksr.10 days = 2 }
+			}
 
 			custom_effect_tooltip = generic_skip_one_line_tt
 
@@ -27096,833 +27633,6 @@ focus_tree = {
 		}
 	}
 
-
-
-	###################
-	###################
-	#### HUGENBERG ####
-	###################
-	###################
-
-	focus = {
-		id = GER_rule_by_decree
-		icon = GFX
-		prerequisite = { focus = GER_tend_to_the_future_of_germany }
-		mutually_exclusive = { focus = GER_start_the_proletarian_revolution focus = GER_monarchist_sentiment}
-
-		x = 44
-		y = 1
-		relative_position_id = GER_tend_to_the_future_of_germany
-
-		cost = 5
-
-		available = {
-		}
-
-		offset = {
-			x = -50
-			y = 0
-			trigger = {
-				has_game_rule = {
-					rule = obsolete_focus_branches_visibility
-					option = HIDE
-				}
-				has_completed_focus = GER_monarchist_sentiment
-			}
-		}
-
-		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_POLITICAL_CHARACTER }
-
-		completion_reward = {
-
-		}
-	}
-
-	focus = {
-		id = GER_the_industrial_compact
-		icon = GFX
-		prerequisite = { focus = GER_rule_by_decree }
-
-		x = -3
-		y = 1
-		relative_position_id = GER_rule_by_decree
-		cost = 5
-		completion_reward = {
-
-		}
-	}
-
-	focus = {
-		id = GER_purge_the_brownshirts
-		icon = GFX
-		prerequisite = { focus = GER_rule_by_decree }
-
-		x = -1
-		y = 1
-		relative_position_id = GER_rule_by_decree
-		cost = 5
-		completion_reward = {
-			
-		}
-	}
-
-	focus = {
-		id = GER_bismarcks_blueprint
-		icon = GFX
-		prerequisite = { focus = GER_rule_by_decree }
-
-		x = 1
-		y = 1
-		relative_position_id = GER_rule_by_decree
-		cost = 5
-		completion_reward = {
-			
-		}
-	}
-
-	focus = {
-		id = GER_beyond_the_beer_hall
-		icon = GFX
-		prerequisite = { focus = GER_rule_by_decree }
-
-		x = 3
-		y = 1
-		relative_position_id = GER_rule_by_decree
-		cost = 5
-		completion_reward = {
-			
-		}
-	}
-
-	focus = {
-		id = GER_emergency_powers_made_permanent
-		icon = GFX
-		prerequisite = { focus = GER_the_industrial_compact }
-
-		x = 0
-		y = 1
-		relative_position_id = GER_the_industrial_compact
-		cost = 2
-		completion_reward = {
-			
-		}
-	}
-
-	focus = {
-		id = GER_national_media_directorate
-		icon = GFX
-		prerequisite = { focus = GER_purge_the_brownshirts }
-
-		x = 0
-		y = 1
-		relative_position_id = GER_purge_the_brownshirts
-		cost = 5
-		completion_reward = {
-			
-		}
-	}
-
-	focus = {
-		id = GER_reassure_the_junker_estates
-		icon = GFX
-		prerequisite = { focus = GER_bismarcks_blueprint }
-
-		x = 0
-		y = 1
-		relative_position_id = GER_bismarcks_blueprint
-		cost = 5
-		completion_reward = {
-			
-		}
-	}
-
-	focus = {
-		id = GER_the_admirals_vision
-		icon = GFX
-		prerequisite = { focus = GER_beyond_the_beer_hall }
-
-		x = 0
-		y = 1
-		relative_position_id = GER_beyond_the_beer_hall
-		cost = 5
-		completion_reward = {
-			
-		}
-	}
-
-	focus = {
-		id = GER_court_the_general_staff
-		icon = GFX
-		prerequisite = { focus = GER_emergency_powers_made_permanent focus = GER_national_media_directorate }
-
-		x = 1
-		y = 1
-		relative_position_id = GER_emergency_powers_made_permanent
-		cost = 5
-		completion_reward = {
-			
-		}
-	}
-
-	focus = {
-		id = GER_neutralize_the_ss_leadership
-		icon = GFX
-		prerequisite = { focus = GER_national_media_directorate focus = GER_reassure_the_junker_estates }
-
-		x = 1
-		y = 1
-		relative_position_id = GER_national_media_directorate
-		cost = 5
-		completion_reward = {
-			
-		}
-	}
-
-	focus = {
-		id = GER_the_prussian_standard
-		icon = GFX
-		prerequisite = { focus = GER_reassure_the_junker_estates focus = GER_the_admirals_vision }
-
-		x = 1
-		y = 1
-		relative_position_id = GER_reassure_the_junker_estates
-		cost = 5
-		completion_reward = {
-			
-		}
-	}
-
-	focus = {
-		id = GER_the_conservative_alternative
-		icon = GFX
-		prerequisite = { focus = GER_court_the_general_staff focus = GER_neutralize_the_ss_leadership }
-
-		x = 1
-		y = 1
-		relative_position_id = GER_court_the_general_staff
-		cost = 5
-		completion_reward = {
-			
-		}
-	}
-
-	focus = {
-		id = GER_meet_with_jung
-		icon = GFX
-		prerequisite = { focus = GER_neutralize_the_ss_leadership focus = GER_the_prussian_standard }
-
-		x = 1
-		y = 1
-		relative_position_id = GER_neutralize_the_ss_leadership
-		cost = 5
-		completion_reward = {
-			
-		}
-	}
-
-	focus = {
-		id = GER_the_german_national_revival
-		icon = GFX
-		prerequisite = { focus = GER_the_conservative_alternative focus = GER_meet_with_jung }
-
-		x = 1
-		y = 1
-		relative_position_id = GER_the_conservative_alternative
-		cost = 5
-		completion_reward = {
-			
-		}
-	}
-
-	focus = {
-		id = GER_recall_the_hohenzollerns
-		icon = GFX
-		prerequisite = { focus = GER_the_german_national_revival }
-		mutually_exclusive = { focus = GER_revive_the_reich_eternal }
-		x = -3.5
-		y = 1
-		relative_position_id = GER_the_german_national_revival
-		cost = 5
-		completion_reward = {
-			
-		}
-	}
-
-	focus = {
-		id = GER_revive_the_reich_eternal
-		icon = GFX
-		prerequisite = { focus = GER_the_german_national_revival }
-		mutually_exclusive = { focus = GER_recall_the_hohenzollerns }
-		x = 3.5
-		y = 1
-		relative_position_id = GER_the_german_national_revival
-		cost = 5
-		completion_reward = {
-			
-		}
-	}
-
-	focus = {
-		id = GER_greater_germany
-		icon = GFX
-		prerequisite = { focus = GER_recall_the_hohenzollerns }
-
-		x = -1
-		y = 1
-		relative_position_id = GER_recall_the_hohenzollerns
-		cost = 5
-		completion_reward = {
-			
-		}
-	}
-
-	focus = {
-		id = GER_the_greater_germany_doctrine
-		icon = GFX
-		prerequisite = { focus = GER_recall_the_hohenzollerns }
-
-		x = 1
-		y = 1
-		relative_position_id = GER_recall_the_hohenzollerns
-		cost = 5
-		completion_reward = {
-			
-		}
-	}
-
-	focus = {
-		id = GER_rehabilitate_the_imperial_colors
-		icon = GFX
-		prerequisite = { focus = GER_revive_the_reich_eternal }
-
-		x = -1
-		y = 1
-		relative_position_id = GER_revive_the_reich_eternal
-		cost = 5
-		completion_reward = {
-			
-		}
-	}
-
-	focus = {
-		id = GER_reforge_the_bundstat
-		icon = GFX
-		prerequisite = { focus = GER_revive_the_reich_eternal }
-
-		x = 1
-		y = 1
-		relative_position_id = GER_revive_the_reich_eternal
-		cost = 5
-		completion_reward = {
-			
-		}
-	}
-
-	focus = {
-		id = GER_no_more_little_germany
-		icon = GFX
-		prerequisite = { focus = GER_greater_germany }
-
-		x = -1
-		y = 1
-		relative_position_id = GER_greater_germany
-		cost = 5
-		completion_reward = {
-			
-		}
-	}
-
-	focus = {
-		id = GER_complete_the_work_of_bismarck
-		icon = GFX
-		prerequisite = { focus = GER_greater_germany focus = GER_the_greater_germany_doctrine }
-
-		x = 1
-		y = 1
-		relative_position_id = GER_greater_germany
-		cost = 5
-		completion_reward = {
-			
-		}
-	}
-
-	focus = {
-		id = GER_the_german_national_imperative
-		icon = GFX
-		prerequisite = { focus = GER_the_greater_germany_doctrine }
-
-		x = 1
-		y = 1
-		relative_position_id = GER_the_greater_germany_doctrine
-		cost = 5
-		completion_reward = {
-			
-		}
-	}
-
-	focus = {
-		id = GER_heirs_to_aachen
-		icon = GFX
-		prerequisite = { focus = GER_rehabilitate_the_imperial_colors }
-
-		x = -1
-		y = 1
-		relative_position_id = GER_rehabilitate_the_imperial_colors
-		cost = 5
-		completion_reward = {
-			
-		}
-	}
-
-	focus = {
-		id = GER_the_crown_of_the_romans
-		icon = GFX
-		prerequisite = { focus = GER_rehabilitate_the_imperial_colors focus = GER_reforge_the_bundstat }
-
-		x = 1
-		y = 1
-		relative_position_id = GER_rehabilitate_the_imperial_colors
-		cost = 5
-		completion_reward = {
-			
-		}
-	}
-
-	focus = {
-		id = GER_revive_the_imperial_estates
-		icon = GFX
-		prerequisite = { focus = GER_reforge_the_bundstat }
-
-		x = 1
-		y = 1
-		relative_position_id = GER_reforge_the_bundstat
-		cost = 5
-		completion_reward = {
-			
-		}
-	}
-
-	focus = {
-		id = GER_revive_the_prussian_tradition
-		icon = GFX
-		prerequisite = { focus = GER_no_more_little_germany focus = GER_complete_the_work_of_bismarck }
-
-		x = 1
-		y = 1
-		relative_position_id = GER_no_more_little_germany
-		cost = 5
-		completion_reward = {
-			
-		}
-	}
-
-	focus = {
-		id = GER_restore_the_officer_corps_prestige
-		icon = GFX
-		prerequisite = { focus = GER_complete_the_work_of_bismarck focus = GER_the_german_national_imperative }
-
-		x = 1
-		y = 1
-		relative_position_id = GER_complete_the_work_of_bismarck
-		cost = 5
-		completion_reward = {
-			
-		}
-	}
-
-	focus = {
-		id = GER_duties_of_the_free_cities
-		icon = GFX
-		prerequisite = { focus = GER_heirs_to_aachen focus = GER_the_crown_of_the_romans }
-
-		x = 1
-		y = 1
-		relative_position_id = GER_heirs_to_aachen
-		cost = 5
-		completion_reward = {
-			
-		}
-	}
-
-	focus = {
-		id = GER_against_centralized_tyranny
-		icon = GFX
-		prerequisite = { focus = GER_the_crown_of_the_romans focus = GER_revive_the_imperial_estates }
-
-		x = 1
-		y = 1
-		relative_position_id = GER_the_crown_of_the_romans
-		cost = 5
-		completion_reward = {
-			
-		}
-	}
-
-	focus = {
-		id = GER_a_realm_of_blood_and_steel
-		icon = GFX
-		prerequisite = { focus = GER_revive_the_prussian_tradition focus = GER_restore_the_officer_corps_prestige }
-
-		x = 1
-		y = 1
-		relative_position_id = GER_revive_the_prussian_tradition
-		cost = 5
-		completion_reward = {
-			
-		}
-	}
-
-	focus = {
-		id = GER_a_kaiser_for_all_germans
-		icon = GFX
-		prerequisite = { focus = GER_duties_of_the_free_cities focus = GER_against_centralized_tyranny }
-
-		x = 1
-		y = 1
-		relative_position_id = GER_duties_of_the_free_cities
-		cost = 5
-		completion_reward = {
-			
-		}
-	}
-
-	focus = {
-		id = GER_the_vienna_ultimatum
-		icon = GFX
-		prerequisite = { focus = GER_greater_germany }
-		prerequisite = { focus = GER_the_greater_germany_doctrine }
-		x = -4.5
-		y = 2
-		relative_position_id = GER_recall_the_hohenzollerns
-		cost = 5
-		completion_reward = {
-			
-		}
-	}
-
-	focus = {
-		id = GER_guardians_of_western_civilization
-		icon = GFX
-		prerequisite = { focus = GER_a_kaiser_for_all_germans }
-
-		x = -1
-		y = 1
-		relative_position_id = GER_a_kaiser_for_all_germans
-		cost = 5
-		completion_reward = {
-			
-		}
-	}
-
-	focus = {
-		id = GER_protector_of_christendom
-		icon = GFX
-		prerequisite = { focus = GER_a_kaiser_for_all_germans }
-
-		x = 1
-		y = 1
-		relative_position_id = GER_a_kaiser_for_all_germans
-		cost = 5
-		completion_reward = {
-			
-		}
-	}
-
-	focus = {
-		id = GER_sieze_the_habsburg_legacy
-		icon = GFX
-		prerequisite = { focus = GER_the_vienna_ultimatum }
-
-		x = -1
-		y = 1
-		relative_position_id = GER_the_vienna_ultimatum
-		cost = 5
-		completion_reward = {
-			
-		}
-	}
-
-	focus = {
-		id = GER_dissolve_the_austrian_state
-		icon = GFX
-		prerequisite = { focus = GER_the_vienna_ultimatum }
-
-		x = 1
-		y = 1
-		relative_position_id = GER_the_vienna_ultimatum
-		cost = 5
-		completion_reward = {
-			
-		}
-	}
-
-	focus = {
-		id = GER_reclaim_the_austrian_crownlands
-		icon = GFX
-		prerequisite = { focus = GER_reforge_the_bundstat }
-		prerequisite = { focus = GER_rehabilitate_the_imperial_colors }
-
-		x = 7.5
-		y = 3
-		relative_position_id = GER_the_german_national_revival
-		cost = 5
-		completion_reward = {
-			
-		}
-	}
-
-	focus = {
-		id = GER_crush_czech_particularism
-		icon = GFX
-		prerequisite = { focus = GER_sieze_the_habsburg_legacy }
-
-		x = 0
-		y = 1
-		relative_position_id = GER_sieze_the_habsburg_legacy
-		cost = 5
-		completion_reward = {
-			
-		}
-	}
-
-	focus = {
-		id = GER_protect_the_sudeten_germans
-		icon = GFX
-		prerequisite = { focus = GER_dissolve_the_austrian_state }
-
-		x = 0
-		y = 1
-		relative_position_id = GER_dissolve_the_austrian_state
-		cost = 5
-		completion_reward = {
-			
-		}
-	}
-
-	focus = {
-		id = GER_the_bohemian_settlement
-		icon = GFX
-		prerequisite = { focus = GER_reclaim_the_austrian_crownlands }
-
-		x = -1
-		y = 1
-		relative_position_id = GER_reclaim_the_austrian_crownlands
-		cost = 5
-		completion_reward = {
-			
-		}
-	}
-
-	focus = {
-		id = GER_the_empire_of_destiny
-		icon = GFX
-		prerequisite = { focus = GER_reclaim_the_austrian_crownlands }
-
-		x = 1
-		y = 1
-		relative_position_id = GER_reclaim_the_austrian_crownlands
-		cost = 5
-		completion_reward = {
-			
-		}
-	}
-
-	focus = {
-		id = GER_the_question_of_the_polish_corridor
-		icon = GFX
-		prerequisite = { focus = GER_crush_czech_particularism }
-
-		x = 0
-		y = 1
-		relative_position_id = GER_crush_czech_particularism
-		cost = 5
-		completion_reward = {
-			
-		}
-	}
-
-	focus = {
-		id = GER_reclaim_afrika
-		icon = GFX
-		prerequisite = { focus = GER_protect_the_sudeten_germans }
-
-		x = 0
-		y = 1
-		relative_position_id = GER_protect_the_sudeten_germans
-		cost = 5
-		completion_reward = {
-			
-		}
-	}
-
-	focus = {
-		id = GER_restore_the_burgundian_march
-		icon = GFX
-		prerequisite = { focus = GER_the_bohemian_settlement focus = GER_the_empire_of_destiny }
-
-		x = 1
-		y = 1
-		relative_position_id = GER_the_bohemian_settlement
-		cost = 5
-		completion_reward = {
-			
-		}
-	}
-
-	focus = {
-		id = GER_control_the_north_sea_coast
-		icon = GFX
-		prerequisite = { focus = GER_the_question_of_the_polish_corridor }
-
-		x = 0
-		y = 1
-		relative_position_id = GER_the_question_of_the_polish_corridor
-		cost = 5
-		completion_reward = {
-			
-		}
-	}
-
-	focus = {
-		id = GER_strategic_security_of_the_rhine
-		icon = GFX
-		prerequisite = { focus = GER_reclaim_afrika }
-
-		x = 0
-		y = 1
-		relative_position_id = GER_reclaim_afrika
-		cost = 5
-		completion_reward = {
-			
-		}
-	}
-
-	focus = {
-		id = GER_inherit_the_imperial_legacy
-		icon = GFX
-		prerequisite = { focus = GER_restore_the_burgundian_march }
-
-		x = -1
-		y = 1
-		relative_position_id = GER_restore_the_burgundian_march
-		cost = 5
-		completion_reward = {
-			
-		}
-	}
-
-	focus = {
-		id = GER_the_low_countries_in_the_circle
-		icon = GFX
-		prerequisite = { focus = GER_restore_the_burgundian_march }
-
-		x = 1
-		y = 1
-		relative_position_id = GER_restore_the_burgundian_march
-		cost = 5
-		completion_reward = {
-			
-		}
-	}
-
-	focus = {
-		id = GER_the_german_century
-		icon = GFX
-		prerequisite = { focus = GER_control_the_north_sea_coast focus = GER_strategic_security_of_the_rhine }
-
-		x = 1
-		y = 1
-		relative_position_id = GER_control_the_north_sea_coast
-		cost = 5
-		completion_reward = {
-			
-		}
-	}
-
-	focus = {
-		id = GER_the_banner_of_the_black_eagle
-		icon = GFX
-		prerequisite = { focus = GER_inherit_the_imperial_legacy }
-
-		x = 0
-		y = 1
-		relative_position_id = GER_inherit_the_imperial_legacy
-		cost = 5
-		completion_reward = {
-			
-		}
-	}
-
-	focus = {
-		id = GER_the_italian_question
-		icon = GFX
-		prerequisite = { focus = GER_the_low_countries_in_the_circle }
-
-		x = 0
-		y = 1
-		relative_position_id = GER_the_low_countries_in_the_circle
-		cost = 5
-		completion_reward = {
-			
-		}
-	}
-
-	focus = {
-		id = GER_destroy_bolshevism
-		icon = GFX
-		prerequisite = { focus = GER_the_german_century }
-
-		x = 0
-		y = 1
-		relative_position_id = GER_the_german_century
-		cost = 5
-		completion_reward = {
-			
-		}
-	}
-
-	focus = {
-		id = GER_the_lombard_crown
-		icon = GFX
-		prerequisite = { focus = GER_the_banner_of_the_black_eagle focus = GER_the_italian_question }
-
-		x = 1
-		y = 1
-		relative_position_id = GER_the_banner_of_the_black_eagle
-		cost = 5
-		completion_reward = {
-			
-		}
-	}
-
-	focus = {
-		id = GER_revive_the_prussian_duchy
-		icon = GFX
-		prerequisite = { focus = GER_the_lombard_crown }
-
-		x = -1
-		y = 1
-		relative_position_id = GER_the_lombard_crown
-		cost = 5
-		completion_reward = {
-			
-		}
-	}
-
-	focus = {
-		id = GER_the_shield_of_europe
-		icon = GFX
-		prerequisite = { focus = GER_the_lombard_crown }
-
-		x = 1
-		y = 1
-		relative_position_id = GER_the_lombard_crown
-		cost = 5
-		completion_reward = {
-			
-		}
-	}
-
 	#####################
 	#####################
 	#### REALPOLITIK ####
@@ -28185,7 +27895,22 @@ focus_tree = {
 								state = 83
 								state = 82
 								state = 45
+								state = 764
 								state = 975
+								state = 1560
+								state = 1704
+								state = 1705
+								state = 1722
+								state = 1148
+								state = 1294
+								state = 1309
+								state = 1310
+								state = 1387
+								state = 1410
+								state = 1477
+								state = 1478
+								state = 1479
+								state = 1480
 							}
 						}
 						add_claim_by = HUN
@@ -28207,7 +27932,22 @@ focus_tree = {
 								state = 83
 								state = 82
 								state = 45
+								state = 764
 								state = 975
+								state = 1560
+								state = 1704
+								state = 1705
+								state = 1722
+								state = 1148
+								state = 1294
+								state = 1309
+								state = 1310
+								state = 1387
+								state = 1410
+								state = 1477
+								state = 1478
+								state = 1479
+								state = 1480
 							}
 						}
 						transfer_state_to = HUN
@@ -28407,7 +28147,7 @@ focus_tree = {
 			any_other_country = {
 				is_in_faction_with = ROOT
 			}
-			64 = {
+			1269 = {
 				is_fully_controlled_by = ROOT
 			}
 		}
@@ -28445,17 +28185,17 @@ focus_tree = {
 				custom_effect_tooltip = generic_skip_one_line_tt
 				custom_effect_tooltip = GER_build_volkshalle_landmark_tt
 				hidden_effect = {
-					64 = {
+					1269 = {
 						remove_building = {
 						    type = landmark_berlin_reichstag
 						    level = 1
-						    province = 6521
+						    province = 13637
 						}
 						add_building_construction = {
 						    type = landmark_berlin_volkshalle
 						    level = 1
 						    instant_build = yes
-						    province = 6521
+						    province = 13637
 						}
 					}
 				}
@@ -28572,17 +28312,80 @@ focus_tree = {
 				every_state = {
 					limit = {
 						OR = {
-							state = 102 #N Slovenia
-							state = 853 #Ljubljana
-							state = 103 #Dalmatia
-							state = 104 #Bosnia
-							state = 804 #Herzegovina
-							state = 109 #Croatia
-							state = 155 #N Transnubia
-							state = 43 #N Hungary
-							state = 973 #Bacs-Kiskun
-							state = 974 #S Transnubia
-							state = 154 #Tiszantul
+							state = 102
+							state = 853
+							state = 103
+							state = 104
+							state = 804
+							state = 109
+							state = 45
+							state = 83
+							state = 76
+							state = 84
+							state = 764
+							state = 82
+							state = 848
+							state = 153
+							state = 152
+							state = 4
+							state = 975
+							state = 976
+							state = 69
+							state = 9
+							state = 75
+							state = 74
+							state = 72
+							state = 70
+							state = 664
+							state = 71
+							state = 73
+							state = 155
+							state = 43
+							state = 973
+							state = 974
+							state = 154
+							
+							state = 972
+							state = 1608
+							state = 1553
+							state = 1555
+							state = 1556
+							state = 1560
+							state = 1278
+							state = 1235
+							state = 1700
+							state = 1703
+							state = 1704
+							state = 1705
+							state = 1706
+							state = 1707
+							state = 1711
+							state = 1712
+							state = 1713
+							state = 1716
+							state = 1717
+							state = 1718
+							state = 1722
+							state = 1143
+							state = 1144
+							state = 1145
+							state = 1146
+							state = 1147
+							state = 1148
+							state = 1149
+							state = 1294
+							state = 1296
+							state = 1309
+							state = 1310
+							state = 1384
+							state = 1387
+							state = 1388
+							state = 1390
+							state = 1410
+							state = 1477
+							state = 1478
+							state = 1479
+							state = 1480
 						}
 						NOT = { 
 							is_claimed_by = ROOT
@@ -28698,6 +28501,12 @@ focus_tree = {
 							state_is_fully_controlled_by_ROOT_subject_or_faction_member = yes
 						}
 					}
+					1608 = {
+						OR = {
+							controller = { has_war_with = ROOT }
+							state_is_fully_controlled_by_ROOT_subject_or_faction_member = yes
+						}
+					}
 				}
 			}
 		}
@@ -28714,6 +28523,8 @@ focus_tree = {
 						state = 69
 						state = 74
 						state = 972
+						state = 1608
+						state = 1556
 					}
 					controller = {
 						NOT = {
@@ -28770,6 +28581,9 @@ focus_tree = {
 									state = 75
 									state = 74
 									state = 972
+									state = 1608
+									state = 1555
+									state = 1556
 								}
 							}
 							transfer_state_to = ROOT
@@ -28801,6 +28615,12 @@ focus_tree = {
 											state = 72
 											state = 71
 											state = 73
+											state = 1560
+											state = 1146
+											state = 1147
+											state = 1148
+											state = 1149
+											state = 1294
 										}
 									}
 									transfer_state_to = HUN
@@ -28821,6 +28641,12 @@ focus_tree = {
 											state = 72
 											state = 71
 											state = 73
+											state = 1560
+											state = 1146
+											state = 1147
+											state = 1148
+											state = 1149
+											state = 1294
 										}
 									}
 									transfer_state_to = AUS
@@ -28851,6 +28677,12 @@ focus_tree = {
 											#state = 72
 											state = 71
 											state = 73
+											state = 1560
+											state = 1146
+											state = 1147
+											state = 1148
+											state = 1149
+											state = 1294
 										}
 									}
 									transfer_state_to = HUN
@@ -28871,6 +28703,12 @@ focus_tree = {
 											#state = 72
 											state = 71
 											state = 73
+											state = 1560
+											state = 1146
+											state = 1147
+											state = 1148
+											state = 1149
+											state = 1294
 										}
 									}
 									transfer_state_to = HUN
@@ -28897,6 +28735,9 @@ focus_tree = {
 							state = 75
 							state = 74
 							state = 972
+							state = 1608
+							state = 1555
+							state = 1556
 						}
 						controller = {
 							NOT = {
@@ -28922,6 +28763,15 @@ focus_tree = {
 							owns_state = 75
 							owns_state = 74
 							owns_state = 972
+							owns_state = 1608
+							owns_state = 1555
+							owns_state = 1556
+							owns_state = 1560
+							owns_state = 1146
+							owns_state = 1147
+							owns_state = 1148
+							owns_state = 1149
+							owns_state = 1294
 						}
 						NOT = {
 							is_subject_of = ROOT
@@ -29153,6 +29003,16 @@ focus_tree = {
 							state = 89
 							state = 91
 							state = 72
+							state = 1528
+							state = 1529
+							state = 1531
+							state = 1532
+							state = 1144
+							state = 1145
+							state = 1385
+							state = 1386
+							state = 1399
+							state = 1483
 						}
 						NOT = {
 							is_claimed_by = AUS
@@ -29177,6 +29037,16 @@ focus_tree = {
 							state = 89
 							state = 91
 							state = 72
+							state = 1528
+							state = 1529
+							state = 1531
+							state = 1532
+							state = 1144
+							state = 1145
+							state = 1385
+							state = 1386
+							state = 1399
+							state = 1483
 						}
 						NOT = {
 							is_claimed_by = HUN
@@ -29202,6 +29072,16 @@ focus_tree = {
 							89 = { is_owned_and_controlled_by = PREV }
 							91 = { is_owned_and_controlled_by = PREV }
 							72 = { is_owned_and_controlled_by = PREV }
+							1528 = { is_owned_and_controlled_by = PREV }
+							1529 = { is_owned_and_controlled_by = PREV }
+							1531 = { is_owned_and_controlled_by = PREV }
+							1532 = { is_owned_and_controlled_by = PREV }
+							1144 = { is_owned_and_controlled_by = PREV }
+							1145 = { is_owned_and_controlled_by = PREV }
+							1385 = { is_owned_and_controlled_by = PREV }
+							1386 = { is_owned_and_controlled_by = PREV }
+							1399 = { is_owned_and_controlled_by = PREV }
+							1483 = { is_owned_and_controlled_by = PREV }
 						}
 						NOT = {
 							has_war_with = ROOT
@@ -29232,6 +29112,16 @@ focus_tree = {
 										state = 89
 										state = 91
 										state = 72
+										state = 1528
+										state = 1529
+										state = 1531
+										state = 1532
+										state = 1144
+										state = 1145
+										state = 1385
+										state = 1386
+										state = 1399
+										state = 1483
 									}
 								}
 								transfer_state_to = AUS
@@ -29248,6 +29138,16 @@ focus_tree = {
 										state = 89
 										state = 91
 										state = 72
+										state = 1528
+										state = 1529
+										state = 1531
+										state = 1532
+										state = 1144
+										state = 1145
+										state = 1385
+										state = 1386
+										state = 1399
+										state = 1483
 									}
 								}
 								transfer_state_to = HUN
@@ -29265,6 +29165,16 @@ focus_tree = {
 								89 = { is_owned_and_controlled_by = PREV }
 								91 = { is_owned_and_controlled_by = PREV }
 								72 = { is_owned_and_controlled_by = PREV }
+								1528 = { is_owned_and_controlled_by = PREV }
+								1529 = { is_owned_and_controlled_by = PREV }
+								1531 = { is_owned_and_controlled_by = PREV }
+								1532 = { is_owned_and_controlled_by = PREV }
+								1144 = { is_owned_and_controlled_by = PREV }
+								1145 = { is_owned_and_controlled_by = PREV }
+								1385 = { is_owned_and_controlled_by = PREV }
+								1386 = { is_owned_and_controlled_by = PREV }
+								1399 = { is_owned_and_controlled_by = PREV }
+								1483 = { is_owned_and_controlled_by = PREV }
 							}
 							NOT = {
 								has_war_with = ROOT
@@ -29293,6 +29203,16 @@ focus_tree = {
 									state = 89
 									state = 91
 									state = 72
+									state = 1528
+									state = 1529
+									state = 1531
+									state = 1532
+									state = 1144
+									state = 1145
+									state = 1385
+									state = 1386
+									state = 1399
+									state = 1483
 								}
 							}
 							transfer_state_to = AUS
@@ -29307,6 +29227,16 @@ focus_tree = {
 									state = 89
 									state = 91
 									state = 72
+									state = 1528
+									state = 1529
+									state = 1531
+									state = 1532
+									state = 1144
+									state = 1145
+									state = 1385
+									state = 1386
+									state = 1399
+									state = 1483
 								}
 							}
 							transfer_state_to = HUN
@@ -29421,6 +29351,72 @@ focus_tree = {
 							state_is_fully_controlled_by_ROOT_subject_or_faction_member = yes
 						}
 					}
+					1704 = {
+						OR = {
+							controller = { has_war_with = ROOT }
+							state_is_fully_controlled_by_ROOT_subject_or_faction_member = yes
+						}
+					}
+					1705 = {
+						OR = {
+							controller = { has_war_with = ROOT }
+							state_is_fully_controlled_by_ROOT_subject_or_faction_member = yes
+						}
+					}
+					1722 = {
+						OR = {
+							controller = { has_war_with = ROOT }
+							state_is_fully_controlled_by_ROOT_subject_or_faction_member = yes
+						}
+					}
+					1309 = {
+						OR = {
+							controller = { has_war_with = ROOT }
+							state_is_fully_controlled_by_ROOT_subject_or_faction_member = yes
+						}
+					}
+					1310 = {
+						OR = {
+							controller = { has_war_with = ROOT }
+							state_is_fully_controlled_by_ROOT_subject_or_faction_member = yes
+						}
+					}
+					1387 = {
+						OR = {
+							controller = { has_war_with = ROOT }
+							state_is_fully_controlled_by_ROOT_subject_or_faction_member = yes
+						}
+					}
+					1410 = {
+						OR = {
+							controller = { has_war_with = ROOT }
+							state_is_fully_controlled_by_ROOT_subject_or_faction_member = yes
+						}
+					}
+					1477 = {
+						OR = {
+							controller = { has_war_with = ROOT }
+							state_is_fully_controlled_by_ROOT_subject_or_faction_member = yes
+						}
+					}
+					1478 = {
+						OR = {
+							controller = { has_war_with = ROOT }
+							state_is_fully_controlled_by_ROOT_subject_or_faction_member = yes
+						}
+					}
+					1479 = {
+						OR = {
+							controller = { has_war_with = ROOT }
+							state_is_fully_controlled_by_ROOT_subject_or_faction_member = yes
+						}
+					}
+					1480 = {
+						OR = {
+							controller = { has_war_with = ROOT }
+							state_is_fully_controlled_by_ROOT_subject_or_faction_member = yes
+						}
+					}
 				}
 				else = {
 					OR = {
@@ -29467,6 +29463,72 @@ focus_tree = {
 									state_is_fully_controlled_by_ROOT_subject_or_faction_member = yes
 								}
 							}
+							1704 = {
+								OR = {
+									controller = { has_war_with = ROOT }
+									state_is_fully_controlled_by_ROOT_subject_or_faction_member = yes
+								}
+							}
+							1705 = {
+								OR = {
+									controller = { has_war_with = ROOT }
+									state_is_fully_controlled_by_ROOT_subject_or_faction_member = yes
+								}
+							}
+							1722 = {
+								OR = {
+									controller = { has_war_with = ROOT }
+									state_is_fully_controlled_by_ROOT_subject_or_faction_member = yes
+								}
+							}
+							1309 = {
+								OR = {
+									controller = { has_war_with = ROOT }
+									state_is_fully_controlled_by_ROOT_subject_or_faction_member = yes
+								}
+							}
+							1310 = {
+								OR = {
+									controller = { has_war_with = ROOT }
+									state_is_fully_controlled_by_ROOT_subject_or_faction_member = yes
+								}
+							}
+							1387 = {
+								OR = {
+									controller = { has_war_with = ROOT }
+									state_is_fully_controlled_by_ROOT_subject_or_faction_member = yes
+								}
+							}
+							1410 = {
+								OR = {
+									controller = { has_war_with = ROOT }
+									state_is_fully_controlled_by_ROOT_subject_or_faction_member = yes
+								}
+							}
+							1477 = {
+								OR = {
+									controller = { has_war_with = ROOT }
+									state_is_fully_controlled_by_ROOT_subject_or_faction_member = yes
+								}
+							}
+							1478 = {
+								OR = {
+									controller = { has_war_with = ROOT }
+									state_is_fully_controlled_by_ROOT_subject_or_faction_member = yes
+								}
+							}
+							1479 = {
+								OR = {
+									controller = { has_war_with = ROOT }
+									state_is_fully_controlled_by_ROOT_subject_or_faction_member = yes
+								}
+							}
+							1480 = {
+								OR = {
+									controller = { has_war_with = ROOT }
+									state_is_fully_controlled_by_ROOT_subject_or_faction_member = yes
+								}
+							}
 						}
 					}
 				}
@@ -29490,6 +29552,17 @@ focus_tree = {
 							state = 83
 							state = 84
 							state = 76
+							state = 1704
+							state = 1705
+							state = 1722
+							state = 1309
+							state = 1310
+							state = 1387
+							state = 1410
+							state = 1477
+							state = 1478
+							state = 1479
+							state = 1480
 						}
 						NOT = {
 							OR = {
@@ -29521,6 +29594,17 @@ focus_tree = {
 							state = 83
 							state = 84
 							state = 76
+							state = 1704
+							state = 1705
+							state = 1722
+							state = 1309
+							state = 1310
+							state = 1387
+							state = 1410
+							state = 1477
+							state = 1478
+							state = 1479
+							state = 1480
 						}
 						NOT = {
 							OR = {
@@ -29553,6 +29637,16 @@ focus_tree = {
 							83 = { is_owned_and_controlled_by = PREV }
 							84 = { is_owned_and_controlled_by = PREV }
 							76 = { is_owned_and_controlled_by = PREV }
+							1704 = { is_owned_and_controlled_by = PREV }
+							1705 = { is_owned_and_controlled_by = PREV }
+							1722 = { is_owned_and_controlled_by = PREV }
+							1310 = { is_owned_and_controlled_by = PREV }
+							1387 = { is_owned_and_controlled_by = PREV }
+							1410 = { is_owned_and_controlled_by = PREV }
+							1477 = { is_owned_and_controlled_by = PREV }
+							1478 = { is_owned_and_controlled_by = PREV }
+							1479 = { is_owned_and_controlled_by = PREV }
+							1480 = { is_owned_and_controlled_by = PREV }
 						}
 						NOT = {
 							has_war_with = ROOT
@@ -29582,6 +29676,17 @@ focus_tree = {
 								state = 83
 								state = 84
 								state = 76
+								state = 1704
+								state = 1705
+								state = 1722
+								state = 1309
+								state = 1310
+								state = 1387
+								state = 1410
+								state = 1477
+								state = 1478
+								state = 1479
+								state = 1480
 							}
 							NOT = {
 								is_owned_and_controlled_by = HUN
@@ -29608,6 +29713,17 @@ focus_tree = {
 								state = 83
 								state = 84
 								state = 76
+								state = 1704
+								state = 1705
+								state = 1722
+								state = 1309
+								state = 1310
+								state = 1387
+								state = 1410
+								state = 1477
+								state = 1478
+								state = 1479
+								state = 1480
 							}
 							NOT = {
 								OR = {
@@ -29902,6 +30018,8 @@ focus_tree = {
 			add_state_claim = 850
 			add_state_claim = 852
 			add_state_claim = 736
+			add_state_claim = 1708
+			add_state_claim = 1169
 
 			custom_effect_tooltip = generic_skip_one_line_tt 
 			
@@ -29951,7 +30069,7 @@ focus_tree = {
 
 		available = {
 			is_subject = no
-			64 = {
+			1269 = {
 				is_fully_controlled_by = ROOT
 			}
 		}
@@ -29976,17 +30094,17 @@ focus_tree = {
 				custom_effect_tooltip = generic_skip_one_line_tt
 				custom_effect_tooltip = GER_build_volkshalle_landmark_tt
 				hidden_effect = {
-					64 = {
+					1269 = {
 						remove_building = {
 						    type = landmark_berlin_reichstag
 						    level = 1
-						    province = 6521
+						    province = 13637
 						}
 						add_building_construction = {
 						    type = landmark_berlin_volkshalle
 						    level = 1
 						    instant_build = yes
-						    province = 6521
+						    province = 13637
 						}
 					}
 				}
@@ -30238,10 +30356,28 @@ focus_tree = {
 							state = 455
 							state = 454
 							state = 855
-							state = 679
 							state = 856
 							state = 293
-							state = 453
+							state = 1054
+							state = 1133
+							state = 1134
+							state = 1135
+							state = 1136
+							state = 1137
+							state = 1138
+							state = 1139
+							state = 1140
+							state = 1276
+							state = 1277
+							state = 1011
+							state = 1279
+							state = 1280
+							state = 1281
+							state = 1282
+							state = 1283
+							state = 1284
+							state = 1285
+							state = 1330
 						}
 						NOT = {
 							is_claimed_by = TUR
@@ -30699,18 +30835,27 @@ focus_tree = {
 				
 				effect_tooltip = {
 					custom_effect_tooltip = tributes_from_lithuania_tt
-					IF = {
+					every_state = {
+						limit = {
+							OR = {
+								state = 188
+								state = 1172
+							}
+							is_owned_by = LIT
+							is_controlled_by = LIT
+						}
+						ROOT = { transfer_state = PREV }
+						add_core_of = ROOT
+					}
+					if = {
 						limit = {
 							LIT = {
-								owns_state = 188
+								NOT = {
+									owns_state = 188
+									owns_state = 1172
+								}
 							}
 						}
-						188 = {
-							transfer_state_to = ROOT
-							add_core_of = ROOT
-						}
-					}
-					ELSE = {
 						LIT = {
 							add_ideas = GER_paying_tributes_to_germany_idea
 						}
@@ -30817,6 +30962,8 @@ focus_tree = {
 					owns_state = 86
 					owns_state = 762
 					owns_state = 807
+					owns_state = 1554
+					owns_state = 1389
 				}
 			}
 		}
@@ -30832,8 +30979,9 @@ focus_tree = {
 				transfer_state = 85  
 				transfer_state = 807 
 				transfer_state = 86 
-				transfer_state = 762
-				
+				transfer_state = 762 
+				transfer_state = 1554
+				transfer_state = 1389
 				ROOT = {
 					add_ideas = anti_soviet_pact 
 				}
@@ -31031,61 +31179,7 @@ focus_tree = {
 			custom_effect_tooltip = generic_skip_one_line_tt
 			custom_effect_tooltip = GER_liberate_oppressed_people_tt
 			custom_effect_tooltip = generic_skip_one_line_tt
-
-			IF = {
-				limit = {
-					AND = {
-						218 = {
-							NOT = {
-								is_core_of = DON
-							}
-						}
-						245 = {
-							NOT = {
-								is_core_of = DON
-							}
-						}
-						238 = {
-							NOT = {
-								is_core_of = DON
-							}
-						}
-					}
-				}
-				custom_effect_tooltip = GER_liberate_oppressed_people_cossacks_tt
-				DON = {
-					add_state_core = 218
-					add_state_core = 245
-					add_state_core = 238
-				}
-			}
-			IF = {
-				limit = {
-					AND = {
-						234 = {
-							NOT = {
-								is_core_of = KUB
-							}
-						}
-						233 = {
-							NOT = {
-								is_core_of = KUB
-							}
-						}
-						235 = {
-							NOT = {
-								is_core_of = KUB
-							}
-						}
-					}
-				}
-				KUB = {
-					add_state_core = 234
-					add_state_core = 233
-					add_state_core = 235
-				}
-			}
-
+			custom_effect_tooltip = GER_liberate_oppressed_people_cossacks_tt
 		}
 	}
 
@@ -31851,28 +31945,19 @@ focus_tree = {
 		available = {
 			is_subject = no
 			has_army_manpower = { size > 599999 }
-			NOT = {
-				188 = {
-					is_controlled_by = ROOT
-					OWNER = {
-						is_ally_with = ROOT
-					}
-					controller = {
-						is_ally_with = ROOT
-					}
+			any_state = {
+				OR = {
+					state = 188
+					state = 1172
 				}
+				OWNER = { NOT = { is_in_faction_with = ROOT } }
 			}
 		}
 
 		bypass = {
-			188 = {
-				is_controlled_by = ROOT
-				OWNER = {
-					is_ally_with = ROOT
-				}
-				controller = {
-					is_ally_with = ROOT
-				}
+			AND = {
+				controls_state = 188
+				controls_state = 1172
 			}
 		}
 
@@ -31884,14 +31969,26 @@ focus_tree = {
 
 			add_named_threat = { threat = 2 name = GER_demand_memel_threat }
 
-			188 = { #Memel
-				add_claim_by = GER
-				controller = {
-					country_event = { 
-						id = baltic.4 
-						days = 1
-						random_days = 3
+			188 = { add_claim_by = GER }
+			1172 = { add_claim_by = GER }
+
+			every_country = {
+				limit = {
+					OR = {
+						AND = {
+							controls_state = 188
+							owns_state = 188
+						}
+						AND = {
+							controls_state = 1172
+							owns_state = 1172
+						}
 					}
+				}
+				country_event = { 
+					id = baltic.4 
+					days = 1
+					random_days = 3
 				}
 			}
 		}
@@ -31982,6 +32079,8 @@ focus_tree = {
 					owns_state = 807 #Gdnyia
 					owns_state = 86 #Poznan
 					owns_state = 762 #Katovice
+					owns_state = 1554
+					owns_state = 1389
 				}
 			}
 		}
@@ -32005,6 +32104,8 @@ focus_tree = {
 			807 = { add_claim_by = GER } #Gdnyia
 			86 = { add_claim_by = GER } #Poznan
 			762 = { add_claim_by = GER } #Katovice
+			1554 = { add_claim_by = GER } 
+			1389 = { add_claim_by = GER } 
 
 			custom_effect_tooltip = generic_skip_one_line_tt
 
@@ -32018,6 +32119,8 @@ focus_tree = {
 							state = 807 #Gdnyia
 							state = 86 #Poznan
 							state = 762 #Katovice
+							state = 1554
+							state = 1389
 						}
 						is_fully_controlled_by = POL
 					}
@@ -32044,6 +32147,8 @@ focus_tree = {
 									state = 807 #Gdnyia
 									state = 86 #Poznan
 									state = 762 #Katovice
+									state = 1554
+									state = 1389
 								}
 							}
 							display_individual_scopes = yes
@@ -32082,6 +32187,13 @@ focus_tree = {
 					owns_state = 87
 					owns_state = 98
 					owns_state = 97
+					owns_state = 1141
+					owns_state = 1241
+					owns_state = 1242
+					owns_state = 1245
+					owns_state = 1252
+					owns_state = 1481
+					owns_state = 1482
 				}
 			}
 		}
@@ -32105,6 +32217,13 @@ focus_tree = {
 			87 = { add_claim_by = GER } #Lodz
 			98 = { add_claim_by = GER } #Plock
 			97 = { add_claim_by = GER } #Byalistock
+			1141 = { add_claim_by = GER }
+			1241 = { add_claim_by = GER }
+			1242 = { add_claim_by = GER }
+			1245 = { add_claim_by = GER }
+			1252 = { add_claim_by = GER }
+			1481 = { add_claim_by = GER }
+			1482 = { add_claim_by = GER }
 
 			custom_effect_tooltip = generic_skip_one_line_tt
 
@@ -32118,6 +32237,13 @@ focus_tree = {
 							state = 87 #Lodz
 							state = 98 #Plock
 							state = 97 #Byalistock
+							state = 1141
+							state = 1241
+							state = 1242
+							state = 1245
+							state = 1252
+							state = 1481
+							state = 1482
 						}
 						is_fully_controlled_by = POL
 					}
@@ -32938,7 +33064,7 @@ focus_tree = {
 			}
 			IF = { # Ardennes
 				limit = {
-					980 = {
+					1250 = {
 						NOT = {
 							is_claimed_by = ROOT
 							controller = {
@@ -32947,7 +33073,7 @@ focus_tree = {
 						}
 					}
 				}
-				980 = {
+				1250 = {
 					add_claim_by = ROOT
 				}
 				custom_effect_tooltip = generic_skip_one_line_tt
@@ -33038,9 +33164,20 @@ focus_tree = {
 			}
 
 			add_state_claim = 845
+			add_state_claim = 1514
 			add_state_claim = 3
 			add_state_claim = 151
+			add_state_claim = 1507
+			add_state_claim = 1508
+			add_state_claim = 1509
+			add_state_claim = 1510
+			add_state_claim = 1511
+			add_state_claim = 1512
+			add_state_claim = 1513
+			add_state_claim = 1515
+			add_state_claim = 1516
 			add_state_claim = 847
+			add_state_claim = 1506
 			IF = {
 				limit = {
 					ITA = {
@@ -33176,24 +33313,24 @@ focus_tree = {
 				name = 6583_german_unification_lux_name
 			}
 			8 = {
-				set_state_name = 8_lux_name
+				#set_state_name = 8_lux_name
 				add_extra_state_shared_building_slots = 4
 			}
 			IF = {
 				limit = {
 					NOT = {
 						is_in_faction_with = BEL
-						980 = {
+						1250 = {
 							is_controlled_by = ROOT
 						}
 					}
 				}
 				custom_effect_tooltip = generic_skip_one_line_tt
 				custom_effect_tooltip = GER_core_ardennes_tt
-				add_state_core = 980
+				add_state_core = 1250
 				effect_tooltip = {
-					980 = {
-						add_extra_state_shared_building_slots = 2
+					1250 = {
+						add_extra_state_shared_building_slots = 1
 					}
 				}
 			}
@@ -33202,14 +33339,14 @@ focus_tree = {
 					NOT = {
 						is_in_faction_with = BEL
 					}
-					980 = {
+					1250 = {
 						is_controlled_by = ROOT
 					}
 				}
 				custom_effect_tooltip = generic_skip_one_line_tt
-				add_state_core = 980
-				980 = {
-					add_extra_state_shared_building_slots = 2
+				add_state_core = 1250
+				1250 = {
+					add_extra_state_shared_building_slots = 1
 				}
 			}
 			IF = {
@@ -33223,7 +33360,22 @@ focus_tree = {
 							847 = {
 								is_controlled_by = ROOT
 							}
+							1506 = {
+								is_controlled_by = ROOT
+							}
 							151 = {
+								is_controlled_by = ROOT
+							}
+							1507 = {
+								is_controlled_by = ROOT
+							}
+							1508 = {
+								is_controlled_by = ROOT
+							}
+							1515 = {
+								is_controlled_by = ROOT
+							}
+							1516 = {
 								is_controlled_by = ROOT
 							}
 						}
@@ -33233,7 +33385,12 @@ focus_tree = {
 				custom_effect_tooltip = GER_core_german_switzerland_tt
 				add_state_core = 3
 				add_state_core = 847
+				add_state_core = 1506
 				add_state_core = 151
+				add_state_core = 1507
+				add_state_core = 1508
+				add_state_core = 1515
+				add_state_core = 1516
 			}
 			else_if = {
 				limit = {
@@ -33248,7 +33405,22 @@ focus_tree = {
 						847 = {
 							is_controlled_by = ROOT
 						}
+						1506 = {
+							is_controlled_by = ROOT
+						}
 						151 = {
+							is_controlled_by = ROOT
+						}
+						1507 = {
+							is_controlled_by = ROOT
+						}
+						1508 = {
+							is_controlled_by = ROOT
+						}
+						1515 = {
+							is_controlled_by = ROOT
+						}
+						1516 = {
 							is_controlled_by = ROOT
 						}
 					}
@@ -33256,7 +33428,12 @@ focus_tree = {
 				custom_effect_tooltip = generic_skip_one_line_tt
 				add_state_core = 3
 				add_state_core = 847
+				add_state_core = 1506
 				add_state_core = 151
+				add_state_core = 1507
+				add_state_core = 1508
+				add_state_core = 1515
+				add_state_core = 1516
 			}
 			IF = {
 				limit = {
@@ -34506,8 +34683,6 @@ focus_tree = {
 		id = GER_the_sino_germanic_pact
 		icon = GFX_focus_GER_the_proud_eagle_and_the_rising_dragon
 		prerequisite = { focus = GER_request_the_return_of_qingdao }
-		
-		enable_automatic_bypass = no
 		
 		x = 0
 		y = 1
@@ -35997,6 +36172,11 @@ focus_tree = {
 			42 = { set_demilitarized_zone = no }
 			51 = { set_demilitarized_zone = no }
 			978 = { set_demilitarized_zone = no }
+			1551 = { set_demilitarized_zone = no }
+			1251 = { set_demilitarized_zone = no }
+			1253 = { set_demilitarized_zone = no }
+			1254 = { set_demilitarized_zone = no }
+			1414 = { set_demilitarized_zone = no }
 
 			custom_effect_tooltip = generic_skip_one_line_tt
 
@@ -36106,7 +36286,10 @@ focus_tree = {
 		completion_reward = {
 			add_ideas = GER_revive_the_kaiserreich
 			custom_effect_tooltip = GER_revive_the_kaiserreich_tt
-			hidden_effect = { set_cosmetic_tag = GER_german_empire }
+			hidden_effect = { 
+				set_cosmetic_tag = GER_german_empire 
+				country_event = { id = ksr.10 days = 2 }
+			}
 			set_party_name = { ideology = neutrality long_name = GER_neutrality_party_kaiserreich_long name = GER_neutrality_party_kaiserreich }
 			set_rule = { can_send_volunteers = yes }
 			add_named_threat = { threat = 5 name = GER_revive_the_kaiserreich }
@@ -37246,9 +37429,9 @@ focus_tree = {
 				}
 				transfer_state = 28
 			}
-			28 = { set_state_name = "Elsass-Lothringen" }
-			set_province_name = { id = 9503 name = "Strassburg" }
-			set_province_name = { id = 678 name = "Mulhausen" }
+			#28 = { set_state_name = "Elsass-Lothringen" }
+			#set_province_name = { id = 9503 name = "Strassburg" }
+			#set_province_name = { id = 678 name = "Mulhausen" }
 			if = {
 				limit = {
 					FRA = {
@@ -37272,10 +37455,16 @@ focus_tree = {
 		}
 
 		bypass = {
-			any_country = {
-				owns_state = 188
-				is_in_faction_with = GER
-			}	
+			AND = {
+				any_country = {
+					controls_state = 188
+					is_in_faction_with = GER
+				}
+				any_country = {
+					controls_state = 1172
+					is_in_faction_with = GER
+				}				
+			}
 		}
 		
 		cancel_if_invalid = yes
@@ -37291,10 +37480,18 @@ focus_tree = {
 		completion_reward = {
 			188 = { add_claim_by = GER }
 			add_named_threat = { threat = 4 name = GER_demand_memel_threat }
-			random_other_country = {
+			every_country = {
 				limit = {
-					owns_state = 188
-					controls_state = 188 
+					OR = {
+						AND = {
+							owns_state = 188
+							controls_state = 188
+						}
+						AND = {
+							owns_state = 1172
+							controls_state = 1172
+						}
+					}
 				}
 				country_event = { 
 					id = baltic.4 
@@ -37304,9 +37501,9 @@ focus_tree = {
 			}
 			if = {
 				limit = {
-					has_full_control_of_state = 5
+					has_full_control_of_state = 1702
 				}
-				5 = {
+				1702 = {
 					custom_effect_tooltip = GER_see_to_the_eastern_front_tt
 					hidden_effect = {
 						add_building_construction = {
@@ -37321,6 +37518,10 @@ focus_tree = {
 							province = 11386
 							instant_build = yes
 						}
+					}
+				}
+				1288 = {
+					hidden_effect = {
 						add_building_construction = {
 							type = bunker
 							level = 2
@@ -37343,6 +37544,16 @@ focus_tree = {
 							province = 11265
 							instant_build = yes
 						}
+					}
+				}
+			}
+			if = {
+				limit = {
+					has_full_control_of_state = 1249
+				}
+				1249 = {
+					custom_effect_tooltip = GER_see_to_the_eastern_front_tt2
+					hidden_effect = {
 						add_building_construction = {
 							type = bunker
 							level = 2
@@ -37358,7 +37569,7 @@ focus_tree = {
 						add_building_construction = {
 							type = bunker
 							level = 2
-							province = 3384
+							province = 13635
 							instant_build = yes
 						}
 					}
@@ -37395,6 +37606,8 @@ focus_tree = {
 					owns_state = 86
 					owns_state = 762
 					owns_state = 807
+					owns_state = 1554
+					owns_state = 1389
 				}
 			}
 		}
@@ -37902,6 +38115,7 @@ focus_tree = {
 			add_stability = 0.05
 			hidden_effect = {
 				set_cosmetic_tag = GER_german_monarchy
+				country_event = { id = ksr.10 days = 2 }
 			}
 		}
 	}
@@ -39213,6 +39427,829 @@ focus_tree = {
 					add_ideas = GER_pool_technical_know_how
 				}
 			}
+		}
+	}
+
+	#### 
+	#### HUGENBERG
+	####
+
+	focus = {
+		id = GER_rule_by_decree
+		icon = GFX
+		prerequisite = { focus = GER_tend_to_the_future_of_germany }
+		mutually_exclusive = { focus = GER_start_the_proletarian_revolution focus = GER_monarchist_sentiment}
+
+		x = 44
+		y = 1
+		relative_position_id = GER_tend_to_the_future_of_germany
+
+		cost = 5
+
+		available = {
+		}
+
+		offset = {
+			x = -50
+			y = 0
+			trigger = {
+				has_game_rule = {
+					rule = obsolete_focus_branches_visibility
+					option = HIDE
+				}
+				has_completed_focus = GER_monarchist_sentiment
+			}
+		}
+
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_POLITICAL_CHARACTER }
+
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = GER_the_industrial_compact
+		icon = GFX
+		prerequisite = { focus = GER_rule_by_decree }
+
+		x = -3
+		y = 1
+		relative_position_id = GER_rule_by_decree
+		cost = 5
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = GER_purge_the_brownshirts
+		icon = GFX
+		prerequisite = { focus = GER_rule_by_decree }
+
+		x = -1
+		y = 1
+		relative_position_id = GER_rule_by_decree
+		cost = 5
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {
+		id = GER_bismarcks_blueprint
+		icon = GFX
+		prerequisite = { focus = GER_rule_by_decree }
+
+		x = 1
+		y = 1
+		relative_position_id = GER_rule_by_decree
+		cost = 5
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {
+		id = GER_beyond_the_beer_hall
+		icon = GFX
+		prerequisite = { focus = GER_rule_by_decree }
+
+		x = 3
+		y = 1
+		relative_position_id = GER_rule_by_decree
+		cost = 5
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {
+		id = GER_emergency_powers_made_permanent
+		icon = GFX
+		prerequisite = { focus = GER_the_industrial_compact }
+
+		x = 0
+		y = 1
+		relative_position_id = GER_the_industrial_compact
+		cost = 2
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {
+		id = GER_national_media_directorate
+		icon = GFX
+		prerequisite = { focus = GER_purge_the_brownshirts }
+
+		x = 0
+		y = 1
+		relative_position_id = GER_purge_the_brownshirts
+		cost = 5
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {
+		id = GER_reassure_the_junker_estates
+		icon = GFX
+		prerequisite = { focus = GER_bismarcks_blueprint }
+
+		x = 0
+		y = 1
+		relative_position_id = GER_bismarcks_blueprint
+		cost = 5
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {
+		id = GER_the_admirals_vision
+		icon = GFX
+		prerequisite = { focus = GER_beyond_the_beer_hall }
+
+		x = 0
+		y = 1
+		relative_position_id = GER_beyond_the_beer_hall
+		cost = 5
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {
+		id = GER_court_the_general_staff
+		icon = GFX
+		prerequisite = { focus = GER_emergency_powers_made_permanent focus = GER_national_media_directorate }
+
+		x = 1
+		y = 1
+		relative_position_id = GER_emergency_powers_made_permanent
+		cost = 5
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {
+		id = GER_neutralize_the_ss_leadership
+		icon = GFX
+		prerequisite = { focus = GER_national_media_directorate focus = GER_reassure_the_junker_estates }
+
+		x = 1
+		y = 1
+		relative_position_id = GER_national_media_directorate
+		cost = 5
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {
+		id = GER_the_prussian_standard
+		icon = GFX
+		prerequisite = { focus = GER_reassure_the_junker_estates focus = GER_the_admirals_vision }
+
+		x = 1
+		y = 1
+		relative_position_id = GER_reassure_the_junker_estates
+		cost = 5
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {
+		id = GER_the_conservative_alternative
+		icon = GFX
+		prerequisite = { focus = GER_court_the_general_staff focus = GER_neutralize_the_ss_leadership }
+
+		x = 1
+		y = 1
+		relative_position_id = GER_court_the_general_staff
+		cost = 5
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {
+		id = GER_meet_with_jung
+		icon = GFX
+		prerequisite = { focus = GER_neutralize_the_ss_leadership focus = GER_the_prussian_standard }
+
+		x = 1
+		y = 1
+		relative_position_id = GER_neutralize_the_ss_leadership
+		cost = 5
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {
+		id = GER_the_german_national_revival
+		icon = GFX
+		prerequisite = { focus = GER_the_conservative_alternative focus = GER_meet_with_jung }
+
+		x = 1
+		y = 1
+		relative_position_id = GER_the_conservative_alternative
+		cost = 5
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {
+		id = GER_recall_the_hohenzollerns
+		icon = GFX
+		prerequisite = { focus = GER_the_german_national_revival }
+		mutually_exclusive = { focus = GER_revive_the_reich_eternal }
+		x = -3.5
+		y = 1
+		relative_position_id = GER_the_german_national_revival
+		cost = 5
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {
+		id = GER_revive_the_reich_eternal
+		icon = GFX
+		prerequisite = { focus = GER_the_german_national_revival }
+		mutually_exclusive = { focus = GER_recall_the_hohenzollerns }
+		x = 3.5
+		y = 1
+		relative_position_id = GER_the_german_national_revival
+		cost = 5
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {
+		id = GER_greater_germany
+		icon = GFX
+		prerequisite = { focus = GER_recall_the_hohenzollerns }
+
+		x = -1
+		y = 1
+		relative_position_id = GER_recall_the_hohenzollerns
+		cost = 5
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {
+		id = GER_the_greater_germany_doctrine
+		icon = GFX
+		prerequisite = { focus = GER_recall_the_hohenzollerns }
+
+		x = 1
+		y = 1
+		relative_position_id = GER_recall_the_hohenzollerns
+		cost = 5
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {
+		id = GER_rehabilitate_the_imperial_colors
+		icon = GFX
+		prerequisite = { focus = GER_revive_the_reich_eternal }
+
+		x = -1
+		y = 1
+		relative_position_id = GER_revive_the_reich_eternal
+		cost = 5
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {
+		id = GER_reforge_the_bundstat
+		icon = GFX
+		prerequisite = { focus = GER_revive_the_reich_eternal }
+
+		x = 1
+		y = 1
+		relative_position_id = GER_revive_the_reich_eternal
+		cost = 5
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {
+		id = GER_no_more_little_germany
+		icon = GFX
+		prerequisite = { focus = GER_greater_germany }
+
+		x = -1
+		y = 1
+		relative_position_id = GER_greater_germany
+		cost = 5
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {
+		id = GER_complete_the_work_of_bismarck
+		icon = GFX
+		prerequisite = { focus = GER_greater_germany focus = GER_the_greater_germany_doctrine }
+
+		x = 1
+		y = 1
+		relative_position_id = GER_greater_germany
+		cost = 5
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {
+		id = GER_the_german_national_imperative
+		icon = GFX
+		prerequisite = { focus = GER_the_greater_germany_doctrine }
+
+		x = 1
+		y = 1
+		relative_position_id = GER_the_greater_germany_doctrine
+		cost = 5
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {
+		id = GER_heirs_to_aachen
+		icon = GFX
+		prerequisite = { focus = GER_rehabilitate_the_imperial_colors }
+
+		x = -1
+		y = 1
+		relative_position_id = GER_rehabilitate_the_imperial_colors
+		cost = 5
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {
+		id = GER_the_crown_of_the_romans
+		icon = GFX
+		prerequisite = { focus = GER_rehabilitate_the_imperial_colors focus = GER_reforge_the_bundstat }
+
+		x = 1
+		y = 1
+		relative_position_id = GER_rehabilitate_the_imperial_colors
+		cost = 5
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {
+		id = GER_revive_the_imperial_estates
+		icon = GFX
+		prerequisite = { focus = GER_reforge_the_bundstat }
+
+		x = 1
+		y = 1
+		relative_position_id = GER_reforge_the_bundstat
+		cost = 5
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {
+		id = GER_revive_the_prussian_tradition
+		icon = GFX
+		prerequisite = { focus = GER_no_more_little_germany focus = GER_complete_the_work_of_bismarck }
+
+		x = 1
+		y = 1
+		relative_position_id = GER_no_more_little_germany
+		cost = 5
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {
+		id = GER_restore_the_officer_corps_prestige
+		icon = GFX
+		prerequisite = { focus = GER_complete_the_work_of_bismarck focus = GER_the_german_national_imperative }
+
+		x = 1
+		y = 1
+		relative_position_id = GER_complete_the_work_of_bismarck
+		cost = 5
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {
+		id = GER_duties_of_the_free_cities
+		icon = GFX
+		prerequisite = { focus = GER_heirs_to_aachen focus = GER_the_crown_of_the_romans }
+
+		x = 1
+		y = 1
+		relative_position_id = GER_heirs_to_aachen
+		cost = 5
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {
+		id = GER_against_centralized_tyranny
+		icon = GFX
+		prerequisite = { focus = GER_the_crown_of_the_romans focus = GER_revive_the_imperial_estates }
+
+		x = 1
+		y = 1
+		relative_position_id = GER_the_crown_of_the_romans
+		cost = 5
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {
+		id = GER_a_realm_of_blood_and_steel
+		icon = GFX
+		prerequisite = { focus = GER_revive_the_prussian_tradition focus = GER_restore_the_officer_corps_prestige }
+
+		x = 1
+		y = 1
+		relative_position_id = GER_revive_the_prussian_tradition
+		cost = 5
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {
+		id = GER_a_kaiser_for_all_germans
+		icon = GFX
+		prerequisite = { focus = GER_duties_of_the_free_cities focus = GER_against_centralized_tyranny }
+
+		x = 1
+		y = 1
+		relative_position_id = GER_duties_of_the_free_cities
+		cost = 5
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {
+		id = GER_the_vienna_ultimatum
+		icon = GFX
+		prerequisite = { focus = GER_greater_germany }
+		prerequisite = { focus = GER_the_greater_germany_doctrine }
+		x = -4.5
+		y = 2
+		relative_position_id = GER_recall_the_hohenzollerns
+		cost = 5
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {
+		id = GER_guardians_of_western_civilization
+		icon = GFX
+		prerequisite = { focus = GER_a_kaiser_for_all_germans }
+
+		x = -1
+		y = 1
+		relative_position_id = GER_a_kaiser_for_all_germans
+		cost = 5
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {
+		id = GER_protector_of_christendom
+		icon = GFX
+		prerequisite = { focus = GER_a_kaiser_for_all_germans }
+
+		x = 1
+		y = 1
+		relative_position_id = GER_a_kaiser_for_all_germans
+		cost = 5
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {
+		id = GER_sieze_the_habsburg_legacy
+		icon = GFX
+		prerequisite = { focus = GER_the_vienna_ultimatum }
+
+		x = -1
+		y = 1
+		relative_position_id = GER_the_vienna_ultimatum
+		cost = 5
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {
+		id = GER_dissolve_the_austrian_state
+		icon = GFX
+		prerequisite = { focus = GER_the_vienna_ultimatum }
+
+		x = 1
+		y = 1
+		relative_position_id = GER_the_vienna_ultimatum
+		cost = 5
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {
+		id = GER_reclaim_the_austrian_crownlands
+		icon = GFX
+		prerequisite = { focus = GER_reforge_the_bundstat }
+		prerequisite = { focus = GER_rehabilitate_the_imperial_colors }
+
+		x = 7.5
+		y = 3
+		relative_position_id = GER_the_german_national_revival
+		cost = 5
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {
+		id = GER_crush_czech_particularism
+		icon = GFX
+		prerequisite = { focus = GER_sieze_the_habsburg_legacy }
+
+		x = 0
+		y = 1
+		relative_position_id = GER_sieze_the_habsburg_legacy
+		cost = 5
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {
+		id = GER_protect_the_sudeten_germans
+		icon = GFX
+		prerequisite = { focus = GER_dissolve_the_austrian_state }
+
+		x = 0
+		y = 1
+		relative_position_id = GER_dissolve_the_austrian_state
+		cost = 5
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {
+		id = GER_the_bohemian_settlement
+		icon = GFX
+		prerequisite = { focus = GER_reclaim_the_austrian_crownlands }
+
+		x = -1
+		y = 1
+		relative_position_id = GER_reclaim_the_austrian_crownlands
+		cost = 5
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {
+		id = GER_the_empire_of_destiny
+		icon = GFX
+		prerequisite = { focus = GER_reclaim_the_austrian_crownlands }
+
+		x = 1
+		y = 1
+		relative_position_id = GER_reclaim_the_austrian_crownlands
+		cost = 5
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {
+		id = GER_the_question_of_the_polish_corridor
+		icon = GFX
+		prerequisite = { focus = GER_crush_czech_particularism }
+
+		x = 0
+		y = 1
+		relative_position_id = GER_crush_czech_particularism
+		cost = 5
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {
+		id = GER_reclaim_afrika
+		icon = GFX
+		prerequisite = { focus = GER_protect_the_sudeten_germans }
+
+		x = 0
+		y = 1
+		relative_position_id = GER_protect_the_sudeten_germans
+		cost = 5
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {
+		id = GER_restore_the_burgundian_march
+		icon = GFX
+		prerequisite = { focus = GER_the_bohemian_settlement focus = GER_the_empire_of_destiny }
+
+		x = 1
+		y = 1
+		relative_position_id = GER_the_bohemian_settlement
+		cost = 5
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {
+		id = GER_control_the_north_sea_coast
+		icon = GFX
+		prerequisite = { focus = GER_the_question_of_the_polish_corridor }
+
+		x = 0
+		y = 1
+		relative_position_id = GER_the_question_of_the_polish_corridor
+		cost = 5
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {
+		id = GER_strategic_security_of_the_rhine
+		icon = GFX
+		prerequisite = { focus = GER_reclaim_afrika }
+
+		x = 0
+		y = 1
+		relative_position_id = GER_reclaim_afrika
+		cost = 5
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {
+		id = GER_inherit_the_imperial_legacy
+		icon = GFX
+		prerequisite = { focus = GER_restore_the_burgundian_march }
+
+		x = -1
+		y = 1
+		relative_position_id = GER_restore_the_burgundian_march
+		cost = 5
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {
+		id = GER_the_low_countries_in_the_circle
+		icon = GFX
+		prerequisite = { focus = GER_restore_the_burgundian_march }
+
+		x = 1
+		y = 1
+		relative_position_id = GER_restore_the_burgundian_march
+		cost = 5
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {
+		id = GER_the_german_century
+		icon = GFX
+		prerequisite = { focus = GER_control_the_north_sea_coast focus = GER_strategic_security_of_the_rhine }
+
+		x = 1
+		y = 1
+		relative_position_id = GER_control_the_north_sea_coast
+		cost = 5
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {
+		id = GER_the_banner_of_the_black_eagle
+		icon = GFX
+		prerequisite = { focus = GER_inherit_the_imperial_legacy }
+
+		x = 0
+		y = 1
+		relative_position_id = GER_inherit_the_imperial_legacy
+		cost = 5
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {
+		id = GER_the_italian_question
+		icon = GFX
+		prerequisite = { focus = GER_the_low_countries_in_the_circle }
+
+		x = 0
+		y = 1
+		relative_position_id = GER_the_low_countries_in_the_circle
+		cost = 5
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {
+		id = GER_destroy_bolshevism
+		icon = GFX
+		prerequisite = { focus = GER_the_german_century }
+
+		x = 0
+		y = 1
+		relative_position_id = GER_the_german_century
+		cost = 5
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {
+		id = GER_the_lombard_crown
+		icon = GFX
+		prerequisite = { focus = GER_the_banner_of_the_black_eagle focus = GER_the_italian_question }
+
+		x = 1
+		y = 1
+		relative_position_id = GER_the_banner_of_the_black_eagle
+		cost = 5
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {
+		id = GER_revive_the_prussian_duchy
+		icon = GFX
+		prerequisite = { focus = GER_the_lombard_crown }
+
+		x = -1
+		y = 1
+		relative_position_id = GER_the_lombard_crown
+		cost = 5
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {
+		id = GER_the_shield_of_europe
+		icon = GFX
+		prerequisite = { focus = GER_the_lombard_crown }
+
+		x = 1
+		y = 1
+		relative_position_id = GER_the_lombard_crown
+		cost = 5
+		completion_reward = {
+			
 		}
 	}
 
