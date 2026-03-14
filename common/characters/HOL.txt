@@ -7,7 +7,7 @@ characters={
 			}
 		}
 		country_leader={
-			ideology=conservatism
+			ideology=social_conservative
 			traits={ strict_austerity_adherent }
 			expire="1965.1.1.1"
 			id=-1
@@ -45,7 +45,7 @@ characters={
 		name=HOL_dirk_jan_de_geer
 		country_leader={
 			expire = "1965.1.1"
-			ideology = conservatism
+			ideology = social_conservatism
 			traits = {
 				defeatist
 			}
@@ -60,7 +60,7 @@ characters={
 		name=HOL_pieter_sjoerds_gerbrandy
 		country_leader={
 			expire = "1965.1.1"
-			ideology = conservatism
+			ideology = social_conservatism
 			traits = {
 				little_churchill
 			}
@@ -845,6 +845,22 @@ characters={
 			army={
 				small="GFX_idea_HOL_meinout_rost_van_tonningen"
 			}
+		}
+	}
+	HOL_cornelis_jacobus_snijders={
+		name=HOL_cornelis_jacobus_snijders
+		portraits={
+			civilian={
+				large="GFX_portrait_holland_cornelis_jacobus_snijders"
+			}
+		}
+		country_leader={
+			ideology=absolute_monarchy #tbd
+			traits={ retired_officer 
+					 national_integralist
+			}
+			expire="1965.1.1.1"
+			id=-1
 		}
 	}
 
