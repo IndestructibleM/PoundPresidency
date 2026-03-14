@@ -2553,7 +2553,7 @@ focus_tree = {
  	focus = {
 		id = USA_war_plans_division
 		icon = GFX_goal_generic_position_armies
-		x = 56
+		x = 66
 		y = 0
 		
 		cost = 8
@@ -3335,7 +3335,7 @@ focus_tree = {
 	focus = {
 		id = USA_war_department
 		icon = GFX_goal_generic_army_doctrines
-		x = 20
+		x = 30
 		y = 0
 		relative_position_id = USA_war_plans_division
 		
@@ -4683,7 +4683,7 @@ focus_tree = {
 	focus = {
 		id = USA_towards_national_utopia
 		icon = GFX_focus_generic_population_growth
-		x = 38
+		x = 47
 		y = 2
 		
 		cost = 5
@@ -6019,7 +6019,7 @@ focus_tree = {
 	### POUND SUCCESSORS 
 	focus = {
 		id = USA_fall_of_prometheus
-		x = 56
+		x = 66
 		y = 7
 		
 		cost = 2
@@ -6677,10 +6677,649 @@ focus_tree = {
 		}
 	}
 
+	### Republican Tree - Landon ###
+	focus = {
+		id = USA_republicans_in_the_white_house
+		#icon = GFX
+		mutually_exclusive = { 
+			focus = USA_towards_national_utopia
+			focus = USA_revolt_of_engineers
+			focus = USA_the_workers_candidate
+		}
+		x = 11
+		y = 0
+		relative_position_id = USA_continue_the_new_deal
+		cost = 5
+		ai_will_do = {
+			factor = 10
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = USA_the_sunflower_president
+		#icon = GFX_
+		prerequisite = { focus = USA_republicans_in_the_white_house }
+		x = -2
+		y = 1
+		relative_position_id = USA_republicans_in_the_white_house
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = USA_a_buisnessmans_administration
+		#icon = GFX_
+		prerequisite = { focus = USA_republicans_in_the_white_house }
+		x = 2
+		y = 1
+		relative_position_id = USA_republicans_in_the_white_house
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = USA_gradual_economic_recovery
+		x = -1
+		y = 1
+		
+		cost = 5
+		ai_will_do = {
+			factor = 10
+		}
+		relative_position_id = USA_the_sunflower_president
+		prerequisite = { focus =  USA_the_sunflower_president }
+		#icon = GFX_
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = USA_a_partnership_with_industry
+		x = 1
+		y = 1
+		
+		cost = 6
+		ai_will_do = {
+			factor = 10
+		}
+		relative_position_id = USA_the_sunflower_president
+		prerequisite = { focus = USA_the_sunflower_president }
+		#icon = GFX_
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = USA_the_responsible_new_deal
+		x = -1
+		y = 1
+		
+		cost = 5
+		ai_will_do = {
+			factor = 10
+		}
+		relative_position_id = USA_a_buisnessmans_administration
+		prerequisite = { focus =  USA_a_buisnessmans_administration }
+		#icon = GFX_
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = USA_keep_what_works
+		x = 1
+		y = 1
+		
+		cost = 6
+		ai_will_do = {
+			factor = 10
+		}
+		relative_position_id = USA_a_buisnessmans_administration
+		prerequisite = { focus = USA_a_buisnessmans_administration }
+		#icon = GFX_
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = USA_reach_across_the_aisle
+		x = 0
+		y = 1
+		
+		cost = 5
+		ai_will_do = {
+			factor = 10
+		}
+		relative_position_id = USA_gradual_economic_recovery
+		prerequisite = { focus =  USA_gradual_economic_recovery }
+		#icon = GFX_
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = USA_trust_the_american_entrepreneur
+		x = 0
+		y = 1
+		
+		cost = 6
+		ai_will_do = {
+			factor = 10
+		}
+		relative_position_id = USA_a_partnership_with_industry
+		prerequisite = { focus = USA_a_partnership_with_industry }
+		#icon = GFX_
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = USA_the_buisness_recovery_act
+		x = 0
+		y = 1
+		
+		cost = 5
+		ai_will_do = {
+			factor = 10
+		}
+		relative_position_id = USA_the_responsible_new_deal
+		prerequisite = { focus =  USA_the_responsible_new_deal }
+		#icon = GFX_
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = USA_aid_the_american_farmer
+		x = 0
+		y = 1
+		
+		cost = 6
+		ai_will_do = {
+			factor = 10
+		}
+		relative_position_id = USA_keep_what_works
+		prerequisite = { focus = USA_keep_what_works }
+		#icon = GFX_
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = USA_the_landon_coalition
+		x = 0
+		y = 1
+		
+		cost = 5
+		ai_will_do = {
+			factor = 10
+		}
+		relative_position_id = USA_reach_across_the_aisle
+		prerequisite = { focus =  USA_reach_across_the_aisle }
+		#icon = GFX_
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = USA_calm_the_labor_question
+		x = 0
+		y = 1
+		
+		cost = 6
+		ai_will_do = {
+			factor = 10
+		}
+		relative_position_id = USA_trust_the_american_entrepreneur
+		prerequisite = { focus = USA_trust_the_american_entrepreneur }
+		#icon = GFX_
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = USA_rebuild_american_industry
+		x = 0
+		y = 1
+		
+		cost = 5
+		ai_will_do = {
+			factor = 10
+		}
+		relative_position_id = USA_the_buisness_recovery_act
+		prerequisite = { focus =  USA_the_buisness_recovery_act }
+		#icon = GFX_
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = USA_expand_rural_credit
+		x = 0
+		y = 1
+		
+		cost = 6
+		ai_will_do = {
+			factor = 10
+		}
+		relative_position_id = USA_aid_the_american_farmer
+		prerequisite = { focus = USA_aid_the_american_farmer }
+		#icon = GFX_
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = USA_the_american_comeback
+		x = 1
+		y = 1
+		
+		cost = 5
+		ai_will_do = {
+			factor = 10
+		}
+		relative_position_id = USA_the_landon_coalition
+		prerequisite = { focus =  USA_the_landon_coalition focus = USA_calm_the_labor_question }
+		#icon = GFX_
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = USA_a_strong_dollar_and_a_strong_nation
+		x = 1
+		y = 1
+		
+		cost = 6
+		ai_will_do = {
+			factor = 10
+		}
+		relative_position_id = USA_rebuild_american_industry
+		prerequisite = { focus = USA_rebuild_american_industry focus = USA_expand_rural_credit }
+		#icon = GFX_
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = USA_american_prosperity_returns
+		x = 2
+		y = 1
+		
+		cost = 6
+		ai_will_do = {
+			factor = 10
+		}
+		relative_position_id = USA_the_american_comeback
+		prerequisite = { focus = USA_the_american_comeback focus = USA_a_strong_dollar_and_a_strong_nation }
+		#icon = GFX_
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		completion_reward = {
+
+		}
+	}
+
+	### Republican Tree - Wilkie ###
+	focus = {
+		id = USA_a_new_republican_era
+		#icon = GFX
+		x = 0
+		y = 2
+		relative_position_id = USA_american_prosperity_returns
+		cost = 5
+		ai_will_do = {
+			factor = 10
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = USA_unite_the_party
+		#icon = GFX_
+		prerequisite = { focus = USA_a_new_republican_era }
+		x = -2
+		y = 1
+		relative_position_id = USA_a_new_republican_era
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = USA_keep_the_good_cut_the_waste
+		#icon = GFX_
+		prerequisite = { focus = USA_a_new_republican_era }
+		x = 2
+		y = 1
+		relative_position_id = USA_a_new_republican_era
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = USA_corporate_extension_programs
+		x = -1
+		y = 1
+		
+		cost = 5
+		ai_will_do = {
+			factor = 10
+		}
+		relative_position_id = USA_unite_the_party
+		prerequisite = { focus =  USA_unite_the_party }
+		#icon = GFX_
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = USA_expand_national_infastructure
+		x = 1
+		y = 1
+		
+		cost = 6
+		ai_will_do = {
+			factor = 10
+		}
+		relative_position_id = USA_unite_the_party
+		prerequisite = { focus = USA_unite_the_party }
+		#icon = GFX_
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = USA_responsible_federal_spending
+		x = -1
+		y = 1
+		
+		cost = 5
+		ai_will_do = {
+			factor = 10
+		}
+		relative_position_id = USA_keep_the_good_cut_the_waste
+		prerequisite = { focus =  USA_keep_the_good_cut_the_waste }
+		#icon = GFX_
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = USA_encourage_national_investment
+		x = 1
+		y = 1
+		
+		cost = 6
+		ai_will_do = {
+			factor = 10
+		}
+		relative_position_id = USA_keep_the_good_cut_the_waste
+		prerequisite = { focus = USA_keep_the_good_cut_the_waste }
+		#icon = GFX_
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = USA_reject_isolationism
+		x = 0
+		y = 1
+		
+		cost = 5
+		ai_will_do = {
+			factor = 10
+		}
+		relative_position_id = USA_corporate_extension_programs
+		prerequisite = { focus =  USA_corporate_extension_programs }
+		#icon = GFX_
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = USA_strenghten_the_atlantic_fleet
+		x = 0
+		y = 1
+		
+		cost = 6
+		ai_will_do = {
+			factor = 10
+		}
+		relative_position_id = USA_expand_national_infastructure
+		prerequisite = { focus = USA_expand_national_infastructure }
+		#icon = GFX_
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = USA_a_liberal_republican_party
+		x = 0
+		y = 1
+		
+		cost = 5
+		ai_will_do = {
+			factor = 10
+		}
+		relative_position_id = USA_responsible_federal_spending
+		prerequisite = { focus =  USA_responsible_federal_spending }
+		#icon = GFX_
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = USA_support_anti_lynching_legislation
+		x = 0
+		y = 1
+		
+		cost = 6
+		ai_will_do = {
+			factor = 10
+		}
+		relative_position_id = USA_encourage_national_investment
+		prerequisite = { focus = USA_encourage_national_investment }
+		#icon = GFX_
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = USA_the_war_industries_board
+		x = 1
+		y = 1
+		
+		cost = 5
+		ai_will_do = {
+			factor = 10
+		}
+		relative_position_id = USA_reject_isolationism
+		prerequisite = { focus =  USA_reject_isolationism focus = USA_strenghten_the_atlantic_fleet }
+		#icon = GFX_
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = USA_the_wilkie_doctrine
+		x = 1
+		y = 1
+		
+		cost = 6
+		ai_will_do = {
+			factor = 10
+		}
+		relative_position_id = USA_a_liberal_republican_party
+		prerequisite = { focus = USA_a_liberal_republican_party focus = USA_support_anti_lynching_legislation }
+		#icon = GFX_
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = USA_america_leads_the_free_world
+		x = 2
+		y = 1
+		
+		cost = 6
+		ai_will_do = {
+			factor = 10
+		}
+		relative_position_id = USA_the_war_industries_board
+		prerequisite = { focus = USA_the_war_industries_board focus = USA_the_wilkie_doctrine }
+		#icon = GFX_
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		completion_reward = {
+
+		}
+	}
+
 	### Scott Tree ###
 	focus = {
 		id = USA_revolt_of_engineers
-		x = 28
+		x = 37
 		y = 2
 		
 		cost = 5
