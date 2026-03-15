@@ -168,7 +168,7 @@ focus_tree = {
 
 		mutually_exclusive = { 
 			focus = USA_towards_national_utopia
-			focus = USA_revolt_of_engineers
+			focus = USA_republicans_in_the_white_house
 			focus = USA_the_workers_candidate
 		}
 		cost = 8
@@ -241,8 +241,8 @@ focus_tree = {
 		
 		mutually_exclusive = { 
 			focus = USA_continue_the_new_deal
-			focus = USA_revolt_of_engineers
 			focus = USA_towards_national_utopia
+			focus = USA_republicans_in_the_white_house
 		}
 
 		cancel_if_invalid = yes
@@ -4683,7 +4683,7 @@ focus_tree = {
 	focus = {
 		id = USA_towards_national_utopia
 		icon = GFX_focus_generic_population_growth
-		x = 47
+		x = 36
 		y = 2
 		
 		cost = 5
@@ -4693,8 +4693,8 @@ focus_tree = {
 		}
 		mutually_exclusive = { 
 			focus = USA_continue_the_new_deal
-			focus = USA_revolt_of_engineers
 			focus = USA_the_workers_candidate
+			focus = USA_republicans_in_the_white_house
 		}
 
 		available = {
@@ -6019,7 +6019,7 @@ focus_tree = {
 	### POUND SUCCESSORS 
 	focus = {
 		id = USA_fall_of_prometheus
-		x = 66
+		x = 53
 		y = 7
 		
 		cost = 2
@@ -6680,11 +6680,15 @@ focus_tree = {
 	### Republican Tree - Landon ###
 	focus = {
 		id = USA_republicans_in_the_white_house
-		#icon = GFX
+		icon = GFX_focus_chi_mission_to_the_us
 		mutually_exclusive = { 
 			focus = USA_towards_national_utopia
-			focus = USA_revolt_of_engineers
 			focus = USA_the_workers_candidate
+			focus = USA_continue_the_new_deal
+		}
+		available = {
+			has_government = conservative
+			date > 1936.11.8
 		}
 		x = 11
 		y = 0
@@ -6703,7 +6707,7 @@ focus_tree = {
 
 	focus = {
 		id = USA_the_sunflower_president
-		#icon = GFX_
+		icon = GFX_focus_ARG_army
 		prerequisite = { focus = USA_republicans_in_the_white_house }
 		x = -2
 		y = 1
@@ -6722,7 +6726,7 @@ focus_tree = {
 
 	focus = {
 		id = USA_a_buisnessmans_administration
-		#icon = GFX_
+		icon = GFX_focus_generic_commission
 		prerequisite = { focus = USA_republicans_in_the_white_house }
 		x = 2
 		y = 1
@@ -6750,7 +6754,7 @@ focus_tree = {
 		}
 		relative_position_id = USA_the_sunflower_president
 		prerequisite = { focus =  USA_the_sunflower_president }
-		#icon = GFX_
+		icon = GFX_focus_generic_currency_reforms
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
@@ -6770,7 +6774,7 @@ focus_tree = {
 		}
 		relative_position_id = USA_the_sunflower_president
 		prerequisite = { focus = USA_the_sunflower_president }
-		#icon = GFX_
+		icon = GFX_focus_generic_industrialists
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
@@ -6790,7 +6794,7 @@ focus_tree = {
 		}
 		relative_position_id = USA_a_buisnessmans_administration
 		prerequisite = { focus =  USA_a_buisnessmans_administration }
-		#icon = GFX_
+		icon = GFX_focus_ARG_anti_corruption_policies
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
@@ -6810,7 +6814,7 @@ focus_tree = {
 		}
 		relative_position_id = USA_a_buisnessmans_administration
 		prerequisite = { focus = USA_a_buisnessmans_administration }
-		#icon = GFX_
+		icon = GFX_focus_generic_improve_the_administration_2
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
@@ -6823,7 +6827,7 @@ focus_tree = {
 		id = USA_reach_across_the_aisle
 		x = 0
 		y = 1
-		
+		icon = GFX_focus_ARG_strengthening_the_concordancia
 		cost = 5
 		ai_will_do = {
 			factor = 10
@@ -6843,7 +6847,7 @@ focus_tree = {
 		id = USA_trust_the_american_entrepreneur
 		x = 0
 		y = 1
-		
+		icon = GFX_focus_generic_monetary_union
 		cost = 6
 		ai_will_do = {
 			factor = 10
@@ -6870,7 +6874,7 @@ focus_tree = {
 		}
 		relative_position_id = USA_the_responsible_new_deal
 		prerequisite = { focus =  USA_the_responsible_new_deal }
-		#icon = GFX_
+		icon = GFX_focus_DEN_no_regulations
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
@@ -6890,7 +6894,7 @@ focus_tree = {
 		}
 		relative_position_id = USA_keep_what_works
 		prerequisite = { focus = USA_keep_what_works }
-		#icon = GFX_
+		icon = GFX_focus_generic_workers_and_farmers_rise
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
@@ -6910,7 +6914,7 @@ focus_tree = {
 		}
 		relative_position_id = USA_reach_across_the_aisle
 		prerequisite = { focus =  USA_reach_across_the_aisle }
-		#icon = GFX_
+		icon = GFX_goal_support_democracy
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
@@ -6923,7 +6927,7 @@ focus_tree = {
 		id = USA_calm_the_labor_question
 		x = 0
 		y = 1
-		
+		icon = GFX_focus_eng_concessions_to_the_trade_unions
 		cost = 6
 		ai_will_do = {
 			factor = 10
@@ -6950,7 +6954,7 @@ focus_tree = {
 		}
 		relative_position_id = USA_the_buisness_recovery_act
 		prerequisite = { focus =  USA_the_buisness_recovery_act }
-		#icon = GFX_
+		icon = GFX_focus_GER_autarky_achieved
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
@@ -6970,7 +6974,7 @@ focus_tree = {
 		}
 		relative_position_id = USA_aid_the_american_farmer
 		prerequisite = { focus = USA_aid_the_american_farmer }
-		#icon = GFX_
+		icon = GFX_focus_generic_agricultural_subsidies
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
@@ -6990,7 +6994,7 @@ focus_tree = {
 		}
 		relative_position_id = USA_the_landon_coalition
 		prerequisite = { focus =  USA_the_landon_coalition focus = USA_calm_the_labor_question }
-		#icon = GFX_
+		icon = GFX_focus_generic_american_investments
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
@@ -7010,7 +7014,7 @@ focus_tree = {
 		}
 		relative_position_id = USA_rebuild_american_industry
 		prerequisite = { focus = USA_rebuild_american_industry focus = USA_expand_rural_credit }
-		#icon = GFX_
+		icon = GFX_focus_generic_stockpile_currency
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
@@ -7030,7 +7034,7 @@ focus_tree = {
 		}
 		relative_position_id = USA_the_american_comeback
 		prerequisite = { focus = USA_the_american_comeback focus = USA_a_strong_dollar_and_a_strong_nation }
-		#icon = GFX_
+		icon = GFX_focus_generic_the_giant_wakes
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
@@ -7042,9 +7046,13 @@ focus_tree = {
 	### Republican Tree - Wilkie ###
 	focus = {
 		id = USA_a_new_republican_era
-		#icon = GFX
+		icon = GFX_focus_usa_guarantee_the_american_dream
 		x = 0
-		y = 2
+		y = 1
+		available = {
+			has_government = conservative
+			date > 1940.11.8
+		}
 		relative_position_id = USA_american_prosperity_returns
 		cost = 5
 		ai_will_do = {
@@ -7060,7 +7068,7 @@ focus_tree = {
 
 	focus = {
 		id = USA_unite_the_party
-		#icon = GFX_
+		icon = GFX_goal_generic_national_unity
 		prerequisite = { focus = USA_a_new_republican_era }
 		x = -2
 		y = 1
@@ -7079,7 +7087,7 @@ focus_tree = {
 
 	focus = {
 		id = USA_keep_the_good_cut_the_waste
-		#icon = GFX_
+		icon = GFX_focus_generic_reduce_unneccessary_expenditure
 		prerequisite = { focus = USA_a_new_republican_era }
 		x = 2
 		y = 1
@@ -7107,7 +7115,7 @@ focus_tree = {
 		}
 		relative_position_id = USA_unite_the_party
 		prerequisite = { focus =  USA_unite_the_party }
-		#icon = GFX_
+		icon = GFX_focus_generic_industrial_experts
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
@@ -7127,7 +7135,7 @@ focus_tree = {
 		}
 		relative_position_id = USA_unite_the_party
 		prerequisite = { focus = USA_unite_the_party }
-		#icon = GFX_
+		icon = GFX_focus_generic_electrification
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
@@ -7147,7 +7155,7 @@ focus_tree = {
 		}
 		relative_position_id = USA_keep_the_good_cut_the_waste
 		prerequisite = { focus =  USA_keep_the_good_cut_the_waste }
-		#icon = GFX_
+		icon = GFX_focus_RAJ_special_economic_zones
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
@@ -7167,7 +7175,7 @@ focus_tree = {
 		}
 		relative_position_id = USA_keep_the_good_cut_the_waste
 		prerequisite = { focus = USA_keep_the_good_cut_the_waste }
-		#icon = GFX_
+		icon = GFX_focus_generic_american_investments
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
@@ -7187,7 +7195,7 @@ focus_tree = {
 		}
 		relative_position_id = USA_corporate_extension_programs
 		prerequisite = { focus =  USA_corporate_extension_programs }
-		#icon = GFX_
+		icon = GFX_goal_generic_positive_trade_relations
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
@@ -7207,7 +7215,7 @@ focus_tree = {
 		}
 		relative_position_id = USA_expand_national_infastructure
 		prerequisite = { focus = USA_expand_national_infastructure }
-		#icon = GFX_
+		icon = GFX_focus_SMB_blue_water_fleet
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
@@ -7227,7 +7235,7 @@ focus_tree = {
 		}
 		relative_position_id = USA_responsible_federal_spending
 		prerequisite = { focus =  USA_responsible_federal_spending }
-		#icon = GFX_
+		icon = GFX_goal_support_democracy
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
@@ -7247,7 +7255,7 @@ focus_tree = {
 		}
 		relative_position_id = USA_encourage_national_investment
 		prerequisite = { focus = USA_encourage_national_investment }
-		#icon = GFX_
+		icon = GFX_focus_generic_treaty
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
@@ -7267,7 +7275,7 @@ focus_tree = {
 		}
 		relative_position_id = USA_reject_isolationism
 		prerequisite = { focus =  USA_reject_isolationism focus = USA_strenghten_the_atlantic_fleet }
-		#icon = GFX_
+		icon = GFX_focus_generic_reorient_production
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
@@ -7277,7 +7285,7 @@ focus_tree = {
 	}
 
 	focus = {
-		id = USA_the_wilkie_doctrine
+		id = USA_international_doctrine
 		x = 1
 		y = 1
 		
@@ -7287,7 +7295,7 @@ focus_tree = {
 		}
 		relative_position_id = USA_a_liberal_republican_party
 		prerequisite = { focus = USA_a_liberal_republican_party focus = USA_support_anti_lynching_legislation }
-		#icon = GFX_
+		icon = GFX_focus_generic_democratic_europe
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
@@ -7306,8 +7314,8 @@ focus_tree = {
 			factor = 10
 		}
 		relative_position_id = USA_the_war_industries_board
-		prerequisite = { focus = USA_the_war_industries_board focus = USA_the_wilkie_doctrine }
-		#icon = GFX_
+		prerequisite = { focus = USA_the_war_industries_board focus = USA_international_doctrine }
+		icon = GFX_focus_generic_league_of_nations 
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
@@ -7319,8 +7327,8 @@ focus_tree = {
 	### Scott Tree ###
 	focus = {
 		id = USA_revolt_of_engineers
-		x = 37
-		y = 2
+		x = 36
+		y = 12
 		
 		cost = 5
 		ai_will_do = {
@@ -7331,11 +7339,6 @@ focus_tree = {
 			has_government = neutrality
 			has_country_leader = { ruling_only = yes character = USA_howard_scott }
 			date > 1936.11.8
-		}
-		mutually_exclusive = { 
-			focus = USA_continue_the_new_deal
-			focus = USA_towards_national_utopia
-			focus = USA_the_workers_candidate
 		}
 
 		cancel_if_invalid = yes
