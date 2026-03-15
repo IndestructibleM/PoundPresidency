@@ -1,0 +1,8 @@
+﻿l_english:
+ GER_autobahn_tt:0 "Add maximum §YInfrastructure§! in §YBamberg§!, §YErfurt§!, §YMagdeburg§!, §YBrandenburg§!, §YHannover§!, §YThüringen§! and §YFranken§!."
+ LIT_demand_vilnius:0 "Demand Vilnius Region"
+ LIT_demand_vilnius_desc:0 "For too long, the traditional Lithuanian capital and its region has been held by our enemies in Poland and our government has been too weak-willed to do anything about it, but no longer. Vilnius, Gardinas and Suvalkai will be Lithuanian again!"
+ GER_core_ardennes_tt:0 "If [GER.GetNameDef] is §Ynot in a faction§! with [BEL.GetNameDef] and §Yfully controlls§! [1250.GetName]:"
+ AUS_seize_galicia_tt:0 "Gains cores on §Y[88.GetName]§!, §Y[91.GetName]§!, §Y[89.GetName]§!, §Y[982.GetName]§!, §Y[983.GetName]§!, §Y[985.GetName]§!, §Y[986.GetName]§!, §Y[1145.GetName]§!, §Y[1385.GetName]§!, §Y[1386.GetName]§!, §Y[1399.GetName]§! and §Y[1483.GetName]§!."
+ MAN_vassalize_mengukuo:0 "Vassalize Mengkukuo and East Hebei"
+ MAN_vassalize_mengukuo_desc:0 "The prince of Mengkukuo is not fit to stand side by side with the Emperor of Manchuria, and the same can be said about the government of East Hebei. It is time we put this silly experiment and put them both in their proper place."
