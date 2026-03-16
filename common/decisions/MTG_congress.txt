@@ -1,4 +1,45 @@
 USA_congress = {
+	USA_social_security_act_dec = {
+		name = USA_social_security_act
+		fire_only_once = yes
+		activation = {
+			tag = USA
+			has_completed_focus = USA_social_security_act
+			always = no
+		}
+		priority = 99
+		days_mission_timeout = 120
+		is_good = yes
+		selectable_mission = yes
+		available = { 
+			congress_high_support_trigger = yes
+			has_decision = USA_hold_congress_session
+		}
+		icon = GFX_decision_eng_trade_unions_support
+		ai_will_do = {
+			factor = 100
+		}
+		complete_effect = { 
+			if = {
+				limit = {
+					OR = {
+					has_idea = welfare1
+					has_idea = welfare2
+					}
+				}
+				add_ideas = welfare3
+			}
+			else = {
+				upgrade_welfare_law = yes
+			}
+			
+			add_popularity = { ideology = democratic  popularity = 0.1 }
+		}
+		timeout_effect = {
+			USA_senate_small_opposition = yes
+			USA_house_small_opposition = yes
+		}
+	}
 	USA_small_lobby_effort = {
 		icon = generic_political_discourse
 		available = {
@@ -8,6 +49,7 @@ USA_congress = {
 			}
 			not = {
 				has_decision = USA_medium_lobby_effort
+				has_decision = USA_hold_congress_session
 			}
 			OR = {
 				political_power_daily > 0.3
@@ -47,6 +89,7 @@ USA_congress = {
 			}
 			not = {
 				has_decision = USA_small_lobby_effort
+				has_decision = USA_hold_congress_session
 			}
 			OR = {
 				political_power_daily > 0.75
@@ -75,27 +118,6 @@ USA_congress = {
 		}
 		remove_effect = {
 			USA_congress_medium_support = yes
-		}
-	}
-	USA_special_measures = {
-		icon = ger_mefo_bills
-		available = {
-			OR = {
-				check_variable = { senators_support < senators_total }
-				check_variable = { representatives_support < representatives_total }
-			}
-		}
-		cost = 50
-		ai_will_do = {
-			factor = 100
-			modifier = {
-				congress_low_support_trigger = yes
-				factor = 0
-			}
-		}
-		days_re_enable = 90
-		complete_effect = {
-			USA_congress_small_support = yes
 		}
 	}
 	USA_pay_farm_subsidies = {
@@ -361,6 +383,7 @@ USA_congress = {
 		available = { 
 			not = { has_decision = USA_hold_congress_session }
 		}
+		priority = 98
 		icon = GFX_decision_generic_political_discourse
 		ai_will_do = {
 			factor = 50
@@ -380,6 +403,7 @@ USA_congress = {
 		available = { 
 			not = { has_decision = USA_hold_congress_session }
 		}
+		priority = 98
 		icon = GFX_decision_generic_civil_support
 		ai_will_do = {
 			factor = 50
@@ -395,20 +419,20 @@ USA_congress = {
 		allowed = {
 			tag = USA
 		}
-		days_re_enable = 35
+		days_re_enable = 40
 		available = { 
 			not = { has_decision = USA_hold_congress_session }
 		}
+		priority = 98
 		ai_will_do = {
 			factor = 50
 		}
-		cost = 20
-		days_remove = 10
+		cost = 35
+		days_remove = 15
 		icon = GFX_decision_generic_political_address
 		remove_effect = { 
-			USA_house_small_support = yes
-			USA_senate_small_support = yes
-			add_popularity = { ideology = ROOT  popularity = 0.03 }
+			USA_congress_medium_support = yes
+			add_popularity = { ideology = ROOT  popularity = 0.02 }
 		}
 	}
 }
