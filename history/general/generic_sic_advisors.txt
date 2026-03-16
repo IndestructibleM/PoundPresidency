@@ -165,3 +165,8 @@ PAL = {
 	set_politics = { ruling_party = neutrality }
 	add_popularity = { ideology = neutrality popularity = 0.35 }
 }
+
+RHI = {
+	recruit_character = GER_ernst_thalmann_VR
+	promote_character = GER_ernst_thalmann_VR
+}

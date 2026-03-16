@@ -1744,7 +1744,7 @@
  VAS_communism_DEF: "the Virginian Socialist Commonwealth"
  VAS_fascism: "Confederate State of Virginia"
  VAS_fascism_DEF: "the Confederate State of Virginia"
- VAS_neutrality: "Commonwealth of Virginia"
+ VAS_neutrality: "Virginia Military District"
  VAS_neutrality_DEF: "the Commonwealth of Virginia"
  
  WVS: "West Virginia"
@@ -1758,3 +1758,7 @@
  WVS_fascism_DEF: "the Unitary State of West Virginia"
  WVS_neutrality: "State of West Virginia"
  WVS_neutrality_DEF: "the State of West Virginia"
+ 
+ USA_collapsed_neutrality: "American Salvation Government"
+ NYC: "New York"
+ VMT: "Vermont"
