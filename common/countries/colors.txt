@@ -1720,3 +1720,18 @@ WVS = {
 	color = rgb { 225 180 185 }
 	color_ui = rgb { 225 180 185 }
 }
+
+NWE = {
+	color = rgb { 35 120 70 }
+	color_ui = rgb { 35 125 91 }
+}
+
+NYC = {
+	color = rgb { 0 255 255 }
+	color_ui = rgb { 0 179 179 }
+}
+
+VMT = {
+	color = rgb { 0 255 255 }
+	color_ui = rgb { 0 179 179 }
+}

@@ -108,7 +108,7 @@ country_event = {
 country_event = {
 	id = vr_usa.2
 	title = vr_usa.2.t
-	desc = desc.temp.d
+	desc = vr_usa.2.d
 
 	fire_only_once = yes
 	
@@ -133,6 +133,8 @@ country_event = {
 			name = PopularFront
 		}
 		add_political_power = -25
+		custom_effect_tooltip = generic_skip_one_line_tt
+		custom_effect_tooltip = "Remember, you are a worker, too."
 	}
 }
 

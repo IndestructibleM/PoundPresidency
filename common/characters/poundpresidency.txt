@@ -10,22 +10,7 @@ characters = {
 			ideology = socfash
 		}
 	}
-	
-	USA_Ernest_Hemmingway = {
-		name = "Ernest Hemmingway"
-		portraits = {
-			civilian = {
-				large = "gfx/leaders/USA/Portrait_Ernest_Hemmingway.png"
-			}
-		}
-		country_leader = {
-			ideology = utopian_socialism
-		}
-		country_leader = {
-			ideology = socdem
-		}
-	}
-	
+
 	USA_George_Christians = {
 		name = "George W. Christians"
 		portraits = {
@@ -216,7 +201,7 @@ characters = {
 			ideology = technocracy
 		}
 		advisor = {
-			slot = political_advisor
+			slot = second_command
 			idea_token = USA_howard_scott_idea
 			available = { has_completed_focus = USA_invite_technocratic_management }
 			visible = { has_completed_focus = USA_2nd_american_revolution }
@@ -288,7 +273,7 @@ characters = {
 			ideology = fascism_ideology
 		}
 		advisor = {
-			slot = political_advisor
+			slot = second_command
 			idea_token = USA_lawrence_dennis_idea
 			visible = {
 				has_completed_focus = USA_2nd_american_revolution

@@ -63,8 +63,8 @@ focus_tree = {
 	focus = {
 		id = USA_1936_presidential_campaign
 		icon = GFX_focus_generic_election
-		x = 16
-		y = 0
+		x = 18
+		y = -1
 		cost = 5
 		ai_will_do = {
 			factor = 1
@@ -84,7 +84,7 @@ focus_tree = {
 	focus = {
 		id = USA_defend_the_administration
 		icon = GFX_focus_generic_improve_the_administration
-		x = 15
+		x = 18
 		y = 1
 		cost = 5
 		prerequisite = {
@@ -96,14 +96,13 @@ focus_tree = {
 		available = {
 			date < 1936.11.8
 		}
-
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
 		search_filters = {FOCUS_FILTER_POLITICAL}
 		completion_reward = {
-			add_political_power = 50
-			add_popularity = { ideology = democratic popularity = 0.05 }
+			add_political_power = 25
+			add_popularity = { ideology = democratic popularity = 0.06 }
 		}
 	}
 
@@ -111,7 +110,7 @@ focus_tree = {
 		id = USA_rally_new_deal_coalition
 		icon = GFX_focus_generic_social_democracy
 		x = 17
-		y = 1
+		y = 0
 		cost = 5
 		prerequisite = {
 			focus = USA_1936_presidential_campaign
@@ -122,22 +121,53 @@ focus_tree = {
 		available = {
 			date < 1936.11.8
 		}
-
+		mutually_exclusive = {
+			focus = USA_win_liberal_republicans
+		}
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
 		search_filters = {FOCUS_FILTER_POLITICAL}
 		completion_reward = {
 			add_popularity = { ideology = socialist popularity = 0.03 }
-			add_popularity = { ideology = democratic popularity = 0.08 }
+			add_popularity = { ideology = democratic popularity = 0.06 }
 			add_political_power = party_popularity_100@socialist
+		}
+	}
+
+	focus = {
+		id = USA_win_liberal_republicans
+		icon = GFX_focus_generic_befriend_usa
+		x = 19
+		y = 0
+		cost = 5
+		prerequisite = {
+			focus = USA_1936_presidential_campaign
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			date < 1936.11.8
+		}
+		mutually_exclusive = {
+			focus = USA_rally_new_deal_coalition
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		completion_reward = {
+			add_popularity = { ideology = democratic popularity = 0.03 }
+			add_popularity = { ideology = conservative popularity = 0.06 }
+			add_political_power = party_popularity_100@conservative
 		}
 	}
 
 	focus = {
 		id = USA_continue_the_new_deal
 		icon = GFX_focus_generic_self_management
-		x = 16
+		x = 10
 		y = 2
 		offset = {
 			x = -12
@@ -223,7 +253,7 @@ focus_tree = {
 	focus = {
 		id = USA_the_workers_candidate
 		icon = GFX_focus_ITA_corpo_volontari_della_liberta
-		x = -16
+		x = -12
 		y = 0
 		relative_position_id = USA_continue_the_new_deal
 		cost = 6
@@ -804,7 +834,7 @@ focus_tree = {
 	focus = {
 		id = USA_wpa
 		icon = GFX_focus_generic_public_works
-		x = -5
+		x = 0
 		y = 1
 		relative_position_id = USA_continue_the_new_deal
 		cost = 6
@@ -830,7 +860,7 @@ focus_tree = {
 	focus = {
 		id = USA_fair_labor_standards_act
 		icon = GFX_focus_ICE_embrace_the_workers_revolution
-		x = -7
+		x = -2
 		y = 2
 		relative_position_id = USA_continue_the_new_deal
 		cost = 6
@@ -857,7 +887,7 @@ focus_tree = {
 	focus = {
 		id = USA_social_security_act
 		icon = GFX_focus_generic_welfare
-		x = -5
+		x = 0
 		y = 2
 		relative_position_id = USA_continue_the_new_deal
 		cost = 6
@@ -885,14 +915,14 @@ focus_tree = {
 	focus = {
 		id = USA_wagner_act_enforcement
 		icon = GFX_focus_generic_workers
-		x = -3
+		x = 2
 		y = 2
 		relative_position_id = USA_continue_the_new_deal
 		cost = 6
 		prerequisite = {
 			focus = USA_wpa
 		}
-		ai_will_do = {
+		ai_will_do = { 
 			factor = 1
 		}
 		available = {
@@ -911,7 +941,7 @@ focus_tree = {
 	focus = {
 		id = USA_united_states_housing_act
 		icon = GFX_focus_usa_guarantee_the_american_dream
-		x = -6
+		x = -1
 		y = 3
 		relative_position_id = USA_continue_the_new_deal
 		cost = 6
@@ -937,7 +967,7 @@ focus_tree = {
 	focus = {
 		id = USA_farm_security_administration
 		icon = GFX_focus_generic_farmland
-		x = -4
+		x = 1
 		y = 3
 		relative_position_id = USA_continue_the_new_deal
 		cost = 6
@@ -963,7 +993,7 @@ focus_tree = {
 	focus = {
 		id = USA_consolidate_the_dem_majority
 		icon = GFX_focus_ARG_defense_and_democracy
-		x = -5
+		x = 0
 		y = 4
 		relative_position_id = USA_continue_the_new_deal
 		cost = 6
@@ -995,7 +1025,7 @@ focus_tree = {
 	focus = {
 		id = USA_judicial_reform_proposal
 		icon = GFX_focus_generic_court
-		x = -7
+		x = -2
 		y = 5
 		relative_position_id = USA_continue_the_new_deal
 		cost = 6
@@ -1022,7 +1052,7 @@ focus_tree = {
 	focus = {
 		id = USA_the_reorganization_act
 		icon = GFX_focus_CHI_demonstrate_our_resolve
-		x = -5
+		x = 0
 		y = 5
 		relative_position_id = USA_continue_the_new_deal
 		cost = 6
@@ -1048,7 +1078,7 @@ focus_tree = {
 	focus = {
 		id = USA_reassure_american_business
 		icon = GFX_focus_generic_american_investments
-		x = -3
+		x = 2
 		y = 5
 		relative_position_id = USA_continue_the_new_deal
 		cost = 6
@@ -1076,7 +1106,7 @@ focus_tree = {
 	focus = {
 		id = USA_expand_white_house_staff
 		icon = GFX_focus_generic_commission
-		x = -6
+		x = -1
 		y = 6
 		relative_position_id = USA_continue_the_new_deal
 		cost = 6
@@ -1102,7 +1132,7 @@ focus_tree = {
 	focus = {
 		id = USA_administrative_management_bill
 		icon = GFX_focus_generic_improve_the_administration_2
-		x = -4
+		x = 1
 		y = 6
 		relative_position_id = USA_continue_the_new_deal
 		cost = 6
@@ -1128,7 +1158,7 @@ focus_tree = {
 	focus = {
 		id = USA_yet_another_4_more_years
 		icon = GFX_focus_generic_social_democracy
-		x = -5
+		x = 0
 		y = 7
 		relative_position_id = USA_continue_the_new_deal
 		cost = 6
@@ -1166,24 +1196,12 @@ focus_tree = {
 	focus = {
 		id = USA_limited_intervention
 		icon = GFX_goal_generic_territory_or_war
-		prerequisite = { focus = USA_continue_the_new_deal focus = USA_reestablish_the_gold_standard }
+		prerequisite = { focus = USA_continue_the_new_deal focus = USA_republicans_in_the_white_house }
 		mutually_exclusive = { focus = USA_neutrality_act }
 		continue_if_invalid = yes
-		x = 0
+		x = 6
 		y = 1
 		relative_position_id = USA_continue_the_new_deal
-
-		offset = {
-			x = -1
-			y = 0
-			trigger = {
-				has_game_rule = {
-					rule = obsolete_focus_branches_visibility
-					option = HIDE
-				}
-				has_completed_focus = USA_reestablish_the_gold_standard
-			}
-		}
 
 		cost = 6
 		#ai_will_do = {
@@ -1654,38 +1672,11 @@ focus_tree = {
 	focus = {
 		id = USA_neutrality_act
 		icon = GFX_goal_generic_neutrality_focus
-		x = 4
+		x = 10
 		y = 1
-		prerequisite = { focus = USA_continue_the_new_deal focus = USA_reestablish_the_gold_standard }
+		prerequisite = { focus = USA_continue_the_new_deal focus = USA_republicans_in_the_white_house }
 		mutually_exclusive = { focus = USA_limited_intervention }
 		relative_position_id = USA_continue_the_new_deal
-
-		offset = {
-			x = -1
-			y = 0
-			trigger = {
-				has_game_rule = {
-					rule = obsolete_focus_branches_visibility
-					option = HIDE
-				}
-				OR = {
-					has_completed_focus = USA_reestablish_the_gold_standard
-					has_completed_focus = USA_neutrality_act
-				}
-			}
-		}
-		offset = {
-			x = -2
-			y = 0
-			trigger = {
-				has_game_rule = {
-					rule = obsolete_focus_branches_visibility
-					option = HIDE
-				}
-				has_completed_focus = USA_reestablish_the_gold_standard
-				has_completed_focus = USA_neutrality_act
-			}
-		}
 
 		cost = 6
 
@@ -6690,7 +6681,7 @@ focus_tree = {
 			has_government = conservative
 			date > 1936.11.8
 		}
-		x = 11
+		x = 17
 		y = 0
 		relative_position_id = USA_continue_the_new_deal
 		cost = 5
