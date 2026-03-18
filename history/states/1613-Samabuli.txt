@@ -1,0 +1,23 @@
+state={
+	id=1613
+	name="STATE_1613"
+	manpower = 0 #TODO: POP
+	
+	state_category = pastoral #TODO: SLOTS
+
+	history={
+		add_claim_by = IDC
+		owner = IDC
+		add_core_of = LAO
+		buildings = {
+			infrastructure = 1
+		}
+
+	}
+
+	provinces={
+		10330 10356 10456
+	}
+
+	local_supplies=0.0 
+}
