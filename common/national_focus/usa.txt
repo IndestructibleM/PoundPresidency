@@ -63,7 +63,7 @@ focus_tree = {
 	focus = {
 		id = USA_1936_presidential_campaign
 		icon = GFX_focus_generic_election
-		x = 18
+		x = 17
 		y = -1
 		cost = 5
 		ai_will_do = {
@@ -84,7 +84,7 @@ focus_tree = {
 	focus = {
 		id = USA_defend_the_administration
 		icon = GFX_focus_generic_improve_the_administration
-		x = 18
+		x = 17
 		y = 1
 		cost = 5
 		prerequisite = {
@@ -109,7 +109,7 @@ focus_tree = {
 	focus = {
 		id = USA_rally_new_deal_coalition
 		icon = GFX_focus_generic_social_democracy
-		x = 17
+		x = 16
 		y = 0
 		cost = 5
 		prerequisite = {
@@ -138,7 +138,7 @@ focus_tree = {
 	focus = {
 		id = USA_win_liberal_republicans
 		icon = GFX_focus_generic_befriend_usa
-		x = 19
+		x = 18
 		y = 0
 		cost = 5
 		prerequisite = {
@@ -169,32 +169,7 @@ focus_tree = {
 		icon = GFX_focus_generic_self_management
 		x = 10
 		y = 2
-		offset = {
-			x = -12
-			y = 0
-			trigger = {
-				OR = {
-					AND = {
-						has_game_rule = {
-							rule = obsolete_focus_branches_visibility
-							option = HIDE
-						}
-						has_completed_focus = USA_reestablish_the_gold_standard
-					}
-				}
-			}
-		}
-		offset = {
-			x = -1
-			y = 0
-			trigger = {
-				has_game_rule = {
-					rule = obsolete_focus_branches_visibility
-					option = HIDE
-				}
-				has_completed_focus = USA_neutrality_act
-			}
-		}
+
 
 		mutually_exclusive = { 
 			focus = USA_towards_national_utopia
@@ -522,7 +497,7 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = USA_forge_the_popular_front
+		id = USA_entrentch_the_popular_front
 		icon = GFX_focus_generic_communism_anti_fascism
 		x = 2
 		y = 2
@@ -555,7 +530,7 @@ focus_tree = {
 		relative_position_id = USA_the_workers_candidate
 		cost = 6
 		prerequisite = {
-			focus = USA_forge_the_popular_front
+			focus = USA_entrentch_the_popular_front
 		}
 		ai_will_do = {
 			factor = 1
@@ -579,7 +554,7 @@ focus_tree = {
 		relative_position_id = USA_the_workers_candidate
 		cost = 6
 		prerequisite = {
-			focus = USA_forge_the_popular_front
+			focus = USA_entrentch_the_popular_front
 		}
 		ai_will_do = {
 			factor = 1
@@ -746,7 +721,7 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = USA_farmer_labor_front
+		id = USA_farm_supply_stations
 		icon = GFX_focus_generic_workers_and_farmers_rise
 		x = 6
 		y = 6
@@ -778,7 +753,7 @@ focus_tree = {
 		cost = 6
 		prerequisite = {
 			focus = USA_a_popular_mandate
-			focus = USA_farmer_labor_front
+			focus = USA_farm_supply_stations
 		}
 		mutually_exclusive = {
 			focus = USA_red_american_dream
@@ -1199,7 +1174,7 @@ focus_tree = {
 		prerequisite = { focus = USA_continue_the_new_deal focus = USA_republicans_in_the_white_house }
 		mutually_exclusive = { focus = USA_neutrality_act }
 		continue_if_invalid = yes
-		x = 6
+		x = 4
 		y = 1
 		relative_position_id = USA_continue_the_new_deal
 
@@ -1309,18 +1284,6 @@ focus_tree = {
 		x = 0
 		y = 2
 
-		offset = {
-			x = 0
-			y = -1
-			trigger = {
-				has_game_rule = {
-					rule = obsolete_focus_branches_visibility
-					option = HIDE
-				}
-				has_completed_focus = USA_limited_intervention
-			}
-		}
-
 		cost = 6
 		#ai_will_do = {
 		#	factor = 1
@@ -1339,22 +1302,10 @@ focus_tree = {
 	focus = {
 		id = USA_focus_on_europe
 		icon = GFX_focus_usa_focus_on_europe
-		x = -1
+		x = 3
 		y = 3
 		prerequisite = { focus = USA_war_propaganda }
 		relative_position_id = USA_limited_intervention
-
-		offset = {
-			x = 0
-			y = -1
-			trigger = {
-				has_game_rule = {
-					rule = obsolete_focus_branches_visibility
-					option = HIDE
-				}
-				has_completed_focus = USA_limited_intervention
-			}
-		}
 
 		cost = 6
 
@@ -1404,25 +1355,13 @@ focus_tree = {
 	focus = {
 		id = USA_office_of_strategic_services
 		icon = GFX_goal_generic_major_war
-		prerequisite = { focus = USA_focus_on_europe }
+		prerequisite = { focus = USA_war_propaganda focus = USA_arsenal_of_democracy }
 		available = {
 			
 		}
 		x = -1
-		y = 4
+		y = 3
 		relative_position_id = USA_limited_intervention
-
-		offset = {
-			x = 0
-			y = -1
-			trigger = {
-				has_game_rule = {
-					rule = obsolete_focus_branches_visibility
-					option = HIDE
-				}
-				has_completed_focus = USA_limited_intervention
-			}
-		}
 
 		cost = 6
 		ai_will_do = {
@@ -1442,6 +1381,7 @@ focus_tree = {
 			else = {
 				add_ideas = office_of_strategic_services_lar
 			}
+			add_ideas = USA_magic
 		}
 	}
 	focus = {
@@ -1451,18 +1391,6 @@ focus_tree = {
 		y = 3
 		prerequisite = { focus = USA_war_propaganda }
 		relative_position_id = USA_limited_intervention
-
-		offset = {
-			x = 0
-			y = -1
-			trigger = {
-				has_game_rule = {
-					rule = obsolete_focus_branches_visibility
-					option = HIDE
-				}
-				has_completed_focus = USA_limited_intervention
-			}
-		}
 
 		cost = 6
 
@@ -1493,25 +1421,12 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = USA_magic
+		id = USA_black_chamber 
 		icon = GFX_goal_generic_radar
-		x = 1
+		x = 2
 		y = 4
-		prerequisite = { focus = USA_focus_on_asia }
+		prerequisite = { focus = USA_focus_on_asia focus = USA_focus_on_europe }
 		relative_position_id = USA_limited_intervention
-
-		offset = {
-			x = 0
-			y = -1
-			trigger = {
-				has_game_rule = {
-					rule = obsolete_focus_branches_visibility
-					option = HIDE
-				}
-				has_completed_focus = USA_limited_intervention
-			}
-		}
-
 		cost = 6
 
 		ai_will_do = {
@@ -1530,36 +1445,6 @@ focus_tree = {
 		continue_if_invalid = no
 		available_if_capitulated = no
 
-		completion_reward = {
-			add_ideas = USA_magic
-		}
-	}
-	focus = {
-		id = USA_black_chamber
-		icon = GFX_goal_generic_military_deal
-		prerequisite = { focus = USA_magic focus = USA_office_of_strategic_services}
-		available = { }
-		x = 1
-		y = 3
-		relative_position_id = USA_war_propaganda
-
-		offset = {
-			x = -1
-			y = 0
-			trigger = {
-				has_game_rule = {
-					rule = obsolete_focus_branches_visibility
-					option = HIDE
-				}
-				has_completed_focus = USA_limited_intervention
-			}
-		}
-
-		cost = 6
-		ai_will_do = {
-			factor = 1
-		}
-		search_filters = {FOCUS_FILTER_RESEARCH}
 		completion_reward = {
 			if = {
 				limit = {
@@ -1584,45 +1469,10 @@ focus_tree = {
 	focus = {
 		id = USA_scientist_haven
 		icon = GFX_focus_research
-		prerequisite = { focus = USA_black_chamber focus = USA_arsenal_of_democracy }
-		x = 1
-		y = 1
+		prerequisite = { focus = USA_war_propaganda focus = USA_arsenal_of_democracy }
+		x = -2
+		y = 0
 		relative_position_id = USA_black_chamber
-
-		offset = {
-			x = -1
-			y = -4
-			trigger = {
-				has_game_rule = {
-					rule = obsolete_focus_branches_visibility
-					option = HIDE
-				}
-				has_completed_focus = USA_neutrality_act
-			}
-		}
-		offset = {
-			x = -1
-			y = 0
-			trigger = {
-				has_game_rule = {
-					rule = obsolete_focus_branches_visibility
-					option = HIDE
-				}
-				has_completed_focus = USA_neutrality_act
-				has_completed_focus = USA_reestablish_the_gold_standard
-			}
-		}
-		offset = {
-			x = -1
-			y = 0
-			trigger = {
-				has_game_rule = {
-					rule = obsolete_focus_branches_visibility
-					option = HIDE
-				}
-				has_completed_focus = USA_limited_intervention
-			}
-		}
 
 		cost = 6
 		#ai_will_do = {
@@ -1642,8 +1492,9 @@ focus_tree = {
 		id = USA_manhattan_project
 		icon = GFX_focus_wonderweapons
 		prerequisite = { focus = USA_scientist_haven }
+		prerequisite = { focus = USA_black_chamber }
 		
-		x = 0
+		x = 1
 		y = 1
 		relative_position_id = USA_scientist_haven
 		cost = 6
@@ -1672,7 +1523,7 @@ focus_tree = {
 	focus = {
 		id = USA_neutrality_act
 		icon = GFX_goal_generic_neutrality_focus
-		x = 10
+		x = 8
 		y = 1
 		prerequisite = { focus = USA_continue_the_new_deal focus = USA_republicans_in_the_white_house }
 		mutually_exclusive = { focus = USA_limited_intervention }
@@ -1763,45 +1614,9 @@ focus_tree = {
 		id = USA_lend_lease_act
 		icon = GFX_focus_generic_treaty
 		x = 2
-		y = 2
+		y = 1
 		prerequisite = { focus = USA_neutrality_act focus = USA_limited_intervention }
 		relative_position_id = USA_limited_intervention
-
-		offset = {
-			x = -1
-			y = -1
-			trigger = {
-				has_game_rule = {
-					rule = obsolete_focus_branches_visibility
-					option = HIDE
-				}
-				NOT = { has_completed_focus = USA_reestablish_the_gold_standard }
-				has_completed_focus = USA_neutrality_act
-			}
-		}
-		offset = {
-			x = -2
-			y = -1
-			trigger = {
-				has_game_rule = {
-					rule = obsolete_focus_branches_visibility
-					option = HIDE
-				}
-				has_completed_focus = USA_reestablish_the_gold_standard
-				has_completed_focus = USA_neutrality_act
-			}
-		}
-		offset = {
-			x = 0
-			y = -1
-			trigger = {
-				has_game_rule = {
-					rule = obsolete_focus_branches_visibility
-					option = HIDE
-				}
-				has_completed_focus = USA_limited_intervention
-			}
-		}
 
 		cost = 6
 
@@ -1922,17 +1737,6 @@ focus_tree = {
 		y = 2
 		relative_position_id = USA_neutrality_act
 
-		offset = {
-			x = 0
-			y = -1
-			trigger = {
-				has_game_rule = {
-					rule = obsolete_focus_branches_visibility
-					option = HIDE
-				}
-				has_completed_focus = USA_neutrality_act
-			}
-		}
 
 		cost = 6
 		ai_will_do = {
@@ -2059,7 +1863,7 @@ focus_tree = {
 	focus = {
 		id = USA_the_giant_wakes
 		icon = GFX_goal_generic_construct_civ_factory
-		prerequisite = { focus = USA_arsenal_of_democracy }
+		prerequisite = { focus = USA_military_construction }
 		available = {
 			OR = {
 				has_war = yes
@@ -2068,7 +1872,7 @@ focus_tree = {
 			democratic > 0.95
 		}
 		continue_if_invalid = yes
-		x = 0
+		x = 1
 		y = 2
 		relative_position_id = USA_arsenal_of_democracy
 		cost = 6
@@ -2108,8 +1912,8 @@ focus_tree = {
 		id = USA_wartime_industry
 		icon = GFX_goal_generic_construct_mil_factory
 		prerequisite = { focus = USA_the_giant_wakes }
-		x = 0
-		y = 2
+		x = -2
+		y = 1
 		relative_position_id = USA_the_giant_wakes
 		cost = 6
 		ai_will_do = {
@@ -2413,7 +2217,7 @@ focus_tree = {
 	focus = {
 		id = USA_USACE_projects
 		icon = GFX_goal_generic_production
-		prerequisite = { focus = USA_military_construction }
+		prerequisite = { focus = USA_the_giant_wakes }
 		available = {
 			OR = {
 				has_war_support > 0.3
@@ -6681,7 +6485,7 @@ focus_tree = {
 			has_government = conservative
 			date > 1936.11.8
 		}
-		x = 17
+		x = 14
 		y = 0
 		relative_position_id = USA_continue_the_new_deal
 		cost = 5

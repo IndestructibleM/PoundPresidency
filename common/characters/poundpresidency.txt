@@ -204,7 +204,6 @@ characters = {
 			slot = second_command
 			idea_token = USA_howard_scott_idea
 			available = { has_completed_focus = USA_invite_technocratic_management }
-			visible = { has_completed_focus = USA_2nd_american_revolution }
 			traits = { technocratic_corporatist }
 		}
 	}
@@ -275,9 +274,6 @@ characters = {
 		advisor = {
 			slot = second_command
 			idea_token = USA_lawrence_dennis_idea
-			visible = {
-				has_completed_focus = USA_2nd_american_revolution
-			}
 			available = {
 				has_completed_focus = USA_supraproduction_syndicalism
 			}
@@ -293,13 +289,10 @@ characters = {
 			}
 		}
 		advisor = {
-			slot = political_advisor
+			slot = second_command
 			idea_token = USA_upton_sinclair_idea
-			visible = {
-				has_completed_focus = USA_natural_revolution
-			}
 			available = {
-				has_completed_focus = USA_natural_revolution
+				has_completed_focus = USA_communism_as_american_apple_pie
 			}
 			traits = { socialist_justice }
 		}
