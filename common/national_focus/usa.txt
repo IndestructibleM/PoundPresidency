@@ -1304,7 +1304,7 @@ focus_tree = {
 		icon = GFX_focus_usa_focus_on_europe
 		x = 3
 		y = 3
-		prerequisite = { focus = USA_war_propaganda }
+		prerequisite = { focus = USA_war_propaganda focus = USA_arsenal_of_democracy }
 		relative_position_id = USA_limited_intervention
 
 		cost = 6
@@ -1389,7 +1389,7 @@ focus_tree = {
 		icon = GFX_focus_usa_focus_on_asia
 		x = 1
 		y = 3
-		prerequisite = { focus = USA_war_propaganda }
+		prerequisite = { focus = USA_war_propaganda focus = USA_war_propaganda }
 		relative_position_id = USA_limited_intervention
 
 		cost = 6
@@ -1934,7 +1934,7 @@ focus_tree = {
 	focus = {
 		id = USA_military_construction
 		icon = GFX_goal_generic_build_tank
-		prerequisite = { focus = USA_arsenal_of_democracy }
+		prerequisite = { focus = USA_arsenal_of_democracy focus = USA_war_propaganda }
 		
 		available = {
 			OR = {
@@ -2348,7 +2348,7 @@ focus_tree = {
  	focus = {
 		id = USA_war_plans_division
 		icon = GFX_goal_generic_position_armies
-		x = 66
+		x = 60
 		y = 0
 		
 		cost = 8
@@ -3130,7 +3130,7 @@ focus_tree = {
 	focus = {
 		id = USA_war_department
 		icon = GFX_goal_generic_army_doctrines
-		x = 30
+		x = 20
 		y = 0
 		relative_position_id = USA_war_plans_division
 		

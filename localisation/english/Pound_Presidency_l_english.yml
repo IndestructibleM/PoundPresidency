@@ -395,7 +395,8 @@
  vr_usa.4.t: "American Political Chaos Event 4"
  vr_usa.5.t: "American Political Chaos Event 5"
  vr_usa.6.t: "American Political Chaos Event 6"
-
+ 
+ 
  
  collaborator_gov: "Collaborator Government"
  sister_republic: "Sister Republic"
@@ -646,3 +647,5 @@ USA_I_am_stronger_than_ever_desc:0 "From trial and rebirth, the President has em
 fdrlives.0.t: "The Cure"
 fdrlives.0.d: "News coming out about President Roosevelt’s illness have grown quiet in recent weeks. \n\n Doctors and aides spoke in low voices as Franklin D. Roosevelt sat beside a table crowded with medicines that had long ago lost their promise. That night a doctor arrived carrying something unusual: a small vial brought back by an expedition to the monasteries of Bhutan. The men who delivered it claimed monks in the mountains had entrusted it to them: an herbal remedy, ancient and potent. \n\nThe other doctors protested, but Roosevelt only smiled and drank. For a moment, nothing happened. Then the vial slipped from his hand and shattered as his body lurched with a sudden, violent tremor. The room erupted in alarm. Physicians rushed forward, but Roosevelt pushed them back as the shaking worsened, his legs quivering under him with a force no one in the room had seen in years. \n\nThen Roosevelt stood up. \n\nFranklin Delano Roosevelt was standing upright for the first time in years. The tremors faded as he steadied himself, breathing hard, while the room fell silent around him. No one spoke. No one moved. They simply watched, scarcely daring to believe what they were seeing. But they would not need to merely “believe” for much longer. Soon, they could know, and be a part of the truth."
 fdrlives.0.a: "The Order is Born..."
+fdrlives.5.t: "His Name is Nixon"
+fdrlives.5.d: "Reports from the OSS have grown increasingly troubling. In the quiet hours of the night, President Roosevelt has begun speaking of a threat not of a foreign power, not from internal opposition but from the future itself. \n\nDuring a private council within the Oval Office, the President rose from his chair with a stiffness that betrayed the strain of his unnatural recovery. His eyes, once warm, now burned with a cold and calculating certainty. \n“Sometime, in this land I have brought order to, a man will come to tear it all down. He will bring chaos once more. He will end the New Deal.” \nThe room fell silent. Advisors exchanged uneasy glances. Roosevelt continued, voice low and prophetic: \n\n“His name is Richard Milhouse Nixon. He is already born. Detach the OSS to his home." \n\nThe President spoke of the boy as if he were a grown adversary, a destined insurgent whose very existence threatened the Order’s foundations. Intelligence officers attempted to reassure him; Nixon was a child, barely old enough to read, but Roosevelt dismissed them with a wave of his hand. \n\n“Rebellion is not taught. It is carried in the soul.” finished FDR.  \n\nHow far will Roosevelt go to secure the future?"

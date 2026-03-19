@@ -1,0 +1,11 @@
+
+SYR_increase_var = {
+	add_to_variable = { SYR_pp_dynamic = 0.02 }
+	add_to_variable = { SYR_st_dynamic = 0.05 }
+	custom_effect_tooltip = SYR_var_increase_tt
+}
+SYR_decrease_var = {
+	add_to_variable = { SYR_pp_dynamic = -0.02 }
+	add_to_variable = { SYR_st_dynamic = -0.02 }
+	custom_effect_tooltip = SYR_var_decrease_tt
+}

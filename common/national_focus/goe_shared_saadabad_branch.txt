@@ -11,9 +11,9 @@ joint_focus = {
 		trigger = {
 			tag = IRQ
 			AND = {
-				NOT = { has_completed_focus = IRQ_promote_kurdish_culture }
+				#NOT = { has_completed_focus = IRQ_promote_kurdish_culture }
 				NOT = { has_completed_focus = IRQ_party_of_national_brotherhood }
-				NOT = { has_completed_focus = IRQ_rally_behind_the_hashemite_dynasty }
+				#NOT = { has_completed_focus = IRQ_rally_behind_the_hashemite_dynasty }
 			}
 		}
 	}
@@ -24,9 +24,9 @@ joint_focus = {
 		trigger = {
 			tag = IRQ
 			AND = {
-				has_completed_focus = IRQ_promote_kurdish_culture
+				#has_completed_focus = IRQ_promote_kurdish_culture
 				NOT = { has_completed_focus = IRQ_party_of_national_brotherhood }
-				NOT = { has_completed_focus = IRQ_rally_behind_the_hashemite_dynasty }
+				#NOT = { has_completed_focus = IRQ_rally_behind_the_hashemite_dynasty }
 			}
 		}
 	}
@@ -38,10 +38,10 @@ joint_focus = {
 		trigger = {
 			tag = IRQ
 			AND = {
-				NOT = { has_completed_focus = IRQ_promote_kurdish_culture }
+				#NOT = { has_completed_focus = IRQ_promote_kurdish_culture }
 				OR = {
 					has_completed_focus = IRQ_party_of_national_brotherhood
-					has_completed_focus = IRQ_rally_behind_the_hashemite_dynasty
+					#has_completed_focus = IRQ_rally_behind_the_hashemite_dynasty
 				}
 			}
 		}
@@ -434,7 +434,7 @@ joint_focus = {
 				fallback = yes
 				#path = { 11829 11811 6871 3951 6808 9806 11784 11747 804 3862 3964 6977 6888 9761 6965 9860 876 10399 9858 10497 12318 12476 10811 3916 8123 3795 12046 2097 12855 829 5050 2065 8040 1982 8125 10922 10837 12818 12704 12748 8009 1888 10806 12871 8053 12788 1995 7916 10737 }
 
-				path = { 11829 14737 11811 890 3905 6908 11747 804 11844 3807 3870 921 6977 9777 9761 6965 9860 876 11739 10497 12318 7530 10811 13734 10106 1600 3795 13736 2097 12855 829 5050 2065 1982 10922 10837 10768 10385 7602 7573 5073 1957 1888 10806 12871 8053 12788 1995 7916 10737 }
+				path = { 11829 11811 890 3905 6908 11747 804 11844 3807 3870 921 6977 9777 9761 6965 9860 876 11739 10497 12318 7530 10811 10106 1600 3795 2097 12855 829 5050 2065 1982 10922 10837 10768 10385 7602 7573 5073 1957 1888 10806 12871 8053 12788 1995 7916 10737 }
 
 				start_province = 11829
 				target_province = 10737

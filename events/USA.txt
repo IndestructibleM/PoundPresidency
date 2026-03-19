@@ -77,6 +77,29 @@ country_event = {
 		}
 	}
 }
+
+country_event = {
+	id = fdrlives.5
+	title = fdrlives.5.t
+	desc = fdrlives.5.d
+
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+
+	option = { 
+		name = fdrlives.5.a
+		ai_chance = { factor = 100 }
+	}
+	option = { 
+		name = fdrlives.5.b
+		ai_chance = { factor = 0 }
+	}
+	option = { 
+		name = fdrlives.5.c
+		ai_chance = { factor = 0 }
+	}
+}
 country_event = {
 	id = usa.1
 	title = usa.1.t
