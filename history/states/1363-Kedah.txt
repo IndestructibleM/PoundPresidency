@@ -2,7 +2,7 @@
 state = {
 	id = 1363
 	name = "STATE_1363"
-	manpower = 0 #TODO: POP
+	manpower = 1 #TODO: POP
 	
 	state_category = large_town #TODO: SLOTS
 	history = {

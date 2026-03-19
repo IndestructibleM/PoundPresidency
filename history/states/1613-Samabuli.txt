@@ -1,7 +1,7 @@
 state={
 	id=1613
 	name="STATE_1613"
-	manpower = 0 #TODO: POP
+	manpower = 1 #TODO: POP
 	
 	state_category = pastoral #TODO: SLOTS
 
