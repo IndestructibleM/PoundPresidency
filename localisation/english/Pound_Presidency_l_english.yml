@@ -297,6 +297,103 @@
  USA_farmer_labor_front:0 "Farmer-Labor Unity Front"
  USA_a_brighter_shade_of_crimson:0 "A Brighter Shade of Crimson"
  USA_red_american_dream:0 "A Red American Dream"
+ 
+ ### PELLEY 
+  USA_silver_shirts_march:0 "Silver Shirts March on Washington!"
+  USA_silver_shirts_march_desc:0 "The Silver Legion takes to the streets, demonstrating its strength and resolve."
+
+  USA_purify_the_nation:0 "Purify the Nation"
+  USA_purify_the_nation_desc:0 "A campaign to cleanse the nation of perceived corruption and moral decay."
+
+  USA_legionary_administrators:0 "Install Legionary Administrators"
+  USA_legionary_administrators_desc:0 "Install loyal Silver Legion members into key administrative positions."
+
+  USA_american_revelation:0 "American Revelation"
+  USA_american_revelation_desc:0 "A new ideological awakening sweeps across the nation, reshaping its destiny."
+
+  USA_national_christian_state:0 "National-Christian State"
+  USA_national_christian_state_desc:0 "Establish a state guided by Christian nationalism and strict moral doctrine."
+
+  USA_silver_recovery_plan:0 "Silver Recovery Plan"
+  USA_silver_recovery_plan_desc:0 "A sweeping economic program centered on Silver Legion principles."
+
+  USA_a_new_gold_standard:0 "Christian Welfare and Tax Reform"
+  USA_a_new_gold_standard_desc:0 "Reform the monetary system and restore confidence through a revised gold standard."
+
+  USA_legionary_labor_battalions:0 "Legionary Labor Battalions"
+  USA_legionary_labor_battalions_desc:0 "Organize labor forces into disciplined battalions to rebuild the nation."
+
+  USA_a_christian_economic_miracle:0 "A Christian Economic Miracle"
+  USA_a_christian_economic_miracle_desc:0 "Harness faith, discipline, and national unity to spark an economic revival."
+
+  USA_denounce_godless_commnism:0 "Denounce Godless Communism"
+  USA_denounce_godless_commnism_desc:0 "Launch a nationwide crusade against the threat of atheistic communism."
+
+  USA_legionary_civil_service:0 "Legionary Civil Service"
+  USA_legionary_civil_service_desc:0 "Restructure the civil service to ensure loyalty to the new order."
+
+  USA_corporatist_reconstruction:0 "Corporatist Reconstruction"
+  USA_corporatist_reconstruction_desc:0 "Rebuild the economy along corporatist lines, uniting labor and industry."
+
+  USA_the_crusader_army:0 "The Crusader Army"
+  USA_the_crusader_army_desc:0 "Forge a new army infused with religious zeal and nationalistic fervor."
+
+  USA_restore_american_spirit:0 "Restore the American Spirit"
+  USA_restore_american_spirit_desc:0 "Revitalize national pride through cultural and moral renewal."
+
+  USA_legionary_armed_forces:0 "Legionary Armed Forces"
+  USA_legionary_armed_forces_desc:0 "Transform the military into a force aligned with Legionary ideology."
+
+  USA_a_continental_destiny:0 "A Continental Destiny"
+  USA_a_continental_destiny_desc:0 "Embrace a bold vision for America’s rightful place on the continent."
+
+  USA_managed_democracy:0 "Managed Democracy"
+  USA_managed_democracy_desc:0 "Maintain the appearance of democracy while ensuring political stability."
+
+  USA_christian_youth_movement:0 "The Christian Youth Movement"
+  USA_christian_youth_movement_desc:0 "Shape the next generation through faith‑based youth organizations."
+
+  USA_moral_reconstruction_campaign:0 "Moral Reconstruction Campaign"
+  USA_moral_reconstruction_campaign_desc:0 "A sweeping effort to enforce moral discipline across society."
+
+  USA_rebuild_small_town_nation:0 "Rebuild the Small-Town Nation"
+  USA_rebuild_small_town_nation_desc:0 "Revitalize rural America and restore traditional community life."
+
+  USA_astral_citizenship:0 "Astral Citizenship"
+  USA_astral_citizenship_desc:0 "The nation transcends the material plane, recognizing a higher spiritual identity for all true believers."
+
+  USA_crusade_against_materialism:0 "Crusade Against Materialism"
+  USA_crusade_against_materialism_desc:0 "Reject the hollow temptations of the material world and rally the nation around spiritual purpose."
+
+  USA_walk_the_sevenfold_path:0 "Walk the Sevenfold Path"
+  USA_walk_the_sevenfold_path_desc:0 "A sacred doctrine outlines seven steps toward national enlightenment and personal transformation."
+
+  USA_a_government_of_adepts:0 "A Government of Adepts"
+  USA_a_government_of_adepts_desc:0 "Elevate the spiritually awakened to positions of authority, ensuring governance guided by higher wisdom."
+
+  USA_the_hidden_masters:0 "The Hidden Masters"
+  USA_the_hidden_masters_desc:0 "A clandestine circle of enlightened leaders emerges, shaping the nation from behind the veil."
+
+  USA_the_silver_initiates:0 "The Silver Initiates"
+  USA_the_silver_initiates_desc:0 "A new order of initiates is formed, sworn to uphold the esoteric truths of the American Revelation."
+
+  USA_the_new_millenium_state:0 "The New Millennium State"
+  USA_the_new_millenium_state_desc:0 "Proclaim the dawn of a new age — a millennium defined by spiritual unity and national rebirth."
+
+  USA_the_soulcraft_awakening:0 "The Soulcraft Awakening"
+  USA_the_soulcraft_awakening_desc:0 "A movement dedicated to reshaping the American soul, forging a people aligned with divine destiny."
+
+  USA_warriors_of_destiny:0 "Warriors of Destiny"
+  USA_warriors_of_destiny_desc:0 "Train elite warriors whose loyalty is not merely patriotic, but metaphysical in nature."
+
+  USA_americas_spiritual_destiny:0 "America’s Spiritual Destiny"
+  USA_americas_spiritual_destiny_desc:0 "Declare America the chosen vessel for a global spiritual transformation."
+
+  USA_the_silver_crusade:0 "The Silver Crusade"
+  USA_the_silver_crusade_desc:0 "Unleash a crusade to spread the Revelation, uniting the continent under a banner of divine purpose."
+  
+  USA_mine_eyes_have_seen_the_glory: "Mine Eyes Have Seen the Glory!"
+
 
  # Scott
  USA_revolt_of_engineers: "Revolt of the Engineers"
