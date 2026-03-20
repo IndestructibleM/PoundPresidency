@@ -22,6 +22,31 @@
  
  USA_yet_another_4_more_years: "Keep Roosevelt the Candidate"
  
+ USA_breaking_the_two_term_tradition:0 "Breaking the Two-Term Tradition"
+ USA_breaking_the_two_term_tradition_desc:0 "With the world in crisis and democracy under threat, the nation turns once more to familiar leadership. Though unprecedented, a third term is justified as a necessary measure to ensure continuity and stability."
+
+ USA_smith_act_enforcement:0 "Enforce the Smith Act"
+ USA_smith_act_enforcement_desc:0 "The Smith Act grants the government new tools to investigate and prosecute subversive activity. Strengthening its enforcement will help safeguard national security as global tensions rise."
+
+ USA_war_production_board_formation:0 "War Production Board Formation"
+ USA_war_production_board_formation_desc:0 "To coordinate the nation’s vast industrial potential, a centralized War Production Board must be established. Through unified planning, America can become the true Arsenal of Democracy."
+
+ USA_patrol_greenlands_waters:0 "Patrol Greenland’s Waters"
+ USA_patrol_greenlands_waters_desc:0 "Greenland’s strategic position in the North Atlantic makes it vital to hemispheric defense. Expanding naval patrols in the region will secure shipping lanes and deter hostile activity."
+
+ USA_the_4th_term:0 "The Fourth Term"
+ USA_the_4th_term_desc:0 "In the midst of global war, the American people have once again chosen continuity. Roosevelt begins an unprecedented fourth term, determined to guide the nation through the final trials of the conflict."
+
+ USA_war_reconversion_act:0 "The War Reconversion Act"
+ USA_war_reconversion_act_desc:0 "Victory is on the horizon, and preparations must begin for the transition to a peacetime economy. The War Mobilization and Reconversion Act lays the groundwork for postwar prosperity."
+
+ USA_propose_united_nations_charter:0 "Propose the United Nations Charter"
+ USA_propose_united_nations_charter_desc:0 "The foundations of a new international order must be laid before the war ends. By advancing the United Nations Charter, we can help ensure lasting peace and global cooperation."
+
+ USA_the_final_orders:0 "The Closing Orders"
+ USA_the_final_orders_desc:0 "As the war nears its end, the administration issues a final series of directives to secure victory, stabilize the home front, and shape the world that will emerge from the conflict."
+
+ 
  ### LANDON
  USA_republicans_in_the_white_house: "Return of the GOP"
  USA_the_sunflower_president: "The Sunflower President"
