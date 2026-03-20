@@ -1353,6 +1353,303 @@ focus_tree = {
 			
 		}
 	}
+
+	focus = {
+		id = USA_astral_citizenship
+		icon = GFX_focus_usa_honor_the_confederacy
+		x = 0
+		y = 1
+		relative_position_id = USA_american_revelation
+		cost = 6
+		prerequisite = { 
+			focus = USA_american_revelation
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			has_government = reactionary
+			date > 1936.11.8
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {
+		id = USA_crusade_against_materialism
+		icon = GFX_focus_usa_honor_the_confederacy
+		x = -2
+		y = 1
+		relative_position_id = USA_american_revelation
+		cost = 6
+		prerequisite = { 
+			focus = USA_american_revelation
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			has_government = reactionary
+			date > 1936.11.8
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {
+		id = USA_walk_the_sevenfold_path
+		icon = GFX_focus_usa_honor_the_confederacy
+		x = -4
+		y = 1
+		relative_position_id = USA_american_revelation
+		cost = 6
+		prerequisite = { 
+			focus = USA_american_revelation
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			has_government = reactionary
+			date > 1936.11.8
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {
+		id = USA_a_government_of_adepts
+		icon = GFX_focus_usa_honor_the_confederacy
+		x = 0
+		y = 1
+		relative_position_id = USA_astral_citizenship
+		cost = 6
+		prerequisite = { 
+			focus = USA_astral_citizenship
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			has_government = reactionary
+			date > 1936.11.8
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {
+		id = USA_the_hidden_masters
+		icon = GFX_focus_usa_honor_the_confederacy
+		x = -2
+		y = 1
+		relative_position_id = USA_astral_citizenship
+		cost = 6
+		prerequisite = { 
+			focus = USA_astral_citizenship
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			has_government = reactionary
+			date > 1936.11.8
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {
+		id = USA_the_silver_initiates
+		icon = GFX_focus_usa_honor_the_confederacy
+		x = -4
+		y = 1
+		relative_position_id = USA_astral_citizenship
+		cost = 6
+		prerequisite = { 
+			focus = USA_astral_citizenship
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			has_government = reactionary
+			date > 1936.11.8
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {
+		id = USA_the_new_millenium_state
+		icon = GFX_focus_usa_honor_the_confederacy
+		x = 0
+		y = 1
+		relative_position_id = USA_a_government_of_adepts
+		cost = 6
+		prerequisite = { 
+			focus = USA_a_government_of_adepts
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			has_government = reactionary
+			date > 1936.11.8
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {
+		id = USA_the_soulcraft_awakening
+		icon = GFX_focus_usa_honor_the_confederacy
+		x = -2
+		y = 1
+		relative_position_id = USA_a_government_of_adepts
+		cost = 6
+		prerequisite = { 
+			focus = USA_a_government_of_adepts
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			has_government = reactionary
+			date > 1936.11.8
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {
+		id = USA_warriors_of_destiny
+		icon = GFX_focus_usa_honor_the_confederacy
+		x = -4
+		y = 1
+		relative_position_id = USA_a_government_of_adepts
+		cost = 6
+		prerequisite = { 
+			focus = USA_a_government_of_adepts
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			has_government = reactionary
+			date > 1936.11.8
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {
+		id = USA_americas_spiritual_destiny
+		icon = GFX_focus_usa_honor_the_confederacy
+		x = 0
+		y = 1
+		relative_position_id = USA_the_new_millenium_state
+		cost = 6
+		prerequisite = { 
+			focus = USA_the_new_millenium_state
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			has_government = reactionary
+			date > 1936.11.8
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {
+		id = USA_the_silver_crusade
+		icon = GFX_focus_usa_honor_the_confederacy
+		x = 0
+		y = 1
+		relative_position_id = USA_the_soulcraft_awakening
+		cost = 6
+		prerequisite = { 
+			focus = USA_the_soulcraft_awakening
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			has_government = reactionary
+			date > 1936.11.8
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		completion_reward = {
+			
+		}
+	}
 	
 ### NEW FDR FOCI
 
