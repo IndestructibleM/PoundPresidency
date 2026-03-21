@@ -2,15 +2,16 @@ add_namespace = peacedeal
 
 country_event = {
 	id = peacedeal.1
-	desc = peacedeal.1.d
 	title = peacedeal.1.t
+	desc = peacedeal.1.d
 	fire_only_once = yes
 	trigger = {
 		tag = GER
 		has_war_with = SOV
-		controls_state = 217
-		controls_state = 219
-		controls_state = 195
+		217 = { is_controlled_by_ROOT_or_ally = yes}
+		219 = { is_controlled_by_ROOT_or_ally = yes }
+		195 = { is_controlled_by_ROOT_or_ally = yes}
+		
 		SOV = {
 			surrender_progress > 0.3
 		}

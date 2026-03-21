@@ -231,7 +231,7 @@ focus_tree = {
 		x = -12
 		y = 0
 		relative_position_id = USA_continue_the_new_deal
-		cost = 6
+		cost = 2
 
 		ai_will_do = {
 			factor = 1
@@ -301,7 +301,7 @@ focus_tree = {
 			factor = 1
 		}
 		available = {
-
+			has_government = socialist
 		}
 		
 		bypass = {
@@ -978,7 +978,7 @@ focus_tree = {
 
 	focus = {
 		id = USA_legionary_labor_battalions
-		icon = GFX_focus_usa_honor_the_confederacy
+		icon = GFX_focus_ITA_generic_fascist_workers
 		x = 0
 		y = 4
 		relative_position_id = USA_silver_shirts_march
@@ -1032,7 +1032,7 @@ focus_tree = {
 	
 	focus = {
 		id = USA_mine_eyes_have_seen_the_glory
-		icon = GFX_focus_usa_honor_the_confederacy
+		icon = GFX_focus_RAJ_the_sun_sets
 		x = 0
 		y = 7
 		relative_position_id = USA_silver_shirts_march
@@ -1094,7 +1094,7 @@ focus_tree = {
 
 	focus = {
 		id = USA_legionary_civil_service
-		icon = GFX_focus_usa_honor_the_confederacy
+		icon = GFX_focus_generic_advanced_military_studies
 		x = 2
 		y = 1
 		relative_position_id = USA_national_christian_state
@@ -1147,7 +1147,7 @@ focus_tree = {
 	}
 	focus = {
 		id = USA_the_crusader_army
-		icon = GFX_focus_generic_advanced_military_studies
+		icon = GFX_focus_PHI_united_states_army_forces_in_the_far_east
 		x = 0
 		y = 2
 		relative_position_id = USA_national_christian_state
@@ -1174,7 +1174,7 @@ focus_tree = {
 
 	focus = {
 		id = USA_restore_american_spirit
-		icon = GFX_focus_usa_honor_the_confederacy
+		icon = GFX_focus_generic_the_giant_wakes
 		x = 2
 		y = 2
 		relative_position_id = USA_national_christian_state
@@ -1201,7 +1201,7 @@ focus_tree = {
 
 	focus = {
 		id = USA_legionary_armed_forces
-		icon = GFX_focus_usa_honor_the_confederacy
+		icon = GFX_focus_usa_recruit_the_free_corps
 		x = 4
 		y = 2
 		relative_position_id = USA_national_christian_state
@@ -1282,7 +1282,7 @@ focus_tree = {
 
 	focus = {
 		id = USA_christian_youth_movement
-		icon = GFX_focus_usa_honor_the_confederacy
+		icon = GFX_focus_generic_population_growth
 		x = 4
 		y = 3
 		relative_position_id = USA_national_christian_state
@@ -1337,7 +1337,7 @@ focus_tree = {
 
 	focus = {
 		id = USA_rebuild_small_town_nation
-		icon = GFX_focus_usa_honor_the_confederacy
+		icon = GFX_focus_usa_guarantee_the_american_dream
 		x = 0
 		y = 4
 		relative_position_id = USA_national_christian_state
@@ -1364,7 +1364,7 @@ focus_tree = {
 
 	focus = {
 		id = USA_astral_citizenship
-		icon = GFX_focus_usa_honor_the_confederacy
+		icon = GFX_focus_RAJ_red_in_the_shadows
 		x = 0
 		y = 1
 		relative_position_id = USA_american_revelation
@@ -1391,7 +1391,7 @@ focus_tree = {
 
 	focus = {
 		id = USA_crusade_against_materialism
-		icon = GFX_focus_usa_honor_the_confederacy
+		icon = GFX_focus_RAJ_a_private_military
 		x = -2
 		y = 1
 		relative_position_id = USA_american_revelation
@@ -1418,7 +1418,7 @@ focus_tree = {
 
 	focus = {
 		id = USA_walk_the_sevenfold_path
-		icon = GFX_focus_usa_honor_the_confederacy
+		icon = GFX_focus_generic_strike_at_democracy1
 		x = -4
 		y = 1
 		relative_position_id = USA_american_revelation
@@ -1445,7 +1445,7 @@ focus_tree = {
 
 	focus = {
 		id = USA_a_government_of_adepts
-		icon = GFX_focus_usa_honor_the_confederacy
+		icon = GFX_focus_RAJ_kingmaker
 		x = 0
 		y = 1
 		relative_position_id = USA_astral_citizenship
@@ -1499,7 +1499,7 @@ focus_tree = {
 
 	focus = {
 		id = USA_the_silver_initiates
-		icon = GFX_focus_usa_honor_the_confederacy
+		icon = GFX_goal_generic_dangerous_deal
 		x = -4
 		y = 1
 		relative_position_id = USA_astral_citizenship
@@ -1526,7 +1526,7 @@ focus_tree = {
 
 	focus = {
 		id = USA_the_new_millenium_state
-		icon = GFX_focus_usa_honor_the_confederacy
+		icon = GFX_focus_hol_united_netherlands
 		x = 0
 		y = 1
 		relative_position_id = USA_a_government_of_adepts
@@ -1553,7 +1553,7 @@ focus_tree = {
 
 	focus = {
 		id = USA_the_soulcraft_awakening
-		icon = GFX_focus_usa_honor_the_confederacy
+		icon = GFX_focus_RAJ_i_am_death
 		x = -2
 		y = 1
 		relative_position_id = USA_a_government_of_adepts
@@ -1580,7 +1580,7 @@ focus_tree = {
 
 	focus = {
 		id = USA_warriors_of_destiny
-		icon = GFX_focus_usa_honor_the_confederacy
+		icon = GFX_focus_generic_fascist_troops
 		x = -4
 		y = 1
 		relative_position_id = USA_a_government_of_adepts
@@ -1634,7 +1634,7 @@ focus_tree = {
 
 	focus = {
 		id = USA_the_silver_crusade
-		icon = GFX_focus_usa_honor_the_confederacy
+		icon = GFX_focus_mex_restore_the_army_of_christ
 		x = 0
 		y = 1
 		relative_position_id = USA_the_soulcraft_awakening
@@ -7507,6 +7507,7 @@ focus_tree = {
 		continue_if_invalid = no
 		available_if_capitulated = no
 		completion_reward = {
+			remove_ideas = USA_state_of_utopia
 			add_political_power = 50
 			add_popularity = { ideology = democratic popularity = -0.15 }
 			add_popularity = { ideology = fascism popularity = -0.15 }
@@ -7600,7 +7601,7 @@ focus_tree = {
 		relative_position_id = USA_revolt_of_engineers
 		prerequisite = { focus = USA_geothermal_evolution }
 		prerequisite = { focus = USA_dictatorship_of_logos }
-		icon = GFX_focus_GER_customs_union
+		icon = GFX_focus_generic_central_planning
 		available = {
 			has_government = neutrality
 			has_country_leader = { ruling_only = yes character = USA_howard_scott }
@@ -7611,6 +7612,7 @@ focus_tree = {
 		available_if_capitulated = no
 		completion_reward = {
 			USA_great_depression_level_down = yes
+			remove_ideas = USA_obliterated_stock_market
 		}
 	}
 	focus = {

@@ -8,7 +8,7 @@ political_actions = {
 			OR = {
 				has_completed_focus = USA_towards_national_utopia
 				has_completed_focus = USA_republicans_in_the_white_house
-				has_completed_focus = USA_the_workers_candidate
+				has_completed_focus = USA_communism_as_american_apple_pie
 			}
 		}
 		days_mission_timeout = 300
@@ -49,6 +49,33 @@ political_actions = {
 				release = OKS
 				release = CSA
 			}
+			if = {
+				limit = { has_government = fascism }
+				country_event = pound.18
+			}
+		}
+	}
+	USA_temporary_austerity_measures = {
+		name = "Temporary Austerity Measures"
+		#icon = GFX_decision_generic_welfare
+		allowed = { tag = USA }
+		visible = {
+			has_active_mission = USA_address_great_depression
+		}
+		days_remove = 30
+		ai_will_do = {
+			factor = 80
+		}
+		cost = 25
+		complete_effect = {
+			add_days_mission_timeout = {
+				mission = USA_address_great_depression
+				days = -25
+			}
+		}
+		modifier = {
+			consumer_goods_expected_value = -0.075
+			stability_factor = -0.10
 		}
 	}
 }
