@@ -949,42 +949,15 @@ focus_tree = {
 	}
 
 	focus = {
-		id = USA_silver_recovery_plan
-		icon = GFX_focus_CHL_silverworking
+		id = USA_a_new_gold_standard
+		icon = GFX_focus_generic_worker_administration
 		x = 0
 		y = 3
 		relative_position_id = USA_silver_shirts_march
 		cost = 6
 		prerequisite = { 
-			focus = USA_purify_the_nation
-			focus = USA_legionary_administrators
-		}
-		ai_will_do = {
-			factor = 1
-		}
-		available = {
-			has_government = reactionary
-			date > 1936.11.8
-		}
-
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
-		search_filters = {FOCUS_FILTER_POLITICAL}
-		completion_reward = {
-			
-		}
-	}
-
-	focus = {
-		id = USA_a_new_gold_standard
-		icon = GFX_focus_generic_worker_administration
-		x = 0
-		y = 4
-		relative_position_id = USA_silver_shirts_march
-		cost = 6
-		prerequisite = { 
-			focus = USA_silver_recovery_plan
+			focus = USA_american_revelation
+			focus = USA_national_christian_state
 		}
 		ai_will_do = {
 			factor = 1
@@ -1007,7 +980,7 @@ focus_tree = {
 		id = USA_legionary_labor_battalions
 		icon = GFX_focus_usa_honor_the_confederacy
 		x = 0
-		y = 5
+		y = 4
 		relative_position_id = USA_silver_shirts_march
 		cost = 6
 		prerequisite = { 
@@ -1034,7 +1007,7 @@ focus_tree = {
 		id = USA_a_christian_economic_miracle
 		icon = GFX_focus_generic_happy_cheer
 		x = 0
-		y = 6
+		y = 5
 		relative_position_id = USA_silver_shirts_march
 		cost = 6
 		prerequisite = { 
@@ -1343,7 +1316,7 @@ focus_tree = {
 		cost = 6
 
 		prerequisite = {
-			focus = USA_managed_democracy
+			focus = USA_a_continental_destiny
 		}
 		ai_will_do = {
 			factor = 1
@@ -1667,7 +1640,7 @@ focus_tree = {
 		relative_position_id = USA_the_soulcraft_awakening
 		cost = 6
 		prerequisite = { 
-			focus = USA_the_soulcraft_awakening
+			focus = USA_the_new_millenium_state
 		}
 		ai_will_do = {
 			factor = 1
