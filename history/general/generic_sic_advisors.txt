@@ -75,6 +75,8 @@ every_possible_country = {
 				tag = POL
 				tag = GRE
 				tag = FRA
+				tag = EST
+				tag = BUL
 			}
 		}
 		set_temp_variable = {
