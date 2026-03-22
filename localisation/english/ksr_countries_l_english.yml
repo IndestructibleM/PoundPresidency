@@ -1052,8 +1052,8 @@
  WAS_neutrality_DEF: "the State of Washington"
  WAS_fascism: "Greater Washington"
  WAS_fascism_DEF: "Greater Washington"
- WAS_communism: "Socialist State of Washington"
- WAS_communism_DEF: "the Socialist State of Washington"
+ WAS_communism: "Workers' Republic of Seattle"
+ WAS_communism_DEF: "the Workers' Republic of Seattle"
  
  RHI: "Rhineland"
  RHI_DEF: "Rhineland"
@@ -1213,6 +1213,10 @@
  ORS_communism: "Socialist State of Oregon"
  ORS_communism_DEF: "the Socialist State of Oregon"
  
+ OKS_TEX_subject: "Seqoyah Autonomous State"
+ 
+ NWE: "New England"
+ 
  CSC: "Cascadia"
  CSC_DEF: "Cascadia"
  CSC_ADJ: "Cascadian"
@@ -1221,6 +1225,8 @@
  CSC_communism: "Socialist Republic of Cascadia"
  CSC_communism_DEF: "the Socialist Republic of Cascadia"
  CSC_fascism: "Greater Cascadian State"
+ CSC_reactionary: "Silver Legion"
+ CSC_reactionary_DEF: "the Silver Legion"
  CSC_fascism_DEF: "the Greater Cascadian State"
  CSC_neutrality: "Kingdom of Cascadia"
  CSC_neutrality_DEF: "the Kingdom of Cascadia"
@@ -1278,8 +1284,8 @@
  UTS_ADJ: "Utahn"
  UTS_democratic: "State of Utah"
  UTS_democratic_DEF: "the State of Utah"
- UTS_neutrality: "State of Utah"
- UTS_neutrality_DEF: "the State of Utah"
+ UTS_neutrality: "Deseret"
+ UTS_neutrality_DEF: "Deseret"
  UTS_fascism: "Independent State of Utah"
  UTS_fascism_DEF: "the Independent State of Utah"
  UTS_communism: "Socialist State of Utah"
@@ -1552,7 +1558,7 @@
  LAS: "Louisiana"
  LAS_DEF: "Louisiana"
  LAS_ADJ: "Louisianian"
- LAS_democratic: "State of Louisiana"
+ LAS_democratic: "Commonwealth of Louisiana"
  LAS_democratic_DEF: "the State of Louisiana"
  LAS_communism: "Louisianian Commune"
  LAS_communism_DEF: "the Louisianian Commune"
@@ -1738,7 +1744,7 @@
  VAS_communism_DEF: "the Virginian Socialist Commonwealth"
  VAS_fascism: "Confederate State of Virginia"
  VAS_fascism_DEF: "the Confederate State of Virginia"
- VAS_neutrality: "Commonwealth of Virginia"
+ VAS_neutrality: "Virginia Military District"
  VAS_neutrality_DEF: "the Commonwealth of Virginia"
  
  WVS: "West Virginia"
@@ -1752,3 +1758,7 @@
  WVS_fascism_DEF: "the Unitary State of West Virginia"
  WVS_neutrality: "State of West Virginia"
  WVS_neutrality_DEF: "the State of West Virginia"
+ 
+ USA_collapsed_neutrality: "American Salvation Government"
+ NYC: "New York"
+ VMT: "Vermont"

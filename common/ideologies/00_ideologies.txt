@@ -53,6 +53,7 @@ ideologies = {
 			can_force_government = yes
 			can_send_volunteers = yes
 			can_puppet = yes
+			can_create_factions = no
 		}
 
 		can_collaborate = yes
@@ -66,7 +67,6 @@ ideologies = {
 			hidden_modifier = { join_faction_tension = -0.1 }
 			embargo_cost_factor = 1
 			lend_lease_tension = 0.50
-			fascism_acceptance = 20
 		}
 
 		ai_fascist = yes # uses the fascist AI behaviour
@@ -101,6 +101,7 @@ ideologies = {
 			can_force_government = yes
 			can_puppet = yes
 			can_send_volunteers = yes
+			can_create_factions = no
 		}
 
 		modifiers = {
@@ -115,6 +116,7 @@ ideologies = {
 			army_intel_to_others = 10.0
 			navy_intel_to_others = 20.0
 			airforce_intel_to_others = 10.0
+			can_create_factions = no
 		}
 
 		faction_modifiers = {
@@ -174,6 +176,7 @@ ideologies = {
 			can_force_government = yes
 			can_puppet = yes
 			can_send_volunteers = no
+			can_create_factions = no
 		}
 
 		modifiers = {
@@ -228,6 +231,7 @@ ideologies = {
 			can_create_collaboration_government = no
 			can_declare_war_on_same_ideology = no
 			can_force_government = yes
+			can_create_factions = no
 			can_send_volunteers = yes
 			can_puppet = yes
 			can_lower_tension = yes
@@ -304,6 +308,7 @@ ideologies = {
 			can_lower_tension = yes
 			can_only_justify_war_on_threat_country = yes
 			can_guarantee_other_ideologies = yes
+			can_create_factions = no
 		}
 
 		can_host_government_in_exile = yes
@@ -362,6 +367,7 @@ ideologies = {
 			can_force_government = yes
 			can_send_volunteers = yes
 			can_puppet = yes
+			can_create_factions = no
 		}
 
 		can_collaborate = yes
@@ -432,6 +438,7 @@ ideologies = {
 			can_force_government = yes
 			can_send_volunteers = yes
 			can_puppet = yes
+			can_create_factions = no
 		}
 
 		can_collaborate = yes

@@ -550,8 +550,8 @@
  GER_german_monarchy_conservative_democratic_DEF: "the Kingdom of Germany"
  GER_peoples_republic: "Republic of Germany"
  GER_peoples_republic_DEF: "the Republic of Germany"
- GER_peoples_republic_communism: "People's Republic of Germany"
- GER_peoples_republic_communism_DEF: "the People's Republic of Germany"
+ GER_peoples_republic_communism: "Deutsches Räterepublik"
+ GER_peoples_republic_communism_DEF: "the Deutsches Räterepublik"
  GER_greater_proletarian_german_state: "Greater German State"
  GER_greater_proletarian_german_state_DEF: "the Greater German State"
  GER_greater_proletarian_german_state_communism: "Greater German Proletarian State"
@@ -561,6 +561,7 @@
  GER_german_socialist_union_communism: "German Socialist Volksunion"
  GER_german_socialist_union_communism_DEF: "the German Socialist Volksunion"
  GER_strasserite_state_fascism: "German Volksreich" # was Strasserite State of Germany
+ GER_SS: "SS-Ordenstaat Deustchland"
  GER_strasserite_state_fascism_DEF: "the German Volksreich"
  GER_strasserite_state_fascism_ADJ: "Volksdeutsche"
  PRC_proclaimed_communism:0 "People's Republic of China"

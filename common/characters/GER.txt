@@ -175,12 +175,12 @@ characters = {
 				small = GFX_portrait_GER_hans_vogel_small
 			}
 		}
-		#country_leader = { #Gets his role through an event
-		#	ideology = socialism
-		#	traits = { GER_staunch_social_democrat }
-		#	expire = "1965.1.1.1"
-		#	id = -1
-		#}
+		country_leader = { #Gets his role through an event
+			ideology = socialism
+			traits = { GER_staunch_social_democrat }
+			expire = "1965.1.1.1"
+			id = -1
+		}
 	}
 
 	GER_otto_grotewohl = { 
@@ -3500,6 +3500,9 @@ characters = {
 					base = 0.000
 				}
 			}
+			country_leader = {
+				ideology = marxism
+			}
 
 		}
 		instance = {
@@ -3544,7 +3547,9 @@ characters = {
 					base = 1
 				}
 			}
-
+			country_leader = {
+				ideology = marxism
+			}
 		}
 	}
 

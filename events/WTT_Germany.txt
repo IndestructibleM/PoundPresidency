@@ -13,21 +13,16 @@ country_event = {
 	option = {
 		name = wtt_germany.1.a
 
-		IF = {
-			limit = { # We chose to placate Raeder
-				has_country_flag = GER_promised_erich_raeder_a_great_navy_flag
-			}
-
 			hidden_effect = {
 
 				set_global_flag = GER_civil_war_has_started
 
 				set_capital = { state = 55 }
 				SIL = {
-					transfer_state = 66
 					transfer_state = 67
-					add_state_core = 66
-					add_state_core = 67
+					transfer_state = 1541
+					transfer_state = 1540
+					every_owned_state = { add_core_of = THIS }
 					set_politics = {
 						ruling_party = democratic
 					}
@@ -36,26 +31,28 @@ country_event = {
 				}
 				RHI = {
 					transfer_state = 51
-					transfer_state = 1047
-					add_state_core = 51
-					add_state_core = 1047
+					transfer_state = 1253
+					transfer_state = 57
+					every_owned_state = { add_core_of = THIS }
 					set_politics = {
 						ruling_party = communism
 					}
+					set_cosmetic_tag = GER_peoples_republic
 					add_ideas = extensive_conscription
 					add_political_power = 250
 				}
 				WGR = {
 					transfer_state = 42
-					transfer_state = 1049
 					transfer_state = 50
 					transfer_state = 978
+					transfer_state = 1414
 					transfer_state = 52
-					add_state_core = 52
-					add_state_core = 42
-					add_state_core = 1049
-					add_state_core = 51
-					add_state_core = 978
+					transfer_state = 1547
+					transfer_state = 1254
+					transfer_state = 1551
+					transfer_state = 1251
+					transfer_state = 1550
+					every_owned_state = { add_core_of = THIS }
 					set_politics = {
 						ruling_party = democratic
 					}
@@ -66,7 +63,7 @@ country_event = {
 					ruling_party = neutrality
 					ideology = fascism
 					size = 0.5
-					navy_ratio = 0.1
+					navy_ratio = 0.25
 					capital = 64
 					states = all
 					keep_all_characters = yes
@@ -78,8 +75,21 @@ country_event = {
 					    	state = 54
 					    	state = 60
 					    	state = 65
+					    	state = 1701
+					    	state = 1288
+					    	state = 1557
+					    	state = 1702
+					    	state = 1249
+					    	state = 1538
+					    	state = 1542
+					    	state = 1558
+					    	state = 1269
+					    	state = 1268
+					    	state = 1543
+					    	state = 1546
+					    	state = 1548
+					    	state = 1549
 					    	state = 66
-					    	state = 67
 					    	state = 68
 					    	state = 62
 					    	state = 63
@@ -246,246 +256,6 @@ country_event = {
 				    }
 				}
 			}
-		}
-		ELSE = { # We didn't placate Raeder
-
-			hidden_effect = {
-
-				set_global_flag = GER_civil_war_has_started
-
-				set_capital = { state = 55 }
-				SIL = {
-					transfer_state = 66
-					transfer_state = 67
-					add_state_core = 66
-					add_state_core = 67
-					set_politics = {
-						ruling_party = democratic
-					}
-					add_ideas = extensive_conscription
-					add_political_power = 250
-				}
-				RHI = {
-					transfer_state = 51
-					transfer_state = 1047
-					add_state_core = 51
-					add_state_core = 1047
-					set_politics = {
-						ruling_party = communism
-					}
-					add_ideas = extensive_conscription
-					add_political_power = 250
-				}
-				WGR = {
-					transfer_state = 42
-					transfer_state = 1049
-					transfer_state = 50
-					transfer_state = 978
-					transfer_state = 52
-					add_state_core = 52
-					add_state_core = 42
-					add_state_core = 1049
-					add_state_core = 51
-					add_state_core = 978
-					set_politics = {
-						ruling_party = democratic
-					}
-					add_ideas = extensive_conscription
-					add_political_power = 250
-				}
-				start_civil_war = {
-					ruling_party = neutrality
-					ideology = fascism
-					size = 0.5
-					navy_ratio = 0.8
-					capital = 64
-					states = all
-					keep_all_characters = yes
-					states_filter = {
-					    OR = {
-					    	state = 64
-					    	state = 52
-					    	state = 53
-					    	state = 54
-					    	state = 60
-					    	state = 65
-					    	state = 66
-					    	state = 67
-					    	state = 68
-					    	state = 62
-					    	state = 63
-					    	state = 53
-					    	state = 5
-					    	state = 763
-					    }
-					    is_controlled_by = ROOT
-					}
-					PREV = {  # Original country
-						GER_adolf_hitler = { # Character
-						    set_nationality = PREV.PREV
-						    # Transfers to breakaway	
-						}
-						GER_heinrich_himmler = { # Character
-						    set_nationality = PREV.PREV
-						    # Transfers to breakaway
-						}
-				        GER_walter_model = { # Character
-				            set_nationality = PREV.PREV
-				            # Transfers to breakaway
-				        }
-				        GER_hermann_hoth = { # Character
-				            set_nationality = PREV.PREV
-				            # Transfers to breakaway
-				        }
-				        GER_walter_kruger = { # Character
-				            set_nationality = PREV.PREV
-				            # Transfers to breakaway
-				        }
-				        GER_paul_hausser = { # Character
-				            set_nationality = PREV.PREV
-				            # Transfers to breakaway
-				        }
-				        GER_sepp_dietrich = { # Character
-				            set_nationality = PREV.PREV
-				            # Transfers to breakaway
-				        }
-				        GER_felix_steiner = { # Character
-				            set_nationality = PREV.PREV
-				            # Transfers to breakaway
-				        }
-				        GER_erich_raeder = { # Character
-				            set_nationality = PREV.PREV
-				            # Transfers to breakaway
-				        }
-				        GER_karl_donitz = { # Character
-				            set_nationality = PREV.PREV
-				            # Transfers to breakaway
-				        }
-				    }
-
-				    IF = {
-				    	limit = {
-				    		PREV.PREV = {
-				    			NOT = {
-				    				has_country_leader = {
-				    					ruling_only = yes
-				    					character = GER_adolf_hitler
-				    				}
-				    			}
-				    			has_civil_war = yes
-				    		}
-				    	}
-				    	PREV.PREV = {
-				    		promote_character = {
-				    			character = GER_adolf_hitler 
-				    			ideology = nazism 
-				    		}
-				    	}
-				    }
-
-				    PREV.PREV = {
-
-				    	set_variable = { GER_monthly_consumer_goods_increase = GER_monthly_consumer_goods_start } #Amount of increasing CG each month
-				    	set_variable = { GER_industrial_consumer_goods_factor = 0.1 } #Used for MEFO Bills, Economy of Conquest and Recovering Economy and Wirtschaftswunder
-				    	set_variable = { GER_industrial_civilian_intel_to_others = -25 }
-				    	set_variable = { GER_industrial_army_intel_to_others = -25 }
-				    	set_variable = { GER_industrial_navy_intel_to_others = -25 }
-				    	set_variable = { GER_industrial_airforce_intel_to_others = -25 }
-				    	set_variable = { GER_industrial_production_speed_arms_factory_factor = 0.1 }
-				    	set_variable = { GER_industrial_production_speed_dockyard_factor = 0.1 }
-				    	set_variable = { GER_industrial_industrial_capacity_factory = 0 }
-				    	set_variable = { GER_industrial_industrial_capacity_dockyard = 0 }
-				    	set_variable = { GER_industrial_production_lack_of_resource_penalty_factor = 0 }
-				    	set_variable = { GER_industrial_conversion_cost_civ_to_mil_factor = 0 }
-				    	set_variable = { GER_industrial_industry_air_damage_factor = 0 }
-				    	set_variable = { GER_industrial_resource_trade_cost_bonus_per_factory = 0 }
-				    	set_variable = { GER_industrial_production_speed_buildings_factor = 0 }
-				    	set_variable = { GER_industrial_research_speed_factor = 0 }
-				    	set_variable = { GER_industrial_economy_cost_factor = 0 }
-				    	set_variable = { GER_industrial_trade_laws_cost_factor = 0 }
-				    	set_variable = { GER_recovering_economy_modifier_local_resources_factor = 0 }
-				    	set_variable = { GER_industrial_production_factory_max_efficiency_factor = 0 }
-				    	set_variable = { GER_industrial_production_factory_efficiency_gain_factor = 0 }
-				    	set_variable = { GER_industrial_production_factory_start_efficiency_factor = 0 }
-				    	set_variable = { GER_industrial_line_change_production_efficiency_factor = 0 }
-				    	set_variable = { GER_industrial_equipment_conversion_speed = 0 }
-				    	add_dynamic_modifier = { modifier = GER_mefo_bills_modifier }
-
-				    	set_variable = { GER_military_army_org_factor = 0.05 }
-				    	set_variable = { GER_military_planning_speed = 0.25 }
-				    	set_variable = { GER_military_supply_consumption_factor = 0.15 }
-				    	set_variable = { GER_military_equipment_capture = 0 }
-				    	set_variable = { GER_military_initiative_factor = 0 }
-				    	set_variable = { GER_military_army_fuel_consumption_factor = 0 }
-				    	set_variable = { GER_military_coordination_bonus = 0 }
-				    	set_variable = { GER_military_air_superiority_bonus_in_combat = 0 }
-				    	set_variable = { GER_military_max_dig_in_factor = 0 }
-				    	set_variable = { GER_military_army_artillery_defence_factor = 0 }
-				    	set_variable = { GER_military_special_forces_cap = 0 }
-				    	set_variable = { GER_military_acclimatization_hot_climate_gain_factor = 0 }
-				    	set_variable = { GER_military_acclimatization_cold_climate_gain_factor = 0 }
-				    	set_variable = { GER_military_land_doctrine_cost_factor = 0 }
-				    	set_variable = { GER_military_modifier_army_sub_unit_militia_attack_factor = 0 }
-				    	set_variable = { GER_military_modifier_army_sub_unit_militia_defence_factor = 0 }
-				    	set_variable = { GER_military_modifier_army_sub_unit_militia_max_org_factor = 0 }
-				    	set_variable = { GER_military_experience_gain_army_factor = 0 }
-				    	set_variable = { GER_military_army_morale_factor = 0 }
-				    	set_variable = { GER_military_mobilization_speed = 0 }
-				    	set_variable = { GER_military_minimum_training_level = 0 }
-				    	set_variable = { GER_military_unit_leader_as_advisor_cp_cost_factor = 0 }
-				    	set_variable = { GER_military_command_power_gain_mult = 0 }
-				    	add_dynamic_modifier = { modifier = GER_army_modifier }
-
-				    	set_variable = { GER_military_naval_heavy_gun_hit_chance_factor = 0 }
-				    	set_variable = { GER_military_screening_efficiency = 0 }
-				    	set_variable = { GER_military_screening_without_screens = 0 }
-				    	set_variable = { GER_military_navy_max_range_factor = 0 }
-				    	add_dynamic_modifier = { modifier = GER_navy_fascist_modifier }
-
-				    	set_variable = { GER_military_air_accidents_factor = 0.10 }
-				    	set_variable = { GER_military_air_manpower_requirement_factor = 0.10 }
-				    	set_variable = { GER_military_air_agility_factor = 0 }
-				    	set_variable = { GER_military_air_ace_generation_chance_factor = 0 }
-				    	set_variable = { GER_military_air_nav_efficiency = 0 }
-				    	set_variable = { GER_military_air_cas_efficiency = 0 }
-				    	set_variable = { GER_military_air_strategic_bomber_bombing_factor = 0 }
-				    	set_variable = { GER_military_air_range_factor = 0 }
-				    	add_dynamic_modifier = { modifier = GER_airforce_modifier }
-
-			    		delete_unit_template_and_units = {
-			    			division_template = "Bund Wiking"
-			    			disband = yes #if yes, will refund equipment/manpower.
-			    		}
-
-			    		division_template = {
-			    		    name = "Bund Wiking"
-			    		    is_locked = yes
-			    		    division_names_group = GER_INF_01
-			    		    priority = 0
-			    		    template_counter = 79 # The Viking Helmet 
-			    		    regiments = {
-			    		        militia = { x = 0 y = 0 } 
-			    		        militia = { x = 0 y = 1 } 
-			    		        militia = { x = 0 y = 2 }
-			    		        militia = { x = 0 y = 3 }
-			    		    }
-			    		} 
-			    		random_state = {
-			    			limit = {
-			    				OR = {
-			    					state = 64
-			    					state = 65
-			    				}
-			    			}
-			    			create_unit = {
-			    			    division = "name = \"Erste Bund Wiking\" division_template = \"Bund Wiking\" start_experience_factor = 0.5 start_equipment_factor = 0.7"
-			    			    owner = PREV 
-			    			}
-			    		}
-				    }
-				}
-			}
-		}
 
 		# Stuff that happens no matter what
 
@@ -4661,5 +4431,24 @@ country_event = {
 	
 	option = {
 		name = wtt_germany.1006.a
+	}
+}
+
+
+country_event = {
+	id = wtt_germany.9999
+	title = wtt_germany.9999.t
+	desc = wtt_germany.9999.desc 
+	picture = GFX_report_event_german_volunteers
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+	
+	option = {
+		name = wtt_germany.1006.a
+		kill_country_leader = yes
+		recruit_character = GER_ernst_thalmann
+		promote_character = GER_ernst_thalmann
 	}
 }
