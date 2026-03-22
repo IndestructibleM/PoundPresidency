@@ -439,6 +439,7 @@ set_autonomy = {
 		elections_allowed = yes
 	}
 }
+recruit_character = USA_Ezra_Pound
 
 recruit_character = USA_earl_browder
 recruit_character = USA_william_dudley_pelley
@@ -512,7 +513,6 @@ recruit_character = USA_andrew_mckee
 recruit_character = USA_john_walter_christie
 recruit_character = USA_vannevar_bush
 
-recruit_character = USA_Ezra_Pound
 recruit_character = USA_richard_child
 recruit_character = USA_howard_scott
 recruit_character = USA_francis_yockey

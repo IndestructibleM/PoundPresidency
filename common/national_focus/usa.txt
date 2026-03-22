@@ -4659,81 +4659,9 @@ focus_tree = {
  	focus = {
 		id = USA_war_plans_division
 		icon = GFX_goal_generic_position_armies
-		x = 56
+		x = 44
 		y = 0
-		offset = {
-			x = -26
-			y = 0
-			trigger = {
-				NOT = { has_dlc = "Man the Guns" }
-			}
-		}
-		offset = {
-			x = -17
-			y = 0
-			trigger = {
-				has_game_rule = {
-					rule = obsolete_focus_branches_visibility
-					option = HIDE
-				}
-				has_dlc = "Man the Guns"
-				has_completed_focus = USA_continue_the_new_deal
-			}
-		}
-		offset = {
-			x = -2
-			y = 0
-			trigger = {
-				has_game_rule = {
-					rule = obsolete_focus_branches_visibility
-					option = HIDE
-				}
-				NOT = { has_dlc = "Man the Guns" }
-				has_completed_focus = USA_continue_the_new_deal
-			}
-		}
-		offset = {
-			x = -14
-			y = 0
-			trigger = {
-				has_game_rule = {
-					rule = obsolete_focus_branches_visibility
-					option = HIDE
-				}
-				has_dlc = "Man the Guns"
-				has_completed_focus = USA_reestablish_the_gold_standard
-			}
-		}
-		offset = {
-			x = -2
-			y = 0
-			trigger = {
-				has_game_rule = {
-					rule = obsolete_focus_branches_visibility
-					option = HIDE
-				}
-				NOT = { has_dlc = "Man the Guns" }
-				has_completed_focus = USA_reestablish_the_gold_standard
-			}
-		}
-		offset = {
-			x = -2
-			y = 0
-			trigger = {
-				has_game_rule = {
-					rule = obsolete_focus_branches_visibility
-					option = HIDE
-				}
-				OR = {
-					has_completed_focus = USA_continue_the_new_deal
-					has_completed_focus = USA_reestablish_the_gold_standard
-				}
-				OR = {
-					has_completed_focus = USA_limited_intervention
-					has_completed_focus = USA_neutrality_act
-				}
-			}
-		}
+
 		
 		cost = 10
 

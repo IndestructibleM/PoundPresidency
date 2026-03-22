@@ -324,8 +324,8 @@ country_event = {
 			elections_allowed = no
 			last_election = "1936.11.5"
 			election_frequency = 48
-			long_name = "American Socialist Republican Party"
-			name = "ASRP"
+			long_name = "American National Action Front "
+			name = "ANAF"
 		}
 		hidden_effect = {
 			set_cosmetic_tag = USA_democratic
