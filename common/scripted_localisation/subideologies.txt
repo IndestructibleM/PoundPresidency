@@ -25,6 +25,12 @@ defined_text = {
 		}
 		localization_key = "[GetSubIdeologyCom]"
 	}
+	text = {
+		trigger = {
+			has_government = socialist
+		}
+		localization_key = "[GetSubIdeologyCom]"
+	}
 	
 }
 defined_text = {
@@ -301,5 +307,10 @@ defined_text = {
 		}
 		localization_key = juche
 	}
-	
+	text = {
+		trigger = {
+			has_country_leader_ideology = democratic_socialism
+		}
+		localization_key = "Reformist Marxism"
+	}
 }
