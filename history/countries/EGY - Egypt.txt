@@ -28,23 +28,23 @@ if = {
 
 
 set_politics = {
-	ruling_party = neutrality
+	ruling_party = reactionary
 	last_election = "1936.1.1"
 	election_frequency = 48
 	elections_allowed = no
 }
 set_popularities = {
-	democratic = 25
+	neutrality = 25
 	fascism = 20
 	communism = 5
-	neutrality = 50
+	reactionary = 50
 }
 
 create_country_leader = {
 	name = "Muhammad Naguib"
 	desc = ""
 	picture = GFX_portrait_Muhammad_Naguib
-	ideology = liberalism
+	ideology = despotism
 	traits = {
 		#
 	}
@@ -64,7 +64,7 @@ create_country_leader = {
 	name = "Fuad I"
 	desc = ""
 	picture = "GFX_portrait_egy_faud_i"
-	ideology = despotism
+	ideology = absolute_monarchy
 	traits = {
 		#
 	}

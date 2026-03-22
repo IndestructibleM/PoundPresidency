@@ -8,7 +8,7 @@ characters = {
 			}
 		}
 		country_leader = {
-			ideology = despotism
+			ideology = absolute_monarchy
 			traits = { TIB_tulku_trait }
 			expire = "1965.1.1.1"
 			id = -1
@@ -96,12 +96,12 @@ characters = {
 				large=GFX_portrait_Tsepon_Shatra
 			}
 		}
-		#country_leader={
-		#	ideology=falangism
-		#	traits={ ideological_crusader reluctant_interventionist }
-		#	expire="1946.1.1.12"
-		#	id=-1
-		#}
+		country_leader={
+			ideology=falangism
+			traits={ ideological_crusader reluctant_interventionist }
+			expire="1946.1.1.12"
+			id=-1
+		}
 	}
 
 	TIB_thubten_kunpela = {
@@ -116,7 +116,7 @@ characters = {
 			}
 		}
 		country_leader = {
-			ideology = emperor_fascism
+			ideology = democratic_socialism
 			traits = { TIB_strongman_of_tibet }
 			expire = "1963.1.1.12"
 			id = -1
