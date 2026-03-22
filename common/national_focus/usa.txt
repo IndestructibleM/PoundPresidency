@@ -422,6 +422,7 @@ focus_tree = {
 		available_if_capitulated = no
 		search_filters = {FOCUS_FILTER_POLITICAL}
 		completion_reward = {
+			USA_great_depression_level_down = yes
 		}
 	}
 	focus = {
@@ -470,6 +471,7 @@ focus_tree = {
 		available_if_capitulated = no
 		search_filters = {FOCUS_FILTER_POLITICAL}
 		completion_reward = {
+			USA_great_depression_level_down = yes
 		}
 	}
 	focus = {
@@ -742,6 +744,7 @@ focus_tree = {
 		available_if_capitulated = no
 		search_filters = {FOCUS_FILTER_POLITICAL}
 		completion_reward = {
+			USA_great_depression_level_down = yes
 		}
 	}
 	focus = {
@@ -1791,6 +1794,7 @@ focus_tree = {
 		available_if_capitulated = no
 		search_filters = {FOCUS_FILTER_POLITICAL}
 		completion_reward = {
+			USA_great_depression_level_down = yes
 		}
 	}
 
@@ -1849,6 +1853,7 @@ focus_tree = {
 		available_if_capitulated = no
 		search_filters = {FOCUS_FILTER_POLITICAL}
 		completion_reward = {
+			add_popularity = { ideology = democratic popularity = 0.1 }
 		}
 	}
 	
@@ -6921,7 +6926,7 @@ focus_tree = {
 		continue_if_invalid = no
 		available_if_capitulated = no
 		completion_reward = {
-
+			USA_great_depression_level_down = yes
 		}
 	}
 
@@ -7041,7 +7046,7 @@ focus_tree = {
 		continue_if_invalid = no
 		available_if_capitulated = no
 		completion_reward = {
-
+			USA_great_depression_level_down = yes
 		}
 	}
 
@@ -7121,7 +7126,7 @@ focus_tree = {
 		continue_if_invalid = no
 		available_if_capitulated = no
 		completion_reward = {
-
+			USA_great_depression_level_down = yes
 		}
 	}
 
@@ -7195,13 +7200,14 @@ focus_tree = {
 			factor = 10
 		}
 		relative_position_id = USA_the_american_comeback
-		prerequisite = { focus = USA_the_american_comeback focus = USA_a_strong_dollar_and_a_strong_nation }
+		prerequisite = { focus = USA_the_american_comeback }
+		prerequisite = { focus = USA_a_strong_dollar_and_a_strong_nation }
 		icon = GFX_focus_generic_the_giant_wakes
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
 		completion_reward = {
-
+			USA_great_depression_level_down = yes
 		}
 	}
 
