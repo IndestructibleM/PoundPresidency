@@ -10026,10 +10026,10 @@ country_event = {
 		
 	}
 
-	option = { # It should be incorporated into Moskowien
+	option = { # It should be incorporated into Ukraine
 		name = wuw_GER_reichskommissariats.9.b
 		trigger = {
-			RKM = {
+			RKU = {
 				exists = yes
 			}
 		}
@@ -10038,7 +10038,7 @@ country_event = {
 		}		
 		
 		829 = {
-			transfer_state_to = RKM
+			transfer_state_to = RKU
 			add_compliance = 45	
 		}
 

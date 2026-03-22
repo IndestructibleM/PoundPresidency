@@ -566,12 +566,6 @@
  RBM_fascism: "Protektorat Böhmen-Mähren"
  RBM_fascism_DEF: "Protektorat Böhmen-Mähren"
  
- ROS: "Reichskommissariat Ostland"
- ROS_DEF: "Reichskommissariat Ostland"
- ROS_ADJ: "Ostlander"
- ROS_fascism: "Reichskommissariat Ostland"
- ROS_fascism_DEF: "Reichskommissariat Ostland"
- 
  RUK: "Reichskommissariat Ukraine"
  RUK_DEF: "Reichskommissariat Ukraine"
  RUK_ADJ: "Ukrainian"
@@ -1759,6 +1753,4 @@
  WVS_neutrality: "State of West Virginia"
  WVS_neutrality_DEF: "the State of West Virginia"
  
- USA_collapsed_neutrality: "American Salvation Government"
- NYC: "New York"
- VMT: "Vermont"
+ KSS_GOP: "Republican National Committee Government"

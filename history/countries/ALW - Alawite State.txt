@@ -1,0 +1,43 @@
+capital = 1056
+
+set_research_slots = 3
+
+set_technology = {
+    infantry_weapons = 1
+    tech_support = 1
+    tech_engineers = 1
+    tech_recon = 1
+    gw_artillery = 1
+    interwar_antiair = 1
+    fuel_silos = 1
+    synth_oil_experiments = 1
+    early_fighter = 1
+    early_bomber = 1
+    naval_bomber1 = 1
+}
+
+set_politics = {
+    ruling_party = neutrality
+    last_election = "1936.1.1"
+    election_frequency = 48
+    elections_allowed = no
+}
+
+set_popularities = {
+    democratic = 20
+    fascism = 10
+    communism = 10
+    neutrality = 60
+}
+
+create_country_leader = {
+    name = "Ernest M.H. Schoeffler"
+    picture = "gfx/leaders/ALW/FRA_Ernest_Schoeffler.dds"
+    expire = "1965.1.1"
+    ideology = despotism
+    traits = {
+    }
+}
+set_cosmetic_tag = ALW_mandate
+
+# No OOB generated

@@ -428,6 +428,29 @@ country_event = {
 }
 
 country_event = {
+	id = pound.18
+	title = "Civilization Eats the Culture"
+	desc = pound.18.d
+	is_triggered_only = yes
+	
+	option = {
+		name = pound.18.a
+		set_politics = {
+			ruling_party = neutrality
+			elections_allowed = no
+		}
+		hidden_effect = {
+			set_cosmetic_tag = USA_democratic
+		}
+		add_popularity = {
+			ideology = neutrality
+			popularity = 0.1	
+		}
+		promote_character = USA_howard_scott
+	}
+}
+
+country_event = {
 	id = yock.1
 	title = "Enjoy the Silence"
 	desc = yock.1.d

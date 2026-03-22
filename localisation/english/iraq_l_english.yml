@@ -1,0 +1,112 @@
+﻿l_english:
+IRQ_great_war_hero:0 "Great War Hero"
+IRQ_GER_military_mission:0 "German Military Mission"
+    IRQ_Jafar_Al_Askari:0 " Ja'far Al-Askari"
+    IRQ_Abduljabbar_al_khudiri: "Abdul Jabbar Al-Khudiri"
+    IRQ_abdul_hamid_al_shalaji: "Abdul Hamid Al-Shalaji"
+    IRQ_ismail_Namiq: "Ismail Namiq"
+    IRQ_amin_zaki_sulayman: "Amin Zaki Sulayman"
+    IRQ_Jamil_Fahmi_Abdul_Wahab: "Jamil Fahmi Abdul Wahab"
+    IRQ_Khalid_Mahmud_Al_Zahawi: "Khalid Mahmud Al-Zahawi"
+    IRQ_Muhammad_Amin_Tahir_Al_Umari: "Muhammad Amin Tahir Al Umari"
+    IRQ_Muhammad_Nazeef_Abdullatif_al_shawi: "Muhammad Nazeef Abdul Latif Al Shawi"
+  
+
+IRQ_expand_the_airforce: "Expand the Airforce"
+ IRQ_kurdish_state_management_category:0 "Kurdish State Management"
+ IRQ_kurdish_state_management_category_desc:0 "The Kurdish issue is one that has dogged us since even before its founding, although the issue has certainly only gotten worse since then. Rampant nationalism and doomed attempts at nation building threaten to destroy the legacy of Independence, and we cannot tolerate any scenario in which there is a free Kurdistan born from the rump of our own nation."
+ IRQ_sectarian_woes:0 "Sectarian Woes"
+ IRQ_sectarian_woes_desc:0 "The sectarian divide in Iraq has only deepened in recent years, with tensions between Sunni and Shia communities threatening to boil over into open conflict. We must take decisive action to bridge this divide and promote unity among our people, lest we fall into chaos and civil war."
+ IRQ_cement_arab_position:0 "Cement Our Position"
+ IRQ_cement_arab_position_desc:0 "To lead the Arab world, we must first ensure that Iraq is the undisputed heartbeat of Arabism. We will prioritize the Arab identity of the state above all provincial loyalties."
+ 
+ IRQ_national_defence_law:0 "The National Defence Law"
+ IRQ_national_defence_law_desc:0 "Universal conscription is not merely a military necessity; it is a school for the nation. By bringing every young man into the army, we forge a single Iraqi identity under the flag."
+ 
+ IRQ_support_Palestinian_cause:0 "Support the Palestinian Cause"
+ IRQ_support_Palestinian_cause_desc:0 "The 1936 Arab Revolt in Palestine requires more than just our sympathy. We shall provide material and political support to our brothers resisting the Mandate."
+ 
+ IRQ_make_concessions:0 "Concessions to the Tribes"
+ IRQ_make_concessions_desc:0 "The Shia tribes of the mid-Euphrates are restless. By offering land reform adjustments and local representation, we can pacify the south without resorting to a costly civil war."
+ 
+ IRQ_suppress_shia_uprising:0 "Crush the Southern Insurgency"
+ IRQ_suppress_shia_uprising_desc:0 "The authority of Baghdad is non-negotiable. If the tribal shaykhs and the Mujtahids will not submit to the law, the Royal Iraqi Air Force will bring them to heel."
+ 
+ IRQ_Hashimi_Grand_Plans:0 "Al-Hashimi's Grand Plans"
+ IRQ_Hashimi_Grand_Plans_desc:0 "Yasin al-Hashimi envisions an Iraq that is not a British client, but a regional hegemon. It is time to look beyond our current borders."
+ 
+ IRQ_ataturk_of_iraq:0 "The Atatürk of Iraq"
+ IRQ_ataturk_of_iraq_desc:0 "Like Mustafa Kemal to our north, al-Hashimi seeks to modernize the nation through iron-willed leadership and the total transformation of society."
+ 
+ IRQ_return_to_force_secularization:0 "Return to forced Secularization"
+ IRQ_return_to_force_secularization_desc:0 "Religious courts and sectarian divisions are relics of the Ottoman past. The state's law must be the only law."
+ 
+ IRQ_destroy_the_Kurds:0 "The Northern Question"
+ IRQ_destroy_the_Kurds_desc:0 "Kurdish separatism threatens the integrity of our state. We will dismantle the power of the northern Aghas and integrate the mountains into the national fold by force."
+ 
+ IRQ_mesopotamia_reborn:0 "Mesopotamia Reborn"
+ IRQ_mesopotamia_reborn_desc:0 "From the ruins of Mesopotamia and the Abbasid Caliphate, a new power rises. We shall reclaim the glory of Baghdad as the center of civilization."
+ 
+ IRQ_bismarck_of_the_arabs:0 "Bismarck of the Arabs"
+ IRQ_bismarck_of_the_arabs_desc:0 "Yasin al-Hashimi shall do for the Arabs what Bismarck did for the Germans: unify a fractured people through blood and iron."
+ 
+ IRQ_fertile_cresent_plan:0 "The Fertile Crescent Plan"
+ IRQ_fertile_cresent_plan_desc:0 "Iraq, Syria, Jordan, and Palestine belong together. We will pursue a union that restores the natural borders of our people."
+ 
+ IRQ_Kurdish_question:0 "Kurdish Question"
+ IRQ_Kurdish_question_desc:0 "Perhaps the Kurds can be bought with words rather than bullets. Recognizing their cultural rights may ensure their loyalty to the throne."
+ 
+ IRQ_five_year_plan: "Five Year Plan"
+ IRQ_five_year_plan_desc: ""
+ 
+ IRQ_prussia_of_arabia:0 "The Prussia of Arabia"
+ IRQ_prussia_of_arabia_desc:0 "Our state shall be an army that possesses a country. Military values will permeate every level of Iraqi society."
+ 
+ IRQ_integrate_the_futuwwa:0 "Formalize the Futuwwa"
+ IRQ_integrate_the_futuwwa_desc:0 "The Futuwwa youth movement will be integrated into our national defense program, ensuring the next generation is disciplined, loyal, and ready for war."
+ 
+ IRQ_consolidate_the_saray:0 "Consolidate the Saray"
+ IRQ_consolidate_the_saray_desc:0 "The government offices (the Saray) must be purged of inefficient bureaucrats and British sycophants to make way for loyal nationalists."
+ 
+ IRQ_purge_the_military:0 "Purge the Military"
+ IRQ_purge_the_military_desc:0 "The military is a double-edged sword. To prevent the rise of rival 'strongmen' and ensure the army remains a tool of the state—and not its master—we must remove politically unreliable elements from the ranks."
+
+ IRQ_britain_side_of_the_deal:0 "Ask Britain to honor the Treaty"
+ IRQ_britain_side_of_the_deal_desc:0 "Our independence was bought with British ink. By maintaining our side of the Anglo-Iraqi Treaty, we ensure continued access to military equipment and protection, even if it chafes our nationalist pride."
+
+ IRQ_question_of_the_monarchy:0 "The Question of the Monarchy"
+ IRQ_question_of_the_monarchy_desc:0 "The King reigns, but does he rule? We must decide if the House of Hashim is a partner in our national rebirth or a hurdle to be cleared."
+ 
+ IRQ_German_Military_Mission:0 "German Military Mission"
+ IRQ_GER_military_mission_desc:0 "The Wehrmacht represents the pinnacle of modern continental warfare. By taking Grobba's deal, we would be able to train our soldiers and purchasing German arms, we diversify our dependencies and modernize the Royal Iraqi Army along Prussian lines. And all they ask in return is war games in our country."
+ IRQ_Shat_arab_agreement:0 "Shat Al-Arab Agreement"
+ IRQ_Shat_arab_agreement_desc:0 "The border dispute with Imperial Iran has simmered for too long. By formalizing our control over the Shatt al-Arab waterway, we secure our only outlet to the sea and stabilize our eastern frontier."
+ IRQ_counter_soviet_Sabotage:0 "Bulwark against Communism"
+ IRQ_counter_soviet_Sabotage_desc:0 ""
+ IRQ_abolish_titles:0 "Abolish Ottoman Titles"
+ IRQ_abolish_titles_desc:0 "For too long, our society has been defined by the rigid hierarchies of the Sublime Porte. By abolishing the titles of Pasha, Bey, and Effendi, we dismantle the remnants of Ottoman feudalism and ensure that every man stands as an equal citizen of the Kingdom of Iraq."
+ IRQ_brotherhood_treaty_with_the_saudis: "Mend fences with the Saudis"
+ IRQ_brotherhood_treaty_with_the_saudis_desc: ""
+ IRQ_zuhoor_palace_radio: "Zuhoor Palace Radio"
+ IRQ_zuhoor_palace_radio_desc: ""
+ IRQ_labour_law_of_1936: "1936 Labour Law"
+ IRQ_labour_law_of_1936_desc: ""
+ IRQ_king_special_projects: "Ghazi's Special Projects"
+ IRQ_king_special_projects_desc: ""
+ IRQ_royal_equestrianism: "Royal Equestrianism"
+ IRQ_royal_equestrianism_desc: ""
+ IRQ_harthiya_model_farm: "Harthiya Model Farm"
+ IRQ_harthiya_model_farm_desc: ""
+ IRQ_royal_motors: "Royal Motors"
+ IRQ_royal_motors_desc: ""
+ IRQ_royal_cinema: "Royal Cinema"
+ IRQ_royal_cinema_desc: ""
+  IRQ_abandon_british_strategy: "Abandon British Tactics"
+  IRQ_abandon_british_strategy_desc: "Abandon British Tactics"
+  IRQ_british_tactics: "Stick with British Tactics"
+  IRQ_british_tactics_desc: "Abandon British Tactics "
+  IRQ_Focus_will_be_opened_soon: "§YThis focus will be revealed once the path is available.§!"
+### New Events
+ DoFE_IRQ_events.100.t: "Ministry Report on Foreign Diplomats"
+ DoFE_IRQ_events.100.d: "The Ministry of Foreign Affairs has concluded its list of current foreign diplomats in Iraq;\n H.E. Sir Archibald John Clark Kerr - The United Kingdom\n H.E. Tahir Lutfi Bey - Turkish Republic\nH.E. Dr. Fritz Grobba - German Reich\n H.E. Monsieur Stanisław Hempel - Polish Republic\n H.E. Enayatollah Khan Samiy - Sublime State of Iran\n H.E. Baron Erik Gyllenstierna - Kingdom of Sweden\n H.E. Herr Charles Buchberger - Austrian Republic\n H.E. Monsieur Paul-Émile Lepissier - French Republic\n H.E. Mr. Paul Knabenshue - United States\n Commendatore Mario Porta - Kingdom of Italy\n M. Robert van de Kerchove d'Hallebast - Kingdom of Belguim\n H.E. Sheikh Ibrahim bin Muhammad Al-Muammar - Kingdom of Saudi Arabia\n H.E. Hassan Hafez Bey Amer - Kingdom of Egypt\n Monsieur Vladimir Fric - Czechoslovak Republic"
+ DoFE_IRQ_events.100.a: "We have a Polish Representative?"

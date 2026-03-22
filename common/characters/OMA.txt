@@ -7,7 +7,7 @@ characters={
 			}
 		}
 		country_leader={
-			ideology=despotism
+			ideology=absolute_monarchy
 			expire="1965.1.1.1"
 			traits = { inexperienced_sultan_2 } # OMA_unifier_of_muscat_and_oman
 			id=-1

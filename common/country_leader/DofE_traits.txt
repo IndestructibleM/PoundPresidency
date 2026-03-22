@@ -1,0 +1,28 @@
+leader_traits = {
+	King_of_Egypt_and_Sudan_fuad = {
+		sprite = 5
+		autonomy_gain_ll_to_overlord = -0.1
+		autonomy_gain = -0.1
+		cic_to_overlord_factor = 0.05
+		stability_factor = -0.05
+
+		ai_will_do = {
+			factor = 2
+		}
+	}
+	King_of_Egypt_and_Sudan = {
+		stability_factor = 0.1
+		army_core_defence_factor = 0.1
+		army_core_attack_factor = 0.05
+		political_power_factor = 0.05
+	}
+
+	IRQ_great_war_hero = {
+		drift_defence_factor = 0.1
+		war_support_factor = 0.05
+		army_core_attack_factor = 0.1
+		army_core_defence_factor = 0.1
+		army_morale_factor = 0.05
+	}
+
+}

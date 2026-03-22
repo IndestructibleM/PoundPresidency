@@ -2,6 +2,10 @@
 
  SOV_SSR: "$NONIDEOLOGYADJ$ Soviet Socialist Republic"
  SOV_ASSR: "$NONIDEOLOGYADJ$ Autonomous Soviet Socialist Republic"
+ USA_union: "Union of America"
+ 
+ 
+ ### Vanilla
  INS_HOL_democratic:0 "Dutch East Indies"
  INS_HOL_democratic_DEF:0 "the Dutch East Indies"
  INS_subject:0 "$OVERLORDADJ$ East Indies"
@@ -550,8 +554,8 @@
  GER_german_monarchy_conservative_democratic_DEF: "the Kingdom of Germany"
  GER_peoples_republic: "Republic of Germany"
  GER_peoples_republic_DEF: "the Republic of Germany"
- GER_peoples_republic_communism: "Deutsches Räterepublik"
- GER_peoples_republic_communism_DEF: "the Deutsches Räterepublik"
+ GER_peoples_republic_communism: "Deutsche Räterepublik"
+ GER_peoples_republic_communism_DEF: "the Deutsche Räterepublik"
  GER_greater_proletarian_german_state: "Greater German State"
  GER_greater_proletarian_german_state_DEF: "the Greater German State"
  GER_greater_proletarian_german_state_communism: "Greater German Proletarian State"

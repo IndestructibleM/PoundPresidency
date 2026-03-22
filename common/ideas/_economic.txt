@@ -2269,6 +2269,7 @@ ideas = {
 					consumer_goods_factor = 0.06
 					political_power_gain = -0.04
 					monthly_population = 0.025
+					weekly_casualties_war_support = 0.001
 				}
 				ai_will_do = { factor = 80 }
 			}
@@ -2284,6 +2285,7 @@ ideas = {
 					consumer_goods_factor = 0.12
 					monthly_population = 0.05
 					political_power_gain = 0.04
+					weekly_casualties_war_support = 0.003
 				}
 	
 				ai_will_do = { factor = 90 }
@@ -2300,6 +2302,7 @@ ideas = {
 					consumer_goods_factor = 0.18
 					monthly_population = 0.075
 					political_power_gain = 0.08
+					weekly_casualties_war_support = 0.005
 				}
 				
 				ai_will_do = { factor = 100 }
@@ -2316,6 +2319,7 @@ ideas = {
 					consumer_goods_factor = 0.24
 					monthly_population = 0.10
 					political_power_gain = 0.12
+					weekly_casualties_war_support = 0.0075
 				}
 			
 				ai_will_do = { factor = 110 }

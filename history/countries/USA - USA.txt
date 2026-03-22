@@ -42,13 +42,6 @@ if = {
 	}
 }
 
-IF = {
-	limit = {
-		has_dlc = "No Compromise, No Surrender"
-	}
-	create_faction_from_template = faction_template_usa_commonwealth
-}
-
 set_research_slots = 4
 set_stability = 0.75
 set_war_support = 0
@@ -200,186 +193,7 @@ if = {
 #}
 
 
-1939.1.1 = {
 
-	add_political_power = 1199
-	add_command_power = 100
-	
-	#adding ministers
-	add_ideas = {
-		USA_robert_taft
-		carl_spaatz
-		jimmy_doolittle
-		army_ordnance_department
-		general_electric
-		USA_war_department
-		USA_intervention_in_europe
-		#laws
-		isolation
-		volunteer_only
-		great_depression_3
-		new_deal
-	}
-	remove_ideas = {
-		great_depression
-	}
-
-	#focuses
-	unlock_national_focus = USA_continue_the_new_deal
-	unlock_national_focus = USA_wpa
-	complete_national_focus = USA_war_department
-	complete_national_focus = USA_air_war_plans_division
-	complete_national_focus = USA_war_plans_division
-	complete_national_focus = USA_agricultural_adjustment_act
-	unlock_national_focus = USA_neutrality_act
-	#Dont want neutrality act event to fire
-	if = {
-		limit = {
-			has_dlc = "Arms Against Tyranny"
-		}
-		add_ideas = USA_neutrality_act_aat
-		hidden_effect = {
-			add_relation_rule_override = {
-				can_access_market = no
-				trigger = trade_partner_not_at_war
-				usage_desc = trade_partner_not_at_war_tt
-			}
-		}
-		else = {
-			add_ideas = USA_neutrality_act
-		}
-	}
-	complete_national_focus = USA_intervention_in_asia	
-	complete_national_focus = USA_war_plan_orange
-	complete_national_focus = USA_intervention_in_europe		
-	complete_national_focus = USA_war_plan_black
-	complete_national_focus = USA_strategic_bombing
- 	complete_national_focus = USA_fair_labour_standards_act
-
-	set_global_flag = earhart_disappeared
-	oob = "USA_1939"
-	if = {
-		limit = { has_dlc = "Man the Guns" }
-			set_naval_oob = "USA_1939_naval_mtg"
-		else = {
-			set_naval_oob = "USA_1939_naval_legacy"
-		}
-	}
-	if = {
-		limit = { has_dlc = "By Blood Alone" }
-			set_air_oob = "USA_1939_air_bba"
-			set_technology = {
-				iw_large_airframe = 1
-				basic_large_airframe = 1
-				improved_small_airframe = 1
-				aa_hmg = 1
-				air_torpedoe_1 = 1
-			}
-		else = {
-			set_air_oob = "USA_1939_air_legacy"
-			set_technology = {
-				fighter1 = 1
-				cv_fighter1 = 1
-				heavy_fighter1 = 1
-				tactical_bomber1 = 1
-				CAS2 = 1
-				strategic_bomber1 = 1
-			}
-		}
-	}
-
-	complete_special_project = {
-		project = sp:sp_naval_cruiser_submarine
-		scientist = USA_william_francis_gibbs
-		state = 361 
-	}
-
-	complete_special_project = {
-		project = sp:sp_air_radar
-		scientist = USA_vannevar_bush
-		state = 386
-	}
-
-	IF = {
-		limit = {
-			has_dlc = "Gotterdammerung"
-		}
-		complete_special_project = {
-			project = sp:sp_air_helicopter
-			scientist = USA_edward_curtis_wells
-			state = 386
-		}
-	}
-
-	complete_special_project = {
-		project = sp:sp_land_military_engineering_vehicles
-		scientist = USA_john_walter_christie
-		state = 393
-	}
-
-	set_technology = {
-		interwar_artillery = 1
-		interwar_antitank = 1
-		infantry_weapons2 = 1
-		support_weapons = 1
-		support_weapons2 = 1
-		marines = 1
-
-		#doctrines
-		#Air
-		#air_superiority = 1
-		#infrastructure_destruction = 1
-		#naval_strike_tactics = 1
-
-		#electronics
-		electronic_mechanical_engineering = 1
-		radio = 1
-		mechanical_computing = 1
-		computing_machine = 1
-		basic_encryption = 1
-		basic_decryption = 1
-
-		#industry
-		basic_machine_tools = 1
-		improved_machine_tools = 1
-		advanced_machine_tools = 1
-		synth_oil_experiments = 1
-		oil_processing = 1
-		fuel_refining2 = 1
-		fuel_refining3 = 1
-		construction1 = 1
-		construction2 = 1
-		construction3 = 1
-		dispersed_industry = 1
-		dispersed_industry2 = 1
-		dispersed_industry3 = 1
-	}
-	if = {
-		limit = { not = { has_dlc = "Man the Guns" } }
-		set_technology = {
-			improved_submarine = 1
-			basic_destroyer = 1
-			basic_heavy_cruiser = 1
-			basic_battlecruiser = 1
-		}
-	}
-	if = {
-		limit = { has_dlc = "Man the Guns" }
-		set_technology = {
-			improved_ship_hull_light = 1
-			basic_ship_hull_heavy = 1
-			improved_ship_hull_heavy = 1
-			improved_sonar = 1
-			improved_ship_torpedo_launcher = 1
-			improved_heavy_battery = 1
-			advanced_dp_light_battery = 3
-		}
-		remove_ideas = MTG_naval_treaty_adherent
-		add_ideas = MTG_naval_treaty_adherent_reduced
-	}
-}
-
-set_grand_doctrine = superior_firepower
 set_grand_doctrine = new_base_strike
 set_grand_doctrine = new_strategic_destruction
 
@@ -443,6 +257,7 @@ set_autonomy = {
 }
 
 recruit_character = USA_earl_browder
+recruit_character = USA_Ezra_Pound
 recruit_character = USA_william_dudley_pelley
 recruit_character = USA_franklin_delano_roosevelt
 recruit_character = USA_george_s_patton
@@ -514,7 +329,7 @@ recruit_character = USA_andrew_mckee
 recruit_character = USA_john_walter_christie
 recruit_character = USA_vannevar_bush
 
-recruit_character = USA_Ezra_Pound
+
 recruit_character = USA_richard_child
 recruit_character = USA_howard_scott
 recruit_character = USA_francis_yockey
@@ -524,6 +339,7 @@ recruit_character = USA_charles_lindbergh_ac
 recruit_character = USA_willis_carto
 recruit_character = USA_revilo_oliver
 recruit_character = USA_george_s_patton_tpp
+recruit_character = USA_upton_sinclair
 
 
 if = {
