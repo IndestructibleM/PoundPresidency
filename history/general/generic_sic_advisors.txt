@@ -65,15 +65,27 @@ every_possible_country = {
 			army = { small = GFX_idea_generic_empowered_trade_unions }
 		}
 	}
-	set_temp_variable = {
-		var = conservative_support
-		value = party_popularity@democratic
+	if = {
+		limit = {
+			NOT = { #Countries that either A) shouldn't have conservative support or B) have conservative support coded into their files
+				tag = ENG
+				tag = SOV
+				tag = USA
+				tag = SPR
+				tag = POL
+				tag = GRE
+			}
+		}
+		set_temp_variable = {
+			var = conservative_support
+			value = party_popularity@democratic
+		}
+		divide_temp_variable = {
+			var = conservative_support 
+			value = 2
+		}
+		add_popularity = { ideology = conservative popularity = conservative_support }
 	}
-	divide_temp_variable = {
-		var = conservative_support 
-		value = 2
-	}
-	add_popularity = { ideology = conservative popularity = conservative_support }
 	
 }
 
@@ -147,8 +159,53 @@ ENG = {
 }
 
 EGY = {
-	set_politics = { ruling_party = neutrality }
-	add_popularity = { ideology = neutrality popularity = 0.35 }
+	set_politics = { ruling_party = reactionary }
+	set_popularities = {
+		neutrality = 25
+		fascism = 20
+		communism = 5
+		reactionary = 50
+	}
+}
+
+CAN = {
+	set_popularities = {
+		democratic = 46
+		conservative = 30
+		reactionary = 4
+		socialist = 10
+		neutrality = 9
+		communism = 1
+	}
+}
+AST = {
+	set_popularities = {
+		democratic = 36
+		conservative = 14
+		reactionary = 5
+		socialist = 41
+		neutrality = 3
+		communism = 1
+	}
+}
+NZL = {
+	set_popularities = {
+		democratic = 17
+		conservative = 21
+		reactionary = 8
+		socialist = 51
+		neutrality = 2
+		communism = 1
+	}
+}
+SAF = {
+	set_popularities = { #using 1938 results
+		democratic = 6
+		conservative = 54
+		reactionary = 31
+		socialist = 6
+		neutrality = 3
+	}
 }
 
 RAJ = {
