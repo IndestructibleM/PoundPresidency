@@ -421,8 +421,10 @@ set_politics = {
 }
 set_popularities = {
 	democratic = 14
-	socialist = 28
-	conservative = 43
+	reactionary = 3
+	neutrality = 7
+	socialist = 27
+	conservative = 34
 	communism = 15
 }
 
