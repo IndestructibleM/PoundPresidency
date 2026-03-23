@@ -11,11 +11,10 @@ state=
 
 	history=
 	{
-		owner = MAL
+		owner = ENG
 		buildings = {
 			infrastructure = 1
 		}
-		add_core_of = MAL
 		add_core_of = BRN
 	}
 

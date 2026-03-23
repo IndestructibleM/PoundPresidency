@@ -52,7 +52,7 @@ characters={
 			}
 		}
 		country_leader={
-			ideology=centrism
+			ideology=democratic_socialism
 			expire="1965.1.1.1"
 			traits = { CAN_social_gospel }
 			id=-1

@@ -1,15 +1,15 @@
 focus_tree = {
-	id = turkish_focus
+#	id = turkish_focus
 
-	country = {
-		factor = 0
+#	country = {
+#		factor = 0
 		
-		modifier = {
-			add = 10
-			tag = TUR
-			has_dlc = "Battle for the Bosporus"
-		}
-	}
+#		modifier = {
+#			add = 10
+#			tag = TUR
+#			has_dlc = "Battle for the Bosporus"
+#		}
+#	}
 	
 	default = no
 

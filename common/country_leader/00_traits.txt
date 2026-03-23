@@ -3269,7 +3269,7 @@ leader_traits = {
 		mobilization_speed = 0.15
 		stability_factor = 0.05
 		communism_drift = 0.02
-		neutrality_drift = 0.02
+		socialist_drift = 0.02
 	}
 
 	#GREECE MINISTERS
