@@ -346,6 +346,7 @@ ideologies = {
 
 		types = {
 			democratic_socialism = {}
+			reformist_marxism = {}
 		}
 
 		dynamic_faction_names = {

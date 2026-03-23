@@ -104,13 +104,15 @@ demand_alsace_lorraine: "Demand Alsace Lorraine"
 FRA_die_perfidious_albion: "Die, Perfidious Albion!"
 loot_our_conquests: "Loot our Conquests"
 FRA_operation_sapin: "Opération Sapin"
-FRA_Plan_R4: "Plan R 4"
+FRA_Plan_R4: "Plan R-4"
 le_nouvel_ordre: "L'Ordre Nouveau"
-
+FRA_reconstruct_the_map_of_europe: "Reconstruire l'Europe"
+FRA_support_polish_revanchism: "Support Polish Revanchism"
 
 FRA_foriegn_policy: "Foreign Policy of the New France"
 FRA_foriegn_policy_desc: "The Order Awakens \nThe Ancient Decree \nThe Return of the Eternal \nEurope, United and Free"
 
+DST: "State of Deseret"
 
 FRA_power_balance: "Duel of the Fates"
 FRA_bucard_range: "Francistes March Forwards"

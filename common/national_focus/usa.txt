@@ -255,14 +255,68 @@ focus_tree = {
 		available_if_capitulated = no
 		search_filters = {FOCUS_FILTER_POLITICAL}
 		completion_reward = {
-			
+			country_event = vr_usa.16
+		}
+	}
+	
+	focus = {
+		id = USA_black_self_determination
+		icon = GFX_focus_RAJ_give_me_blood_and_i_will_grant_you_freedom
+		x = -13
+		y = 1
+		relative_position_id = USA_continue_the_new_deal
+		cost = 2
+		prerequisite = { focus = USA_the_workers_candidate }
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			OR = {
+				has_government = communism
+				has_government = socialist
+			}
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		completion_reward = {
+			country_event = vr_usa.16
 		}
 	}
 
 	focus = {
-		id = USA_foster_path
-		icon = GFX_focus_por_workers_of_iberia
-		x = -4
+		id = USA_arsenal_of_socialism
+		icon = GFX_focus_generic_communist_industry
+		x = -11
+		y = 1
+		relative_position_id = USA_continue_the_new_deal
+		cost = 2
+		prerequisite = { focus = USA_the_workers_candidate }
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			OR = {
+				has_government = communism
+				has_government = socialist
+			}
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		completion_reward = {
+			country_event = vr_usa.16
+		}
+	}
+
+	focus = {
+		id = USA_red_november
+		icon = GFX_focus_GER_the_peoples_victory
+		x = -5
 		y = 1
 		relative_position_id = USA_the_workers_candidate
 		cost = 6
@@ -273,7 +327,94 @@ focus_tree = {
 			factor = 1
 		}
 		available = {
+			has_government = communism
+		}
+		
+		bypass = {
 
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = USA_establish_workers_councils
+		icon = GFX_focus_ITA_corpo_volontari_della_liberta
+		x = -2
+		y = 1
+		relative_position_id = USA_red_november
+		cost = 6
+		prerequisite = {
+			focus = USA_red_november
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			has_government = communism
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = USA_central_executive_committee
+		icon = GFX_focus_GER_proletarian_dictatorship
+		x = 2
+		y = 1
+		relative_position_id = USA_red_november
+		cost = 6
+		prerequisite = {
+			focus = USA_red_november
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			has_government = communism
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = USA_principle_of_recall
+		icon = GFX_focus_generic_military_academy
+		x = -3
+		y = 2
+		relative_position_id = USA_red_november
+		cost = 6
+		prerequisite = {
+			focus = USA_establish_workers_councils
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			has_government = communism
 		}
 		
 		bypass = {
@@ -288,9 +429,494 @@ focus_tree = {
 		}
 	}
 	focus = {
+		id = USA_smash_bourgouise_consitution
+		icon = GFX_focus_generic_crush_capitalism
+		x = -1
+		y = 2
+		relative_position_id = USA_red_november
+		cost = 6
+		prerequisite = {
+			focus = USA_establish_workers_councils
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			has_government = communism
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = USA_strike_the_establishment
+		icon = GFX_focus_GER_wage_war_on_capitalism
+		x = 1
+		y = 2
+		relative_position_id = USA_red_november
+		cost = 6
+		prerequisite = {
+			focus = USA_central_executive_committee
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			has_government = communism
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		completion_reward = {
+		}
+	}
+	focus = {
+		id = USA_reorganization_of_industry
+		icon = GFX_goal_generic_soviet_construction
+		x = 3
+		y = 2
+		relative_position_id = USA_red_november
+		cost = 6
+		prerequisite = {
+			focus = USA_central_executive_committee
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			has_government = communism
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = USA_establish_new_govs
+		icon = GFX_focus_generic_soviet_politics
+		x = -4
+		y = 3
+		relative_position_id = USA_red_november
+		cost = 6
+		prerequisite = {
+			focus = USA_principle_of_recall
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			has_government = communism
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = USA_red_army_of_america
+		icon = GFX_focus_SOV_the_glory_of_the_red_army_communism
+		x = -3
+		y = 4
+		relative_position_id = USA_red_november
+		cost = 6
+		prerequisite = {
+			focus = USA_principle_of_recall
+		}
+		prerequisite = {
+			focus = USA_council_of_commissars
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			has_government = communism
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = USA_state_schooling_revolution
+		icon = GFX_focus_generic_socialist_science
+		x = -2
+		y = 3
+		relative_position_id = USA_red_november
+		cost = 6
+		prerequisite = {
+			focus = USA_principle_of_recall
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			has_government = communism
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		completion_reward = {
+		}
+	}
+	
+	focus = {
+		id = USA_culture_of_proletariat
+		icon = GFX_focus_BRA_state_atheism
+		x = -1
+		y = 4
+		relative_position_id = USA_red_november
+		cost = 6
+		prerequisite = {
+			focus = USA_council_of_commissars
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			has_government = communism
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = USA_council_of_commissars
+		icon = GFX_focus_SOV_the_supreme_soviet
+		x = 0
+		y = 3
+		relative_position_id = USA_red_november
+		cost = 6
+		prerequisite = {
+			focus = USA_smash_bourgouise_consitution
+		}
+		prerequisite = {
+			focus = USA_strike_the_establishment
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			has_government = communism
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		completion_reward = {
+		}
+	}
+	
+	focus = {
+		id = USA_accomplish_the_new_world_revolutions
+		icon = GFX_focus_BRA_create_faction
+		x = -1
+		y = 6
+		relative_position_id = USA_red_november
+		cost = 6
+		prerequisite = {
+			focus = USA_american_comintern
+			focus = USA_solidarity_with_soviets
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			has_government = communism
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = USA_centralized_industrial_planning
+		icon = GFX_focus_SOV_merge_plants
+		x = 1
+		y = 4
+		relative_position_id = USA_red_november
+		cost = 6
+		prerequisite = {
+			focus = USA_council_of_commissars
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			has_government = communism
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = USA_state_farm_program
+		icon = GFX_focus_GER_proletarian_solidarity
+		x = 3
+		y = 4
+		relative_position_id = USA_red_november
+		cost = 6
+		prerequisite = {
+			focus = USA_reorganization_of_industry
+		}
+		prerequisite = {
+			focus = USA_council_of_commissars
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			has_government = communism
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		completion_reward = {
+		}
+	}
+	
+	focus = {
+		id = USA_eliminate_market_anarchy
+		icon = GFX_focus_CHI_planned_economy
+		x = 2
+		y = 3
+		relative_position_id = USA_red_november
+		cost = 6
+		prerequisite = {
+			focus = USA_reorganization_of_industry
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			has_government = communism
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = USA_bolshevism_against_bankers
+		icon = GFX_focus_SOV_the_last_purge
+		x = 4
+		y = 3
+		relative_position_id = USA_red_november
+		cost = 6
+		prerequisite = {
+			focus = USA_reorganization_of_industry
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			has_government = communism
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = USA_american_comintern
+		icon = GFX_focus_SOV_the_supreme_soviet
+		x = -2
+		y = 5
+		relative_position_id = USA_red_november
+		cost = 6
+		prerequisite = {
+			focus = USA_council_of_commissars
+		}
+		prerequisite = {
+			focus = USA_culture_of_proletariat
+			focus = USA_centralized_industrial_planning
+		}
+		mutually_exclusive = {
+			focus = USA_solidarity_with_soviets
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			has_government = communism
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		completion_reward = {
+		}
+	}
+	
+	focus = {
+		id = USA_solidarity_with_soviets
+		icon = GFX_focus_SOV_proclaim_soviet_hegemony
+		x = 2
+		y = 5
+		relative_position_id = USA_red_november
+		cost = 6
+		prerequisite = {
+			focus = USA_council_of_commissars
+		}
+		prerequisite = {
+			focus = USA_culture_of_proletariat
+			focus = USA_centralized_industrial_planning
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			has_government = communism
+		}
+		mutually_exclusive = {
+			focus = USA_american_comintern
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		completion_reward = {
+		}
+	}
+	
+	focus = {
+		id = USA_towards_continental_union
+		icon = GFX_focus_BRA_north_and_south_america
+		x = 1
+		y = 6
+		relative_position_id = USA_red_november
+		cost = 6
+		prerequisite = {
+			focus = USA_american_comintern
+			focus = USA_solidarity_with_soviets
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			has_government = communism
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		completion_reward = {
+		}
+	}
+
+	focus = {
 		id = USA_communism_as_american_apple_pie
 		icon = GFX_focus_por_workers_of_iberia
-		x = 4
+		x = 5
 		y = 1
 		relative_position_id = USA_the_workers_candidate
 		cost = 6
@@ -319,7 +945,7 @@ focus_tree = {
 	focus = {
 		id = USA_lincolns_america
 		icon = GFX_focus_generic_befriend_usa
-		x = 4
+		x = 5
 		y = 2
 		relative_position_id = USA_the_workers_candidate
 		cost = 6
@@ -348,7 +974,7 @@ focus_tree = {
 	focus = {
 		id = USA_end_segregation
 		icon = GFX_focus_NORDIC_com_institution_1
-		x = 4
+		x = 5
 		y = 5
 		relative_position_id = USA_the_workers_candidate
 		cost = 6
@@ -377,7 +1003,7 @@ focus_tree = {
 	focus = {
 		id = USA_the_peoples_deal
 		icon = GFX_focus_FIN_socialist_welfare
-		x = 6
+		x = 7
 		y = 2
 		relative_position_id = USA_the_workers_candidate
 		cost = 6
@@ -403,7 +1029,7 @@ focus_tree = {
 	focus = {
 		id = USA_american_recovery_program
 		icon = GFX_focus_NORDIC_com_selector_civilian
-		x = 5
+		x = 6
 		y = 3
 		relative_position_id = USA_the_workers_candidate
 		cost = 6
@@ -428,7 +1054,7 @@ focus_tree = {
 	focus = {
 		id = USA_industrial_democracy
 		icon = GFX_focus_NORDIC_com_institution_2
-		x = 7
+		x = 8
 		y = 3
 		relative_position_id = USA_the_workers_candidate
 		cost = 6
@@ -452,7 +1078,7 @@ focus_tree = {
 	focus = {
 		id = USA_national_planning_councils
 		icon = GFX_focus_NORDIC_com_capstone_materiel
-		x = 7
+		x = 8
 		y = 4
 		relative_position_id = USA_the_workers_candidate
 		cost = 6
@@ -477,7 +1103,7 @@ focus_tree = {
 	focus = {
 		id = USA_public_industry
 		icon = GFX_focus_NORDIC_com_civilian
-		x = 5
+		x = 6
 		y = 4
 		relative_position_id = USA_the_workers_candidate
 		cost = 6
@@ -501,7 +1127,7 @@ focus_tree = {
 	focus = {
 		id = USA_entrentch_the_popular_front
 		icon = GFX_focus_generic_communism_anti_fascism
-		x = 2
+		x = 3
 		y = 2
 		relative_position_id = USA_the_workers_candidate
 		cost = 6
@@ -527,7 +1153,7 @@ focus_tree = {
 	focus = {
 		id = USA_alliance_with_new_dealers
 		icon = GFX_focus_generic_social_democracy
-		x = 1
+		x = 2
 		y = 3
 		relative_position_id = USA_the_workers_candidate
 		cost = 6
@@ -551,7 +1177,7 @@ focus_tree = {
 	focus = {
 		id = USA_suspend_the_persecution
 		icon = GFX_focus_AUS_lawmaking_leniency
-		x = 3
+		x = 4
 		y = 3
 		relative_position_id = USA_the_workers_candidate
 		cost = 6
@@ -575,7 +1201,7 @@ focus_tree = {
 	focus = {
 		id = USA_force_CIO_AFL_merger
 		icon = GFX_focus_ITA_corpo_volontari_della_liberta
-		x = 3
+		x = 4
 		y = 4
 		relative_position_id = USA_the_workers_candidate
 		cost = 6
@@ -599,7 +1225,7 @@ focus_tree = {
 	focus = {
 		id = USA_empower_the_voice_of_labor
 		icon = GFX_focus_generic_workers
-		x = 1
+		x = 2
 		y = 4
 		relative_position_id = USA_the_workers_candidate
 		cost = 6
@@ -623,7 +1249,7 @@ focus_tree = {
 	focus = {
 		id = USA_socialism_the_american_way
 		icon = GFX_focus_usa_guarantee_the_american_dream
-		x = 2
+		x = 3
 		y = 5
 		relative_position_id = USA_the_workers_candidate
 		cost = 6
@@ -650,7 +1276,7 @@ focus_tree = {
 	focus = {
 		id = USA_federal_congress_of_labor
 		icon = GFX_focus_SOV_the_supreme_soviet
-		x = 6
+		x = 7
 		y = 5
 		relative_position_id = USA_the_workers_candidate
 		cost = 6
@@ -677,7 +1303,7 @@ focus_tree = {
 	focus = {
 		id = USA_peoples_unity_government
 		icon = GFX_goal_generic_national_unity
-		x = 2
+		x = 3
 		y = 6
 		relative_position_id = USA_the_workers_candidate
 		cost = 6
@@ -701,7 +1327,7 @@ focus_tree = {
 	focus = {
 		id = USA_a_popular_mandate
 		icon = GFX_focus_generic_soviet_politics
-		x = 4
+		x = 5
 		y = 6
 		relative_position_id = USA_the_workers_candidate
 		cost = 6
@@ -725,7 +1351,7 @@ focus_tree = {
 	focus = {
 		id = USA_farm_supply_stations
 		icon = GFX_focus_generic_workers_and_farmers_rise
-		x = 6
+		x = 7
 		y = 6
 		relative_position_id = USA_the_workers_candidate
 		cost = 6
@@ -750,7 +1376,7 @@ focus_tree = {
 	focus = {
 		id = USA_a_brighter_shade_of_crimson
 		icon = GFX_focus_generic_spur_communist_revolutions
-		x = 5
+		x = 6
 		y = 7
 		relative_position_id = USA_the_workers_candidate
 		cost = 6
@@ -780,7 +1406,7 @@ focus_tree = {
 	focus = {
 		id = USA_red_american_dream
 		icon = GFX_focus_JAP_a_free_asia_pacific
-		x = 3
+		x = 4
 		y = 7
 		relative_position_id = USA_the_workers_candidate
 		cost = 6
@@ -806,12 +1432,43 @@ focus_tree = {
 			set_cosmetic_tag = USA_PCA
 		}
 	}
+
+	focus = {
+		id = USA_confront_global_reaction
+		icon = GFX_focus_generic_crush_capitalism
+		x = 5
+		y = 8
+		relative_position_id = USA_the_workers_candidate
+		cost = 6
+		prerequisite = {
+			focus = USA_a_popular_mandate
+		}
+		prerequisite = {
+			focus = USA_red_american_dream
+			focus = USA_a_brighter_shade_of_crimson
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		completion_reward = {
+			set_cosmetic_tag = USA_PCA
+		}
+	}
 	
 	focus = {
 		id = USA_silver_shirts_march
 		icon = GFX_focus_ARG_the_american_push
-		x = -1
-		y = 8
+		x = 0
+		y = 9
 		relative_position_id = USA_the_workers_candidate
 		cost = 6
 
@@ -1687,6 +2344,7 @@ focus_tree = {
 		available_if_capitulated = no
 		search_filters = {FOCUS_FILTER_POLITICAL}
 		completion_reward = {
+			upgrade_taxation_law = yes
 		}
 	}
 	
@@ -7607,7 +8265,7 @@ focus_tree = {
 		relative_position_id = USA_revolt_of_engineers
 		prerequisite = { focus = USA_geothermal_evolution }
 		prerequisite = { focus = USA_dictatorship_of_logos }
-		icon = GFX_focus_generic_central_planning
+		icon = GFX_focus_GER_customs_union
 		available = {
 			has_government = neutrality
 			has_country_leader = { ruling_only = yes character = USA_howard_scott }
@@ -7665,7 +8323,7 @@ focus_tree = {
 		}
 		relative_position_id = USA_revolt_of_engineers
 		prerequisite = { focus = USA_rationalize_the_production }
-		icon = GFX_focus_GER_customs_union
+		icon = GFX_focus_generic_central_planning
 		available = {
 			has_government = neutrality
 			has_country_leader = { ruling_only = yes character = USA_howard_scott }

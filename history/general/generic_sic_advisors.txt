@@ -1,12 +1,8 @@
-# For minor countries where advisors are not defined
-# Generate them from a generic template
-### Thank you KR4 Team -Indy
 
-# Generic Political Advisors
+# Generic 2ICs
 every_possible_country = {
-	### this file doesn't accept scripted effects - make sure that the below are exactly the same as in generate_generic_sics
 	generate_character = {
-		token_base = empowered_legislative # token will be TAG_token_base
+		token_base = empowered_legislative 
 		name = "Empowered Legislature"
 		advisor = {
 			slot = second_command
@@ -21,7 +17,7 @@ every_possible_country = {
 		}
 	}
 	generate_character = {
-		token_base = supreme_soviet # token will be TAG_token_base
+		token_base = supreme_soviet 
 		name = "Supreme Soviet"
 		advisor = {
 			slot = second_command
@@ -36,7 +32,7 @@ every_possible_country = {
 		}
 	}
 	generate_character = {
-		token_base = empowered_executive # token will be TAG_token_base
+		token_base = empowered_executive 
 		name = "Empowered Executive"
 		advisor = {
 			slot = second_command
@@ -51,7 +47,7 @@ every_possible_country = {
 		}
 	}
 	generate_character = {
-		token_base = leaer_principle # token will be TAG_token_base
+		token_base = leaer_principle 
 		name = "Leader Principle"
 		advisor = {
 			slot = second_command

@@ -120,6 +120,54 @@ country_event = {
 	
 	trigger = {
 		tag = USA
+		date > 1936.1.20
+	}
+
+	option = { 
+		name = vr_usa.5.a
+		add_popularity = { ideology = socialist popularity = 0.03 }
+		add_popularity = { ideology = democratic popularity = 0.03 }
+	}
+
+	option = { 
+		name = vr_usa.5.b
+		add_popularity = { ideology = fascism popularity = 0.07 }
+	}
+}
+
+country_event = {
+	id = vr_usa.6
+	title = vr_usa.3.t
+	desc = desc.temp.d
+
+	fire_only_once = yes
+	
+	trigger = {
+		tag = USA
+		date > 1936.5.1
+	}
+
+	option = { 
+		name = vr_usa.5.a
+		add_popularity = { ideology = socialist popularity = 0.03 }
+		add_popularity = { ideology = democratic popularity = 0.03 }
+	}
+
+	option = { 
+		name = vr_usa.5.b
+		add_popularity = { ideology = fascism popularity = 0.07 }
+	}
+}
+
+country_event = {
+	id = vr_usa.7
+	title = vr_usa.6.t
+	desc = desc.temp.d
+
+	fire_only_once = yes
+	
+	trigger = {
+		tag = USA
 		date > 1936.5.1
 	}
 
@@ -157,5 +205,25 @@ country_event = {
 		name = vr_usa.4.b
 		add_political_power = 15
 		add_popularity = { ideology = democratic popularity = 0.02 }
+	}
+}
+
+country_event = {
+	id = vr_usa.16
+	title = vr_usa.16.t
+	desc = desc.temp.d
+	is_triggered_only = yes
+	
+
+	option = { 
+		name = vr_usa.16.a
+		add_popularity = { ideology = socialist popularity = 0.05 }
+		set_politics = { ruling_party = socialist }
+	}
+
+	option = { 
+		name = vr_usa.16.b
+		add_popularity = { ideology = communism popularity = 0.05 }
+		set_politics = { ruling_party = communism elections_allowed = no }
 	}
 }
