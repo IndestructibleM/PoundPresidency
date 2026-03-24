@@ -5407,7 +5407,6 @@ focus_tree = {
 
 		completion_reward = {
 			upgrade_usa_army = yes
-			add_dynamic_modifier = { modifier = USA_military_industrial_complex }
 		}
 	}
 
