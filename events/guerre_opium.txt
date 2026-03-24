@@ -1,0 +1,527 @@
+add_namespace = RAJ_guerre_opium
+
+country_event = {#deal with warlord
+    id = RAJ_guerre_opium.1
+    title = RAJ_guerre_opium.1.t
+    desc = RAJ_guerre_opium.1.desc
+    picture = GFX_report_event_generic_strike
+
+    is_triggered_only = yes
+
+    option = { #deal with EIC
+        name = RAJ_guerre_opium.1.a
+        ai_chance = { factor = 90 }
+
+        
+        add_ideas = RAJ_corporate_influenced_warlord
+        add_political_power = 150
+        RAJ = {
+            country_event = { id = RAJ_guerre_opium.6 days = 0 }
+        }
+    }
+
+    option = { #no deal with EIC
+        name = RAJ_guerre_opium.1.b
+        ai_chance = { factor = 10 }
+        RAJ = {
+            country_event = { id = RAJ_guerre_opium.7 days = 0 }
+        }
+        add_political_power = 50
+    }
+}
+
+country_event = {
+    id = RAJ_guerre_opium.2 #deal with jap
+    title = RAJ_guerre_opium.2.t
+    desc = RAJ_guerre_opium.2.desc
+    picture = GFX_report_event_generic_strike
+
+    is_triggered_only = yes
+
+    option = { #Deal with EIC
+        name = RAJ_guerre_opium.2.a
+        ai_chance = { factor = 90 }
+
+        set_country_flag = corpo_deal_jap
+        diplomatic_relation = {
+	country = RAJ
+	relation = non_aggression_pact
+}
+
+        RAJ = {
+            country_event = { id = RAJ_guerre_opium.3 days = 0 }
+        }
+    }
+
+    option = { #no Deal with EIC
+        name = RAJ_guerre_opium.2.b
+        ai_chance = { factor = 10 }
+
+        add_political_power = 50
+
+        RAJ = {
+            country_event = { id = RAJ_guerre_opium.4 days = 0 }
+        }
+    }
+}
+
+country_event = { # We get a deal with JAP
+    id = RAJ_guerre_opium.3
+    title = RAJ_guerre_opium.3.t
+    desc = RAJ_guerre_opium.3.desc
+    picture = GFX_report_event_generic_strike
+
+    is_triggered_only = yes
+
+    option = {
+        name = RAJ_guerre_opium.3.a
+        ai_chance = { factor = 100 }
+
+        set_country_flag = corpo_deal_jap
+        add_political_power = 100
+    }
+}
+
+country_event = {# We don't get a deal with JAP
+    id = RAJ_guerre_opium.4
+    title = RAJ_guerre_opium.4.t
+    desc = RAJ_guerre_opium.4.desc
+    picture = GFX_report_event_generic_strike
+
+    is_triggered_only = yes
+
+    option = {
+        name = RAJ_guerre_opium.4.a
+        ai_chance = { factor = 100 }
+
+        set_country_flag = corpo_no_deal_jap
+        add_political_power = -50
+    }
+}
+
+country_event = { #Warlord betray China
+    id = RAJ_guerre_opium.5 # on rejoint la compagnie
+    title = RAJ_guerre_opium.5.t
+    desc = RAJ_guerre_opium.5.desc
+    picture = GFX_report_event_generic_strike
+
+    is_triggered_only = yes
+
+    option = {
+        name = RAJ_guerre_opium.5.a
+        ai_chance = { factor = 100 }
+
+        remove_idea = RAJ_corporate_influenced_warlord
+        leave_faction = yes
+            white_peace = JAP
+
+        RAJ = {
+            set_autonomy = {
+                target = ROOT
+                autonomy_state = autonomy_puppet
+            }
+        }
+    }
+}
+
+
+country_event = {
+    id = RAJ_guerre_opium.6 # we get a deal with warlord
+    title = RAJ_guerre_opium.6.t
+    desc = RAJ_guerre_opium.6.desc
+    picture = GFX_report_event_generic_strike
+
+    is_triggered_only = yes
+
+    option = {
+        name = RAJ_guerre_opium.6.a
+        ai_chance = { factor = 100 }
+
+
+        add_political_power = 50
+    }
+}
+
+
+country_event = {
+    id = RAJ_guerre_opium.7 # no deal with warlord
+    title = RAJ_guerre_opium.7.t
+    desc = RAJ_guerre_opium.7.desc
+    picture = GFX_report_event_generic_strike
+
+    is_triggered_only = yes
+
+    option = {
+        name = RAJ_guerre_opium.7.a
+        ai_chance = { factor = 100 }
+
+
+        add_political_power = -50
+    }
+}
+
+
+country_event = {
+    id = RAJ_guerre_opium.8 #  deal in indochina
+    title = RAJ_guerre_opium.8.t
+    desc = RAJ_guerre_opium.8.desc
+    picture = GFX_report_event_generic_strike
+
+    is_triggered_only = yes
+
+    option = { # deal
+        name = RAJ_guerre_opium.8.a
+        ai_chance = { factor = 100 }
+        
+            FRA = {
+            add_ideas = investments_in_india
+            }
+        IDS = {
+				transfer_state = 671
+				transfer_state = 670
+				transfer_state = 741
+				transfer_state = 286
+				transfer_state = 1017
+                
+				add_state_core = 671
+				add_state_core = 670
+				add_state_core = 741
+				add_state_core = 286
+				add_state_core = 1017
+					give_resource_rights = { receiver = FRA state = 671 }
+					give_resource_rights = { receiver = FRA state = 89 }
+					give_resource_rights = { receiver = FRA state = 1017 }
+        diplomatic_relation = {
+    country = FRA
+    relation = military_access
+    active = yes
+}
+            give_market_access = FRA
+
+        }
+        RAJ = {
+            country_event = { id = RAJ_guerre_opium.9 days = 0 }
+				transfer_state = 320
+				transfer_state = 728
+        diplomatic_relation = {
+    country = FRA
+    relation = military_access
+    active = yes
+}
+            give_market_access = FRA
+
+        }
+
+
+    }
+        option = { # no deal
+        name = RAJ_guerre_opium.8.b
+        ai_chance = { factor = 1 }
+        add_political_power = 50
+        RAJ = {
+            country_event = { id = RAJ_guerre_opium.10 days = 0 }
+
+        }
+
+    }
+}
+
+
+country_event = {
+    id = RAJ_guerre_opium.9 # deal in indochina
+    title = RAJ_guerre_opium.9.t
+    desc = RAJ_guerre_opium.9.desc
+    picture = GFX_report_event_generic_strike
+
+    is_triggered_only = yes
+
+    option = {
+        name = RAJ_guerre_opium.9.a
+        ai_chance = { factor = 100 }
+
+
+        add_political_power = 100
+    }
+}
+
+country_event = {
+    id = RAJ_guerre_opium.10 # no deal in indochina
+    title = RAJ_guerre_opium.10.t
+    desc = RAJ_guerre_opium.10.desc
+    picture = GFX_report_event_generic_strike
+
+    is_triggered_only = yes
+
+    option = {
+        name = RAJ_guerre_opium.10.a
+        ai_chance = { factor = 100 }
+
+
+        add_political_power = -50
+    }
+}
+
+
+
+country_event = {
+    id = RAJ_guerre_opium.11 #  deal in indonesia
+    title = RAJ_guerre_opium.11.t
+    desc = RAJ_guerre_opium.11.desc
+    picture = GFX_report_event_generic_strike
+
+    is_triggered_only = yes
+
+    option = {# Yes
+        name = RAJ_guerre_opium.11.a
+        ai_chance = { factor = 100 }
+        
+            HOL = {
+            add_ideas = investments_in_india
+            }
+        RAJ = {
+				transfer_state = 672
+				transfer_state = 335
+				transfer_state = 667
+				transfer_state = 1022
+				transfer_state = 334
+				transfer_state = 673
+				transfer_state = 738
+				transfer_state = 668
+				transfer_state = 669
+        diplomatic_relation = {
+    country = HOL
+    relation = military_access
+    active = yes
+}
+            give_market_access = HOL
+
+        }
+            RAJ = {
+                release_autonomy = {
+                    target = ESS
+                    autonomy_state = autonomy_integrated_puppet
+                    freedom_level = 0.5
+                }
+            }
+        ESS = {
+				transfer_state = 672
+				transfer_state = 335
+				transfer_state = 667
+				transfer_state = 1022
+				transfer_state = 334
+				transfer_state = 673
+				transfer_state = 738
+				transfer_state = 668
+				transfer_state = 669
+                
+				add_state_core = 672
+				add_state_core = 335
+				add_state_core = 667
+				add_state_core = 1022
+				add_state_core = 334
+				add_state_core = 673
+				add_state_core = 738
+				add_state_core = 668
+				add_state_core = 669
+					give_resource_rights = { receiver = HOL state = 672 }
+					give_resource_rights = { receiver = HOL state = 335 }
+                set_politics = { ruling_party = neutrality }
+                create_country_leader = {
+                    name = "Conseil d'administration"
+                    desc = ""
+                    picture = "gfx/leaders/RAJ/portrait_RAJ_the_board_of_directors.dds"
+                    expire = "1965.1.1"
+                    ideology = "oligarchism"
+                    traits = { }
+                }
+        diplomatic_relation = {
+    country = HOL
+    relation = military_access
+    active = yes
+}
+            give_market_access = HOL
+
+        }
+        RAJ = {
+            country_event = { id = RAJ_guerre_opium.12 days = 0 }
+
+        }
+
+
+    }
+        option = {#no
+        name = RAJ_guerre_opium.11.b
+        ai_chance = { factor = 1 }
+        add_political_power = 50
+        RAJ = {
+            country_event = { id = RAJ_guerre_opium.13 days = 0 }
+
+        }
+
+    }
+}
+country_event = {
+    id = RAJ_guerre_opium.12 # deal in indonesia
+    title = RAJ_guerre_opium.12.t
+    desc = RAJ_guerre_opium.12.desc
+    picture = GFX_report_event_generic_strike
+
+    is_triggered_only = yes
+
+    option = {
+        name = RAJ_guerre_opium.12.a
+        ai_chance = { factor = 100 }
+
+
+        add_political_power = 100
+    }
+}
+
+country_event = {
+    id = RAJ_guerre_opium.13 # no deal in indonesia
+    title = RAJ_guerre_opium.13.t
+    desc = RAJ_guerre_opium.13.desc
+    picture = GFX_report_event_generic_strike
+
+    is_triggered_only = yes
+
+    option = {
+        name = RAJ_guerre_opium.13.a
+        ai_chance = { factor = 100 }
+
+
+        add_political_power = -50
+    }
+}
+I forgot RAJ_guerre_opium.16
+
+country_event = {merc invasion of siam
+    id = RAJ_guerre_opium.15 #  
+    title = RAJ_guerre_opium.15.t
+    desc = RAJ_guerre_opium.15.desc
+    picture = GFX_report_event_generic_strike
+
+    is_triggered_only = yes
+
+    option = {merc invasion of siam (neutral)
+        name = RAJ_guerre_opium.15.a
+        ai_chance = { factor = 100 }
+        trigger = {
+        SIA = {
+                    has_government = neutrality
+        }
+        }
+
+
+            SIA = {
+        set_country_flag = corpo_merc_invasion
+
+                    start_civil_war = {
+            set_cosmetic_tag = SCA_merc
+    ruling_party = neutrality
+    ideology = fascism
+    size = 0.8
+    only_own_territory = no
+    capital = 994
+    states = { 
+        999 994 993 724 
+    }
+    keep_unit_leaders = {
+        750 751 752
+    }
+}
+                
+                
+            }
+
+    }
+
+
+
+    option = {merc invasion of siam (fascism)
+        name = RAJ_guerre_opium.15.b
+        ai_chance = { factor = 100 }
+        trigger = {
+        SIA = {
+                    has_government = fascism
+        }
+        }
+
+            SIA = {
+        set_country_flag = corpo_merc_invasion
+
+                    start_civil_war = {
+            set_cosmetic_tag = SCA_merc
+    ruling_party = fascism
+    ideology = neutrality
+    size = 0.8
+    only_own_territory = no
+    capital = 994
+    states = { 
+        999 994 993 724 
+    }
+    keep_unit_leaders = {
+        750 751 752
+    }
+}
+                
+                }
+    }
+}
+
+
+
+country_event = {
+    id = RAJ_guerre_opium.16 # siam victory
+    title = RAJ_guerre_opium.16.t
+    desc = RAJ_guerre_opium.16.desc
+    picture = GFX_report_event_generic_strike
+
+    is_triggered_only = yes
+
+    
+
+	trigger = {
+	}
+
+    option = {
+        name = RAJ_guerre_opium.16.a
+        ai_chance = { factor = 100 }
+        add_political_power = 150
+    }
+}
+
+
+
+
+country_event = {
+    id = RAJ_guerre_opium.17 # # preparation of SIAM coup
+    title = RAJ_guerre_opium.17.t
+    desc = RAJ_guerre_opium.17.desc
+    picture = GFX_report_event_generic_strike
+
+    is_triggered_only = yes
+
+    
+
+	trigger = {
+	}
+
+    option = {
+        name = RAJ_guerre_opium.17.a
+        ai_chance = { factor = 100 }
+        
+			add_equipment_to_stockpile = {
+				type = infantry_equipment
+				amount = -1000
+				producer = RAJ
+			}
+            
+            hidden_effect = {
+        RAJ = {
+            country_event = { id = RAJ_guerre_opium.15 days = 38 }
+
+        }
+            }
+    }
+}
