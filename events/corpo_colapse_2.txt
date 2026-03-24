@@ -115,59 +115,73 @@ country_event = {
 
         MPU = {
             add_ideas = RAJ_warlord_idea 
-            add_ideas = RAJ_warlord_army    
+            add_ideas = RAJ_warlord_army  
+            add_ideas = corpo_no_recognition    
             }
         SKK = {
             add_ideas = RAJ_warlord_idea 
-            add_ideas = RAJ_warlord_army    
+            add_ideas = RAJ_warlord_army  
+            add_ideas = corpo_no_recognition    
             }
         RAS = {
             add_ideas = RAJ_warlord_idea 
-            add_ideas = RAJ_warlord_army    
+            add_ideas = RAJ_warlord_army 
+            add_ideas = corpo_no_recognition     
             }
         MYS = {
             add_ideas = RAJ_warlord_idea 
-            add_ideas = RAJ_warlord_army    
+            add_ideas = RAJ_warlord_army 
+            add_ideas = corpo_no_recognition     
             }
         KOL = {
             add_ideas = RAJ_warlord_idea 
             add_ideas = RAJ_warlord_army    
+            add_ideas = corpo_no_recognition  
             }
         HYD = {
             add_ideas = RAJ_warlord_idea 
-            add_ideas = RAJ_warlord_army    
+            add_ideas = RAJ_warlord_army
+            add_ideas = corpo_no_recognition      
             }
         WIS = {
             add_ideas = RAJ_warlord_idea 
-            add_ideas = RAJ_warlord_army    
+            add_ideas = RAJ_warlord_army 
+            add_ideas = corpo_no_recognition     
             }
         CIP = {
             add_ideas = RAJ_warlord_idea 
-            add_ideas = RAJ_warlord_army    
+            add_ideas = RAJ_warlord_army  
+            add_ideas = corpo_no_recognition    
             }
         BLC = {
             add_ideas = RAJ_warlord_idea 
-            add_ideas = RAJ_warlord_army  
+            add_ideas = RAJ_warlord_army 
+            add_ideas = corpo_no_recognition   
             }
         NWF = {
             add_ideas = RAJ_warlord_idea  
-            add_ideas = RAJ_warlord_army   
+            add_ideas = RAJ_warlord_army 
+            add_ideas = corpo_no_recognition    
             }
         KAS = {
             add_ideas = RAJ_warlord_idea 
-            add_ideas = RAJ_warlord_army    
+            add_ideas = RAJ_warlord_army   
+            add_ideas = corpo_no_recognition   
             }
         SIN = {
             add_ideas = RAJ_warlord_idea 
-            add_ideas = RAJ_warlord_army    
+            add_ideas = RAJ_warlord_army   
+            add_ideas = corpo_no_recognition   
             }
         RJP = {
             add_ideas = RAJ_warlord_idea 
-            add_ideas = RAJ_warlord_army    
+            add_ideas = RAJ_warlord_army 
+            add_ideas = corpo_no_recognition     
             }
         KHL = {
             add_ideas = RAJ_warlord_idea 
             add_ideas = RAJ_warlord_army    
+            add_ideas = corpo_no_recognition  
             }
 
 
@@ -569,6 +583,7 @@ retire_character = RAJ_sir_mohammed_iqbal
     # Distribution of supplies to liberated countries
     
     BAN = {
+            add_ideas = corpo_no_recognition  
         add_equipment_to_stockpile = { type = infantry_equipment amount = 2000 producer = RAJ }
         add_equipment_to_stockpile = { type = artillery_equipment amount = 100 producer = RAJ }
         add_equipment_to_stockpile = { type = support_equipment amount = 100 producer = RAJ }
@@ -577,6 +592,7 @@ retire_character = RAJ_sir_mohammed_iqbal
     }
 
     PAK = {
+            add_ideas = corpo_no_recognition  
         add_equipment_to_stockpile = { type = infantry_equipment amount = 8000 producer = RAJ }
         add_equipment_to_stockpile = { type = artillery_equipment amount = 600 producer = RAJ }
         add_equipment_to_stockpile = { type = support_equipment amount = 400 producer = RAJ }
