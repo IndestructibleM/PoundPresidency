@@ -1,0 +1,182 @@
+ksr_extend_custom_subjects_of_ai_overlords = {
+
+	if = { limit = { has_game_rule = { rule = ksr_subjects option = ENABLED } }
+	
+	
+		#GER – Reichskommissariat Belgien-Nordfrankreich
+		if = {
+			limit = {
+				RKB = {
+					OVERLORD = {
+						is_ai = yes
+					}
+				}
+			}
+			
+		}
+		
+		
+	}
+}
+
+ksr_clean_subject_cores = {
+	
+	# Kyokuto Imperial Protectorate
+	every_state = {
+		limit = {
+			KSR_is_kyokuto_imp_pro_state = yes
+			OWNER = { NOT = { tag = KIP } }
+		}
+		remove_core_of = KIP
+	}
+	
+	# French Louisiana
+	every_state = {
+		limit = {
+			KSR_is_french_louisiana_state = yes
+			OWNER = { NOT = { tag = FRL } }
+		}
+		remove_core_of = FRL
+	}
+}
+
+
+
+
+ksr_clean_subject_cosmetics = {
+	if = {
+		limit = {
+			KOR = { 
+				has_cosmetic_tag = US_KOREA
+				NOT = { is_subject_of = USA }
+			}
+		}
+		KOR = { 
+			drop_cosmetic_tag = yes
+			remove_country_leader_role = {
+				character = KOR_archibald_vincent_arnold
+				ideology = liberalism
+			}
+			promote_character = KOR_syngman_rhee
+		}
+	}
+	if = {
+		limit = {
+			DPK = { 
+				has_cosmetic_tag = SU_KOREA
+				NOT = { is_subject_of = SOV }
+			}
+		}
+		DPK = {
+			drop_cosmetic_tag = yes
+			remove_country_leader_role = {
+				character = DPK_terenty_shtykov
+				ideology = stalinism
+			}
+			promote_character = KOR_kim_il_sung
+		}
+	}
+	if = {
+		limit = {
+			DPK = { 
+				has_cosmetic_tag = CN_KOREA
+				NOT = { is_subject_of = PRC }
+			}
+		}
+		DPK = { 
+			drop_cosmetic_tag = yes
+			remove_country_leader_role = {
+				character = DPK_gao_gang
+				ideology = stalinism
+			}
+			promote_character = KOR_kim_il_sung
+		}
+	}
+}
+
+ksr_apply_uncensored_nsdap_symbols = {
+	if = { limit = { GER = { NOT = { has_cosmetic_tag = GER_UNCENSORED } } } GER = { set_cosmetic_tag = GER_UNCENSORED } }
+	if = { limit = { GEN = { NOT = { has_cosmetic_tag = GER_UNCENSORED } } } GEN = { set_cosmetic_tag = GER_UNCENSORED } }
+	
+	if = { limit = { RKB = { NOT = { has_cosmetic_tag = GER_UNCENSORED_RK } } } RKB = { set_cosmetic_tag = GER_UNCENSORED_RK } }
+	if = { limit = { RKU = { NOT = { has_cosmetic_tag = GER_UNCENSORED_RK } } } RKU = { set_cosmetic_tag = GER_UNCENSORED_RK } }
+	if = { limit = { RDW = { NOT = { has_cosmetic_tag = GER_UNCENSORED_RK } } } RDW = { set_cosmetic_tag = GER_UNCENSORED_RK } }
+	if = { limit = { RKN = { NOT = { has_cosmetic_tag = GER_UNCENSORED_RK } } } RKN = { set_cosmetic_tag = GER_UNCENSORED_RK } }
+	if = { limit = { RKG = { NOT = { has_cosmetic_tag = GER_UNCENSORED_RK } } } RKG = { set_cosmetic_tag = GER_UNCENSORED_RK } }
+	if = { limit = { RKO = { NOT = { has_cosmetic_tag = GER_UNCENSORED_RK } } } RKO = { set_cosmetic_tag = GER_UNCENSORED_RK } }
+	if = { limit = { RKK = { NOT = { has_cosmetic_tag = GER_UNCENSORED_RK } } } RKK = { set_cosmetic_tag = GER_UNCENSORED_RK } }
+	if = { limit = { RKT = { NOT = { has_cosmetic_tag = GER_UNCENSORED_RK } } } RKT = { set_cosmetic_tag = GER_UNCENSORED_RK } }
+	if = { limit = { RKM = { NOT = { has_cosmetic_tag = GER_UNCENSORED_RK } } } RKM = { set_cosmetic_tag = GER_UNCENSORED_RK } }
+	if = { limit = { RKL = { NOT = { has_cosmetic_tag = GER_UNCENSORED_RK } } } RKL = { set_cosmetic_tag = GER_UNCENSORED_RK } }
+	if = { limit = { RKI = { NOT = { has_cosmetic_tag = GER_UNCENSORED_RK } } } RKI = { set_cosmetic_tag = GER_UNCENSORED_RK } }
+	if = { limit = { RKC = { NOT = { has_cosmetic_tag = GER_UNCENSORED_RK } } } RKC = { set_cosmetic_tag = GER_UNCENSORED_RK } }
+	if = { limit = { RGB = { NOT = { has_cosmetic_tag = GER_UNCENSORED_RK } } } RGB = { set_cosmetic_tag = GER_UNCENSORED_RK } }
+	if = { limit = { RKA = { NOT = { has_cosmetic_tag = GER_UNCENSORED_RK } } } RKA = { set_cosmetic_tag = GER_UNCENSORED_RK } }
+	if = { limit = { RNA = { NOT = { has_cosmetic_tag = GER_UNCENSORED_RK } } } RNA = { set_cosmetic_tag = GER_UNCENSORED_RK } }
+	if = { limit = { RKV = { NOT = { has_cosmetic_tag = GER_UNCENSORED_RK } } } RKV = { set_cosmetic_tag = GER_UNCENSORED_RK } }
+	if = { limit = { RAN = { NOT = { has_cosmetic_tag = GER_UNCENSORED_RK } } } RAN = { set_cosmetic_tag = GER_UNCENSORED_RK } }
+	if = { limit = { RCO = { NOT = { has_cosmetic_tag = GER_UNCENSORED_RK } } } RCO = { set_cosmetic_tag = GER_UNCENSORED_RK } }
+	if = { limit = { RUS = { NOT = { has_cosmetic_tag = GER_UNCENSORED_RK } } } RUS = { set_cosmetic_tag = GER_UNCENSORED_RK } }
+	if = { limit = { RHD = { NOT = { has_cosmetic_tag = GER_UNCENSORED_RK } } } RHD = { set_cosmetic_tag = GER_UNCENSORED_RK } }
+	if = { limit = { RAR = { NOT = { has_cosmetic_tag = GER_UNCENSORED_RK } } } RAR = { set_cosmetic_tag = GER_UNCENSORED_RK } }
+	if = { limit = { ROA = { NOT = { has_cosmetic_tag = GER_UNCENSORED_RK } } } ROA = { set_cosmetic_tag = GER_UNCENSORED_RK } }
+	if = { limit = { RAA = { NOT = { has_cosmetic_tag = GER_UNCENSORED_RK } } } RAA = { set_cosmetic_tag = GER_UNCENSORED_RK } }
+	if = { limit = { RSK = { NOT = { has_cosmetic_tag = GER_UNCENSORED_RK } } } RSK = { set_cosmetic_tag = GER_UNCENSORED_RK } }
+	if = { limit = { RSB = { NOT = { has_cosmetic_tag = GER_UNCENSORED_RK } } } RSB = { set_cosmetic_tag = GER_UNCENSORED_RK } }
+	if = { limit = { RFO = { NOT = { has_cosmetic_tag = GER_UNCENSORED_RK } } } RFO = { set_cosmetic_tag = GER_UNCENSORED_RK } }
+}
+
+
+
+
+# DEBUG
+ksr_remove_dmz = {
+	# Aland Islands
+	if = { limit = { 145 = { is_demilitarized_zone = yes } } 145 = { set_demilitarized_zone = no } }
+	
+	# Rhineland
+	if = { limit = { 42 = { is_demilitarized_zone = yes } } 42 = { set_demilitarized_zone = no } }
+	if = { limit = { 51 = { is_demilitarized_zone = yes } } 51 = { set_demilitarized_zone = no } }
+	if = { limit = { 978 = { is_demilitarized_zone = yes } } 978 = { set_demilitarized_zone = no } }
+	if = { limit = { 1551 = { is_demilitarized_zone = yes } } 1551 = { set_demilitarized_zone = no } }
+	if = { limit = { 1251 = { is_demilitarized_zone = yes } } 1251 = { set_demilitarized_zone = no } }
+	if = { limit = { 1253 = { is_demilitarized_zone = yes } } 1253 = { set_demilitarized_zone = no } }
+	if = { limit = { 1254 = { is_demilitarized_zone = yes } } 1254 = { set_demilitarized_zone = no } }
+	if = { limit = { 1414 = { is_demilitarized_zone = yes } } 1414 = { set_demilitarized_zone = no } }
+	
+	# Bosphorus
+	if = { limit = { 340 = { is_demilitarized_zone = yes } } 340 = { set_demilitarized_zone = no } }
+	if = { limit = { 341 = { is_demilitarized_zone = yes } } 341 = { set_demilitarized_zone = no } }
+	if = { limit = { 797 = { is_demilitarized_zone = yes } } 797 = { set_demilitarized_zone = no } }
+	if = { limit = { 1223 = { is_demilitarized_zone = yes } } 1223 = { set_demilitarized_zone = no } }
+	if = { limit = { 1266 = { is_demilitarized_zone = yes } } 1266 = { set_demilitarized_zone = no } }
+	
+	# Danzig
+	if = { limit = { 85 = { is_demilitarized_zone = yes } } 85 = { set_demilitarized_zone = no } }
+}
+
+
+
+ksr_assign_dpk_cores = {
+	if = { limit = { 525 = { NOT = { is_core_of = DPK } } } 525 = { add_core_of = DPK } } 
+	if = { limit = { 527 = { NOT = { is_core_of = DPK } } } 527 = { add_core_of = DPK } } 
+	if = { limit = { 1311 = { NOT = { is_core_of = DPK } } } 1311 = { add_core_of = DPK } } 
+	if = { limit = { 1031 = { NOT = { is_core_of = DPK } } } 1031 = { add_core_of = DPK } } 
+	if = { limit = { 1313 = { NOT = { is_core_of = DPK } } } 1313 = { add_core_of = DPK } } 
+	if = { limit = { 1030 = { NOT = { is_core_of = DPK } } } 1030 = { add_core_of = DPK } } 
+	if = { limit = { 1315 = { NOT = { is_core_of = DPK } } } 1315 = { add_core_of = DPK } } 
+	if = { limit = { 1316 = { NOT = { is_core_of = DPK } } } 1316 = { add_core_of = DPK } } 
+	if = { limit = { 1317 = { NOT = { is_core_of = DPK } } } 1317 = { add_core_of = DPK } } 
+	if = { limit = { 1318 = { NOT = { is_core_of = DPK } } } 1318 = { add_core_of = DPK } } 
+	if = { limit = { 1029 = { NOT = { is_core_of = DPK } } } 1029 = { add_core_of = DPK } } 
+	if = { limit = { 1320 = { NOT = { is_core_of = DPK } } } 1320 = { add_core_of = DPK } } 
+	if = { limit = { 1321 = { NOT = { is_core_of = DPK } } } 1321 = { add_core_of = DPK } } 
+	if = { limit = { 1322 = { NOT = { is_core_of = DPK } } } 1322 = { add_core_of = DPK } } 
+	if = { limit = { 1323 = { NOT = { is_core_of = DPK } } } 1323 = { add_core_of = DPK } } 
+	if = { limit = { 1324 = { NOT = { is_core_of = DPK } } } 1324 = { add_core_of = DPK } } 
+	if = { limit = { 1028 = { NOT = { is_core_of = DPK } } } 1028 = { add_core_of = DPK } } 
+	if = { limit = { 1326 = { NOT = { is_core_of = DPK } } } 1326 = { add_core_of = DPK } } 
+	if = { limit = { 1327 = { NOT = { is_core_of = DPK } } } 1327 = { add_core_of = DPK } } 
+	if = { limit = { 1328 = { NOT = { is_core_of = DPK } } } 1328 = { add_core_of = DPK } } 
+	if = { limit = { 1329 = { NOT = { is_core_of = DPK } } } 1329 = { add_core_of = DPK } } 
+}

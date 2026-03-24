@@ -1,0 +1,3353 @@
+# =======================================================================================
+# 										WORLD
+# =======================================================================================
+ksr_map_1949 = {
+	ksr_map_POL_1946 = yes
+	ksr_map_SOV_1946 = yes
+	ksr_map_GER_1949 = yes
+}
+
+
+
+
+ksr_map_europe_2025_un = {
+
+	#Albania
+	ALB = {
+		set_politics = {
+			ruling_party = democratic
+			elections_allowed = yes
+		}
+		every_core_state = {
+			remove_core_of = PREV
+		}
+		44 = { transfer_state_to = PREV add_core_of = PREV }
+		934 = { transfer_state_to = PREV add_core_of = PREV }
+		805 = { transfer_state_to = PREV add_core_of = PREV }
+		set_capital = { state = 44 remember_old_capital = no }
+	}
+	
+	#Andorra
+	ADR = {
+		set_politics = {
+			ruling_party = democratic
+			elections_allowed = yes
+		}
+		every_core_state = {
+			remove_core_of = PREV
+		}
+		1132 = { transfer_state_to = PREV add_core_of = PREV }
+		set_capital = { state = 1132 remember_old_capital = no }
+	}
+	
+	#Armenia
+	ARM = {
+		set_politics = {
+			ruling_party = democratic
+			elections_allowed = yes
+		}
+		every_core_state = {
+			remove_core_of = PREV
+		}
+		230 = { transfer_state_to = PREV add_core_of = PREV }
+		1127 = { transfer_state_to = PREV add_core_of = PREV }
+		set_capital = { state = 230 remember_old_capital = no }
+	}
+	
+	#Austria
+	AUS = {
+		set_politics = {
+			ruling_party = democratic
+			elections_allowed = yes
+		}
+		every_core_state = {
+			remove_core_of = PREV
+		}
+		4 = { transfer_state_to = PREV add_core_of = PREV }
+		975 = { transfer_state_to = PREV add_core_of = PREV }
+		1553 = { transfer_state_to = PREV add_core_of = PREV }
+		1390 = { transfer_state_to = PREV add_core_of = PREV }
+		976 = { transfer_state_to = PREV add_core_of = PREV }
+		152 = { transfer_state_to = PREV add_core_of = PREV }
+		153 = { transfer_state_to = PREV add_core_of = PREV }
+		848 = { transfer_state_to = PREV add_core_of = PREV }
+		set_capital = { state = 4 remember_old_capital = no }
+	}
+	
+	#Azerbaijan
+	AZR = {
+		set_politics = {
+			ruling_party = democratic
+			elections_allowed = yes
+		}
+		every_core_state = {
+			remove_core_of = PREV
+		}
+		229 = { transfer_state_to = PREV add_core_of = PREV }
+		1118 = { transfer_state_to = PREV add_core_of = PREV }
+		1119 = { transfer_state_to = PREV add_core_of = PREV }
+		1120 = { transfer_state_to = PREV add_core_of = PREV }
+		1121 = { transfer_state_to = PREV add_core_of = PREV }
+		1122 = { transfer_state_to = PREV add_core_of = PREV }
+		1057 = { transfer_state_to = PREV add_core_of = PREV }
+		set_capital = { state = 229 remember_old_capital = no }
+	}
+	
+	#Belarus
+	BLR = {
+		set_politics = {
+			ruling_party = neutrality
+			elections_allowed = no
+		}
+		every_core_state = {
+			remove_core_of = PREV
+		}
+		206 = { transfer_state_to = PREV add_core_of = PREV }
+		204 = { transfer_state_to = PREV add_core_of = PREV }
+		1263 = { transfer_state_to = PREV add_core_of = PREV }
+		241 = { transfer_state_to = PREV add_core_of = PREV }
+		1085 = { transfer_state_to = PREV add_core_of = PREV }
+		1084 = { transfer_state_to = PREV add_core_of = PREV }
+		1264 = { transfer_state_to = PREV add_core_of = PREV }
+		207 = { transfer_state_to = PREV add_core_of = PREV }
+		1064 = { transfer_state_to = PREV add_core_of = PREV }
+		1265 = { transfer_state_to = PREV add_core_of = PREV }
+		1094 = { transfer_state_to = PREV add_core_of = PREV }
+		1611 = { transfer_state_to = PREV add_core_of = PREV }
+		194 = { transfer_state_to = PREV add_core_of = PREV }
+		1534 = { transfer_state_to = PREV add_core_of = PREV }
+		1261 = { transfer_state_to = PREV add_core_of = PREV }
+		1610 = { transfer_state_to = PREV add_core_of = PREV }
+		94 = { transfer_state_to = PREV add_core_of = PREV }
+		1535 = { transfer_state_to = PREV add_core_of = PREV }
+		1484 = { transfer_state_to = PREV add_core_of = PREV }
+		95 = { transfer_state_to = PREV add_core_of = PREV }
+		1246 = { transfer_state_to = PREV add_core_of = PREV }
+		1240 = { transfer_state_to = PREV add_core_of = PREV }
+		1239 = { transfer_state_to = PREV add_core_of = PREV }
+		1243 = { transfer_state_to = PREV add_core_of = PREV }
+		96 = { transfer_state_to = PREV add_core_of = PREV }
+		1244 = { transfer_state_to = PREV add_core_of = PREV }
+		96 = { transfer_state_to = PREV add_core_of = PREV }
+		1173 = { transfer_state_to = PREV add_core_of = PREV }
+		set_capital = { state = 206 remember_old_capital = no }
+	}
+	
+	#Belgium
+	BEL = {
+		set_politics = {
+			ruling_party = democratic
+			elections_allowed = yes
+		}
+		every_core_state = {
+			remove_core_of = PREV
+		}
+		6 = { transfer_state_to = PREV add_core_of = PREV }
+		34 = { transfer_state_to = PREV add_core_of = PREV }
+		977 = { transfer_state_to = PREV add_core_of = PREV }
+		980 = { transfer_state_to = PREV add_core_of = PREV }
+		1250 = { transfer_state_to = PREV add_core_of = PREV }
+		set_capital = { state = 6 remember_old_capital = no }
+	}
+	
+	#Bosnia and Herzegovina
+	BOS = {
+		set_politics = {
+			ruling_party = democratic
+			elections_allowed = yes
+		}
+		every_core_state = {
+			remove_core_of = PREV
+		}
+		104 = { transfer_state_to = PREV add_core_of = PREV }
+		1713 = { transfer_state_to = PREV add_core_of = PREV }
+		1711 = { transfer_state_to = PREV add_core_of = PREV }
+		804 = { transfer_state_to = PREV add_core_of = PREV }
+		1712 = { transfer_state_to = PREV add_core_of = PREV }
+		1717 = { transfer_state_to = PREV add_core_of = PREV }
+		set_capital = { state = 104 remember_old_capital = no }
+	}
+	
+	#Bulgaria
+	BUL = {
+		set_politics = {
+			ruling_party = democratic
+			elections_allowed = yes
+		}
+		every_core_state = {
+			remove_core_of = PREV
+		}
+		48 = { transfer_state_to = PREV add_core_of = PREV }
+		1719 = { transfer_state_to = PREV add_core_of = PREV }
+		801 = { transfer_state_to = PREV add_core_of = PREV }
+		211 = { transfer_state_to = PREV add_core_of = PREV }
+		77 = { transfer_state_to = PREV add_core_of = PREV }
+		1720 = { transfer_state_to = PREV add_core_of = PREV }
+		212 = { transfer_state_to = PREV add_core_of = PREV }
+		set_capital = { state = 48 remember_old_capital = no }
+	}
+	
+	#Croatia
+	CRO = {
+		set_politics = {
+			ruling_party = democratic
+			elections_allowed = yes
+		}
+		every_core_state = {
+			remove_core_of = PREV
+		}
+		109 = { transfer_state_to = PREV add_core_of = PREV }
+		1706 = { transfer_state_to = PREV add_core_of = PREV }
+		1705 = { transfer_state_to = PREV add_core_of = PREV }
+		1410 = { transfer_state_to = PREV add_core_of = PREV }
+		1718 = { transfer_state_to = PREV add_core_of = PREV }
+		1388 = { transfer_state_to = PREV add_core_of = PREV }
+		1169 = { transfer_state_to = PREV add_core_of = PREV }
+		852 = { transfer_state_to = PREV add_core_of = PREV }
+		163 = { transfer_state_to = PREV add_core_of = PREV }
+		1314 = { transfer_state_to = PREV add_core_of = PREV }
+		103 = { transfer_state_to = PREV add_core_of = PREV }
+		1339 = { transfer_state_to = PREV add_core_of = PREV }
+		1325 = { transfer_state_to = PREV add_core_of = PREV }
+		1296 = { transfer_state_to = PREV add_core_of = PREV }
+		set_capital = { state = 109 remember_old_capital = no }
+	}
+	
+	#Cyprus
+	CYP = {
+		set_politics = {
+			ruling_party = democratic
+			elections_allowed = yes
+		}
+		every_core_state = {
+			remove_core_of = PREV
+		}
+		183 = { transfer_state_to = PREV add_core_of = PREV }
+		set_capital = { state = 183 remember_old_capital = no }
+	}
+	
+	#Czech Republic
+	CZE = {
+		set_politics = {
+			ruling_party = democratic
+			elections_allowed = yes
+		}
+		every_core_state = {
+			remove_core_of = PREV
+		}
+		9 = { transfer_state_to = PREV add_core_of = PREV }
+		1556 = { transfer_state_to = PREV add_core_of = PREV }
+		69 = { transfer_state_to = PREV add_core_of = PREV }
+		1555 = { transfer_state_to = PREV add_core_of = PREV }
+		972 = { transfer_state_to = PREV add_core_of = PREV }
+		1608 = { transfer_state_to = PREV add_core_of = PREV }
+		75 = { transfer_state_to = PREV add_core_of = PREV }
+		74 = { transfer_state_to = PREV add_core_of = PREV }
+		72 = { transfer_state_to = PREV add_core_of = PREV }
+		set_capital = { state = 9 remember_old_capital = no }
+		set_cosmetic_tag = CZE_ONLY
+	}
+	
+	#Denmark
+	DEN = {
+		set_politics = {
+			ruling_party = democratic
+			elections_allowed = yes
+		}
+		every_core_state = {
+			remove_core_of = PREV
+		}
+		37 = { transfer_state_to = PREV add_core_of = PREV }
+		910 = { transfer_state_to = PREV add_core_of = PREV }
+		911 = { transfer_state_to = PREV add_core_of = PREV }
+		99 = { transfer_state_to = PREV add_core_of = PREV }
+		912 = { transfer_state_to = PREV add_core_of = PREV }
+		337 = { transfer_state_to = PREV add_core_of = PREV }
+		set_capital = { state = 37 remember_old_capital = no }
+	}
+	
+	#Estonia
+	EST = {
+		set_politics = {
+			ruling_party = democratic
+			elections_allowed = yes
+		}
+		every_core_state = {
+			remove_core_of = PREV
+		}
+		812 = { transfer_state_to = PREV add_core_of = PREV }
+		813 = { transfer_state_to = PREV add_core_of = PREV }
+		1071 = { transfer_state_to = PREV add_core_of = PREV }
+		1072 = { transfer_state_to = PREV add_core_of = PREV }
+		811 = { transfer_state_to = PREV add_core_of = PREV }
+		13 = { transfer_state_to = PREV add_core_of = PREV }
+		191 = { transfer_state_to = PREV add_core_of = PREV }
+		1068 = { transfer_state_to = PREV add_core_of = PREV }
+		1066 = { transfer_state_to = PREV add_core_of = PREV }
+		1067 = { transfer_state_to = PREV add_core_of = PREV }
+		set_capital = { state = 812 remember_old_capital = no }
+	}
+	
+	#Finland
+	FIN = {
+		set_politics = {
+			ruling_party = democratic
+			elections_allowed = yes
+		}
+		every_core_state = {
+			remove_core_of = PREV
+		}
+		111 = { transfer_state_to = PREV add_core_of = PREV }
+		926 = { transfer_state_to = PREV add_core_of = PREV }
+		927 = { transfer_state_to = PREV add_core_of = PREV }
+		930 = { transfer_state_to = PREV add_core_of = PREV }
+		928 = { transfer_state_to = PREV add_core_of = PREV }
+		150 = { transfer_state_to = PREV add_core_of = PREV }
+		149 = { transfer_state_to = PREV add_core_of = PREV }
+		929 = { transfer_state_to = PREV add_core_of = PREV }
+		148 = { transfer_state_to = PREV add_core_of = PREV }
+		set_capital = { state = 111 remember_old_capital = no }
+	}
+	
+	#France
+	FRA = {
+		set_politics = {
+			ruling_party = democratic
+			elections_allowed = yes
+		}
+		every_core_state = {
+			remove_core_of = PREV
+		}
+		16 = { transfer_state_to = PREV add_core_of = PREV }
+		1520 = { transfer_state_to = PREV add_core_of = PREV }
+		1518 = { transfer_state_to = PREV add_core_of = PREV }
+		1517 = { transfer_state_to = PREV add_core_of = PREV }
+		1403 = { transfer_state_to = PREV add_core_of = PREV }
+		785 = { transfer_state_to = PREV add_core_of = PREV }
+		1401 = { transfer_state_to = PREV add_core_of = PREV }
+		29 = { transfer_state_to = PREV add_core_of = PREV }
+		1402 = { transfer_state_to = PREV add_core_of = PREV }
+		18 = { transfer_state_to = PREV add_core_of = PREV }
+		1259 = { transfer_state_to = PREV add_core_of = PREV }
+		1258 = { transfer_state_to = PREV add_core_of = PREV }
+		17 = { transfer_state_to = PREV add_core_of = PREV }
+		1257 = { transfer_state_to = PREV add_core_of = PREV }
+		28 = { transfer_state_to = PREV add_core_of = PREV }
+		1522 = { transfer_state_to = PREV add_core_of = PREV }
+		32 = { transfer_state_to = PREV add_core_of = PREV }
+		21 = { transfer_state_to = PREV add_core_of = PREV }
+		851 = { transfer_state_to = PREV add_core_of = PREV }
+		1306 = { transfer_state_to = PREV add_core_of = PREV }
+		1305 = { transfer_state_to = PREV add_core_of = PREV }
+		1302 = { transfer_state_to = PREV add_core_of = PREV }
+		735 = { transfer_state_to = PREV add_core_of = PREV }
+		1303 = { transfer_state_to = PREV add_core_of = PREV }
+		1301 = { transfer_state_to = PREV add_core_of = PREV }
+		1521 = { transfer_state_to = PREV add_core_of = PREV }
+		27 = { transfer_state_to = PREV add_core_of = PREV }
+		20 = { transfer_state_to = PREV add_core_of = PREV }
+		22 = { transfer_state_to = PREV add_core_of = PREV }
+		26 = { transfer_state_to = PREV add_core_of = PREV }
+		31 = { transfer_state_to = PREV add_core_of = PREV }
+		806 = { transfer_state_to = PREV add_core_of = PREV }
+		19 = { transfer_state_to = PREV add_core_of = PREV }
+		25 = { transfer_state_to = PREV add_core_of = PREV }
+		23 = { transfer_state_to = PREV add_core_of = PREV }
+		33 = { transfer_state_to = PREV add_core_of = PREV }
+		24 = { transfer_state_to = PREV add_core_of = PREV }
+		1519 = { transfer_state_to = PREV add_core_of = PREV }
+		15 = { transfer_state_to = PREV add_core_of = PREV }
+		30 = { transfer_state_to = PREV add_core_of = PREV }
+		14 = { transfer_state_to = PREV add_core_of = PREV }
+		1 = { transfer_state_to = PREV add_core_of = PREV }
+		310 = { transfer_state_to = PREV add_core_of = PREV }
+		1394 = { transfer_state_to = PREV add_core_of = PREV }
+		1393 = { transfer_state_to = PREV add_core_of = PREV }
+		1304 = { transfer_state_to = PREV add_core_of = PREV }
+		1381 = { transfer_state_to = PREV add_core_of = PREV }
+		set_capital = { state = 16 remember_old_capital = no }
+	}
+	
+	#Georgia
+	GEO = {
+		set_politics = {
+			ruling_party = democratic
+			elections_allowed = yes
+		}
+		every_core_state = {
+			remove_core_of = PREV
+		}
+		231 = { transfer_state_to = PREV add_core_of = PREV }
+		1124 = { transfer_state_to = PREV add_core_of = PREV }
+		1125 = { transfer_state_to = PREV add_core_of = PREV }
+		1126 = { transfer_state_to = PREV add_core_of = PREV }
+		1123 = { transfer_state_to = PREV add_core_of = PREV }
+		826 = { transfer_state_to = PREV add_core_of = PREV }
+		set_capital = { state = 231 remember_old_capital = no }
+	}
+	
+	#Germany
+	WGR = {
+		set_politics = {
+			ruling_party = democratic
+			elections_allowed = yes
+		}
+		every_core_state = {
+			remove_core_of = PREV
+			remove_core_of = GER
+		}
+		1269 = { transfer_state_to = PREV add_core_of = PREV }
+		1268 = { transfer_state_to = PREV add_core_of = PREV }
+		1542 = { transfer_state_to = PREV add_core_of = PREV }
+		65 = { transfer_state_to = PREV add_core_of = PREV }
+		64 = { transfer_state_to = PREV add_core_of = PREV }
+		62 = { transfer_state_to = PREV add_core_of = PREV }
+		61 = { transfer_state_to = PREV add_core_of = PREV }
+		58 = { transfer_state_to = PREV add_core_of = PREV }
+		909 = { transfer_state_to = PREV add_core_of = PREV }
+		1543 = { transfer_state_to = PREV add_core_of = PREV }
+		60 = { transfer_state_to = PREV add_core_of = PREV }
+		1544 = { transfer_state_to = PREV add_core_of = PREV }
+		59 = { transfer_state_to = PREV add_core_of = PREV }
+		1545 = { transfer_state_to = PREV add_core_of = PREV }
+		1270 = { transfer_state_to = PREV add_core_of = PREV }
+		56 = { transfer_state_to = PREV add_core_of = PREV }
+		1413 = { transfer_state_to = PREV add_core_of = PREV }
+		57 = { transfer_state_to = PREV add_core_of = PREV }
+		1253 = { transfer_state_to = PREV add_core_of = PREV }
+		1254 = { transfer_state_to = PREV add_core_of = PREV }
+		55 = { transfer_state_to = PREV add_core_of = PREV }
+		1546 = { transfer_state_to = PREV add_core_of = PREV }
+		53 = { transfer_state_to = PREV add_core_of = PREV }
+		54 = { transfer_state_to = PREV add_core_of = PREV }
+		50 = { transfer_state_to = PREV add_core_of = PREV }
+		1548 = { transfer_state_to = PREV add_core_of = PREV }
+		1549 = { transfer_state_to = PREV add_core_of = PREV }
+		1550 = { transfer_state_to = PREV add_core_of = PREV }
+		52 = { transfer_state_to = PREV add_core_of = PREV }
+		1547 = { transfer_state_to = PREV add_core_of = PREV }
+		1251 = { transfer_state_to = PREV add_core_of = PREV }
+		978 = { transfer_state_to = PREV add_core_of = PREV }
+		42 = { transfer_state_to = PREV add_core_of = PREV }
+		1414 = { transfer_state_to = PREV add_core_of = PREV }
+		1551 = { transfer_state_to = PREV add_core_of = PREV }
+		51 = { transfer_state_to = PREV add_core_of = PREV }
+		set_capital = { state = 1269 remember_old_capital = no }
+	}
+	
+	#Georgia
+	GRE = {
+		set_politics = {
+			ruling_party = democratic
+			elections_allowed = yes
+		}
+		every_core_state = {
+			remove_core_of = PREV
+		}
+		47 = { transfer_state_to = PREV add_core_of = PREV }
+		186 = { transfer_state_to = PREV add_core_of = PREV }
+		182 = { transfer_state_to = PREV add_core_of = PREV }
+		187 = { transfer_state_to = PREV add_core_of = PREV }
+		164 = { transfer_state_to = PREV add_core_of = PREV }
+		185 = { transfer_state_to = PREV add_core_of = PREV }
+		1319 = { transfer_state_to = PREV add_core_of = PREV }
+		731 = { transfer_state_to = PREV add_core_of = PREV }
+		1607 = { transfer_state_to = PREV add_core_of = PREV }
+		184 = { transfer_state_to = PREV add_core_of = PREV }
+		1181 = { transfer_state_to = PREV add_core_of = PREV }
+		set_capital = { state = 47 remember_old_capital = no }
+	}
+	
+	#Greenland
+	GRN = {
+		set_politics = {
+			ruling_party = democratic
+			elections_allowed = yes
+		}
+		DEN = {
+			puppet = {
+				target = GRN
+				end_wars = yes
+			}
+		}
+		every_core_state = {
+			remove_core_of = PREV
+		}
+		101 = { transfer_state_to = PREV add_core_of = PREV }
+		set_capital = { state = 101 remember_old_capital = no }
+	}
+	
+	#Hungary
+	HUN = {
+		set_politics = {
+			ruling_party = democratic
+			elections_allowed = yes
+		}
+		every_core_state = {
+			remove_core_of = PREV
+		}
+		43 = { transfer_state_to = PREV add_core_of = PREV }
+		155 = { transfer_state_to = PREV add_core_of = PREV }
+		1703 = { transfer_state_to = PREV add_core_of = PREV }
+		1384 = { transfer_state_to = PREV add_core_of = PREV }
+		974 = { transfer_state_to = PREV add_core_of = PREV }
+		973 = { transfer_state_to = PREV add_core_of = PREV }
+		1235 = { transfer_state_to = PREV add_core_of = PREV }
+		154 = { transfer_state_to = PREV add_core_of = PREV }
+		1700 = { transfer_state_to = PREV add_core_of = PREV }
+		1278 = { transfer_state_to = PREV add_core_of = PREV }
+		set_capital = { state = 43 remember_old_capital = no }
+	}
+	
+	#Iceland
+	ICE = {
+		set_politics = {
+			ruling_party = democratic
+			elections_allowed = yes
+		}
+		every_core_state = {
+			remove_core_of = PREV
+		}
+		100 = { transfer_state_to = PREV add_core_of = PREV }
+		set_capital = { state = 100 remember_old_capital = no }
+		drop_cosmetic_tag = yes
+	}
+	
+	#Ireland
+	IRE = {
+		set_politics = {
+			ruling_party = democratic
+			elections_allowed = yes
+		}
+		every_core_state = {
+			remove_core_of = PREV
+		}
+		113 = { transfer_state_to = PREV add_core_of = PREV }
+		135 = { transfer_state_to = PREV add_core_of = PREV }
+		134 = { transfer_state_to = PREV add_core_of = PREV }
+		set_capital = { state = 113 remember_old_capital = no }
+	}
+	
+	#Italy
+	ITA = {
+		set_politics = {
+			ruling_party = democratic
+			elections_allowed = yes
+		}
+		every_core_state = {
+			remove_core_of = PREV
+		}
+		2 = { transfer_state_to = PREV add_core_of = PREV }
+		157 = { transfer_state_to = PREV add_core_of = PREV }
+		1404 = { transfer_state_to = PREV add_core_of = PREV }
+		849 = { transfer_state_to = PREV add_core_of = PREV }
+		117 = { transfer_state_to = PREV add_core_of = PREV }
+		156 = { transfer_state_to = PREV add_core_of = PREV }
+		115 = { transfer_state_to = PREV add_core_of = PREV }
+		114 = { transfer_state_to = PREV add_core_of = PREV }
+		1405 = { transfer_state_to = PREV add_core_of = PREV }
+		1407 = { transfer_state_to = PREV add_core_of = PREV }
+		1406 = { transfer_state_to = PREV add_core_of = PREV }
+		162 = { transfer_state_to = PREV add_core_of = PREV }
+		1408 = { transfer_state_to = PREV add_core_of = PREV }
+		1409 = { transfer_state_to = PREV add_core_of = PREV }
+		161 = { transfer_state_to = PREV add_core_of = PREV }
+		1308 = { transfer_state_to = PREV add_core_of = PREV }
+		158 = { transfer_state_to = PREV add_core_of = PREV }
+		159 = { transfer_state_to = PREV add_core_of = PREV }
+		160 = { transfer_state_to = PREV add_core_of = PREV }
+		850 = { transfer_state_to = PREV add_core_of = PREV }
+		39 = { transfer_state_to = PREV add_core_of = PREV }
+		1168 = { transfer_state_to = PREV add_core_of = PREV }
+		1708 = { transfer_state_to = PREV add_core_of = PREV }
+		set_capital = { state = 2 remember_old_capital = no }
+	}
+	
+	#Kazakhstan
+	KAZ = {
+		set_politics = {
+			ruling_party = democratic
+			elections_allowed = yes
+		}
+		every_core_state = {
+			remove_core_of = PREV
+		}
+		586 = { transfer_state_to = PREV add_core_of = PREV }
+		589 = { transfer_state_to = PREV add_core_of = PREV }
+		588 = { transfer_state_to = PREV add_core_of = PREV }
+		882 = { transfer_state_to = PREV add_core_of = PREV }
+		590 = { transfer_state_to = PREV add_core_of = PREV }
+		583 = { transfer_state_to = PREV add_core_of = PREV }
+		402 = { transfer_state_to = PREV add_core_of = PREV }
+		406 = { transfer_state_to = PREV add_core_of = PREV }
+		1526 = { transfer_state_to = PREV add_core_of = PREV }
+		1527 = { transfer_state_to = PREV add_core_of = PREV }
+		407 = { transfer_state_to = PREV add_core_of = PREV }
+		587 = { transfer_state_to = PREV add_core_of = PREV }
+		402 = { transfer_state_to = PREV add_core_of = PREV }
+		404 = { transfer_state_to = PREV add_core_of = PREV }
+		881 = { transfer_state_to = PREV add_core_of = PREV }
+		set_capital = { state = 586 remember_old_capital = no }
+	}
+	
+	#Kosovo
+	KOS = {
+		set_politics = {
+			ruling_party = democratic
+			elections_allowed = yes
+		}
+		every_core_state = {
+			remove_core_of = PREV
+		}
+		802 = { transfer_state_to = PREV add_core_of = PREV }
+		1715 = { transfer_state_to = PREV add_core_of = PREV }
+		set_capital = { state = 802 remember_old_capital = no }
+	}
+	
+	#Latvia
+	LAT = {
+		set_politics = {
+			ruling_party = democratic
+			elections_allowed = yes
+		}
+		every_core_state = {
+			remove_core_of = PREV
+		}
+		808 = { transfer_state_to = PREV add_core_of = PREV }
+		1059 = { transfer_state_to = PREV add_core_of = PREV }
+		809 = { transfer_state_to = PREV add_core_of = PREV }
+		1559 = { transfer_state_to = PREV add_core_of = PREV }
+		190 = { transfer_state_to = PREV add_core_of = PREV }
+		12 = { transfer_state_to = PREV add_core_of = PREV }
+		1062 = { transfer_state_to = PREV add_core_of = PREV }
+		1063 = { transfer_state_to = PREV add_core_of = PREV }
+		810 = { transfer_state_to = PREV add_core_of = PREV }
+		1061 = { transfer_state_to = PREV add_core_of = PREV }
+		set_capital = { state = 808 remember_old_capital = no }
+	}
+	
+	#Liechtenstein
+	LCH = {
+		set_politics = {
+			ruling_party = democratic
+			elections_allowed = yes
+		}
+		every_core_state = {
+			remove_core_of = PREV
+		}
+		1128 = { transfer_state_to = PREV add_core_of = PREV }
+		set_capital = { state = 1128 remember_old_capital = no }
+	}
+	
+	#Lithuania
+	LIT = {
+		set_politics = {
+			ruling_party = democratic
+			elections_allowed = yes
+		}
+		every_core_state = {
+			remove_core_of = PREV
+		}
+		784 = { transfer_state_to = PREV add_core_of = PREV }
+		1247 = { transfer_state_to = PREV add_core_of = PREV }
+		1248 = { transfer_state_to = PREV add_core_of = PREV }
+		1238 = { transfer_state_to = PREV add_core_of = PREV }
+		814 = { transfer_state_to = PREV add_core_of = PREV }
+		11 = { transfer_state_to = PREV add_core_of = PREV }
+		815 = { transfer_state_to = PREV add_core_of = PREV }
+		1236 = { transfer_state_to = PREV add_core_of = PREV }
+		189 = { transfer_state_to = PREV add_core_of = PREV }
+		1237 = { transfer_state_to = PREV add_core_of = PREV }
+		1172 = { transfer_state_to = PREV add_core_of = PREV }
+		188 = { transfer_state_to = PREV add_core_of = PREV }
+		1058 = { transfer_state_to = PREV add_core_of = PREV }
+		set_capital = { state = 784 remember_old_capital = no }
+	}
+	
+	#Luxembourg
+	LUX = {
+		set_politics = {
+			ruling_party = democratic
+			elections_allowed = yes
+		}
+		every_core_state = {
+			remove_core_of = PREV
+		}
+		8 = { transfer_state_to = PREV add_core_of = PREV }
+		set_capital = { state = 8 remember_old_capital = no }
+	}
+	
+	#Malta
+	MLT = {
+		set_politics = {
+			ruling_party = democratic
+			elections_allowed = yes
+		}
+		every_core_state = {
+			remove_core_of = PREV
+		}
+		116 = { transfer_state_to = PREV add_core_of = PREV }
+		set_capital = { state = 116 remember_old_capital = no }
+	}
+	
+	#Moldova
+	MOL = {
+		set_politics = {
+			ruling_party = democratic
+			elections_allowed = yes
+		}
+		every_core_state = {
+			remove_core_of = PREV
+		}
+		78 = { transfer_state_to = PREV add_core_of = PREV }
+		1092 = { transfer_state_to = PREV add_core_of = PREV }
+		1500 = { transfer_state_to = PREV add_core_of = PREV }
+		set_capital = { state = 78 remember_old_capital = no }
+	}
+	
+	#Monaco
+	MNC = {
+		set_politics = {
+			ruling_party = democratic
+			elections_allowed = yes
+		}
+		every_core_state = {
+			remove_core_of = PREV
+		}
+		1131 = { transfer_state_to = PREV add_core_of = PREV }
+		set_capital = { state = 1131 remember_old_capital = no }
+	}
+	
+	#Montenegro
+	MNT = {
+		set_politics = {
+			ruling_party = democratic
+			elections_allowed = yes
+		}
+		every_core_state = {
+			remove_core_of = PREV
+		}
+		105 = { transfer_state_to = PREV add_core_of = PREV }
+		1260 = { transfer_state_to = PREV add_core_of = PREV }
+		1716 = { transfer_state_to = PREV add_core_of = PREV }
+		1047 = { transfer_state_to = PREV add_core_of = PREV }
+		set_capital = { state = 105 remember_old_capital = no }
+	}
+	
+	#Netherlands
+	HOL = {
+		set_politics = {
+			ruling_party = democratic
+			elections_allowed = yes
+		}
+		every_core_state = {
+			remove_core_of = PREV
+		}
+		7 = { transfer_state_to = PREV add_core_of = PREV }
+		1292 = { transfer_state_to = PREV add_core_of = PREV }
+		35 = { transfer_state_to = PREV add_core_of = PREV }
+		1297 = { transfer_state_to = PREV add_core_of = PREV }
+		1255 = { transfer_state_to = PREV add_core_of = PREV }
+		1293 = { transfer_state_to = PREV add_core_of = PREV }
+		1552 = { transfer_state_to = PREV add_core_of = PREV }
+		36 = { transfer_state_to = PREV add_core_of = PREV }
+		set_capital = { state = 7 remember_old_capital = no }
+	}
+	
+	#North Macedonia
+	MAC = {
+		set_politics = {
+			ruling_party = democratic
+			elections_allowed = yes
+		}
+		every_core_state = {
+			remove_core_of = PREV
+		}
+		106 = { transfer_state_to = PREV add_core_of = PREV }
+		1412 = { transfer_state_to = PREV add_core_of = PREV }
+		970 = { transfer_state_to = PREV add_core_of = PREV }
+		1307 = { transfer_state_to = PREV add_core_of = PREV }
+		1298 = { transfer_state_to = PREV add_core_of = PREV }
+		set_capital = { state = 106 remember_old_capital = no }
+	}
+	
+	#Norway
+	NOR = {
+		set_politics = {
+			ruling_party = democratic
+			elections_allowed = yes
+		}
+		every_core_state = {
+			remove_core_of = PREV
+		}
+		110 = { transfer_state_to = PREV add_core_of = PREV }
+		921 = { transfer_state_to = PREV add_core_of = PREV }
+		922 = { transfer_state_to = PREV add_core_of = PREV }
+		142 = { transfer_state_to = PREV add_core_of = PREV }
+		920 = { transfer_state_to = PREV add_core_of = PREV }
+		143 = { transfer_state_to = PREV add_core_of = PREV }
+		923 = { transfer_state_to = PREV add_core_of = PREV }
+		144 = { transfer_state_to = PREV add_core_of = PREV }
+		924 = { transfer_state_to = PREV add_core_of = PREV }
+		925 = { transfer_state_to = PREV add_core_of = PREV }
+		914 = { transfer_state_to = PREV add_core_of = PREV }
+		set_capital = { state = 110 remember_old_capital = no }
+	}
+	
+	#Poland
+	POL = {
+		set_politics = {
+			ruling_party = democratic
+			elections_allowed = yes
+		}
+		every_core_state = {
+			remove_core_of = PREV
+		}
+		10 = { transfer_state_to = PREV add_core_of = PREV }
+		90 = { transfer_state_to = PREV add_core_of = PREV }
+		88 = { transfer_state_to = PREV add_core_of = PREV }
+		1144 = { transfer_state_to = PREV add_core_of = PREV }
+		1145 = { transfer_state_to = PREV add_core_of = PREV }
+		1529 = { transfer_state_to = PREV add_core_of = PREV }
+		1385 = { transfer_state_to = PREV add_core_of = PREV }
+		1386 = { transfer_state_to = PREV add_core_of = PREV }
+		1528 = { transfer_state_to = PREV add_core_of = PREV }
+		1483 = { transfer_state_to = PREV add_core_of = PREV }
+		92 = { transfer_state_to = PREV add_core_of = PREV }
+		1399 = { transfer_state_to = PREV add_core_of = PREV }
+		1530 = { transfer_state_to = PREV add_core_of = PREV }
+		1256 = { transfer_state_to = PREV add_core_of = PREV }
+		97 = { transfer_state_to = PREV add_core_of = PREV }
+		1242 = { transfer_state_to = PREV add_core_of = PREV }
+		1241 = { transfer_state_to = PREV add_core_of = PREV }
+		1702 = { transfer_state_to = PREV add_core_of = PREV }
+		1245 = { transfer_state_to = PREV add_core_of = PREV }
+		1141 = { transfer_state_to = PREV add_core_of = PREV }
+		1482 = { transfer_state_to = PREV add_core_of = PREV }
+		1288 = { transfer_state_to = PREV add_core_of = PREV }
+		1557 = { transfer_state_to = PREV add_core_of = PREV }
+		5 = { transfer_state_to = PREV add_core_of = PREV }
+		98 = { transfer_state_to = PREV add_core_of = PREV }
+		1554 = { transfer_state_to = PREV add_core_of = PREV }
+		1701 = { transfer_state_to = PREV add_core_of = PREV }
+		1143 = { transfer_state_to = PREV add_core_of = PREV }
+		762 = { transfer_state_to = PREV add_core_of = PREV }
+		67 = { transfer_state_to = PREV add_core_of = PREV }
+		1540 = { transfer_state_to = PREV add_core_of = PREV }
+		66 = { transfer_state_to = PREV add_core_of = PREV }
+		1558 = { transfer_state_to = PREV add_core_of = PREV }
+		1541 = { transfer_state_to = PREV add_core_of = PREV }
+		1142 = { transfer_state_to = PREV add_core_of = PREV }
+		87 = { transfer_state_to = PREV add_core_of = PREV }
+		1481 = { transfer_state_to = PREV add_core_of = PREV }
+		1252 = { transfer_state_to = PREV add_core_of = PREV }
+		86 = { transfer_state_to = PREV add_core_of = PREV }
+		1389 = { transfer_state_to = PREV add_core_of = PREV }
+		68 = { transfer_state_to = PREV add_core_of = PREV }
+		85 = { transfer_state_to = PREV add_core_of = PREV }
+		807 = { transfer_state_to = PREV add_core_of = PREV }
+		1538 = { transfer_state_to = PREV add_core_of = PREV }
+		63 = { transfer_state_to = PREV add_core_of = PREV }
+		1539 = { transfer_state_to = PREV add_core_of = PREV }
+		set_capital = { state = 10 remember_old_capital = no }
+	}
+	
+	#Portugal
+	POR = {
+		set_politics = {
+			ruling_party = democratic
+			elections_allowed = yes
+		}
+		every_core_state = {
+			remove_core_of = PREV
+		}
+		112 = { transfer_state_to = PREV add_core_of = PREV }
+		179 = { transfer_state_to = PREV add_core_of = PREV }
+		795 = { transfer_state_to = PREV add_core_of = PREV }
+		181 = { transfer_state_to = PREV add_core_of = PREV }
+		180 = { transfer_state_to = PREV add_core_of = PREV }
+		698 = { transfer_state_to = PREV add_core_of = PREV }
+		697 = { transfer_state_to = PREV add_core_of = PREV }
+		set_capital = { state = 112 remember_old_capital = no }
+	}
+	
+	#Romania
+	ROM = {
+		set_politics = {
+			ruling_party = democratic
+			elections_allowed = yes
+		}
+		every_core_state = {
+			remove_core_of = PREV
+		}
+		46 = { transfer_state_to = PREV add_core_of = PREV }
+		1312 = { transfer_state_to = PREV add_core_of = PREV }
+		1295 = { transfer_state_to = PREV add_core_of = PREV }
+		971 = { transfer_state_to = PREV add_core_of = PREV }
+		79 = { transfer_state_to = PREV add_core_of = PREV }
+		81 = { transfer_state_to = PREV add_core_of = PREV }
+		1479 = { transfer_state_to = PREV add_core_of = PREV }
+		82 = { transfer_state_to = PREV add_core_of = PREV }
+		83 = { transfer_state_to = PREV add_core_of = PREV }
+		1309 = { transfer_state_to = PREV add_core_of = PREV }
+		1310 = { transfer_state_to = PREV add_core_of = PREV }
+		76 = { transfer_state_to = PREV add_core_of = PREV }
+		1722 = { transfer_state_to = PREV add_core_of = PREV }
+		84 = { transfer_state_to = PREV add_core_of = PREV }
+		1387 = { transfer_state_to = PREV add_core_of = PREV }
+		1480 = { transfer_state_to = PREV add_core_of = PREV }
+		1267 = { transfer_state_to = PREV add_core_of = PREV }
+		set_capital = { state = 46 remember_old_capital = no }
+	}
+	
+	#Russian Federation
+	SOV = {
+		set_politics = {
+			ruling_party = democratic
+			elections_allowed = yes
+		}
+		every_core_state = {
+			remove_core_of = PREV
+		}
+		clr_country_flag = KSR_stalinist_russian_names
+		clr_country_flag = KSR_trotskyist_russian_names
+		clr_country_flag = KSR_bukharinist_russian_names
+		clr_country_flag = KSR_tsarist_russian_names
+		219 = { transfer_state_to = PREV add_core_of = PREV }
+		1107 = { transfer_state_to = PREV add_core_of = PREV }
+		1105 = { transfer_state_to = PREV add_core_of = PREV }
+		1114 = { transfer_state_to = PREV add_core_of = PREV }
+		1115 = { transfer_state_to = PREV add_core_of = PREV }
+		1106 = { transfer_state_to = PREV add_core_of = PREV }
+		1104 = { transfer_state_to = PREV add_core_of = PREV }
+		243 = { transfer_state_to = PREV add_core_of = PREV }
+		247 = { transfer_state_to = PREV add_core_of = PREV }
+		264 = { transfer_state_to = PREV add_core_of = PREV }
+		216 = { transfer_state_to = PREV add_core_of = PREV }
+		146 = { transfer_state_to = PREV add_core_of = PREV }
+		195 = { transfer_state_to = PREV add_core_of = PREV }
+		1289 = { transfer_state_to = PREV add_core_of = PREV }
+		244 = { transfer_state_to = PREV add_core_of = PREV }
+		1073 = { transfer_state_to = PREV add_core_of = PREV }
+		1290 = { transfer_state_to = PREV add_core_of = PREV }
+		1070 = { transfer_state_to = PREV add_core_of = PREV }
+		209 = { transfer_state_to = PREV add_core_of = PREV }
+		263 = { transfer_state_to = PREV add_core_of = PREV }
+		1074 = { transfer_state_to = PREV add_core_of = PREV }
+		246 = { transfer_state_to = PREV add_core_of = PREV }
+		208 = { transfer_state_to = PREV add_core_of = PREV }
+		1060 = { transfer_state_to = PREV add_core_of = PREV }
+		1065 = { transfer_state_to = PREV add_core_of = PREV }
+		1110 = { transfer_state_to = PREV add_core_of = PREV }
+		1075 = { transfer_state_to = PREV add_core_of = PREV }
+		210 = { transfer_state_to = PREV add_core_of = PREV }
+		242 = { transfer_state_to = PREV add_core_of = PREV }
+		254 = { transfer_state_to = PREV add_core_of = PREV }
+		255 = { transfer_state_to = PREV add_core_of = PREV }
+		239 = { transfer_state_to = PREV add_core_of = PREV }
+		401 = { transfer_state_to = PREV add_core_of = PREV }
+		829 = { transfer_state_to = PREV add_core_of = PREV }
+		217 = { transfer_state_to = PREV add_core_of = PREV }
+		236 = { transfer_state_to = PREV add_core_of = PREV }
+		237 = { transfer_state_to = PREV add_core_of = PREV }
+		232 = { transfer_state_to = PREV add_core_of = PREV }
+		821 = { transfer_state_to = PREV add_core_of = PREV }
+		828 = { transfer_state_to = PREV add_core_of = PREV }
+		827 = { transfer_state_to = PREV add_core_of = PREV }
+		233 = { transfer_state_to = PREV add_core_of = PREV }
+		1097 = { transfer_state_to = PREV add_core_of = PREV }
+		1098 = { transfer_state_to = PREV add_core_of = PREV }
+		218 = { transfer_state_to = PREV add_core_of = PREV }
+		1096 = { transfer_state_to = PREV add_core_of = PREV }
+		238 = { transfer_state_to = PREV add_core_of = PREV }
+		234 = { transfer_state_to = PREV add_core_of = PREV }
+		1077 = { transfer_state_to = PREV add_core_of = PREV }
+		235 = { transfer_state_to = PREV add_core_of = PREV }
+		1078 = { transfer_state_to = PREV add_core_of = PREV }
+		1079 = { transfer_state_to = PREV add_core_of = PREV }
+		1080 = { transfer_state_to = PREV add_core_of = PREV }
+		1108 = { transfer_state_to = PREV add_core_of = PREV }
+		240 = { transfer_state_to = PREV add_core_of = PREV }
+		1076 = { transfer_state_to = PREV add_core_of = PREV }
+		1082 = { transfer_state_to = PREV add_core_of = PREV }
+		224 = { transfer_state_to = PREV add_core_of = PREV }
+		1083 = { transfer_state_to = PREV add_core_of = PREV }
+		220 = { transfer_state_to = PREV add_core_of = PREV }
+		1111 = { transfer_state_to = PREV add_core_of = PREV }
+		1112 = { transfer_state_to = PREV add_core_of = PREV }
+		205 = { transfer_state_to = PREV add_core_of = PREV }
+		245 = { transfer_state_to = PREV add_core_of = PREV }
+		265 = { transfer_state_to = PREV add_core_of = PREV }
+		1081 = { transfer_state_to = PREV add_core_of = PREV }
+		260 = { transfer_state_to = PREV add_core_of = PREV }
+		257 = { transfer_state_to = PREV add_core_of = PREV }
+		258 = { transfer_state_to = PREV add_core_of = PREV }
+		222 = { transfer_state_to = PREV add_core_of = PREV }
+		223 = { transfer_state_to = PREV add_core_of = PREV }
+		1109 = { transfer_state_to = PREV add_core_of = PREV }
+		1113 = { transfer_state_to = PREV add_core_of = PREV }
+		1170 = { transfer_state_to = PREV add_core_of = PREV }
+		1175 = { transfer_state_to = PREV add_core_of = PREV }
+		1116 = { transfer_state_to = PREV add_core_of = PREV }
+		215 = { transfer_state_to = PREV add_core_of = PREV }
+		1174 = { transfer_state_to = PREV add_core_of = PREV }
+		1117 = { transfer_state_to = PREV add_core_of = PREV }
+		1171 = { transfer_state_to = PREV add_core_of = PREV }
+		147 = { transfer_state_to = PREV add_core_of = PREV }
+		722 = { transfer_state_to = PREV add_core_of = PREV }
+		1714 = { transfer_state_to = PREV add_core_of = PREV }
+		213 = { transfer_state_to = PREV add_core_of = PREV }
+		652 = { transfer_state_to = PREV add_core_of = PREV }
+		1525 = { transfer_state_to = PREV add_core_of = PREV }
+		1524 = { transfer_state_to = PREV add_core_of = PREV }
+		573 = { transfer_state_to = PREV add_core_of = PREV }
+		1523 = { transfer_state_to = PREV add_core_of = PREV }
+		1069 = { transfer_state_to = PREV add_core_of = PREV }
+		581 = { transfer_state_to = PREV add_core_of = PREV }
+		825 = { transfer_state_to = PREV add_core_of = PREV }
+		214 = { transfer_state_to = PREV add_core_of = PREV }
+		879 = { transfer_state_to = PREV add_core_of = PREV }
+		351 = { transfer_state_to = PREV add_core_of = PREV }
+		248 = { transfer_state_to = PREV add_core_of = PREV }
+		253 = { transfer_state_to = PREV add_core_of = PREV }
+		252 = { transfer_state_to = PREV add_core_of = PREV }
+		250 = { transfer_state_to = PREV add_core_of = PREV }
+		251 = { transfer_state_to = PREV add_core_of = PREV }
+		880 = { transfer_state_to = PREV add_core_of = PREV }
+		262 = { transfer_state_to = PREV add_core_of = PREV }
+		397 = { transfer_state_to = PREV add_core_of = PREV }
+		400 = { transfer_state_to = PREV add_core_of = PREV }
+		398 = { transfer_state_to = PREV add_core_of = PREV }
+		651 = { transfer_state_to = PREV add_core_of = PREV }
+		249 = { transfer_state_to = PREV add_core_of = PREV }
+		256 = { transfer_state_to = PREV add_core_of = PREV }
+		833 = { transfer_state_to = PREV add_core_of = PREV }
+		399 = { transfer_state_to = PREV add_core_of = PREV }
+		582 = { transfer_state_to = PREV add_core_of = PREV }
+		572 = { transfer_state_to = PREV add_core_of = PREV }
+		653 = { transfer_state_to = PREV add_core_of = PREV }
+		580 = { transfer_state_to = PREV add_core_of = PREV }
+		579 = { transfer_state_to = PREV add_core_of = PREV }
+		824 = { transfer_state_to = PREV add_core_of = PREV }
+		577 = { transfer_state_to = PREV add_core_of = PREV }
+		571 = { transfer_state_to = PREV add_core_of = PREV }
+		403 = { transfer_state_to = PREV add_core_of = PREV }
+		1249 = { transfer_state_to = PREV add_core_of = PREV }
+		763 = { transfer_state_to = PREV add_core_of = PREV }
+		40 = { transfer_state_to = PREV add_core_of = PREV }
+		570 = { transfer_state_to = PREV add_core_of = PREV }
+		578 = { transfer_state_to = PREV add_core_of = PREV }
+		576 = { transfer_state_to = PREV add_core_of = PREV }
+		516 = { transfer_state_to = PREV add_core_of = PREV }
+		1093 = { transfer_state_to = PREV add_core_of = PREV }
+		654 = { transfer_state_to = PREV add_core_of = PREV }
+		329 = { transfer_state_to = PREV add_core_of = PREV }
+		569 = { transfer_state_to = PREV add_core_of = PREV }
+		568 = { transfer_state_to = PREV add_core_of = PREV }
+		567 = { transfer_state_to = PREV add_core_of = PREV }
+		564 = { transfer_state_to = PREV add_core_of = PREV }
+		566 = { transfer_state_to = PREV add_core_of = PREV }
+		563 = { transfer_state_to = PREV add_core_of = PREV }
+		565 = { transfer_state_to = PREV add_core_of = PREV }
+		575 = { transfer_state_to = PREV add_core_of = PREV }
+		574 = { transfer_state_to = PREV add_core_of = PREV }
+		878 = { transfer_state_to = PREV add_core_of = PREV }
+		1337 = { transfer_state_to = PREV add_core_of = PREV }
+		561 = { transfer_state_to = PREV add_core_of = PREV }
+		657 = { transfer_state_to = PREV add_core_of = PREV }
+		409 = { transfer_state_to = PREV add_core_of = PREV }
+		1336 = { transfer_state_to = PREV add_core_of = PREV }
+		1334 = { transfer_state_to = PREV add_core_of = PREV }
+		1333 = { transfer_state_to = PREV add_core_of = PREV }
+		408 = { transfer_state_to = PREV add_core_of = PREV }
+		1332 = { transfer_state_to = PREV add_core_of = PREV }
+		1335 = { transfer_state_to = PREV add_core_of = PREV }
+		560 = { transfer_state_to = PREV add_core_of = PREV }
+		537 = { transfer_state_to = PREV add_core_of = PREV }
+		655 = { transfer_state_to = PREV add_core_of = PREV }
+		1338 = { transfer_state_to = PREV add_core_of = PREV }
+		562 = { transfer_state_to = PREV add_core_of = PREV }
+		874 = { transfer_state_to = PREV add_core_of = PREV }
+		637 = { transfer_state_to = PREV add_core_of = PREV }
+		822 = { transfer_state_to = PREV add_core_of = PREV }
+		875 = { transfer_state_to = PREV add_core_of = PREV }
+		1609 = { transfer_state_to = PREV add_core_of = PREV }
+		555 = { transfer_state_to = PREV add_core_of = PREV }
+		644 = { transfer_state_to = PREV add_core_of = PREV }
+		877 = { transfer_state_to = PREV add_core_of = PREV }
+		876 = { transfer_state_to = PREV add_core_of = PREV }
+		set_capital = { state = 219 remember_old_capital = no }
+		set_cosmetic_tag = SOV_russia
+		
+		137 = { add_claim_by = PREV }
+		1086 = { add_claim_by = PREV }
+		1087 = { add_claim_by = PREV }
+		1088 = { add_claim_by = PREV }
+		227 = { add_claim_by = PREV }
+		1090 = { add_claim_by = PREV }
+		228 = { add_claim_by = PREV }
+		1089 = { add_claim_by = PREV }
+		1091 = { add_claim_by = PREV }
+		1095 = { add_claim_by = PREV }
+		200 = { add_claim_by = PREV }
+		1612 = { add_claim_by = PREV }
+		196 = { add_claim_by = PREV }
+		1606 = { add_claim_by = PREV }
+	}
+	
+	#San Marino
+	SMR = {
+		set_politics = {
+			ruling_party = democratic
+			elections_allowed = yes
+		}
+		every_core_state = {
+			remove_core_of = PREV
+		}
+		1129 = { transfer_state_to = PREV add_core_of = PREV }
+		set_capital = { state = 1129 remember_old_capital = no }
+	}
+	
+	#Serbia
+	SER = {
+		set_politics = {
+			ruling_party = democratic
+			elections_allowed = yes
+		}
+		every_core_state = {
+			remove_core_of = PREV
+		}
+		107 = { transfer_state_to = PREV add_core_of = PREV }
+		1707 = { transfer_state_to = PREV add_core_of = PREV }
+		764 = { transfer_state_to = PREV add_core_of = PREV }
+		1478 = { transfer_state_to = PREV add_core_of = PREV }
+		45 = { transfer_state_to = PREV add_core_of = PREV }
+		1477 = { transfer_state_to = PREV add_core_of = PREV }
+		1721 = { transfer_state_to = PREV add_core_of = PREV }
+		1709 = { transfer_state_to = PREV add_core_of = PREV }
+		803 = { transfer_state_to = PREV add_core_of = PREV }
+		1300 = { transfer_state_to = PREV add_core_of = PREV }
+		1299 = { transfer_state_to = PREV add_core_of = PREV }
+		108 = { transfer_state_to = PREV add_core_of = PREV }
+		1048 = { transfer_state_to = PREV add_core_of = PREV }
+		1710 = { transfer_state_to = PREV add_core_of = PREV }
+		1411 = { transfer_state_to = PREV add_core_of = PREV }
+		set_capital = { state = 107 remember_old_capital = no }
+		
+		802 = { add_claim_by = PREV }
+		1715 = { add_claim_by = PREV }
+	}
+	
+	#Slovakia
+	SLO = {
+		set_politics = {
+			ruling_party = democratic
+			elections_allowed = yes
+		}
+		every_core_state = {
+			remove_core_of = PREV
+		}
+		1147 = { transfer_state_to = PREV add_core_of = PREV }
+		664 = { transfer_state_to = PREV add_core_of = PREV }
+		70 = { transfer_state_to = PREV add_core_of = PREV }
+		1146 = { transfer_state_to = PREV add_core_of = PREV }
+		1560 = { transfer_state_to = PREV add_core_of = PREV }
+		71 = { transfer_state_to = PREV add_core_of = PREV }
+		1149 = { transfer_state_to = PREV add_core_of = PREV }
+		1148 = { transfer_state_to = PREV add_core_of = PREV }
+		set_capital = { state = 1147 remember_old_capital = no }
+	}
+	
+	#Slovenia
+	SLV = {
+		set_politics = {
+			ruling_party = democratic
+			elections_allowed = yes
+		}
+		every_core_state = {
+			remove_core_of = PREV
+		}
+		853 = { transfer_state_to = PREV add_core_of = PREV }
+		102 = { transfer_state_to = PREV add_core_of = PREV }
+		1704 = { transfer_state_to = PREV add_core_of = PREV }
+		736 = { transfer_state_to = PREV add_core_of = PREV }
+		set_capital = { state = 853 remember_old_capital = no }
+	}
+	
+	#Spain
+	SPR = {
+		set_politics = {
+			ruling_party = democratic
+			elections_allowed = yes
+		}
+		every_core_state = {
+			remove_core_of = PREV
+		}
+		41 = { transfer_state_to = PREV add_core_of = PREV }
+		793 = { transfer_state_to = PREV add_core_of = PREV }
+		167 = { transfer_state_to = PREV add_core_of = PREV }
+		168 = { transfer_state_to = PREV add_core_of = PREV }
+		173 = { transfer_state_to = PREV add_core_of = PREV }
+		169 = { transfer_state_to = PREV add_core_of = PREV }
+		170 = { transfer_state_to = PREV add_core_of = PREV }
+		175 = { transfer_state_to = PREV add_core_of = PREV }
+		789 = { transfer_state_to = PREV add_core_of = PREV }
+		794 = { transfer_state_to = PREV add_core_of = PREV }
+		166 = { transfer_state_to = PREV add_core_of = PREV }
+		791 = { transfer_state_to = PREV add_core_of = PREV }
+		788 = { transfer_state_to = PREV add_core_of = PREV }
+		171 = { transfer_state_to = PREV add_core_of = PREV }
+		174 = { transfer_state_to = PREV add_core_of = PREV }
+		790 = { transfer_state_to = PREV add_core_of = PREV }
+		791 = { transfer_state_to = PREV add_core_of = PREV }
+		176 = { transfer_state_to = PREV add_core_of = PREV }
+		792 = { transfer_state_to = PREV add_core_of = PREV }
+		172 = { transfer_state_to = PREV add_core_of = PREV }
+		1485 = { transfer_state_to = PREV add_core_of = PREV }
+		1486 = { transfer_state_to = PREV add_core_of = PREV }
+		165 = { transfer_state_to = PREV add_core_of = PREV }
+		177 = { transfer_state_to = PREV add_core_of = PREV }
+		set_capital = { state = 41 remember_old_capital = no }
+	}
+	
+	#Sweden
+	SWE = {
+		set_politics = {
+			ruling_party = democratic
+			elections_allowed = yes
+		}
+		every_core_state = {
+			remove_core_of = PREV
+		}
+		141 = { transfer_state_to = PREV add_core_of = PREV }
+		919 = { transfer_state_to = PREV add_core_of = PREV }
+		913 = { transfer_state_to = PREV add_core_of = PREV }
+		140 = { transfer_state_to = PREV add_core_of = PREV }
+		915 = { transfer_state_to = PREV add_core_of = PREV }
+		139 = { transfer_state_to = PREV add_core_of = PREV }
+		124 = { transfer_state_to = PREV add_core_of = PREV }
+		138 = { transfer_state_to = PREV add_core_of = PREV }
+		38 = { transfer_state_to = PREV add_core_of = PREV }
+		916 = { transfer_state_to = PREV add_core_of = PREV }
+		917 = { transfer_state_to = PREV add_core_of = PREV }
+		918 = { transfer_state_to = PREV add_core_of = PREV }
+		666 = { transfer_state_to = PREV add_core_of = PREV }
+		set_capital = { state = 141 remember_old_capital = no }
+	}
+	
+	#Switzerland
+	SWI = {
+		set_politics = {
+			ruling_party = democratic
+			elections_allowed = yes
+		}
+		every_core_state = {
+			remove_core_of = PREV
+		}
+		3 = { transfer_state_to = PREV add_core_of = PREV }
+		845 = { transfer_state_to = PREV add_core_of = PREV }
+		1514 = { transfer_state_to = PREV add_core_of = PREV }
+		1506 = { transfer_state_to = PREV add_core_of = PREV }
+		847 = { transfer_state_to = PREV add_core_of = PREV }
+		846 = { transfer_state_to = PREV add_core_of = PREV }
+		151 = { transfer_state_to = PREV add_core_of = PREV }
+		1510 = { transfer_state_to = PREV add_core_of = PREV }
+		1513 = { transfer_state_to = PREV add_core_of = PREV }
+		1512 = { transfer_state_to = PREV add_core_of = PREV }
+		1511 = { transfer_state_to = PREV add_core_of = PREV }
+		1509 = { transfer_state_to = PREV add_core_of = PREV }
+		1516 = { transfer_state_to = PREV add_core_of = PREV }
+		1515 = { transfer_state_to = PREV add_core_of = PREV }
+		1507 = { transfer_state_to = PREV add_core_of = PREV }
+		1508 = { transfer_state_to = PREV add_core_of = PREV }
+		set_capital = { state = 3 remember_old_capital = no }
+	}
+	
+	#Turkey
+	TUR = {
+		set_politics = {
+			ruling_party = democratic
+			elections_allowed = yes
+		}
+		every_core_state = {
+			remove_core_of = PREV
+		}
+		49 = { transfer_state_to = PREV add_core_of = PREV }
+		347 = { transfer_state_to = PREV add_core_of = PREV }
+		1223 = { transfer_state_to = PREV add_core_of = PREV }
+		797 = { transfer_state_to = PREV add_core_of = PREV }
+		1266 = { transfer_state_to = PREV add_core_of = PREV }
+		341 = { transfer_state_to = PREV add_core_of = PREV }
+		340 = { transfer_state_to = PREV add_core_of = PREV }
+		339 = { transfer_state_to = PREV add_core_of = PREV }
+		342 = { transfer_state_to = PREV add_core_of = PREV }
+		343 = { transfer_state_to = PREV add_core_of = PREV }
+		346 = { transfer_state_to = PREV add_core_of = PREV }
+		345 = { transfer_state_to = PREV add_core_of = PREV }
+		356 = { transfer_state_to = PREV add_core_of = PREV }
+		798 = { transfer_state_to = PREV add_core_of = PREV }
+		348 = { transfer_state_to = PREV add_core_of = PREV }
+		344 = { transfer_state_to = PREV add_core_of = PREV }
+		799 = { transfer_state_to = PREV add_core_of = PREV }
+		350 = { transfer_state_to = PREV add_core_of = PREV }
+		352 = { transfer_state_to = PREV add_core_of = PREV }
+		800 = { transfer_state_to = PREV add_core_of = PREV }
+		1287 = { transfer_state_to = PREV add_core_of = PREV }
+		1286 = { transfer_state_to = PREV add_core_of = PREV }
+		354 = { transfer_state_to = PREV add_core_of = PREV }
+		355 = { transfer_state_to = PREV add_core_of = PREV }
+		353 = { transfer_state_to = PREV add_core_of = PREV }
+		349 = { transfer_state_to = PREV add_core_of = PREV }
+		set_capital = { state = 49 remember_old_capital = no }
+	}
+	
+	#Ukraine
+	UKR = {
+		set_politics = {
+			ruling_party = democratic
+			elections_allowed = yes
+		}
+		every_core_state = {
+			remove_core_of = PREV
+		}
+		202 = { transfer_state_to = PREV add_core_of = PREV }
+		1101 = { transfer_state_to = PREV add_core_of = PREV }
+		201 = { transfer_state_to = PREV add_core_of = PREV }
+		93 = { transfer_state_to = PREV add_core_of = PREV }
+		1533 = { transfer_state_to = PREV add_core_of = PREV }
+		1400 = { transfer_state_to = PREV add_core_of = PREV }
+		91 = { transfer_state_to = PREV add_core_of = PREV }
+		1531 = { transfer_state_to = PREV add_core_of = PREV }
+		1532 = { transfer_state_to = PREV add_core_of = PREV }
+		73 = { transfer_state_to = PREV add_core_of = PREV }
+		1294 = { transfer_state_to = PREV add_core_of = PREV }
+		89 = { transfer_state_to = PREV add_core_of = PREV }
+		80 = { transfer_state_to = PREV add_core_of = PREV }
+		1291 = { transfer_state_to = PREV add_core_of = PREV }
+		199 = { transfer_state_to = PREV add_core_of = PREV }
+		198 = { transfer_state_to = PREV add_core_of = PREV }
+		1262 = { transfer_state_to = PREV add_core_of = PREV }
+		834 = { transfer_state_to = PREV add_core_of = PREV }
+		192 = { transfer_state_to = PREV add_core_of = PREV }
+		766 = { transfer_state_to = PREV add_core_of = PREV }
+		197 = { transfer_state_to = PREV add_core_of = PREV }
+		1606 = { transfer_state_to = PREV add_core_of = PREV }
+		226 = { transfer_state_to = PREV add_core_of = PREV }
+		1612 = { transfer_state_to = PREV add_core_of = PREV }
+		1103 = { transfer_state_to = PREV add_core_of = PREV }
+		203 = { transfer_state_to = PREV add_core_of = PREV }
+		1102 = { transfer_state_to = PREV add_core_of = PREV }
+		1537 = { transfer_state_to = PREV add_core_of = PREV }
+		1100 = { transfer_state_to = PREV add_core_of = PREV }
+		193 = { transfer_state_to = PREV add_core_of = PREV }
+		225 = { transfer_state_to = PREV add_core_of = PREV }
+		259 = { transfer_state_to = PREV add_core_of = PREV }
+		221 = { transfer_state_to = PREV add_core_of = PREV }
+		1536 = { transfer_state_to = PREV add_core_of = PREV }
+		1099 = { transfer_state_to = PREV add_core_of = PREV }
+		196 = { transfer_state_to = PREV add_core_of = PREV }
+		200 = { transfer_state_to = PREV add_core_of = PREV }
+		1089 = { transfer_state_to = PREV add_core_of = PREV }
+		1090 = { transfer_state_to = PREV add_core_of = PREV }
+		1091 = { transfer_state_to = PREV add_core_of = PREV }
+		1095 = { transfer_state_to = PREV add_core_of = PREV }
+		228 = { transfer_state_to = PREV add_core_of = PREV }
+		227 = { transfer_state_to = PREV add_core_of = PREV }
+		1087 = { transfer_state_to = PREV add_core_of = PREV }
+		137 = { transfer_state_to = PREV add_core_of = PREV }
+		1086 = { transfer_state_to = PREV add_core_of = PREV }
+		1088 = { transfer_state_to = PREV add_core_of = PREV }
+		set_capital = { state = 202 remember_old_capital = no }
+	}
+	
+	#United Kingdom
+	ENG = {
+		set_politics = {
+			ruling_party = democratic
+			elections_allowed = yes
+		}
+		every_core_state = {
+			remove_core_of = PREV
+		}
+		126 = { transfer_state_to = PREV add_core_of = PREV }
+		127 = { transfer_state_to = PREV add_core_of = PREV }
+		123 = { transfer_state_to = PREV add_core_of = PREV }
+		338 = { transfer_state_to = PREV add_core_of = PREV }
+		125 = { transfer_state_to = PREV add_core_of = PREV }
+		129 = { transfer_state_to = PREV add_core_of = PREV }
+		128 = { transfer_state_to = PREV add_core_of = PREV }
+		130 = { transfer_state_to = PREV add_core_of = PREV }
+		132 = { transfer_state_to = PREV add_core_of = PREV }
+		931 = { transfer_state_to = PREV add_core_of = PREV }
+		131 = { transfer_state_to = PREV add_core_of = PREV }
+		122 = { transfer_state_to = PREV add_core_of = PREV }
+		119 = { transfer_state_to = PREV add_core_of = PREV }
+		133 = { transfer_state_to = PREV add_core_of = PREV }
+		121 = { transfer_state_to = PREV add_core_of = PREV }
+		136 = { transfer_state_to = PREV add_core_of = PREV }
+		120 = { transfer_state_to = PREV add_core_of = PREV }
+		933 = { transfer_state_to = PREV add_core_of = PREV }
+		118 = { transfer_state_to = PREV add_core_of = PREV }
+		696 = { transfer_state_to = PREV add_core_of = PREV }
+		1380 = { transfer_state_to = PREV add_core_of = PREV }
+		703 = { transfer_state_to = PREV add_core_of = PREV }
+		704 = { transfer_state_to = PREV add_core_of = PREV }
+		720 = { transfer_state_to = PREV add_core_of = PREV }
+		299 = { transfer_state_to = PREV add_core_of = PREV }
+		710 = { transfer_state_to = PREV add_core_of = PREV }
+		set_capital = { state = 126 remember_old_capital = no }
+	}
+	
+	#Vatican City
+	VAT = {
+		set_politics = {
+			ruling_party = neutrality
+			elections_allowed = yes
+		}
+		every_core_state = {
+			remove_core_of = PREV
+		}
+		1130 = { transfer_state_to = PREV add_core_of = PREV }
+		set_capital = { state = 1130 remember_old_capital = no }
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+# =======================================================================================
+# 										GERMANY
+# =======================================================================================
+ksr_map_GER_1914 = {
+	every_state = {
+		limit = {
+			OR = {
+				is_core_of = GER
+				is_claimed_by = GER
+				is_core_of = WGR
+				is_claimed_by = WGR
+				is_core_of = DDR
+				is_claimed_by = DDR
+			}
+		}
+		remove_core_of = GER
+		remove_claim_by = GER
+		remove_core_of = WGR
+		remove_claim_by = WGR
+		remove_core_of = DDR
+		remove_claim_by = DDR
+	}
+	
+	GER = {
+		every_state = {
+			limit = {
+				OR = {
+					state = 60
+					state = 61
+					state = 62
+					state = 64
+					state = 65
+					state = 1269
+					state = 1270
+					state = 1542
+					state = 1543
+					state = 1544
+					state = 42
+					state = 50
+					state = 51
+					state = 52
+					state = 53
+					state = 54
+					state = 55
+					state = 56
+					state = 57
+					state = 58
+					state = 59
+					state = 909
+					state = 978
+					state = 1251
+					state = 1253
+					state = 1254
+					state = 1268
+					state = 1413
+					state = 1414
+					state = 1545
+					state = 1546
+					state = 1547
+					state = 1548
+					state = 1549
+					state = 1550
+					state = 1551
+					state = 28
+					state = 912
+					state = 1539
+					state = 63
+					state = 68
+					state = 1538
+					state = 807
+					state = 85
+					state = 1701
+					state = 188
+					state = 1172
+					state = 1249
+					state = 763
+					state = 1702
+					state = 1288
+					state = 1557
+					state = 5
+					state = 1554
+					state = 1389
+					state = 66
+					state = 1541
+					state = 86
+					state = 1558
+					state = 1540
+					state = 67
+					state = 762
+				}
+			}
+			add_core_of = PREV
+			transfer_state_to = PREV
+			set_demilitarized_zone = no
+		}
+		every_state = {
+			limit = {
+				OR = {
+					state = 541
+					state = 546
+					state = 633
+					state = 684
+					state = 737
+					state = 773
+					state = 893
+					state = 894
+					state = 895
+					state = 979
+				}
+			}
+			transfer_state_to = PREV
+			set_demilitarized_zone = no
+		}
+		set_capital = {
+			state = 1269
+			remember_old_capital = no
+		}
+		set_politics = {
+			ruling_party = neutrality
+		}
+		set_popularities = {
+			neutrality = 70
+			democratic = 15
+			fascism = 10
+			communism = 5
+		}
+		GER_wilhelm_ii = {
+			add_country_leader_role = {
+				country_leader = {
+					expire = "1965.1.1"
+					ideology = despotism
+					traits = {
+						anti_democrat
+						imperial_connections				
+					}
+				}
+				promote_leader = yes
+			}
+		}
+		drop_cosmetic_tag = yes
+		set_cosmetic_tag = GER_german_empire
+	}
+}
+
+ksr_map_GER_1941 = {
+	GER = {
+		set_politics = {
+			ruling_party = fascism
+			elections_allowed = no
+		}
+		every_core_state = {
+			remove_core_of = PREV
+			remove_core_of = GER
+		}
+		1269 = { transfer_state_to = PREV add_core_of = PREV }
+		1268 = { transfer_state_to = PREV add_core_of = PREV }
+		1542 = { transfer_state_to = PREV add_core_of = PREV }
+		65 = { transfer_state_to = PREV add_core_of = PREV }
+		64 = { transfer_state_to = PREV add_core_of = PREV }
+		62 = { transfer_state_to = PREV add_core_of = PREV }
+		61 = { transfer_state_to = PREV add_core_of = PREV }
+		58 = { transfer_state_to = PREV add_core_of = PREV }
+		909 = { transfer_state_to = PREV add_core_of = PREV }
+		1543 = { transfer_state_to = PREV add_core_of = PREV }
+		60 = { transfer_state_to = PREV add_core_of = PREV }
+		1544 = { transfer_state_to = PREV add_core_of = PREV }
+		59 = { transfer_state_to = PREV add_core_of = PREV }
+		1545 = { transfer_state_to = PREV add_core_of = PREV }
+		1270 = { transfer_state_to = PREV add_core_of = PREV }
+		56 = { transfer_state_to = PREV add_core_of = PREV }
+		1413 = { transfer_state_to = PREV add_core_of = PREV }
+		57 = { transfer_state_to = PREV add_core_of = PREV }
+		1253 = { transfer_state_to = PREV add_core_of = PREV }
+		1254 = { transfer_state_to = PREV add_core_of = PREV }
+		55 = { transfer_state_to = PREV add_core_of = PREV }
+		1546 = { transfer_state_to = PREV add_core_of = PREV }
+		53 = { transfer_state_to = PREV add_core_of = PREV }
+		54 = { transfer_state_to = PREV add_core_of = PREV }
+		50 = { transfer_state_to = PREV add_core_of = PREV }
+		1548 = { transfer_state_to = PREV add_core_of = PREV }
+		1549 = { transfer_state_to = PREV add_core_of = PREV }
+		1550 = { transfer_state_to = PREV add_core_of = PREV }
+		52 = { transfer_state_to = PREV add_core_of = PREV }
+		1547 = { transfer_state_to = PREV add_core_of = PREV }
+		1251 = { transfer_state_to = PREV add_core_of = PREV }
+		978 = { transfer_state_to = PREV add_core_of = PREV }
+		42 = { transfer_state_to = PREV add_core_of = PREV }
+		1414 = { transfer_state_to = PREV add_core_of = PREV }
+		1551 = { transfer_state_to = PREV add_core_of = PREV }
+		51 = { transfer_state_to = PREV add_core_of = PREV }
+		28 = { transfer_state_to = PREV add_core_of = PREV }
+		8 = { transfer_state_to = PREV add_core_of = PREV }
+		1250 = { transfer_state_to = PREV add_core_of = PREV }
+		848 = { transfer_state_to = PREV add_core_of = PREV }
+		153 = { transfer_state_to = PREV add_core_of = PREV }
+		976 = { transfer_state_to = PREV add_core_of = PREV }
+		152 = { transfer_state_to = PREV add_core_of = PREV }
+		1390 = { transfer_state_to = PREV add_core_of = PREV }
+		975 = { transfer_state_to = PREV add_core_of = PREV }
+		4 = { transfer_state_to = PREV add_core_of = PREV }
+		1553 = { transfer_state_to = PREV add_core_of = PREV }
+		102 = { transfer_state_to = PREV add_core_of = PREV }
+		1608 = { transfer_state_to = PREV add_core_of = PREV }
+		972 = { transfer_state_to = PREV add_core_of = PREV }
+		69 = { transfer_state_to = PREV add_core_of = PREV }
+		1556 = { transfer_state_to = PREV add_core_of = PREV }
+		74 = { transfer_state_to = PREV add_core_of = PREV }
+		66 = { transfer_state_to = PREV add_core_of = PREV }
+		1558 = { transfer_state_to = PREV add_core_of = PREV }
+		1540 = { transfer_state_to = PREV add_core_of = PREV }
+		67 = { transfer_state_to = PREV add_core_of = PREV }
+		1541 = { transfer_state_to = PREV add_core_of = PREV }
+		68 = { transfer_state_to = PREV add_core_of = PREV }
+		63 = { transfer_state_to = PREV add_core_of = PREV }
+		1538 = { transfer_state_to = PREV add_core_of = PREV }
+		1539 = { transfer_state_to = PREV add_core_of = PREV }
+		1249 = { transfer_state_to = PREV add_core_of = PREV }
+		763 = { transfer_state_to = PREV add_core_of = PREV }
+		1702 = { transfer_state_to = PREV add_core_of = PREV }
+		1288 = { transfer_state_to = PREV add_core_of = PREV }
+		1557 = { transfer_state_to = PREV add_core_of = PREV }
+		5 = { transfer_state_to = PREV add_core_of = PREV }
+		1701 = { transfer_state_to = PREV add_core_of = PREV }
+		762 = { transfer_state_to = PREV add_core_of = PREV }
+		1145 = { transfer_state_to = PREV add_core_of = PREV }
+		1144 = { transfer_state_to = PREV add_core_of = PREV }
+		1143 = { transfer_state_to = PREV add_core_of = PREV }
+		86 = { transfer_state_to = PREV add_core_of = PREV }
+		1389 = { transfer_state_to = PREV add_core_of = PREV }
+		1554 = { transfer_state_to = PREV add_core_of = PREV }
+		807 = { transfer_state_to = PREV add_core_of = PREV }
+		85 = { transfer_state_to = PREV add_core_of = PREV }
+		1481 = { transfer_state_to = PREV add_core_of = PREV }
+		1252 = { transfer_state_to = PREV add_core_of = PREV }
+		87 = { transfer_state_to = PREV add_core_of = PREV }
+		98 = { transfer_state_to = PREV add_core_of = PREV }
+		1482 = { transfer_state_to = PREV add_core_of = PREV }
+		1245 = { transfer_state_to = PREV add_core_of = PREV }
+		97 = { transfer_state_to = PREV add_core_of = PREV }
+		1242 = { transfer_state_to = PREV add_core_of = PREV }
+		1241 = { transfer_state_to = PREV add_core_of = PREV }
+		1172 = { transfer_state_to = PREV add_core_of = PREV }
+		188 = { transfer_state_to = PREV add_core_of = PREV }
+		1484 = { transfer_state_to = PREV add_core_of = PREV }
+		1240 = { transfer_state_to = PREV add_core_of = PREV }
+		1239 = { transfer_state_to = PREV add_core_of = PREV }
+		1238 = { transfer_state_to = PREV add_core_of = PREV }
+		set_capital = { state = 1269 remember_old_capital = no }
+	}
+}
+
+ksr_map_GER_1949 = {
+	every_state = {
+		limit = {
+			OR = {
+				is_core_of = GER
+				is_claimed_by = GER
+				is_core_of = WGR
+				is_claimed_by = WGR
+				is_core_of = DDR
+				is_claimed_by = DDR
+			}
+		}
+		remove_core_of = GER
+		remove_claim_by = GER
+		remove_core_of = WGR
+		remove_claim_by = WGR
+		remove_core_of = DDR
+		remove_claim_by = DDR
+	}
+	
+	DDR = {
+		every_state = {
+			limit = {
+				OR = {
+					state = 60
+					state = 61
+					state = 62
+					state = 64
+					state = 65
+					state = 1269
+					state = 1270
+					state = 1542
+					state = 1543
+					state = 1544
+				}
+			}
+			add_core_of = PREV
+			transfer_state_to = PREV
+			set_demilitarized_zone = no
+		}
+		set_capital = {
+			state = 1269
+			remember_old_capital = no
+		}
+		set_politics = {
+			ruling_party = communism
+		}
+		set_popularities = {
+			communism = 60
+			democratic = 30
+			fascism = 10
+		}
+		promote_character = GER_wilhelm_pieck
+		drop_cosmetic_tag = yes
+	}
+	
+	WGR = {
+		every_state = {
+			limit = {
+				OR = {
+					state = 42
+					state = 50
+					state = 51
+					state = 52
+					state = 53
+					state = 54
+					state = 55
+					state = 56
+					state = 57
+					state = 58
+					state = 59
+					state = 909
+					state = 978
+					state = 1251
+					state = 1253
+					state = 1254
+					state = 1268
+					state = 1413
+					state = 1414
+					state = 1545
+					state = 1546
+					state = 1547
+					state = 1548
+					state = 1549
+					state = 1550
+					state = 1551
+				}
+			}
+			add_core_of = PREV
+			transfer_state_to = PREV
+			set_demilitarized_zone = no
+		}
+		set_capital = {
+			state = 1414
+			remember_old_capital = no
+		}
+		set_politics = {
+			ruling_party = democratic
+		}
+		set_popularities = {
+			democratic = 80
+			fascism = 10
+			communism = 10
+		}
+		promote_character = GER_konrad_adenauer
+		drop_cosmetic_tag = yes
+	}
+}
+
+
+# =======================================================================================
+# 										POLAND
+# =======================================================================================
+ksr_map_POL_1946 = {
+	every_state = {
+		limit = {
+			OR = {
+				is_core_of = POL
+				is_claimed_by = POL
+			}
+		}
+		remove_core_of = POL
+		remove_claim_by = POL
+	}
+	
+	POL = {
+		every_state = {
+			limit = {
+				OR = {
+					state = 5
+					state = 10
+					state = 63
+					state = 66
+					state = 67
+					state = 68
+					state = 85
+					state = 86
+					state = 87
+					state = 88
+					state = 90
+					state = 92
+					state = 97
+					state = 98
+					state = 762
+					state = 807
+					state = 1701
+					state = 1702
+					state = 1141
+					state = 1142
+					state = 1143
+					state = 1144
+					state = 1145
+					state = 1241
+					state = 1242
+					state = 1245
+					state = 1252
+					state = 1256
+					state = 1288
+					state = 1385
+					state = 1386
+					state = 1389
+					state = 1400
+					state = 1481
+					state = 1482
+					state = 1483
+					state = 1528
+					state = 1529
+					state = 1530
+					state = 1538
+					state = 1539
+					state = 1540
+					state = 1541
+					state = 1554
+					state = 1557
+					state = 1558
+				}
+			}
+			add_core_of = PREV
+			transfer_state_to = PREV
+			set_demilitarized_zone = no
+		}
+		set_capital = {
+			state = 10
+			remember_old_capital = no
+		}
+		set_politics = {
+			ruling_party = communism
+		}
+		set_popularities = {
+			communism = 60
+			democratic = 30
+			fascism = 10
+		}
+		promote_character = POL_wladyslaw_gomulka
+		drop_cosmetic_tag = yes
+	}
+}
+
+ksr_map_POL_1952 = {
+	every_state = {
+		limit = {
+			OR = {
+				is_core_of = POL
+				is_claimed_by = POL
+			}
+		}
+		remove_core_of = POL
+		remove_claim_by = POL
+	}
+	
+	POL = {
+		every_state = {
+			limit = {
+				OR = {
+					state = 5
+					state = 10
+					state = 63
+					state = 66
+					state = 67
+					state = 68
+					state = 85
+					state = 86
+					state = 87
+					state = 88
+					state = 90
+					state = 92
+					state = 97
+					state = 98
+					state = 762
+					state = 807
+					state = 1701
+					state = 1702
+					state = 1141
+					state = 1142
+					state = 1143
+					state = 1144
+					state = 1145
+					state = 1241
+					state = 1242
+					state = 1245
+					state = 1252
+					state = 1256
+					state = 1288
+					state = 1385
+					state = 1386
+					state = 1389
+					state = 1399
+					state = 1481
+					state = 1482
+					state = 1483
+					state = 1528
+					state = 1529
+					state = 1530
+					state = 1538
+					state = 1539
+					state = 1540
+					state = 1541
+					state = 1554
+					state = 1557
+					state = 1558
+				}
+			}
+			add_core_of = PREV
+			transfer_state_to = PREV
+			set_demilitarized_zone = no
+		}
+		set_capital = {
+			state = 10
+			remember_old_capital = no
+		}
+		set_politics = {
+			ruling_party = communism
+		}
+		set_popularities = {
+			communism = 60
+			democratic = 30
+			fascism = 10
+		}
+		promote_character = POL_wladyslaw_gomulka
+		drop_cosmetic_tag = yes
+	}
+}
+
+
+
+
+ksr_map_POL_1990 = {
+	every_state = {
+		limit = {
+			OR = {
+				is_core_of = POL
+				is_claimed_by = POL
+			}
+		}
+		remove_core_of = POL
+		remove_claim_by = POL
+	}
+	
+	POL = {
+		every_state = {
+			limit = {
+				OR = {
+					state = 5
+					state = 10
+					state = 63
+					state = 66
+					state = 67
+					state = 68
+					state = 85
+					state = 86
+					state = 87
+					state = 88
+					state = 90
+					state = 92
+					state = 97
+					state = 98
+					state = 762
+					state = 807
+					state = 1701
+					state = 1702
+					state = 1141
+					state = 1142
+					state = 1143
+					state = 1144
+					state = 1145
+					state = 1241
+					state = 1242
+					state = 1245
+					state = 1252
+					state = 1256
+					state = 1288
+					state = 1385
+					state = 1386
+					state = 1389
+					state = 1399
+					state = 1481
+					state = 1482
+					state = 1483
+					state = 1528
+					state = 1529
+					state = 1530
+					state = 1538
+					state = 1539
+					state = 1540
+					state = 1541
+					state = 1554
+					state = 1557
+					state = 1558
+				}
+			}
+			add_core_of = PREV
+			transfer_state_to = PREV
+			set_demilitarized_zone = no
+		}
+		set_capital = {
+			state = 10
+			remember_old_capital = no
+		}
+		set_politics = {
+			ruling_party = democratic
+		}
+		set_popularities = {
+			communism = 3
+			democratic = 88
+			neutrality = 6
+			fascism = 3
+		}
+		drop_cosmetic_tag = yes
+	}
+}
+
+
+
+# =======================================================================================
+# 										RUSSIA
+# =======================================================================================
+ksr_map_SOV_1914 = {
+	every_state = {
+		limit = {
+			OR = {
+				is_core_of = SOV
+				is_claimed_by = SOV
+			}
+		}
+		remove_core_of = SOV
+		remove_claim_by = SOV
+	}
+	
+	SOV = {
+		clr_country_flag = KSR_stalinist_russian_names
+		clr_country_flag = KSR_trotskyist_russian_names
+		set_country_flag = KSR_tsarist_russian_names
+		every_state = {
+			limit = {
+				OR = {
+					state = 808
+					state = 190
+					state = 1559
+					state = 12
+					state = 809
+					state = 810
+					state = 1059
+					state = 1060
+					state = 1061
+					state = 1062
+					state = 1063
+					state = 13
+					state = 191
+					state = 811
+					state = 812
+					state = 813
+					state = 1066
+					state = 1067
+					state = 1068
+					state = 1069
+					state = 1070
+					state = 1071
+					state = 1072
+					state = 11
+					state = 189
+					state = 814
+					state = 815
+					state = 1236
+					state = 1237
+					state = 1058
+					state = 784
+					state = 1247
+					state = 1248
+					state = 1243
+					state = 1244
+					state = 1173
+					state = 96
+					state = 95
+					state = 1246
+					state = 1261
+					state = 1610
+					state = 208
+					state = 1290
+					state = 263
+					state = 209
+					state = 1065
+					state = 1110
+					state = 210
+					state = 1064
+					state = 207
+					state = 1264
+					state = 206
+					state = 1263
+					state = 204
+					state = 1094
+					state = 1611
+					state = 1075
+					state = 242
+					state = 243
+					state = 241
+					state = 1085
+					state = 202
+					state = 1101
+					state = 1102
+					state = 194
+					state = 1265
+					state = 1534
+					state = 94
+					state = 1535
+					state = 1533
+					state = 93
+					state = 199
+					state = 201
+					state = 198
+					state = 203
+					state = 197
+					state = 1606
+					state = 1103
+					state = 226
+					state = 1612
+					state = 200
+					state = 196
+					state = 137
+					state = 1086
+					state = 1087
+					state = 1088
+					state = 1084
+					state = 1083
+					state = 193
+					state = 225
+					state = 1100
+					state = 1537
+					state = 259
+					state = 1536
+					state = 221
+					state = 1099
+					state = 1089
+					state = 1090
+					state = 1091
+					state = 227
+					state = 228
+					state = 1096
+					state = 1082
+					state = 1076
+					state = 240
+					state = 1108
+					state = 1080
+					state = 1079
+					state = 1095
+					state = 1262
+					state = 834
+					state = 1500
+					state = 192
+					state = 766
+					state = 231
+					state = 230
+					state = 229
+					state = 1057
+					state = 1118
+					state = 1119
+					state = 1120
+					state = 1121
+					state = 1122
+					state = 1123
+					state = 1124
+					state = 1125
+					state = 1126
+					state = 1127
+					state = 826
+					state = 232
+					state = 821
+					state = 828
+					state = 235
+					state = 827
+					state = 233
+					state = 1077
+					state = 234
+					state = 1097
+					state = 1098
+					state = 218
+					state = 238
+					state = 1078
+					state = 245
+					state = 237
+					state = 236
+					state = 217
+					state = 829
+					state = 265
+					state = 219
+					state = 1107
+					state = 224
+					state = 1112
+					state = 205
+					state = 1105
+					state = 1109
+					state = 1111
+					state = 220
+					state = 222
+					state = 1104
+					state = 246
+					state = 1106
+					state = 247
+					state = 1074
+					state = 1073
+					state = 264
+					state = 351
+					state = 879
+					state = 214
+					state = 880
+					state = 248
+					state = 1115
+					state = 1114
+					state = 253
+					state = 1113
+					state = 223
+					state = 258
+					state = 260
+					state = 1081
+					state = 254
+					state = 257
+					state = 239
+					state = 255
+					state = 252
+					state = 401
+					state = 652
+					state = 1525
+					state = 251
+					state = 250
+					state = 249
+					state = 256
+					state = 833
+					state = 400
+					state = 399
+					state = 216
+					state = 215
+					state = 1116
+					state = 1117
+					state = 1714
+					state = 213
+					state = 195
+					state = 1289
+					state = 244
+					state = 1170
+					state = 1171
+					state = 1174
+					state = 1175
+					state = 653
+					state = 572
+					state = 582
+					state = 1524
+					state = 651
+					state = 573
+					state = 398
+					state = 1523
+					state = 397
+					state = 262
+					state = 825
+					state = 581
+					state = 579
+					state = 580
+					state = 403
+					state = 405
+					state = 742
+					state = 732
+					state = 830
+					state = 584
+					state = 832
+					state = 587
+					state = 823
+					state = 831
+					state = 585
+					state = 404
+					state = 586
+					state = 407
+					state = 1526
+					state = 406
+					state = 1527
+					state = 402
+					state = 589
+					state = 881
+					state = 583
+					state = 590
+					state = 588
+					state = 570
+					state = 571
+					state = 40
+					state = 1093
+					state = 654
+					state = 569
+					state = 329
+					state = 568
+					state = 577
+					state = 578
+					state = 576
+					state = 824
+					state = 516
+					state = 878
+					state = 567
+					state = 566
+					state = 564
+					state = 575
+					state = 565
+					state = 408
+					state = 1332
+					state = 1333
+					state = 1334
+					state = 1335
+					state = 1336
+					state = 409
+					state = 657
+					state = 655
+					state = 560
+					state = 1338
+					state = 561
+					state = 1337
+					state = 563
+					state = 562
+					state = 574
+					state = 877
+					state = 644
+					state = 874
+					state = 822
+					state = 637
+					state = 555
+					state = 875
+					state = 876
+					state = 882
+					state = 146
+					state = 147
+					state = 722
+					state = 1238
+					state = 1239
+					state = 1240
+					state = 1484
+					state = 1291
+					state = 78
+					state = 1092
+					state = 148
+					state = 929
+					state = 149
+					state = 150
+					state = 926
+					state = 927
+					state = 111
+					state = 930
+					state = 928
+					state = 145
+					state = 1240
+					state = 1241
+					state = 1242
+					state = 97
+					state = 1245
+					state = 1482
+					state = 98
+					state = 1252
+					state = 1481
+					state = 90
+					state = 1143
+					state = 87
+					state = 1142
+					state = 10
+					state = 1256
+					state = 1141
+					state = 1530
+					state = 92
+				}
+			}
+			add_core_of = PREV
+			transfer_state_to = PREV
+			set_demilitarized_zone = no
+		}
+		set_capital = {
+			state = 195
+			remember_old_capital = no
+		}
+		set_politics = {
+			ruling_party = neutrality
+		}
+		set_popularities = {
+			neutrality = 100
+		}
+		promote_character = SOV_tsar_vladimir_kirillovich
+		drop_cosmetic_tag = yes
+		set_cosmetic_tag = SOV_russia_flag2
+	}
+}
+
+
+
+ksr_map_SOV_1946 = {
+	every_state = {
+		limit = {
+			OR = {
+				is_core_of = SOV
+				is_claimed_by = SOV
+			}
+		}
+		remove_core_of = SOV
+		remove_claim_by = SOV
+	}
+	
+	SOV = {
+		every_state = {
+			limit = {
+				OR = {
+					state = 808
+					state = 190
+					state = 1559
+					state = 12
+					state = 809
+					state = 810
+					state = 1059
+					state = 1060
+					state = 1061
+					state = 1062
+					state = 1063
+					state = 13
+					state = 191
+					state = 811
+					state = 812
+					state = 813
+					state = 1066
+					state = 1067
+					state = 1068
+					state = 1069
+					state = 1070
+					state = 1071
+					state = 1072
+					state = 11
+					state = 189
+					state = 814
+					state = 815
+					state = 1236
+					state = 1237
+					state = 1058
+					state = 784
+					state = 1247
+					state = 1248
+					state = 1243
+					state = 1244
+					state = 1173
+					state = 96
+					state = 95
+					state = 1246
+					state = 1261
+					state = 1610
+					state = 208
+					state = 1290
+					state = 263
+					state = 209
+					state = 1065
+					state = 1110
+					state = 210
+					state = 1064
+					state = 207
+					state = 1264
+					state = 206
+					state = 1263
+					state = 204
+					state = 1094
+					state = 1611
+					state = 1075
+					state = 242
+					state = 243
+					state = 241
+					state = 1085
+					state = 202
+					state = 1101
+					state = 1102
+					state = 194
+					state = 1265
+					state = 1534
+					state = 94
+					state = 1535
+					state = 1533
+					state = 93
+					state = 199
+					state = 201
+					state = 198
+					state = 203
+					state = 197
+					state = 1606
+					state = 1103
+					state = 226
+					state = 1612
+					state = 200
+					state = 196
+					state = 137
+					state = 1086
+					state = 1087
+					state = 1088
+					state = 1084
+					state = 1083
+					state = 193
+					state = 225
+					state = 1100
+					state = 1537
+					state = 259
+					state = 1536
+					state = 221
+					state = 1099
+					state = 1089
+					state = 1090
+					state = 1091
+					state = 227
+					state = 228
+					state = 1096
+					state = 1082
+					state = 1076
+					state = 240
+					state = 1108
+					state = 1080
+					state = 1079
+					state = 1095
+					state = 1262
+					state = 834
+					state = 1500
+					state = 192
+					state = 766
+					state = 231
+					state = 230
+					state = 229
+					state = 1057
+					state = 1118
+					state = 1119
+					state = 1120
+					state = 1121
+					state = 1122
+					state = 1123
+					state = 1124
+					state = 1125
+					state = 1126
+					state = 1127
+					state = 826
+					state = 232
+					state = 821
+					state = 828
+					state = 235
+					state = 827
+					state = 233
+					state = 1077
+					state = 234
+					state = 1097
+					state = 1098
+					state = 218
+					state = 238
+					state = 1078
+					state = 245
+					state = 237
+					state = 236
+					state = 217
+					state = 829
+					state = 265
+					state = 219
+					state = 1107
+					state = 224
+					state = 1112
+					state = 205
+					state = 1105
+					state = 1109
+					state = 1111
+					state = 220
+					state = 222
+					state = 1104
+					state = 246
+					state = 1106
+					state = 247
+					state = 1074
+					state = 1073
+					state = 264
+					state = 351
+					state = 879
+					state = 214
+					state = 880
+					state = 248
+					state = 1115
+					state = 1114
+					state = 253
+					state = 1113
+					state = 223
+					state = 258
+					state = 260
+					state = 1081
+					state = 254
+					state = 257
+					state = 239
+					state = 255
+					state = 252
+					state = 401
+					state = 652
+					state = 1525
+					state = 251
+					state = 250
+					state = 249
+					state = 256
+					state = 833
+					state = 400
+					state = 399
+					state = 216
+					state = 215
+					state = 1116
+					state = 1117
+					state = 1714
+					state = 213
+					state = 195
+					state = 1289
+					state = 244
+					state = 1170
+					state = 1171
+					state = 1174
+					state = 1175
+					state = 653
+					state = 572
+					state = 582
+					state = 1524
+					state = 651
+					state = 573
+					state = 398
+					state = 1523
+					state = 397
+					state = 262
+					state = 825
+					state = 581
+					state = 579
+					state = 580
+					state = 403
+					state = 405
+					state = 742
+					state = 732
+					state = 830
+					state = 584
+					state = 832
+					state = 587
+					state = 823
+					state = 831
+					state = 585
+					state = 404
+					state = 586
+					state = 407
+					state = 1526
+					state = 406
+					state = 1527
+					state = 402
+					state = 589
+					state = 881
+					state = 583
+					state = 590
+					state = 588
+					state = 570
+					state = 571
+					state = 40
+					state = 1093
+					state = 654
+					state = 569
+					state = 329
+					state = 568
+					state = 577
+					state = 578
+					state = 576
+					state = 824
+					state = 516
+					state = 878
+					state = 567
+					state = 566
+					state = 564
+					state = 575
+					state = 565
+					state = 408
+					state = 1332
+					state = 1333
+					state = 1334
+					state = 1335
+					state = 1336
+					state = 409
+					state = 657
+					state = 655
+					state = 560
+					state = 1338
+					state = 561
+					state = 1337
+					state = 563
+					state = 562
+					state = 574
+					state = 877
+					state = 644
+					state = 874
+					state = 822
+					state = 637
+					state = 537
+					state = 555
+					state = 875
+					state = 876
+					state = 882
+					state = 146
+					state = 147
+					state = 722
+					state = 188
+					state = 1172
+					state = 1249
+					state = 763
+					state = 1238
+					state = 1239
+					state = 1240
+					state = 1484
+					state = 1531
+					state = 89
+					state = 1532
+					state = 91
+					state = 1399
+					state = 73
+					state = 1294
+					state = 80
+					state = 1291
+					state = 78
+					state = 1092
+				}
+			}
+			add_core_of = PREV
+			transfer_state_to = PREV
+			set_demilitarized_zone = no
+		}
+		set_capital = {
+			state = 219
+			remember_old_capital = no
+		}
+		set_politics = {
+			ruling_party = communism
+		}
+		set_popularities = {
+			communism = 100
+		}
+		promote_character = SOV_iosif_stalin
+		drop_cosmetic_tag = yes
+	}
+}
+
+
+
+
+
+ksr_map_SOV_1952 = {
+	every_state = {
+		limit = {
+			OR = {
+				is_core_of = SOV
+				is_claimed_by = SOV
+			}
+		}
+		remove_core_of = SOV
+		remove_claim_by = SOV
+	}
+	
+	SOV = {
+		every_state = {
+			limit = {
+				OR = {
+					state = 808
+					state = 190
+					state = 1559
+					state = 12
+					state = 809
+					state = 810
+					state = 1059
+					state = 1060
+					state = 1061
+					state = 1062
+					state = 1063
+					state = 13
+					state = 191
+					state = 811
+					state = 812
+					state = 813
+					state = 1066
+					state = 1067
+					state = 1068
+					state = 1069
+					state = 1070
+					state = 1071
+					state = 1072
+					state = 11
+					state = 189
+					state = 814
+					state = 815
+					state = 1236
+					state = 1237
+					state = 1058
+					state = 784
+					state = 1247
+					state = 1248
+					state = 1243
+					state = 1244
+					state = 1173
+					state = 96
+					state = 95
+					state = 1246
+					state = 1261
+					state = 1610
+					state = 208
+					state = 1290
+					state = 263
+					state = 209
+					state = 1065
+					state = 1110
+					state = 210
+					state = 1064
+					state = 207
+					state = 1264
+					state = 206
+					state = 1263
+					state = 204
+					state = 1094
+					state = 1611
+					state = 1075
+					state = 242
+					state = 243
+					state = 241
+					state = 1085
+					state = 202
+					state = 1101
+					state = 1102
+					state = 194
+					state = 1265
+					state = 1534
+					state = 94
+					state = 1535
+					state = 1533
+					state = 93
+					state = 199
+					state = 201
+					state = 198
+					state = 203
+					state = 197
+					state = 1606
+					state = 1103
+					state = 226
+					state = 1612
+					state = 200
+					state = 196
+					state = 137
+					state = 1086
+					state = 1087
+					state = 1088
+					state = 1084
+					state = 1083
+					state = 193
+					state = 225
+					state = 1100
+					state = 1537
+					state = 259
+					state = 1536
+					state = 221
+					state = 1099
+					state = 1089
+					state = 1090
+					state = 1091
+					state = 227
+					state = 228
+					state = 1096
+					state = 1082
+					state = 1076
+					state = 240
+					state = 1108
+					state = 1080
+					state = 1079
+					state = 1095
+					state = 1262
+					state = 834
+					state = 1500
+					state = 192
+					state = 766
+					state = 231
+					state = 230
+					state = 229
+					state = 1057
+					state = 1118
+					state = 1119
+					state = 1120
+					state = 1121
+					state = 1122
+					state = 1123
+					state = 1124
+					state = 1125
+					state = 1126
+					state = 1127
+					state = 826
+					state = 232
+					state = 821
+					state = 828
+					state = 235
+					state = 827
+					state = 233
+					state = 1077
+					state = 234
+					state = 1097
+					state = 1098
+					state = 218
+					state = 238
+					state = 1078
+					state = 245
+					state = 237
+					state = 236
+					state = 217
+					state = 829
+					state = 265
+					state = 219
+					state = 1107
+					state = 224
+					state = 1112
+					state = 205
+					state = 1105
+					state = 1109
+					state = 1111
+					state = 220
+					state = 222
+					state = 1104
+					state = 246
+					state = 1106
+					state = 247
+					state = 1074
+					state = 1073
+					state = 264
+					state = 351
+					state = 879
+					state = 214
+					state = 880
+					state = 248
+					state = 1115
+					state = 1114
+					state = 253
+					state = 1113
+					state = 223
+					state = 258
+					state = 260
+					state = 1081
+					state = 254
+					state = 257
+					state = 239
+					state = 255
+					state = 252
+					state = 401
+					state = 652
+					state = 1525
+					state = 251
+					state = 250
+					state = 249
+					state = 256
+					state = 833
+					state = 400
+					state = 399
+					state = 216
+					state = 215
+					state = 1116
+					state = 1117
+					state = 1714
+					state = 213
+					state = 195
+					state = 1289
+					state = 244
+					state = 1170
+					state = 1171
+					state = 1174
+					state = 1175
+					state = 653
+					state = 572
+					state = 582
+					state = 1524
+					state = 651
+					state = 573
+					state = 398
+					state = 1523
+					state = 397
+					state = 262
+					state = 825
+					state = 581
+					state = 579
+					state = 580
+					state = 403
+					state = 405
+					state = 742
+					state = 732
+					state = 830
+					state = 584
+					state = 832
+					state = 587
+					state = 823
+					state = 831
+					state = 585
+					state = 404
+					state = 586
+					state = 407
+					state = 1526
+					state = 406
+					state = 1527
+					state = 402
+					state = 589
+					state = 881
+					state = 583
+					state = 590
+					state = 588
+					state = 570
+					state = 571
+					state = 40
+					state = 1093
+					state = 654
+					state = 569
+					state = 329
+					state = 568
+					state = 577
+					state = 578
+					state = 576
+					state = 824
+					state = 516
+					state = 878
+					state = 567
+					state = 566
+					state = 564
+					state = 575
+					state = 565
+					state = 408
+					state = 1332
+					state = 1333
+					state = 1334
+					state = 1335
+					state = 1336
+					state = 409
+					state = 657
+					state = 655
+					state = 560
+					state = 1338
+					state = 561
+					state = 1337
+					state = 563
+					state = 562
+					state = 574
+					state = 877
+					state = 644
+					state = 874
+					state = 822
+					state = 637
+					state = 537
+					state = 555
+					state = 875
+					state = 876
+					state = 882
+					state = 146
+					state = 147
+					state = 722
+					state = 188
+					state = 1172
+					state = 1249
+					state = 763
+					state = 1238
+					state = 1239
+					state = 1240
+					state = 1484
+					state = 1531
+					state = 89
+					state = 1532
+					state = 91
+					state = 1400
+					state = 73
+					state = 1294
+					state = 80
+					state = 1291
+					state = 78
+					state = 1092
+				}
+			}
+			add_core_of = PREV
+			transfer_state_to = PREV
+			set_demilitarized_zone = no
+		}
+		set_capital = {
+			state = 219
+			remember_old_capital = no
+		}
+		set_politics = {
+			ruling_party = communism
+		}
+		set_popularities = {
+			communism = 100
+		}
+		promote_character = SOV_iosif_stalin
+		drop_cosmetic_tag = yes
+	}
+}
+
+
+
+
+
+
+
+# =======================================================================================
+# 										AUSTRIA
+# =======================================================================================
+ksr_map_AUS_1914 = {
+	every_state = {
+		limit = {
+			OR = {
+				is_core_of = AUS
+				is_claimed_by = AUS
+			}
+		}
+		remove_core_of = AUS
+		remove_claim_by = AUS
+	}
+	
+	AUS = {
+		every_state = {
+			limit = {
+				OR = {
+					state = 848
+					state = 153
+					state = 152
+					state = 976
+					state = 1390
+					state = 4
+					state = 1553
+					state = 975
+					state = 69
+					state = 9
+					state = 75
+					state = 74
+					state = 72
+					state = 70
+					state = 664
+					state = 71
+					state = 73
+					state = 1294
+					state = 1555
+					state = 1556
+					state = 972
+					state = 1608
+					state = 1560
+					state = 1146
+					state = 1147
+					state = 1148
+					state = 1149
+					state = 155
+					state = 43
+					state = 154
+					state = 1278
+					state = 1235
+					state = 1700
+					state = 973
+					state = 974
+					state = 1703
+					state = 1384
+					state = 45
+					state = 76
+					state = 82
+					state = 83
+					state = 84
+					state = 102
+					state = 103
+					state = 104
+					state = 109
+					state = 764
+					state = 804
+					state = 853
+					state = 1704
+					state = 1705
+					state = 1706
+					state = 1707
+					state = 1711
+					state = 1712
+					state = 1713
+					state = 1716
+					state = 1717
+					state = 1718
+					state = 1722
+					state = 1314
+					state = 1325
+					state = 1339
+					state = 1296
+					state = 1309
+					state = 1310
+					state = 1387
+					state = 1388
+					state = 1410
+					state = 1477
+					state = 1478
+					state = 1479
+					state = 1480
+					state = 1144
+					state = 88
+					state = 1145
+					state = 1529
+					state = 1385
+					state = 1386
+					state = 1528
+					state = 1483
+					state = 91
+					state = 89
+					state = 1399
+					state = 1400
+					state = 1531
+					state = 1532
+					state = 80
+					state = 1267
+					state = 163
+					state = 1169
+					state = 852
+					state = 736
+					state = 1708
+					state = 39
+					state = 850
+				}
+			}
+			add_core_of = PREV
+			transfer_state_to = PREV
+			set_demilitarized_zone = no
+		}
+		set_capital = {
+			state = 4
+			remember_old_capital = no
+		}
+		set_politics = {
+			ruling_party = neutrality
+		}
+		set_popularities = {
+			neutrality = 70
+			democratic = 15
+			fascism = 10
+			communism = 5
+		}
+		drop_cosmetic_tag = yes
+		set_cosmetic_tag = HUN_EMPIRE
+	}
+}
+
+
+
+ksr_map_USA_release_states = {
+	release = WAS
+	release = ORS
+	release = CAL
+	release = NVS
+	release = IDS
+	release = AZS
+	release = UTS
+	release = NMS
+	release = CLS
+	release = WYS
+	release = MTS
+	release = TEX
+	release = AKS
+	release = OKS
+	release = KSS
+	release = NES
+	release = SDS
+	release = NDS
+	release = MNS
+	release = IWS
+	release = MOS
+	release = ARS
+	release = LAS
+	release = OHS
+	release = MCS
+	release = IND
+	release = WCS
+	release = ILS
+	release = MSS
+	release = KYS
+	release = TNS
+	release = ALS
+	release = FLS
+	release = GAS
+	release = SCS
+	release = NCS
+	release = VAS
+	release = WVS
+}
+
+
+
+ksr_map_USA_release_tribes = {
+	1565 = { CCT = { transfer_state = PREV } }
+	1614 = { STI = { transfer_state = PREV } }
+	1615 = { YIN = { transfer_state = PREV } }
+	1618 = { WSC = { transfer_state = PREV } }
+	1620 = { UCT = { transfer_state = PREV } }
+	1626 = { PLP = { transfer_state = PREV } }
+	1627 = { WRP = { transfer_state = PREV } }
+	1628 = { SPT = { transfer_state = PREV } }
+	1629 = { SPT = { transfer_state = PREV } }
+	1630 = { CDA = { transfer_state = PREV } }
+	1631 = { NPT = { transfer_state = PREV } }
+	1632 = { SBT = { transfer_state = PREV } }
+	1637 = { UIT = { transfer_state = PREV } }
+	1638 = { NVJ = { transfer_state = PREV } }
+	1639 = { NVJ = { transfer_state = PREV } }
+	1154 = { NVJ = { transfer_state = PREV } }
+	1650 = { NVJ = { transfer_state = PREV } }
+	1664 = { NVJ = { transfer_state = PREV } }
+	1651 = { HOP = { transfer_state = PREV } }
+	1649 = { HUA = { transfer_state = PREV } }
+	1646 = { CRT = { transfer_state = PREV } }
+	1648 = { CRT = { transfer_state = PREV } }
+	1652 = { WMA = { transfer_state = PREV } }
+	1653 = { WMA = { transfer_state = PREV } }
+	1644 = { SCA = { transfer_state = PREV } }
+	1647 = { SCA = { transfer_state = PREV } }
+	1643 = { GRI = { transfer_state = PREV } }
+	1642 = { PPG = { transfer_state = PREV } }
+	1660 = { MES = { transfer_state = PREV } }
+	1663 = { JIC = { transfer_state = PREV } }
+	1665 = { ZUN = { transfer_state = PREV } }
+}
+
+
+
+
+
+ksr_map_remove_dmz = {
+	every_state = {
+		limit = {
+			is_demilitarized_zone = yes
+		}
+		set_demilitarized_zone = no
+	}
+}
