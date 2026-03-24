@@ -1,0 +1,25 @@
+﻿l_english:
+
+NAG_democratic:5 "Nagpur"
+NAG_democratic_DEF:5 "Nagpur"
+NAG_democratic_ADJ:5 "Nagpurian"
+NAG_democratic_party:0 ""
+NAG_democratic_party_long:0 ""
+
+NAG_fascism:5 "Nagpur"
+NAG_fascism_DEF:5 "Nagpur"
+NAG_fascism_ADJ:5 "Nagpurian"
+NAG_fascism_party:0 ""
+NAG_fascism_party_long:0 ""
+
+NAG_communism:5 "Nagpur"
+NAG_communism_DEF:5 "Nagpur"
+NAG_communism_ADJ:5 "Nagpurian"
+NAG_communism_party:0 ""
+NAG_communism_party_long:0 ""
+
+NAG_neutrality:5 "Nagpur Military Clique"
+NAG_neutrality_DEF:5 "The Nagpur Military Clique"
+NAG_neutrality_ADJ:5 "Nagpurian"
+NAG_neutrality_party:0 "Military Clique"
+NAG_neutrality_party_long:0 ""
