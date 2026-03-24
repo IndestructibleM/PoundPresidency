@@ -1,0 +1,147 @@
+#	Example:
+#
+#	example_dynamic_modifier = {
+#		icon = "GFX_idea_unknown" # optional, will show up in guis if icon is specified
+#		enable = { always = yes } #optional, the modifier won't apply if not enabled
+#		remove_trigger = { always = no } #optional, will remove the modifier if true
+#       attacker_modifier = no  # if yes this modifier will also be read in combat for
+#                               # people engaging in the combat even if not in the state
+#
+#		# list of modifiers
+#		fuel_cost = 321
+#		max_fuel = var_max_fuel # will be taken from a variable
+#	}
+#
+#
+#	In a script file:
+#
+#	effect = {
+#		add_dynamic_modifier = {
+#			modifier = example_dynamic_modifier
+#			scope = GER # optional, if you specify this your dynamic modifier scoped to this scope (root is the effect scope)
+#			days = 14 # optional, will be removed after this many days passes
+#		}
+#	}
+#
+#	can be added to countries, states or unit leaders
+#	will only updated daily, unless forced by force_update_dynamic_modifier effect
+
+
+
+RAJ_opium_trafficking_zone = { 
+	enable = { always = yes } 
+
+	icon = modifiers_RAJ_famine_state
+
+
+    # Bonus de production en ville dense
+    army_org_regain = 0.3 = -0.20
+    attack_bonus_against  = -0.15
+    defense_bonus_against = -0.15
+    army_attack_factor  = -0.15
+    war_stability_factor = -0.3
+    local_supplies = -0.15
+
+
+
+}
+
+RAJ_oe = {
+
+    icon = GFX_modifiers_generic_resistance
+
+    # Désorganisation militaire locale
+    local_org_regain = -0.20
+    local_division_attack_factor = -0.15
+    local_division_defense_factor = -0.15
+
+    # Corruption et criminalité
+    local_stability_factor = -0.10
+
+    # Logistique perturbée
+    local_supplies = -0.15
+
+}
+
+
+RAJ_opium_completely_rotten = {
+
+    icon = GFX_modifiers_generic_resistance
+
+local_org_regain = -0.30
+local_division_attack_factor = -0.20
+local_division_defense_factor = -0.20
+local_supplies = -0.20
+
+
+}
+EIC_megacity_modifier = { #not used
+	enable = { always = yes } 
+
+	icon = GFX_modifiers_JAP_taiheiyo_belt
+
+
+	# Économie
+	local_factories = 0.20
+	state_production_speed_industrial_complex_factor = 0.15
+	state_production_speed_arms_factory_factor = 0.10
+
+	# Population
+	recruitable_population_factor = -0.1
+
+	# Logistique & congestion
+	local_resources = 0.15
+	local_supplies = 0.1
+
+	# Défense urbaine naturelle
+	max_dig_in_factor = 0.15
+	enemy_army_attack_factor = -0.05
+    
+}
+
+
+
+RAJ_megacity_dynamic = {
+    icon = GFX_modifiers_JAP_taiheiyo_belt
+
+    # Bonus de production en ville dense
+    local_factory_output = 0.20
+    state_production_speed_industrial_complex_factor = 0.15
+
+    # Populations urbaines denses
+    local_manpower = 0.30
+
+    # Congestion et logistique difficile en ville
+    local_supplies = -0.10
+    infrastructure_factor = -0.05
+
+    # Bonus de défense urbaine (rue, bâtiments, etc.)
+    local_defense_factor = 0.10
+
+    # Bonus d’ordre public modéré (ex: capitaux, centre administratif)
+    stability_factor = 0.05
+
+}
+
+GER_lokat_megacity_msodifier = { 
+	enable = { always = yes } 
+
+	icon = GFX_modifiers_GER_lokot_autonomy
+
+
+    # Bonus de production en ville dense
+    local_factory_output = 0.20
+    state_production_speed_industrial_complex_factor = 0.15
+
+    # Populations urbaines denses
+    local_manpower = 0.30
+
+    # Congestion et logistique difficile en ville
+    local_supplies = -0.10
+    infrastructure_factor = -0.05
+
+    # Bonus de défense urbaine (rue, bâtiments, etc.)
+    local_defense_factor = 0.10
+
+
+}
