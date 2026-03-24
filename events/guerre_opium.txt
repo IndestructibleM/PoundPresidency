@@ -176,7 +176,7 @@ country_event = {
             FRA = {
             add_ideas = investments_in_india
             }
-        IDS = {
+        ICS = {
 				transfer_state = 671
 				transfer_state = 670
 				transfer_state = 741
