@@ -1,0 +1,82 @@
+capital = 439
+
+set_stability = 0.6
+set_war_support = 0.1
+# Starting tech
+set_technology = {
+	infantry_weapons = 1
+	infantry_weapons1 = 1
+	tech_trucks = 1
+	tech_support = 1		
+	tech_engineers = 1
+	tech_recon = 1
+	trench_warfare = 1
+	fleet_in_being = 1
+	fuel_silos = 1
+	fuel_refining = 1
+	basic_train = 1
+	gw_artillery = 1
+}
+
+
+
+	recruit_character = RAJ_GOE_jawaharlal_nehru 
+
+
+
+
+
+if = {
+	limit = {
+		not = { has_dlc =  "Man the Guns" }
+	}
+	set_technology = {
+		transport = 1
+	}
+}
+
+if = {
+	limit = {
+		has_dlc = "Man the Guns"
+	}
+	set_technology = {
+		mtg_transport = 1
+	}
+}
+
+if = {
+	limit = {
+		has_dlc = "Battle for the Bosporus"
+	}
+	set_technology = { camelry = 1 }
+}
+
+if = {
+	limit = { 
+		has_dlc = "Together for Victory" 
+		
+	}
+
+	if = {
+		limit = { NOT = { has_dlc = "Graveyard of Empires" } }
+		add_ideas = RAJ_agrarian_society
+		
+	}
+
+	add_ideas = {
+        corpo_no_recognition
+
+	}
+}
+set_politics = {
+	ruling_party = democratic
+	last_election = "1934.2.11"
+	election_frequency = 48
+	elections_allowed = yes
+}
+set_popularities = {
+	democratic = 100
+	communism = 0
+	neutrality = 0
+	fascism = 0
+}
