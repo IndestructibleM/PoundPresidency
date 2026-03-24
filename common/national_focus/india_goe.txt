@@ -2577,7 +2577,7 @@ completion_reward = {
 
             RAJ = {
                 release_autonomy = {
-                    target = IDS
+                    target = ICS
                     autonomy_state = autonomy_integrated_puppet
                     freedom_level = 0.5
                 }
@@ -2592,7 +2592,7 @@ completion_reward = {
 
             }
 
-            IDS = {
+            ICS = {
 				transfer_state = 998
 				transfer_state = 640
         		transfer_state = 288
