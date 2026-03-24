@@ -16,14 +16,14 @@ on_actions = {
 
             RAJ = {
                 release_autonomy = {
-                    target = IDS
+                    target = ICS
                     autonomy_state = autonomy_integrated_puppet
                     freedom_level = 0.5
                 }
             }
 
 
-            IDS = {
+            ICS = {
 				transfer_state = 325
 				transfer_state = 747
 
@@ -209,7 +209,7 @@ on_actions = {
 
 ###########################################################
 
-		effect = { #if china capitulate on the corpo 
+		effect = { #if siam capitulate on the corpo 
 			IF = {
 				limit = {
 					SIA = {
@@ -235,13 +235,13 @@ on_actions = {
                 country_event = { id = RAJ_guerre_opium.16 days = 0 }
                 
                 release_autonomy = {
-                    target = IDS
+                    target = ICS
                     autonomy_state = autonomy_integrated_puppet
                     freedom_level = 0.5
                 }
             }
 
-            IDS = {
+            ICS = {
 				transfer_state = 999
 				transfer_state = 994
 				transfer_state = 993
