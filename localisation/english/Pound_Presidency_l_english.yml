@@ -471,6 +471,8 @@
  ### Ideas
  USA_war_against_degeneration: "§RTHE SECOND AMERICAN REVOLUTION§!"
  USA_we_are_the_sun: "§CWe are the Sun§!"
+ USA_status_of_army: "The United States Armed Forces"
+ USA_status_of_army_desc: "The United States army remains undermanned, undertrained, and reliant on outdated doctrines from the Great War. Years of budget cuts and diplomatic isolation have left the military unprepared for modern mechanized warfare, limiting our capacity to fight a war."
  
  USA_rise_of_pound_desc: "After the failure of the Emergency Banking Act, the hope and promise of the FDR administration vanished, and America sank back into malaise and discontent. Not long after, the famed artsman and poet Ezra Pound began forming his own fascist political party in an attempt to resolve the economic crisis himself. Labor agitation has also risen, with the CPUSA reporting higher membership every month. With the establishment in rapid decline, the politics of the United States are more uncertain than ever before."
  
@@ -539,6 +541,7 @@
  falsemaskoffreedom: "§BWe must subordinate our appetites, our passions and our egoism to the wholeness of the National interest. This way we will be a really free people, otherwise anarchy and indiscipline will reign over us under the false mask of freedom.§!"
  shizobolgang: "§RMine eyes have seen the glory of the coming of the Lord \n\nHe is trampling out the vintage where the grapes of wrath are stored \n\nHe hath loosed the fateful lightning of His terrible swift sword \n\nHis truth is marching on§!"
  bashthefash: "§RThe Fascists in our Government will be Rooted Out - Once and for all!§!"
+ tt_depression_gone: "Has fully removed the Great Depression"
  USA_pap_ink_revolution_cat: "The Paper and Ink Revolution"
  
  ### BoP

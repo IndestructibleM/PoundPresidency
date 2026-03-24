@@ -103,6 +103,28 @@ upgrade_education_law = {
 	else = { add_political_power = 100 }
 }
 
+upgrade_usa_army = {
+	if = { 
+		limit = { has_idea = USA_status_of_army } 
+		swap_ideas = {
+			remove_idea = USA_status_of_army
+			add_idea = USA_status_of_army2
+		}
+	}
+	else_if = { 
+		limit = { has_idea = USA_status_of_army2 } 
+		swap_ideas = {
+			remove_idea = USA_status_of_army2
+			add_idea = USA_status_of_army3
+		}
+	}
+	else_if = { 
+		limit = { has_idea = USA_status_of_army3 } 
+		remove_ideas = USA_status_of_army3
+	}
+	else = { army_experience = 50 }
+}
+
 econ_production_setup = {
 	set_variable = {
 		var = AmountOfCoal 

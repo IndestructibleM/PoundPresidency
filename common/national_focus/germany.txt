@@ -21823,7 +21823,7 @@ focus_tree = {
 		id = GER_start_the_proletarian_revolution
 		icon = GFX_focus_SWE_refuge_for_revolutionaries
 		prerequisite = { focus = GER_tend_to_the_future_of_germany }
-		mutually_exclusive = { focus = GER_monarchist_sentiment }
+		mutually_exclusive = { focus = GER_monarchist_sentiment focus = GER_rule_by_decree }
 
 		x = -11
 		y = 1
@@ -25699,7 +25699,7 @@ focus_tree = {
 		id = GER_monarchist_sentiment
 		icon = GFX_focus_generic_monarchist_sentiment
 		prerequisite = { focus = GER_tend_to_the_future_of_germany }
-		mutually_exclusive = { focus = GER_start_the_proletarian_revolution }
+		mutually_exclusive = { focus = GER_start_the_proletarian_revolution focus = GER_rule_by_decree }
 
 		x = 11
 		y = 1
@@ -33480,7 +33480,7 @@ focus_tree = {
 	focus = {
 		id = GER_weltpolitik
 		icon = GFX_focus_GER_weltpolitik
-		prerequisite = { focus = GER_monarchist_sentiment }
+		prerequisite = { focus = GER_monarchist_sentiment focus = GER_rule_by_decree }
 
 		x = 17
 		y = 1
@@ -39438,7 +39438,7 @@ focus_tree = {
 		id = GER_rule_by_decree
 		icon = GFX
 		prerequisite = { focus = GER_tend_to_the_future_of_germany }
-		mutually_exclusive = { focus = GER_start_the_proletarian_revolution focus = GER_monarchist_sentiment}
+		mutually_exclusive = { focus = GER_start_the_proletarian_revolution focus = GER_monarchist_sentiment }
 
 		x = 44
 		y = 1
@@ -39449,17 +39449,6 @@ focus_tree = {
 		available = {
 		}
 
-		offset = {
-			x = -50
-			y = 0
-			trigger = {
-				has_game_rule = {
-					rule = obsolete_focus_branches_visibility
-					option = HIDE
-				}
-				has_completed_focus = GER_monarchist_sentiment
-			}
-		}
 
 		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_POLITICAL_CHARACTER }
 
@@ -39700,7 +39689,7 @@ focus_tree = {
 		x = -1
 		y = 1
 		relative_position_id = GER_recall_the_hohenzollerns
-		cost = 5
+		cost = 6
 		completion_reward = {
 			
 		}
@@ -39714,7 +39703,7 @@ focus_tree = {
 		x = 1
 		y = 1
 		relative_position_id = GER_recall_the_hohenzollerns
-		cost = 5
+		cost = 6
 		completion_reward = {
 			
 		}
@@ -39751,7 +39740,7 @@ focus_tree = {
 	focus = {
 		id = GER_no_more_little_germany
 		icon = GFX
-		prerequisite = { focus = GER_greater_germany }
+		prerequisite = { focus = GER_greater_germany focus = GER_the_greater_germany_doctrine }
 
 		x = -1
 		y = 1
@@ -39779,7 +39768,7 @@ focus_tree = {
 	focus = {
 		id = GER_the_german_national_imperative
 		icon = GFX
-		prerequisite = { focus = GER_the_greater_germany_doctrine }
+		prerequisite = { focus = GER_the_greater_germany_doctrine focus = GER_greater_germany }
 
 		x = 1
 		y = 1
@@ -39793,7 +39782,7 @@ focus_tree = {
 	focus = {
 		id = GER_heirs_to_aachen
 		icon = GFX
-		prerequisite = { focus = GER_rehabilitate_the_imperial_colors }
+		prerequisite = { focus = GER_rehabilitate_the_imperial_colors focus = GER_reforge_the_bundstat }
 
 		x = -1
 		y = 1
@@ -39821,7 +39810,7 @@ focus_tree = {
 	focus = {
 		id = GER_revive_the_imperial_estates
 		icon = GFX
-		prerequisite = { focus = GER_reforge_the_bundstat }
+		prerequisite = { focus = GER_reforge_the_bundstat focus = GER_rehabilitate_the_imperial_colors }
 
 		x = 1
 		y = 1
@@ -39891,7 +39880,8 @@ focus_tree = {
 	focus = {
 		id = GER_a_realm_of_blood_and_steel
 		icon = GFX
-		prerequisite = { focus = GER_revive_the_prussian_tradition focus = GER_restore_the_officer_corps_prestige }
+		prerequisite = { focus = GER_revive_the_prussian_tradition }
+		prerequisite = { focus = GER_restore_the_officer_corps_prestige }
 
 		x = 1
 		y = 1
@@ -39905,7 +39895,8 @@ focus_tree = {
 	focus = {
 		id = GER_a_kaiser_for_all_germans
 		icon = GFX
-		prerequisite = { focus = GER_duties_of_the_free_cities focus = GER_against_centralized_tyranny }
+		prerequisite = { focus = GER_duties_of_the_free_cities }
+		prerequisite = { focus = GER_against_centralized_tyranny }
 
 		x = 1
 		y = 1
@@ -39919,11 +39910,13 @@ focus_tree = {
 	focus = {
 		id = GER_the_vienna_ultimatum
 		icon = GFX
-		prerequisite = { focus = GER_greater_germany }
-		prerequisite = { focus = GER_the_greater_germany_doctrine }
-		x = -4.5
-		y = 2
-		relative_position_id = GER_recall_the_hohenzollerns
+		prerequisite = { focus = GER_rule_by_decree }
+		x = -7
+		y = 1
+		relative_position_id = GER_rule_by_decree
+		available = {
+			has_completed_focus = GER_recall_the_hohenzollerns
+		}
 		cost = 5
 		completion_reward = {
 			
@@ -39989,12 +39982,13 @@ focus_tree = {
 	focus = {
 		id = GER_reclaim_the_austrian_crownlands
 		icon = GFX
-		prerequisite = { focus = GER_reforge_the_bundstat }
-		prerequisite = { focus = GER_rehabilitate_the_imperial_colors }
-
-		x = 7.5
-		y = 3
-		relative_position_id = GER_the_german_national_revival
+		prerequisite = { focus = GER_rule_by_decree }
+		available = {
+			has_completed_focus = GER_revive_the_reich_eternal
+		}
+		x = 7
+		y = 1
+		relative_position_id = GER_rule_by_decree
 		cost = 5
 		completion_reward = {
 			
@@ -40061,8 +40055,9 @@ focus_tree = {
 		id = GER_the_question_of_the_polish_corridor
 		icon = GFX
 		prerequisite = { focus = GER_crush_czech_particularism }
+		prerequisite = { focus = GER_protect_the_sudeten_germans }
 
-		x = 0
+		x = 1
 		y = 1
 		relative_position_id = GER_crush_czech_particularism
 		cost = 5
@@ -40074,11 +40069,11 @@ focus_tree = {
 	focus = {
 		id = GER_reclaim_afrika
 		icon = GFX
-		prerequisite = { focus = GER_protect_the_sudeten_germans }
+		prerequisite = { focus = GER_the_question_of_the_polish_corridor }
 
 		x = 0
 		y = 1
-		relative_position_id = GER_protect_the_sudeten_germans
+		relative_position_id = GER_the_question_of_the_polish_corridor
 		cost = 5
 		completion_reward = {
 			
@@ -40104,7 +40099,7 @@ focus_tree = {
 		icon = GFX
 		prerequisite = { focus = GER_the_question_of_the_polish_corridor }
 
-		x = 0
+		x = -2
 		y = 1
 		relative_position_id = GER_the_question_of_the_polish_corridor
 		cost = 5
@@ -40116,11 +40111,11 @@ focus_tree = {
 	focus = {
 		id = GER_strategic_security_of_the_rhine
 		icon = GFX
-		prerequisite = { focus = GER_reclaim_afrika }
+		prerequisite = { focus = GER_the_question_of_the_polish_corridor }
 
-		x = 0
+		x = 2
 		y = 1
-		relative_position_id = GER_reclaim_afrika
+		relative_position_id = GER_the_question_of_the_polish_corridor
 		cost = 5
 		completion_reward = {
 			
@@ -40158,9 +40153,11 @@ focus_tree = {
 	focus = {
 		id = GER_the_german_century
 		icon = GFX
-		prerequisite = { focus = GER_control_the_north_sea_coast focus = GER_strategic_security_of_the_rhine }
+		prerequisite = { focus = GER_control_the_north_sea_coast }
+		prerequisite = { focus = GER_strategic_security_of_the_rhine }
+		prerequisite = { focus = GER_reclaim_afrika }
 
-		x = 1
+		x = 2
 		y = 1
 		relative_position_id = GER_control_the_north_sea_coast
 		cost = 5
@@ -40214,7 +40211,8 @@ focus_tree = {
 	focus = {
 		id = GER_the_lombard_crown
 		icon = GFX
-		prerequisite = { focus = GER_the_banner_of_the_black_eagle focus = GER_the_italian_question }
+		prerequisite = { focus = GER_the_banner_of_the_black_eagle }
+		prerequisite = { focus = GER_the_italian_question }
 
 		x = 1
 		y = 1

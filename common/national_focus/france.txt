@@ -9466,7 +9466,7 @@
         x = 9
         y = 1
 		mutually_exclusive = {
-			focus = FRA_doriot_triumphs
+			focus = FRA_flames_of_saint_denis
 			focus = working_with_deat
 		}
         available = {
@@ -9530,8 +9530,8 @@
 		}
     }
     focus = {
-        id = way_of_warrior
-        icon = GFX_goal_way_of_warrior
+        id = FRA_citizen_patriots
+        icon = GFX_way_of_warrior
         x = 2
         y = 2
         prerequisite = { focus = transform_corporate_structure }
@@ -9594,11 +9594,11 @@
 		}
     }
     focus = {
-        id = united_in_spirit
-        icon = GFX_goal_FRA_united_in_spirit
+        id = FRA_nation_ready_for_battle
+        icon = GFX_FRA_united_in_spirit
         x = -3
-        y = 3
-        prerequisite = { focus = FRA_agrarian_auturky }
+        y = 4
+        prerequisite = { focus = FRA_milice_takeover }
         relative_position_id = FRA_patriots_in_control
         ai_will_do = {
 		    factor = 50
@@ -9634,7 +9634,7 @@
         icon = GFX_FRA_order_in_blood
         x = 3
         y = 3
-        prerequisite = { focus = way_of_warrior }
+        prerequisite = { focus = FRA_citizen_patriots }
         relative_position_id = FRA_patriots_in_control
         ai_will_do = {
 		    factor = 50
@@ -9648,11 +9648,10 @@
     }
     focus = {
         id = FRA_milice_takeover
-        icon = GFX_goal_france_for_french
+        icon = GFX_FRA_national_labor_front
         x = -3
-        y = 4
-        prerequisite = { focus = united_in_spirit }
-        prerequisite = { focus = FRA_legionary_workers_corps }
+        y = 3
+        prerequisite = { focus = FRA_agrarian_auturky }
         relative_position_id = FRA_patriots_in_control
         ai_will_do = {
 		    factor = 50
@@ -9669,11 +9668,10 @@
 		}
     }
     focus = {
-        id = FRA_national_labor_front
-        icon = GFX_goal_FRA_national_labor_front
+        id = FRA_supremacy_of_french_production
+        icon = GFX_france_for_french
         x = -1
         y = 4
-        prerequisite = { focus = united_in_spirit }
         prerequisite = { focus = FRA_legionary_workers_corps }
         relative_position_id = FRA_patriots_in_control
         ai_will_do = {
@@ -9693,7 +9691,6 @@
         icon = GFX_FRA_deal_with_church
         x = 1
         y = 4
-        prerequisite = { focus = oaths_of_loyalty }
         prerequisite = { focus = FRA_legionary_workers_corps }
         relative_position_id = FRA_patriots_in_control
         ai_will_do = {
@@ -9706,12 +9703,11 @@
 		}
     }
     focus = {
-        id = culture_war
-        icon = GFX_goal_culture_war
+        id = FRA_alien_citizen_registry
+        icon = GFX_culture_war
         x = 3
         y = 4
         prerequisite = { focus = loyalty_to_fff }
-        prerequisite = { focus = FRA_legionary_workers_corps }
         relative_position_id = FRA_patriots_in_control
         ai_will_do = {
 		    factor = 50
@@ -9733,10 +9729,10 @@
 			64 = { owns_or_subject_of = yes }
        		126 = { owns_or_subject_of = yes }
         }
-        prerequisite = { focus = FRA_milice_takeover }
-        prerequisite = { focus = FRA_national_labor_front }
+        prerequisite = { focus = FRA_nation_ready_for_battle }
+        prerequisite = { focus = FRA_supremacy_of_french_production }
         prerequisite = { focus = deal_with_the_church }
-        prerequisite = { focus = culture_war }
+        prerequisite = { focus = FRA_alien_citizen_registry }
         relative_position_id = FRA_patriots_in_control
         ai_will_do = {
 		    factor = 50
@@ -9755,8 +9751,8 @@
     }
 
 	focus = {
-        id = FRA_doriot_triumphs
-        icon = "GFX_goal_FRA_doriot_triumphs"
+        id = FRA_flames_of_saint_denis
+        icon = "GFX_goal_FRA_flames_of_saint_denis"
         x = 0
         y = 1
 		mutually_exclusive = {
@@ -9781,6 +9777,82 @@
 			add_political_power = 100
 		}
 	}
+	
+	focus = {
+        id = FRA_new_french_vanguard
+        icon = GFX_goal_eternal_struggle
+        x = -1
+        y = 1
+        prerequisite = { focus = FRA_flames_of_saint_denis }
+        relative_position_id = FRA_flames_of_saint_denis
+        ai_will_do = {
+		    factor = 50
+		}
+		cost = 8
+        completion_reward = {
+		}
+	}
+		
+	focus = {
+        id = FRA_mass_meetings_of_ppf
+        icon = GFX_goal_eternal_struggle
+        x = 2
+        y = 2
+        prerequisite = { focus = FRA_national_labor_front }
+        relative_position_id = FRA_flames_of_saint_denis
+        ai_will_do = {
+		    factor = 50
+		}
+		cost = 8
+        completion_reward = {
+		}
+	}
+	
+	focus = {
+        id = FRA_street_veterans
+        icon = GFX_goal_eternal_struggle
+        x = -2
+        y = 2
+        prerequisite = { focus = FRA_new_french_vanguard }
+        relative_position_id = FRA_flames_of_saint_denis
+        ai_will_do = {
+		    factor = 50
+		}
+		cost = 8
+        completion_reward = {
+		}
+	}
+		
+	focus = {
+        id = FRA_syndicalism_of_patriots
+        icon = GFX_goal_eternal_struggle
+        x = 0
+        y = 2
+        prerequisite = { focus = FRA_new_french_vanguard focus = FRA_national_labor_front }
+        relative_position_id = FRA_flames_of_saint_denis
+        ai_will_do = {
+		    factor = 50
+		}
+		cost = 8
+        completion_reward = {
+		}
+	}
+		
+	focus = {
+        id = FRA_national_labor_front
+        icon = GFX_goal_eternal_struggle
+        x = 1
+        y = 1
+        prerequisite = { focus = FRA_flames_of_saint_denis }
+        relative_position_id = FRA_flames_of_saint_denis
+        ai_will_do = {
+		    factor = 50
+		}
+		cost = 8
+        completion_reward = {
+		}
+	}
+	
 	focus = {
         id = rousing_speeches ### FIX ALL THIS SHITTY 2022 IMPERIAL ECLIPSE CODE
         x = -18
@@ -9875,7 +9947,7 @@
 			}
         }
 		mutually_exclusive = {
-			focus = FRA_doriot_triumphs
+			focus = FRA_flames_of_saint_denis
 			focus = FRA_patriots_in_control
 		}
         prerequisite = { focus = FRA_duel_of_fates }
@@ -10103,7 +10175,6 @@
         y = 4
         prerequisite = { focus = scientific_revolution }
         prerequisite = { focus = planisme }
-        prerequisite = { focus = white_brotherhood}
         relative_position_id = working_with_deat
         ai_will_do = {
 		    factor = 50
@@ -10143,8 +10214,7 @@
         x = 0
         y = 4
         prerequisite = { focus = white_brotherhood }
-        prerequisite = { focus = planisme }
-        prerequisite = { focus = entrench_party_state } 
+        prerequisite = { focus = planisme focus = entrench_party_state }
         relative_position_id = working_with_deat
         ai_will_do = {
 		    factor = 50
@@ -10160,7 +10230,6 @@
         icon = GFX_goal_FRA_constructive_revolution
         x = -3
         y = 4
-        prerequisite = { focus = white_brotherhood }
         prerequisite = { focus = a_dark_enlightenment }
         prerequisite = { focus = entrench_party_state } 
         relative_position_id = working_with_deat

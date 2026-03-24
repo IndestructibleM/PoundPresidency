@@ -5,3 +5,14 @@ econ_production_effect = {
 	industrial_capacity_factory = AmountOfCoal #FROM.resource@coal
 	production_cost_arms_factory_factor = NumberOfMilsBuilt #FROM.total_constructed_arms_factory
 }
+
+USA_military_industrial_complex = {
+	enable = { always = yes }
+	desc = econ_production_effect_desc
+	icon = GFX_idea_generic_improved_industries
+	production_speed_arms_factory_factor = 0.15
+	production_speed_dockyard_factor = 0.15
+	factory_energy_consumption = 0.05
+	political_power_cost = 0.10
+	war_stability_factor = 0.0
+}

@@ -1,4 +1,21 @@
 Vanillaredux_GCW_cat = {
+	Push_against_nazi_ger = {
+
+		available = {
+			has_war = yes
+		}
+		cost = 40
+		targeted_modifier = {
+			target = D04
+			attack_bonus_against = 0.15
+			breakthrough_bonus_against = 0.1
+			defense_bonus_against = -0.1
+		}
+
+ 		complete_effect = {
+ 			
+ 		}
+ 	}
 }
 
 operations = {

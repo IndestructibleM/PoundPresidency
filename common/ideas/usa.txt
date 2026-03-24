@@ -1,6 +1,75 @@
 ideas = {
 
 	country = {
+		
+		USA_status_of_army = {
+			picture = generic_army_problems
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				conscription_factor = -0.5
+				army_org_factor = -0.15
+				planning_speed = -0.2
+				experience_gain_army_factor = -0.35
+				command_power_gain_mult = -0.25
+			}
+		}
+		
+		USA_status_of_army2 = {
+			picture = generic_army_problems
+			name = USA_status_of_army
+			desc = USA_status_of_army_desc
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				conscription_factor = -0.35
+				army_org_factor = -0.1
+				planning_speed = -0.15
+				experience_gain_army_factor = -0.25
+				command_power_gain_mult = -0.20
+			}
+		}
+		
+		USA_status_of_army3 = {
+			picture = generic_army_problems
+			name = USA_status_of_army
+			desc = USA_status_of_army_desc
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				conscription_factor = -0.2
+				army_org_factor = -0.05
+				planning_speed = -0.075
+				experience_gain_army_factor = -0.15
+				command_power_gain_mult = -0.15
+			}
+		}
+
 		great_depression = {
 			picture = usa_great_depression_3
 			
@@ -17,11 +86,10 @@ ideas = {
 			modifier = {
 				political_power_cost = 1
 				consumer_goods_factor = 0.65
-				conscription_factor = -0.5
 				join_faction_tension = 0.20
 				local_resources_factor = -0.20
-				industrial_capacity_factory = -0.15
-				industrial_capacity_dockyard = -0.15
+				industrial_capacity_factory = -0.2
+				industrial_capacity_dockyard = -0.2
 			}
 		}
 		great_depression_2 = {
@@ -40,11 +108,10 @@ ideas = {
 			modifier = {
 				political_power_cost = 0.70
 				consumer_goods_factor = 0.5
-				conscription_factor = -0.35
 				join_faction_tension = 0.15
 				local_resources_factor = -0.15
-				industrial_capacity_factory = -0.1
-				industrial_capacity_dockyard = -0.1
+				industrial_capacity_factory = -0.125
+				industrial_capacity_dockyard = -0.125
 			}
 		}
 		great_depression_3 = {
@@ -63,7 +130,6 @@ ideas = {
 			modifier = {
 				political_power_cost = 0.45
 				consumer_goods_factor = 0.35
-				conscription_factor = -0.25
 				join_faction_tension = 0.20
 				local_resources_factor = -0.1
 				industrial_capacity_factory = -0.075
@@ -87,7 +153,6 @@ ideas = {
 			modifier = {
 				political_power_cost = 0.20
 				consumer_goods_factor = 0.2
-				conscription_factor = -0.15
 				join_faction_tension = 0.20
 				local_resources_factor = -0.05
 				industrial_capacity_factory = -0.05

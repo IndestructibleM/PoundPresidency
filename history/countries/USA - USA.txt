@@ -116,26 +116,7 @@ if = {
 	}
 	add_ideas = bureau_of_ordnance_spirit
 }
-
-if = {
-	limit = { not = { has_dlc = "Man the Guns" } }
-	set_technology = {
-		early_submarine = 1
-		basic_submarine = 1
-		early_destroyer = 1
-		early_light_cruiser = 1
-		basic_light_cruiser = 1
-		early_heavy_cruiser = 1
-		early_battleship = 1
-		early_battlecruiser = 1
-		early_carrier = 1
-		basic_carrier = 1
-		transport = 1
-	}
-}
-if = {
-	limit = { has_dlc = "Man the Guns" }
-	set_technology = {
+set_technology = {
 		basic_naval_mines = 1
 		submarine_mine_laying = 1
 		early_ship_hull_light = 1
@@ -160,8 +141,6 @@ if = {
 		#improved_airplane_launcher = 1
 		basic_dp_light_battery = 1
 	}
-	add_ideas = MTG_naval_treaty_adherent
-}
 ##Monroe Doctrine - We are trying to just remove the dlc check and see what, if any, things break. Will ask QA and BETAs to test new system both with and without ToA
 #IF = {
 #	limit = { has_dlc = "Trial of Allegiance" }
@@ -233,12 +212,15 @@ set_popularities = {
 }
 
 add_ideas = {
-	undisturbed_isolation
-	great_depression
-	disarmed_nation
-	free_trade
+	great_depression	
+	USA_status_of_army
 	home_of_the_free
+	MTG_naval_treaty_adherent
 	USA_rise_of_pound
+
+	disarmed_nation
+	undisturbed_isolation
+	free_trade
 }
 
 

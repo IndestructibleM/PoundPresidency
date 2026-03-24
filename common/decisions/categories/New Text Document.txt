@@ -8,17 +8,12 @@ Vanillaredux_decisions_cat = {
 }
 
 Vanillaredux_GCW_cat = {
-    visible = {
+    allowed = {
         OR = {
             original_tag = GER
             tag = RHI
             tag = WGR
-        }
-        OR = {
-            has_war_with = GER
-            has_war_with = RHI
-            has_war_with = WGR
-            has_war_with = SIL
+            tag = D04
         }
     }
 }
