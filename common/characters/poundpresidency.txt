@@ -151,6 +151,27 @@ characters = {
 		}
 	}
 	
+	USA_george_sutherland = {
+		name = "George Sutherland"
+		portraits = {
+			civilian = {
+				small = "gfx/interface/advisors/USA/USA_george_sutherland.png"
+			}
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = USA_george_sutherland_advisor
+			can_be_fired = no
+			traits = { conservative_judge }
+			available = {
+				OR = {
+					has_government = democratic
+					has_government = conservative
+				}
+			}
+		}
+	}
+	
 	USA_revilo_oliver = {
 		name = "Revilo P. Oliver"
 		portraits = {

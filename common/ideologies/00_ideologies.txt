@@ -81,7 +81,7 @@ ideologies = {
 
 			absolute_monarchy = {}
 			christian_nationalism = {}
-
+			reactionary_junta = {}
 		}
 
 		dynamic_faction_names = {

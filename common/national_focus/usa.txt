@@ -662,6 +662,18 @@ focus_tree = {
 		available_if_capitulated = no
 		search_filters = {FOCUS_FILTER_POLITICAL}
 		completion_reward = {
+			start_civil_war = {
+				ideology = reactionary
+				size = 0.25
+				capital = 365
+				states = {
+					365 367 364 370 366 1690 1691 1692 1689
+				}
+				keep_political_leader = yes
+				keep_political_party_members = yes
+				recruit_character = USA_charles_lindbergh
+				promote_character = USA_charles_lindbergh
+			}
 		}
 	}
 	
@@ -2344,7 +2356,7 @@ focus_tree = {
 		available_if_capitulated = no
 		search_filters = {FOCUS_FILTER_POLITICAL}
 		completion_reward = {
-			upgrade_taxation_law = yes
+			USA_great_depression_level_down = yes
 		}
 	}
 	
@@ -2372,6 +2384,7 @@ focus_tree = {
 		search_filters = {FOCUS_FILTER_POLITICAL}
 		completion_reward = {
 			upgrade_labor_law = yes
+			activate_mission = USA_fair_labor_standards_act_dec
 		}
 	}
 
@@ -2399,7 +2412,7 @@ focus_tree = {
 		search_filters = {FOCUS_FILTER_POLITICAL}
 		completion_reward = {
 			activate_mission = USA_social_security_act_dec
-			USA_great_depression_level_down = yes
+			upgrade_taxation_law = yes
 		}
 	}
 
@@ -2426,6 +2439,8 @@ focus_tree = {
 		available_if_capitulated = no
 		search_filters = {FOCUS_FILTER_POLITICAL}
 		completion_reward = {
+			add_stability = 0.05
+
 		}
 	}
 
@@ -2453,6 +2468,7 @@ focus_tree = {
 		search_filters = {FOCUS_FILTER_POLITICAL}
 		completion_reward = {
 			USA_great_depression_level_down = yes
+			activate_mission = USA_united_states_housing_act_dec
 		}
 	}
 
@@ -2479,6 +2495,7 @@ focus_tree = {
 		available_if_capitulated = no
 		search_filters = {FOCUS_FILTER_POLITICAL}
 		completion_reward = {
+			add_ideas = USA_farm_security_administration_idea
 		}
 	}
 	
@@ -2516,8 +2533,8 @@ focus_tree = {
 	}
 	
 	focus = {
-		id = USA_judicial_reform_proposal
-		icon = GFX_focus_generic_court
+		id = USA_bonneville_power_administration
+		icon = GFX_focus_generic_electrification
 		x = -2
 		y = 5
 		relative_position_id = USA_continue_the_new_deal
@@ -2539,12 +2556,50 @@ focus_tree = {
 		available_if_capitulated = no
 		search_filters = {FOCUS_FILTER_POLITICAL}
 		completion_reward = {
+			add_tech_bonus = {
+				category = electronics 
+				uses = 2
+				bonus = 0.5
+			}
+			386 = {
+				add_building_construction = {
+					type = energy_infrastructure
+					level = 1
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = dam
+					level = 1
+					instant_build = yes
+				}
+			}
+			378 = {
+				add_building_construction = {
+					type = energy_infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			1561 = {
+				add_building_construction = {
+					type = energy_infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			1167 = {
+				add_building_construction = {
+					type = energy_infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
 		}
 	}
 	
 	focus = {
 		id = USA_the_reorganization_act
-		icon = GFX_focus_CHI_demonstrate_our_resolve
+		icon = GFX_focus_generic_court
 		x = 0
 		y = 5
 		relative_position_id = USA_continue_the_new_deal
@@ -2556,7 +2611,8 @@ focus_tree = {
 			factor = 1
 		}
 		available = {
-
+			democratic > 0.60
+			congress_high_support_trigger = yes
 		}
 		
 
@@ -2565,6 +2621,8 @@ focus_tree = {
 		available_if_capitulated = no
 		search_filters = {FOCUS_FILTER_POLITICAL}
 		completion_reward = {
+			retire_character = USA_george_sutherland
+			custom_effect_tooltip = ToDo
 		}
 	}
 
@@ -2677,6 +2735,9 @@ focus_tree = {
 		available_if_capitulated = no
 		search_filters = {FOCUS_FILTER_POLITICAL}
 		completion_reward = {
+			add_stability = 0.1
+			add_war_support = 0.05
+			add_political_power = 60
 		}
 	}
 	

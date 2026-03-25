@@ -40,6 +40,108 @@ USA_congress = {
 			USA_house_small_opposition = yes
 		}
 	}
+	USA_fair_labor_standards_act_dec = {
+		name = USA_fair_labor_standards_act
+		fire_only_once = yes
+		activation = {
+			tag = USA
+			has_completed_focus = USA_fair_labor_standards_act
+			always = no
+		}
+		priority = 99
+		days_mission_timeout = 120
+		is_good = yes
+		selectable_mission = yes
+		available = { 
+			congress_high_support_trigger = yes
+			has_decision = USA_hold_congress_session
+		}
+		icon = GFX_decision_eng_trade_unions_support
+		ai_will_do = {
+			factor = 100
+		}
+		complete_effect = { 
+			if = {
+				limit = {
+					OR = {
+					has_idea = labor1
+					has_idea = labor2
+					}
+				}
+				add_ideas = labor3
+			}
+			else = {
+				upgrade_labor_law = yes
+			}
+			
+			add_popularity = { ideology = democratic  popularity = 0.1 }
+		}
+		timeout_effect = {
+			USA_senate_small_opposition = yes
+			USA_house_small_opposition = yes
+		}
+	}
+
+	USA_united_states_housing_act_dec = {
+		name = USA_united_states_housing_act
+		fire_only_once = yes
+		activation = {
+			tag = USA
+			has_completed_focus = USA_united_states_housing_act
+			always = no
+		}
+		priority = 99
+		days_mission_timeout = 120
+		is_good = yes
+		selectable_mission = yes
+		available = { 
+			congress_high_support_trigger = yes
+			has_decision = USA_hold_congress_session
+		}
+		icon = GFX_decision_eng_trade_unions_support
+		ai_will_do = {
+			factor = 100
+		}
+		complete_effect = { 
+			custom_effect_tooltip = ToDo
+			add_popularity = { ideology = democratic  popularity = 0.1 }
+		}
+		timeout_effect = {
+			USA_senate_small_opposition = yes
+			USA_house_small_opposition = yes
+		}
+	}
+
+	USA_the_reorganization_act_dec = {
+		name = USA_united_states_housing_act
+		fire_only_once = yes
+		activation = {
+			tag = USA
+			has_completed_focus = USA_the_reorganization_act
+			always = no
+		}
+		priority = 99
+		days_mission_timeout = 120
+		is_good = yes
+		selectable_mission = yes
+		available = { 
+			congress_high_support_trigger = yes
+			has_decision = USA_hold_congress_session
+		}
+		icon = GFX_decision_eng_trade_unions_support
+		ai_will_do = {
+			factor = 100
+		}
+		complete_effect = { 
+			custom_effect_tooltip = ToDo
+			add_popularity = { ideology = democratic  popularity = 0.1 }
+		}
+		timeout_effect = {
+			USA_senate_small_opposition = yes
+			USA_house_small_opposition = yes
+		}
+	}
+
 	USA_small_lobby_effort = {
 		icon = generic_political_discourse
 		available = {

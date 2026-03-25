@@ -313,6 +313,8 @@ recruit_character = USA_john_walter_christie
 recruit_character = USA_vannevar_bush
 
 
+recruit_character = USA_george_sutherland
+activate_advisor = USA_george_sutherland_advisor
 recruit_character = USA_richard_child
 recruit_character = USA_howard_scott
 recruit_character = USA_francis_yockey
