@@ -1,0 +1,275 @@
+on_actions = {
+	# ROOT is capitulated country, FROM is winner
+	on_capitulation_immediate = {
+
+		effect = { #if china capitulate on the corpo 
+			IF = {
+				limit = {
+					CHI = {
+						has_war_with = RAJ
+						has_war_with = JAP
+					}
+					RAJ = {
+						has_country_flag = corpo_deal_jap
+					}
+				}
+
+            RAJ = {
+                release_autonomy = {
+                    target = ICS
+                    autonomy_state = autonomy_integrated_puppet
+                    freedom_level = 0.5
+                }
+            }
+
+
+            ICS = {
+				transfer_state = 325
+				transfer_state = 747
+
+				add_state_core = 325
+				add_state_core = 747
+
+                set_politics = { ruling_party = neutrality }
+                create_country_leader = {
+                    name = "Conseil d'administration"
+                    desc = ""
+                    picture = "gfx/leaders/RAJ/portrait_RAJ_the_board_of_directors.dds"
+                    expire = "1965.1.1"
+                    ideology = "oligarchism"
+                    traits = { }
+                }
+            }
+            RAJ = {
+                release_autonomy = {
+                    target = HDS
+                    autonomy_state = autonomy_integrated_puppet
+                    freedom_level = 0.5
+                }
+            }
+
+
+            HDS = {
+				transfer_state = 322
+				transfer_state = 758
+				transfer_state = 604
+				transfer_state = 601
+				transfer_state = 757
+
+				add_state_core = 322
+				add_state_core = 758
+				add_state_core = 604
+				add_state_core = 601
+				add_state_core = 757
+
+                set_politics = { ruling_party = neutrality }
+                create_country_leader = {
+                    name = "Conseil d'administration"
+                    desc = ""
+                    picture = "gfx/leaders/RAJ/portrait_RAJ_the_board_of_directors.dds"
+                    expire = "1965.1.1"
+                    ideology = "oligarchism"
+                    traits = { }
+                }
+            }
+            RAJ = {
+                release_autonomy = {
+                    target = WSI
+                    autonomy_state = autonomy_integrated_puppet
+                    freedom_level = 0.5
+                }
+            }
+
+
+            WSI = {
+				transfer_state = 1042
+				transfer_state = 619
+				transfer_state = 617
+				transfer_state = 618
+				transfer_state = 760
+				transfer_state = 759
+				transfer_state = 287
+
+				add_state_core = 1042
+				add_state_core = 619
+				add_state_core = 617
+				add_state_core = 618
+				add_state_core = 760
+				add_state_core = 759
+				add_state_core = 287
+
+                set_politics = { ruling_party = neutrality }
+                create_country_leader = {
+                    name = "Conseil d'administration"
+                    desc = ""
+                    picture = "gfx/leaders/RAJ/portrait_RAJ_the_board_of_directors.dds"
+                    expire = "1965.1.1"
+                    ideology = "oligarchism"
+                    traits = { }
+                }
+            }
+            RAJ = {
+                release_autonomy = {
+                    target = ECP
+                    autonomy_state = autonomy_integrated_puppet
+                    freedom_level = 0.5
+                }
+            }
+
+
+            ECP = {
+                set_capital = {
+                    state = 1037
+                    remember_old_capital = no
+                }
+				transfer_state = 755
+				transfer_state = 756
+				transfer_state = 1040
+				transfer_state = 616
+				transfer_state = 754
+				transfer_state = 1044
+				transfer_state = 752
+				transfer_state = 753
+				transfer_state = 283
+				transfer_state = 1045
+				transfer_state = 622
+				transfer_state = 1046
+				transfer_state = 1032
+				transfer_state = 744
+				transfer_state = 605
+				transfer_state = 1041
+				transfer_state = 1037
+				transfer_state = 751
+
+
+				add_state_core = 755
+				add_state_core = 756
+				add_state_core = 1040
+				add_state_core = 616
+				add_state_core = 754
+				add_state_core = 1044
+				add_state_core = 752
+				add_state_core = 753
+				add_state_core = 283
+				add_state_core = 1045
+				add_state_core = 622
+				add_state_core = 1046
+				add_state_core = 1032
+				add_state_core = 744
+				add_state_core = 605
+				add_state_core = 1041
+				add_state_core = 1037
+				add_state_core = 751
+
+                set_politics = { ruling_party = neutrality }
+                create_country_leader = {
+                    name = "Conseil d'administration"
+                    desc = ""
+                    picture = "gfx/leaders/RAJ/portrait_RAJ_the_board_of_directors.dds"
+                    expire = "1965.1.1"
+                    ideology = "oligarchism"
+                    traits = { }
+                }
+            }
+			MEN = {
+			
+				transfer_state = 1043
+				transfer_state = 621
+				transfer_state = 746
+
+				add_state_core = 1043
+				add_state_core = 621
+				add_state_core = 746
+	
+			}
+			CHI = {
+            white_peace = JAP
+            white_peace = RAJ
+				annex_country = { target = GDC transfer_troops = no }
+				annex_country = { target = GDC transfer_troops = no }
+				annex_country = { target = SHX transfer_troops = no }
+				annex_country = { target = SND transfer_troops = no }
+				annex_country = { target = HBC transfer_troops = no }
+				annex_country = { target = GXC transfer_troops = no }
+			}
+			RNG = {
+				annex_country = { target = CHI transfer_troops = no }
+			}
+			JAP = {	
+			set_autonomy = {
+				target = RNG
+				autonomous_state = autonomy_wtt_imperial_protectorate
+				end_wars = no
+				end_civil_wars = no
+			}
+			}
+			}
+		}
+
+
+###########################################################
+
+		effect = { #if siam capitulate on the corpo 
+			IF = {
+				limit = {
+					SIA = {
+						has_civil_war = yes
+					}
+						994 = { 
+							is_capital = yes
+						}
+					SIA = {
+						has_country_flag = corpo_merc_invasion
+					}
+				}
+
+
+            RAJ = {
+				transfer_state = 999
+				transfer_state = 994
+				transfer_state = 993
+				transfer_state = 724
+				transfer_state = 869
+				transfer_state = 289
+				transfer_state = 868
+                country_event = { id = RAJ_guerre_opium.16 days = 0 }
+                
+                release_autonomy = {
+                    target = ICS
+                    autonomy_state = autonomy_integrated_puppet
+                    freedom_level = 0.5
+                }
+            }
+
+            ICS = {
+				transfer_state = 999
+				transfer_state = 994
+				transfer_state = 993
+				transfer_state = 724
+				transfer_state = 869
+				transfer_state = 289
+				transfer_state = 868
+
+				add_state_core = 999
+				add_state_core = 994
+				add_state_core = 993
+				add_state_core = 724
+				add_state_core = 869
+				add_state_core = 289
+				add_state_core = 868
+
+                set_politics = { ruling_party = neutrality }
+                create_country_leader = {
+                    name = "Conseil d'administration"
+                    desc = ""
+                    picture = "gfx/leaders/RAJ/portrait_RAJ_the_board_of_directors.dds"
+                    expire = "1965.1.1"
+                    ideology = "oligarchism"
+                    traits = { }
+                }
+            }
+			}
+		}
+###########################################################	
+	}
+}

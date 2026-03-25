@@ -1,0 +1,366 @@
+add_namespace = RAJ_inde_unification
+#Idk if I keep this path or maybe a rework
+country_event = {
+    id = RAJ_inde_unification.1  # leader assasinat
+    title = RAJ_inde_unification.1.t
+    desc = RAJ_inde_unification.1.desc
+    picture = GFX_report_event_generic_strike
+
+    is_triggered_only = yes
+
+    option = {
+        name = RAJ_inde_unification.1.a
+        ai_chance = { base = 1 }
+
+	trigger = {
+            has_country_flag = WR_mass_unrest
+            has_idea = WR_corruption_forte
+	}
+
+            add_ideas = leader_assassine  
+            kill_country_leader
+            hidden_effect = {
+            set_country_flag = WR_leader_kaput
+			RAJ = {
+            country_event = { id = RAJ_inde_unification.6 days = 0 }
+	}
+            }
+    }
+    
+}
+
+
+
+country_event = {
+    id = RAJ_inde_unification.2  # big corruption warlord
+    title = RAJ_inde_unification.2.t
+    desc = RAJ_inde_unification.2.desc
+    picture = GFX_report_event_generic_strike
+
+    is_triggered_only = yes
+
+    option = {
+        name = RAJ_inde_unification.2.a
+        ai_chance = { base = 1 }
+            add_political_power = -10
+            add_ideas =   WR_corruption_forte
+            Remove_ideas =   WR_corruption_faible
+    hidden = {
+			RAJ = {
+            country_event = { id = RAJ_inde_unification.10 days = 0 }
+	}
+        
+    }
+    }
+}
+
+
+
+country_event = { #EIC ask to be their puppet
+	id = RAJ_inde_unification.3
+	title = RAJ_inde_unification.3.t
+	desc = RAJ_inde_unification.3.desc
+	picture = GFX_report_event_worker_protests
+	is_triggered_only = yes
+
+	option = { #puppet
+		name = RAJ_inde_unification.3.a
+		ai_chance = {
+			base = 10
+		}
+	trigger = {
+		has_idea = WR_corruption_forte
+        not = {has_country_flag = WR_leader_kaput}
+	}
+        RAJ ={   
+        puppet = {
+    target = PREV
+}
+        }
+        ROOT = {
+            set_cosmetic_tag = EIC_puppet_tag
+        }
+			RAJ = {
+            country_event = { id = RAJ_inde_unification.4 days = 0 }
+    hidden_effect = {
+            clr_country_flag = WR_infiltration_complete
+			clr_country_flag = WR_corompu	
+            clr_country_flag = WR_corompu_2
+            clr_country_flag = WR_destabiliser
+            set_country_flag = WR_puppet
+        
+    }
+	}
+	}
+
+
+
+
+
+	option = { #puppet
+		name = RAJ_inde_unification.3.b
+		ai_chance = {
+			base = 10
+		}
+	trigger = {
+            has_country_flag = WR_leader_kaput
+            has_country_flag = WR_mass_unrest
+	}
+        RAJ ={   
+        puppet = {
+    target = PREV
+}
+        }
+			RAJ = {
+            country_event = { id = RAJ_inde_unification.4 days = 0 }
+	}
+    hidden_effect = {
+            clr_country_flag = WR_infiltration_complete
+			clr_country_flag = WR_corompu	
+            clr_country_flag = WR_corompu_2
+            clr_country_flag = WR_destabiliser
+            set_country_flag = WR_puppet
+        
+    }
+	}
+
+
+
+
+
+
+	option = { #No
+		name = RAJ_inde_unification.3.c
+		ai_chance = {
+			base = 0.3
+		}
+	trigger = {
+	}
+    
+    RAJ = { create_wargoal = { type = annex_everything target = PREV } }
+			RAJ = {
+            country_event = { id = RAJ_inde_unification.5 days = 0 }
+	}
+	}
+}
+
+
+
+
+
+country_event = {
+    id = RAJ_inde_unification.4  # warlord has became our puppet
+    title = RAJ_inde_unification.4.t
+    desc = RAJ_inde_unification.4.desc
+    picture = GFX_report_event_generic_strike
+
+    is_triggered_only = yes
+
+    option = {
+        name = RAJ_inde_unification.4.a
+        ai_chance = { base = 1 }
+
+            hidden_effect = {
+            }
+    }
+}
+
+
+country_event = {
+    id = RAJ_inde_unification.5  # war goal against warlord
+    title = RAJ_inde_unification.5.t
+    desc = RAJ_inde_unification.5.desc
+    picture = GFX_report_event_generic_strike
+
+    is_triggered_only = yes
+
+    option = {
+        name = RAJ_inde_unification.5.a
+        ai_chance = { base = 1 }
+
+    hidden_effect = {
+            clr_country_flag = WR_infiltration_complete
+			clr_country_flag = WR_corompu	
+            clr_country_flag = WR_corompu_2
+            clr_country_flag = WR_destabiliser
+        
+    }
+    }
+}
+
+
+
+country_event = {
+    id = RAJ_inde_unification.6  # WR leader Kaput
+    title = RAJ_inde_unification.6.t
+    desc = RAJ_inde_unification.6.desc
+    picture = GFX_report_event_generic_strike
+
+    is_triggered_only = yes
+
+    option = {
+        name = RAJ_inde_unification.2.a
+        ai_chance = { base = 1 }
+            add_political_power = 25
+    }
+}
+
+
+
+
+country_event = {
+    id = RAJ_inde_unification.7  # WR leader not Kaput
+    title = RAJ_inde_unification.7.t
+    desc = RAJ_inde_unification.7.desc
+    picture = GFX_report_event_generic_strike
+
+    is_triggered_only = yes
+
+    option = {
+        name = RAJ_inde_unification.7.a
+        ai_chance = { base = 1 }
+            add_political_power = -25
+    }
+}
+
+#coruption
+
+country_event = {
+    id = RAJ_inde_unification.8  # coruption 1
+    title = RAJ_inde_unification.8.t
+    desc = RAJ_inde_unification.8.desc
+    picture = GFX_report_event_generic_strike
+
+    is_triggered_only = yes
+
+    option = {
+        name = RAJ_inde_unification.8.a
+        ai_chance = { base = 1 }
+            add_ideas = WR_corruption_faible  
+    hidden_effect = {
+			RAJ = {
+            country_event = { id = RAJ_inde_unification.10 days = 0 }
+	}
+        
+    }
+    }
+}
+country_event = {
+    id = RAJ_inde_unification.9  # coruption fail
+    title = RAJ_inde_unification.9.t
+    desc = RAJ_inde_unification.9.desc
+    picture = GFX_report_event_generic_strike
+
+    is_triggered_only = yes
+
+    option = {
+        name = RAJ_inde_unification.9.a
+        ai_chance = { base = 1 }
+            add_political_power = -25
+    }
+}
+country_event = {
+    id = RAJ_inde_unification.10  # coruption success
+    title = RAJ_inde_unification.10.t
+    desc = RAJ_inde_unification.10.desc
+    picture = GFX_report_event_generic_strike
+
+    is_triggered_only = yes
+
+    option = {
+        name = RAJ_inde_unification.10.a
+        ai_chance = { base = 1 }
+            add_political_power = 25
+    }
+}
+
+country_event = { #take rangoun ? (not sure to keep it?)
+    id = RAJ_inde_unification.11
+    title = RAJ_inde_unification.11.t
+    desc = RAJ_inde_unification.11.desc
+    picture = GFX_report_event_generic_strike
+
+    trigger = {
+        tag = RAJ
+        OR = {
+        controls_state = 997
+        controls_state = 288
+        controls_state = 640
+        controls_state = 998
+        has_subject = BRM
+        }
+
+        NOT = { has_subject = IDS }
+    }
+
+    mean_time_to_happen = {
+        days = 1
+    }
+
+    option = {
+        name = RAJ_inde_unification.11.a # we don't take
+        ai_chance = { base = 100 }
+
+        effect = {
+            add_political_power = -1
+        }
+    }
+
+    option = {
+        name = RAJ_inde_unification.11.b # we take
+        ai_chance = { base = 0 }
+
+        effect = {
+            release_autonomy = {
+                target = IDS
+                autonomy_state = autonomy_integrated_puppet
+                freedom_level = 0.5
+            }
+
+            IDS = {
+                transfer_state = 995
+                transfer_state = 996
+
+                add_state_core = 995
+                add_state_core = 996
+
+                set_politics = { ruling_party = neutrality }
+
+                create_country_leader = {
+                    name = "Conseil d'administration"
+                    desc = ""
+                    picture = "gfx/leaders/RAJ/portrait_RAJ_the_board_of_directors.dds"
+                    expire = "1965.1.1"
+                    ideology = oligarchism
+                    traits = { }
+                }
+            }
+
+            ENG = {
+                country_event = { id = RAJ_inde_unification.12 days = 0 }
+            }
+        }
+    }
+}
+
+
+
+country_event = {
+    id = RAJ_inde_unification.12  # EIC has took Rangoun
+    title = RAJ_inde_unification.12.t
+    desc = RAJ_inde_unification.12.desc
+    picture = GFX_report_event_generic_strike
+
+    is_triggered_only = yes
+
+    option = {
+        name = RAJ_inde_unification.12.a #We Will remember this
+        ai_chance = { base = 1 }
+            add_political_power = -10
+        hidden_effect = {
+            ENG = {
+            set_country_flag =  eic_a_prit_rangun
+            }
+        }
+    }
+}

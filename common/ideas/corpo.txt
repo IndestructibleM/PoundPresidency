@@ -1,0 +1,541 @@
+ideas = {
+	country = {
+
+    RAJ_corporate_influenced_warlord = {
+
+        icon = GFX_idea_generic_opium_trade
+
+        removal_cost = -1
+        
+        modifier = {
+
+            # Corruption militaire
+            army_organization_factor = -0.10
+            division_attack_factor = -0.05
+            division_defense_factor = -0.05
+
+            # Instabilité politique
+            stability_factor = -0.10
+            political_power_gain = -0.05
+
+            # Influence économique de la compagnie
+            consumer_goods_factor = -0.05
+            trade_opinion_factor = 0.10
+
+            # Résistance à l'autorité centrale
+            compliance_growth = 0.05
+
+        }
+    }
+
+
+
+        
+afg_opium_export_economy = {
+
+    picture = GFX_idea_trade
+
+    allowed = { always = yes }
+    removal_cost = -1
+
+    modifier = {
+
+        # Boom commercial
+        trade_opinion_factor = 0.25
+        resources_to_market = 0.30
+        consumer_goods_factor = -0.10
+
+        # Argent facile mais instable
+        political_power_gain = 0.05
+
+        # Économie déséquilibrée
+        industrial_capacity_factory = -0.15
+        production_speed_industrial_complex_factor = -0.20
+        construction_speed_factor = -0.10
+
+        # Instabilité sociale
+        stability_factor = -0.05
+    }
+}
+
+
+raj_engineered_migration_crisis = {
+
+    picture = GFX_idea_generic_political_pressure
+
+    allowed = { always = yes }
+    removal_cost = -1
+
+    modifier = {
+        monthly_population = -0.05
+    }
+}
+
+tibet_migration_crisis = {
+
+    picture = GFX_idea_generic_political_pressure
+
+    allowed = { always = yes }
+    removal_cost = -1
+
+    modifier = {
+        monthly_population = 0.05
+        stability_factor = -0.1
+    }
+}
+
+investments_in_india = {
+
+    picture = GFX_idea_trade
+
+    allowed = { always = yes }
+    removal_cost = -1
+
+    modifier = {
+        industrial_capacity_factory = 0.05
+        production_efficiency_gain_factor = 0.05
+        trade_opinion_factor = 0.10
+        political_power_factor = 0.05
+    }
+}
+
+raj_usine_du_monde_4 = {
+
+    picture = GFX_idea_industry
+
+    allowed = { always = yes }
+    removal_cost = -1
+
+    modifier = {
+        consumer_goods_factor = -0.20
+        industrial_capacity_factory = 0.20
+        production_speed_industrial_complex_factor = 0.25
+        production_speed_arms_factory_factor = 0.20
+        production_efficiency_gain_factor = 0.15
+        production_efficiency_cap_factor = 0.15
+    }
+}
+raj_usine_du_monde_3 = {
+
+    picture = GFX_idea_industry
+
+    allowed = { always = yes }
+    removal_cost = -1
+
+    modifier = {
+        consumer_goods_factor = -0.15
+        industrial_capacity_factory = 0.15
+        production_speed_industrial_complex_factor = 0.20
+        production_speed_arms_factory_factor = 0.15
+        production_efficiency_gain_factor = 0.10
+        production_efficiency_cap_factor = 0.10
+    }
+}
+raj_usine_du_monde_2 = {
+
+    picture = GFX_idea_industry
+
+    allowed = { always = yes }
+    removal_cost = -1
+
+    modifier = {
+        consumer_goods_factor = -0.10
+        industrial_capacity_factory = 0.15
+        production_speed_industrial_complex_factor = 0.15
+        production_speed_arms_factory_factor = 0.1
+        production_efficiency_gain_factor = 0.05
+        production_efficiency_cap_factor = 0.05
+    }
+}
+raj_usine_du_monde_1 = {
+
+    picture = GFX_idea_industry
+
+    allowed = { always = yes }
+    removal_cost = -1
+
+    modifier = {
+        consumer_goods_factor = -0.05
+        industrial_capacity_factory = 0.15
+        production_speed_industrial_complex_factor = 0.10
+        production_speed_arms_factory_factor = 0.5
+        production_efficiency_gain_factor = 0.025
+        production_efficiency_cap_factor = 0.025
+    }
+}
+
+WR_unrest = {
+    picture = GFX_idea_generic_unrest
+    allowed = { always = yes }
+    removal_cost = -1
+
+    modifier = {
+        stability_factor = -0.10
+        division_organization_factor = -0.10
+        local_manpower_modifier = -0.10
+    }
+}
+
+		RAJ_industrial_workforce = {
+			picture = generic_constitutional_guarantees
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = {
+        		conscription_factor = -0.32
+        		mobilization_laws_cost_factor = 0.16
+			}
+		}
+
+    WR_leader_assassine = {
+        picture = GFX_idea_corruption_small
+        allowed = { always = yes }
+        removal_cost = -1
+
+        modifier = {
+            political_power_gain = -0.05
+            stability_factor = -0.05
+        }
+    }
+
+    WR_corruption_faible = {
+        picture = GFX_idea_corruption_small
+        allowed = { always = yes }
+        removal_cost = -1
+
+        modifier = {
+            political_power_gain = -0.05
+            stability_factor = -0.05
+            war_support_factor = -0.02
+            consumer_goods_factor = 0.02   # +2% biens de consommation
+        }
+    }
+
+    WR_corruption_forte = {
+        picture = GFX_idea_corruption_small
+        allowed = { always = yes }
+        removal_cost = -1
+
+        modifier = {
+            political_power_gain = -0.15
+            stability_factor = -0.10
+            war_support_factor = -0.05
+            consumer_goods_factor = 0.05   # +5% biens de consommation
+            research_speed_factor = -0.03
+            army_morale_factor = -0.05
+        }
+    }
+
+
+RAJ_warlord_idea = {
+    allowed = {
+        original_tag = RAJ
+    }
+
+    picture = GFX_goal_tfv_strengthen_commonwealth_bonds
+    name = RAJ_warlord_idea
+    description = RAJ_etat_dirige_depuis_la_city_desc
+
+    removal_cost = -1   # permanente, non supprimable
+
+    modifier = {
+				political_power_factor = -0.25
+				army_speed_factor = -0.2
+				army_morale_factor = -0.15
+				army_org_factor = -0.25
+				army_attack_factor = -0.15
+				industrial_capacity_dockyard = -0.5
+				industrial_capacity_factory = -0.35
+				production_speed_buildings_factor = -0.35
+				ai_focus_aggressive_factor = 0.5
+    }
+}
+
+RAJ_warlord_army = {
+    allowed = {
+        original_tag = RAJ
+    }
+
+    picture = GFX_goal_tfv_strengthen_commonwealth_bonds
+    name = RAJ_warlord_army
+    description = RAJ_etat_dirige_depuis_la_city_desc
+
+    removal_cost = -1   # permanente, non supprimable
+
+    modifier = {
+				army_morale_factor = 0.075
+				army_org_factor = 0.075
+				army_attack_factor = 0.075
+				army_defence_factor = 0.075
+    }
+}
+
+
+RAJ_etat_dirige_depuis_la_city = {
+    allowed = {
+        original_tag = RAJ
+    }
+
+    picture = GFX_goal_tfv_strengthen_commonwealth_bonds
+    name = RAJ_etat_dirige_depuis_la_city
+    description = RAJ_etat_dirige_depuis_la_city_desc
+
+    removal_cost = -1   # permanente, non supprimable
+
+    modifier = {
+        army_leader_cost_factor = 0.10          # +10% coût des généraux
+        training_time_factor = 0.05           # +5% temps d’entraînement
+        planning_speed = -0.05                  # -5% vitesse de planification
+    }
+}
+
+
+
+
+
+		londres_n_as_plus_confience = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+    remove_trigger = {
+        has_war = no 
+    }
+
+			picture = RAJ_partition_chaos_bad
+
+			modifier = {
+				war_support_weekly = -0.02
+				mobilization_laws_cost_factor = 0.35
+				consumer_goods_factor = 0.25
+				war_support_factor = -0.35	
+				trade_opinion_factor = -0.15
+				political_power_factor = -0.05
+			}
+		}
+
+londres_mefiance_persistante = {
+
+    allowed = { always = no }
+    allowed_civil_war = { always = yes }
+
+    removal_cost = -1
+
+    picture = RAJ_partition_chaos_neutral
+
+    modifier = {
+        war_support_weekly = -0.01
+        mobilization_laws_cost_factor = 0.20
+        consumer_goods_factor = 0.15
+        war_support_factor = -0.20
+        trade_opinion_factor = -0.08
+        political_power_factor = -0.03
+    }
+}
+
+londres_confiance_fragile = {
+
+    allowed = { always = no }
+    allowed_civil_war = { always = yes }
+
+    removal_cost = -1
+
+    picture = RAJ_partition_recovery
+
+    modifier = {
+        war_support_weekly = -0.005
+        mobilization_laws_cost_factor = 0.10
+        consumer_goods_factor = 0.05
+        war_support_factor = -0.05
+        trade_opinion_factor = -0.03
+        political_power_factor = -0.01
+    }
+}
+
+
+
+londres_refait_confiance = {
+
+    allowed = { always = no }
+    allowed_civil_war = { always = yes }
+    removal_cost = -1
+
+    picture = RAJ_partition_recovery
+
+    modifier = {
+        war_support_weekly = -0.005
+        war_support_factor = -0.05
+        political_power_factor = -0.02
+        trade_opinion_factor = -0.05
+        mobilization_laws_cost_factor = 0.05
+        consumer_goods_factor = 0.05
+    }
+}
+
+
+
+raj_usine_du_monde = {
+
+    picture = GFX_idea_industry
+
+    allowed = { always = yes }
+    removal_cost = -1
+
+    modifier = {
+        industrial_capacity_factory = 0.25
+        production_speed_industrial_complex_factor = 0.30
+        production_speed_arms_factory_factor = 0.20
+        production_efficiency_gain_factor = 0.15
+        production_efficiency_cap_factor = 0.15
+        consumer_goods_factor = -0.05
+    }
+}
+
+eng_investments_in_india_2 = {
+
+    picture = GFX_idea_trade
+
+    allowed = { always = yes }
+    removal_cost = -1
+
+    modifier = {
+        industrial_capacity_factory = 0.1
+        production_efficiency_gain_factor = 0.1
+        trade_opinion_factor = 0.15
+        political_power_factor = 0.1
+    }
+}
+
+eng_investments_in_india = {
+
+    picture = GFX_idea_trade
+
+    allowed = { always = yes }
+    removal_cost = -1
+
+    modifier = {
+        industrial_capacity_factory = 0.05
+        production_efficiency_gain_factor = 0.05
+        trade_opinion_factor = 0.10
+        political_power_factor = 0.05
+    }
+}
+
+
+
+		GBR_investor_control_in_india = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+    remove_trigger = {
+        has_war = no 
+    }
+
+			picture = GER_economy_of_conquest
+
+			modifier = {
+        political_power_gain = 0.10
+        stability_factor = 0.05
+        civilian_factory_use = -0.05          # 5% de civs captées par les investisseurs
+        production_efficiency_cap = 0.05      # petit bonus industriel
+        trade_opinion_factor = 0.15           # retour de la confiance extérieure
+        consumer_goods_factor = -0.02         # -2% de biens de consommation requis
+			}
+		}
+
+
+		GBR_collapse_of_the_raj = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+    remove_trigger = {
+        has_war = no 
+    }
+
+			picture = RAJ_debt_relief
+
+			modifier = {
+        political_power_gain = -0.40
+        stability_factor = -0.20
+        war_support = -0.15
+        trade_opinion_factor = -0.25   # partenaires moins confiants
+        consumer_goods_factor = 0.05   # +5% de biens de consommation requis
+			}
+		}
+
+
+
+		prince_insatisfais = {
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+    remove_trigger = {
+        has_war = no 
+    }
+
+			picture = tur_kemalist_officers_disloyalty_effect
+
+			modifier = {
+        stability_factor = -0.15
+		political_power_cost = 0.3
+			}
+		}
+
+		
+		corpo_no_recognition = {
+			picture = generic_constitutional_guarantees
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			modifier = {
+				justify_war_goal_time = 40
+			}
+			
+			rule = {
+                can_join_factions = no
+				can_create_factions = no
+            }
+		}
+
+	}
+
+}

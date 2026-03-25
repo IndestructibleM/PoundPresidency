@@ -1,0 +1,19 @@
+	### FACTION ASSETS ###
+
+spriteTypes = {
+
+	#########################
+	##### Faction Logos #####
+	#########################
+
+	spriteType = {
+		name = "GFX_faction_logo_eastern_economic_sphere"
+		texturefile = "gfx/interface/factions/faction_logos/faction_logo_eastern_economic_sphere.dds"
+		noOfFrames = 2
+	}
+	### Faction Logos - Miniatures ###
+		spriteType = {
+		name = "GFX_faction_logo_eastern_economic_sphere_miniature"
+		texturefile = "gfx/interface/factions/faction_logos/faction_logo_eastern_economic_sphere_miniature.dds"
+	}
+	}

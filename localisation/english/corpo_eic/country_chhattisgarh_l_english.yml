@@ -1,0 +1,24 @@
+﻿l_english:
+CHT_democratic:5 "Gondwana"
+CHT_democratic_DEF:5 "Gondwana"
+CHT_democratic_ADJ:5 "Gondwanan"
+CHT_democratic_party:0 ""
+CHT_democratic_party_long:0 ""
+
+CHT_fascism:5 "Gondwana"
+CHT_fascism_DEF:5 "Gondwana"
+CHT_fascism_ADJ:5 "Gondwanan"
+CHT_fascism_party:0 ""
+CHT_fascism_party_long:0 ""
+
+CHT_communism:5 "Gondwana"
+CHT_communism_DEF:5 "Gondwana"
+CHT_communism_ADJ:5 "Gondwanan"
+CHT_communism_party:0 ""
+CHT_communism_party_long:0 ""
+
+CHT_neutrality:5 "Confederation of Gondwana"
+CHT_neutrality_DEF:5 "The Confederation of Gondwana"
+CHT_neutrality_ADJ:5 "Gondwanan"
+CHT_neutrality_party:0 "Gondwana Confederation"
+CHT_neutrality_party_long:0 ""

@@ -1,0 +1,372 @@
+###########################
+# RAJ GOE Events
+###########################
+
+add_namespace = Diamond_dog
+
+country_event = {
+    id = Diamond_dog.1  # Sir Adrian Carton de Wiart(Big Boss) has come
+    title = Diamond_dog.1.t
+    desc = Diamond_dog.1.desc
+    picture = GFX_report_event_generic_strike
+
+    is_triggered_only = yes
+
+    option = {
+        name = Diamond_dog.1.a
+        ai_chance = { base = 1 }
+
+        RAJ = {
+        create_field_marshal = {
+            name = "Adrian Carton de Wiart"
+            portrait_path = "gfx/leaders/RAJ/Portrait_Adrian_Wiart.dds"
+            traits = { trickster commando }
+            skill = 3
+            attack_skill = 2
+            defense_skill = 4
+            planning_skill = 2
+            logistics_skill = 2
+        }
+
+        delete_unit_template_and_units = { division_template = "Armored-Division" }
+        delete_unit_template_and_units = { division_template = "British Garrison" }
+    division_template = {
+        name = "D-D Infantry Battalion"       
+        #division_names_group = 
+	override_model = RAJ_militia_entity
+        is_locked = no
+        force_allow_recruiting = no
+        regiments = {
+            irregular_infantry = { x = 0 y = 0 }
+            irregular_infantry = { x = 0 y = 1 }
+            irregular_infantry = { x = 0 y = 2 }
+            irregular_infantry = { x = 1 y = 0 }
+            irregular_infantry = { x = 1 y = 1 }
+            irregular_infantry = { x = 1 y = 2 }
+            irregular_infantry = { x = 2 y = 0 }
+            irregular_infantry = { x = 2 y = 1 }
+            irregular_infantry = { x = 2 y = 2 }
+            irregular_infantry = { x = 3 y = 0 }
+        }
+        support = {
+            artillery = { x = 0 y = 0 }
+            engineer = { x = 0 y = 1 }
+            anti_air = { x = 0 y = 2 }
+            anti_tank = { x = 0 y = 3 }
+            logistics_company = { x = 0 y = 4 }
+        }
+    }
+
+    random_core_state = {
+        limit = {
+            is_fully_controlled_by = ROOT
+        }
+        create_unit = {
+            division = "name = \"D-D Infantry Battalion\" division_template = \"D-D Infantry Battalion\" start_experience_factor = 0.1 start_equipment_factor = 1 start_manpower_factor = 1"
+            allow_spawning_on_enemy_provs = no 
+            count = 12
+            owner = ROOT
+        }
+    }  
+
+
+
+
+
+
+
+
+
+    
+        division_template = {
+            name = "D-D Fire Support Company" 
+	override_model = RAJ_militia_entity
+            is_locked = no
+            force_allow_recruiting = no
+            regiments = {
+                irregular_infantry = { x = 0 y = 0 }
+                irregular_infantry = { x = 0 y = 1 }
+                irregular_infantry = { x = 0 y = 2 }
+                irregular_infantry = { x = 0 y = 3 }
+                irregular_infantry = { x = 1 y = 0 }
+                irregular_infantry = { x = 1 y = 1 }
+                irregular_infantry = { x = 1 y = 2 }
+                irregular_infantry = { x = 1 y = 3 }
+                irregular_infantry = { x = 2 y = 0 }
+                irregular_infantry = { x = 2 y = 1 }
+                irregular_infantry = { x = 2 y = 2 }
+                irregular_infantry = { x = 2 y = 3 }
+                artillery_brigade = { x = 3 y = 0 }
+                artillery_brigade = { x = 3 y = 1 }
+                artillery_brigade = { x = 3 y = 2 }
+                artillery_brigade = { x = 3 y = 3 }
+            }
+
+            support = {
+                artillery = { x = 0 y = 0 }
+                engineer = { x = 0 y = 1 }
+                anti_air = { x = 0 y = 2 }
+                logistics_company = { x = 0 y = 3 }
+                recon = { x = 0 y = 4 }
+            }
+        }
+
+
+
+
+
+
+        
+        division_template = {
+            name = "D-D Mobile Infantry"       
+            is_locked = no
+            force_allow_recruiting = no
+            regiments = {
+                motorized = { x = 0 y = 0 }
+                motorized = { x = 0 y = 1 }
+                motorized = { x = 0 y = 2 }
+                motorized = { x = 1 y = 0 }
+                motorized = { x = 1 y = 1 }
+                motorized = { x = 1 y = 2 }
+                motorized = { x = 2 y = 0 }
+                motorized = { x = 2 y = 1 }
+                motorized = { x = 2 y = 2 }
+                mot_artillery_brigade = { x = 3 y = 0 }
+                mot_artillery_brigade = { x = 3 y = 1 }
+                mot_artillery_brigade = { x = 3 y = 2 }
+            }
+            support = {
+                artillery = { x = 0 y = 0 }
+                engineer = { x = 0 y = 1 }
+                anti_air = { x = 0 y = 2 }
+                logistics_company = { x = 0 y = 3 }
+                recon = { x = 0 y = 4 }
+            }
+        }
+
+
+        
+        division_template = {
+            name = "D-D Light Armor Corps"
+            is_locked = no
+            force_allow_recruiting = no
+            regiments = {
+                light_armor = { x = 0 y = 0 }
+                light_armor = { x = 0 y = 1 }
+                light_armor = { x = 0 y = 2 }
+                light_armor = { x = 1 y = 0 }
+                light_armor = { x = 1 y = 1 }
+                light_armor = { x = 1 y = 2 }
+                light_armor = { x = 2 y = 0 }
+                light_armor = { x = 2 y = 1 }
+                light_armor = { x = 2 y = 2 }
+            }
+            support = {
+                anti_air = { x = 0 y = 0 }
+                field_hospital = { x = 0 y = 1 }
+                engineer = { x = 0 y = 2 }
+                logistics_company = { x = 0 y = 3 }
+                recon = { x = 0 y = 4 }
+            }
+        }
+
+
+        
+        division_template = {
+            name = "D-D Armored Battalion"
+            is_locked = no
+            force_allow_recruiting = no
+            regiments = {
+                medium_armor = { x = 0 y = 0 }
+                medium_armor = { x = 0 y = 1 }
+                medium_armor = { x = 0 y = 2 }
+                medium_armor = { x = 1 y = 0 }
+                medium_armor = { x = 1 y = 1 }
+                medium_armor = { x = 1 y = 2 }
+                medium_armor = { x = 2 y = 0 }
+                medium_armor = { x = 2 y = 1 }
+                medium_armor = { x = 2 y = 2 }
+            }
+            support = {
+                anti_air = { x = 0 y = 0 }
+                field_hospital = { x = 0 y = 1 }
+                engineer = { x = 0 y = 2 }
+                logistics_company = { x = 0 y = 3 }
+                recon = { x = 0 y = 4 }
+            }
+        }          
+        }
+    }
+}
+
+country_event = {
+    id = Diamond_dog.2
+    title = Diamond_dog.2.t    
+    desc = Diamond_dog.2.desc    
+    picture = dh-807238
+    
+    is_triggered_only = yes
+
+    option = { 
+        name = Diamond_dog.2.a
+        ai_chance = {
+            base = 1
+        }
+
+        RAJ = {create_field_marshal = {# Adrian Carton de Wiart recruit general and mercs
+	name = "Adrian Carton de Wiart"
+	portrait_path = "gfx/leaders/RAJ/Portrait_Adrian_Wiart.dds"
+	traits = {
+		trickster
+		commando
+        loyalty_to_diamond_dog
+	}
+	skill = 3
+	attack_skill = 2
+	defense_skill = 4
+	planning_skill = 2
+	logistics_skill = 2
+	legacy_id=0
+}
+create_corps_commander = {
+	name = "Jean de Lattre de Tassigny"
+	portrait_path = "gfx/leaders/FRA/Portrait_France_Jean_de_Lattre_de_Tassigny.dds"
+	traits = {
+		cavalry_officer
+		brilliant_strategist
+        war_hero
+		trickster
+        loyalty_to_diamond_dog
+	}
+	skill = 4
+	attack_skill=4
+	defense_skill=2
+	planning_skill=4
+	logistics_skill=3
+	legacy_id=-1
+}
+create_corps_commander = {
+	name = "Leslie Morshead"
+	portrait_path = "gfx/leaders/AST/Portrait_Australia_Leslie_Morshead.dds"
+	traits = {
+		cavalry_officer
+		brilliant_strategist
+        war_hero
+		trickster
+        loyalty_to_diamond_dog
+	}
+	skill = 4
+	attack_skill=4
+	defense_skill=2
+	planning_skill=5
+	logistics_skill=2
+	legacy_id=-1
+}
+create_corps_commander = {
+	name = "Alan Vasey"
+	portrait_path = "gfx/leaders/AST/Portrait_Australia_Alan_Vasey.dds"
+	traits = {
+		hill_fighter
+        loyalty_to_diamond_dog
+	}
+			skill=3
+			attack_skill=2
+			defense_skill=4
+			planning_skill=3
+			logistics_skill=1
+			legacy_id=-1
+}
+create_corps_commander = {
+	name = "Bert Hoffmeister"
+	portrait_path = "gfx/leaders/CAN/Portrait_Canada_Bert_Hoffmeister.dds"
+	traits = {
+		hill_fighter
+        loyalty_to_diamond_dog
+	}
+			skill=4
+			attack_skill=4
+			defense_skill=3
+			planning_skill=3
+			logistics_skill=3
+			legacy_id=-1
+}
+create_corps_commander = {
+	name = "William Slim"
+	portrait_path = "gfx/leaders/ENG/Portrait_Britain_William_Slim.dds"
+	traits = {
+		war_hero
+        trickster
+        loyalty_to_diamond_dog
+	}
+			skill=5
+			attack_skill=3
+			defense_skill=3
+			planning_skill=5
+			logistics_skill=5
+			legacy_id=0
+}
+create_corps_commander = {
+	name = "George Giffard"
+	portrait_path = "gfx/leaders/ENG/Portrait_Britain_George_Giffard.dds"
+	traits = {
+		career_officer
+        loyalty_to_diamond_dog
+	}
+			skill=3
+			attack_skill=2
+			defense_skill=2
+			planning_skill=3
+			logistics_skill=3
+			legacy_id=0
+}
+
+            every_army_leader = {
+                limit = {
+                    has_trait = loyalty_to_britain
+                }
+                remove_trait = {
+                    trait = loyalty_to_britain
+                }
+                add_trait = {
+                    trait = loyalty_to_diamond_dog
+                }
+            } 
+            every_army_leader = {
+                limit = {
+                    has_trait = loyalty_to_pakistan
+                }
+                remove_trait = {
+                    trait = loyalty_to_pakistan
+                }
+                add_trait = {
+                    trait = loyalty_to_diamond_dog
+                }
+            }
+            every_army_leader = {
+                limit = {
+                    has_trait = loyalty_to_india
+                }
+                remove_trait = {
+                    trait = loyalty_to_india
+                }
+                add_trait = {
+                    trait = loyalty_to_diamond_dog
+                }
+            }
+        }
+        FRA = {
+            	retire_character = FRA_jean_de_lattre_de_tassigny
+        }
+        AST = {
+            	retire_character = AST_leslie_morshead
+            	retire_character = AST_alan_vasey
+        }
+        CAN = {
+            	retire_character = CAN_bert_hoffmeister
+        }
+        ENG = {
+            	retire_character = ENG_george_giffard
+            	retire_character = ENG_william_slim
+        }
+        }
+    }

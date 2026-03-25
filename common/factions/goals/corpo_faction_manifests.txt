@@ -1,0 +1,30 @@
+@manifest_fulfilled_value = 0.75
+#RAJ dominer l'asie par l'argent (i love money)
+faction_manifest_corpocratie_on_asia = {
+	name = corpocratie_on_asia_name
+	description = corpocratie_on_asia_desc
+	is_manifest = yes
+	ratio_progress = {
+		total_amount_collection = collection:faction_owned_core_states
+		completed_amount_collection = collection:faction_controlled_non_core_states
+		range = { 
+			max = 1
+		}
+		
+		scale = {
+			offensive_war_stability_factor = 0.15
+			justify_war_goal_time = -0.25
+		}
+		
+		progress_sections = {
+			manifest_fulfilled = {
+				min = @manifest_fulfilled_value
+	
+				modifier = { 
+					non_core_manpower = 0.03
+					generate_wargoal_tension = -0.25
+				}			
+			}
+		}
+	}
+}

@@ -1,0 +1,24 @@
+﻿l_english:
+BEN_democratic:5 "Bengal"
+BEN_democratic_DEF:5 "Bengal"
+BEN_democratic_ADJ:5 "Bengali"
+BEN_democratic_party:0 ""
+BEN_democratic_party_long:0 ""
+
+BEN_fascism:5 "Bengal"
+BEN_fascism_DEF:5 "Bengal"
+BEN_fascism_ADJ:5 "Bengali"
+BEN_fascism_party:0 ""
+BEN_fascism_party_long:0 ""
+
+BEN_communism:5 "Revolutionary Bengal"
+BEN_communism_DEF:5 "Revolutionary Bengal"
+BEN_communism_ADJ:5 "Bengali"
+BEN_communism_party:0 "Revolutionary Bengal"
+BEN_communism_party_long:0 ""
+
+BEN_neutrality:5 "Bengal"
+BEN_neutrality_DEF:5 "Bengal"
+BEN_neutrality_ADJ:5 "Bengali"
+BEN_neutrality_party:0 ""
+BEN_neutrality_party_long:0 ""

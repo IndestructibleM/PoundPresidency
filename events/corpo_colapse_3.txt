@@ -1,0 +1,157 @@
+###########################
+# RAJ GOE Events
+###########################
+
+add_namespace = RAJ_effondrement
+
+country_event = {
+    id = RAJ_effondrement.10 #London hates us
+    title = "RAJ_effondrement.10.t"
+    desc = "RAJ_effondrement.10.desc"
+    picture = coup-807253
+
+    is_triggered_only = yes
+
+    option = { 
+        name = "RAJ_effondrement.10.a"
+        ai_chance = { base = 1 }
+        add_stability = -0.25
+        hidden_effect = {
+
+        }
+        
+        RAJ = {
+            add_ideas = londres_n_as_plus_confience   
+            remove_state_core = 428
+            remove_state_core = 433
+            remove_state_core = 989
+            remove_state_core = 443
+            remove_state_core = 1012
+            remove_state_core = 444
+            remove_state_core = 988
+            remove_state_core = 445
+            remove_state_core = 987
+            remove_state_core = 787
+            remove_state_core = 441
+            remove_state_core = 439
+            remove_state_core = 438
+            remove_state_core = 436
+            remove_state_core = 984
+            remove_state_core = 435
+            remove_state_core = 431
+            remove_state_core = 432
+            remove_state_core = 434
+            remove_state_core = 426
+            remove_state_core = 424
+            remove_state_core = 423
+            remove_state_core = 320
+            remove_state_core = 321
+            remove_state_claim = 441
+            remove_state_claim = 787
+
+
+            # add_timed_idea = {
+            #     idea = idea_RAJ_widespread_turmoil
+            #     days = 270
+            # }
+
+
+        }
+        hidden_effect = {
+            ENG = {
+                country_event = { id = RAJ_effondrement.11 days = 10 }
+            }
+        }
+    }
+    
+}
+
+
+country_event = {
+    id = RAJ_effondrement.11 #request for a buyout by an investment fund (basically, the EIC is back)
+    title = "RAJ_effondrement.11.t"
+    desc = "RAJ_effondrement.11.desc"
+    picture = lobbyng-807225
+
+    is_triggered_only = yes
+
+    option = { 
+        name = "RAJ_effondrement.11.a"
+        ai_chance = { base = 1 }
+        add_stability = 0.3
+        ENG = {
+swap_ideas = { 
+  remove_idea = GBR_collapse_of_the_raj 
+  add_idea = GBR_investor_control_in_india
+}
+        }    
+        
+
+        hidden_effect = {
+            RAJ = {
+                country_event = { id = RAJ_effondrement.12 days = 0 }
+
+            }
+        }
+    }
+    
+}
+
+
+
+country_event = {
+    id = RAJ_effondrement.12 #we are redeemed (we become the EIC again)
+    title = "RAJ_effondrement.12.t"
+    desc = "RAJ_effondrement.12.desc"
+    picture = lobbyng-807225
+
+    is_triggered_only = yes
+
+    option = { 
+        name = "RAJ_effondrement.12.a"
+        ai_chance = { base = 1 }
+        add_stability = 10
+        hidden_effect = {
+
+        }
+        
+        RAJ = {
+            set_cosmetic_tag = RAJ_eic_tag
+            add_ideas = RAJ_etat_dirige_depuis_la_city
+            remove_ideas = RAJ_risk_of_famine
+            remove_ideas = FRA_factory_strikes
+            remove_ideas = raj_marginalized_muslim_community
+            remove_ideas = RAJ_princely_states
+            
+                    long_name = RAJ_eic_party_long # Optional
+                    name = RAJ_eic_party
+        }
+
+        
+            RAJ_GOE_the_board_of_directors = {
+                add_country_leader_role = {
+                    promote_leader = yes
+                    country_leader = {
+                        ideology = oligarchism
+                    }
+                }
+            }
+            
+            OVERLORD = {
+                set_autonomy = {
+                    target = RAJ
+                    autonomy_state = autonomy_free
+                }
+            }
+
+
+
+        hidden_effect = {
+            RAJ = {
+            set_country_flag =  eic_comeback
+            }
+        }
+    }
+    
+}
+
