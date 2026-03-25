@@ -9294,9 +9294,15 @@
 			}
 			add_ideas = FRA_party_divide
 			country_event = etat.1
-			set_country_leader_portrait = {
-				ideology = fascism
-				portrait = GFX_Portrait_Marcel_Bucard
+			create_country_leader = {
+				name = "Jacques Doriot"
+				desc = "POLITICS_ÉDOUARD_DALADIER_DESC"
+				picture = GFX_portrait_fra_jacques_doriot
+				expire = "1965.1.1"
+				ideology = fascism_ideology
+				traits = {
+					eager_collaborator
+				}
 			}
         }
     }
