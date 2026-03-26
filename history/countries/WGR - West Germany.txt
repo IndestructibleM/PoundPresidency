@@ -100,7 +100,8 @@ if = {
 
 set_research_slots = 4
 set_convoys = 50
-set_stability = 0.7
+set_stability = 0.55
+set_war_support = 0.7
 
 1939.1.1 = {
 
@@ -186,6 +187,19 @@ add_ideas = {
 }
 
 create_country_leader = {
+	name = "Konrad Adenauer"
+	desc = "POLITICS_KONRAD_ADENAUER_DESC"
+	picture = GFX_portrait_Konrad_Adenauer
+	expire = "1965.1.1"
+	ideology = social_conservative
+	traits = {
+	}
+}
+
+
+recruit_character = GER_hans_vogel_VR
+
+create_country_leader = {
 	name = "Klaus Klauser"
 	desc = ""
 	picture = GFX_portrait_Klaus_Klauser
@@ -195,12 +209,3 @@ create_country_leader = {
 	}
 }
 
-create_country_leader = {
-	name = "Konrad Adenauer"
-	desc = "POLITICS_KONRAD_ADENAUER_DESC"
-	picture = GFX_portrait_Konrad_Adenauer
-	expire = "1965.1.1"
-	ideology = conservatism
-	traits = {
-	}
-}

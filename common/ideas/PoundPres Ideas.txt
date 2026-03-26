@@ -12,6 +12,9 @@ ideas = {
 				reactionary_drift = 0.03
 				communism_drift = 0.03
 			}
+			on_remove = {
+				add_stability = -0.25
+			}
 		}
 		USA_war_against_degeneration = {
 			allowed_civil_war = {

@@ -1,0 +1,667 @@
+focus_tree = {
+	id = turkish_focus
+	
+	country = {
+		factor = 0
+		
+		modifier = {
+			add = 10
+			tag = TUR
+		}
+	}
+	
+	continuous_focus_position = { x = 100 y = 3250 }
+	
+	shared_focus = SSB_the_saadabad_pact
+# economy tree
+	focus = {
+         id = TUR_economy
+         icon = GFX_focus_
+         x = 10
+         y = 0
+         ai_will_do = {
+             factor = 10
+         }
+         cost = 5
+         completion_reward = {
+             add_political_power = 50
+         }
+    }
+	
+	focus = {
+         id = TUR_koc_subsidies
+         icon = GFX_focus_
+         x = -2
+         y = 1
+         ai_will_do = {
+             factor = 10
+         }
+        relative_position_id = TUR_economy
+         cost = 5
+         completion_reward = {
+             add_political_power = 50
+         }
+        prerequisite = {
+             focus = TUR_economy
+        }
+    }
+	
+	focus = {
+         id = TUR_investments_aerial_industries
+         icon = GFX_focus_
+         x = 2
+         y = 1
+         ai_will_do = {
+             factor = 10
+         }
+        relative_position_id = TUR_economy
+         cost = 5
+         completion_reward = {
+             add_political_power = 50
+         }
+        prerequisite = {
+             focus = TUR_economy
+        }
+    }
+	
+	focus = {
+         id = TUR_railroads
+         icon = GFX_focus_
+         x = 0
+         y = 1
+         ai_will_do = {
+             factor = 10
+         }
+        relative_position_id = TUR_koc_subsidies
+         cost = 5
+         completion_reward = {
+             add_political_power = 50
+         }
+        prerequisite = {
+             focus = TUR_koc_subsidies
+        }
+    }
+	
+	focus = {
+         id = TUR_civ_investments
+         icon = GFX_focus_
+         x = 2
+         y = 1
+         ai_will_do = {
+             factor = 10
+         }
+        relative_position_id = TUR_koc_subsidies
+         cost = 5
+         completion_reward = {
+             add_political_power = 50
+         }
+        prerequisite = {
+             focus = TUR_koc_subsidies
+        }
+		prerequisite = {
+             focus = TUR_investments_aerial_industries
+        }
+    }
+	
+	focus = {
+         id = TUR_expand_roads
+         icon = GFX_focus_
+         x = 0
+         y = 1
+         ai_will_do = {
+             factor = 10
+         }
+        relative_position_id = TUR_railroads
+         cost = 5
+         completion_reward = {
+             add_political_power = 50
+         }
+        prerequisite = {
+             focus = TUR_railroads
+        }
+    }
+	
+	focus = {
+         id = TUR_subsidies_light_industries
+         icon = GFX_focus_
+         x = 0
+         y = 1
+         ai_will_do = {
+             factor = 10
+         }
+        relative_position_id = TUR_civ_investments
+         cost = 5
+         completion_reward = {
+             add_political_power = 50
+         }
+        prerequisite = {
+             focus = TUR_civ_investments
+        }
+    }
+	
+	focus = {
+         id = TUR_expand_industrial_towns
+         icon = GFX_focus_
+         x = 1
+         y = 1
+         ai_will_do = {
+             factor = 10
+         }
+        relative_position_id = TUR_expand_roads
+         cost = 5
+         completion_reward = {
+             add_political_power = 50
+         }
+        prerequisite = {
+             focus = TUR_subsidies_light_industries
+        }
+		prerequisite = {
+             focus = TUR_expand_roads
+        }
+    }
+	
+	focus = {
+         id = TUR_found_MKEK
+         icon = GFX_focus_
+         x = 5
+         y = 1
+         ai_will_do = {
+             factor = 10
+         }
+        relative_position_id = TUR_economy
+         cost = 5
+         completion_reward = {
+             add_political_power = 50
+         }
+        prerequisite = {
+             focus = TUR_economy
+        }
+    }
+	
+	focus = {
+         id = TUR_found_TAI
+         icon = GFX_focus_
+         x = -2
+         y = 1
+         ai_will_do = {
+             factor = 10
+         }
+        relative_position_id = TUR_found_MKEK
+         cost = 5
+         completion_reward = {
+             add_political_power = 50
+         }
+        prerequisite = {
+             focus = TUR_found_MKEK
+        }
+		prerequisite = {
+			focus = TUR_investments_aerial_industries
+		}
+    }
+	
+	focus = {
+         id = TUR_mechanized_research
+         icon = GFX_focus_
+         x = 0
+         y = 1
+         ai_will_do = {
+             factor = 10
+         }
+        relative_position_id = TUR_found_MKEK
+         cost = 5
+         completion_reward = {
+             add_political_power = 50
+         }
+        prerequisite = {
+             focus = TUR_found_MKEK
+        }
+    }
+	
+	focus = {
+         id = TUR_plane_factories
+         icon = GFX_focus_
+         x = 1
+         y = 1
+         ai_will_do = {
+             factor = 10
+         }
+        relative_position_id = TUR_found_TAI
+         cost = 5
+         completion_reward = {
+             add_political_power = 50
+         }
+        prerequisite = {
+             focus = TUR_found_TAI
+        }
+		prerequisite = {
+             focus = TUR_mechanized_research
+        }
+    }
+	
+	focus = {
+         id = TUR_expand_military_production
+         icon = GFX_focus_
+         x = 0
+         y = 2
+         ai_will_do = {
+             factor = 10
+         }
+        relative_position_id = TUR_found_TAI
+         cost = 5
+         completion_reward = {
+             add_political_power = 50
+         }
+        prerequisite = {
+             focus = TUR_found_TAI
+        }
+		prerequisite = {
+             focus = TUR_plane_factories
+        }
+    }
+	
+	focus = {
+         id = TUR_create_mic
+         icon = GFX_focus_
+         x = 0
+         y = 2
+         ai_will_do = {
+             factor = 10
+         }
+        relative_position_id = TUR_mechanized_research
+         cost = 5
+         completion_reward = {
+             add_political_power = 50
+         }
+        prerequisite = {
+             focus = TUR_mechanized_research
+        }
+		prerequisite = {
+             focus = TUR_plane_factories
+        }
+    }
+	
+	focus = {
+         id = TUR_new_frontiers_science
+         icon = GFX_focus_
+         x = 9
+         y = 1
+         ai_will_do = {
+             factor = 10
+         }
+        relative_position_id = TUR_economy
+         cost = 5
+         completion_reward = {
+             add_political_power = 50
+         }
+        prerequisite = {
+             focus = TUR_economy
+        }
+    }
+	
+	focus = {
+         id = TUR_synthetic_rubber
+         icon = GFX_focus_
+         x = -1
+         y = 1
+         ai_will_do = {
+             factor = 10
+         }
+        relative_position_id = TUR_new_frontiers_science
+         cost = 5
+         completion_reward = {
+             add_political_power = 50
+         }
+        prerequisite = {
+             focus = TUR_new_frontiers_science
+        }
+    }
+	
+	focus = {
+         id = TUR_improve_exploitation_black_gold
+         icon = GFX_focus_
+         x = 0
+         y = 1
+         ai_will_do = {
+             factor = 10
+         }
+        relative_position_id = TUR_synthetic_rubber
+         cost = 5
+         completion_reward = {
+             add_political_power = 50
+         }
+        prerequisite = {
+             focus = TUR_synthetic_rubber
+        }
+    }
+	
+	focus = {
+         id = TUR_expand_uni
+         icon = GFX_focus_
+         x = 1
+         y = 1
+         ai_will_do = {
+             factor = 10
+         }
+        relative_position_id = TUR_new_frontiers_science
+         cost = 5
+         completion_reward = {
+             add_political_power = 50
+         }
+        prerequisite = {
+             focus = TUR_new_frontiers_science
+        }
+    }
+	
+	focus = {
+         id = TUR_radar
+         icon = GFX_focus_
+         x = 0
+         y = 1
+         ai_will_do = {
+             factor = 10
+         }
+        relative_position_id = TUR_expand_uni
+         cost = 5
+         completion_reward = {
+             add_political_power = 50
+         }
+        prerequisite = {
+             focus = TUR_expand_uni
+        }
+    }
+	
+	
+### TKP trees
+	focus = {
+		id = TUR_path_of_marx_lenin
+		icon = GFX_focus_AUS_austromarxism
+		x = 2
+		y = 0
+		cost = 10
+		ai_will_do = {
+			base = 10
+		}
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		completion_reward = {
+			add_political_power = 75
+			add_popularity = {
+				ideology = communism
+				popularity = 0.03
+			}
+		}
+	}
+	
+	focus = {
+         id = TUR_rapid_industrial_growth
+         icon = GFX_focus_
+         x = -2
+         y = 1
+         ai_will_do = {
+             factor = 10
+         }
+        relative_position_id = TUR_path_of_marx_lenin
+         cost = 5
+         completion_reward = {
+             add_political_power = 50
+         }
+        prerequisite = {
+             focus = TUR_path_of_marx_lenin
+        }
+    }
+	
+	focus = {
+         id = TUR_invite_soviet_dudes
+         icon = GFX_focus_
+         x = 0
+         y = 2
+         ai_will_do = {
+             factor = 10
+         }
+        relative_position_id = TUR_path_of_marx_lenin
+         cost = 5
+         completion_reward = {
+             add_political_power = 50
+         }
+        prerequisite = {
+             focus = TUR_path_of_marx_lenin
+        }
+    }
+	
+	focus = {
+         id = TUR_alter_labor_laws
+         icon = GFX_focus_
+         x = 2
+         y = 1
+         ai_will_do = {
+             factor = 10
+         }
+        relative_position_id = TUR_path_of_marx_lenin
+         cost = 5
+         completion_reward = {
+             add_political_power = 50
+         }
+        prerequisite = {
+             focus = TUR_path_of_marx_lenin
+        }
+    }
+	
+	focus = {
+        id = TUR_general_strike
+        icon = GFX_BBR_state_employement
+        x = 0
+        y = 1
+        ai_will_do = {
+             factor = 10
+        }
+		available = {
+			communism > 0.4
+		}
+        relative_position_id = TUR_invite_soviet_dudes
+        cost = 5
+        completion_reward = {
+             add_political_power = 50
+        }
+        prerequisite = {
+             focus = TUR_alter_labor_laws
+        }
+		prerequisite = {
+             focus = TUR_invite_soviet_dudes
+        }
+		prerequisite = {
+             focus = TUR_rapid_industrial_growth
+        }
+    }
+	
+	focus = {
+        id = TUR_TKP_conference
+        icon = GFX_AUS_central_committee
+        x = 0
+        y = 1
+        ai_will_do = {
+            factor = 10
+        }
+        relative_position_id = TUR_general_strike
+        cost = 5
+        completion_reward = {
+            add_political_power = 50
+        }
+        prerequisite = {
+            focus = TUR_general_strike
+        }
+    }
+	
+	focus = {
+        id = TUR_trotsky
+        icon = GFX_focus_fra_loyalty_trotzky
+        x = -3
+        y = 1
+        ai_will_do = {
+            factor = 10
+        }
+        relative_position_id = TUR_TKP_conference
+        cost = 5
+		available = {
+		
+		}
+		
+        completion_reward = {
+            add_political_power = 50
+        }
+        prerequisite = {
+            focus = TUR_TKP_conference
+        }
+		mutually_exclusive = {
+			focus = TUR_husnu
+			focus = TUR_sultan_galiev
+		}
+    }
+	
+	focus = {
+        id = TUR_husnu
+        icon = GFX_focus_
+        x = 0
+        y = 1
+        ai_will_do = {
+            factor = 10
+        }
+        relative_position_id = TUR_TKP_conference
+        cost = 5
+		available = {
+		
+		}
+        completion_reward = {
+            add_political_power = 50
+        }
+        prerequisite = {
+            focus = TUR_TKP_conference
+        }
+		mutually_exclusive = {
+			focus = TUR_trotsky
+			focus = TUR_sultan_galiev
+		}
+    }
+	
+	focus = {
+        id = TUR_sultan_galiev
+        icon = GFX_focus_
+        x = 3
+        y = 1
+        ai_will_do = {
+            factor = 10
+        }
+        relative_position_id = TUR_TKP_conference
+        cost = 5
+		available = {
+		
+		}
+        completion_reward = {
+            add_political_power = 50
+        }
+        prerequisite = {
+            focus = TUR_TKP_conference
+        }
+		mutually_exclusive = {
+			focus = TUR_husnu
+			focus = TUR_trotsky
+		}
+    }
+	
+	focus = {
+        id = TUR_take_over_balkan
+        icon = GFX_focus_
+        x = -2
+        y = 1
+        ai_will_do = {
+            factor = 10
+        }
+        relative_position_id = TUR_husnu
+        cost = 5
+		available = {
+		
+		}
+        completion_reward = {
+            add_political_power = 50
+        }
+        prerequisite = {
+            focus = TUR_husnu
+			focus = TUR_trotsky
+			focus = TUR_sultan_galiev
+        }
+    }
+	
+	focus = {
+        id = TUR_take_over_middle_east
+        icon = GFX_focus_
+        x = 2
+        y = 1
+        ai_will_do = {
+            factor = 10
+        }
+        relative_position_id = TUR_husnu
+        cost = 5
+		available = {
+		
+		}
+        completion_reward = {
+            add_political_power = 50
+        }
+        prerequisite = {
+            focus = TUR_husnu
+			focus = TUR_trotsky
+			focus = TUR_sultan_galiev
+        }
+    }
+	
+	focus = {
+        id = TUR_proclaim_fssr
+        icon = GFX_focus_
+        x = 1
+        y = 1
+        ai_will_do = {
+            factor = 10
+        }
+        relative_position_id = TUR_take_over_balkan
+        cost = 5
+		available = {
+		
+		}
+        completion_reward = {
+            add_political_power = 50
+        }
+        prerequisite = {
+            focus = TUR_husnu
+			focus = TUR_trotsky
+        }
+		prerequisite = {
+			focus = TUR_take_over_balkan
+			focus = TUR_take_over_middle_east
+		}
+    }
+	
+	focus = {
+        id = TUR_islamic_union_soviet_republics
+        icon = GFX_focus_
+        x = 5
+        y = 1
+        ai_will_do = {
+            factor = 10
+        }
+        relative_position_id = TUR_take_over_balkan
+        cost = 5
+		available = {
+		
+		}
+        completion_reward = {
+            add_political_power = 50
+        }
+        prerequisite = {
+            focus = TUR_sultan_galiev
+        }
+		prerequisite = {
+			focus = TUR_take_over_balkan
+			focus = TUR_take_over_middle_east
+		}
+    }
+	
+}

@@ -64,7 +64,7 @@ focus_tree = {
 		id = USA_1936_presidential_campaign
 		icon = GFX_focus_generic_election
 		x = 16
-		y = 0
+		y = -1
 		cost = 5
 		ai_will_do = {
 			factor = 1
@@ -84,7 +84,7 @@ focus_tree = {
 	focus = {
 		id = USA_defend_the_administration
 		icon = GFX_focus_generic_improve_the_administration
-		x = 15
+		x = 16
 		y = 1
 		cost = 5
 		prerequisite = {
@@ -96,22 +96,21 @@ focus_tree = {
 		available = {
 			date < 1936.11.8
 		}
-
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
 		search_filters = {FOCUS_FILTER_POLITICAL}
 		completion_reward = {
-			add_political_power = 50
-			add_popularity = { ideology = democratic popularity = 0.05 }
+			add_political_power = 25
+			add_popularity = { ideology = democratic popularity = 0.06 }
 		}
 	}
 
 	focus = {
 		id = USA_rally_new_deal_coalition
 		icon = GFX_focus_generic_social_democracy
-		x = 17
-		y = 1
+		x = 15
+		y = 0
 		cost = 5
 		prerequisite = {
 			focus = USA_1936_presidential_campaign
@@ -122,53 +121,59 @@ focus_tree = {
 		available = {
 			date < 1936.11.8
 		}
-
+		mutually_exclusive = {
+			focus = USA_win_liberal_republicans
+		}
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
 		search_filters = {FOCUS_FILTER_POLITICAL}
 		completion_reward = {
 			add_popularity = { ideology = socialist popularity = 0.03 }
-			add_popularity = { ideology = democratic popularity = 0.08 }
+			add_popularity = { ideology = democratic popularity = 0.06 }
 			add_political_power = party_popularity_100@socialist
+		}
+	}
+
+	focus = {
+		id = USA_win_liberal_republicans
+		icon = GFX_focus_generic_befriend_usa
+		x = 17
+		y = 0
+		cost = 5
+		prerequisite = {
+			focus = USA_1936_presidential_campaign
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			date < 1936.11.8
+		}
+		mutually_exclusive = {
+			focus = USA_rally_new_deal_coalition
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		completion_reward = {
+			add_popularity = { ideology = democratic popularity = 0.03 }
+			add_popularity = { ideology = conservative popularity = 0.06 }
+			add_political_power = party_popularity_100@conservative
 		}
 	}
 
 	focus = {
 		id = USA_continue_the_new_deal
 		icon = GFX_focus_generic_self_management
-		x = 16
+		x = 10
 		y = 2
-		offset = {
-			x = -12
-			y = 0
-			trigger = {
-				OR = {
-					AND = {
-						has_game_rule = {
-							rule = obsolete_focus_branches_visibility
-							option = HIDE
-						}
-						has_completed_focus = USA_reestablish_the_gold_standard
-					}
-				}
-			}
-		}
-		offset = {
-			x = -1
-			y = 0
-			trigger = {
-				has_game_rule = {
-					rule = obsolete_focus_branches_visibility
-					option = HIDE
-				}
-				has_completed_focus = USA_neutrality_act
-			}
-		}
+
 
 		mutually_exclusive = { 
 			focus = USA_towards_national_utopia
-			focus = USA_revolt_of_engineers
+			focus = USA_republicans_in_the_white_house
 			focus = USA_the_workers_candidate
 		}
 		cost = 8
@@ -223,10 +228,10 @@ focus_tree = {
 	focus = {
 		id = USA_the_workers_candidate
 		icon = GFX_focus_ITA_corpo_volontari_della_liberta
-		x = -16
+		x = -12
 		y = 0
 		relative_position_id = USA_continue_the_new_deal
-		cost = 6
+		cost = 2
 
 		ai_will_do = {
 			factor = 1
@@ -241,8 +246,8 @@ focus_tree = {
 		
 		mutually_exclusive = { 
 			focus = USA_continue_the_new_deal
-			focus = USA_revolt_of_engineers
 			focus = USA_towards_national_utopia
+			focus = USA_republicans_in_the_white_house
 		}
 
 		cancel_if_invalid = yes
@@ -250,14 +255,68 @@ focus_tree = {
 		available_if_capitulated = no
 		search_filters = {FOCUS_FILTER_POLITICAL}
 		completion_reward = {
-			
+			country_event = vr_usa.16
+		}
+	}
+	
+	focus = {
+		id = USA_black_self_determination
+		icon = GFX_focus_RAJ_give_me_blood_and_i_will_grant_you_freedom
+		x = -13
+		y = 1
+		relative_position_id = USA_continue_the_new_deal
+		cost = 2
+		prerequisite = { focus = USA_the_workers_candidate }
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			OR = {
+				has_government = communism
+				has_government = socialist
+			}
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		completion_reward = {
+			country_event = vr_usa.16
 		}
 	}
 
 	focus = {
-		id = USA_foster_path
-		icon = GFX_focus_por_workers_of_iberia
-		x = -4
+		id = USA_arsenal_of_socialism
+		icon = GFX_focus_generic_communist_industry
+		x = -11
+		y = 1
+		relative_position_id = USA_continue_the_new_deal
+		cost = 2
+		prerequisite = { focus = USA_the_workers_candidate }
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			OR = {
+				has_government = communism
+				has_government = socialist
+			}
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		completion_reward = {
+			country_event = vr_usa.16
+		}
+	}
+
+	focus = {
+		id = USA_red_november
+		icon = GFX_focus_GER_the_peoples_victory
+		x = -5
 		y = 1
 		relative_position_id = USA_the_workers_candidate
 		cost = 6
@@ -268,7 +327,94 @@ focus_tree = {
 			factor = 1
 		}
 		available = {
+			has_government = communism
+		}
+		
+		bypass = {
 
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = USA_establish_workers_councils
+		icon = GFX_focus_ITA_corpo_volontari_della_liberta
+		x = -2
+		y = 1
+		relative_position_id = USA_red_november
+		cost = 6
+		prerequisite = {
+			focus = USA_red_november
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			has_government = communism
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = USA_central_executive_committee
+		icon = GFX_focus_GER_proletarian_dictatorship
+		x = 2
+		y = 1
+		relative_position_id = USA_red_november
+		cost = 6
+		prerequisite = {
+			focus = USA_red_november
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			has_government = communism
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = USA_principle_of_recall
+		icon = GFX_focus_generic_military_academy
+		x = -3
+		y = 2
+		relative_position_id = USA_red_november
+		cost = 6
+		prerequisite = {
+			focus = USA_establish_workers_councils
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			has_government = communism
 		}
 		
 		bypass = {
@@ -283,9 +429,506 @@ focus_tree = {
 		}
 	}
 	focus = {
+		id = USA_smash_bourgouise_consitution
+		icon = GFX_focus_generic_crush_capitalism
+		x = -1
+		y = 2
+		relative_position_id = USA_red_november
+		cost = 6
+		prerequisite = {
+			focus = USA_establish_workers_councils
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			has_government = communism
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = USA_strike_the_establishment
+		icon = GFX_focus_GER_wage_war_on_capitalism
+		x = 1
+		y = 2
+		relative_position_id = USA_red_november
+		cost = 6
+		prerequisite = {
+			focus = USA_central_executive_committee
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			has_government = communism
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		completion_reward = {
+		}
+	}
+	focus = {
+		id = USA_reorganization_of_industry
+		icon = GFX_FRA_agro_industrial_federation
+		x = 3
+		y = 2
+		relative_position_id = USA_red_november
+		cost = 6
+		prerequisite = {
+			focus = USA_central_executive_committee
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			has_government = communism
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = USA_establish_new_govs
+		icon = GFX_focus_generic_soviet_politics
+		x = -4
+		y = 3
+		relative_position_id = USA_red_november
+		cost = 6
+		prerequisite = {
+			focus = USA_principle_of_recall
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			has_government = communism
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = USA_red_army_of_america
+		icon = GFX_focus_SOV_the_glory_of_the_red_army_communism
+		x = -3
+		y = 4
+		relative_position_id = USA_red_november
+		cost = 6
+		prerequisite = {
+			focus = USA_principle_of_recall
+		}
+		prerequisite = {
+			focus = USA_council_of_commissars
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			has_government = communism
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = USA_state_schooling_revolution
+		icon = GFX_focus_generic_socialist_science
+		x = -2
+		y = 3
+		relative_position_id = USA_red_november
+		cost = 6
+		prerequisite = {
+			focus = USA_principle_of_recall
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			has_government = communism
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		completion_reward = {
+		}
+	}
+	
+	focus = {
+		id = USA_culture_of_proletariat
+		icon = GFX_focus_BRA_state_atheism
+		x = -1
+		y = 4
+		relative_position_id = USA_red_november
+		cost = 6
+		prerequisite = {
+			focus = USA_council_of_commissars
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			has_government = communism
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = USA_council_of_commissars
+		icon = GFX_focus_SOV_the_supreme_soviet
+		x = 0
+		y = 3
+		relative_position_id = USA_red_november
+		cost = 6
+		prerequisite = {
+			focus = USA_smash_bourgouise_consitution
+		}
+		prerequisite = {
+			focus = USA_strike_the_establishment
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			has_government = communism
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		completion_reward = {
+			start_civil_war = {
+				ideology = reactionary
+				size = 0.25
+				capital = 365
+				states = {
+					365 367 364 370 366 1690 1691 1692 1689
+				}
+				keep_political_leader = yes
+				keep_political_party_members = yes
+				recruit_character = USA_charles_lindbergh
+				promote_character = USA_charles_lindbergh
+			}
+		}
+	}
+	
+	focus = {
+		id = USA_accomplish_the_new_world_revolutions
+		icon = GFX_focus_BRA_create_faction
+		x = -1
+		y = 6
+		relative_position_id = USA_red_november
+		cost = 6
+		prerequisite = {
+			focus = USA_american_comintern
+			focus = USA_solidarity_with_soviets
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			has_government = communism
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = USA_centralized_industrial_planning
+		icon = GFX_focus_SOV_merge_plants
+		x = 1
+		y = 4
+		relative_position_id = USA_red_november
+		cost = 6
+		prerequisite = {
+			focus = USA_council_of_commissars
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			has_government = communism
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = USA_state_farm_program
+		icon = GFX_focus_GER_proletarian_solidarity
+		x = 3
+		y = 4
+		relative_position_id = USA_red_november
+		cost = 6
+		prerequisite = {
+			focus = USA_reorganization_of_industry
+		}
+		prerequisite = {
+			focus = USA_council_of_commissars
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			has_government = communism
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		completion_reward = {
+		}
+	}
+	
+	focus = {
+		id = USA_eliminate_market_anarchy
+		icon = GFX_focus_CHI_planned_economy
+		x = 2
+		y = 3
+		relative_position_id = USA_red_november
+		cost = 6
+		prerequisite = {
+			focus = USA_reorganization_of_industry
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			has_government = communism
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = USA_bolshevism_against_bankers
+		icon = GFX_focus_SOV_the_last_purge
+		x = 4
+		y = 3
+		relative_position_id = USA_red_november
+		cost = 6
+		prerequisite = {
+			focus = USA_reorganization_of_industry
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			has_government = communism
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = USA_american_comintern
+		icon = GFX_focus_BRA_north_and_south_america
+		x = -2
+		y = 5
+		relative_position_id = USA_red_november
+		cost = 6
+		prerequisite = {
+			focus = USA_council_of_commissars
+		}
+		prerequisite = {
+			focus = USA_culture_of_proletariat
+			focus = USA_centralized_industrial_planning
+		}
+		mutually_exclusive = {
+			focus = USA_solidarity_with_soviets
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			has_government = communism
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		completion_reward = {
+		}
+	}
+	
+	focus = {
+		id = USA_solidarity_with_soviets
+		icon = GFX_focus_SOV_proclaim_soviet_hegemony
+		x = 2
+		y = 5
+		relative_position_id = USA_red_november
+		cost = 6
+		prerequisite = {
+			focus = USA_council_of_commissars
+		}
+		prerequisite = {
+			focus = USA_culture_of_proletariat
+			focus = USA_centralized_industrial_planning
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			has_government = communism
+		}
+		mutually_exclusive = {
+			focus = USA_american_comintern
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		completion_reward = {
+		}
+	}
+	
+	focus = {
+		id = USA_towards_continental_union
+		icon = GFX_AUS_central_committee
+		x = 1
+		y = 6
+		relative_position_id = USA_red_november
+		cost = 6
+		prerequisite = {
+			focus = USA_american_comintern
+			focus = USA_solidarity_with_soviets
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			has_government = communism
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		completion_reward = {
+		}
+	}
+
+	focus = {
 		id = USA_communism_as_american_apple_pie
 		icon = GFX_focus_por_workers_of_iberia
-		x = 4
+		x = 5
 		y = 1
 		relative_position_id = USA_the_workers_candidate
 		cost = 6
@@ -296,7 +939,7 @@ focus_tree = {
 			factor = 1
 		}
 		available = {
-
+			has_government = socialist
 		}
 		
 		bypass = {
@@ -314,7 +957,7 @@ focus_tree = {
 	focus = {
 		id = USA_lincolns_america
 		icon = GFX_focus_generic_befriend_usa
-		x = 4
+		x = 5
 		y = 2
 		relative_position_id = USA_the_workers_candidate
 		cost = 6
@@ -343,7 +986,7 @@ focus_tree = {
 	focus = {
 		id = USA_end_segregation
 		icon = GFX_focus_NORDIC_com_institution_1
-		x = 4
+		x = 5
 		y = 5
 		relative_position_id = USA_the_workers_candidate
 		cost = 6
@@ -372,7 +1015,7 @@ focus_tree = {
 	focus = {
 		id = USA_the_peoples_deal
 		icon = GFX_focus_FIN_socialist_welfare
-		x = 6
+		x = 7
 		y = 2
 		relative_position_id = USA_the_workers_candidate
 		cost = 6
@@ -398,7 +1041,7 @@ focus_tree = {
 	focus = {
 		id = USA_american_recovery_program
 		icon = GFX_focus_NORDIC_com_selector_civilian
-		x = 5
+		x = 6
 		y = 3
 		relative_position_id = USA_the_workers_candidate
 		cost = 6
@@ -417,12 +1060,13 @@ focus_tree = {
 		available_if_capitulated = no
 		search_filters = {FOCUS_FILTER_POLITICAL}
 		completion_reward = {
+			USA_great_depression_level_down = yes
 		}
 	}
 	focus = {
 		id = USA_industrial_democracy
 		icon = GFX_focus_NORDIC_com_institution_2
-		x = 7
+		x = 8
 		y = 3
 		relative_position_id = USA_the_workers_candidate
 		cost = 6
@@ -446,7 +1090,7 @@ focus_tree = {
 	focus = {
 		id = USA_national_planning_councils
 		icon = GFX_focus_NORDIC_com_capstone_materiel
-		x = 7
+		x = 8
 		y = 4
 		relative_position_id = USA_the_workers_candidate
 		cost = 6
@@ -465,12 +1109,13 @@ focus_tree = {
 		available_if_capitulated = no
 		search_filters = {FOCUS_FILTER_POLITICAL}
 		completion_reward = {
+			USA_great_depression_level_down = yes
 		}
 	}
 	focus = {
 		id = USA_public_industry
 		icon = GFX_focus_NORDIC_com_civilian
-		x = 5
+		x = 6
 		y = 4
 		relative_position_id = USA_the_workers_candidate
 		cost = 6
@@ -492,9 +1137,9 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = USA_forge_the_popular_front
+		id = USA_entrentch_the_popular_front
 		icon = GFX_focus_generic_communism_anti_fascism
-		x = 2
+		x = 3
 		y = 2
 		relative_position_id = USA_the_workers_candidate
 		cost = 6
@@ -520,12 +1165,12 @@ focus_tree = {
 	focus = {
 		id = USA_alliance_with_new_dealers
 		icon = GFX_focus_generic_social_democracy
-		x = 1
+		x = 2
 		y = 3
 		relative_position_id = USA_the_workers_candidate
 		cost = 6
 		prerequisite = {
-			focus = USA_forge_the_popular_front
+			focus = USA_entrentch_the_popular_front
 		}
 		ai_will_do = {
 			factor = 1
@@ -544,12 +1189,12 @@ focus_tree = {
 	focus = {
 		id = USA_suspend_the_persecution
 		icon = GFX_focus_AUS_lawmaking_leniency
-		x = 3
+		x = 4
 		y = 3
 		relative_position_id = USA_the_workers_candidate
 		cost = 6
 		prerequisite = {
-			focus = USA_forge_the_popular_front
+			focus = USA_entrentch_the_popular_front
 		}
 		ai_will_do = {
 			factor = 1
@@ -568,7 +1213,7 @@ focus_tree = {
 	focus = {
 		id = USA_force_CIO_AFL_merger
 		icon = GFX_focus_ITA_corpo_volontari_della_liberta
-		x = 3
+		x = 4
 		y = 4
 		relative_position_id = USA_the_workers_candidate
 		cost = 6
@@ -591,8 +1236,8 @@ focus_tree = {
 	}
 	focus = {
 		id = USA_empower_the_voice_of_labor
-		icon = GFX_focus_generic_workers
-		x = 1
+		icon = GFX_BBR_state_employement
+		x = 2
 		y = 4
 		relative_position_id = USA_the_workers_candidate
 		cost = 6
@@ -616,7 +1261,7 @@ focus_tree = {
 	focus = {
 		id = USA_socialism_the_american_way
 		icon = GFX_focus_usa_guarantee_the_american_dream
-		x = 2
+		x = 3
 		y = 5
 		relative_position_id = USA_the_workers_candidate
 		cost = 6
@@ -643,7 +1288,7 @@ focus_tree = {
 	focus = {
 		id = USA_federal_congress_of_labor
 		icon = GFX_focus_SOV_the_supreme_soviet
-		x = 6
+		x = 7
 		y = 5
 		relative_position_id = USA_the_workers_candidate
 		cost = 6
@@ -670,7 +1315,7 @@ focus_tree = {
 	focus = {
 		id = USA_peoples_unity_government
 		icon = GFX_goal_generic_national_unity
-		x = 2
+		x = 3
 		y = 6
 		relative_position_id = USA_the_workers_candidate
 		cost = 6
@@ -694,7 +1339,7 @@ focus_tree = {
 	focus = {
 		id = USA_a_popular_mandate
 		icon = GFX_focus_generic_soviet_politics
-		x = 4
+		x = 5
 		y = 6
 		relative_position_id = USA_the_workers_candidate
 		cost = 6
@@ -716,9 +1361,9 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = USA_farmer_labor_front
+		id = USA_farm_supply_stations
 		icon = GFX_focus_generic_workers_and_farmers_rise
-		x = 6
+		x = 7
 		y = 6
 		relative_position_id = USA_the_workers_candidate
 		cost = 6
@@ -737,18 +1382,19 @@ focus_tree = {
 		available_if_capitulated = no
 		search_filters = {FOCUS_FILTER_POLITICAL}
 		completion_reward = {
+			USA_great_depression_level_down = yes
 		}
 	}
 	focus = {
 		id = USA_a_brighter_shade_of_crimson
 		icon = GFX_focus_generic_spur_communist_revolutions
-		x = 5
+		x = 6
 		y = 7
 		relative_position_id = USA_the_workers_candidate
 		cost = 6
 		prerequisite = {
 			focus = USA_a_popular_mandate
-			focus = USA_farmer_labor_front
+			focus = USA_farm_supply_stations
 		}
 		mutually_exclusive = {
 			focus = USA_red_american_dream
@@ -772,7 +1418,7 @@ focus_tree = {
 	focus = {
 		id = USA_red_american_dream
 		icon = GFX_focus_JAP_a_free_asia_pacific
-		x = 3
+		x = 4
 		y = 7
 		relative_position_id = USA_the_workers_candidate
 		cost = 6
@@ -798,13 +1444,899 @@ focus_tree = {
 			set_cosmetic_tag = USA_PCA
 		}
 	}
+
+	focus = {
+		id = USA_confront_global_reaction
+		icon = GFX_focus_generic_crush_capitalism
+		x = 5
+		y = 8
+		relative_position_id = USA_the_workers_candidate
+		cost = 6
+		prerequisite = {
+			focus = USA_a_popular_mandate
+		}
+		prerequisite = {
+			focus = USA_red_american_dream
+			focus = USA_a_brighter_shade_of_crimson
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		completion_reward = {
+			set_cosmetic_tag = USA_PCA
+		}
+	}
+	
+	focus = {
+		id = USA_silver_shirts_march
+		icon = GFX_focus_ARG_the_american_push
+		x = 0
+		y = 9
+		relative_position_id = USA_the_workers_candidate
+		cost = 6
+
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			has_government = reactionary
+			date > 1936.11.8
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		completion_reward = {
+			
+		}
+	}
+	focus = {
+		id = USA_purify_the_nation
+		icon = GFX_focus_generic_conspiracy
+		x = -1
+		y = 1
+		relative_position_id = USA_silver_shirts_march
+		cost = 6
+		prerequisite = { 
+			focus = USA_silver_shirts_march
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			has_government = reactionary
+			date > 1936.11.8
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {
+		id = USA_legionary_administrators
+		icon = GFX_focus_usa_honor_the_confederacy
+		x = 1
+		y = 1
+		relative_position_id = USA_silver_shirts_march
+		cost = 6
+		prerequisite = { 
+			focus = USA_silver_shirts_march
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			has_government = reactionary
+			date > 1936.11.8
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {
+		id = USA_american_revelation
+		icon = GFX_focus_generic_strike_at_democracy2
+		x = -2
+		y = 2
+		relative_position_id = USA_silver_shirts_march
+		cost = 6
+		prerequisite = { 
+			focus = USA_purify_the_nation
+		}
+		prerequisite = {
+			focus = USA_legionary_administrators
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		mutually_exclusive = {
+			focus = USA_national_christian_state
+		}
+		available = {
+			has_government = reactionary
+			date > 1936.11.8
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {
+		id = USA_national_christian_state
+		icon = GFX_focus_BEL_christian_corporatism
+		x = 2
+		y = 2
+		relative_position_id = USA_silver_shirts_march
+		cost = 6
+		prerequisite = { 
+			focus = USA_purify_the_nation
+		}
+		prerequisite = {
+			focus = USA_legionary_administrators
+		}
+		mutually_exclusive = {
+			focus = USA_american_revelation
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			has_government = reactionary
+			date > 1936.11.8
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {
+		id = USA_a_new_gold_standard
+		icon = GFX_focus_generic_worker_administration
+		x = 0
+		y = 3
+		relative_position_id = USA_silver_shirts_march
+		cost = 6
+		prerequisite = { 
+			focus = USA_american_revelation
+			focus = USA_national_christian_state
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			has_government = reactionary
+			date > 1936.11.8
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {
+		id = USA_legionary_labor_battalions
+		icon = GFX_focus_ITA_generic_fascist_workers
+		x = 0
+		y = 4
+		relative_position_id = USA_silver_shirts_march
+		cost = 6
+		prerequisite = { 
+			focus = USA_a_new_gold_standard
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			has_government = reactionary
+			date > 1936.11.8
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		completion_reward = {
+			
+		}
+	}
+	
+	focus = {
+		id = USA_a_christian_economic_miracle
+		icon = GFX_focus_generic_happy_cheer
+		x = 0
+		y = 5
+		relative_position_id = USA_silver_shirts_march
+		cost = 6
+		prerequisite = { 
+			focus = USA_legionary_labor_battalions
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			has_government = reactionary
+			date > 1936.11.8
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		completion_reward = {
+			
+		}
+	}
+	
+	focus = {
+		id = USA_mine_eyes_have_seen_the_glory
+		icon = GFX_focus_RAJ_the_sun_sets
+		x = 0
+		y = 7
+		relative_position_id = USA_silver_shirts_march
+		cost = 6
+		prerequisite = { 
+			focus = USA_a_christian_economic_miracle
+		}
+		prerequisite = { 
+			focus = USA_americas_spiritual_destiny
+			focus = USA_rebuild_small_town_nation
+		}
+		prerequisite = { 
+			focus = USA_the_silver_crusade
+			focus = USA_moral_reconstruction_campaign
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			has_government = reactionary
+			date > 1936.11.8
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {
+		id = USA_denounce_godless_commnism
+		icon = GFX_focus_GER_end_european_communism
+		x = 0
+		y = 1
+		relative_position_id = USA_national_christian_state
+		cost = 6
+		prerequisite = { 
+			focus = USA_national_christian_state
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			has_government = reactionary
+			date > 1936.11.8
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {
+		id = USA_legionary_civil_service
+		icon = GFX_focus_generic_advanced_military_studies
+		x = 2
+		y = 1
+		relative_position_id = USA_national_christian_state
+		cost = 6
+		prerequisite = { 
+			focus = USA_national_christian_state
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			has_government = reactionary
+			date > 1936.11.8
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		completion_reward = {
+			
+		}
+	}
+	
+	focus = {
+		id = USA_corporatist_reconstruction
+		icon = GFX_focus_ICE_state_corporatism
+		x = 4
+		y = 1
+		relative_position_id = USA_national_christian_state
+		cost = 6
+		prerequisite = { 
+			focus = USA_national_christian_state
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			has_government = reactionary
+			date > 1936.11.8
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		completion_reward = {
+			
+		}
+	}
+	focus = {
+		id = USA_the_crusader_army
+		icon = GFX_focus_PHI_united_states_army_forces_in_the_far_east
+		x = 0
+		y = 2
+		relative_position_id = USA_national_christian_state
+		cost = 6
+		prerequisite = { 
+			focus = USA_denounce_godless_commnism
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			has_government = reactionary
+			date > 1936.11.8
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {
+		id = USA_restore_american_spirit
+		icon = GFX_focus_generic_the_giant_wakes
+		x = 2
+		y = 2
+		relative_position_id = USA_national_christian_state
+		cost = 6
+		prerequisite = { 
+			focus = USA_denounce_godless_commnism
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			has_government = reactionary
+			date > 1936.11.8
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {
+		id = USA_legionary_armed_forces
+		icon = GFX_focus_usa_recruit_the_free_corps
+		x = 4
+		y = 2
+		relative_position_id = USA_national_christian_state
+		cost = 6
+		prerequisite = { 
+			focus = USA_denounce_godless_commnism
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			has_government = reactionary
+			date > 1936.11.8
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		completion_reward = {
+			
+		}
+	}
+	
+	focus = {
+		id = USA_a_continental_destiny
+		icon = GFX_focus_GER_establish_protectorates_in_america
+		x = 0
+		y = 3
+		relative_position_id = USA_national_christian_state
+		cost = 6
+		prerequisite = { 
+			focus = USA_the_crusader_army
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			has_government = reactionary
+			date > 1936.11.8
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {
+		id = USA_managed_democracy
+		icon = GFX_focus_CHI_demonstrate_our_resolve
+		x = 2
+		y = 3
+		relative_position_id = USA_national_christian_state
+		cost = 6
+		prerequisite = { 
+			focus = USA_the_crusader_army
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			has_government = reactionary
+			date > 1936.11.8
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {
+		id = USA_christian_youth_movement
+		icon = GFX_youth_militias
+		x = 4
+		y = 3
+		relative_position_id = USA_national_christian_state
+		cost = 6
+		prerequisite = { 
+			focus = USA_the_crusader_army
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			has_government = reactionary
+			date > 1936.11.8
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {
+		id = USA_moral_reconstruction_campaign
+		icon = GFX_focus_generic_full_employment
+		x = 2
+		y = 4
+		relative_position_id = USA_national_christian_state
+		cost = 6
+
+		prerequisite = {
+			focus = USA_a_continental_destiny
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			has_government = reactionary
+			date > 1936.11.8
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {
+		id = USA_rebuild_small_town_nation
+		icon = GFX_focus_usa_guarantee_the_american_dream
+		x = 0
+		y = 4
+		relative_position_id = USA_national_christian_state
+		cost = 6
+		prerequisite = { 
+			focus = USA_a_continental_destiny
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			has_government = reactionary
+			date > 1936.11.8
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {
+		id = USA_astral_citizenship
+		icon = GFX_focus_RAJ_red_in_the_shadows
+		x = 0
+		y = 1
+		relative_position_id = USA_american_revelation
+		cost = 6
+		prerequisite = { 
+			focus = USA_american_revelation
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			has_government = reactionary
+			date > 1936.11.8
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {
+		id = USA_crusade_against_materialism
+		icon = GFX_focus_RAJ_a_private_military
+		x = -2
+		y = 1
+		relative_position_id = USA_american_revelation
+		cost = 6
+		prerequisite = { 
+			focus = USA_american_revelation
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			has_government = reactionary
+			date > 1936.11.8
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {
+		id = USA_walk_the_sevenfold_path
+		icon = GFX_focus_generic_strike_at_democracy1
+		x = -4
+		y = 1
+		relative_position_id = USA_american_revelation
+		cost = 6
+		prerequisite = { 
+			focus = USA_american_revelation
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			has_government = reactionary
+			date > 1936.11.8
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {
+		id = USA_a_government_of_adepts
+		icon = GFX_focus_RAJ_kingmaker
+		x = 0
+		y = 1
+		relative_position_id = USA_astral_citizenship
+		cost = 6
+		prerequisite = { 
+			focus = USA_astral_citizenship
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			has_government = reactionary
+			date > 1936.11.8
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {
+		id = USA_the_hidden_masters
+		icon = GFX_focus_generic_expropriate_industrialist
+		x = -2
+		y = 1
+		relative_position_id = USA_astral_citizenship
+		cost = 6
+		prerequisite = { 
+			focus = USA_astral_citizenship
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			has_government = reactionary
+			date > 1936.11.8
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {
+		id = USA_the_silver_initiates
+		icon = GFX_goal_generic_dangerous_deal
+		x = -4
+		y = 1
+		relative_position_id = USA_astral_citizenship
+		cost = 6
+		prerequisite = { 
+			focus = USA_astral_citizenship
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			has_government = reactionary
+			date > 1936.11.8
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {
+		id = USA_the_new_millenium_state
+		icon = GFX_focus_hol_united_netherlands
+		x = 0
+		y = 1
+		relative_position_id = USA_a_government_of_adepts
+		cost = 6
+		prerequisite = { 
+			focus = USA_a_government_of_adepts
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			has_government = reactionary
+			date > 1936.11.8
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {
+		id = USA_the_soulcraft_awakening
+		icon = GFX_focus_RAJ_i_am_death
+		x = -2
+		y = 1
+		relative_position_id = USA_a_government_of_adepts
+		cost = 6
+		prerequisite = { 
+			focus = USA_a_government_of_adepts
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			has_government = reactionary
+			date > 1936.11.8
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {
+		id = USA_warriors_of_destiny
+		icon = GFX_focus_generic_fascist_troops
+		x = -4
+		y = 1
+		relative_position_id = USA_a_government_of_adepts
+		cost = 6
+		prerequisite = { 
+			focus = USA_a_government_of_adepts
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			has_government = reactionary
+			date > 1936.11.8
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {
+		id = USA_americas_spiritual_destiny
+		icon = GFX_focus_BEL_order_of_the_golden_lion
+		x = 0
+		y = 1
+		relative_position_id = USA_the_new_millenium_state
+		cost = 6
+		prerequisite = { 
+			focus = USA_the_new_millenium_state
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			has_government = reactionary
+			date > 1936.11.8
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {
+		id = USA_the_silver_crusade
+		icon = GFX_focus_mex_restore_the_army_of_christ
+		x = 0
+		y = 1
+		relative_position_id = USA_the_soulcraft_awakening
+		cost = 6
+		prerequisite = { 
+			focus = USA_the_new_millenium_state
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			has_government = reactionary
+			date > 1936.11.8
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		completion_reward = {
+			
+		}
+	}
 	
 ### NEW FDR FOCI
 
 	focus = {
 		id = USA_wpa
 		icon = GFX_focus_generic_public_works
-		x = -5
+		x = 0
 		y = 1
 		relative_position_id = USA_continue_the_new_deal
 		cost = 6
@@ -824,13 +2356,14 @@ focus_tree = {
 		available_if_capitulated = no
 		search_filters = {FOCUS_FILTER_POLITICAL}
 		completion_reward = {
+			USA_great_depression_level_down = yes
 		}
 	}
 	
 	focus = {
 		id = USA_fair_labor_standards_act
 		icon = GFX_focus_ICE_embrace_the_workers_revolution
-		x = -7
+		x = -2
 		y = 2
 		relative_position_id = USA_continue_the_new_deal
 		cost = 6
@@ -851,13 +2384,14 @@ focus_tree = {
 		search_filters = {FOCUS_FILTER_POLITICAL}
 		completion_reward = {
 			upgrade_labor_law = yes
+			activate_mission = USA_fair_labor_standards_act_dec
 		}
 	}
 
 	focus = {
 		id = USA_social_security_act
 		icon = GFX_focus_generic_welfare
-		x = -5
+		x = 0
 		y = 2
 		relative_position_id = USA_continue_the_new_deal
 		cost = 6
@@ -877,22 +2411,22 @@ focus_tree = {
 		available_if_capitulated = no
 		search_filters = {FOCUS_FILTER_POLITICAL}
 		completion_reward = {
-			upgrade_welfare_law = yes
-			USA_great_depression_level_down = yes
+			activate_mission = USA_social_security_act_dec
+			upgrade_taxation_law = yes
 		}
 	}
 
 	focus = {
 		id = USA_wagner_act_enforcement
 		icon = GFX_focus_generic_workers
-		x = -3
+		x = 2
 		y = 2
 		relative_position_id = USA_continue_the_new_deal
 		cost = 6
 		prerequisite = {
 			focus = USA_wpa
 		}
-		ai_will_do = {
+		ai_will_do = { 
 			factor = 1
 		}
 		available = {
@@ -905,13 +2439,15 @@ focus_tree = {
 		available_if_capitulated = no
 		search_filters = {FOCUS_FILTER_POLITICAL}
 		completion_reward = {
+			add_stability = 0.05
+
 		}
 	}
 
 	focus = {
 		id = USA_united_states_housing_act
 		icon = GFX_focus_usa_guarantee_the_american_dream
-		x = -6
+		x = -1
 		y = 3
 		relative_position_id = USA_continue_the_new_deal
 		cost = 6
@@ -931,13 +2467,15 @@ focus_tree = {
 		available_if_capitulated = no
 		search_filters = {FOCUS_FILTER_POLITICAL}
 		completion_reward = {
+			USA_great_depression_level_down = yes
+			activate_mission = USA_united_states_housing_act_dec
 		}
 	}
 
 	focus = {
 		id = USA_farm_security_administration
 		icon = GFX_focus_generic_farmland
-		x = -4
+		x = 1
 		y = 3
 		relative_position_id = USA_continue_the_new_deal
 		cost = 6
@@ -957,13 +2495,14 @@ focus_tree = {
 		available_if_capitulated = no
 		search_filters = {FOCUS_FILTER_POLITICAL}
 		completion_reward = {
+			add_ideas = USA_farm_security_administration_idea
 		}
 	}
 	
 	focus = {
 		id = USA_consolidate_the_dem_majority
 		icon = GFX_focus_ARG_defense_and_democracy
-		x = -5
+		x = 0
 		y = 4
 		relative_position_id = USA_continue_the_new_deal
 		cost = 6
@@ -989,13 +2528,14 @@ focus_tree = {
 		available_if_capitulated = no
 		search_filters = {FOCUS_FILTER_POLITICAL}
 		completion_reward = {
+			add_popularity = { ideology = democratic popularity = 0.1 }
 		}
 	}
 	
 	focus = {
-		id = USA_judicial_reform_proposal
-		icon = GFX_focus_generic_court
-		x = -7
+		id = USA_bonneville_power_administration
+		icon = GFX_focus_generic_electrification
+		x = -2
 		y = 5
 		relative_position_id = USA_continue_the_new_deal
 		cost = 6
@@ -1016,13 +2556,51 @@ focus_tree = {
 		available_if_capitulated = no
 		search_filters = {FOCUS_FILTER_POLITICAL}
 		completion_reward = {
+			add_tech_bonus = {
+				category = electronics 
+				uses = 2
+				bonus = 0.5
+			}
+			386 = {
+				add_building_construction = {
+					type = energy_infrastructure
+					level = 1
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = dam
+					level = 1
+					instant_build = yes
+				}
+			}
+			378 = {
+				add_building_construction = {
+					type = energy_infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			1561 = {
+				add_building_construction = {
+					type = energy_infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			1167 = {
+				add_building_construction = {
+					type = energy_infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
 		}
 	}
 	
 	focus = {
 		id = USA_the_reorganization_act
-		icon = GFX_focus_CHI_demonstrate_our_resolve
-		x = -5
+		icon = GFX_focus_generic_court
+		x = 0
 		y = 5
 		relative_position_id = USA_continue_the_new_deal
 		cost = 6
@@ -1033,7 +2611,8 @@ focus_tree = {
 			factor = 1
 		}
 		available = {
-
+			democratic > 0.60
+			congress_high_support_trigger = yes
 		}
 		
 
@@ -1042,13 +2621,15 @@ focus_tree = {
 		available_if_capitulated = no
 		search_filters = {FOCUS_FILTER_POLITICAL}
 		completion_reward = {
+			retire_character = USA_george_sutherland
+			custom_effect_tooltip = ToDo
 		}
 	}
 
 	focus = {
 		id = USA_reassure_american_business
 		icon = GFX_focus_generic_american_investments
-		x = -3
+		x = 2
 		y = 5
 		relative_position_id = USA_continue_the_new_deal
 		cost = 6
@@ -1076,7 +2657,7 @@ focus_tree = {
 	focus = {
 		id = USA_expand_white_house_staff
 		icon = GFX_focus_generic_commission
-		x = -6
+		x = -1
 		y = 6
 		relative_position_id = USA_continue_the_new_deal
 		cost = 6
@@ -1102,7 +2683,7 @@ focus_tree = {
 	focus = {
 		id = USA_administrative_management_bill
 		icon = GFX_focus_generic_improve_the_administration_2
-		x = -4
+		x = 1
 		y = 6
 		relative_position_id = USA_continue_the_new_deal
 		cost = 6
@@ -1128,7 +2709,7 @@ focus_tree = {
 	focus = {
 		id = USA_yet_another_4_more_years
 		icon = GFX_focus_generic_social_democracy
-		x = -5
+		x = 0
 		y = 7
 		relative_position_id = USA_continue_the_new_deal
 		cost = 6
@@ -1140,6 +2721,214 @@ focus_tree = {
 		}
 		prerequisite = {
 			focus = USA_administrative_management_bill
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+
+		}
+		
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		completion_reward = {
+			add_stability = 0.1
+			add_war_support = 0.05
+			add_political_power = 60
+		}
+	}
+	
+	focus = {
+		id = USA_breaking_the_two_term_tradition
+		icon = GFX_focus_spr_torchbearers_of_tomorrow
+		x = 0
+		y = 1
+		relative_position_id = USA_yet_another_4_more_years
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			has_government = democratic
+			date > 1940.11.8
+		}
+		
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		completion_reward = {
+		}
+	}
+	
+	focus = {
+		id = USA_smith_act_enforcement
+		icon = GFX_focus_spr_masters_of_our_own_fate
+		x = 0
+		y = 2
+		relative_position_id = USA_yet_another_4_more_years
+		cost = 6
+		prerequisite = {
+			focus = USA_breaking_the_two_term_tradition
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+
+		}
+		
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		completion_reward = {
+		}
+	}
+	
+	focus = {
+		id = USA_war_production_board_formation
+		icon = GFX_focus_generic_reorient_production
+		x = -2
+		y = 2
+		relative_position_id = USA_yet_another_4_more_years
+		cost = 6
+		prerequisite = {
+			focus = USA_breaking_the_two_term_tradition
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+
+		}
+		
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = USA_patrol_greenlands_waters
+		icon = GFX_focus_DEN_protect_greenland
+		x = 2
+		y = 2
+		relative_position_id = USA_yet_another_4_more_years
+		cost = 6
+		prerequisite = {
+			focus = USA_breaking_the_two_term_tradition
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+
+		}
+		
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		completion_reward = {
+		}
+	}
+
+	
+	focus = {
+		id = USA_the_4th_term
+		icon = GFX_focus_generic_the_giant_wakes
+		x = 6
+		y = 1
+		relative_position_id = USA_yet_another_4_more_years
+		cost = 5
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			has_government = democratic
+			date > 1944.11.8
+		}
+		
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		completion_reward = {
+		}
+	}
+	
+	focus = {
+		id = USA_war_reconversion_act
+		icon = GFX_focus_generic_full_employment
+		x = 0
+		y = 1
+		relative_position_id = USA_the_4th_term
+		cost = 6
+		prerequisite = {
+			focus = USA_the_4th_term
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			
+		}
+		
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		completion_reward = {
+		}
+	}
+	
+	focus = {
+		id = USA_propose_united_nations_charter
+		icon = GFX_focus_generic_league_of_nations
+		x = -2
+		y = 1
+		relative_position_id = USA_the_4th_term
+		cost = 6
+		prerequisite = {
+			focus = USA_the_4th_term
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+
+		}
+		
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = USA_the_final_orders
+		icon = GFX_focus_generic_treaty
+		x = 2
+		y = 1
+		relative_position_id = USA_the_4th_term
+		cost = 6
+		prerequisite = {
+			focus = USA_the_4th_term
 		}
 		ai_will_do = {
 			factor = 1
@@ -1166,24 +2955,12 @@ focus_tree = {
 	focus = {
 		id = USA_limited_intervention
 		icon = GFX_goal_generic_territory_or_war
-		prerequisite = { focus = USA_continue_the_new_deal focus = USA_reestablish_the_gold_standard }
+		prerequisite = { focus = USA_continue_the_new_deal focus = USA_republicans_in_the_white_house }
 		mutually_exclusive = { focus = USA_neutrality_act }
 		continue_if_invalid = yes
-		x = 0
+		x = 4
 		y = 1
 		relative_position_id = USA_continue_the_new_deal
-
-		offset = {
-			x = -1
-			y = 0
-			trigger = {
-				has_game_rule = {
-					rule = obsolete_focus_branches_visibility
-					option = HIDE
-				}
-				has_completed_focus = USA_reestablish_the_gold_standard
-			}
-		}
 
 		cost = 6
 		#ai_will_do = {
@@ -1291,18 +3068,6 @@ focus_tree = {
 		x = 0
 		y = 2
 
-		offset = {
-			x = 0
-			y = -1
-			trigger = {
-				has_game_rule = {
-					rule = obsolete_focus_branches_visibility
-					option = HIDE
-				}
-				has_completed_focus = USA_limited_intervention
-			}
-		}
-
 		cost = 6
 		#ai_will_do = {
 		#	factor = 1
@@ -1321,22 +3086,10 @@ focus_tree = {
 	focus = {
 		id = USA_focus_on_europe
 		icon = GFX_focus_usa_focus_on_europe
-		x = -1
+		x = 3
 		y = 3
-		prerequisite = { focus = USA_war_propaganda }
+		prerequisite = { focus = USA_war_propaganda focus = USA_arsenal_of_democracy }
 		relative_position_id = USA_limited_intervention
-
-		offset = {
-			x = 0
-			y = -1
-			trigger = {
-				has_game_rule = {
-					rule = obsolete_focus_branches_visibility
-					option = HIDE
-				}
-				has_completed_focus = USA_limited_intervention
-			}
-		}
 
 		cost = 6
 
@@ -1386,25 +3139,13 @@ focus_tree = {
 	focus = {
 		id = USA_office_of_strategic_services
 		icon = GFX_goal_generic_major_war
-		prerequisite = { focus = USA_focus_on_europe }
+		prerequisite = { focus = USA_war_propaganda focus = USA_arsenal_of_democracy }
 		available = {
 			
 		}
 		x = -1
-		y = 4
+		y = 3
 		relative_position_id = USA_limited_intervention
-
-		offset = {
-			x = 0
-			y = -1
-			trigger = {
-				has_game_rule = {
-					rule = obsolete_focus_branches_visibility
-					option = HIDE
-				}
-				has_completed_focus = USA_limited_intervention
-			}
-		}
 
 		cost = 6
 		ai_will_do = {
@@ -1424,6 +3165,7 @@ focus_tree = {
 			else = {
 				add_ideas = office_of_strategic_services_lar
 			}
+			add_ideas = USA_magic
 		}
 	}
 	focus = {
@@ -1431,20 +3173,8 @@ focus_tree = {
 		icon = GFX_focus_usa_focus_on_asia
 		x = 1
 		y = 3
-		prerequisite = { focus = USA_war_propaganda }
+		prerequisite = { focus = USA_war_propaganda focus = USA_war_propaganda }
 		relative_position_id = USA_limited_intervention
-
-		offset = {
-			x = 0
-			y = -1
-			trigger = {
-				has_game_rule = {
-					rule = obsolete_focus_branches_visibility
-					option = HIDE
-				}
-				has_completed_focus = USA_limited_intervention
-			}
-		}
 
 		cost = 6
 
@@ -1475,25 +3205,12 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = USA_magic
+		id = USA_black_chamber 
 		icon = GFX_goal_generic_radar
-		x = 1
+		x = 2
 		y = 4
-		prerequisite = { focus = USA_focus_on_asia }
+		prerequisite = { focus = USA_focus_on_asia focus = USA_focus_on_europe }
 		relative_position_id = USA_limited_intervention
-
-		offset = {
-			x = 0
-			y = -1
-			trigger = {
-				has_game_rule = {
-					rule = obsolete_focus_branches_visibility
-					option = HIDE
-				}
-				has_completed_focus = USA_limited_intervention
-			}
-		}
-
 		cost = 6
 
 		ai_will_do = {
@@ -1512,36 +3229,6 @@ focus_tree = {
 		continue_if_invalid = no
 		available_if_capitulated = no
 
-		completion_reward = {
-			add_ideas = USA_magic
-		}
-	}
-	focus = {
-		id = USA_black_chamber
-		icon = GFX_goal_generic_military_deal
-		prerequisite = { focus = USA_magic focus = USA_office_of_strategic_services}
-		available = { }
-		x = 1
-		y = 3
-		relative_position_id = USA_war_propaganda
-
-		offset = {
-			x = -1
-			y = 0
-			trigger = {
-				has_game_rule = {
-					rule = obsolete_focus_branches_visibility
-					option = HIDE
-				}
-				has_completed_focus = USA_limited_intervention
-			}
-		}
-
-		cost = 6
-		ai_will_do = {
-			factor = 1
-		}
-		search_filters = {FOCUS_FILTER_RESEARCH}
 		completion_reward = {
 			if = {
 				limit = {
@@ -1566,45 +3253,10 @@ focus_tree = {
 	focus = {
 		id = USA_scientist_haven
 		icon = GFX_focus_research
-		prerequisite = { focus = USA_black_chamber focus = USA_arsenal_of_democracy }
-		x = 1
-		y = 1
+		prerequisite = { focus = USA_war_propaganda focus = USA_arsenal_of_democracy }
+		x = -2
+		y = 0
 		relative_position_id = USA_black_chamber
-
-		offset = {
-			x = -1
-			y = -4
-			trigger = {
-				has_game_rule = {
-					rule = obsolete_focus_branches_visibility
-					option = HIDE
-				}
-				has_completed_focus = USA_neutrality_act
-			}
-		}
-		offset = {
-			x = -1
-			y = 0
-			trigger = {
-				has_game_rule = {
-					rule = obsolete_focus_branches_visibility
-					option = HIDE
-				}
-				has_completed_focus = USA_neutrality_act
-				has_completed_focus = USA_reestablish_the_gold_standard
-			}
-		}
-		offset = {
-			x = -1
-			y = 0
-			trigger = {
-				has_game_rule = {
-					rule = obsolete_focus_branches_visibility
-					option = HIDE
-				}
-				has_completed_focus = USA_limited_intervention
-			}
-		}
 
 		cost = 6
 		#ai_will_do = {
@@ -1624,8 +3276,9 @@ focus_tree = {
 		id = USA_manhattan_project
 		icon = GFX_focus_wonderweapons
 		prerequisite = { focus = USA_scientist_haven }
+		prerequisite = { focus = USA_black_chamber }
 		
-		x = 0
+		x = 1
 		y = 1
 		relative_position_id = USA_scientist_haven
 		cost = 6
@@ -1654,38 +3307,11 @@ focus_tree = {
 	focus = {
 		id = USA_neutrality_act
 		icon = GFX_goal_generic_neutrality_focus
-		x = 4
+		x = 8
 		y = 1
-		prerequisite = { focus = USA_continue_the_new_deal focus = USA_reestablish_the_gold_standard }
+		prerequisite = { focus = USA_continue_the_new_deal focus = USA_republicans_in_the_white_house }
 		mutually_exclusive = { focus = USA_limited_intervention }
 		relative_position_id = USA_continue_the_new_deal
-
-		offset = {
-			x = -1
-			y = 0
-			trigger = {
-				has_game_rule = {
-					rule = obsolete_focus_branches_visibility
-					option = HIDE
-				}
-				OR = {
-					has_completed_focus = USA_reestablish_the_gold_standard
-					has_completed_focus = USA_neutrality_act
-				}
-			}
-		}
-		offset = {
-			x = -2
-			y = 0
-			trigger = {
-				has_game_rule = {
-					rule = obsolete_focus_branches_visibility
-					option = HIDE
-				}
-				has_completed_focus = USA_reestablish_the_gold_standard
-				has_completed_focus = USA_neutrality_act
-			}
-		}
 
 		cost = 6
 
@@ -1772,45 +3398,9 @@ focus_tree = {
 		id = USA_lend_lease_act
 		icon = GFX_focus_generic_treaty
 		x = 2
-		y = 2
+		y = 1
 		prerequisite = { focus = USA_neutrality_act focus = USA_limited_intervention }
 		relative_position_id = USA_limited_intervention
-
-		offset = {
-			x = -1
-			y = -1
-			trigger = {
-				has_game_rule = {
-					rule = obsolete_focus_branches_visibility
-					option = HIDE
-				}
-				NOT = { has_completed_focus = USA_reestablish_the_gold_standard }
-				has_completed_focus = USA_neutrality_act
-			}
-		}
-		offset = {
-			x = -2
-			y = -1
-			trigger = {
-				has_game_rule = {
-					rule = obsolete_focus_branches_visibility
-					option = HIDE
-				}
-				has_completed_focus = USA_reestablish_the_gold_standard
-				has_completed_focus = USA_neutrality_act
-			}
-		}
-		offset = {
-			x = 0
-			y = -1
-			trigger = {
-				has_game_rule = {
-					rule = obsolete_focus_branches_visibility
-					option = HIDE
-				}
-				has_completed_focus = USA_limited_intervention
-			}
-		}
 
 		cost = 6
 
@@ -1931,17 +3521,6 @@ focus_tree = {
 		y = 2
 		relative_position_id = USA_neutrality_act
 
-		offset = {
-			x = 0
-			y = -1
-			trigger = {
-				has_game_rule = {
-					rule = obsolete_focus_branches_visibility
-					option = HIDE
-				}
-				has_completed_focus = USA_neutrality_act
-			}
-		}
 
 		cost = 6
 		ai_will_do = {
@@ -2068,7 +3647,7 @@ focus_tree = {
 	focus = {
 		id = USA_the_giant_wakes
 		icon = GFX_goal_generic_construct_civ_factory
-		prerequisite = { focus = USA_arsenal_of_democracy }
+		prerequisite = { focus = USA_military_construction }
 		available = {
 			OR = {
 				has_war = yes
@@ -2077,7 +3656,7 @@ focus_tree = {
 			democratic > 0.95
 		}
 		continue_if_invalid = yes
-		x = 0
+		x = 1
 		y = 2
 		relative_position_id = USA_arsenal_of_democracy
 		cost = 6
@@ -2117,8 +3696,8 @@ focus_tree = {
 		id = USA_wartime_industry
 		icon = GFX_goal_generic_construct_mil_factory
 		prerequisite = { focus = USA_the_giant_wakes }
-		x = 0
-		y = 2
+		x = -2
+		y = 1
 		relative_position_id = USA_the_giant_wakes
 		cost = 6
 		ai_will_do = {
@@ -2139,7 +3718,7 @@ focus_tree = {
 	focus = {
 		id = USA_military_construction
 		icon = GFX_goal_generic_build_tank
-		prerequisite = { focus = USA_arsenal_of_democracy }
+		prerequisite = { focus = USA_arsenal_of_democracy focus = USA_war_propaganda }
 		
 		available = {
 			OR = {
@@ -2422,7 +4001,7 @@ focus_tree = {
 	focus = {
 		id = USA_USACE_projects
 		icon = GFX_goal_generic_production
-		prerequisite = { focus = USA_military_construction }
+		prerequisite = { focus = USA_the_giant_wakes }
 		available = {
 			OR = {
 				has_war_support > 0.3
@@ -2553,7 +4132,7 @@ focus_tree = {
  	focus = {
 		id = USA_war_plans_division
 		icon = GFX_goal_generic_position_armies
-		x = 56
+		x = 50
 		y = 0
 		
 		cost = 8
@@ -3335,7 +4914,7 @@ focus_tree = {
 	focus = {
 		id = USA_war_department
 		icon = GFX_goal_generic_army_doctrines
-		x = 20
+		x = 18
 		y = 0
 		relative_position_id = USA_war_plans_division
 		
@@ -3387,6 +4966,9 @@ focus_tree = {
 				congress_low_support_trigger = yes
 			}
 			has_completed_focus = USA_total_action_state
+			has_completed_focus = USA_continental_director_ascendent
+			has_completed_focus = USA_council_of_commissars
+			has_completed_focus = USA_legionary_civil_service
 			}
 		}
 		
@@ -3429,7 +5011,7 @@ focus_tree = {
 		id = USA_first_special_service_force
 		icon = GFX_goal_generic_special_forces
 		prerequisite = { focus = USA_selective_training_act }
-		x = -2
+		x = 0
 		y = 1
 		relative_position_id = USA_selective_training_act
 		cost = 8
@@ -3462,8 +5044,8 @@ focus_tree = {
 		id = USA_louisiana_maneuvers
 		icon = GFX_goal_generic_cavalry
 		x = 0
-		y = 1
-		prerequisite = { focus = USA_selective_training_act }
+		y = 2
+		prerequisite = { focus = USA_army_of_the_united_states }
 		relative_position_id = USA_selective_training_act
 		cost = 8
 
@@ -3484,7 +5066,7 @@ focus_tree = {
 		available_if_capitulated = no
 		search_filters = {FOCUS_FILTER_RESEARCH}
 		completion_reward = {
-			army_experience = 20
+			army_experience = 50
 			add_doctrine_cost_reduction = {
 				name = USA_louisiana_maneuvers
 				cost_reduction = 0.5
@@ -3498,7 +5080,7 @@ focus_tree = {
 		icon = GFX_focus_generic_paratrooper
 		x = -2
 		y = 2
-		prerequisite = { focus = USA_louisiana_maneuvers }
+		prerequisite = { focus = USA_army_of_the_united_states }
 		relative_position_id = USA_selective_training_act
 		cost = 8
 
@@ -3537,9 +5119,9 @@ focus_tree = {
 	focus = {
 		id = USA_army_of_the_united_states
 		icon = GFX_focus_generic_little_entente
-		x = 0
-		y = 2
-		prerequisite = { focus = USA_louisiana_maneuvers }
+		x = -2
+		y = 1
+		prerequisite = { focus = USA_selective_training_act }
 		relative_position_id = USA_selective_training_act
 		cost = 8
 
@@ -3561,13 +5143,14 @@ focus_tree = {
 
 		completion_reward = {
 			add_ideas = USA_army_of_the_united_states
+			upgrade_usa_army = yes
 		}
 	}
 	focus = {
 		id = USA_womens_armed_service_integration_act
 		icon = GFX_focus_generic_treaty
-		x = 0
-		y = 3
+		x = -4
+		y = 2
 		prerequisite = { focus = USA_army_of_the_united_states }
 		relative_position_id = USA_selective_training_act
 		cost = 8
@@ -3648,8 +5231,8 @@ focus_tree = {
 		completion_reward = {
 			add_tech_bonus = {
 				name = USA_tank_experiments
-				uses = 1
-				bonus = 1.0
+				uses = 2
+				bonus = 0.65
 				category = armor
 			}
 		}
@@ -3744,9 +5327,9 @@ focus_tree = {
 	focus = {
 		id = USA_armored_infantry
 		icon = GFX_goal_generic_build_tank
-		x = 2
-		y = 4
-		prerequisite = { focus = USA_main_battle_tanks focus = USA_tank_destroyer_doctrine }
+		x = 0
+		y = 3
+		prerequisite = { focus = USA_tank_experiments }
 		relative_position_id = USA_selective_training_act
 		cost = 8
 
@@ -3778,7 +5361,7 @@ focus_tree = {
 	focus = {
 		id = USA_build_the_pentagon
 		icon = GFX_focus_usa_build_the_pentagon
-		x = -1
+		x = 0
 		y = 1
 		prerequisite = { focus = USA_war_department }
 		relative_position_id = USA_war_department
@@ -3802,12 +5385,13 @@ focus_tree = {
 
 		completion_reward = {
 			add_ideas = USA_the_pentagon
+			army_experience = 35
 		}
 	}
 	focus = {
 		id = USA_department_of_defense
 		icon = GFX_goal_generic_military_sphere
-		x = -1
+		x = 0
 		y = 2
 		prerequisite = { focus = USA_build_the_pentagon }
 		relative_position_id = USA_war_department
@@ -3834,6 +5418,56 @@ focus_tree = {
 				remove_idea = USA_war_department
 				add_idea = USA_department_of_defense
 			}
+			upgrade_usa_army = yes
+		}
+	}
+	
+	focus = {
+		id = USA_secure_military_funding
+		icon = GFX_focus_generic_monetary_union
+		x = -2
+		y = 1
+		prerequisite = { focus = USA_war_department }
+		relative_position_id = USA_war_department
+		cost = 8
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			OR  = {
+				AND = {
+					has_war_support > 0.65
+					has_war = yes
+					custom_trigger_tooltip = {
+						tooltip = tt_depression_gone
+						NOT = {
+							has_idea = great_depression
+							has_idea = great_depression_2
+							has_idea = great_depression_3
+							has_idea = great_depression_4
+						}
+					}
+				}
+				AND = {
+					congress_high_support_trigger = yes
+					has_war_support > 0.5
+					has_war = yes
+				}
+			}
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			upgrade_usa_army = yes
 		}
 	}
 
@@ -3848,7 +5482,7 @@ focus_tree = {
 	focus = {
 		id = USA_air_war_plans_division
 		icon = GFX_goal_generic_build_airforce
-		x = 2
+		x = 3
 		y = 1
 		cost = 8
 		#ai_will_do = {
@@ -3860,7 +5494,7 @@ focus_tree = {
 		search_filters = {FOCUS_FILTER_RESEARCH}
 	
 		completion_reward = {
-			air_experience = 25
+			air_experience = 35
 			add_doctrine_cost_reduction = {
 				name = USA_air_war_plans_division
 				cost_reduction = 0.5
@@ -4111,7 +5745,7 @@ focus_tree = {
 	focus = {
 		id = USA_two_ocean_navy_act
 		icon = GFX_focus_generic_navy_battleship2
-		x = 8
+		x = 9
 		y = 1
 		prerequisite = { focus = USA_war_department }
 		relative_position_id = USA_war_department
@@ -4136,7 +5770,7 @@ focus_tree = {
 			has_completed_focus = USA_total_action_state
 			}
 			controls_state = 378
-			controls_state = 358
+			controls_state = 1643
 		}
 		
 		bypass = {
@@ -4156,7 +5790,7 @@ focus_tree = {
 					instant_build = yes
 				}
 			}
-			358 = { 
+			1643 = { 
 				add_extra_state_shared_building_slots = 5
 				add_building_construction = {
 					type = dockyard
@@ -4194,7 +5828,7 @@ focus_tree = {
 			}
 			if = { 
 				limit = { 
-					358 = {
+					1643 = {
 						free_building_slots = {
 							building = dockyard
 							size > 4
@@ -4202,7 +5836,7 @@ focus_tree = {
 						}
 					}
 				}
-				358 = { 
+				1643 = { 
 					add_extra_state_shared_building_slots = 5
 					add_building_construction = {
 						type = dockyard
@@ -4246,9 +5880,9 @@ focus_tree = {
 	focus = {
 		id = USA_liberty_ships
 		icon = GFX_goal_generic_amphibious_assault
-		prerequisite = { focus = USA_maritime_commission }
-		x = -3
-		y = 2
+		prerequisite = { focus = USA_two_ocean_navy_act }
+		x = -1
+		y = 1
 		relative_position_id = USA_two_ocean_navy_act
 		cost = 8
 		#ai_will_do = {
@@ -4339,9 +5973,9 @@ focus_tree = {
 	focus = {
 		id = USA_advanced_basing
 		icon = GFX_goal_generic_occupy_states_coastal
-		x = 0
-		y = 2
-		prerequisite = { focus = USA_advanced_mahanian_doctrine }
+		x = -2
+		y = 0
+		prerequisite = { focus = USA_bureau_of_ships }
 		relative_position_id = USA_battleship_primacy
 		cost = 8
 
@@ -4444,9 +6078,9 @@ focus_tree = {
 	focus = {
 		id = USA_naval_radar
 		icon = GFX_goal_generic_radar
-		x = 0
+		x = 1
 		y = 1
-		prerequisite = { focus = USA_bureau_of_aeronautics }
+		prerequisite = { focus = USA_bureau_of_ships }
 		relative_position_id = USA_bureau_of_aeronautics
 		cost = 8
 
@@ -4683,7 +6317,7 @@ focus_tree = {
 	focus = {
 		id = USA_towards_national_utopia
 		icon = GFX_focus_generic_population_growth
-		x = 38
+		x = 34
 		y = 2
 		
 		cost = 5
@@ -4693,8 +6327,8 @@ focus_tree = {
 		}
 		mutually_exclusive = { 
 			focus = USA_continue_the_new_deal
-			focus = USA_revolt_of_engineers
 			focus = USA_the_workers_candidate
+			focus = USA_republicans_in_the_white_house
 		}
 
 		available = {
@@ -5068,8 +6702,7 @@ focus_tree = {
 		continue_if_invalid = no
 		available_if_capitulated = no
 		completion_reward = {
-			country_event = { id= pound.13 days = 3 }
-			set_capital = {state = 358}
+			set_capital = {	state = 1643 }
 			set_province_name = {
    			 	id = 3878
     			name = "New Olympos"
@@ -5278,12 +6911,14 @@ focus_tree = {
 		available_if_capitulated = no
 		search_filters = {FOCUS_FILTER_INDUSTRY FOCUS_FILTER_STABILITY FOCUS_FILTER_USA_CONGRESS}
 		completion_reward = {
-			add_timed_idea = { idea = USA_creative_drive days = 120 }
+			USA_great_depression_level_down = yes
 			add_power_balance_value = {
 				id = USA_power_balance
 				value = 0.08
 			}
+			add_timed_idea = { idea = USA_creative_drive days = 120 }
 			custom_effect_tooltip = "You will be granted +20% stability upon the removal of this spirit."
+			
 		}
 	}
 	focus = {
@@ -5385,41 +7020,6 @@ focus_tree = {
     			trait = light_bearer
 			}
 			custom_effect_tooltip = wholesomedotpng
-		}
-	}
-	focus = {
-		id = USA_no_sin
-		icon = GFX_focus_spr_torchbearers_of_tomorrow
-		relative_position_id = USA_towards_national_utopia
-		x = -1
-		y = 9
-		cost = 6
-		prerequisite = {
-			focus = USA_light_of_civilization
-		}
-		ai_will_do = {
-			factor = 1
-		}
-		available = {
-			has_government = fascism
-			has_country_leader = { ruling_only = yes character = USA_ezra_pound }
-		}
-
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
-		search_filters = {FOCUS_FILTER_INDUSTRY FOCUS_FILTER_STABILITY }
-		completion_reward = {
-			add_trait = {
-    			character = USA_Ezra_Pound
-    			ideology = fascism_ideology
-    			trait = light_bearer
-			}
-			add_power_balance_value = {
-				id = USA_power_balance
-				value = -0.08
-			}
-			
 		}
 	}
 	focus = {
@@ -6016,399 +7616,316 @@ focus_tree = {
 		}
 	}
 
-	### POUND SUCCESSORS 
+	### POUND SUCCESSORS -- REMOVED FOR NOW
+
+	### Republican Tree - Landon ###
 	focus = {
-		id = USA_fall_of_prometheus
-		x = 56
-		y = 7
-		
-		cost = 2
-		ai_will_do = {
-			factor = 10
+		id = USA_republicans_in_the_white_house
+		icon = GFX_focus_chi_mission_to_the_us
+		mutually_exclusive = { 
+			focus = USA_towards_national_utopia
+			focus = USA_the_workers_candidate
+			focus = USA_continue_the_new_deal
 		}
-		icon = GFX_goal_generic_attack_allies
 		available = {
-			has_government = fascism
-			NOT = { has_country_leader = { ruling_only = yes character = USA_Ezra_Pound } }
-			has_country_flag = PoundDead
+			has_government = conservative
+			date > 1936.11.8
 		}
-
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
-		completion_reward = {
-			country_event = { id = pound.12 days = 0 }
-			remove_ideas = USA_ubermensch_council
-			remove_power_balance = { id = USA_power_balance }
-		}
-	}
-
-	# Dennis
-	
-	# Yockey
-	focus = {
-		id = USA_prophecy_of_imperium
-		x = 3
-		y = 1
-		
+		x = 14
+		y = 0
+		relative_position_id = USA_continue_the_new_deal
 		cost = 5
 		ai_will_do = {
 			factor = 10
 		}
-		relative_position_id = USA_fall_of_prometheus
-		prerequisite = { focus = USA_fall_of_prometheus }
-		icon = GFX_focus_ITA_mare_nostrum
-		available = {
-			has_government = fascism
-			has_country_leader = { ruling_only = yes character = USA_francis_yockey }
-			has_country_flag = PoundDead
-		}
-
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
 		completion_reward = {
-			remove_ideas = USA_state_of_utopia
-			add_political_power = 50
-			set_cosmetic_tag = YOCK
-		}
-	}
-	focus = {
-		id = USA_rise_of_authority
-		x = -1
-		y = 1
-		
-		cost = 5
-		ai_will_do = {
-			factor = 10
-		}
-		relative_position_id = USA_prophecy_of_imperium
-		prerequisite = { focus = USA_prophecy_of_imperium }
-		icon = GFX_focus_GER_expand_ss_security_duties
-		available = {
-			has_government = fascism
-			has_country_leader = { ruling_only = yes character = USA_francis_yockey }
-			has_country_flag = PoundDead
-		}
 
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
-		completion_reward = {
-			set_war_support = 1
-			add_ideas = USA_resurgence_of_authority
-			retire_character = USA_howard_scott
-			retire_character = USA_Ernest_Hemmingway
-			retire_character = USA_George_Christians
-			add_trait = {
-				character = USA_francis_yockey
-   				ideology = nazism
-   				trait = prophet_of_imperium
-			}
-			country_event = { id = yock.1 days = 0 }
-			custom_effect_tooltip = "New ministers will become available!"
 		}
 	}
-	focus = {
-		id = USA_destroy_cultural_distortion
-		x = 1
-		y = 1
-		
-		cost = 5
-		ai_will_do = {
-			factor = 10
-		}
-		relative_position_id = USA_prophecy_of_imperium
-		prerequisite = { focus = USA_prophecy_of_imperium }
-		icon = GFX_focus_GER_strafbataillon
-		available = {
-			has_government = fascism
-			has_country_leader = { ruling_only = yes character = USA_francis_yockey }
-			has_country_flag = PoundDead
-		}
 
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
-		completion_reward = {
-			add_popularity = { ideology = democratic popularity = -1 }
-			add_popularity = { ideology = communism popularity = -1 }
-			add_popularity = { ideology = neutrality popularity = -1 }
-			unlock_decision_category_tooltip = USA_fight_for_western_civilization
-			add_doctrine_cost_reduction = {
-				cost_reduction = 0.5
-				uses = 2
-				category = special_forces_doctrine
-			}	
-			add_timed_idea = {
-				idea = USA_war_for_west
-				days = 125
-			}
-			custom_effect_tooltip = "You will gain a new spirit when the timed spirit is removed."
-		}
-	}
 	focus = {
-		id = USA_european_liberation_front
+		id = USA_the_sunflower_president
+		icon = GFX_focus_ARG_army
+		prerequisite = { focus = USA_republicans_in_the_white_house }
 		x = -2
-		y = 2
-		
+		y = 1
+		relative_position_id = USA_republicans_in_the_white_house
 		cost = 5
 		ai_will_do = {
-			factor = 10
+			factor = 1
 		}
-		relative_position_id = USA_prophecy_of_imperium
-		prerequisite = { focus = USA_destroy_cultural_distortion }
-		prerequisite = { focus = USA_rise_of_authority }
-		icon = GFX_focus_generic_fascist_troops
-		available = {
-			has_government = fascism
-			has_country_leader = { ruling_only = yes character = USA_francis_yockey }
-			has_country_flag = PoundDead
-		}
-
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
 		completion_reward = {
-			swap_ideas = {
-				remove_idea = USA_american_blackshirts
-				add_idea = USA_european_liberation_army
-			}
-			add_stability = 0.03
+
 		}
 	}
 
 	focus = {
-		id = USA_totalitarian_socialism
-		x = 0
-		y = 2
-		
-		cost = 5
-		ai_will_do = {
-			factor = 10
-		}
-		relative_position_id = USA_prophecy_of_imperium
-		prerequisite = { focus = USA_destroy_cultural_distortion }
-		prerequisite = { focus = USA_rise_of_authority }
-		icon = GFX_focus_DEN_heavy_regulations
-		available = {
-			has_government = fascism
-			has_country_leader = { ruling_only = yes character = USA_francis_yockey }
-			has_country_flag = PoundDead
-		}
-
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
-		completion_reward = {
-			remove_ideas = USA_national_syndicalism
-			remove_ideas = USA_national_syndicalism2 
-			add_ideas = USA_creative_totalitariat
-		}
-	}
-	focus = {
-		id = USA_destiny_of_america
+		id = USA_a_buisnessmans_administration
+		icon = GFX_focus_generic_commission
+		prerequisite = { focus = USA_republicans_in_the_white_house }
 		x = 2
-		y = 2
-		
+		y = 1
+		relative_position_id = USA_republicans_in_the_white_house
 		cost = 5
 		ai_will_do = {
-			factor = 10
+			factor = 1
 		}
-		relative_position_id = USA_prophecy_of_imperium
-		prerequisite = { focus = USA_destroy_cultural_distortion }
-		prerequisite = { focus = USA_rise_of_authority }
-		icon = GFX_focus_GER_establish_protectorates_in_america
-		available = {
-			has_government = fascism
-			has_country_leader = { ruling_only = yes character = USA_francis_yockey }
-			has_country_flag = PoundDead
-		}
-
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
 		completion_reward = {
-			swap_ideas = {
-				remove_idea = USA_revolutionary_destiny
-				add_idea = USA_imperium_destiny
-			}
-			add_stability = 0.03
+
 		}
 	}
+
 	focus = {
-		id = USA_the_enemy_of_europe
+		id = USA_gradual_economic_recovery
 		x = -1
-		y = 3
+		y = 1
 		
 		cost = 5
 		ai_will_do = {
 			factor = 10
 		}
-		relative_position_id = USA_prophecy_of_imperium
-		prerequisite = { focus = USA_european_liberation_front }
-		prerequisite = { focus = USA_totalitarian_socialism }
-		prerequisite = { focus = USA_destiny_of_america }
-		icon = GFX_focus_GER_end_european_communism
-		available = {
-			has_government = fascism
-			has_country_leader = { ruling_only = yes character = USA_francis_yockey }
-			has_country_flag = PoundDead
-		}
-
+		relative_position_id = USA_the_sunflower_president
+		prerequisite = { focus =  USA_the_sunflower_president }
+		icon = GFX_focus_generic_currency_reforms
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
 		completion_reward = {
-			country_event = { id = yock.3 days = 0 }
-			create_wargoal = {
-            target = SOV
-            type = topple_government
-       		}
-			create_wargoal = {
-            target = PRC
-            type = topple_government
-       		}
+			USA_great_depression_level_down = yes
 		}
 	}
+
 	focus = {
-		id = USA_frontier_of_annihilation
+		id = USA_a_partnership_with_industry
 		x = 1
-		y = 3
+		y = 1
+		
+		cost = 6
+		ai_will_do = {
+			factor = 10
+		}
+		relative_position_id = USA_the_sunflower_president
+		prerequisite = { focus = USA_the_sunflower_president }
+		icon = GFX_focus_generic_industrialists
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = USA_the_responsible_new_deal
+		x = -1
+		y = 1
 		
 		cost = 5
 		ai_will_do = {
 			factor = 10
 		}
-		relative_position_id = USA_prophecy_of_imperium
-		prerequisite = { focus = USA_european_liberation_front }
-		prerequisite = { focus = USA_totalitarian_socialism }
-		prerequisite = { focus = USA_destiny_of_america }
-		icon = GFX_focus_NOR_frontkjempere
-		available = {
-			has_government = fascism
-			has_country_leader = { ruling_only = yes character = USA_francis_yockey }
-			has_country_flag = PoundDead
-		}
-
+		relative_position_id = USA_a_buisnessmans_administration
+		prerequisite = { focus =  USA_a_buisnessmans_administration }
+		icon = GFX_focus_ARG_anti_corruption_policies
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
 		completion_reward = {
-			add_ideas = closed_economy
-			add_ideas = extensive_conscription
-			add_ideas = tot_economic_mobilisation
-			add_political_power = -100
-			add_stability = 0.03
-			country_event = { id = yock.2 days = 0 }
+
 		}
 	}
+
 	focus = {
-		id = USA_20_20ths
+		id = USA_keep_what_works
+		x = 1
+		y = 1
+		
+		cost = 6
+		ai_will_do = {
+			factor = 10
+		}
+		relative_position_id = USA_a_buisnessmans_administration
+		prerequisite = { focus = USA_a_buisnessmans_administration }
+		icon = GFX_focus_generic_improve_the_administration_2
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = USA_reach_across_the_aisle
 		x = 0
-		y = 4
-		
+		y = 1
+		icon = GFX_focus_ARG_strengthening_the_concordancia
 		cost = 5
 		ai_will_do = {
 			factor = 10
 		}
-		relative_position_id = USA_prophecy_of_imperium
-		prerequisite = { focus = USA_frontier_of_annihilation }
-		prerequisite = { focus = USA_the_enemy_of_europe }
-		icon = GFX_focus_generic_total_war
-		available = {
-			has_government = fascism
-			has_country_leader = { ruling_only = yes character = USA_francis_yockey }
-			has_country_flag = PoundDead
-		}
-
+		relative_position_id = USA_gradual_economic_recovery
+		prerequisite = { focus =  USA_gradual_economic_recovery }
+		#icon = GFX_
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
 		completion_reward = {
-			if = {
-				limit = { is_faction_leader = no }
-				leave_faction = yes
-			}
-			set_country_leader_portrait = {
-				ideology = fascism
-				portrait = GFX_Portrait_Francis_Yockey_cap
-			}
-			create_faction = "Imperium of Europe"
-			unlock_decision_tooltip = USA_towards_world_unity
-			every_state = { 
-				limit = { is_on_continent = europe }
-				add_claim_by = USA
-			}
-			CAN = { every_owned_state = { add_claim_by = ROOT }}
-			AST = { every_owned_state = { add_claim_by = ROOT }}
-			NZL = { every_owned_state = { add_claim_by = ROOT }}
-			SAF = { every_owned_state = { add_claim_by = ROOT }}
+
 		}
 	}
-	
-	# Hemmingway
 
-
-	## George Christians
 	focus = {
-		id = USA_away_from_gold
-		x = -3
+		id = USA_trust_the_american_entrepreneur
+		x = 0
+		y = 1
+		icon = GFX_focus_generic_monetary_union
+		cost = 6
+		ai_will_do = {
+			factor = 10
+		}
+		relative_position_id = USA_a_partnership_with_industry
+		prerequisite = { focus = USA_a_partnership_with_industry }
+		#icon = GFX_
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = USA_the_buisness_recovery_act
+		x = 0
 		y = 1
 		
 		cost = 5
 		ai_will_do = {
 			factor = 10
 		}
-		relative_position_id = USA_fall_of_prometheus
-		prerequisite = { focus = USA_fall_of_prometheus }
-		icon = GFX_focus_ITA_corpo_volontari_della_liberta
-		available = {
-			has_government = fascism
-			has_country_leader = { ruling_only = yes character = USA_George_Christians }
-			has_country_flag = PoundDead
-		}
-
+		relative_position_id = USA_the_responsible_new_deal
+		prerequisite = { focus =  USA_the_responsible_new_deal }
+		icon = GFX_focus_DEN_no_regulations
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
 		completion_reward = {
-			remove_ideas = USA_state_of_utopia
-			set_cosmetic_tag = CHRI
-			add_political_power = 50
-			add_popularity = { ideology = fascism popularity = -0.3 }
+			USA_great_depression_level_down = yes
 		}
 	}
+
 	focus = {
-		id = USA_the_whiteshirts
-		x = -1
+		id = USA_aid_the_american_farmer
+		x = 0
+		y = 1
+		
+		cost = 6
+		ai_will_do = {
+			factor = 10
+		}
+		relative_position_id = USA_keep_what_works
+		prerequisite = { focus = USA_keep_what_works }
+		icon = GFX_focus_generic_workers_and_farmers_rise
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = USA_the_landon_coalition
+		x = 0
 		y = 1
 		
 		cost = 5
 		ai_will_do = {
 			factor = 10
 		}
-		relative_position_id = USA_away_from_gold
-		prerequisite = { focus = USA_away_from_gold }
-		icon = GFX_focus_SOV_builder_of_the_red_army
-		available = {
-			has_government = fascism
-			has_country_leader = { ruling_only = yes character = USA_George_Christians }
-			has_country_flag = PoundDead
-		}
-
+		relative_position_id = USA_reach_across_the_aisle
+		prerequisite = { focus =  USA_reach_across_the_aisle }
+		icon = GFX_goal_support_democracy
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
 		completion_reward = {
-			swap_ideas = {
-				remove_idea = USA_american_blackshirts
-				add_idea = USA_red_crusaders
-			}
+
 		}
 	}
+
 	focus = {
-		id = USA_crusade_for_economic_liberty
+		id = USA_calm_the_labor_question
+		x = 0
+		y = 1
+		icon = GFX_focus_eng_concessions_to_the_trade_unions
+		cost = 6
+		ai_will_do = {
+			factor = 10
+		}
+		relative_position_id = USA_trust_the_american_entrepreneur
+		prerequisite = { focus = USA_trust_the_american_entrepreneur }
+		#icon = GFX_
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = USA_rebuild_american_industry
+		x = 0
+		y = 1
+		
+		cost = 5
+		ai_will_do = {
+			factor = 10
+		}
+		relative_position_id = USA_the_buisness_recovery_act
+		prerequisite = { focus =  USA_the_buisness_recovery_act }
+		icon = GFX_focus_GER_autarky_achieved
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		completion_reward = {
+			USA_great_depression_level_down = yes
+		}
+	}
+
+	focus = {
+		id = USA_expand_rural_credit
+		x = 0
+		y = 1
+		
+		cost = 6
+		ai_will_do = {
+			factor = 10
+		}
+		relative_position_id = USA_aid_the_american_farmer
+		prerequisite = { focus = USA_aid_the_american_farmer }
+		icon = GFX_focus_generic_agricultural_subsidies
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = USA_the_american_comeback
 		x = 1
 		y = 1
 		
@@ -6416,272 +7933,344 @@ focus_tree = {
 		ai_will_do = {
 			factor = 10
 		}
-		relative_position_id = USA_away_from_gold
-		prerequisite = { focus = USA_away_from_gold }
-		icon = GFX_focus_ITA_generic_fascist_workers
-		available = {
-			has_government = fascism
-			has_country_leader = { ruling_only = yes character = USA_George_Christians }
-			has_country_flag = PoundDead
-		}
-
+		relative_position_id = USA_the_landon_coalition
+		prerequisite = { focus =  USA_the_landon_coalition focus = USA_calm_the_labor_question }
+		icon = GFX_focus_generic_american_investments
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
 		completion_reward = {
-			remove_ideas = USA_national_syndicalism
-			remove_ideas = USA_national_syndicalism2
-			add_timed_idea = {
-				idea = USA_crusade_against_capital
-				days = 150
-			}
-			add_tech_bonus = {
-   				bonus = 0.5
-    			uses = 3
-    			category = industry
-			}
-			custom_effect_tooltip = "You will gain a new spirit when the timed spirit is removed."
+
 		}
 	}
+
 	focus = {
-		id = USA_a_red_kkk
+		id = USA_a_strong_dollar_and_a_strong_nation
+		x = 1
+		y = 1
+		
+		cost = 6
+		ai_will_do = {
+			factor = 10
+		}
+		relative_position_id = USA_rebuild_american_industry
+		prerequisite = { focus = USA_rebuild_american_industry focus = USA_expand_rural_credit }
+		icon = GFX_focus_generic_stockpile_currency
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = USA_american_prosperity_returns
+		x = 2
+		y = 1
+		
+		cost = 6
+		ai_will_do = {
+			factor = 10
+		}
+		relative_position_id = USA_the_american_comeback
+		prerequisite = { focus = USA_the_american_comeback }
+		prerequisite = { focus = USA_a_strong_dollar_and_a_strong_nation }
+		icon = GFX_focus_generic_the_giant_wakes
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		completion_reward = {
+			USA_great_depression_level_down = yes
+		}
+	}
+
+	### Republican Tree - Wilkie ###
+	focus = {
+		id = USA_a_new_republican_era
+		icon = GFX_focus_usa_guarantee_the_american_dream
+		x = 0
+		y = 1
+		available = {
+			has_government = conservative
+			date > 1940.11.8
+		}
+		relative_position_id = USA_american_prosperity_returns
+		cost = 5
+		ai_will_do = {
+			factor = 10
+		}
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = USA_unite_the_party
+		icon = GFX_goal_generic_national_unity
+		prerequisite = { focus = USA_a_new_republican_era }
 		x = -2
-		y = 2
-		
+		y = 1
+		relative_position_id = USA_a_new_republican_era
 		cost = 5
 		ai_will_do = {
-			factor = 10
+			factor = 1
 		}
-		relative_position_id = USA_away_from_gold
-		prerequisite = { focus = USA_the_whiteshirts }
-		prerequisite = { focus = USA_crusade_for_economic_liberty }
-		icon = GFX_focus_usa_honor_the_confederacy
-		available = {
-			has_government = fascism
-			has_country_leader = { ruling_only = yes character = USA_George_Christians }
-			has_country_flag = PoundDead
-			fascism > 0.45
-		}
-
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
 		completion_reward = {
-			swap_ideas = {
-				remove_idea = USA_red_crusaders
-				add_idea = USA_red_crusaders2
-			}
-			add_manpower = 20000
-		}
-	}
-	focus = {
-		id = USA_paper_and_ink_revolution
-		x = 0
-		y = 2
-		
-		cost = 5
-		ai_will_do = {
-			factor = 10
-		}
-		relative_position_id = USA_away_from_gold
-		prerequisite = { focus = USA_the_whiteshirts }
-		prerequisite = { focus = USA_crusade_for_economic_liberty }
-		icon = GFX_focus_generic_fascist_propaganda
-		available = {
-			has_government = fascism
-			has_country_leader = { ruling_only = yes character = USA_George_Christians }
-			has_country_flag = PoundDead
-		}
 
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
-		completion_reward = {
-			unlock_decision_category_tooltip = USA_pap_ink_revolution_cat
-			activate_mission = USA_paper_and_ink_campaign
 		}
 	}
+
 	focus = {
-		id = USA_human_effort_instead_of_gold
+		id = USA_keep_the_good_cut_the_waste
+		icon = GFX_focus_generic_reduce_unneccessary_expenditure
+		prerequisite = { focus = USA_a_new_republican_era }
 		x = 2
-		y = 2
-		
+		y = 1
+		relative_position_id = USA_a_new_republican_era
 		cost = 5
 		ai_will_do = {
-			factor = 10
+			factor = 1
 		}
-		relative_position_id = USA_away_from_gold
-		prerequisite = { focus = USA_the_whiteshirts }
-		prerequisite = { focus = USA_crusade_for_economic_liberty }
-		icon = GFX_focus_generic_public_works
-		available = {
-			has_government = fascism
-			has_country_leader = { ruling_only = yes character = USA_George_Christians }
-			has_country_flag = PoundDead
-			fascism > 0.45
-		}
-
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
 		completion_reward = {
-			add_ideas = USA_humanity_over_gold
+
 		}
 	}
+
 	focus = {
-		id = USA_escalate_the_finance_war
+		id = USA_corporate_extension_programs
 		x = -1
-		y = 3
+		y = 1
 		
 		cost = 5
 		ai_will_do = {
 			factor = 10
 		}
-		relative_position_id = USA_away_from_gold
-		prerequisite = { focus = USA_paper_and_ink_revolution }
-		prerequisite = { focus = USA_a_red_kkk }
-		prerequisite = { focus = USA_human_effort_instead_of_gold }
-		icon = GFX_focus_GER_wage_war_on_capitalism
-		available = {
-			has_government = fascism
-			has_country_leader = { ruling_only = yes character = USA_George_Christians }
-			has_country_flag = PoundDead
-			fascism > 0.6
-		}
-
+		relative_position_id = USA_unite_the_party
+		prerequisite = { focus =  USA_unite_the_party }
+		icon = GFX_focus_generic_industrial_experts
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
 		completion_reward = {
-			add_manpower = -15000
-			diplomatic_relation = {
-    			country = ENG
-    			relation = embargo
-   				active = yes
-			}
-			diplomatic_relation = {
-    			country = FRA
-    			relation = embargo
-   				active = yes
-			}
-			diplomatic_relation = {
-    			country = SOV
-    			relation = embargo
-   				active = yes
-			}
-			diplomatic_relation = {
-    			country = JAP
-    			relation = embargo
-   				active = yes
-			}
-			FRA = { 
-				add_timed_idea = {
-					idea = class_warfare
-					days = 200
-				}
-			}
-			ENG = { 
-				add_timed_idea = {
-					idea = class_warfare
-					days = 200
-				}
-			}
-			SOV = { 
-				add_timed_idea = {
-					idea = class_warfare
-					days = 200
-				}
-			}
-			JAP = { 
-				add_timed_idea = {
-					idea = class_warfare
-					days = 200
-				}
-			}
+
 		}
 	}
+
 	focus = {
-		id = USA_the_golden_rule
+		id = USA_expand_national_infastructure
 		x = 1
-		y = 3
+		y = 1
 		
-		cost = 5
+		cost = 6
 		ai_will_do = {
 			factor = 10
 		}
-		relative_position_id = USA_away_from_gold
-		prerequisite = { focus = USA_paper_and_ink_revolution }
-		prerequisite = { focus = USA_a_red_kkk }
-		prerequisite = { focus = USA_human_effort_instead_of_gold }
-		icon = GFX_focus_SWE_refuge_for_revolutionaries
-		available = {
-			has_government = fascism
-			has_country_leader = { ruling_only = yes character = USA_George_Christians }
-			has_country_flag = PoundDead
-			fascism > 0.6
-		}
-
+		relative_position_id = USA_unite_the_party
+		prerequisite = { focus = USA_unite_the_party }
+		icon = GFX_focus_generic_electrification
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
 		completion_reward = {
-			unlock_decision_tooltip = USA_red_circle
-			swap_ruler_traits = {
-    			remove = unproven_leader
-   				add = newagecrusader
-			}	
+
 		}
 	}
+
 	focus = {
-		id = USA_the_death_of_tyranny
-		x = 0
-		y = 4
+		id = USA_responsible_federal_spending
+		x = -1
+		y = 1
 		
 		cost = 5
 		ai_will_do = {
 			factor = 10
 		}
-		relative_position_id = USA_away_from_gold
-		prerequisite = { focus = USA_the_golden_rule }
-		prerequisite = { focus = USA_escalate_the_finance_war }
-		icon = GFX_focus_NOR_send_the_king_back_to_denmark
-		available = {
-			has_government = fascism
-			has_country_leader = { ruling_only = yes character = USA_George_Christians }
-			has_country_flag = PoundDead
-			fascism > 0.6
-		}
-
+		relative_position_id = USA_keep_the_good_cut_the_waste
+		prerequisite = { focus =  USA_keep_the_good_cut_the_waste }
+		icon = GFX_focus_RAJ_special_economic_zones
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
 		completion_reward = {
-			custom_effect_tooltip = shizobolgang
-			custom_effect_tooltip = "It is time for the last wars to free humanity to begin!"
-			create_wargoal = {
-   				type = topple_government
-    			target = ENG
-			}
-			create_wargoal = {
-   				type = topple_government
-    			target = FRA
-			}
-			create_wargoal = {
-   				type = topple_government
-    			target = GER
-			}
-			create_wargoal = {
-   				type = topple_government
-    			target = SOV
-			}
+
+		}
+	}
+
+	focus = {
+		id = USA_encourage_national_investment
+		x = 1
+		y = 1
+		
+		cost = 6
+		ai_will_do = {
+			factor = 10
+		}
+		relative_position_id = USA_keep_the_good_cut_the_waste
+		prerequisite = { focus = USA_keep_the_good_cut_the_waste }
+		icon = GFX_focus_generic_american_investments
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = USA_reject_isolationism
+		x = 0
+		y = 1
+		
+		cost = 5
+		ai_will_do = {
+			factor = 10
+		}
+		relative_position_id = USA_corporate_extension_programs
+		prerequisite = { focus =  USA_corporate_extension_programs }
+		icon = GFX_goal_generic_positive_trade_relations
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = USA_strenghten_the_atlantic_fleet
+		x = 0
+		y = 1
+		
+		cost = 6
+		ai_will_do = {
+			factor = 10
+		}
+		relative_position_id = USA_expand_national_infastructure
+		prerequisite = { focus = USA_expand_national_infastructure }
+		icon = GFX_focus_SMB_blue_water_fleet
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = USA_a_liberal_republican_party
+		x = 0
+		y = 1
+		
+		cost = 5
+		ai_will_do = {
+			factor = 10
+		}
+		relative_position_id = USA_responsible_federal_spending
+		prerequisite = { focus =  USA_responsible_federal_spending }
+		icon = GFX_goal_support_democracy
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = USA_support_anti_lynching_legislation
+		x = 0
+		y = 1
+		
+		cost = 6
+		ai_will_do = {
+			factor = 10
+		}
+		relative_position_id = USA_encourage_national_investment
+		prerequisite = { focus = USA_encourage_national_investment }
+		icon = GFX_focus_generic_treaty
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = USA_the_war_industries_board
+		x = 1
+		y = 1
+		
+		cost = 5
+		ai_will_do = {
+			factor = 10
+		}
+		relative_position_id = USA_reject_isolationism
+		prerequisite = { focus =  USA_reject_isolationism focus = USA_strenghten_the_atlantic_fleet }
+		icon = GFX_focus_generic_reorient_production
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = USA_international_doctrine
+		x = 1
+		y = 1
+		
+		cost = 6
+		ai_will_do = {
+			factor = 10
+		}
+		relative_position_id = USA_a_liberal_republican_party
+		prerequisite = { focus = USA_a_liberal_republican_party focus = USA_support_anti_lynching_legislation }
+		icon = GFX_focus_generic_democratic_europe
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = USA_america_leads_the_free_world
+		x = 2
+		y = 1
+		
+		cost = 6
+		ai_will_do = {
+			factor = 10
+		}
+		relative_position_id = USA_the_war_industries_board
+		prerequisite = { focus = USA_the_war_industries_board focus = USA_international_doctrine }
+		icon = GFX_focus_generic_league_of_nations 
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		completion_reward = {
+
 		}
 	}
 
 	### Scott Tree ###
 	focus = {
 		id = USA_revolt_of_engineers
-		x = 28
-		y = 2
+		x = 34
+		y = 12
 		
 		cost = 5
 		ai_will_do = {
@@ -6693,16 +8282,12 @@ focus_tree = {
 			has_country_leader = { ruling_only = yes character = USA_howard_scott }
 			date > 1936.11.8
 		}
-		mutually_exclusive = { 
-			focus = USA_continue_the_new_deal
-			focus = USA_towards_national_utopia
-			focus = USA_the_workers_candidate
-		}
 
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
 		completion_reward = {
+			remove_ideas = USA_state_of_utopia
 			add_political_power = 50
 			add_popularity = { ideology = democratic popularity = -0.15 }
 			add_popularity = { ideology = fascism popularity = -0.15 }
@@ -6807,6 +8392,7 @@ focus_tree = {
 		available_if_capitulated = no
 		completion_reward = {
 			USA_great_depression_level_down = yes
+			remove_ideas = USA_obliterated_stock_market
 		}
 	}
 	focus = {
@@ -6853,7 +8439,7 @@ focus_tree = {
 		}
 		relative_position_id = USA_revolt_of_engineers
 		prerequisite = { focus = USA_rationalize_the_production }
-		icon = GFX_focus_GER_customs_union
+		icon = GFX_focus_generic_central_planning
 		available = {
 			has_government = neutrality
 			has_country_leader = { ruling_only = yes character = USA_howard_scott }

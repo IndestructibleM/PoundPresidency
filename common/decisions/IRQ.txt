@@ -1,0 +1,1168 @@
+political_actions = {
+
+	IRQ_nationalise_the_oil = {
+
+		icon = generic_prepare_civil_war
+
+		allowed = {
+			original_tag = IRQ
+			NOT = { has_dlc = "Graveyard of Empires" }
+		}
+
+		visible = {
+			
+		}
+
+		available = {
+			controls_state = 676
+			controls_state = 291
+			controls_state = 1011
+		}
+		
+		cost = 50
+
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 0
+		}
+
+		complete_effect = {
+
+			add_war_support = 0.1
+
+			ENG = { 
+				remove_resource_rights = 676
+				remove_resource_rights = 291
+				remove_resource_rights = 1010
+			}
+
+		}
+	}
+
+}	
+
+IRQ_arab_free_legion_cat = {
+	IRQ_recruit_arab_free_legion = {
+		icon = GFX_decision_generic_prepare_civil_war
+	
+		allowed = {
+			original_tag = IRQ
+		}
+		
+		visible = {
+			hidden_trigger = { #Otherwise this will show up in the cancel trigger tooltip
+				#has_completed_focus = IRQ_arab_free_legion
+				OR = {
+					has_government = fascism
+					has_government = neutrality
+				}
+			}
+			NOT = { 
+				FROM = { has_state_flag = IRQ_recruited_arab_legion_here }
+				has_war_with = FROM.owner
+			}
+
+		}
+		available = {
+			FROM = {
+				NOT = {
+					has_state_flag = IRQ_recruited_arab_legion_here
+				}
+			}
+			NOT = { has_country_flag = IRQ_recruiting_arab_legion }
+			
+			has_equipment = {
+				infantry_equipment > 1999
+			}	
+		}
+
+		target_root_trigger = {
+			original_tag = IRQ
+
+		}
+		state_target = yes
+		targets = { 292 455 454 677 553 907 448 458 459 461 293 294	658 765 656 }
+	    target_trigger = {   
+	    }
+	    on_map_mode = map_and_decisions_view 
+		custom_cost_trigger = {
+			command_power > 24.9
+		}
+		custom_cost_text = BRA_decision_cost_cangaceiro
+		
+		fire_only_once = yes
+		days_remove = 30
+		cancel_if_not_visible = yes
+		complete_effect = {
+			add_command_power = -25
+			add_equipment_to_stockpile = {
+				type = infantry_equipment
+				amount = -2000
+			}
+			hidden_effect = {
+				set_country_flag = IRQ_recruiting_arab_legion
+			}
+		}
+		remove_effect = {
+			hidden_effect = {
+				clr_country_flag = IRQ_recruiting_arab_legion
+				FROM = {
+					set_state_flag = IRQ_recruited_arab_legion_here
+				}
+			}
+			capital_scope = {
+				IRQ_create_arab_free_legion_div = yes
+			}
+		}
+
+		cancel_effect = {
+			hidden_effect = {
+				clr_country_flag = IRQ_recruiting_arab_legion
+			}
+		}
+	}
+}
+
+greater_iraq_decision_cat = {
+	IRQ_core_state = {
+		icon = GFX_decision_infiltrate_state
+	
+		allowed = {
+			original_tag = IRQ
+		}
+		
+		visible = {
+			#has_completed_focus = IRQ_greater_iraq
+		}
+		available = {
+			NOT = { has_country_flag = IRQ_coring_state_in_progress }
+		}
+
+		target_root_trigger = { original_tag = IRQ }
+
+		state_target = any_owned_state
+	    
+	    target_trigger = {
+	        FROM = {
+	        	NOT = { is_core_of = ROOT }
+	        	is_fully_controlled_by = ROOT
+	        	OR = {
+	        		is_core_of = KUW
+	        		is_core_of = SYR
+	        		is_core_of = LEB
+	        		is_core_of = PAL
+	        		is_core_of = JOR
+	        		state = 413
+	        	}
+	        }
+	    }
+	    on_map_mode = map_and_decisions_view 
+	    cost = 50		
+		fire_only_once = yes
+		days_remove = 30
+		complete_effect = {
+			hidden_effect = {
+				set_country_flag = { flag = IRQ_coring_state_in_progress value = 1 days = 31 }
+			}
+		}
+		remove_effect = {
+			hidden_effect = {
+				clr_country_flag = IRQ_coring_state_in_progress
+			}
+			FROM = {
+				add_core_of = ROOT
+			}
+		}
+
+		cancel_trigger = {
+			FROM = {
+				NOT = { is_fully_controlled_by = ROOT }
+			}
+		}
+
+		cancel_effect = {
+			hidden_effect = {
+				clr_country_flag = IRQ_coring_state_in_progress
+			}
+		}
+	}
+}
+
+united_arab_republic_cat = {
+	united_arab_rep_core_state = {
+		icon = GFX_decision_infiltrate_state
+	
+		allowed = {
+			original_tag = IRQ
+		}
+		
+		visible = {
+			#has_completed_focus = IRQ_proclaim_united_arab_republic
+		}
+		available = {
+			NOT = { has_country_flag = IRQ_coring_state_in_progress }
+		}
+		state_target = any_owned_state
+	    target_trigger = {
+	        FROM = {
+	        	NOT = { is_core_of = ROOT }
+	        	is_owned_and_controlled_by = ROOT
+	        	OR = {
+	        		#Middle East:
+	        		region = 28
+	        		region = 232
+	        		region = 196
+	        		region = 236
+	        		region = 237
+	        		region = 238
+	        		#And North Africa:
+	        		region = 225
+	        		region = 126
+	        		region = 182
+	        		region = 128
+	        	}
+	        }
+	    }
+	    on_map_mode = map_and_decisions_view 
+	    cost = 50		
+		fire_only_once = yes
+		days_remove = 30
+		complete_effect = {
+			hidden_effect = {
+				set_country_flag = { flag = IRQ_coring_state_in_progress value = 1 days = 31 }
+			}
+		}
+		remove_effect = {
+			hidden_effect = {
+				clr_country_flag = IRQ_coring_state_in_progress
+			}
+			FROM = {
+				add_core_of = ROOT
+			}
+		}
+
+		cancel_trigger = {
+			NOT = {
+				FROM = {
+					is_fully_controlled_by = ROOT
+				}
+			} 
+		}
+
+		cancel_effect = {
+			hidden_effect = {
+				clr_country_flag = IRQ_coring_state_in_progress
+			}
+		}
+	}
+}
+
+
+hashemite_federation_cat = {
+	IRQ_invite_to_federation = {
+		icon = GFX_decision_infiltrate_state
+	
+		allowed = {
+			original_tag = IRQ
+		}
+		
+		visible = {
+			#has_completed_focus = IRQ_expand_membership
+			OR = {
+				has_government = democratic
+				has_government = neutrality
+			}
+		}
+		available = {
+			NOT = { has_country_flag = IRQ_inviting_to_federation_in_progress }
+			FROM = {
+				OWNER = {
+					NOT = {
+						has_country_flag = IRQ_has_permanently_rejected_fed
+					}
+				}
+			}
+		}
+		state_target = middle_east
+	    target_trigger = {
+	        FROM = {
+	        	is_capital = yes
+	        	OWNER = {
+	        		is_subject = no
+	        		exists = yes
+	        		NOT = {
+	        			original_tag = ROOT
+	        			has_war_with = ROOT
+	        		}
+	        	}
+	        	OR = {
+	        		region = 28
+	        		region = 232
+	        		region = 237
+	        		region = 196
+	        		region = 236
+	        		region = 238
+					region = 240
+	        	}
+	        }
+	    }
+	    on_map_mode = map_and_decisions_view 
+	    cost = 25
+		fire_only_once = yes
+		days_remove = 30
+		complete_effect = {
+			set_country_flag = { flag = IRQ_inviting_to_federation_in_progress value = 1 days = 31 }
+		}
+		remove_effect = {
+			clr_country_flag = IRQ_inviting_to_federation_in_progress
+			FROM = {
+				OWNER = {
+					country_event = {
+						id = IRQ_political_events.26
+						hours = 1
+					}
+				}
+			}
+			custom_effect_tooltip = generic_higher_opinion_tt
+		}
+
+		cancel_trigger = {
+			FROM = {
+				OWNER = {
+					OR = {
+						exists = no
+						is_subject = yes
+						has_war_with = ROOT
+					}
+				}
+			} 
+		}
+
+		cancel_effect = {
+			hidden_effect = {
+				clr_country_flag = IRQ_inviting_to_federation_in_progress
+			}
+		}
+	}
+	IRQ_invite_to_federation_africa = {
+		icon = GFX_decision_infiltrate_state
+	
+		allowed = {
+			original_tag = IRQ
+		}
+		
+		visible = {
+			#has_completed_focus = IRQ_expand_membership
+			OR = {
+				has_government = democratic
+				has_government = neutrality
+			}
+		}
+		available = {
+			NOT = { has_country_flag = IRQ_inviting_to_federation_in_progress }
+			FROM = {
+				OWNER = {
+					NOT = {
+						has_country_flag = IRQ_has_permanently_rejected_fed
+					}
+				}
+			}
+		}
+		state_target = africa
+	    target_trigger = {
+	        FROM = {
+	        	is_capital = yes
+	        	OWNER = {
+	        		is_subject = no
+	        		exists = yes
+	        		NOT = {
+	        			original_tag = ROOT
+	        			has_war_with = ROOT
+	        		}
+	        	}
+	        	OR = {
+	        		region = 128 
+					region = 225
+					region = 126
+					region = 182
+	        	}
+	        }
+	    }
+	    on_map_mode = map_and_decisions_view 
+	    cost = 25
+		fire_only_once = yes
+		days_remove = 30
+		complete_effect = {
+			set_country_flag = IRQ_inviting_to_federation_in_progress
+		}
+		remove_effect = {
+			clr_country_flag = IRQ_inviting_to_federation_in_progress
+			FROM = {
+				OWNER = {
+					country_event = {
+						id = IRQ_political_events.26
+						hours = 1
+					}
+				}
+			}
+			custom_effect_tooltip = generic_higher_opinion_tt
+		}
+
+		cancel_trigger = {
+			FROM = {
+				OWNER = {
+					OR = {
+						exists = no
+						is_subject = yes
+						has_war_with = ROOT
+					}
+				}
+			} 
+		}
+
+		cancel_effect = {
+			hidden_effect = {
+				clr_country_flag = IRQ_inviting_to_federation_in_progress
+			}
+		}
+	}
+}
+
+IRQ_flood_the_plains_cat = {
+	
+	IRQ_flood_the_plains = {
+
+		icon = hol_inundate_water_lines
+
+		allowed = {
+			original_tag = IRQ
+		}
+
+		available = {
+			has_war = yes
+			ROOT = {
+				controls_province = 2097 #Just Baghdad
+			}
+		}
+
+		cost = 50
+
+		fire_only_once = yes
+
+		days_remove = 120
+
+		highlight_states = {
+			highlight_state_targets = { state = 291 state = 1011 }
+			highlight_provinces = {
+				12839
+				3795
+				12046
+				7994
+				10876
+				2097
+				###
+				2089
+				8001
+				2004
+				12726
+				7977
+			}
+			highlight_only_provinces = yes
+		}
+
+		modifier = {
+		}
+
+		visible = {
+			IRQ = { has_completed_focus = IRQ_construct_the_kut_barrage }
+		}
+		
+		complete_effect = {
+			291 = {
+				add_province_modifier = {
+					static_modifiers = { flooded }
+					province = {
+						id = 12839
+						id = 3795
+						id = 12046
+						id = 7994
+						id = 10876
+						id = 2097
+					}
+				}
+				damage_building = {
+					type = infrastructure
+					damage = 2
+				}
+				damage_building = {
+					type = industrial_complex
+					damage = 0.5
+				}
+				damage_building = {
+					type = arms_factory
+					damage = 0.5
+				}
+			}
+			1011 = {
+				add_province_modifier = {
+					static_modifiers = { flooded }
+					province = {
+						id = 2089
+						id = 8001
+						id = 2004
+						id = 12726
+						id = 7977
+					}
+				}
+				damage_building = {
+					type = infrastructure
+					damage = 2
+				}
+				damage_building = {
+					type = industrial_complex
+					damage = 0.5
+				}
+				damage_building = {
+					type = arms_factory
+					damage = 0.5
+				}
+			}
+		}
+		
+		remove_effect = {
+			custom_effect_tooltip = remove_flooding_tt
+			hidden_effect = {
+				291 = {
+					remove_province_modifier = {
+						static_modifiers = { flooded }
+						province = {
+							id = 12839
+							id = 3795
+							id = 12046
+							id = 7994
+							id = 10876
+							id = 2097
+						}
+					}
+				}
+				1011 = {
+					remove_province_modifier = {
+						static_modifiers = { flooded }
+						province = {
+							id = 2089
+							id = 8001
+							id = 2004
+							id = 12726
+							id = 7977
+						}
+					}
+				}
+			}
+		}
+		
+		ai_will_do = {
+			modifier = {
+				add = 50
+				surrender_progress > 0.15 #Should kick in if Basrah/Najaf are occupied
+			}
+		}
+
+	}
+}
+
+
+IRQ_kurdish_state_management_category = { 
+
+	IRQ_kurdish_resistance_escalation_mission = {
+	
+		priority = 9
+
+		icon = tur_unifying_the_country
+
+		allowed = { 
+			original_tag = IRQ
+		}
+
+		available = {
+			AND = {
+				676 = { is_core_of = IRQ }
+				1010 = { is_core_of = IRQ }
+				1047 = { is_core_of = IRQ }
+			}
+		}
+
+		days_mission_timeout = 80
+
+		fire_only_once = no
+
+		activation = {
+			any_owned_state = {
+				OR = {
+					has_dynamic_modifier = { modifier = kurdish_agitation }
+					has_dynamic_modifier = { modifier = kurdish_separatism }
+					has_dynamic_modifier = { modifier = kurdish_rebellion }
+				}
+			}
+			NOT = { 
+				OR = {
+					has_country_flag = IRQ_truce_with_government_called_flag 
+					has_country_flag = IRQ_traditionalist_infiltration_cooldown
+					has_country_flag = IRQ_kurdish_resistance_cooldown
+				}
+			}
+		}
+
+		cancel_trigger = {
+			has_war = yes
+			custom_trigger_tooltip = { 
+				tooltip = IRQ_kurdish_modifiers_trigger_tt
+				OR = {
+					AND = {
+				        676 = { is_core_of = IRQ }
+				        1047 = { is_core_of = IRQ }
+					}
+					AND = {
+						676 = { has_dynamic_modifier = { modifier = separatist_fatigue } }
+						1047 = { has_dynamic_modifier = { modifier = separatist_fatigue } }
+					}
+				}
+			}
+		}
+
+		is_good = no
+
+		complete_effect = {
+			
+		}
+
+		timeout_effect = {
+			random_owned_state = {
+				limit = {
+					OR = {
+						has_dynamic_modifier = { modifier = kurdish_agitation }
+						has_dynamic_modifier = { modifier = kurdish_separatism }
+						has_dynamic_modifier = { modifier = kurdish_rebellion }
+					}
+				}
+				save_global_event_target_as = IRQ_kurdish_state_event_target
+			}
+			random_list = {
+				88 = {
+					modifier = {
+						factor = 0.45
+						event_target:IRQ_kurdish_state_event_target = { resistance > 50 }
+					}
+					event_target:IRQ_kurdish_state_event_target = { 
+						IRQ_agitate_kurdish_state_effect = yes
+					}
+				}
+				22 = {
+					modifier = {
+						factor = 0.25
+						event_target:IRQ_kurdish_state_event_target = { compliance > 30 }
+					}
+					event_target:IRQ_kurdish_state_event_target = {
+						add_compliance = -5
+						IRQ_pacify_kurdish_state_effect = yes
+					}
+				}
+			}
+			set_country_flag = {
+				flag = IRQ_kurdish_resistance_cooldown
+				value = 1
+				days = 90
+			}
+		}
+
+		cancel_effect = {
+			
+		}
+	}
+
+	IRQ_counter_the_rebels_in_Mosul = {
+
+		icon = faction_tur_kurdish
+
+		available = {
+			NOT = { has_country_flag = IRQ_acted_against_kurd_rebels_recently_flag }
+			has_full_control_of_state = 676
+		}
+
+		highlight_states = {
+			highlight_states_trigger = { state = 676 }
+		}
+
+		on_map_mode = map_only
+
+		custom_cost_trigger = {
+			command_power > 14.9
+		}
+
+		custom_cost_text = TUR_decision_cost_kurd_rebels
+
+		visible = {
+			AND = { 
+				NOT = { 676 = { is_core_of = IRQ } }
+				has_full_control_of_state = 676
+			}
+			NOT = {
+				AND = { 
+					#OR = {
+					#	has_completed_focus = TUR_permit_regional_elections
+					#	has_completed_focus = TUR_a_common_destiny_for_all_of_turkey
+					#}
+					1010 = {
+						AND = {
+							compliance > 70
+							resistance < 30
+						}
+					}
+				}
+			}
+		}
+
+		ai_will_do = {
+			factor = 5
+			modifier = {
+				factor = 10
+				has_political_power > 250
+			}
+			modifier = {
+				has_manpower < 50000
+				has_war = yes
+				has_political_power < 200
+				factor = 0 # don't waste pp if you need to up your conscription laws!
+			}
+			modifier = {
+				factor = 10
+				676 = { resistance > 50 }
+			}
+			modifier = {
+				factor = 0.25
+				has_stability < 0.25 #let's not risk it
+				676 = { compliance < 25 }
+			}
+		}
+
+		complete_effect = {
+			add_command_power = -15
+			676 = { save_global_event_target_as = IRQ_kurdish_state_event_target }
+			random_list = {
+				55 = {
+					modifier = {
+						factor = 0.25
+						676 = { resistance > 30 }
+					}
+					modifier = {
+						add = 5
+						has_country_flag = {
+							flag = IRQ_failed_against_kurd_rebels_flag
+							value = 1
+						}
+					}
+					modifier = {
+						add = 10
+						has_country_flag = {
+							flag = IRQ_failed_against_kurd_rebels_flag
+							value = 2
+						}
+					}
+					modifier = {
+						add = 15
+						has_country_flag = {
+							flag = IRQ_failed_against_kurd_rebels_flag
+							value = 3
+						}
+					}
+					modifier = {
+						add = 25
+						has_country_flag = {
+							flag = IRQ_failed_against_kurd_rebels_flag
+							value = 4
+						}
+					}
+					modifier = {
+						add = 100
+						has_country_flag = {
+							flag = IRQ_failed_against_kurd_rebels_flag
+							value > 4
+						}
+					}
+					country_event = { id = bftb_turkey.110 days = 1 }
+					IRQ_placate_kurdish_state_effect = yes
+					effect_tooltip = {
+						676 = { 
+							add_compliance = 10
+							add_resistance = -15
+						}
+					}
+					hidden_effect = { 
+						if = {
+							limit = {
+								has_country_flag = IRQ_failed_against_kurd_rebels_flag
+							}
+							clr_country_flag = IRQ_failed_against_kurd_rebels_flag
+						}
+					}
+				}
+				45 = {
+					modifier = {
+						factor = 1.2
+						676 = { compliance > 25 }
+					}
+					country_event = { id = bftb_turkey.111 days = 1 }
+					effect_tooltip = {
+						add_stability = -0.05
+						676 = { 
+							add_compliance = -5
+							add_resistance = 10
+						}
+					}
+					hidden_effect = {
+						set_country_flag = {
+							flag = IRQ_failed_against_kurd_rebels_flag
+							value = 1
+						}
+						if = {
+							limit = {
+								NOT = { has_country_flag = IRQ_failed_against_kurd_rebels_flag }
+							}
+							set_country_flag = {
+								flag = IRQ_failed_against_kurd_rebels_flag
+								value = 1
+							}
+						}
+						else_if = {
+							limit = {
+								has_country_flag = IRQ_failed_against_kurd_rebels_flag
+							}
+							modify_country_flag = {
+								flag = IRQ_failed_against_kurd_rebels_flag
+								value = 1
+							}
+						}
+					}
+				}
+			}
+			set_country_flag = IRQ_acted_against_kurd_rebels_recently_flag
+			set_country_flag = {
+				flag = IRQ_acted_against_kurd_rebels_recently_flag
+				value = 1
+				days = 30
+			}
+		}
+	}
+	IRQ_counter_the_rebels_in_Kirkuk = {
+
+		icon = faction_tur_kurdish
+
+		available = {
+			NOT = { has_country_flag = IRQ_acted_against_kurd_rebels_recently_flag }
+			has_full_control_of_state = 1047
+		}
+
+		highlight_states = {
+			highlight_states_trigger = { state = 1047 }
+		}
+
+		on_map_mode = map_only
+
+		custom_cost_trigger = {
+			command_power > 14.9
+		}
+		
+		custom_cost_text = TUR_decision_cost_kurd_rebels
+
+		visible = {
+			AND = { 
+				NOT = { 1047 = { is_core_of = IRQ } }
+				has_full_control_of_state = 1047
+			}
+			NOT = {
+				AND = { 
+					#OR = {
+					#	has_completed_focus = TUR_permit_regional_elections
+					#	has_completed_focus = TUR_a_common_destiny_for_all_of_turkey
+					#}
+					1047 = {
+						AND = {
+							compliance > 70
+							resistance < 30
+						}
+					}
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 5
+			modifier = {
+				factor = 10
+				has_political_power > 250
+			}
+			modifier = {
+				has_manpower < 50000
+				has_war = yes
+				has_political_power < 200
+				factor = 0 # don't waste pp if you need to up your conscription laws!
+			}
+			modifier = {
+				factor = 10
+				1047 = { resistance > 50 }
+			}
+			modifier = {
+				factor = 0.25
+				has_stability < 0.25 #let's not risk it
+				1047 = { compliance < 25 }
+			}
+		}
+
+		complete_effect = {
+			add_command_power = -15
+			1047 = { save_global_event_target_as = IRQ_kurdish_state_event_target }
+			random_list = {
+				55 = {
+					modifier = {
+						factor = 0.25
+						1047 = { resistance > 30 }
+					}
+					modifier = {
+						add = 5
+						has_country_flag = {
+							flag = IRQ_failed_against_kurd_rebels_flag
+							value = 1
+						}
+					}
+					modifier = {
+						add = 10
+						has_country_flag = {
+							flag = IRQ_failed_against_kurd_rebels_flag
+							value = 2
+						}
+					}
+					modifier = {
+						add = 15
+						has_country_flag = {
+							flag = IRQ_failed_against_kurd_rebels_flag
+							value = 3
+						}
+					}
+					modifier = {
+						add = 25
+						has_country_flag = {
+							flag = IRQ_failed_against_kurd_rebels_flag
+							value = 4
+						}
+					}
+					modifier = {
+						add = 100
+						has_country_flag = {
+							flag = IRQ_failed_against_kurd_rebels_flag
+							value > 4
+						}
+					}
+					country_event = { id = bftb_turkey.110 days = 1 }
+					IRQ_placate_kurdish_state_effect = yes
+					effect_tooltip = {
+						353 = { 
+							add_compliance = 10
+							add_resistance = -15
+						}
+					}
+					hidden_effect = { 
+						if = {
+							limit = {
+								has_country_flag = IRQ_failed_against_kurd_rebels_flag
+							}
+							clr_country_flag = IRQ_failed_against_kurd_rebels_flag
+						}
+					}
+				}
+				45 = {
+					modifier = {
+						factor = 1.2
+						353 = { compliance > 25 }
+					}
+					country_event = { id = bftb_turkey.111 days = 1 }
+					effect_tooltip = {
+						add_stability = -0.05
+						353 = { 
+							add_compliance = -5
+							add_resistance = 10
+						}
+					}
+					hidden_effect = {
+						set_country_flag = {
+							flag = IRQ_failed_against_kurd_rebels_flag
+							value = 1
+						}
+						if = {
+							limit = {
+								NOT = { has_country_flag = IRQ_failed_against_kurd_rebels_flag }
+							}
+							set_country_flag = {
+								flag = IRQ_failed_against_kurd_rebels_flag
+								value = 1
+							}
+						}
+						else_if = {
+							limit = {
+								has_country_flag = IRQ_failed_against_kurd_rebels_flag
+							}
+							modify_country_flag = {
+								flag = IRQ_failed_against_kurd_rebels_flag
+								value = 1
+							}
+						}
+					}
+				}
+			}
+			set_country_flag = {
+				flag = IRQ_acted_against_kurd_rebels_recently_flag
+				value = 1
+				days = 30
+			}
+		}
+	}
+	IRQ_offer_conscription_exceptions_to_kurdish_groups = {
+
+		icon = generic_military
+
+		available = {
+			any_owned_state = {
+				AND = {
+					is_core_of = KUR
+					NOT = { is_core_of = IRQ }
+				}
+			}
+		}
+
+		#on_map_mode = map_only
+
+		cost = 120
+		ai_will_do = {
+			factor = 5
+			modifier = {
+				factor = 10
+				has_political_power > 250
+			}
+			modifier = {
+				has_manpower < 50000
+				has_war = yes
+				factor = 0 # we need every man!
+			}
+			modifier = {
+				1010 = { resistance > 50 }
+				factor = 2
+			}
+		}
+		visible = {
+			#has_completed_focus = TUR_peace_at_home
+			NOT = {
+				AND = {
+					1010 = { 
+						is_core_of = KUR
+						is_core_of = IRQ
+					}
+				}
+			}
+		}
+
+		cancel_if_not_visible = yes
+
+		complete_effect = {
+			random_owned_state = {
+				limit = {
+					AND = {
+						is_core_of = KUR
+						NOT = { is_core_of = IRQ }
+					}
+				}
+				save_event_target_as = IRQ_kurdish_state_event_target
+				hidden_effect = { 
+					event_target:IRQ_kurdish_state_event_target = {
+						add_dynamic_modifier = { modifier = conscription_exemptions_granted }
+						IRQ_integrate_kurdish_state_forced_effect = yes
+					}
+				}
+			}
+			effect_tooltip = { 
+				event_target:IRQ_kurdish_state_event_target = {
+					add_ideas = conscription_exemptions_granted
+					IRQ_integrate_kurdish_state_forced_effect = yes
+				}
+			}
+		}
+	}
+
+	IRQ_integrate_Kurdistan = {
+
+		icon = faction_tur_kurdish
+
+		available = {
+			1010 = {
+				AND = {
+					compliance > 70
+					resistance < 30
+				}
+			}
+		}
+
+		highlight_states = {
+			highlight_states_trigger = {
+				state = 1010
+			}
+		}
+
+		on_map_mode = map_only
+
+		cost = 200
+		ai_will_do = {
+			factor = 10
+			modifier = {
+				factor = 10
+				has_political_power > 350
+			}
+			modifier = {
+				has_manpower < 50000
+				has_war = yes
+				has_political_power > 200
+				factor = 25
+			}
+		}
+		visible = {
+			#OR = {
+			#	has_completed_focus = TUR_permit_regional_elections
+			#	has_completed_focus = TUR_a_common_destiny_for_all_of_turkey
+			#}
+			1010 = {
+				AND = {
+					NOT = { is_core_of = IRQ } 
+					is_owned_by = IRQ
+				}
+			}
+		}
+
+		complete_effect = {
+			if = {
+				limit = {
+					NOT = {
+						any_owned_state = {
+							AND = {
+								is_core_of = KUR
+								NOT = { is_core_of = IRQ }
+								compliance > 70
+								resistance < 30
+							}
+						}
+					}
+				}
+				custom_effect_tooltip = TUR_no_current_integration_targets_available_tt
+			}
+			else = { 
+				1010 = { save_event_target_as = IRQ_kurdish_state_event_target }
+				event_target:IRQ_kurdish_state_event_target = { IRQ_integrate_kurdish_state_effect = yes }
+			}
+		}
+	}
+}

@@ -7716,7 +7716,7 @@
 7715;92;25;240;sea;false;ocean;0
 7716;92;27;16;land;false;jungle;5
 7717;92;27;71;land;false;forest;6
-7718;92;27;221;land;false;hills;2
+7718;92;27;221;land;false;forest;5
 7719;92;28;236;sea;false;ocean;0
 7720;92;29;244;sea;false;ocean;0
 7721;92;30;36;land;false;desert;2
@@ -13820,7 +13820,7 @@
 13819;147;24;169;land;false;mountain;2 #1359
 13820;79;28;88;land;false;mountain;2 #1359
 13821;192;169;41;land;false;hills;2 #1362
-13822;50;167;23;land;false;hills;2 #1363
+13822;50;167;23;land;false;forest;5
 13823;237;161;14;land;false;plains;2 #1364
 13824;128;14;38;land;false;plains;2 #1364
 13825;82;48;100;land;false;plains;2 #1364
@@ -14762,7 +14762,7 @@
 14761;138;27;119;land;false;plains;1
 14762;38;143;74;land;false;plains;1
 14763;89;57;133;land;false;forest;1
-14764;193;74;28;land;false;plains;2 #1614 Spokane Reservation
+14764;193;74;28;land;false;plains;6
 14765;27;31;84;land;false;mountain;2 #1615 Yakama Reservation
 14766;33;65;16;land;true;plains;2 #386 Washington
 14767;135;45;45;land;false;mountain;2 #1618 Warm Springs
@@ -14793,7 +14793,7 @@
 14792;223;101;101;land;false;mountain;2 #1637 Uintah-Ouray
 14793;205;65;55;land;false;mountain;2 #1637 Uintah-Ouray
 14794;82;33;30;land;false;desert;2 #1638 San Juan
-14795;222;71;62;land;false;desert;2 #1639 White Mesa
+14795;222;71;62;land;false;desert;5
 14796;79;39;36;land;false;urban;2 #380 Utah
 14797;157;112;108;land;false;mountain;2 #1155 Wasatch
 14798;95;130;74;land;false;mountain;2 #380 Utah

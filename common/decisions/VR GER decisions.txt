@@ -1,2 +1,80 @@
 Vanillaredux_GCW_cat = {
+	Push_against_nazi_ger = {
+
+		available = {
+			has_war = yes
+		}
+		cost = 40
+		targeted_modifier = {
+			target = D04
+			attack_bonus_against = 0.15
+			breakthrough_bonus_against = 0.1
+			defense_bonus_against = -0.1
+		}
+
+ 		complete_effect = {
+ 			
+ 		}
+ 	}
+}
+
+operations = {
+	strike_american_warlords = {
+		name = "Strike [FROM.GetNameDef]"
+		war_with_target_on_complete = yes
+		targets = { CAL UTS ORS JES WAS AZS NVJ CSC }
+		allowed = {
+			OR = {
+				tag = CAL
+				tag = TEX
+				tag = USA
+				tag = KSS
+			}
+		}
+		fire_only_once = yes
+		available = {
+			OR = {
+				all_enemy_country = { NOT = { is_neighbor_of = ROOT } }
+				has_war = no
+			}
+			is_neighbor_of = FROM
+			NOT = { has_country_flag = declare_war_preparing }
+		}
+		cost = 25
+		days_remove = 20
+		ai_will_do = {
+			base = 20
+			modifier = {
+			add = 80
+				strength_ratio = {
+				tag = FROM
+				ratio > 0.85
+				}
+				ic_ratio = {
+				tag = FROM
+				ratio > 0.85
+				}
+			}
+			modifier = {
+			add = 60
+				strength_ratio = {
+				tag = FROM
+				ratio > 0.8
+				}
+				ic_ratio = {
+				tag = FROM
+				ratio > 0.8
+				}
+			}
+		}
+		complete_effect = { set_country_flag = declare_war_preparing }
+		cancel_effect = { clr_country_flag = declare_war_preparing }
+		remove_effect = {
+			declare_war_on = {
+   				target = FROM
+    				type = annex_everything
+			}
+			clr_country_flag = declare_war_preparing
+		}
+	}
 }

@@ -1,0 +1,15 @@
+spriteTypes = {	
+    spriteType = {
+        name = "GFX_idea_SYR_Divided"
+        texturefile = "gfx/interface/ideas/SYR_Divided.png"
+    }
+    spriteType = {
+        name = "GFX_idea_SYR_United"
+        texturefile = "gfx/interface/ideas/SYR_United.png"
+    }
+    spriteType = {
+        name = "GFX_idea_IRQ_Ghazi"
+        texturefile = "gfx/interface/ideas/IRQ_Ghazi.png"
+    }
+      
+}

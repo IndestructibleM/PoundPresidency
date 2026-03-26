@@ -1,0 +1,25 @@
+﻿l_english:
+
+TEL_democratic:5 "Telangana"
+TEL_democratic_DEF:5 "Telangana"
+TEL_democratic_ADJ:5 "Telanganese"
+TEL_democratic_party:0 ""
+TEL_democratic_party_long:0 ""
+
+TEL_fascism:5 "Telangana"
+TEL_fascism_DEF:5 "Telangana"
+TEL_fascism_ADJ:5 "Telanganese"
+TEL_fascism_party:0 ""
+TEL_fascism_party_long:0 ""
+
+TEL_communism:5 "Telangana Popular League"
+TEL_communism_DEF:5 "The Telangana Popular League"
+TEL_communism_ADJ:5 "Telanganese"
+TEL_communism_party:0 ""
+TEL_communism_party_long:0 ""
+
+TEL_neutrality:5 "Telangana"
+TEL_neutrality_DEF:5 "Telangana"
+TEL_neutrality_ADJ:5 "Telanganese"
+TEL_neutrality_party:0 ""
+TEL_neutrality_party_long:0 ""

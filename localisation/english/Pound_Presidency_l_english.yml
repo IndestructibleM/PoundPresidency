@@ -2,6 +2,7 @@
 ### FOCUS TREE ###
  USA_1936_presidential_campaign: "The 1936 Presidential Campaign"
  USA_defend_the_administration: "Defend the Administration"
+ USA_win_liberal_republicans: "Win Over Liberal Republicans"
  USA_rally_new_deal_coalition: "Rally the New Deal Coalition"
  USA_wpa: "The Works Progress Administration"
  USA_fair_labor_standards_act: "The Fair Labor Standards Act"
@@ -12,7 +13,7 @@
  
  USA_consolidate_the_dem_majority: "Consolidate the Democratic Majority"
  
- USA_judicial_reform_proposal: "Judicial Reform Proposal"
+ USA_bonneville_power_administration: "The Bonneville Power Administration"
  USA_the_reorganization_act: "The Reorganization Act"
  USA_reassure_american_business: "Reassure American Business"
  
@@ -20,6 +21,67 @@
  USA_administrative_management_bill: "Administrative Management Bill"
  
  USA_yet_another_4_more_years: "Keep Roosevelt the Candidate"
+ 
+ USA_breaking_the_two_term_tradition:0 "Breaking the Two-Term Tradition"
+ USA_breaking_the_two_term_tradition_desc:0 "With the world in crisis and democracy under threat, the nation turns once more to familiar leadership. Though unprecedented, a third term is justified as a necessary measure to ensure continuity and stability."
+
+ USA_smith_act_enforcement:0 "Enforce the Smith Act"
+ USA_smith_act_enforcement_desc:0 "The Smith Act grants the government new tools to investigate and prosecute subversive activity. Strengthening its enforcement will help safeguard national security as global tensions rise."
+
+ USA_war_production_board_formation:0 "War Production Board Formation"
+ USA_war_production_board_formation_desc:0 "To coordinate the nation’s vast industrial potential, a centralized War Production Board must be established. Through unified planning, America can become the true Arsenal of Democracy."
+
+ USA_patrol_greenlands_waters:0 "Patrol Greenland’s Waters"
+ USA_patrol_greenlands_waters_desc:0 "Greenland’s strategic position in the North Atlantic makes it vital to hemispheric defense. Expanding naval patrols in the region will secure shipping lanes and deter hostile activity."
+
+ USA_the_4th_term:0 "The Fourth Term"
+ USA_the_4th_term_desc:0 "In the midst of global war, the American people have once again chosen continuity. Roosevelt begins an unprecedented fourth term, determined to guide the nation through the final trials of the conflict."
+
+ USA_war_reconversion_act:0 "The War Reconversion Act"
+ USA_war_reconversion_act_desc:0 "Victory is on the horizon, and preparations must begin for the transition to a peacetime economy. The War Mobilization and Reconversion Act lays the groundwork for postwar prosperity."
+
+ USA_propose_united_nations_charter:0 "Propose the United Nations Charter"
+ USA_propose_united_nations_charter_desc:0 "The foundations of a new international order must be laid before the war ends. By advancing the United Nations Charter, we can help ensure lasting peace and global cooperation."
+
+ USA_the_final_orders:0 "The Closing Orders"
+ USA_the_final_orders_desc:0 "As the war nears its end, the administration issues a final series of directives to secure victory, stabilize the home front, and shape the world that will emerge from the conflict."
+
+ 
+ ### LANDON
+ USA_republicans_in_the_white_house: "Return of the GOP"
+ USA_the_sunflower_president: "The Sunflower President"
+ USA_a_buisnessmans_administration: "A Businessman's Administration"
+ USA_gradual_economic_recovery: "Gradual Economic Recovery"
+ USA_a_partnership_with_industry: "A Partnership with Industry"
+ USA_the_responsible_new_deal: "The Responsible New Deal"
+ USA_keep_what_works: "Keep What Works"
+ USA_reach_across_the_aisle: "Reach Across the Aisle"
+ USA_trust_the_american_entrepreneur: "Trust the American Entrepreneur"
+ USA_the_buisness_recovery_act: "The Business Recovery Act"
+ USA_aid_the_american_farmer: "Aid the American Farmer"
+ USA_the_landon_coalition: "The Landon Coalition"
+ USA_calm_the_labor_question: "Calm the Labor Question"
+ USA_rebuild_american_industry: "Rebuild American Industry"
+ USA_expand_rural_credit: "Expand Rural Credit"
+ USA_the_american_comeback: "The American Comeback"
+ USA_a_strong_dollar_and_a_strong_nation: "A Strong Dollar and a Strong Nation"
+ USA_american_prosperity_returns: "American Prosperity Returns"
+
+ ### WILKIE
+ USA_a_new_republican_era: "A New Republican Era"
+ USA_unite_the_party: "Unite the Party"
+ USA_keep_the_good_cut_the_waste: "Keep the Good, Cut the Waste"
+ USA_corporate_extension_programs: "Corporate Partnership Programs"
+ USA_expand_national_infastructure: "Expand National Infrastructure"
+ USA_responsible_federal_spending: "Responsible Federal Spending"
+ USA_encourage_national_investment: "Encourage National Investment"
+ USA_reject_isolationism: "Reject Isolationism"
+ USA_strenghten_the_atlantic_fleet: "Empower the Atlantic Fleet"
+ USA_a_liberal_republican_party: "Strenghen the Liberal Wing"
+ USA_support_anti_lynching_legislation: "Pass Anti-Lynching Legislation"
+ USA_the_war_industries_board: "The War Industries Board"
+ USA_international_doctrine: "The Wilkie International Doctrine"
+ USA_america_leads_the_free_world: "America, Leader of the Free World!"
 
  ##### POUND ###
  USA_towards_national_utopia: "Towards National Utopia!"
@@ -223,18 +285,176 @@
  USA_industrial_democracy:0 "Industrial Democracy"
  USA_national_planning_councils:0 "National Planning Councils"
  USA_public_industry:0 "Public Industry"
- USA_forge_the_popular_front:0 "Forge the Popular Front"
+ USA_entrentch_the_popular_front:0 "Entrench the Popular Front"
  USA_alliance_with_new_dealers:0 "Alliance with the New Dealers"
  USA_suspend_the_persecution:0 "Suspend the Persecution"
- USA_force_CIO_AFL_merger:0 "Force the CIO-AFL Merger"
+ USA_force_CIO_AFL_merger:0 "Force an AFL-CIO Merger"
  USA_empower_the_voice_of_labor:0 "Empower the Voice of Labor"
  USA_socialism_the_american_way:0 "Socialism the American Way"
  USA_federal_congress_of_labor:0 "Federal Congress of Labor"
  USA_peoples_unity_government:0 "People's Unity Government"
  USA_a_popular_mandate:0 "A Popular Mandate"
- USA_farmer_labor_front:0 "Farmer-Labor Unity Front"
+ USA_farm_supply_stations:0 "State Farm Supply Stations"
  USA_a_brighter_shade_of_crimson:0 "A Brighter Shade of Crimson"
  USA_red_american_dream:0 "A Red American Dream"
+ 
+ ### FOSTER
+  USA_red_november:0 "Towards Soviet America"
+  USA_red_november_desc:0 "The long‑awaited revolutionary crisis arrives. As Foster predicted, the contradictions of capitalism erupt, opening the path toward a Soviet America."
+
+  USA_establish_workers_councils:0 "Establish Workers' Councils"
+  USA_establish_workers_councils_desc:0 "Following the model outlined in *Towards Soviet America*, workers’ councils become the foundation of a new proletarian democracy, replacing the hollow institutions of bourgeois rule."
+
+  USA_central_executive_committee:0 "Found the Central Executive Committee"
+  USA_central_executive_committee_desc:0 "A centralized revolutionary authority is formed to coordinate the transition to socialism, guided by the disciplined leadership of the Communist Party."
+
+  USA_principle_of_recall:0 "Principle of Recall"
+  USA_principle_of_recall_desc:0 "All officials must remain accountable to the workers. As Foster argued, the right of immediate recall is essential to prevent the rise of a new exploiting class."
+
+  USA_smash_bourgouise_consitution:0 "Smash the Bourgeois Constitution"
+  USA_smash_bourgouise_consitution_desc:0 "The capitalist constitution is an instrument of class oppression. It must be abolished and replaced with a workers’ constitution rooted in class power."
+
+  USA_strike_the_establishment:0 "Strike the Establishment"
+  USA_strike_the_establishment_desc:0 "The capitalist state apparatus must be dismantled. Foster insisted that the old ruling class cannot be reformed — it must be defeated."
+
+  USA_reorganization_of_industry:0 "Reorganization of Industry"
+  USA_reorganization_of_industry_desc:0 "Industry is reorganized under workers’ control, with each sector governed by its corresponding industrial union, forming the backbone of the new planned economy."
+
+  USA_establish_new_govs:0 "Establish New Governments"
+  USA_establish_new_govs_desc:0 "Local and state governments are replaced with soviet‑style councils, ensuring that political authority flows upward from the workers themselves."
+
+  USA_red_army_of_america:0 "Red Army of America"
+  USA_red_army_of_america_desc:0 "A revolutionary army is formed to defend the Workers’ Republic from counterrevolution and imperialist aggression, just as Foster envisioned."
+
+  USA_state_schooling_revolution:0 "State Schooling Revolution"
+  USA_state_schooling_revolution_desc:0 "Education is transformed into a tool of proletarian enlightenment, replacing bourgeois indoctrination with scientific socialism and collective values."
+
+  USA_culture_of_proletariat:0 "Culture of the Proletariat"
+  USA_culture_of_proletariat_desc:0 "A cultural revolution begins, sweeping away capitalist decadence and fostering a new culture rooted in labor, equality, and socialist humanism."
+
+  USA_council_of_commissars:0 "The Council of Commissars"
+  USA_council_of_commissars_desc:0 "A council of political commissars is established to ensure ideological unity and guide the revolutionary transformation of society."
+
+  USA_accomplish_the_new_world_revolutions:0 "Accomplish the New World Revolutions"
+  USA_accomplish_the_new_world_revolutions_desc:0 "The American Workers’ Republic embraces its historic mission: to ignite socialist revolutions across the Western Hemisphere."
+
+  USA_centralized_industrial_planning:0 "Centralized Industrial Planning"
+  USA_centralized_industrial_planning_desc:0 "A national planning apparatus is created to direct production, eliminate waste, and build the foundations of a socialist economy."
+
+  USA_state_farm_program:0 "The State Farm Program"
+  USA_state_farm_program_desc:0 "Agriculture is collectivized into state farms and cooperative units, ending the chaos of capitalist farming and ensuring food security for all."
+
+  USA_eliminate_market_anarchy:0 "Eliminate Market Anarchy"
+  USA_eliminate_market_anarchy_desc:0 "The irrationality of the market is abolished. Production is now guided by a unified national plan serving the needs of the working class."
+
+  USA_bolshevism_against_bankers:0 "Bolshevism Against the Bankers"
+  USA_bolshevism_against_bankers_desc:0 "The financial oligarchy is dismantled. Banks are nationalized and integrated into the socialist planning system."
+
+  USA_american_comintern:0 "The American Section of the Comintern"
+  USA_american_comintern_desc:0 "The United States becomes the center of a new revolutionary international, fulfilling Foster’s vision of America as a leader of world socialism."
+
+  USA_solidarity_with_soviets:0 "Solidarity with the Soviets"
+  USA_solidarity_with_soviets_desc:0 "Strengthen ties with the Soviet Union, uniting the two great workers’ republics in common struggle against global capitalism."
+
+  USA_towards_continental_union:0 "Towards a Continental Union"
+  USA_towards_continental_union_desc:0 "Advance toward a united socialist federation of the Americas — a continental workers’ union envisioned as the next stage of the world revolution."
+
+  USA_black_self_determination: "Self-Determination for the Black Belt"
+  USA_arsenal_of_socialism: "The Arsenal of Socialism"
+  USA_confront_global_reaction: "Confront Global Reaction"
+ 
+ ### PELLEY 
+  USA_silver_shirts_march:0 "Silver Shirts March on Washington!"
+  USA_silver_shirts_march_desc:0 "The Silver Legion takes to the streets, demonstrating its strength and resolve."
+
+  USA_purify_the_nation:0 "Purify the Nation"
+  USA_purify_the_nation_desc:0 "A campaign to cleanse the nation of perceived corruption and moral decay."
+
+  USA_legionary_administrators:0 "Install Legionary Administrators"
+  USA_legionary_administrators_desc:0 "Install loyal Silver Legion members into key administrative positions."
+
+  USA_american_revelation:0 "American Revelation"
+  USA_american_revelation_desc:0 "A new ideological awakening sweeps across the nation, reshaping its destiny."
+
+  USA_national_christian_state:0 "National-Christian State"
+  USA_national_christian_state_desc:0 "Establish a state guided by Christian nationalism and strict moral doctrine."
+
+  USA_a_new_gold_standard:0 "Implement the Ward System"
+
+  USA_legionary_labor_battalions:0 "Legionary Labor Battalions"
+  USA_legionary_labor_battalions_desc:0 "Organize labor forces into disciplined battalions to rebuild the nation."
+
+  USA_a_christian_economic_miracle:0 "A Christian Economic Miracle"
+  USA_a_christian_economic_miracle_desc:0 "Harness faith, discipline, and national unity to spark an economic revival."
+
+  USA_denounce_godless_commnism:0 "Denounce Godless Communism"
+  USA_denounce_godless_commnism_desc:0 "Launch a nationwide crusade against the threat of atheistic communism."
+
+  USA_legionary_civil_service:0 "Legionary Civil Service"
+  USA_legionary_civil_service_desc:0 "Restructure the civil service to ensure loyalty to the new order."
+
+  USA_corporatist_reconstruction:0 "Corporatist Reconstruction"
+  USA_corporatist_reconstruction_desc:0 "Rebuild the economy along corporatist lines, uniting labor and industry."
+
+  USA_the_crusader_army:0 "The Crusader Army"
+  USA_the_crusader_army_desc:0 "Forge a new army infused with religious zeal and nationalistic fervor."
+
+  USA_restore_american_spirit:0 "Restore the American Spirit"
+  USA_restore_american_spirit_desc:0 "Revitalize national pride through cultural and moral renewal."
+
+  USA_legionary_armed_forces:0 "Legionary Armed Forces"
+  USA_legionary_armed_forces_desc:0 "Transform the military into a force aligned with Legionary ideology."
+
+  USA_a_continental_destiny:0 "A Continental Destiny"
+  USA_a_continental_destiny_desc:0 "Embrace a bold vision for America’s rightful place on the continent."
+
+  USA_managed_democracy:0 "Managed Democracy"
+  USA_managed_democracy_desc:0 "Maintain the appearance of democracy while ensuring political stability."
+
+  USA_christian_youth_movement:0 "The Christian Youth Movement"
+  USA_christian_youth_movement_desc:0 "Shape the next generation through faith‑based youth organizations."
+
+  USA_moral_reconstruction_campaign:0 "Moral Reconstruction Campaign"
+  USA_moral_reconstruction_campaign_desc:0 "A sweeping effort to enforce moral discipline across society."
+
+  USA_rebuild_small_town_nation:0 "Rebuild the Small-Town Nation"
+  USA_rebuild_small_town_nation_desc:0 "Revitalize rural America and restore traditional community life."
+
+  USA_astral_citizenship:0 "Astral Citizenship"
+  USA_astral_citizenship_desc:0 "The nation transcends the material plane, recognizing a higher spiritual identity for all true believers."
+
+  USA_crusade_against_materialism:0 "Crusade Against Materialism"
+  USA_crusade_against_materialism_desc:0 "Reject the hollow temptations of the material world and rally the nation around spiritual purpose."
+
+  USA_walk_the_sevenfold_path:0 "Walk the Sevenfold Path"
+  USA_walk_the_sevenfold_path_desc:0 "A sacred doctrine outlines seven steps toward national enlightenment and personal transformation."
+
+  USA_a_government_of_adepts:0 "A Government of Adepts"
+  USA_a_government_of_adepts_desc:0 "Elevate the spiritually awakened to positions of authority, ensuring governance guided by higher wisdom."
+
+  USA_the_hidden_masters:0 "The Hidden Masters"
+  USA_the_hidden_masters_desc:0 "A clandestine circle of enlightened leaders emerges, shaping the nation from behind the veil."
+
+  USA_the_silver_initiates:0 "The Silver Initiates"
+  USA_the_silver_initiates_desc:0 "A new order of initiates is formed, sworn to uphold the esoteric truths of the American Revelation."
+
+  USA_the_new_millenium_state:0 "The New Millennium State"
+  USA_the_new_millenium_state_desc:0 "Proclaim the dawn of a new age — a millennium defined by spiritual unity and national rebirth."
+
+  USA_the_soulcraft_awakening:0 "The Soulcraft Awakening"
+  USA_the_soulcraft_awakening_desc:0 "A movement dedicated to reshaping the American soul, forging a people aligned with divine destiny."
+
+  USA_warriors_of_destiny:0 "Warriors of Destiny"
+  USA_warriors_of_destiny_desc:0 "Train elite warriors whose loyalty is not merely patriotic, but metaphysical in nature."
+
+  USA_americas_spiritual_destiny:0 "America’s Spiritual Destiny"
+  USA_americas_spiritual_destiny_desc:0 "Declare America the chosen vessel for a global spiritual transformation."
+
+  USA_the_silver_crusade:0 "The Silver Crusade"
+  USA_the_silver_crusade_desc:0 "Unleash a crusade to spread the Revelation, uniting the continent under a banner of divine purpose."
+  
+  USA_mine_eyes_have_seen_the_glory: "Mine Eyes Have Seen the Glory!"
+
 
  # Scott
  USA_revolt_of_engineers: "Revolt of the Engineers"
@@ -251,6 +471,10 @@
  ### Ideas
  USA_war_against_degeneration: "§RTHE SECOND AMERICAN REVOLUTION§!"
  USA_we_are_the_sun: "§CWe are the Sun§!"
+ USA_status_of_army: "The United States Armed Forces"
+ USA_status_of_army_desc: "The United States army remains undermanned, undertrained, and reliant on outdated doctrines from the Great War. Years of budget cuts and diplomatic isolation have left the military unprepared for modern mechanized warfare, limiting our capacity to fight a war."
+ 
+ USA_rise_of_pound_desc: "After the failure of the Emergency Banking Act, the hope and promise of the FDR administration vanished, and America sank back into malaise and discontent. Not long after, the famed artsman and poet Ezra Pound began forming his own fascist political party in an attempt to resolve the economic crisis himself. Labor agitation has also risen, with the CPUSA reporting higher membership every month. With the establishment in rapid decline, the politics of the United States are more uncertain than ever before."
  
  ### Country and Cosmetic Names
  ASR: "American Social Republic"
@@ -317,8 +541,11 @@
  falsemaskoffreedom: "§BWe must subordinate our appetites, our passions and our egoism to the wholeness of the National interest. This way we will be a really free people, otherwise anarchy and indiscipline will reign over us under the false mask of freedom.§!"
  shizobolgang: "§RMine eyes have seen the glory of the coming of the Lord \n\nHe is trampling out the vintage where the grapes of wrath are stored \n\nHe hath loosed the fateful lightning of His terrible swift sword \n\nHis truth is marching on§!"
  bashthefash: "§RThe Fascists in our Government will be Rooted Out - Once and for all!§!"
+ tt_depression_gone: "Has fully removed the Great Depression"
  USA_pap_ink_revolution_cat: "The Paper and Ink Revolution"
  
+ conservative_judge: "Conservative Judge"
+
  ### BoP
  USA_power_balance: "Struggle of the New American Gods"
  USA_pound_range: "Ezra Absolutism"
@@ -347,15 +574,17 @@
  pound.16.d: "§RNOTICE: The War with Britain has begun.§! While you may try to fight the British and defeat them conventionally, there is in-fact a scripted peace deal which will allow you to force a surrender from London. These are the following requirements to get the scripted peace event: \n\nYour navy must be 2x the size as Britain's. \nYour army must be at least the same size as Britain's. \nYou must have inflicted over 200,000 casualties on Britain. \nEITHER any core state of Britain is controlled by you, OR Bermuda, Belize, Suez, Gibralter, and Malta are NOT controlled by Britain. \nEITHER Canada must have capitulated already, OR does not exist on-map. \nYou must have at least 80 ships in both the English Channel and Western Approaches. \nFinally, all of YOUR core states must be controlled by you (USA tag). \nWait around 20 days, and the event should fire."
  yock.1.d: "The state of the national media immediately prior to Francis Parker Yockey’s ascension to power could only have been described as frantic. The various leftists and minorities who had enjoyed an uncertain existence under the Poet-king now faced a certain and imminent threat, for Yockey and his Vanguad had made it abundantly clear there would be no room for undesirables in his austere ethnocultural empire. However, after Yockey’s inauguration, the news abruptly went silent for a period of several weeks. When it resumed, it was eerily altered. Every paper, from local bulletins to the national presses spoke in the same hollow, obsequious tone, singing the praises of Yockey and the glory he would bring to America. The fates of Yockey’s left-wing opposition, the formerly popular George W. Christians and Ernest Hemingway, were glossed over in no more than a few short paragraphs. Christians had been declared insane and swallowed into the labyrinth of America’s psychiatric-industrial complex. While Hemingway had been charged with treason and an execution squad dispatched to his lodge in Idaho. It appears the great writer didn’t go down without the fight, as the names of eight slain Vanguard troopers were listed alongside the statement."
  yock.2.d: "They gathered not in reverence, but in rapture. The Capitol no longer housed democracy, but divinity—a state reborn in black and bronze. On a raised plinth, beneath fluttering banners stitched with the solar eagle and the iron fasces, Francis Parker Yockey addressed the American people. \n\n“We stand at the frontier—not of geography, but of destiny. The old republic is dead, its bones scattered from San Francisco to the Potomac. In its place, something greater rises. A state not built on votes or commerce, but on spirit, hierarchy, and vision. \n\nThis is not a war of armies alone. It is a war of metaphysics. London—the rotting core of Anglo-financial hypocrisy—shall burn. Moscow—the barbarian forge of materialist decadence—shall be ground to ash. Against both, we declare not opposition, but annihilation. \n\nYou, Americans of the Imperium, will become the sword. You will know hardship, yes. But from it, glory. Total Mobilization. Absolute devotion. Every hand forges victory; every voice affirms truth. \n\nWe are no longer a nation. We are an idea with steel sinews, marching across the continents. \n\nLet them call us mad. Let them call us monsters. They are not wrong. For only monsters can tear down the world that was. And only monsters, tempered in will and faith, can forge the world to come. \n\nAnd when they ask what we fight for, what we believe, what we dream—tell them: \n\nMore than anything you can even yet imagine.” \n\nThe crowd did not cheer—they howled. They chanted. \n“Imperium! Imperium! Imperium!” \n\nThe black banners of America marched toward total war."
- #butler.1.d: "Patience runs dry. No amount of sing-songy or artsy-fartsy display of national brilliance nor pride can win the masses if you do not provide their beloved bread and circuses. Pound's arrogance has caught up with him, and with a seeming inability to fix the great depression and "Surpass material strife", the people are more than outraged. The last straw came when Pound revealed several war plans, including potential alliances with fascist powers. While MacArthur and Patton were eager to hear Pound's ambitions, Smedley Butler was horrified; After an intense argument, Butler was sacked from the American Legion - A mistake no fool should make. The noble wrath of now not just the people, but the military and veterans who had supported Pound now too turn on him. \n\nThe people march down the Streets of the capitol shouting "Utopia? I don't give a damn!" to mock the fascist party. Now, Butler approaches with 10,000 American Legion men, the military and police tipped off and uncaring for the madman about to be deposed. As Butler Strode into the "Commander's Palace" - a decadent construction made for Pound's ego - He wondered how he might be remembered in history. He was doing the right thing, no? Yet now he was likely to be dictator - Roosevelt and the previous adminsitration lay dead or are missing persons, and the thought of so much power, so much responsibility irked the old Smedley. \n\n It was easy. Pound broke down as soon as the battalions broke into his quarters. He was grabbed and beat. Then held on the ground and handcuffed. "Former President- Forgive me God for saying this- Former 'Commander' of America, Ezra Loomis Pound, you are under arrest and sentenced to trial before the supreme court of the United States. You know what you have done, and we believe the power of popular will to be of due justice to you. You have the right to remain silent." \n\nPound didn't speak, merely staring down. It was over. And it was not coming back."
- 
+  
  vr_usa.1.t: "American Political Chaos Event 1"
- vr_usa.2.t: "American Political Chaos Event 2"
+ vr_usa.2.t: "Formation of the Popular Front"
+ vr_usa.2.d: "In one of the darkest moments in American history, while the grip of reactionary forces ightened around the fragile neck of old Uncle Sam, a new force emerged to resist the rising tide of fascism. As had occurred in other nations before, the American "Popular Front" had been formed: an alliance of diverse organizations united in the hope of safeguarding many more. From the IWW unions to the ever-ready CIO, and from the CPUSA to the SPA, the Popular Front stands as the final instrument of defense for the worker, the farmer, and the unemployed across the United States. \n\nYet any serious organization requires a capable leader, someone able to guide a project of such magnitude. That figure was found within the ranks of the Communist Party: Earl Russell Browder. A charismatic Kansan, former member of the Socialist Party of America, and now a prominent figure within the CPUSA, Browder had earned a reputation as both a diligent organizer and a committed socialist. His rise to leadership was far from effortless. \n\nNevertheless, through a combination of personal charm and his vision of a “Socialism as American as Apple Pie”, Browder built a broad base of support. He has succeeded in uniting moderates and radicals alike, promising stability, prosperity for the people, and a government in which every voice would be heard. With the people in his heart and the call of “Workers of America, unite!” on his lips, Browder now stands at the forefront of the most ambitious left-wing project undertaken since the founding of the nation: The Popular Front!"
+ vr_usa.2.a: "So left, two, three, so left, two, three, to the work that we must do..."
  vr_usa.3.t: "American Political Chaos Event 3"
  vr_usa.4.t: "American Political Chaos Event 4"
  vr_usa.5.t: "American Political Chaos Event 5"
  vr_usa.6.t: "American Political Chaos Event 6"
-
+ 
+ 
  
  collaborator_gov: "Collaborator Government"
  sister_republic: "Sister Republic"
@@ -606,3 +835,5 @@ USA_I_am_stronger_than_ever_desc:0 "From trial and rebirth, the President has em
 fdrlives.0.t: "The Cure"
 fdrlives.0.d: "News coming out about President Roosevelt’s illness have grown quiet in recent weeks. \n\n Doctors and aides spoke in low voices as Franklin D. Roosevelt sat beside a table crowded with medicines that had long ago lost their promise. That night a doctor arrived carrying something unusual: a small vial brought back by an expedition to the monasteries of Bhutan. The men who delivered it claimed monks in the mountains had entrusted it to them: an herbal remedy, ancient and potent. \n\nThe other doctors protested, but Roosevelt only smiled and drank. For a moment, nothing happened. Then the vial slipped from his hand and shattered as his body lurched with a sudden, violent tremor. The room erupted in alarm. Physicians rushed forward, but Roosevelt pushed them back as the shaking worsened, his legs quivering under him with a force no one in the room had seen in years. \n\nThen Roosevelt stood up. \n\nFranklin Delano Roosevelt was standing upright for the first time in years. The tremors faded as he steadied himself, breathing hard, while the room fell silent around him. No one spoke. No one moved. They simply watched, scarcely daring to believe what they were seeing. But they would not need to merely “believe” for much longer. Soon, they could know, and be a part of the truth."
 fdrlives.0.a: "The Order is Born..."
+fdrlives.5.t: "His Name is Nixon"
+fdrlives.5.d: "Reports from the OSS have grown increasingly troubling. In the quiet hours of the night, President Roosevelt has begun speaking of a threat not of a foreign power, not from internal opposition but from the future itself. \n\nDuring a private council within the Oval Office, the President rose from his chair with a stiffness that betrayed the strain of his unnatural recovery. His eyes, once warm, now burned with a cold and calculating certainty. \n“Sometime, in this land I have brought order to, a man will come to tear it all down. He will bring chaos once more. He will end the New Deal.” \nThe room fell silent. Advisors exchanged uneasy glances. Roosevelt continued, voice low and prophetic: \n\n“His name is Richard Milhouse Nixon. He is already born. Detach the OSS to his home." \n\nThe President spoke of the boy as if he were a grown adversary, a destined insurgent whose very existence threatened the Order’s foundations. Intelligence officers attempted to reassure him; Nixon was a child, barely old enough to read, but Roosevelt dismissed them with a wave of his hand. \n\n“Rebellion is not taught. It is carried in the soul.” finished FDR.  \n\nHow far will Roosevelt go to secure the future?"

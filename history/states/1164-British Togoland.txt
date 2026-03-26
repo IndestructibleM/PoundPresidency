@@ -1,0 +1,22 @@
+state={
+	id=1164
+	name="STATE_1164"
+	manpower=195380
+
+	history={
+		owner = ENG
+		buildings = {
+			infrastructure = 3
+		}
+		add_core_of = GHA
+		add_core_of = TOG
+
+	}
+
+	provinces={
+		7718 13822
+	}
+	buildings_max_level_factor=1.000
+	state_category=wasteland #TODO: SLOTS
+	local_supplies=0.000
+}

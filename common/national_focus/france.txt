@@ -9294,9 +9294,15 @@
 			}
 			add_ideas = FRA_party_divide
 			country_event = etat.1
-			set_country_leader_portrait = {
-				ideology = fascism
-				portrait = GFX_Portrait_Marcel_Bucard
+			create_country_leader = {
+				name = "Jacques Doriot"
+				desc = "POLITICS_ÉDOUARD_DALADIER_DESC"
+				picture = GFX_portrait_fra_jacques_doriot
+				expire = "1965.1.1"
+				ideology = fascism_ideology
+				traits = {
+					eager_collaborator
+				}
 			}
         }
     }
@@ -9466,7 +9472,7 @@
         x = 9
         y = 1
 		mutually_exclusive = {
-			focus = bucard_wins
+			focus = FRA_flames_of_saint_denis
 			focus = working_with_deat
 		}
         available = {
@@ -9530,8 +9536,8 @@
 		}
     }
     focus = {
-        id = way_of_warrior
-        icon = GFX_goal_way_of_warrior
+        id = FRA_citizen_patriots
+        icon = GFX_way_of_warrior
         x = 2
         y = 2
         prerequisite = { focus = transform_corporate_structure }
@@ -9594,11 +9600,11 @@
 		}
     }
     focus = {
-        id = united_in_spirit
-        icon = GFX_goal_FRA_united_in_spirit
+        id = FRA_nation_ready_for_battle
+        icon = GFX_FRA_united_in_spirit
         x = -3
-        y = 3
-        prerequisite = { focus = FRA_agrarian_auturky }
+        y = 4
+        prerequisite = { focus = FRA_milice_takeover }
         relative_position_id = FRA_patriots_in_control
         ai_will_do = {
 		    factor = 50
@@ -9634,7 +9640,7 @@
         icon = GFX_FRA_order_in_blood
         x = 3
         y = 3
-        prerequisite = { focus = way_of_warrior }
+        prerequisite = { focus = FRA_citizen_patriots }
         relative_position_id = FRA_patriots_in_control
         ai_will_do = {
 		    factor = 50
@@ -9648,11 +9654,10 @@
     }
     focus = {
         id = FRA_milice_takeover
-        icon = GFX_goal_france_for_french
+        icon = GFX_FRA_national_labor_front
         x = -3
-        y = 4
-        prerequisite = { focus = united_in_spirit }
-        prerequisite = { focus = FRA_legionary_workers_corps }
+        y = 3
+        prerequisite = { focus = FRA_agrarian_auturky }
         relative_position_id = FRA_patriots_in_control
         ai_will_do = {
 		    factor = 50
@@ -9669,11 +9674,10 @@
 		}
     }
     focus = {
-        id = FRA_national_labor_front
-        icon = GFX_goal_FRA_national_labor_front
+        id = FRA_supremacy_of_french_production
+        icon = GFX_france_for_french
         x = -1
         y = 4
-        prerequisite = { focus = united_in_spirit }
         prerequisite = { focus = FRA_legionary_workers_corps }
         relative_position_id = FRA_patriots_in_control
         ai_will_do = {
@@ -9693,7 +9697,6 @@
         icon = GFX_FRA_deal_with_church
         x = 1
         y = 4
-        prerequisite = { focus = oaths_of_loyalty }
         prerequisite = { focus = FRA_legionary_workers_corps }
         relative_position_id = FRA_patriots_in_control
         ai_will_do = {
@@ -9706,12 +9709,11 @@
 		}
     }
     focus = {
-        id = culture_war
-        icon = GFX_goal_culture_war
+        id = FRA_alien_citizen_registry
+        icon = GFX_culture_war
         x = 3
         y = 4
         prerequisite = { focus = loyalty_to_fff }
-        prerequisite = { focus = FRA_legionary_workers_corps }
         relative_position_id = FRA_patriots_in_control
         ai_will_do = {
 		    factor = 50
@@ -9733,10 +9735,10 @@
 			64 = { owns_or_subject_of = yes }
        		126 = { owns_or_subject_of = yes }
         }
-        prerequisite = { focus = FRA_milice_takeover }
-        prerequisite = { focus = FRA_national_labor_front }
+        prerequisite = { focus = FRA_nation_ready_for_battle }
+        prerequisite = { focus = FRA_supremacy_of_french_production }
         prerequisite = { focus = deal_with_the_church }
-        prerequisite = { focus = culture_war }
+        prerequisite = { focus = FRA_alien_citizen_registry }
         relative_position_id = FRA_patriots_in_control
         ai_will_do = {
 		    factor = 50
@@ -9755,8 +9757,8 @@
     }
 
 	focus = {
-        id = bucard_wins
-        icon = "GFX_goal_bucard_wins"
+        id = FRA_flames_of_saint_denis
+        icon = "GFX_goal_FRA_flames_of_saint_denis"
         x = 0
         y = 1
 		mutually_exclusive = {
@@ -9780,284 +9782,83 @@
 			add_stability = 0.25
 			add_political_power = 100
 		}
-    }
-    focus = {
-        id = FRA_everything_for_the_state
-        icon = "GFX_goal_FRA_everything_for_the_state"
-        x = -2
-        y = 1
-        prerequisite = { focus = bucard_wins }
-        relative_position_id = bucard_wins
-        ai_will_do = {
-		    factor = 50
-		}
-		cost = 8
-        completion_reward = {
-			add_ideas = corporatism
-		}
-    }
-    focus = {
-        id = FRA_nothing_against_the_state
-        icon = "GFX_goal_FRA_nothing_against_the_state"
-        x = 0
-        y = 1
-        prerequisite = { focus = bucard_wins }
-        relative_position_id = bucard_wins
-        ai_will_do = {
-		    factor = 50
-		}
-		cost = 8
-        completion_reward = {
-			country_event = etat.18
-            add_ideas = autarkic_economy
-		}
-    }
-    focus = {
-        id = FRA_all_within_the_state
-        icon = "GFX_goal_FRA_all_within_the_state"
-        x = 2
-        y = 1
-        prerequisite = { focus = bucard_wins }
-        relative_position_id = bucard_wins
-        ai_will_do = {
-		    factor = 50
-		}
-		cost = 8
-        completion_reward = {
-			add_ideas = totalitarianism
-		}
-    }
-    focus = {
-        id = french_war_machine
-        icon = "GFX_goal_FRA_all_within_the_state"
-        x = -2
-        y = 2
-        prerequisite = { focus = FRA_everything_for_the_state }
-        relative_position_id = bucard_wins
-        ai_will_do = {
-		    factor = 50
-		}
-		cost = 8
-        completion_reward = {
-			random_core_state = {
-				add_extra_state_shared_building_slots = 2
-				add_building_construction = {
-					type = arms_factory
-					level = 2
-					instant_build = yes
-				}
-			}
-			random_core_state = {
-				add_extra_state_shared_building_slots = 2
-				add_building_construction = {
-					type = arms_factory
-					level = 2
-					instant_build = yes
-				}
-			}
-			random_core_state = {
-				add_extra_state_shared_building_slots = 2
-				add_building_construction = {
-					type = arms_factory
-					level = 2
-					instant_build = yes
-				}
-			}
-			upgrade_economy_law = yes
-		}
-    }
-    focus = {
-        id = fight_anti_france
-        icon = "GFX_goal_fight_anti_france"
-        x = 0
-        y = 2
-        prerequisite = { focus = FRA_nothing_against_the_state }
-        relative_position_id = bucard_wins
-        ai_will_do = {
-		    factor = 50
-		}
-		cost = 8
-        completion_reward = {
-			add_manpower = -3000
-			custom_effect_tooltip = fascisttakeover
-            hidden_effect = {
-                add_popularity = { ideology = fascism popularity = 1 }
-            }
-			add_stability = 0.08	
-		}
-    }
-    focus = {
-        id = FRA_france_daughter_of_god
-        icon = "GFX_goal_FRA_france_daughter_of_god"
-        x = 2
-        y = 2
-        prerequisite = { focus = FRA_all_within_the_state }
-        relative_position_id = bucard_wins
-        ai_will_do = {
-		    factor = 50
-		}
-		cost = 8
-        completion_reward = {
-             add_idea = FRA_france_daughter_of_god
-		}
-    }
-    focus = {
-        id = FRA_national_syndicalism
-        icon = GFX_FRA_industrial_push_command
-        x = -3
-        y = 3
-        prerequisite = { focus = french_war_machine }
-        relative_position_id = bucard_wins
-        ai_will_do = {
-		    factor = 50
-		}
-		cost = 8
-        completion_reward = {
-			remove_ideas = FRA_full_employment
-		}
-    }
-    focus = {
-        id = FRA_grande_armee_fasciste_focus
-        icon = "GFX_goal_FRA_grande_armee_fasciste_focus"
-        x = -2
-        y = 4
-        prerequisite = { focus = FRA_national_syndicalism }
-        relative_position_id = bucard_wins
-        ai_will_do = {
-		    factor = 50
-		}
-		cost = 8
-        completion_reward = {
-			add_ideas = FRA_grande_armee_fasciste
-			set_grand_doctrine = new_mobile_warfare
-			add_doctrine_cost_reduction = {
-				cost_reduction = 0.5
-				uses = 2
-				category = land_doctrine
-			}
-		}
-    }
-    focus = {
-        id = FRA_build_higher_order
-        icon = GFX_dream_of_death
+	}
+	
+	focus = {
+        id = FRA_new_french_vanguard
+        icon = GFX_goal_eternal_struggle
         x = -1
-        y = 3
-        prerequisite = { focus = fight_anti_france }
-        relative_position_id = bucard_wins
+        y = 1
+        prerequisite = { focus = FRA_flames_of_saint_denis }
+        relative_position_id = FRA_flames_of_saint_denis
         ai_will_do = {
 		    factor = 50
 		}
 		cost = 8
         completion_reward = {
-			random_core_state = {
-				add_extra_state_shared_building_slots = 2
-				add_building_construction = {
-					type = industrial_complex
-					level = 2
-					instant_build = yes
-				}
-			}
-            random_core_state = {
-				add_extra_state_shared_building_slots = 2
-				add_building_construction = {
-					type = industrial_complex
-					level = 2
-					instant_build = yes
-				}
-			}
-            swap_ideas = {
-				remove_idea = FRA_revolution_nationale
-				add_idea = FRA_revolution_nationale_2
-			}
 		}
-    }
-    focus = {
-        id = FRA_sorelian_dreams
-        icon = "GFX_goal_revolutionary_violence"
-        x = 1
-        y = 3
-        prerequisite = { focus = fight_anti_france }
-        relative_position_id = bucard_wins
-        ai_will_do = {
-		    factor = 50
-		}
-		cost = 8
-        completion_reward = {
-            activate_advisor = FRA_georges_valois
-			add_ideas = FRA_sorelian_dawn
-		}
-    }
-    focus = {
-        id = etat_de_force
-        icon = "GFX_goal_etat_de_force"
-        x = 3
-        y = 3
-        prerequisite = { focus = FRA_france_daughter_of_god }
-        relative_position_id = bucard_wins
-        ai_will_do = {
-		    factor = 50
-		}
-		cost = 8
-        completion_reward = {
-            swap_ideas = {
-                remove_idea = FRA_france_daughter_of_god
-                add_idea = etat_de_force
-            }
-            country_event = etat.16
-		}
-    }
-    focus = {
-        id = FRA_nation_above_all
-        icon = "GFX_goal_FRA_nation_above_all"
+	}
+		
+	focus = {
+        id = FRA_mass_meetings_of_ppf
+        icon = GFX_goal_eternal_struggle
         x = 2
-        y = 4
-        prerequisite = { focus = etat_de_force }
-        relative_position_id = bucard_wins
+        y = 2
+        prerequisite = { focus = FRA_national_labor_front }
+        relative_position_id = FRA_flames_of_saint_denis
         ai_will_do = {
 		    factor = 50
 		}
 		cost = 8
         completion_reward = {
 		}
-    }
-    focus = {
-        id = FRA_tradition_of_revolution
-        icon = "GFX_goal_dream_of_death"
+	}
+	
+	focus = {
+        id = FRA_street_veterans
+        icon = GFX_goal_eternal_struggle
+        x = -2
+        y = 2
+        prerequisite = { focus = FRA_new_french_vanguard }
+        relative_position_id = FRA_flames_of_saint_denis
+        ai_will_do = {
+		    factor = 50
+		}
+		cost = 8
+        completion_reward = {
+		}
+	}
+		
+	focus = {
+        id = FRA_syndicalism_of_patriots
+        icon = GFX_goal_eternal_struggle
         x = 0
-        y = 4
-        prerequisite = { focus = FRA_build_higher_order }
-        prerequisite = { focus = FRA_sorelian_dreams }
-        relative_position_id = bucard_wins
+        y = 2
+        prerequisite = { focus = FRA_new_french_vanguard focus = FRA_national_labor_front }
+        relative_position_id = FRA_flames_of_saint_denis
         ai_will_do = {
 		    factor = 50
 		}
 		cost = 8
         completion_reward = {
-            country_event = etat.17
 		}
-    }
-    focus = {
-        id = ascendent_glory
-        icon = "GFX_goal_ascendent_glory"
-        x = 0
-        y = 5
-        prerequisite = { focus = FRA_nation_above_all }
-        prerequisite = { focus = FRA_tradition_of_revolution }
-        prerequisite = { focus = FRA_grande_armee_fasciste_focus }
-        relative_position_id = bucard_wins
+	}
+		
+	focus = {
+        id = FRA_national_labor_front
+        icon = GFX_goal_eternal_struggle
+        x = 1
+        y = 1
+        prerequisite = { focus = FRA_flames_of_saint_denis }
+        relative_position_id = FRA_flames_of_saint_denis
         ai_will_do = {
 		    factor = 50
 		}
 		cost = 8
         completion_reward = {
-            swap_ideas = {
-                remove_idea = french_war_machine_2
-                remove_idea = laws_of_tribe
-                remove_idea = etat_de_force
-                add_idea = francist_imperial_glory
-            }
 		}
-    }
+	}
+	
 	focus = {
         id = rousing_speeches ### FIX ALL THIS SHITTY 2022 IMPERIAL ECLIPSE CODE
         x = -18
@@ -10152,7 +9953,7 @@
 			}
         }
 		mutually_exclusive = {
-			focus = bucard_wins
+			focus = FRA_flames_of_saint_denis
 			focus = FRA_patriots_in_control
 		}
         prerequisite = { focus = FRA_duel_of_fates }
@@ -10380,7 +10181,6 @@
         y = 4
         prerequisite = { focus = scientific_revolution }
         prerequisite = { focus = planisme }
-        prerequisite = { focus = white_brotherhood}
         relative_position_id = working_with_deat
         ai_will_do = {
 		    factor = 50
@@ -10420,8 +10220,7 @@
         x = 0
         y = 4
         prerequisite = { focus = white_brotherhood }
-        prerequisite = { focus = planisme }
-        prerequisite = { focus = entrench_party_state } 
+        prerequisite = { focus = planisme focus = entrench_party_state }
         relative_position_id = working_with_deat
         ai_will_do = {
 		    factor = 50
@@ -10437,7 +10236,6 @@
         icon = GFX_goal_FRA_constructive_revolution
         x = -3
         y = 4
-        prerequisite = { focus = white_brotherhood }
         prerequisite = { focus = a_dark_enlightenment }
         prerequisite = { focus = entrench_party_state } 
         relative_position_id = working_with_deat
@@ -10495,7 +10293,7 @@
 	focus = {
         id = FRA_towards_european_hegemony
         icon = GFX_FRA_imperial
-        x = 18
+        x = 19
         y = 1
         available = {
         }
@@ -10683,7 +10481,7 @@
 	}
 	focus = {
         id = FRA_support_polish_revanchism
-        icon = GFX_POL_Cavaliers_Triumphant
+        icon = GFX_FRA_reactionary_revolution
         x = -4
         y = 3
         prerequisite = { focus = FRA_ally_poland }
@@ -10736,7 +10534,6 @@ focus = {
     x = 2
     y = 3
     prerequisite = { focus = FRA_gauls_and_gaels }
-    prerequisite = { focus = make_them_bleed }
     relative_position_id = FRA_towards_european_hegemony
     ai_will_do = {
         factor = 50
@@ -10751,6 +10548,20 @@ focus = {
 		add_state_claim = 35
 		add_state_claim = 35
 		add_state_claim = 977
+    }
+}
+focus = {
+    id = FRA_reconstruct_the_map_of_europe
+    icon = GFX_ascendent_glory
+    x = 3
+    y = 4
+    prerequisite = { focus = FRA_beyond_natural_borders }
+    relative_position_id = FRA_towards_european_hegemony
+    ai_will_do = {
+        factor = 50
+    }
+    cost = 4
+    completion_reward = {
     }
 }
 focus = {

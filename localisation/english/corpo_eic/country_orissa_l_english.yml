@@ -1,0 +1,25 @@
+﻿l_english:
+
+ORI_democratic:5 "Orissa"
+ORI_democratic_DEF:5 "Orissa"
+ORI_democratic_ADJ:5 "Oriya"
+ORI_democratic_party:0 ""
+ORI_democratic_party_long:0 ""
+
+ORI_fascism:5 "Orissa"
+ORI_fascism_DEF:5 "Orissa"
+ORI_fascism_ADJ:5 "Oriya"
+ORI_fascism_party:0 ""
+ORI_fascism_party_long:0 ""
+
+ORI_communism:5 "Orissa"
+ORI_communism_DEF:5 "Orissa"
+ORI_communism_ADJ:5 "Oriya"
+ORI_communism_party:0 ""
+ORI_communism_party_long:0 ""
+
+ORI_neutrality:5 "Free State of Orissa"
+ORI_neutrality_DEF:5 "The Free State of Orissa"
+ORI_neutrality_ADJ:5 "Oriya"
+ORI_neutrality_party:0 "Non-Aligned"
+ORI_neutrality_party_long:0 ""

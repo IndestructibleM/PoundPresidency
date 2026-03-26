@@ -10,22 +10,7 @@ characters = {
 			ideology = socfash
 		}
 	}
-	
-	USA_Ernest_Hemmingway = {
-		name = "Ernest Hemmingway"
-		portraits = {
-			civilian = {
-				large = "gfx/leaders/USA/Portrait_Ernest_Hemmingway.png"
-			}
-		}
-		country_leader = {
-			ideology = utopian_socialism
-		}
-		country_leader = {
-			ideology = socdem
-		}
-	}
-	
+
 	USA_George_Christians = {
 		name = "George W. Christians"
 		portraits = {
@@ -166,6 +151,27 @@ characters = {
 		}
 	}
 	
+	USA_george_sutherland = {
+		name = "George Sutherland"
+		portraits = {
+			civilian = {
+				small = "gfx/interface/advisors/USA/USA_george_sutherland.png"
+			}
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = USA_george_sutherland_advisor
+			can_be_fired = no
+			traits = { conservative_judge }
+			available = {
+				OR = {
+					has_government = democratic
+					has_government = conservative
+				}
+			}
+		}
+	}
+	
 	USA_revilo_oliver = {
 		name = "Revilo P. Oliver"
 		portraits = {
@@ -216,10 +222,9 @@ characters = {
 			ideology = technocracy
 		}
 		advisor = {
-			slot = political_advisor
+			slot = second_command
 			idea_token = USA_howard_scott_idea
 			available = { has_completed_focus = USA_invite_technocratic_management }
-			visible = { has_completed_focus = USA_2nd_american_revolution }
 			traits = { technocratic_corporatist }
 		}
 	}
@@ -288,11 +293,8 @@ characters = {
 			ideology = fascism_ideology
 		}
 		advisor = {
-			slot = political_advisor
+			slot = second_command
 			idea_token = USA_lawrence_dennis_idea
-			visible = {
-				has_completed_focus = USA_2nd_american_revolution
-			}
 			available = {
 				has_completed_focus = USA_supraproduction_syndicalism
 			}
@@ -308,13 +310,10 @@ characters = {
 			}
 		}
 		advisor = {
-			slot = political_advisor
+			slot = second_command
 			idea_token = USA_upton_sinclair_idea
-			visible = {
-				has_completed_focus = USA_natural_revolution
-			}
 			available = {
-				has_completed_focus = USA_natural_revolution
+				has_completed_focus = USA_communism_as_american_apple_pie
 			}
 			traits = { socialist_justice }
 		}

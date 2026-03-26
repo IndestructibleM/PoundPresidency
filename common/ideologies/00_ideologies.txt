@@ -53,6 +53,7 @@ ideologies = {
 			can_force_government = yes
 			can_send_volunteers = yes
 			can_puppet = yes
+			can_create_factions = no
 		}
 
 		can_collaborate = yes
@@ -66,7 +67,6 @@ ideologies = {
 			hidden_modifier = { join_faction_tension = -0.1 }
 			embargo_cost_factor = 1
 			lend_lease_tension = 0.50
-			fascism_acceptance = 20
 		}
 
 		ai_fascist = yes # uses the fascist AI behaviour
@@ -75,12 +75,13 @@ ideologies = {
 		ai_give_core_state_control_threshold = 10000
 	}
 
-	reactionary = { ### Despotic
+	reactionary = {
 
 		types = {
 
 			absolute_monarchy = {}
-
+			christian_nationalism = {}
+			reactionary_junta = {}
 		}
 
 		dynamic_faction_names = {
@@ -101,20 +102,22 @@ ideologies = {
 			can_force_government = yes
 			can_puppet = yes
 			can_send_volunteers = yes
+			can_create_factions = no
 		}
 
 		modifiers = {
 			#increased_influence_factor = 0.3 #30% easier to influence
-			generate_wargoal_tension = 0.5
-			join_faction_tension = 0.4
+			generate_wargoal_tension = 0.25
+			join_faction_tension = 0.3
 			lend_lease_tension = 0.6
-			send_volunteers_tension = 0.4
+			send_volunteers_tension = 0.15
 			guarantee_tension = 0.4
 			drift_defence_factor = -0.3
 			civilian_intel_to_others = 20.0
 			army_intel_to_others = 10.0
 			navy_intel_to_others = 20.0
 			airforce_intel_to_others = 10.0
+			can_create_factions = no
 		}
 
 		faction_modifiers = {
@@ -174,11 +177,12 @@ ideologies = {
 			can_force_government = yes
 			can_puppet = yes
 			can_send_volunteers = no
+			can_create_factions = no
 		}
 
 		modifiers = {
 			#increased_influence_factor = 0.3 #30% easier to influence
-			generate_wargoal_tension = 0.5
+			generate_wargoal_tension = 0.25
 			join_faction_tension = 0.4
 			lend_lease_tension = 0.6
 			send_volunteers_tension = 0.4
@@ -226,8 +230,9 @@ ideologies = {
 
 		rules = {
 			can_create_collaboration_government = no
-			can_declare_war_on_same_ideology = no
+			can_declare_war_on_same_ideology = yes
 			can_force_government = yes
+			can_create_factions = no
 			can_send_volunteers = yes
 			can_puppet = yes
 			can_lower_tension = yes
@@ -297,13 +302,14 @@ ideologies = {
 
 		rules = {
 			can_create_collaboration_government = no
-			can_declare_war_on_same_ideology = no
+			can_declare_war_on_same_ideology = yes
 			can_force_government = yes
 			can_send_volunteers = yes
 			can_puppet = yes
 			can_lower_tension = yes
 			can_only_justify_war_on_threat_country = yes
 			can_guarantee_other_ideologies = yes
+			can_create_factions = no
 		}
 
 		can_host_government_in_exile = yes
@@ -340,6 +346,7 @@ ideologies = {
 
 		types = {
 			democratic_socialism = {}
+			reformist_marxism = {}
 		}
 
 		dynamic_faction_names = {
@@ -362,6 +369,7 @@ ideologies = {
 			can_force_government = yes
 			can_send_volunteers = yes
 			can_puppet = yes
+			can_create_factions = no
 		}
 
 		can_collaborate = yes
@@ -432,6 +440,7 @@ ideologies = {
 			can_force_government = yes
 			can_send_volunteers = yes
 			can_puppet = yes
+			can_create_factions = no
 		}
 
 		can_collaborate = yes

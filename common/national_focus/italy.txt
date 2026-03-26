@@ -23472,7 +23472,7 @@ focus_tree = {
 
 	focus = {
 		id = ITA_war_is_the_worlds_hygiene
-		icon = GFX_focus_generic_fascist_troops
+		icon = GFX_war_is_the_hygiene
 		prerequisite = { focus = ITA_total_industrial_mobilization }
 		prerequisite = { focus = ITA_the_end_of_decadence }
 		prerequisite = { focus = ITA_urban_titans_rise }
@@ -23506,7 +23506,7 @@ focus_tree = {
 
 	focus = {
 		id = ITA_armored_legions_of_tommorow
-		icon = GFX_focus_ITA_by_blood_alone
+		icon = GFX_armed_legions
 		prerequisite = { focus = ITA_war_is_the_worlds_hygiene }
 		x = 0
 		y = 1
@@ -23589,7 +23589,7 @@ focus_tree = {
 
 	focus = {
 		id = ITA_the_world_must_modernize
-		icon = GFX_focus_RAJ_to_shake_the_world
+		icon = GFX_the_world_must_modernize
 		prerequisite = { focus = ITA_beauty_in_destruction }
 		x = -1.5
 		y = 1
@@ -23605,7 +23605,7 @@ focus_tree = {
 
 	focus = {
 		id = ITA_smash_the_old_empires
-		icon = GFX_focus_GER_wage_war_on_capitalism
+		icon = GFX_destroy_old_empires
 		prerequisite = { focus = ITA_beauty_in_destruction }
 		x = 1.5
 		y = 1

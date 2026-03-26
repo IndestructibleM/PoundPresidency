@@ -1,0 +1,545 @@
+guiTypes = {
+
+	containerWindowType = {
+		name = "history_window"
+		position = { x = 300 y = 150 }	
+		size = { width = 1343 height= 783 }
+		orientation = UPPER_LEFT
+		moveable = yes
+
+		background = {
+			name = "Background"		
+			quadTextureSprite ="GFX_history_window_bg"
+		}
+
+		instantTextboxType = {
+			name = "history_window_title"
+			position = { x = 40 y = 7 }
+			font = "hoi_36header"
+			borderSize = {x = 0 y = 0}
+			format = centre
+			text = "HISTORY_WINDOW_TITLE"
+			maxWidth = 1200
+			maxHeight = 20
+			fixedsize = yes
+		}
+
+		buttonType = {
+			name = "close_button"
+			position = { x = -45 y = 10 }
+			quadTextureSprite ="GFX_closebutton"
+			buttonFont = "Main_14_black"
+			shortcut = "ESCAPE"
+			Orientation = "UPPER_RIGHT"
+			clicksound = click_close
+			pdx_tooltip = "CLOSE"
+		}
+
+		containerWindowType = {
+			name = "adds"
+			position = { x = 20 y = -65 }
+			size = { width = 150 height= 83 }
+			orientation = lower_left
+
+
+			buttonType ={
+				name ="steam_profile_link"
+				spriteType = "GFX_icon_steam"
+				position = { x= 0 y = 0 }
+				Orientation = "UPPER_LEFT"
+				web_link = "https://steamcommunity.com/profiles/76561198392467683"
+				pdx_tooltip = "steam_profile_link_tt"
+			}
+			
+		}
+
+		containerWindowType = {
+			name = "country_info"
+			position = { x = 0 y = 0 }
+			size = { width = 150 height= 83 }
+			orientation = UPPER_LEFT
+
+			containerWindowType = {
+				name = "flag_of_info"
+				position = { x = 30 y = 85 }
+				size = { width = 150 height= 83 }
+				orientation = UPPER_LEFT
+
+				iconType = {
+					name ="background"
+					spriteType = "GFX_info_flag_background_bg"
+					position = { x= -12 y = -15 }
+					Orientation = "UPPER_LEFT"
+				}
+
+				iconType = {
+					name = "THR_info_flag"
+					spriteType = "GFX_shield_medium"
+					position = { x = 0 y = 0 }
+					orientation = UPPER_LEFT
+				}
+
+				instantTextboxType = {
+					name = "info_country_name"
+					position = { x = 90 y = -11 }
+					font = "hoi_24header"
+					borderSize = {x = 0 y = 0}
+					text = "INFO_COUNTRY_NAME"
+					maxWidth = 160
+					maxHeight = 20
+					fixedsize = yes
+				}
+			}
+
+#			containerWindowType = {
+#				name = "leader_part"
+#				position = { x = 50 y = 150 }
+#				size = { width = 150 height= 83 }
+#				orientation = UPPER_LEFT
+#
+#				iconType = {
+#					name = "leader"
+#					position = { x = 18 y = 56 }
+#					spriteType = "GFX_Portrait_thr_ahmet_painted"
+#				}
+#		
+#				iconType = {
+#					name = "leader_frame2"
+#					spriteType = "GFX_pol_leader_frame"
+#					position = { x = 10 y = 44 }		
+#					alwaystransparent = yes
+#				}
+#
+#				instantTextboxType = {
+#					name = "leader_name"
+#					position = { x = 18 y = 271 }
+#					font = "hoi_18mbs"
+#					text = "THR_leader_name"
+#					maxWidth = 155
+#					maxHeight = 20
+#					format = center
+#					vertical_alignment = center
+#				}
+#			}
+
+			containerWindowType = {
+				name = "options"
+				position = { x = 30 y = 200 }
+				size = { width = 150 height= 83 }
+				orientation = UPPER_LEFT
+
+				containerWindowType = {
+					name = "alternative_history"
+					position = { x = 0 y = 0 }
+					size = { width = 150 height= 83 }
+					orientation = UPPER_LEFT
+
+					buttonType = {
+						name = "alternative_history_button_1"
+						quadTextureSprite ="GFX_history_button"
+						position = { x= 0 y = 0 }
+						Orientation = "UPPER_LEFT"
+						clicksound = click_close
+						oversound = ui_menu_over
+					}
+
+					buttonType = {
+						name = "alternative_history_button_2"
+						quadTextureSprite ="GFX_history_button"
+						position = { x= 0 y = 0 }
+						Orientation = "UPPER_LEFT"
+						clicksound = click_close
+						oversound = ui_menu_over
+					}
+
+					instantTextboxType = {
+						name = "alternative_history_button_text"
+						position = { x = 1 y = 4 }
+						font = "hoi_20bs"
+						format = center
+						text = "ALTERNATIVE_HISTORY_BUTTON_TEXT"
+						maxWidth = 215
+						maxHeight = 20
+						vertical_alignment = center
+						fixedsize = yes
+					}
+				}
+
+				containerWindowType = {
+					name = "achievements"
+					position = { x = 0 y = 30 }
+					size = { width = 150 height= 83 }
+					orientation = UPPER_LEFT
+
+					buttonType = {
+						name = "achievements_button_1"
+						quadTextureSprite ="GFX_history_button"
+						position = { x= 0 y = 0 }
+						Orientation = "UPPER_LEFT"
+						clicksound = click_close
+						oversound = ui_menu_over
+					}
+
+					buttonType = {
+						name = "achievements_button_2"
+						quadTextureSprite ="GFX_history_button"
+						position = { x= 0 y = 0 }
+						Orientation = "UPPER_LEFT"
+						clicksound = click_close
+						oversound = ui_menu_over
+					}
+
+					instantTextboxType = {
+						name = "achievements_button_text"
+						position = { x = 1 y = 4 }
+						font = "hoi_20bs"
+						format = center
+						text = "ACHIEVEMENTS_BUTTON_TEXT"
+						maxWidth = 215
+						maxHeight = 20
+						vertical_alignment = center
+						fixedsize = yes
+					}
+				}
+
+				containerWindowType = {
+					name = "message_from_the_modder"
+					position = { x = 0 y = 60 }
+					size = { width = 150 height= 83 }
+					orientation = UPPER_LEFT
+
+					buttonType = {
+						name = "message_button_1"
+						quadTextureSprite ="GFX_history_button"
+						position = { x= 0 y = 0 }
+						Orientation = "UPPER_LEFT"
+						clicksound = click_close
+						oversound = ui_menu_over
+					}
+
+					buttonType = {
+						name = "message_button_2"
+						quadTextureSprite ="GFX_history_button"
+						position = { x= 0 y = 0 }
+						Orientation = "UPPER_LEFT"
+						clicksound = click_close
+						oversound = ui_menu_over
+					}
+
+					instantTextboxType = {
+						name = "message_button_text"
+						position = { x = 1 y = 4 }
+						font = "hoi_20bs"
+						format = center
+						text = "MESSAGE_BUTTON_TEXT"
+						maxWidth = 215
+						maxHeight = 20
+						vertical_alignment = center
+						fixedsize = yes
+					}
+				}
+			}
+
+			containerWindowType = {
+				name = "numbers"
+				position = { x = 0 y = 450 }
+				size = { width = 150 height= 83 }
+				orientation = center
+	
+				containerWindowType = {
+					name = "state"
+					position = { x = 0 y = 0 }
+					size = { width = 150 height= 83 }
+	
+					iconType = {
+						name ="state_backround"
+						spriteType = "GFX_numbers_bg"
+						position = { x= 0 y = 0 }
+						Orientation = "UPPER_LEFT"
+					}
+
+					iconType = {
+						name ="state_icon"
+						spriteType = "GFX_icon_occupied_territories"
+						position = { x= 4 y = 7 }
+						Orientation = "UPPER_LEFT"
+						pdx_tooltip = "number_of_states_tt"
+					}
+
+					instantTextboxType = {
+						name = "number_of_states"
+						position = { x = 47 y = 10 }
+						font = "hoi_20bs"
+						format = center
+						text = "NUMBER_OF_STATES"
+						maxWidth = 30
+						maxHeight = 20
+						vertical_alignment = center
+						fixedsize = yes
+					}
+				}
+
+				containerWindowType = {
+					name = "army"
+					position = { x = 0 y = 50 }
+					size = { width = 150 height= 83 }
+	
+					iconType = {
+						name ="army_backround"
+						spriteType = "GFX_numbers_bg"
+						position = { x= 0 y = 0 }
+						Orientation = "UPPER_LEFT"
+					}
+
+					iconType = {
+						name ="army_icon"
+						spriteType = "GFX_decision_generic_army_support"
+						position = { x= 4 y = 7 }
+						Orientation = "UPPER_LEFT"
+						pdx_tooltip = "number_of_armies_tt"
+					}
+
+					instantTextboxType = {
+						name = "number_of_army"
+						position = { x = 47 y = 10 }
+						font = "hoi_20bs"
+						format = center
+						text = "NUMBER_OF_ARMIES"
+						maxWidth = 30
+						maxHeight = 20
+						vertical_alignment = center
+						fixedsize = yes
+					}
+			
+				}
+			
+			}
+
+#			containerWindowType = {
+#				name = "history_buttons"
+#				position = { x = 35 y = 600 }
+#				size = { width = 150 height= 83 }
+#				orientation = UPPER_LEFT
+#
+#				buttonType = {
+#					name = "history_button"
+#					quadTextureSprite ="GFX_history_button"
+#					position = { x= 0 y = 0 }
+#					Orientation = "UPPER_LEFT"
+#					clicksound = click_close
+#					oversound = ui_menu_over
+#				}
+#
+#				instantTextboxType = {
+#					name = "history_button_name"
+#					position = { x = 30 y = 3 }
+#					font = "hoi_18mbs"
+#					text = "HISTORY_BUTTON_NAME"
+#					maxWidth = 155
+#					maxHeight = 20
+#					format = center
+#					vertical_alignment = center
+#				}
+#
+#				buttonType = {
+#					name = "alternative_history_button"
+#					quadTextureSprite ="GFX_history_button"
+#					position = { x= 0 y = 30 }
+#					Orientation = "UPPER_LEFT"
+#					clicksound = click_close
+#					oversound = ui_menu_over
+#				}
+#
+#				instantTextboxType = {
+#					name = "alternative_history_button_name"
+#					position = { x = 30 y = 33 }
+#					font = "hoi_18mbs"
+#					text = "ALTERNATIVE_HISTORY_BUTTON_NAME"
+#					maxWidth = 155
+#					maxHeight = 20
+#					format = center
+#					vertical_alignment = center
+#				}
+#			}
+#		}
+		containerWindowType = {
+			name = "history_panel"
+			position = { x = 280 y = 90 }
+			size = { width = 150 height= 83 }
+			orientation = upper_left
+
+			instantTextboxType = {
+				name = "history_title"
+				position = { x = 300 y = -25 }
+				font = "hoi_30header"
+				text = "HISTORY_TITLE"
+				maxWidth = 155
+				maxHeight = 20
+				format = center
+				vertical_alignment = center
+			}
+
+			instantTextboxType = {
+				name = "history_text"
+				position = { x = 30 y = 15 }
+				font = "hoi_16mbs"
+				text = "HISTORY_TEXT"
+				maxWidth = 600
+				maxHeight = 670
+				fixedsize = yes
+			}
+
+			buttonType ={
+				name ="wikipedia_link"
+				spriteType = "GFX_icon_wikipedia"
+				position = { x= 10 y = 630 }
+				Orientation = "UPPER_LEFT"
+				web_link = "https://en.wikipedia.org/wiki/Provisional_Government_of_Western_Thrace"
+				pdx_tooltip = "wikipedia_link_tt"
+			}
+		}
+
+		containerWindowType = {
+			name = "alternative_history_panel"
+			position = { x = 930 y = 90 }
+			size = { width = 150 height= 83 }
+			orientation = upper_left
+
+			instantTextboxType = {
+				name = "alternative_history_title"
+				position = { x = 55 y = -22 }
+				font = "hoi_30header"
+				text = "ALTERNATIVE_HISTORY_TITLE"
+				maxWidth = 300
+				maxHeight = 20
+				format = center
+				vertical_alignment = center
+			}
+
+			instantTextboxType = {
+				name = "alternative_history_text"
+				position = { x = 17 y = 33 }
+				font = "hoi_18mbs"
+				text = "ALTERNATIVE_HISTORY_TEXT"
+				maxWidth = 380
+				maxHeight = 700
+				fixedsize = yes
+			}
+		}
+
+		containerWindowType = {
+			name = "achievements_panel"
+			position = { x = 930 y = 90 }
+			size = { width = 150 height= 83 }
+			orientation = upper_left
+
+			instantTextboxType = {
+				name = "achievements_title"
+				position = { x = 55 y = -22 }
+				font = "hoi_30header"
+				text = "ACHIEVEMENTS_TITLE"
+				maxWidth = 300
+				maxHeight = 20
+				format = center
+				vertical_alignment = center
+			}
+
+			instantTextboxType = {
+				name = "achievements_text"
+				position = { x = 17 y = 33 }
+				font = "hoi_18mbs"
+				text = "ACHIEVEMENTS_TEXT"
+				maxWidth = 380
+				maxHeight = 700
+				fixedsize = yes
+			}
+
+			containerWindowType = {
+				name = "turan_achievement"
+				position = { x = 4 y = 15 }
+				size = { width = 150 height= 83 }
+				orientation = upper_left
+
+				iconType = {
+					name ="turan_bg"
+					spriteType = "GFX_mod10achievement_bg"
+					position = { x= 0 y = 0 }
+					Orientation = "UPPER_LEFT"
+				}
+
+				iconType = {
+					name ="turan_logo"
+					spriteType = "GFX_focus_TUR_turanist_ambition"
+					position = { x= 8 y = 10 }
+					Orientation = "UPPER_LEFT"
+				}
+
+				instantTextboxType = {
+					name = "turan_title"
+					position = { x = 123 y = 15 }
+					font = "hoi_16mbs"
+					text = "TURAN_TITLE"
+					maxWidth = 250
+					maxHeight = 20
+					fixedsize = yes
+				}
+
+				instantTextboxType = {
+					name = "turan_text"
+					position = { x = 123 y = 40 }
+					font = "hoi_16mbs"
+					text = "TURAN_TEXT"
+					maxWidth = 250
+					maxHeight = 60
+					fixedsize = yes
+				}
+			}
+
+			instantTextboxType = {
+				name = "achievements_info_text"
+				position = { x = 17 y = 123 }
+				font = "hoi_18mbs"
+				text = "ACHIEVEMENTS_INFO_TEXT"
+				maxWidth = 380
+				maxHeight = 700
+				fixedsize = yes
+			}
+		}
+
+		containerWindowType = {
+			name = "message_panel"
+			position = { x = 930 y = 90 }
+			size = { width = 150 height= 83 }
+			orientation = upper_left
+
+			instantTextboxType = {
+				name = "message_title"
+				position = { x = 17 y = -22 }
+				font = "hoi_30header"
+				text = "MESSAGE_TITLE"
+				maxWidth = 360
+				maxHeight = 20
+				format = center
+				vertical_alignment = center
+			}
+
+			instantTextboxType = {
+				name = "message_text"
+				position = { x = 17 y = 33 }
+				font = "hoi_18mbs"
+				text = "MESSAGE_TEXT"
+				maxWidth = 380
+				maxHeight = 700
+				fixedsize = yes
+			}
+
+			iconType = {
+				name ="ata_tr_icon"
+				spriteType = "GFX_ata_tr_logo"
+				position = { x= 4 y = 90 }
+				Orientation = "UPPER_LEFT"
+				pdx_tooltip = "nick_name_of_ata_tr"
+			}
+		}
+	}
+}

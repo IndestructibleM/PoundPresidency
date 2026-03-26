@@ -1,0 +1,150 @@
+﻿###########################
+# Corpo_new
+###########################
+#new from the old version
+add_namespace = Corpo_new
+
+# Les Diamonds Hounds
+news_event = {
+	id = Corpo_new.1
+	title = Corpo_new.1.t
+	desc = Corpo_new.1.desc
+	picture = zXGeRvkm-807251
+	
+	major = yes
+	is_triggered_only = yes
+	
+	option = {
+		name = Corpo_new.1.a
+		trigger = {
+			NOT = { has_cosmetic_tag = RAJ_BIG_CORPO }
+		}
+	}
+	option = {
+		name = Corpo_new.1.b
+		trigger = {
+			OR = {
+				has_cosmetic_tag = RAJ_BIG_CORPO
+				has_cosmetic_tag = RAJ_eic_tag
+			}
+		}
+	}
+}
+
+# Buisness plot Réussite
+news_event = {
+	id = Corpo_new.2
+	title = Corpo_new.2.t
+	desc = Corpo_new.2.desc
+	picture = coup-807253
+	
+	major = yes
+	is_triggered_only = yes
+	
+	option = {
+		name = Corpo_new.2.a
+		trigger = {
+		}
+	}
+}
+
+# Buisness plot échec
+news_event = {
+	id = Corpo_new.3
+	title = Corpo_new.3.t
+	desc = Corpo_new.3.desc
+	picture = coup-807253
+	
+	major = yes
+	is_triggered_only = yes
+	
+	option = {
+		name = Corpo_new.3.a
+		trigger = {
+		}
+	}
+}
+
+# Chaos en Inde
+news_event = {
+	id = Corpo_new.4
+	title = Corpo_new.4.t
+	desc = Corpo_new.4.desc
+	picture = chaos_inde-807254
+	
+	major = yes
+	is_triggered_only = yes
+	
+	option = {
+		name = Corpo_new.4.a
+		trigger = {
+		}
+	}
+}
+
+# Inde sous control de la companie
+news_event = {
+	id = Corpo_new.5
+	title = Corpo_new.5.t
+	desc = Corpo_new.5.desc
+	picture = companie_inde-807256
+	
+	major = yes
+	is_triggered_only = yes
+	
+	option = {
+		name = Corpo_new.5.a
+		trigger = {
+		}
+	}
+}
+
+#Réorganisation de l'empire
+news_event = {
+	id = Corpo_new.6
+	title = Corpo_new.6.t
+	desc = Corpo_new.5.desc
+	picture = reoganisation_empire-807255
+	
+	major = yes
+	is_triggered_only = yes
+	
+	option = {
+		name = Corpo_new.6.a
+		trigger = {
+		}
+	}
+}
+
+#WE ARE UNDER SIEGE
+news_event = {
+	id = Corpo_new.7
+	title = Corpo_new.7.t
+	desc = Corpo_new.7.desc
+	picture = under_siege-807258
+	
+	major = yes
+	is_triggered_only = yes
+	
+	option = {
+		name = Corpo_new.7.a
+		trigger = {
+			NOT = { original_tag = RAJ }
+			original_tag = ENG
+		}
+	}
+	option = {
+		name = Corpo_new.7.b
+		trigger = {
+			NOT = { original_tag = ENG }
+			original_tag = RAJ
+		}
+	}
+	option = {
+		name = Corpo_new.7.c
+		trigger = {
+			NOT = { original_tag = ENG }
+			NOT = { original_tag = RAJ }
+		}
+	}
+}
