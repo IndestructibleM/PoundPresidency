@@ -1572,7 +1572,7 @@ focus_tree = {
 
 		completion_reward = {
 			559 = {
-				add_extra_state_shared_building_slots = 1
+				add_extra_state_shared_building_slots = 2
 				add_dynamic_modifier = {
 					modifier = AOI_somalia_agriculture
 					scope = AOI
@@ -3571,9 +3571,14 @@ focus_tree = {
 			custom_effect_tooltip = ITA_strengthen_the_blackshirts_template_tt
 			add_units_to_division_template = {
 				template_name = "Camicie Nere"
+				regiments {
+					militia = 0
+					militia = 1
+					militia = 2
+				}
 				support = { 
 					artillery = 0
-					blackshirt_assault_battalion_tech = 0
+					blackshirt_assault_battalion = 0
 				}
 			}
 		}
@@ -3751,14 +3756,14 @@ focus_tree = {
 						has_completed_focus = AOI_prussia_of_africa
 					}
 					remove_dynamic_modifier = { modifier = AOI_colonial_army_prussia }
-					replace_ideas = {
+					swap_ideas = {
 						remove_idea = AOI_camicie_nere
 						add_idea = AOI_new_model_army_prussia
 					}
 				}
 				else = {
 					remove_dynamic_modifier = { modifier = AOI_colonial_army }
-					replace_ideas = {
+					swap_ideas = {
 						remove_idea = AOI_camicie_nere
 						add_idea = AOI_new_model_army
 					}
@@ -3785,13 +3790,18 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			army_experience = 5
-			add_doctrine_cost_reduction = {
-				name = land_doc_bonus
-				cost_reduction = 0.5
-				uses = 1
-				category = land_doctrine
+			army_experience = 50
+			effect_tooltip = {
+				add_ideas = AOI_ascari_army_decoy
 			}
+			hidden_effect = {
+				add_dynamic_modifier = {
+					modifier = AOI_ascari_army
+				}
+				add_to_variable = { AOI_irregular_attack_factor = 0.1 }
+				add_to_variable = { AOI_irregular_defence_factor = 0.1 }
+			}
+			
 		}
 	}
 
@@ -3811,13 +3821,10 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			army_experience = 5
-			add_doctrine_cost_reduction = {
-				name = land_doc_bonus
-				cost_reduction = 0.5
-				uses = 1
-				category = land_doctrine
-			}
+			add_to_variable = { AOI_training_speed = -0.2 }
+			add_to_variable = { AOI_mobilization_speed = 0.15 }
+
+			
 		}
 	}
 
@@ -3837,13 +3844,17 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			army_experience = 5
-			add_doctrine_cost_reduction = {
-				name = land_doc_bonus
-				cost_reduction = 0.5
-				uses = 1
-				category = land_doctrine
+			add_to_variable = { AOI_irregular_attack_factor = 0.1 }
+			add_to_variable = { AOI_irregular_defence_factor = 0.1 }
+			add_to_variable = { AOI_irregular_speed_factor = 0.1 }
+			hidden_effect = { 
+				set_technology = { 
+					mountain_defensive_training = 1 
+					popup = no
+				} 
 			}
+			
+			
 		}
 	}
 
@@ -3863,13 +3874,10 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			army_experience = 5
-			add_doctrine_cost_reduction = {
-				name = land_doc_bonus
-				cost_reduction = 0.5
-				uses = 1
-				category = land_doctrine
-			}
+			add_to_variable = { AOI_entrenchment_flat = 5 }
+			add_to_variable = { AOI_entrenchment_factor = 0.25 }
+			add_to_variable = { AOI_supply_factor = -0.1 }
+			add_to_variable = { AOI_no_supply_factor = -0.1 }
 		}
 	}
 
@@ -3889,12 +3897,12 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			army_experience = 5
-			add_doctrine_cost_reduction = {
-				name = land_doc_bonus
-				cost_reduction = 0.5
-				uses = 1
-				category = land_doctrine
+			add_ideas = AOI_zaptie_spirit
+			hidden_effect = {
+				set_technology = {
+					tech_zaptie = 1
+					popup = no
+				}
 			}
 		}
 	}
@@ -3915,13 +3923,8 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			army_experience = 5
-			add_doctrine_cost_reduction = {
-				name = land_doc_bonus
-				cost_reduction = 0.5
-				uses = 1
-				category = land_doctrine
-			}
+			add_to_variable = { AOI_ascari_noncore = 0.1 }
+			add_to_variable = { AOI_recpop_percent = 0.01 }
 		}
 	}
 
@@ -3941,13 +3944,8 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			army_experience = 5
-			add_doctrine_cost_reduction = {
-				name = land_doc_bonus
-				cost_reduction = 0.5
-				uses = 1
-				category = land_doctrine
-			}
+			add_to_variable = { AOI_supply_efficiency = 0.1 }
+			add_to_variable = { AOI_terrain_penalty = 0.1 }
 		}
 	}
 
@@ -3967,13 +3965,18 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			army_experience = 5
-			add_doctrine_cost_reduction = {
-				name = land_doc_bonus
-				cost_reduction = 0.5
+			add_tech_bonus = {
+				name = AOI_artillery_research_bonus
+				bonus = 1
 				uses = 1
-				category = land_doctrine
+				category = artillery
 			}
+			hidden_effect = {
+					set_technology = { 
+						mountain_gun = 1 
+						popup = no
+					}
+				}
 		}
 	}
 
@@ -3995,21 +3998,32 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			army_experience = 5
-			add_doctrine_cost_reduction = {
-				name = land_doc_bonus
-				cost_reduction = 0.5
-				uses = 1
-				category = land_doctrine
-			}
+				if = {
+					limit = {
+						has_completed_focus = AOI_prussia_of_africa
+					}
+					remove_dynamic_modifier = { modifier = AOI_ascari_army_prussia }
+					swap_ideas = {
+						remove_idea = AOI_zaptie_spirit
+						add_idea = AOI_african_warfare_prussia
+					}
+				}
+				else = {
+					remove_dynamic_modifier = { modifier = AOI_ascari_army }
+					swap_ideas = {
+						remove_idea = AOI_zaptie_spirit
+						add_idea = AOI_african_warfare
+					}
+				}
+			custom_effect_tooltip = AOI_african_warfare_tt
 		}
 	}
 
 	focus = {
-		id = AOI_mainland_generals
+		id = AOI_mainland_hicom
 		icon = GFX_goal_generic_axis_build_infantry
 		prerequisite = { focus = AOI_colonial_army focus = AOI_ascari }
-		mutually_exclusive = { focus = AOI_settler_generals }
+		mutually_exclusive = { focus = AOI_settler_hicom }
         x = 3
         y = 1
         cost = 5
@@ -4027,10 +4041,10 @@ focus_tree = {
 	}
 
 	focus = {
-		id = AOI_settler_generals
+		id = AOI_settler_hicom
 		icon = GFX_goal_generic_axis_build_infantry
 		prerequisite = { focus = AOI_colonial_army focus = AOI_ascari }
-		mutually_exclusive = { focus = AOI_mainland_generals }
+		mutually_exclusive = { focus = AOI_mainland_hicom }
         x = 5
         y = 1
         cost = 5
@@ -4050,11 +4064,11 @@ focus_tree = {
 	focus = {
 		id = AOI_warm_weather_training
 		icon = GFX_focus_por_luso_tropicalism
-		prerequisite = { focus = AOI_mainland_generals focus = AOI_settler_generals }
+		prerequisite = { focus = AOI_mainland_hicom focus = AOI_settler_hicom }
 		x = 1
 		y = 1
 		cost = 5
-		relative_position_id = AOI_mainland_generals
+		relative_position_id = AOI_mainland_hicom
 
 		ai_will_do = {
 			factor = 8			
@@ -4080,6 +4094,10 @@ focus_tree = {
 		ai_will_do = {
 			factor = 8			
 		}
+
+		available = {
+			has_completed_focus = AOI_little_rome
+		}
 		
 		available_if_capitulated = yes
 
@@ -4094,7 +4112,7 @@ focus_tree = {
 					limit = {
 						has_completed_focus = AOI_new_model_army
 					}
-					replace_ideas = {
+					swap_ideas = {
 						remove_idea = AOI_new_model_army
 						add_idea = AOI_new_model_army_prussia
 					}
@@ -4111,13 +4129,28 @@ focus_tree = {
 				limit = {
 					has_completed_focus = AOI_ascari
 				}
+					if = {
+						limit = {
+							has_completed_focus = AOI_african_warfare
+						}
+						swap_ideas = {
+							remove_idea = AOI_african_warfare
+							add_idea = AOI_african_warfare_prussia
+						}
+					else = {
+						custom_effect_tooptip = AOI_prussia_of_africa_tt_2
+						hidden_effect = {
+							remove_dynamic_modifier = { modifier = AOI_ascari_army }
+							add_dynamic_modifier = { modifier = AOI_ascari_army_prussia }
+						}
+					}
+				}
 			}
-			else = {
-				custom_effect_tooltip = AOI_prussia_of_africa_tt
+				else = {
+					custom_effect_tooltip = AOI_prussia_of_africa_tt
+				}
 			}
 		}
-	}
-
 	focus = {
 		id = AOI_air_effort
 		icon = GFX_goal_generic_axis_build_infantry
