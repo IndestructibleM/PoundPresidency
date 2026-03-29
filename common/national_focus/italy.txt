@@ -23146,6 +23146,9 @@ focus_tree = {
 		icon = GFX_focus_ITA_the_social_republic_prevails
 		x = 3
 		y = 2
+		allow_branch = {
+			always = no
+		}
 		relative_position_id = ITA_supremacy_in_the_skies
 		available = {
 		}

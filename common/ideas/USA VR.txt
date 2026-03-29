@@ -19,5 +19,25 @@ ideas = {
 				local_resources_grain_factor = 0.15
 			}
 		}
+		
+		strikes_suppressed = {
+			#picture = 
+			
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				production_factory_efficiency_gain_factor = 0.10
+				stability_factor = -0.05
+				industrial_capacity_dockyard = 0.05
+			}
+		}
 	}
 }

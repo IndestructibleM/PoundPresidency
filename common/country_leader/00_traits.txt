@@ -45,7 +45,7 @@ leader_traits = {
 
 	conservative_judge  = {
 		random = no
-		party_popularity_stability_factor = -0.1
+		political_advisor_cost_factor = 1
 		political_power_factor = -0.05
 		sprite = 13 
 		ai_will_do = {

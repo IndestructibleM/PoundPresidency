@@ -39439,7 +39439,9 @@ focus_tree = {
 		icon = GFX
 		prerequisite = { focus = GER_tend_to_the_future_of_germany }
 		mutually_exclusive = { focus = GER_start_the_proletarian_revolution focus = GER_monarchist_sentiment }
-
+		allow_branch = {
+			always = no
+		}
 		x = 44
 		y = 1
 		relative_position_id = GER_tend_to_the_future_of_germany

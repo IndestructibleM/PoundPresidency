@@ -101,7 +101,7 @@ focus_tree = {
 		available_if_capitulated = no
 		search_filters = {FOCUS_FILTER_POLITICAL}
 		completion_reward = {
-			add_political_power = 25
+			add_political_power = 50
 			add_popularity = { ideology = democratic popularity = 0.06 }
 		}
 	}
@@ -601,6 +601,7 @@ focus_tree = {
 		available_if_capitulated = no
 		search_filters = {FOCUS_FILTER_POLITICAL}
 		completion_reward = {
+			upgrade_education_law = yes
 		}
 	}
 	
@@ -1483,7 +1484,6 @@ focus_tree = {
 		y = 9
 		relative_position_id = USA_the_workers_candidate
 		cost = 6
-
 		ai_will_do = {
 			factor = 1
 		}
@@ -2439,8 +2439,7 @@ focus_tree = {
 		available_if_capitulated = no
 		search_filters = {FOCUS_FILTER_POLITICAL}
 		completion_reward = {
-			add_stability = 0.05
-
+			add_ideas = strikes_suppressed
 		}
 	}
 
@@ -2496,6 +2495,20 @@ focus_tree = {
 		search_filters = {FOCUS_FILTER_POLITICAL}
 		completion_reward = {
 			add_ideas = USA_farm_security_administration_idea
+			392 = {
+				add_building_construction = {
+					type = farm
+					level = 1
+					instant_build = yes
+				}
+			}
+			396 = {
+				add_building_construction = {
+					type = farm
+					level = 1
+					instant_build = yes
+				}
+			}
 		}
 	}
 	
@@ -2529,6 +2542,7 @@ focus_tree = {
 		search_filters = {FOCUS_FILTER_POLITICAL}
 		completion_reward = {
 			add_popularity = { ideology = democratic popularity = 0.1 }
+			
 		}
 	}
 	
@@ -2704,6 +2718,7 @@ focus_tree = {
 		search_filters = {FOCUS_FILTER_POLITICAL}
 		completion_reward = {
 			add_political_power = 70
+			USA_congress_medium_support = yes
 		}
 	}
 
@@ -8980,7 +8995,7 @@ focus_tree = {
 		x = 0
 		y = 10
 		allow_branch = {
-			has_country_flag = Roosevelt_Lived
+			always = no
 		}
 		cost = 5
 		ai_will_do = {
