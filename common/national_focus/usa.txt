@@ -2703,6 +2703,7 @@ focus_tree = {
 		available_if_capitulated = no
 		search_filters = {FOCUS_FILTER_POLITICAL}
 		completion_reward = {
+			add_political_power = 70
 		}
 	}
 
@@ -2737,7 +2738,7 @@ focus_tree = {
 		completion_reward = {
 			add_stability = 0.1
 			add_war_support = 0.05
-			add_political_power = 60
+			add_popularity = { ideology = democratic popularity = 0.05 }
 		}
 	}
 	
@@ -2971,19 +2972,6 @@ focus_tree = {
 		cancel_if_invalid = no
 		continue_if_invalid = yes
 
-		allow_branch = {
-			if = {
-				limit = {
-					has_game_rule = {
-						rule = obsolete_focus_branches_visibility
-						option = HIDE
-					}
-				}
-				NOT = {
-					has_completed_focus = USA_neutrality_act
-				}
-			}
-		}
 
 		available = {
 			congress_high_support_trigger = yes 
@@ -3319,24 +3307,10 @@ focus_tree = {
 			factor = 1
 		}
 
-		allow_branch = {
-			if = {
-				limit = {
-					has_game_rule = {
-						rule = obsolete_focus_branches_visibility
-						option = HIDE
-					}
-				}
-				NOT = {
-					has_completed_focus = USA_limited_intervention
-				}
-			}
-		}
-
 
 		available = {
-			congress_low_support_trigger = yes
-			democratic > 0.95
+			congress_medium_support_trigger = yes
+			democratic > 0.75
 			NOT = { has_idea_with_trait = fascist_demagogue }
 			NOT = { has_idea_with_trait = communist_revolutionary }
 		}

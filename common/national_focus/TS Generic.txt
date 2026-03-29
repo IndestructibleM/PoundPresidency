@@ -1,4 +1,4 @@
-### New Stock Generic Tree By Indy
+### Divided States Generic Tree By Indy
 
 focus_tree = {
 	id = america_generic_focus
@@ -227,7 +227,7 @@ focus_tree = {
 	}
 	focus = {
 		id = gen_the_national_state
-		icon = GFX_goal_generic_Honor_Tradition
+		icon = GFX_focus_ITA_generic_fascist_workers
 		cost = 6
 		relative_position_id = AME_the_first_FROM_constitutional_convention
 		x = 1
@@ -305,7 +305,7 @@ focus_tree = {
 	}
 	focus = {
 		id = gen_warrior_power
-		icon = GFX_goal_generic_warrior_power
+		icon = GFX_focus_GER_autarky_achieved
 		cost = 6
 		relative_position_id = AME_the_first_FROM_constitutional_convention
 		x = 0
@@ -329,7 +329,7 @@ focus_tree = {
 	}
 	focus = {
 		id = gen_marches_for_country
-		icon = GFX_goal_generic_marches_for_country
+		icon = GFX_focus_generic_fascist_troops
 		cost = 6
 		relative_position_id = AME_the_first_FROM_constitutional_convention
 		x = 0
@@ -425,7 +425,7 @@ focus_tree = {
 	}
 	focus = {
 		id = gen_seize_capitalist_property
-		icon = GFX_goal_generic_seize_capital
+		icon = GFX_goal_generic_forceful_treaty
 		cost = 6
 		relative_position_id = AME_the_first_FROM_constitutional_convention
 		x = 5
@@ -469,7 +469,7 @@ focus_tree = {
 	}
 	focus = {
 		id = gen_collectivist_democracy
-		icon = GFX_goal_generic_Collectivist_Democracy
+		icon = GFX_focus_NORDIC_com_institution_1
 		cost = 6
 		relative_position_id = AME_the_first_FROM_constitutional_convention
 		x = 4
@@ -489,7 +489,7 @@ focus_tree = {
 	}
 	focus = {
 		id = gen_worker_liberation
-		icon = GFX_goal_generic_worker_liberation
+		icon = GFX_focus_AFG_integrate_tajik_and_uzbek_republics
 		cost = 6
 		relative_position_id = AME_the_first_FROM_constitutional_convention
 		x = 4
@@ -509,7 +509,7 @@ focus_tree = {
 	
 	focus = {
 		id = gen_genesis_of_a_nation
-		icon = GFX_goal_generic_genesis_of_a_nation
+		icon = GFX_focus_generic_population_growth
 		cost = 6
 		relative_position_id = AME_the_first_FROM_constitutional_convention
 		x = 0
@@ -532,7 +532,7 @@ focus_tree = {
 
 	focus = {
 		id = gen_economic_modernization
-		icon = GFX_goal_generic_economic_modernization
+		icon = GFX_focus_generic_modernize_industry
 		cost = 6
 		x = 16
 		y = 0
@@ -549,7 +549,7 @@ focus_tree = {
 	}
 	focus = {
 		id = gen_factory_plants
-		icon = GFX_goal_generic_factory_plants
+		icon = GFX_goal_generic_construct_civ_factory
 		relative_position_id = gen_economic_modernization
 		cost = 6
 		x = -1
@@ -587,7 +587,7 @@ focus_tree = {
 	}
 	focus = {
 		id = gen_military_depots
-		icon = GFX_goal_generic_military_depots
+		icon = GFX_focus_generic_military_industry
 		relative_position_id = gen_economic_modernization
 		cost = 6
 		x = 1
@@ -625,7 +625,7 @@ focus_tree = {
 	}
 	focus = {
 		id = gen_forges_of_nation
-		icon = GFX_goal_generic_forges_of_nation
+		icon = GFX_focus_generic_industry_3
 		relative_position_id = gen_economic_modernization
 		cost = 6
 		x = -1
@@ -657,7 +657,7 @@ focus_tree = {
 	}
 	focus = {
 		id = gen_workshops_factories
-		icon = GFX_goal_generic_workshop_factories
+		icon = GFX_focus_generic_reorient_production
 		relative_position_id = gen_economic_modernization
 		cost = 6
 		x = 1
@@ -695,7 +695,7 @@ focus_tree = {
 	}
 	focus = {
 		id = gen_improve_our_infrastructure
-		icon = GFX_goal_generic_Improve_Our_Infrastructure
+		icon = GFX_focus_generic_railroad
 		relative_position_id = gen_economic_modernization
 		cost = 6
 		x = -1
@@ -751,7 +751,7 @@ focus_tree = {
 	}
 	focus = {
 		id = gen_labor_drive
-		icon = GFX_goal_generic_labor_drive
+		icon = GFX_focus_generic_public_works
 		relative_position_id = gen_economic_modernization
 		cost = 6
 		x = 1
@@ -771,7 +771,7 @@ focus_tree = {
 	}
 	focus = {
 		id = gen_development_scheme
-		icon = GFX_goal_generic_dev_scheme
+		icon = GFX_focus_generic_low_cost_housing
 		relative_position_id = gen_economic_modernization
 		cost = 6
 		x = -1
@@ -800,7 +800,7 @@ focus_tree = {
 	}
 	focus = {
 		id = gen_electronics_processing
-		icon = GFX_goal_generic_electronics_processing
+		icon = GFX_goal_generic_radar
 		relative_position_id = gen_economic_modernization
 		cost = 6
 		x = 1
@@ -821,7 +821,7 @@ focus_tree = {
 	}
 	focus = {
 		id = gen_resource_prospection
-		icon = GFX_goal_generic_resource_prospection
+		icon = GFX_focus_generic_resource_extraction
 		relative_position_id = gen_economic_modernization
 		cost = 6
 		x = 0
@@ -852,7 +852,7 @@ focus_tree = {
 	}
 	focus = {
 		id = gen_highest_science
-		icon = GFX_goal_generic_highest_science
+		icon = GFX_focus_research2
 		relative_position_id = gen_economic_modernization
 		cost = 6
 		x = 0
@@ -870,7 +870,7 @@ focus_tree = {
 
 	focus = {
 		id = gen_militarization
-		icon = GFX_goal_generic_militarization
+		icon = GFX_focus_generic_limited_social_mobilization
 		cost = 6
 		x = 20
 		y = 0
@@ -889,7 +889,7 @@ focus_tree = {
 	}
 	focus = {
 		id = gen_weapons_research
-		icon = GFX_goal_generic_weapons_research
+		icon = GFX_goal_generic_army_artillery
 		relative_position_id = gen_militarization
 		cost = 6
 		x = -1
@@ -911,7 +911,7 @@ focus_tree = {
 	}
 	focus = {
 		id = gen_wargames_field_tests
-		icon = GFX_goal_generic_wargame_field_tests
+		icon = GFX_goal_generic_military_deal
 		relative_position_id = gen_militarization
 		cost = 6
 		x = 1
@@ -928,7 +928,7 @@ focus_tree = {
 	}
 	focus = {
 		id = gen_planes_trains_automobiles
-		icon = GFX_goal_generic_planes_trains_automobile
+		icon = GFX_focus_generic_truck
 		relative_position_id = gen_militarization
 		cost = 6
 		x = -1
@@ -959,7 +959,7 @@ focus_tree = {
 	}
 	focus = {
 		id = gen_tank_tech_advancements
-		icon = GFX_goal_generic_tank_tech_advancements
+		icon = GFX_focus_generic_tank_assembly
 		relative_position_id = gen_militarization
 		cost = 6
 		x = 1
@@ -980,7 +980,7 @@ focus_tree = {
 	}
 	focus = {
 		id = gen_quantity_doctrine
-		icon = GFX_goal_generic_quantity_doctrine
+		icon = GFX_focus_generic_mass_production
 		relative_position_id = gen_militarization
 		cost = 6
 		x = -1
@@ -998,7 +998,7 @@ focus_tree = {
 	}
 	focus = {
 		id = gen_quality_doctrine
-		icon = GFX_goal_generic_quality_doctrine
+		icon = GFX_focus_generic_full_social_mobilization
 		relative_position_id = gen_militarization
 		cost = 6
 		x = 1
@@ -1016,7 +1016,7 @@ focus_tree = {
 	}
 	focus = {
 		id = gen_man_thousand_bullets
-		icon = GFX_goal_generic_man_thousand_bullets
+		icon = GFX_focus_generic_army_attack
 		relative_position_id = gen_militarization
 		cost = 6
 		x = -1
@@ -1039,7 +1039,7 @@ focus_tree = {
 
 	focus = {
 		id = gen_thousand_bullets_man
-		icon = GFX_goal_generic_thousand_bullets_man
+		icon = GFX_focus_generic_military_mission
 		relative_position_id = gen_militarization
 		cost = 6
 		x = 1
@@ -1061,7 +1061,7 @@ focus_tree = {
 	}
 	focus = {
 		id = gen_armor_of_masses
-		icon = GFX_goal_generic_armor_of_masses
+		icon = GFX_focus_generic_tank_assault
 		relative_position_id = gen_militarization
 		cost = 6
 		x = -1
@@ -1085,7 +1085,7 @@ focus_tree = {
 	}
 	focus = {
 		id = gen_armor_of_gods
-		icon = GFX_goal_generic_armor_of_gods
+		icon = GFX_focus_generic_heavy_tank
 		relative_position_id = gen_militarization
 		cost = 6
 		x = 1
@@ -1109,7 +1109,7 @@ focus_tree = {
 	}
 	focus = {
 		id = gen_common_soldier
-		icon = GFX_goal_generic_common_soldier
+		icon = GFX_focus_PRC_revolutionary_war_of_the_masses
 		relative_position_id = gen_militarization
 		cost = 6
 		x = -1
@@ -1127,7 +1127,7 @@ focus_tree = {
 	}
 	focus = {
 		id = gen_warrior_soldier
-		icon = GFX_goal_generic_warrior_soldier
+		icon = GFX_focus_NOR_frontkjempere
 		relative_position_id = gen_militarization
 		cost = 6
 		x = 1
@@ -1149,7 +1149,7 @@ focus_tree = {
 	
 	focus = {
 		id = gen_skies_and_seas
-		icon = GFX_goal_generic_skies_and_seas
+		icon = GFX_goal_generic_navy_carrier
 		cost = 6
 		x = 24
 		y = 0
@@ -1171,7 +1171,7 @@ focus_tree = {
 	}
 	focus = {
 		id = gen_combat_support_roles
-		icon = GFX_goal_generic_combat_support_roles
+		icon = GFX_focus_generic_armored_air_support
 		relative_position_id = gen_skies_and_seas
 		cost = 6
 		x = -1
@@ -1193,7 +1193,7 @@ focus_tree = {
 	}
 	focus = {
 		id = gen_dockyard_buildup
-		icon = GFX_goal_generic_dockyard_buildup
+		icon = GFX_goal_generic_construct_naval_dockyard
 		relative_position_id = gen_skies_and_seas
 		cost = 6
 		x = 1
@@ -1236,7 +1236,7 @@ focus_tree = {
 	}
 	focus = {
 		id = gen_capitol_airbase
-		icon = GFX_goal_generic_capitol_airbase
+		icon = GFX_focus_generic_aircraft_production
 		relative_position_id = gen_skies_and_seas
 		cost = 6
 		x = -1
@@ -1259,7 +1259,7 @@ focus_tree = {
 	}
 	focus = {
 		id = gen_submarine_effort
-		icon = GFX_goal_generic_submarine_effort
+		icon = GFX_goal_generic_navy_anti_submarine
 		relative_position_id = gen_skies_and_seas
 		cost = 6
 		x = 1
@@ -1280,7 +1280,7 @@ focus_tree = {
 	}
 	focus = {
 		id = gen_jets_copters
-		icon = GFX_goal_generic_jets_and_copters
+		icon = GFX_focus_generic_jet_planes
 		relative_position_id = gen_skies_and_seas
 		cost = 6
 		x = -1
@@ -1306,7 +1306,7 @@ focus_tree = {
 	}
 	focus = {
 		id = gen_destroyers_cruisers
-		icon = GFX_goal_generic_destroyers_cruisers
+		icon = GFX_focus_generic_navy_battleship2
 		relative_position_id = gen_skies_and_seas
 		cost = 6
 		x = 1
@@ -1332,7 +1332,7 @@ focus_tree = {
 	}
 	focus = {
 		id = gen_dogfight_training
-		icon = GFX_goal_generic_dogfight_training
+		icon = GFX_focus_generic_escort_efficiency
 		relative_position_id = gen_skies_and_seas
 		cost = 6
 		x = -1
@@ -1354,7 +1354,7 @@ focus_tree = {
 	}
 	focus = {
 		id = gen_highseas_excersizes
-		icon = GFX_goal_generic_highseas_excersizes
+		icon = GFX_focus_generic_battleship_guns
 		relative_position_id = gen_skies_and_seas
 		cost = 6
 		x = 1
@@ -1376,7 +1376,7 @@ focus_tree = {
 	}
 	focus = {
 		id = gen_fuel_control
-		icon = GFX_goal_generic_fuel_control
+		icon = GFX_focus_generic_stockpile_fuel
 		relative_position_id = gen_skies_and_seas
 		cost = 6
 		x = 0
@@ -1403,7 +1403,7 @@ focus_tree = {
 	}
 	focus = {
 		id = gen_plan_ports
-		icon = GFX_goal_generic_plan_ports
+		icon = GFX_focus_generic_refit_civilian_ships
 		relative_position_id = gen_skies_and_seas
 		cost = 6
 		x = 0
@@ -1439,7 +1439,7 @@ focus_tree = {
 	}
 	focus = {
 		id = gen_forward_development
-		icon = GFX_goal_generic_forward_development
+		icon = GFX_focus_generic_currency_reforms
 		relative_position_id = gen_militarization
 		cost = 6
 		x = -2
@@ -1464,7 +1464,7 @@ focus_tree = {
 	}
 	focus = {
 		id = gen_become_death
-		icon = GFX_goal_generic_become_death
+		icon = GFX_goal_generic_secret_weapon
 		relative_position_id = gen_militarization
 		cost = 6
 		x = 0
@@ -1488,7 +1488,7 @@ focus_tree = {
 	}
 	focus = {
 		id = gen_boundless_military_science
-		icon = GFX_goal_generic_boundless_military_science
+		icon = GFX_goal_generic_scientific_exchange
 		relative_position_id = gen_militarization
 		cost = 6
 		x = 2
@@ -1508,8 +1508,8 @@ focus_tree = {
 
 	focus = {
 		id = gen_approach_world_powers
-		icon = GFX_goal_generic_approach_world_powers
-		cost = 5
+		icon = GFX_focus_generic_diplomatic_treaty
+		cost = 6
 		relative_position_id = AME_the_first_FROM_constitutional_convention
 		x = 0
 		y = 7

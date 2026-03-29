@@ -160,30 +160,6 @@ country_event = {
 }
 
 country_event = {
-	id = vr_usa.7
-	title = vr_usa.6.t
-	desc = desc.temp.d
-
-	fire_only_once = yes
-	
-	trigger = {
-		tag = USA
-		date > 1936.5.1
-	}
-
-	option = { 
-		name = vr_usa.5.a
-		add_popularity = { ideology = socialist popularity = 0.03 }
-		add_popularity = { ideology = democratic popularity = 0.03 }
-	}
-
-	option = { 
-		name = vr_usa.5.b
-		add_popularity = { ideology = fascism popularity = 0.07 }
-	}
-}
-
-country_event = {
 	id = vr_usa.10
 	title = vr_usa.10.t
 	desc = desc.temp.d
@@ -208,22 +184,24 @@ country_event = {
 	}
 }
 
+
 country_event = {
-	id = vr_usa.16
-	title = vr_usa.16.t
+	id = vr_usa.30
+	title = vr_usa.30.t
 	desc = desc.temp.d
 	is_triggered_only = yes
 	
-
-	option = { 
-		name = vr_usa.16.a
-		add_popularity = { ideology = socialist popularity = 0.05 }
-		set_politics = { ruling_party = socialist }
+	trigger = {
+		has_idea = great_depression4
+		any_enemy_country = {
+			is_major = yes
+		}
+		has_war = yes
 	}
 
 	option = { 
-		name = vr_usa.16.b
-		add_popularity = { ideology = communism popularity = 0.05 }
-		set_politics = { ruling_party = communism elections_allowed = no }
+		name = vr_usa.30.a
+		remove_ideas = great_depression4
 	}
+
 }
