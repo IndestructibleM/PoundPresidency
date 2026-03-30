@@ -175,6 +175,7 @@ equipments = {
 		naval_dominance_factor = 115
 		resources = {
 			steel = 2
+			coal = 1
 		}
 		module_slots = {
 			fixed_ship_battery_slot = inherit
@@ -249,6 +250,7 @@ equipments = {
 		manpower = 1200
 		resources = {
 			steel = 2
+			coal = 1
 		}
 		module_slots = {
 			fixed_ship_battery_slot = inherit
@@ -336,6 +338,7 @@ equipments = {
 		naval_dominance_factor = 150
 		resources = {
 			steel = 3
+			coal = 2
 		}
 		module_slots = {
 			fixed_ship_battery_slot = inherit

@@ -204,6 +204,7 @@ equipments = {
 		build_cost_ic = 420
 		resources = {
 			steel = 2
+			coal = 1
 		}
 	}
 	ship_hull_submarine_4 = {
@@ -254,6 +255,7 @@ equipments = {
 		resources = {
 			steel = 3
 			chromium = 1
+			coal = 2
 		}
 	}
 
@@ -314,6 +316,7 @@ equipments = {
 		build_cost_ic = 490
 		resources = {
 			steel = 2
+			coal = 1
 		}
 	}
 

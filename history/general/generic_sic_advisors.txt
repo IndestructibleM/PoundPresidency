@@ -85,7 +85,6 @@ every_possible_country = {
 		}
 		add_popularity = { ideology = conservative popularity = conservative_support }
 	}
-	
 }
 
 ENG = {
