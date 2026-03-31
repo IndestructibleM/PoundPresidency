@@ -1483,7 +1483,6 @@ characters={
 						USA = { has_completed_focus = USA_america_first }
 					}
 				}
-			}
 			visible  = {
 				has_dlc = "Man the Guns"
 			}
@@ -2083,5 +2082,5 @@ characters={
 			}
 		}
 	}
-
 }
+
