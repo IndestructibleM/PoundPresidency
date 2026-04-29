@@ -8995,7 +8995,7 @@ focus_tree = {
 		x = 0
 		y = 10
 		allow_branch = {
-			always = no
+			has_country_flag = Roosevelt_Lived
 		}
 		cost = 5
 		ai_will_do = {

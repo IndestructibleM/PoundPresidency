@@ -21,6 +21,6 @@ state = {
 	manpower = 13090
 	buildings_max_level_factor = 1
 	state_category = "wasteland"
-
+	impassable = yes
 	local_supplies = 0.0 
 }

@@ -4,6 +4,7 @@
  SOV_ASSR: "$NONIDEOLOGYADJ$ Autonomous Soviet Socialist Republic"
  USA_union: "Union of America"
  
+ SOV_empire: "Russian Peoples' Empire"
  
  ### Vanilla
  INS_HOL_democratic:0 "Dutch East Indies"

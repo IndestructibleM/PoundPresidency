@@ -191,7 +191,7 @@ create_country_leader = {
 	desc = "POLITICS_KONRAD_ADENAUER_DESC"
 	picture = GFX_portrait_Konrad_Adenauer
 	expire = "1965.1.1"
-	ideology = social_conservative
+	ideology = social_democratic
 	traits = {
 	}
 }

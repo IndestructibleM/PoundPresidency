@@ -424,7 +424,7 @@ set_popularities = {
 	reactionary = 3
 	neutrality = 7
 	socialist = 27
-	conservative = 34
+	democratic = 34
 	communism = 15
 }
 

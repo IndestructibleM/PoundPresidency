@@ -1,0 +1,18 @@
+add_namespace = gerVR
+
+country_event = {
+	id = gerVR.1
+	title = gerVR.1.t
+	desc = gerVR.1.d
+	fire_only_once = yes
+	trigger = {
+		tag = GER
+		date > 1936.2.20
+		has_character = GER_erich_ludendorff
+	}
+	option = {
+		name = gerVR.1.a
+		add_political_power = -10
+		retire_character = GER_erich_ludendorff
+	}
+}

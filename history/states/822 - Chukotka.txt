@@ -21,6 +21,6 @@ state = {
 	manpower = 14260
 	buildings_max_level_factor = 1
 	state_category = "pastoral"
-
+	impassable = yes
 	local_supplies = 0.0 
 }

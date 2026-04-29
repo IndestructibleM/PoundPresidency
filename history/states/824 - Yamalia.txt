@@ -3,7 +3,7 @@ state = {
 	id = 824
 	name = "STATE_824" # Yamalia
 	manpower = 21974
-	
+	impassable = yes
 	state_category = pastoral
 
 	history = {

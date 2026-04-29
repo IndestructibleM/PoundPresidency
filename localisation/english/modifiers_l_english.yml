@@ -613,7 +613,6 @@
  communism_drift_tt: " $communism_drift$: $RIGHT|+=2$"
  democratic_drift:0 "Daily Democracy Support"
  democratic_drift_tt: " $democratic_drift$: $RIGHT|+=2$"
- reactionary_drift:0 "Daily Reactionary Support"
  fascism_drift:0 "Daily Fascism Support"
  fascism_drift_tt: " $fascism_drift$: $RIGHT|+=2$"
  neutrality_drift:0 "Daily Support for Unaligned"

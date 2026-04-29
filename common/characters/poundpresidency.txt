@@ -171,6 +171,27 @@ characters = {
 			}
 		}
 	}
+
+	USA_john_n_garner = {
+		name = "John Nance Garner"
+		portraits = {
+			civilian = {
+				small = "gfx/interface/advisors/USA/USA_john_nance_garner.png"
+			}
+		}
+		advisor = {
+			slot = second_command
+			idea_token = USA_john_n_garner_sic
+			can_be_fired = no
+			traits = { conservative_grandee }
+			available = {
+				has_country_leader = {
+					ruling_only = yes
+					character = USA_franklin_delano_roosevelt
+				}
+			}
+		}
+	}
 	
 	USA_revilo_oliver = {
 		name = "Revilo P. Oliver"

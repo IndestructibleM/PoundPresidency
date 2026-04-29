@@ -973,6 +973,10 @@ recruit_character = GER_hellmuth_walter
 recruit_character = GER_manfred_von_ardenne
 recruit_character = GER_konrad_zuse
 
+### TPP
+recruit_character = GER_erich_ludendorff
+activate_advisor = GER_erich_ludendorff_idea
+
 if = {
 	limit = {
 		has_dlc = "Gotterdammerung"

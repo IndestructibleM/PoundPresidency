@@ -4,14 +4,8 @@ state = {
 
 	history = {
 		owner = SOV
-		victory_points = {
-			14610 1 #Lavrentsiya
-		}
 		buildings = {
 			infrastructure = 1
-			14610 ={
-				naval_base = 1
-			}
 		}
 		add_core_of = SOV
 		add_core_of = CKK
@@ -25,6 +19,6 @@ state = {
 	manpower = 4890
 	buildings_max_level_factor = 1
 	state_category = "pastoral"
-
+	impassable = yes
 	local_supplies = 0.0 
 }

@@ -286,15 +286,14 @@ set_grand_doctrine = new_strategic_destruction
 }
 
 set_politics = {
-	ruling_party = conservative
+	ruling_party = democratic
 	last_election = "1933.4.26"
 	election_frequency = 48
 	elections_allowed = yes
 }
 set_popularities = {
-	democratic = 15
 	fascism = 4
-	conservative = 51
+	democratic = 65
 	communism = 5
 	socialist = 24
 	neutrality = 0

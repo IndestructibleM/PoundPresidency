@@ -2477,3 +2477,5 @@ create_equipment_variant = {
 	}	
 }
 	
+## VANREDUX
+give_guarantee = FER

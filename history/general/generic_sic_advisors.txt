@@ -61,30 +61,6 @@ every_possible_country = {
 			army = { small = GFX_idea_generic_empowered_trade_unions }
 		}
 	}
-	if = {
-		limit = {
-			NOT = { #Countries that either A) shouldn't have conservative support or B) have conservative support coded into their files
-				tag = ENG
-				tag = SOV
-				tag = USA
-				tag = SPR
-				tag = POL
-				tag = GRE
-				tag = FRA
-				tag = EST
-				tag = BUL
-			}
-		}
-		set_temp_variable = {
-			var = conservative_support
-			value = party_popularity@democratic
-		}
-		divide_temp_variable = {
-			var = conservative_support 
-			value = 2
-		}
-		add_popularity = { ideology = conservative popularity = conservative_support }
-	}
 }
 
 ENG = {

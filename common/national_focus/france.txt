@@ -24,7 +24,7 @@
 		
 		prerequisite = {}
 		mutually_exclusive = { }
-		cost = 10
+		cost = 8
 			ai_will_do = {
 			factor = 1
 		}
@@ -55,7 +55,7 @@
 		prerequisite = { focus = FRA_devalue_the_franc }
 		mutually_exclusive = { }
 		relative_position_id = FRA_devalue_the_franc
-		cost = 10
+		cost = 8
 
 		ai_will_do = {
 			factor = 1
@@ -142,7 +142,7 @@
 			prerequisite = { focus = FRA_devalue_the_franc }
 			mutually_exclusive = { }
 			relative_position_id = FRA_devalue_the_franc
-			cost = 10
+			cost = 8
 	
 			ai_will_do = {
 				factor = 1
@@ -180,7 +180,7 @@
 		}
 		x = 0
 		y = 2
-		cost = 10
+		cost = 8
 		ai_will_do = {
 			factor = 1
 		}		
@@ -237,7 +237,7 @@
 		x = 0
 		y = 1
 		relative_position_id = FRA_metropolitan_france
-		cost = 10
+		cost = 8
 		ai_will_do = {
 			factor = 1
 		}
@@ -288,7 +288,7 @@
 		x = 2
 		y = 1
 		relative_position_id = FRA_industrial_expansion
-		cost = 10
+		cost = 8
 		ai_will_do = {
 			factor = 1
 		}
@@ -362,7 +362,7 @@
 		}
 		x = 2
 		y = 1
-		cost = 10
+		cost = 8
 		ai_will_do = {
 			factor = 0.2
 		}
@@ -439,7 +439,7 @@
 		prerequisite = { focus = FRA_devalue_the_franc }
 		mutually_exclusive = { }
 		relative_position_id = FRA_devalue_the_franc
-		cost = 10
+		cost = 8
 
 		ai_will_do = {
 			factor = 1
@@ -481,7 +481,7 @@
 		prerequisite = {focus = FRA_invest_in_the_colonies }
 		mutually_exclusive = { }
 		relative_position_id = FRA_invest_in_the_colonies
-		cost = 10
+		cost = 8
 
 		ai_will_do = {
 			factor = 1
@@ -544,7 +544,7 @@
 		prerequisite = { focus = FRA_invest_in_the_colonies }
 		mutually_exclusive = { }
 		relative_position_id = FRA_invest_in_the_colonies
-		cost = 10
+		cost = 8
 
 		ai_will_do = {
 			factor = 1
@@ -637,7 +637,7 @@
 		prerequisite = {focus = FRA_invest_in_the_colonies }
 		mutually_exclusive = { }
 		relative_position_id = FRA_invest_in_the_colonies
-		cost = 10
+		cost = 8
 
 		ai_will_do = {
 			factor = 1
@@ -716,7 +716,7 @@
 		x = 2
 		y = 1
 		relative_position_id = FRA_algerie_france
-		cost = 10
+		cost = 8
 		ai_will_do = {
 			factor = 1
 		}
@@ -761,7 +761,7 @@
 		x = 0
 		y = 1
 		relative_position_id = FRA_industrial_expansion
-		cost = 10
+		cost = 8
 
 		available_if_capitulated = yes
 
@@ -790,7 +790,7 @@
 		x = 0
 		y = 1
 		relative_position_id = FRA_colonial_industry
-		cost = 10
+		cost = 8
 
 		available_if_capitulated = yes
 		search_filters = { FOCUS_FILTER_RESEARCH }
@@ -807,7 +807,7 @@
 		prerequisite = {focus = FRA_colonial_industry }
 		mutually_exclusive = { }
 		relative_position_id = FRA_colonial_industry
-		cost = 10
+		cost = 8
 	
 		ai_will_do = {
 			factor = 1
@@ -840,7 +840,7 @@
 		
 		prerequisite = {}
 		mutually_exclusive = { }
-		cost = 10
+		cost = 8
 
 		ai_will_do = {
 			factor = 1
@@ -893,7 +893,7 @@
 		mutually_exclusive = { focus = FRA_aggressive_focus }
 		x = -2
 		y = 1
-		cost = 10
+		cost = 8
 		prerequisite = { focus = FRA_begin_rearmament }
 		available_if_capitulated = yes
 		relative_position_id = FRA_begin_rearmament
@@ -915,7 +915,7 @@
 		prerequisite = { focus = FRA_defensive_focus }
 		mutually_exclusive = { focus = FRA_methodical_battle }
 		relative_position_id = FRA_defensive_focus
-		cost = 10
+		cost = 8
 
 		ai_will_do = {
 			factor = 1
@@ -946,7 +946,7 @@
 		prerequisite = { focus = FRA_defensive_focus }
 		mutually_exclusive = { focus = FRA_firepower_kills }
 		relative_position_id = FRA_defensive_focus
-		cost = 10
+		cost = 8
 
 		ai_will_do = {
 			factor = 1
@@ -980,7 +980,7 @@
 		x = 0
 		y = 1
 		relative_position_id = FRA_methodical_battle
-		cost = 10
+		cost = 8
 
 		available_if_capitulated = yes
 
@@ -995,7 +995,7 @@
 		x = 0
 		y = 1
 		relative_position_id = FRA_fortification_focus
-		cost = 10
+		cost = 8
 
 		available = {
 			735 = { is_controlled_by = ROOT }
@@ -1018,7 +1018,7 @@
 		x = 0
 		y = 1
 		relative_position_id = FRA_alpine_forts
-		cost = 10
+		cost = 8
 
 		available = {
 			18 = { is_controlled_by = ROOT }
@@ -1047,7 +1047,7 @@
 		x = 0
 		y = 1
 		relative_position_id = FRA_firepower_kills
-		cost = 10
+		cost = 8
 
 		available_if_capitulated = yes
 
@@ -1063,7 +1063,7 @@
 		x = 0
 		y = 1
 		relative_position_id = FRA_infantry_focus
-		cost = 10
+		cost = 8
 
 		available_if_capitulated = yes
 
@@ -1084,7 +1084,7 @@
 		x = 0
 		y = 1
 		relative_position_id = FRA_artillery_focus
-		cost = 10
+		cost = 8
 
 		available_if_capitulated = yes
 
@@ -1107,7 +1107,7 @@
 		prerequisite = { focus = FRA_heavy_armor_focus }
 		mutually_exclusive = { }
 		relative_position_id = FRA_heavy_armor_focus
-		cost = 10
+		cost = 8
 
 		ai_will_do = {
 			factor = 1
@@ -1193,7 +1193,7 @@
 		prerequisite = { focus = FRA_defensive_focus focus = FRA_aggressive_focus }
 		mutually_exclusive = { }
 		relative_position_id = FRA_defensive_focus
-		cost = 10
+		cost = 8
 
 		ai_will_do = {
 			factor = 1
@@ -1233,7 +1233,7 @@
 		prerequisite = { focus = FRA_infantry_tanks }
 		mutually_exclusive = { }
 		relative_position_id = FRA_infantry_tanks
-		cost = 10
+		cost = 8
 
 		ai_will_do = {
 			factor = 1
@@ -1268,7 +1268,7 @@
 		prerequisite = { focus = FRA_special_forces }
 		mutually_exclusive = { }
 		relative_position_id = FRA_infantry_tanks
-		cost = 10
+		cost = 8
 
 		ai_will_do = {
 			factor = 1
@@ -1311,7 +1311,7 @@
 		mutually_exclusive = { focus = FRA_defensive_focus }
 		x = 2
 		y = 1
-		cost = 10
+		cost = 8
 		relative_position_id = FRA_begin_rearmament
 		available_if_capitulated = yes
 		prerequisite = { focus = FRA_begin_rearmament }
@@ -1334,7 +1334,7 @@
 		prerequisite = { focus = FRA_aggressive_focus }
 		mutually_exclusive = { focus = FRA_air_dominance }
 		relative_position_id = FRA_aggressive_focus
-		cost = 10
+		cost = 8
 
 		ai_will_do = {
 			factor = 1
@@ -1364,7 +1364,7 @@
 		x = 0
 		y = 1
 		relative_position_id = FRA_battle_of_maneuver
-		cost = 10
+		cost = 8
 
 		available_if_capitulated = yes
 
@@ -1380,7 +1380,7 @@
 		x = 0
 		y = 1
 		relative_position_id = FRA_motorized_focus
-		cost = 10
+		cost = 8
 		completion_reward = {
 			army_experience = 5
 			add_tech_bonus = {
@@ -1398,7 +1398,7 @@
 		x = 0
 		y = 1
 		relative_position_id = FRA_mechanized_focus
-		cost = 10
+		cost = 8
 
 		available_if_capitulated = yes
 
@@ -1422,7 +1422,7 @@
 		prerequisite = { focus = FRA_aggressive_focus }
 		mutually_exclusive = { focus = FRA_battle_of_maneuver }
 		relative_position_id = FRA_aggressive_focus
-		cost = 10
+		cost = 8
 
 		ai_will_do = {
 			factor = 1
@@ -1453,7 +1453,7 @@
 		x = 0
 		y = 1
 		relative_position_id = FRA_air_dominance
-		cost = 10
+		cost = 8
 
 		available_if_capitulated = yes
 
@@ -1475,7 +1475,7 @@
 		prerequisite = { focus = FRA_cas_focus }
 		mutually_exclusive = { }
 		relative_position_id = FRA_air_dominance
-		cost = 10
+		cost = 8
 
 		ai_will_do = {
 			factor = 1
@@ -1511,7 +1511,7 @@
 		prerequisite = { focus = FRA_air_ground_cooperation }
 		mutually_exclusive = { }
 		relative_position_id = FRA_air_dominance
-		cost = 10
+		cost = 8
 
 		ai_will_do = {
 			factor = 1
@@ -1546,7 +1546,7 @@
 		x = -2
 		y = 1
 		relative_position_id = FRA_light_medium_armor
-		cost = 10
+		cost = 8
 
 		available_if_capitulated = yes
 
@@ -1617,7 +1617,7 @@
 
 		prerequisite = {}
 		mutually_exclusive = { focus = FRA_revive_the_national_bloc }
-		cost = 10
+		cost = 8
 
 		ai_will_do = {
 			factor = 1
@@ -1695,7 +1695,7 @@
 
 		prerequisite = { focus = FRA_form_the_popular_front }
 		mutually_exclusive = { }
-		cost = 10
+		cost = 8
 
 		ai_will_do = {
 			factor = 1
@@ -1751,7 +1751,7 @@
 		prerequisite = { focus = FRA_invite_communist_ministers }
 		mutually_exclusive = { }
 		relative_position_id = FRA_invite_communist_ministers
-		cost = 10
+		cost = 8
 
 		ai_will_do = {
 			factor = 1
@@ -1814,7 +1814,7 @@
 		prerequisite = { focus = FRA_invite_communist_ministers }
 		mutually_exclusive = { }
 		relative_position_id = FRA_invite_communist_ministers
-		cost = 10
+		cost = 8
 
 		ai_will_do = {
 			factor = 1
@@ -1883,7 +1883,7 @@
 		prerequisite = { focus = FRA_strengthen_the_unions }
 		mutually_exclusive = { }
 		relative_position_id = FRA_invite_communist_ministers
-		cost = 10
+		cost = 8
 
 		ai_will_do = {
 			factor = 1
@@ -1943,7 +1943,7 @@
 		prerequisite = { focus = FRA_industrial_collectivization }
 		mutually_exclusive = { }
 		relative_position_id = FRA_invite_communist_ministers
-		cost = 10
+		cost = 8
 
 		ai_will_do = {
 			factor = 1
@@ -1986,7 +1986,7 @@
 		}
 		mutually_exclusive = { }
 		relative_position_id = FRA_celebrate_the_commune
-		cost = 10
+		cost = 8
 
 		ai_will_do = {
 			factor = 1
@@ -2036,7 +2036,7 @@
 		search_filters = { FOCUS_FILTER_STABILITY }
 		mutually_exclusive = { focus = FRA_revolution_to_the_utmost }
 		relative_position_id = FRA_force_the_issue
-		cost = 10
+		cost = 8
 
 		ai_will_do = {
 			factor = 1
@@ -2069,7 +2069,7 @@
 			focus = FRA_reconciliation
 		}
 		relative_position_id = FRA_reconciliation
-		cost = 10
+		cost = 8
 
 		ai_will_do = {
 			factor = 1
@@ -2103,7 +2103,7 @@
 		}
 		mutually_exclusive = { focus = FRA_loyalty_to_moscow focus = FRA_loyalty_to_the_cause }
 		relative_position_id = FRA_reconciliation
-		cost = 10
+		cost = 8
 
 		ai_will_do = {
 			factor = 1
@@ -2201,7 +2201,7 @@
 			focus = FRA_anti_fascist_coalition
 		}
 		relative_position_id = FRA_reconciliation
-		cost = 10
+		cost = 8
 
 		ai_will_do = {
 			factor = 1
@@ -2234,7 +2234,7 @@
 			focus = FRA_invite_anti_fascist_emigrants
 		}
 		relative_position_id = FRA_reconciliation
-		cost = 10
+		cost = 8
 
 		ai_will_do = {
 			factor = 1
@@ -2320,7 +2320,7 @@
 		}
 
 		relative_position_id = FRA_reconciliation
-		cost = 10
+		cost = 8
 
 		ai_will_do = {
 			factor = 1
@@ -2374,7 +2374,7 @@
 		}
 		mutually_exclusive = { focus = FRA_anti_fascist_coalition focus = FRA_loyalty_to_the_cause }
 		relative_position_id = FRA_reconciliation
-		cost = 10
+		cost = 8
 
 		ai_will_do = {
 			factor = 1
@@ -2437,7 +2437,7 @@
 			focus = FRA_loyalty_to_moscow
 		}
 		relative_position_id = FRA_loyalty_to_moscow
-		cost = 10
+		cost = 8
 
 		ai_will_do = {
 			factor = 1
@@ -2471,7 +2471,7 @@
 		}
 
 		relative_position_id = FRA_loyalty_to_moscow
-		cost = 10
+		cost = 8
 
 		ai_will_do = {
 			factor = 1
@@ -2512,7 +2512,7 @@
 		}
 		mutually_exclusive = { focus = FRA_reconciliation }
 		relative_position_id = FRA_force_the_issue
-		cost = 10
+		cost = 8
 
 		ai_will_do = {
 			factor = 1
@@ -2545,7 +2545,7 @@
 			focus = FRA_revolution_to_the_utmost
 		}
 		relative_position_id = FRA_revolution_to_the_utmost
-		cost = 10
+		cost = 8
 
 		ai_will_do = {
 			factor = 1
@@ -2584,7 +2584,7 @@
 			focus = FRA_destroy_the_counter_revolution
 		}
 		relative_position_id = FRA_destroy_the_counter_revolution
-		cost = 10
+		cost = 8
 
 		ai_will_do = {
 			factor = 1
@@ -2618,7 +2618,7 @@
 		}
 		mutually_exclusive = { focus = FRA_loyalty_to_moscow focus = FRA_anti_fascist_coalition }
 		relative_position_id = FRA_revolution_to_the_utmost
-		cost = 10
+		cost = 8
 
 		ai_will_do = {
 			factor = 1
@@ -2671,7 +2671,7 @@
 			focus = FRA_loyalty_to_the_cause
 		}
 		relative_position_id = FRA_loyalty_to_the_cause
-		cost = 10
+		cost = 8
 
 		ai_will_do = {
 			factor = 1
@@ -2719,7 +2719,7 @@
 			focus = FRA_carry_the_revolution_north
 		}
 		relative_position_id = FRA_carry_the_revolution_north
-		cost = 10
+		cost = 8
 
 		ai_will_do = {
 			factor = 1
@@ -2772,7 +2772,7 @@
 			focus = FRA_carry_the_revolution_north
 		}
 		relative_position_id = FRA_carry_the_revolution_north
-		cost = 10
+		cost = 8
 
 		ai_will_do = {
 			factor = 1
@@ -2825,7 +2825,7 @@
 			focus = FRA_carry_the_revolution_east
 		}
 		relative_position_id = FRA_carry_the_revolution_north
-		cost = 10
+		cost = 8
 
 		ai_will_do = {
 			factor = 1
@@ -2875,7 +2875,7 @@
 			focus = FRA_carry_the_revolution_south
 		}
 		relative_position_id = FRA_carry_the_revolution_north
-		cost = 10
+		cost = 8
 
 		ai_will_do = {
 			factor = 1
@@ -2908,7 +2908,7 @@
 			focus = FRA_form_the_popular_front
 		}
 		relative_position_id = FRA_form_the_popular_front
-		cost = 10
+		cost = 8
 
 		ai_will_do = {
 			factor = 1
@@ -2947,7 +2947,7 @@
 			focus = FRA_reform_the_labour_laws
 		}
 		relative_position_id = FRA_reform_the_labour_laws
-		cost = 10
+		cost = 8
 
 		ai_will_do = {
 			factor = 1
@@ -2985,7 +2985,7 @@
 			focus = FRA_nationalize_key_industry
 		}
 		relative_position_id = FRA_nationalize_key_industry
-		cost = 10
+		cost = 8
 
 		ai_will_do = {
 			factor = 1
@@ -3044,7 +3044,7 @@
 			focus = FRA_nationalize_key_industry
 		}
 		relative_position_id = FRA_nationalize_key_industry
-		cost = 10
+		cost = 8
 
 		ai_will_do = {
 			factor = 1
@@ -3127,7 +3127,7 @@
 			focus = FRA_form_the_state_arsenals
 		}
 		relative_position_id = FRA_nationalize_key_industry
-		cost = 10
+		cost = 8
 
 		ai_will_do = {
 			factor = 1
@@ -3173,7 +3173,7 @@
 			focus = FRA_general_work_council
 		}
 		relative_position_id = FRA_general_work_council
-		cost = 10
+		cost = 8
 
 		ai_will_do = {
 			factor = 1
@@ -3206,7 +3206,7 @@
 			focus = FRA_general_work_council
 		}
 		relative_position_id = FRA_general_work_council
-		cost = 10
+		cost = 8
 
 		ai_will_do = {
 			factor = 1
@@ -3306,7 +3306,7 @@
 			focus = FRA_form_the_popular_front
 		}
 		relative_position_id = FRA_form_the_popular_front
-		cost = 10
+		cost = 8
 
 		ai_will_do = {
 			factor = 1
@@ -3356,7 +3356,7 @@
 			focus = FRA_protect_the_rights_of_man
 		}
 		relative_position_id = FRA_reform_the_labour_laws
-		cost = 10
+		cost = 8
 
 		ai_will_do = {
 			factor = 1
@@ -3422,7 +3422,7 @@
 			focus = FRA_the_blum_viollette_proposal
 		}
 		relative_position_id = FRA_the_blum_viollette_proposal
-		cost = 10
+		cost = 8
 
 		ai_will_do = {
 			factor = 1
@@ -3460,7 +3460,7 @@
 		}
 		mutually_exclusive = { focus = FRA_encourage_immigration }
 		relative_position_id = FRA_expand_the_citizenship
-		cost = 10
+		cost = 8
 
 		ai_will_do = {
 			factor = 1
@@ -3507,7 +3507,7 @@
 			focus = FRA_france_undividable
 		}
 		relative_position_id = FRA_france_undividable
-		cost = 10
+		cost = 8
 
 		ai_will_do = {
 			factor = 1
@@ -3549,7 +3549,7 @@
 		}
 		mutually_exclusive = { focus = FRA_france_undividable }
 		relative_position_id = FRA_expand_the_citizenship
-		cost = 10
+		cost = 8
 
 		ai_will_do = {
 			factor = 1
@@ -3620,7 +3620,7 @@
 			focus = FRA_protect_the_rights_of_man
 		}
 		relative_position_id = FRA_reform_the_labour_laws
-		cost = 10
+		cost = 8
 
 		ai_will_do = {
 			factor = 1
@@ -3793,7 +3793,7 @@
 		}
 		mutually_exclusive = { focus = FRA_buy_time }
 		relative_position_id = FRA_review_foreign_policy
-		cost = 10
+		cost = 8
 
 		ai_will_do = {
 			factor = 1
@@ -3854,7 +3854,7 @@
 			focus = FRA_confirm_eastern_commitments
 		}
 		relative_position_id = FRA_confirm_eastern_commitments
-		cost = 10
+		cost = 8
 
 		ai_will_do = {
 			factor = 1
@@ -3988,7 +3988,7 @@
 			focus = FRA_invite_romania
 		}
 		relative_position_id = FRA_invite_romania
-		cost = 10
+		cost = 8
 
 		ai_will_do = {
 			factor = 1
@@ -4049,7 +4049,7 @@
 			focus = FRA_invest_in_our_weaker_allies
 		}
 		relative_position_id = FRA_invest_in_our_weaker_allies
-		cost = 10
+		cost = 8
 
 		ai_will_do = {
 			factor = 1
@@ -4108,7 +4108,7 @@
 			focus = FRA_strengthen_the_little_entente
 		}
 		relative_position_id = FRA_strengthen_the_little_entente
-		cost = 10
+		cost = 8
 
 		ai_will_do = {
 			factor = 1
@@ -4139,7 +4139,7 @@
 			focus = FRA_strengthen_the_little_entente
 		}
 		relative_position_id = FRA_strengthen_the_little_entente
-		cost = 10
+		cost = 8
 
 		ai_will_do = {
 			factor = 1
@@ -4184,7 +4184,7 @@
 			focus = FRA_confirm_eastern_commitments
 		}
 		relative_position_id = FRA_confirm_eastern_commitments
-		cost = 10
+		cost = 8
 
 		ai_will_do = {
 			factor = 1
@@ -4227,7 +4227,7 @@
 		}
 		mutually_exclusive = { focus = FRA_confirm_eastern_commitments }
 		relative_position_id = FRA_review_foreign_policy
-		cost = 10
+		cost = 8
 
 		ai_will_do = {
 			factor = 1
@@ -4302,7 +4302,7 @@
 		x = 5
 		y = 1
 		relative_position_id = FRA_strengthen_the_little_entente
-		cost = 10
+		cost = 8
 
 		available_if_capitulated = yes
 
@@ -4333,7 +4333,7 @@
 		x = 0
 		y = 1
 		relative_position_id = FRA_strengthen_government_support
-		cost = 10
+		cost = 8
 
 		available_if_capitulated = yes
 
@@ -4370,7 +4370,7 @@
 		x = 0
 		y = 1
 		relative_position_id = FRA_buy_time
-		cost = 10
+		cost = 8
 
 		available_if_capitulated = yes
 
@@ -4407,7 +4407,7 @@
 			focus = FRA_go_with_britain
 		}
 		relative_position_id = FRA_go_with_britain
-		cost = 10
+		cost = 8
 
 		ai_will_do = {
 			factor = 1
@@ -4441,7 +4441,7 @@
 		}
 		mutually_exclusive = { focus = FRA_go_with_britain }
 		relative_position_id = FRA_buy_time
-		cost = 10
+		cost = 8
 
 		ai_will_do = {
 			factor = 1
@@ -4474,7 +4474,7 @@
 			focus = FRA_france_leads
 		}
 		relative_position_id = FRA_france_leads
-		cost = 10
+		cost = 8
 
 		ai_will_do = {
 			factor = 1
@@ -4547,7 +4547,7 @@
 			focus = FRA_concessions_to_italy
 		}
 		relative_position_id = FRA_concessions_to_italy
-		cost = 10
+		cost = 8
 
 		ai_will_do = {
 			factor = 1
@@ -4609,7 +4609,7 @@
 			focus = FRA_france_leads
 		}
 		relative_position_id = FRA_france_leads
-		cost = 10
+		cost = 8
 		dynamic = yes 
 
 		ai_will_do = {
@@ -4654,7 +4654,7 @@
 		x = -3
 		y = 1
 		relative_position_id = FRA_form_the_popular_front
-		cost = 10
+		cost = 8
 		allow_branch = {
 			NOT = { has_dlc = "La Resistance" }
 			if = {
@@ -4723,7 +4723,7 @@
 		x = 0
 		y = 1
 		relative_position_id = FRA_leftist_rhetoric
-		cost = 10
+		cost = 8
 
 		available_if_capitulated = yes
 
@@ -4763,7 +4763,7 @@
 		x = 1
 		y = 1
 		relative_position_id = FRA_national_mobilization
-		cost = 10
+		cost = 8
 
 		available_if_capitulated = yes
 
@@ -4787,7 +4787,7 @@
 		x = -1
 		y = 1
 		relative_position_id = FRA_national_mobilization
-		cost = 10
+		cost = 8
 
 		available_if_capitulated = yes
 
@@ -4844,7 +4844,7 @@
 			}
 		}
 
-		cost = 10
+		cost = 8
 		ai_will_do = {
 			factor = 1
 		}
@@ -4885,7 +4885,7 @@
 		}
 		mutually_exclusive = { focus = FRA_agricultural_protectionism }
 		relative_position_id = FRA_revive_the_national_bloc
-		cost = 10
+		cost = 8
 
 		ai_will_do = {
 			factor = 1
@@ -4925,7 +4925,7 @@
 			focus = FRA_agricultural_protectionism
 		}
 		relative_position_id = FRA_laissez_faire
-		cost = 10
+		cost = 8
 
 		ai_will_do = {
 			factor = 1
@@ -4957,7 +4957,7 @@
 			focus = FRA_protect_the_rights_of_man
 		}
 		relative_position_id = FRA_protect_the_rights_of_man
-		cost = 10
+		cost = 8
 
 		ai_will_do = {
 			factor = 1
@@ -5006,7 +5006,7 @@
 			focus = FRA_promote_entrepeneurship
 		}
 		relative_position_id = FRA_freedom_front
-		cost = 10
+		cost = 8
 
 		ai_will_do = {
 			factor = 1
@@ -5040,7 +5040,7 @@
 		}
 		mutually_exclusive = { focus = FRA_laissez_faire }
 		relative_position_id = FRA_revive_the_national_bloc
-		cost = 10
+		cost = 8
 
 		ai_will_do = {
 			factor = 1
@@ -5073,7 +5073,7 @@
 			focus = FRA_laissez_faire
 		}
 		relative_position_id = FRA_agricultural_protectionism
-		cost = 10
+		cost = 8
 
 		ai_will_do = {
 			factor = 1
@@ -5138,7 +5138,7 @@
 			focus = FRA_economic_devolution
 		}
 		relative_position_id = FRA_economic_devolution
-		cost = 10
+		cost = 8
 
 		ai_will_do = {
 			factor = 1
@@ -5171,7 +5171,7 @@
 			focus = FRA_revive_the_national_bloc
 		}
 		relative_position_id = FRA_revive_the_national_bloc
-		cost = 10
+		cost = 8
 
 		ai_will_do = {
 			factor = 1
@@ -5250,7 +5250,7 @@
 		prerequisite = {
 			focus = FRA_revive_the_national_bloc
 		}
-		cost = 10
+		cost = 8
 
 		ai_will_do = {
 			factor = 1
@@ -5325,7 +5325,7 @@
 			focus = FRA_utilize_the_leagues
 		}
 		mutually_exclusive = { focus = FRA_the_council_of_rambouillet }
-		cost = 10
+		cost = 8
 
 		ai_will_do = {
 			factor = 1
@@ -5391,7 +5391,7 @@
 			focus = FRA_national_regeneration
 		}
 		relative_position_id = FRA_national_regeneration
-		cost = 10
+		cost = 8
 
 		ai_will_do = {
 			factor = 1
@@ -5463,7 +5463,7 @@
 			focus = FRA_fatherland
 		}
 		relative_position_id = FRA_integralism
-		cost = 10
+		cost = 8
 
 		ai_will_do = {
 			factor = 1
@@ -5500,7 +5500,7 @@
 			focus = FRA_fatherland
 		}
 		relative_position_id = FRA_integralism
-		cost = 10
+		cost = 8
 
 		ai_will_do = {
 			factor = 1
@@ -5537,7 +5537,7 @@
 			focus = FRA_work
 		}
 		relative_position_id = FRA_integralism
-		cost = 10
+		cost = 8
 
 		ai_will_do = {
 			factor = 1
@@ -5570,7 +5570,7 @@
 			focus = FRA_national_regeneration
 		}
 		relative_position_id = FRA_national_regeneration
-		cost = 10
+		cost = 8
 
 		ai_will_do = {
 			factor = 1
@@ -5671,7 +5671,7 @@
 		}
 		mutually_exclusive = { focus = FRA_towards_a_new_europe }
 		relative_position_id = FRA_diplomatic_freedom
-		cost = 10
+		cost = 8
 
 		ai_will_do = {
 			factor = 1
@@ -5869,7 +5869,7 @@
 			focus = FRA_latin_entente
 		}
 		relative_position_id = FRA_latin_entente
-		cost = 10
+		cost = 8
 
 		ai_will_do = {
 			factor = 1
@@ -5921,7 +5921,7 @@
 			focus = FRA_compensate_italy
 		}
 		relative_position_id = FRA_compensate_italy
-		cost = 10
+		cost = 8
 
 		ai_will_do = {
 			factor = 1
@@ -5987,7 +5987,7 @@
 			focus = FRA_intervention_in_greece
 		}
 		relative_position_id = FRA_invite_portugal
-		cost = 10
+		cost = 8
 
 		ai_will_do = {
 			factor = 1
@@ -6028,7 +6028,7 @@
 
 		relative_position_id = FRA_the_congress_of_paris
 
-		cost = 10
+		cost = 8
 
 		ai_will_do = {
 			factor = 1
@@ -6127,7 +6127,7 @@
 		}
 		mutually_exclusive = { focus = FRA_latin_entente }
 		relative_position_id = FRA_diplomatic_freedom
-		cost = 10
+		cost = 8
 
 		ai_will_do = {
 			factor = 1
@@ -6178,7 +6178,7 @@
 			focus = FRA_towards_a_new_europe
 		}
 		relative_position_id = FRA_towards_a_new_europe
-		cost = 10
+		cost = 8
 
 		ai_will_do = {
 			factor = 1
@@ -6241,7 +6241,7 @@
 		}
 		mutually_exclusive = { focus = FRA_align_belgium }
 		relative_position_id = FRA_establish_spheres_of_influence
-		cost = 10
+		cost = 8
 
 		ai_will_do = {
 			factor = 1
@@ -6288,7 +6288,7 @@
 		}
 		mutually_exclusive = { focus = FRA_split_belgium }
 		relative_position_id = FRA_establish_spheres_of_influence
-		cost = 10
+		cost = 8
 
 		ai_will_do = {
 			factor = 1
@@ -6340,7 +6340,7 @@
 			focus = FRA_align_belgium
 		}
 		relative_position_id = FRA_align_belgium
-		cost = 10
+		cost = 8
 
 		ai_will_do = {
 			factor = 1
@@ -6479,7 +6479,7 @@
 
 		relative_position_id = FRA_grow_the_empire
 
-		cost = 10
+		cost = 8
 
 		ai_will_do = {
 			factor = 1
@@ -6546,7 +6546,7 @@
 			focus = FRA_grow_the_empire
 		}
 		relative_position_id = FRA_intervention_in_greece
-		cost = 10
+		cost = 8
 
 		ai_will_do = {
 			factor = 1
@@ -6710,7 +6710,7 @@
 		}
 		relative_position_id = FRA_expand_to_the_suez
 
-		cost = 10
+		cost = 8
 
 		ai_will_do = {
 			factor = 1
@@ -6756,7 +6756,7 @@
 		x = 5
 		y = 1
 		relative_position_id = FRA_revive_the_national_bloc
-		cost = 10
+		cost = 8
 
 		available_if_capitulated = yes
 		allow_branch = {
@@ -6825,7 +6825,7 @@
 		x = 0
 		y = 1
 		relative_position_id = FRA_right_wing_rhetoric
-		cost = 10
+		cost = 8
 
 		available_if_capitulated = yes
 
@@ -6863,7 +6863,7 @@
 		x = -2
 		y = 1
 		relative_position_id = FRA_army_of_aggression
-		cost = 10
+		cost = 8
 		ai_will_do = {
 			factor = 1
 		}
@@ -6896,7 +6896,7 @@
 		x = 0
 		y = 1
 		relative_position_id = FRA_army_of_aggression
-		cost = 10
+		cost = 8
 		ai_will_do = {
 			factor = 1
 			modifier = {
@@ -7132,7 +7132,7 @@
 		x = 0
 		y = 1
 		relative_position_id = FRA_woo_italy
-		cost = 10
+		cost = 8
 		ai_will_do = {
 			factor = 1
 			modifier = {
@@ -7181,7 +7181,7 @@
 		x = 2
 		y = 1
 		relative_position_id = FRA_army_of_aggression
-		cost = 10
+		cost = 8
 
 		available_if_capitulated = yes
 
@@ -7235,7 +7235,7 @@
 			focus = FRA_utilize_the_leagues
 		}
 		mutually_exclusive = { focus = FRA_national_regeneration }
-		cost = 10
+		cost = 8
 
 		ai_will_do = {
 			factor = 1
@@ -7284,7 +7284,7 @@
 			focus = FRA_the_council_of_rambouillet
 		}
 		relative_position_id = FRA_the_council_of_rambouillet
-		cost = 10
+		cost = 8
 
 		ai_will_do = {
 			factor = 1
@@ -7317,7 +7317,7 @@
 			focus = FRA_revise_the_constitution
 		}
 		relative_position_id = FRA_revise_the_constitution
-		cost = 10
+		cost = 8
 
 		ai_will_do = {
 			factor = 1
@@ -7356,7 +7356,7 @@
 			focus = FRA_proclaim_the_third_empire
 		}
 		relative_position_id = FRA_repeal_the_law_of_exile
-		cost = 10
+		cost = 8
 
 		ai_will_do = {
 			factor = 1
@@ -7428,7 +7428,7 @@
 			focus = FRA_orleanist_restoration
 		}
 		relative_position_id = FRA_orleanist_restoration
-		cost = 10
+		cost = 8
 
 		ai_will_do = {
 			factor = 1
@@ -7460,7 +7460,7 @@
 			focus = FRA_orleanist_restoration
 		}
 		relative_position_id = FRA_orleanist_restoration
-		cost = 10
+		cost = 8
 
 		ai_will_do = {
 			factor = 1
@@ -7525,7 +7525,7 @@
 			focus = FRA_counter_action
 		}
 		relative_position_id = FRA_counter_action
-		cost = 10
+		cost = 8
 
 		ai_will_do = {
 			factor = 1
@@ -7628,7 +7628,7 @@
 			focus = FRA_slum_clearing
 		}
 		relative_position_id = FRA_slum_clearing
-		cost = 10
+		cost = 8
 
 		ai_will_do = {
 			factor = 1
@@ -7664,7 +7664,7 @@
 			focus = FRA_proclaim_the_third_empire
 		}
 		relative_position_id = FRA_repeal_the_law_of_exile
-		cost = 10
+		cost = 8
 
 		ai_will_do = {
 			factor = 1
@@ -7731,7 +7731,7 @@
 			focus = FRA_the_legitimate_heir
 		}
 		relative_position_id = FRA_the_legitimate_heir
-		cost = 10
+		cost = 8
 
 		ai_will_do = {
 			factor = 1
@@ -7789,7 +7789,7 @@
 		}
 		mutually_exclusive = { focus = FRA_two_countries_two_crowns }
 		relative_position_id = FRA_secure_the_crown_of_spain
-		cost = 10
+		cost = 8
 
 		ai_will_do = {
 			factor = 1
@@ -7858,7 +7858,7 @@
 		}
 		mutually_exclusive = { focus = FRA_unite_the_crowns }
 		relative_position_id = FRA_secure_the_crown_of_spain
-		cost = 10
+		cost = 8
 
 		ai_will_do = {
 			factor = 1
@@ -7922,7 +7922,7 @@
 			focus = FRA_the_legitimate_heir
 		}
 		relative_position_id = FRA_repeal_the_law_of_exile
-		cost = 10
+		cost = 8
 
 		ai_will_do = {
 			factor = 1
@@ -7983,7 +7983,7 @@
 			focus = FRA_proclaim_the_third_empire
 		}
 		relative_position_id = FRA_proclaim_the_third_empire
-		cost = 10
+		cost = 8
 
 		ai_will_do = {
 			factor = 1
@@ -8061,7 +8061,7 @@
 			focus = FRA_avenge_waterloo
 		}
 		relative_position_id = FRA_avenge_waterloo
-		cost = 10
+		cost = 8
 
 		ai_will_do = {
 			factor = 1
@@ -8105,7 +8105,7 @@
 			focus = FRA_avenge_waterloo
 		}
 		relative_position_id = FRA_avenge_waterloo
-		cost = 10
+		cost = 8
 		will_lead_to_war_with = GER
 		ai_will_do = {
 			factor = 1
@@ -8145,7 +8145,7 @@
 			focus = FRA_retribution_for_sedan
 		}
 		relative_position_id = FRA_retribution_for_sedan
-		cost = 10
+		cost = 8
 
 		ai_will_do = {
 			factor = 1
@@ -8387,7 +8387,7 @@
 			focus = FRA_retribution_for_sedan
 		}
 		relative_position_id = FRA_retribution_for_sedan
-		cost = 10
+		cost = 8
 
 		ai_will_do = {
 			factor = 1
@@ -8423,7 +8423,7 @@
 			focus = FRA_return_to_borodino
 		}
 		relative_position_id = FRA_return_to_borodino
-		cost = 10
+		cost = 8
 
 		ai_will_do = {
 			factor = 1
@@ -8585,7 +8585,7 @@
 			}
 		}
 
-		cost = 10
+		cost = 8
 		available_if_capitulated = yes
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 		complete_tooltip = {
@@ -8654,7 +8654,7 @@
 		x = -3
 		y = 1
 		relative_position_id = FRA_naval_rearmament
-		cost = 10
+		cost = 8
 
 		available_if_capitulated = yes
 
@@ -8717,7 +8717,7 @@
 		x = 0
 		y = 1
 		relative_position_id = FRA_colonial_naval_bases
-		cost = 10
+		cost = 8
 
 		available_if_capitulated = yes
 		search_filters = { FOCUS_FILTER_INDUSTRY }
@@ -8769,7 +8769,7 @@
 		x = 0
 		y = 1
 		relative_position_id = FRA_naval_rearmament
-		cost = 10
+		cost = 8
 
 		available_if_capitulated = yes
 		search_filters = { FOCUS_FILTER_INDUSTRY }
@@ -8798,7 +8798,7 @@
 		x = -1
 		y = 1
 		relative_position_id = FRA_the_old_school
-		cost = 10
+		cost = 8
 
 		available_if_capitulated = yes
 
@@ -8821,7 +8821,7 @@
 		x = 1
 		y = 1
 		relative_position_id = FRA_the_old_school
-		cost = 10
+		cost = 8
 
 		available_if_capitulated = yes
 
@@ -8843,7 +8843,7 @@
 		x = -1
 		y = 1
 		relative_position_id = FRA_carrier_focus
-		cost = 10
+		cost = 8
 
 		available_if_capitulated = yes
 
@@ -8865,7 +8865,7 @@
 		x = 0
 		y = 2
 		relative_position_id = FRA_capital_ship_focus
-		cost = 10
+		cost = 8
 
 		available_if_capitulated = no
 
@@ -8900,7 +8900,7 @@
 		x = 0
 		y = 2
 		relative_position_id = FRA_carrier_focus
-		cost = 10
+		cost = 8
 
 		available_if_capitulated = no
 
@@ -8944,7 +8944,7 @@
 		x = 4
 		y = 1
 		relative_position_id = FRA_naval_rearmament
-		cost = 10
+		cost = 8
 
 		available_if_capitulated = yes
 		search_filters = { FOCUS_FILTER_INDUSTRY }
@@ -8960,7 +8960,7 @@
 		x = -1
 		y = 1
 		relative_position_id = FRA_the_young_school
-		cost = 10
+		cost = 8
 
 		available_if_capitulated = yes
 
@@ -8982,7 +8982,7 @@
 		x = 1
 		y = 1
 		relative_position_id = FRA_the_young_school
-		cost = 10
+		cost = 8
 
 		available_if_capitulated = yes
 
@@ -9004,7 +9004,7 @@
 		x = 0
 		y = 2
 		relative_position_id = FRA_surface_combat
-		cost = 10
+		cost = 8
 
 		available_if_capitulated = yes
 
@@ -9032,7 +9032,7 @@
 		x = 3
 		y = 1
 		relative_position_id = FRA_rush_the_richelieus
-		cost = 10
+		cost = 8
 		search_filters = { FOCUS_FILTER_RESEARCH }
 		available_if_capitulated = yes
 
@@ -9056,7 +9056,7 @@
 		y = 0
 		relative_position_id = FRA_naval_rearmament
 		
-		cost = 10
+		cost = 8
 		available_if_capitulated = yes
 
 		bypass = {
@@ -9141,7 +9141,7 @@
 		x = -1
 		y = 1
 		relative_position_id = FRA_air_focus
-		cost = 10
+		cost = 8
 
 		available_if_capitulated = yes
 
@@ -9162,7 +9162,7 @@
 		x = -1
 		y = 1
 		relative_position_id = FRA_fighter_focus
-		cost = 10
+		cost = 8
 
 		available_if_capitulated = yes
 
@@ -9184,7 +9184,7 @@
 		x = 1
 		y = 1
 		relative_position_id = FRA_air_focus
-		cost = 10
+		cost = 8
 
 		available_if_capitulated = yes
 
@@ -9208,7 +9208,7 @@
 		x = 1
 		y = 1
 		relative_position_id = FRA_fighter_focus
-		cost = 10
+		cost = 8
 		search_filters = { FOCUS_FILTER_RESEARCH }
 		available_if_capitulated = yes
 
@@ -9231,7 +9231,7 @@
 		x = 1
 		y = 1
 		relative_position_id = FRA_bomber_focus
-		cost = 10
+		cost = 8
 
 		available_if_capitulated = yes
 
@@ -9252,7 +9252,7 @@
 		x = 3
 		y = 1
 		relative_position_id = FRA_bomber_focus
-		cost = 10
+		cost = 8
 
 		available_if_capitulated = yes
 
@@ -9472,7 +9472,7 @@
         x = 9
         y = 1
 		mutually_exclusive = {
-			focus = FRA_flames_of_saint_denis
+			focus = FRA_france_free_yourself
 			focus = working_with_deat
 		}
         available = {
@@ -9757,8 +9757,8 @@
     }
 
 	focus = {
-        id = FRA_flames_of_saint_denis
-        icon = "GFX_goal_FRA_flames_of_saint_denis"
+        id = FRA_france_free_yourself
+        icon = GFX_war_for_france
         x = 0
         y = 1
 		mutually_exclusive = {
@@ -9777,87 +9777,189 @@
         ai_will_do = {
 		    factor = 50
 		}
-		cost = 8
+		cost = 5
         completion_reward = {
 			add_stability = 0.25
 			add_political_power = 100
 		}
 	}
 	
-	focus = {
-        id = FRA_new_french_vanguard
-        icon = GFX_goal_eternal_struggle
+
+    focus = {
+        id = FRA_crush_red_menace
         x = -1
         y = 1
-        prerequisite = { focus = FRA_flames_of_saint_denis }
-        relative_position_id = FRA_flames_of_saint_denis
-        ai_will_do = {
-		    factor = 50
+        cost = 5
+		icon = GFX_goal_generic_war_with_comintern
+		prerequisite = {
+			focus = FRA_france_free_yourself
 		}
-		cost = 8
-        completion_reward = {
-		}
-	}
-		
-	focus = {
-        id = FRA_mass_meetings_of_ppf
-        icon = GFX_goal_eternal_struggle
-        x = 2
-        y = 2
-        prerequisite = { focus = FRA_national_labor_front }
-        relative_position_id = FRA_flames_of_saint_denis
-        ai_will_do = {
-		    factor = 50
-		}
-		cost = 8
-        completion_reward = {
-		}
-	}
-	
-	focus = {
-        id = FRA_street_veterans
-        icon = GFX_goal_eternal_struggle
-        x = -2
-        y = 2
-        prerequisite = { focus = FRA_new_french_vanguard }
-        relative_position_id = FRA_flames_of_saint_denis
-        ai_will_do = {
-		    factor = 50
-		}
-		cost = 8
-        completion_reward = {
-		}
-	}
-		
-	focus = {
-        id = FRA_syndicalism_of_patriots
-        icon = GFX_goal_eternal_struggle
-        x = 0
-        y = 2
-        prerequisite = { focus = FRA_new_french_vanguard focus = FRA_national_labor_front }
-        relative_position_id = FRA_flames_of_saint_denis
-        ai_will_do = {
-		    factor = 50
-		}
-		cost = 8
-        completion_reward = {
-		}
-	}
-		
-	focus = {
-        id = FRA_national_labor_front
-        icon = GFX_goal_eternal_struggle
+		relative_position_id = FRA_france_free_yourself
+    }
+
+    focus = {
+        id = FRA_single_party_france
         x = 1
         y = 1
-        prerequisite = { focus = FRA_flames_of_saint_denis }
-        relative_position_id = FRA_flames_of_saint_denis
-        ai_will_do = {
-		    factor = 50
-		}
-		cost = 8
-        completion_reward = {
-		}
+        cost = 5
+		icon = GFX_fortify_the_party
+        prerequisite = { focus = FRA_france_free_yourself }
+		relative_position_id = FRA_france_free_yourself
+    }
+
+    focus = {
+        id = FRA_loyalty_above_all
+        x = 1
+        y = 2
+        cost = 5
+		icon = GFX_focus_with_paper
+        prerequisite = { focus = FRA_single_party_france }
+		relative_position_id = FRA_france_free_yourself
+    }
+
+    focus = {
+        id = FRA_purge_parliament
+        x = -1
+        y = 2
+        cost = 5
+		icon = GFX_focus_generic_military_dictatorship
+        prerequisite = { focus = FRA_crush_red_menace }
+		relative_position_id = FRA_france_free_yourself
+    }
+
+    focus = {
+        id = FRA_dissolve_third_republic
+        x = 0
+        y = 3
+        cost = 5
+		icon = GFX_france_for_all
+        prerequisite = { focus = FRA_loyalty_above_all }
+		prerequisite = { focus = FRA_purge_parliament }
+		relative_position_id = FRA_france_free_yourself
+    }
+
+    focus = {
+        id = FRA_new_fascist_constitution
+        x = 0
+        y = 4
+        cost = 5
+		icon = GFX_focus_ITA_generic_fascist_workers
+        prerequisite = { focus = FRA_dissolve_third_republic }
+		relative_position_id = FRA_france_free_yourself
+    }
+
+    focus = {
+        id = FRA_centralize_prefectures
+        x = -1
+        y = 5
+        cost = 5
+		icon = GFX_FRA_reactionary_revolution
+        prerequisite = { focus = FRA_new_fascist_constitution }
+		relative_position_id = FRA_france_free_yourself
+    }
+
+    focus = {
+        id = FRA_empower_executive
+        x = 1
+        y = 5
+        cost = 5
+		icon = GFX_totalistic_society
+        prerequisite = { focus = FRA_new_fascist_constitution }
+		relative_position_id = FRA_france_free_yourself
+    }
+
+    focus = {
+        id = FRA_reforge_bureaucracy
+        x = 0
+        y = 6
+        cost = 5
+		icon = GFX_FRA_order_and_reason
+        prerequisite = { focus = FRA_centralize_prefectures }
+		prerequisite = { focus = FRA_empower_executive }
+		relative_position_id = FRA_france_free_yourself
+    }
+
+    focus = {
+        id = FRA_corporatist_councils
+        x = -2
+        y = 3
+        cost = 5
+		icon = GFX_FRA_industrial_push_command
+        prerequisite = { focus = FRA_crush_red_menace }
+		relative_position_id = FRA_france_free_yourself
+    }
+
+    focus = {
+        id = FRA_labor_charter
+        x = -2
+        y = 4
+        cost = 5
+		icon = GFX_focus_generic_public_works
+        prerequisite = { focus = FRA_corporatist_councils }
+		relative_position_id = FRA_france_free_yourself
+    }
+
+    focus = {
+        id = FRA_state_industry
+        x = -2
+        y = 6
+        cost = 5
+		icon = GFX_on_ruins_of_deciet
+        prerequisite = { focus = FRA_labor_charter focus = FRA_centralize_prefectures }
+		relative_position_id = FRA_france_free_yourself
+    }
+
+    focus = {
+        id = FRA_autarky
+        x = -3
+        y = 5
+        cost = 5
+		icon = GFX_focus_GER_autarky_ambitions
+        prerequisite = { focus = FRA_labor_charter }
+		relative_position_id = FRA_france_free_yourself
+    }
+
+
+    focus = {
+        id = FRA_national_spirit
+        x = 2
+        y = 3
+        cost = 5
+		icon = GFX_militarism_cure
+        prerequisite = { focus = FRA_single_party_france }
+		relative_position_id = FRA_france_free_yourself
 	}
+
+    focus = {
+        id = FRA_youth_service
+        x = 2
+        y = 4
+        cost = 5
+		icon = GFX_everything_for_country
+        prerequisite = { focus = FRA_national_spirit }
+		relative_position_id = FRA_france_free_yourself
+	}
+
+    focus = {
+        id = FRA_traditional_values
+        x = 3
+        y = 5
+        cost = 5
+		icon = GFX_FRA_moral_order
+        prerequisite = { focus = FRA_youth_service }
+		relative_position_id = FRA_france_free_yourself
+    }
+
+    focus = {
+        id = FRA_control_press
+        x = 2
+        y = 6
+        cost = 5
+		icon = GFX_fascist_internationale
+        prerequisite = { focus = FRA_youth_service focus = FRA_empower_executive }
+		relative_position_id = FRA_france_free_yourself
+    }
+
 	
 	focus = {
         id = rousing_speeches ### FIX ALL THIS SHITTY 2022 IMPERIAL ECLIPSE CODE
@@ -9953,7 +10055,7 @@
 			}
         }
 		mutually_exclusive = {
-			focus = FRA_flames_of_saint_denis
+			focus = FRA_france_free_yourself
 			focus = FRA_patriots_in_control
 		}
         prerequisite = { focus = FRA_duel_of_fates }

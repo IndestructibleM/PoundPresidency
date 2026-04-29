@@ -3,7 +3,7 @@ state = {
 	id = 516
 	name = "STATE_516" # Taymyria / Dudinka
 	manpower = 6004
-	
+	impassable = yes
 	state_category = pastoral
 
 	history = {

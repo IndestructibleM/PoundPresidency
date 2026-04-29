@@ -747,8 +747,8 @@ BYA = {
 	color_ui = rgb { 0 45 179 }
 }
 FER = {
-	color = rgb { 179 45 0 }
-	color_ui = rgb { 128 32 0 }
+	color = rgb { 95 175 50 }
+	color_ui = rgb { 95 175 50 }
 }
 CKK = {
 	color = rgb { 179 179 0 }

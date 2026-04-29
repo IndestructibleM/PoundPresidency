@@ -439,6 +439,7 @@
  MODIFIERS_SUBMARINE_DETECTION_FACTOR:0 "£spotting  Submarine Detection"
  communism_drift:0 "£boost_popularity_texticon  Daily Communism Support"
  democratic_drift:0 "£boost_popularity_texticon  Daily Democracy Support"
+ reactionary_drift:0 "£boost_popularity_texticon  Daily Reactionary Support"
  fascism_drift:0 "£boost_popularity_texticon  Daily Fascism Support"
  neutrality_drift:0 "£boost_popularity_texticon  Daily Support for Unaligned"
  communism_acceptance:0 "£ai_acceptance_texticon  Acceptance of Communist Diplomacy"

@@ -511,8 +511,7 @@ set_politics = {
 	elections_allowed = yes ##suspended through duration of war, which is handled via event
 }
 set_popularities = {
-	conservative = 52
-	democratic = 7
+	democratic = 59
 	socialist = 39
 	communism = 1
 	fascism = 1
