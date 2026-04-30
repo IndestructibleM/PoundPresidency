@@ -32,7 +32,6 @@ IF = {
 }
 
 add_ideas = {
-	vittorio_emanuele
 	vittoria_mutilata
 	limited_exports
 	limited_conscription
