@@ -1,20 +1,83 @@
 Vanillaredux_GCW_cat = {
-	Push_against_nazi_ger = {
-
+	GCW_push_against_nazis = {
+		targets = { D04 }
 		available = {
 			has_war = yes
+			is_neighbor_of = D04
 		}
-		cost = 40
+		cost = 30
+		ai_will_do = {
+			factor = 135
+		}
 		targeted_modifier = {
-			target = D04
-			attack_bonus_against = 0.15
-			breakthrough_bonus_against = 0.1
-			defense_bonus_against = -0.1
+			tag = D04
+			attack_bonus_against = 0.2
+			breakthrough_bonus_against = 0.15
+			defense_bonus_against = -0.15
 		}
-
- 		complete_effect = {
- 			
- 		}
+		days_remove = 50
+		days_re_enable = 15
+		
+ 	}
+	GCW_push_against_junta = {
+		targets = { GER }
+		available = {
+			has_war = yes
+			is_neighbor_of = GER
+		}
+		cost = 30
+		ai_will_do = {
+			factor = 135
+		}
+		targeted_modifier = {
+			tag = GER
+			attack_bonus_against = 0.2
+			breakthrough_bonus_against = 0.15
+			defense_bonus_against = -0.15
+		}
+		days_remove = 50
+		days_re_enable = 15
+		
+ 	}
+	GCW_push_against_democrats = {
+		targets = { WGR }
+		available = {
+			has_war = yes
+			is_neighbor_of = WGR
+		}
+		ai_will_do = {
+			factor = 135
+		}
+		cost = 30
+		targeted_modifier = {
+			tag = WGR
+			attack_bonus_against = 0.2
+			breakthrough_bonus_against = 0.15
+			defense_bonus_against = -0.15
+		}
+		days_remove = 50
+		days_re_enable = 15
+		
+ 	}
+	GCW_push_against_commies = {
+		targets = { RHI }
+		available = {
+			has_war = yes
+			is_neighbor_of = RHI
+		}
+		cost = 30
+		ai_will_do = {
+			factor = 135
+		}
+		targeted_modifier = {
+			tag = RHI
+			attack_bonus_against = 0.2
+			breakthrough_bonus_against = 0.15
+			defense_bonus_against = -0.15
+		}
+		days_remove = 50
+		days_re_enable = 15
+		
  	}
 }
 

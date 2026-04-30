@@ -46,6 +46,10 @@
  USA_the_final_orders:0 "The Closing Orders"
  USA_the_final_orders_desc:0 "As the war nears its end, the administration issues a final series of directives to secure victory, stabilize the home front, and shape the world that will emerge from the conflict."
 
+ FER_reactionary_party: "Zemskaya Rat"
+ FER_last_white_stand_desc: "Near the end of the Russian Civil War, the Zemskaya Rat emerged as a last bastion of resistance against the Bolshevik regime. Composed of former nobles and military officers, they seek to restore the old Russia and slay the Soviet monster."
+
+ FER_tokyo_guardian_desc: "Unable to protect ourselves alone, our army clique is almost entirely reliant on Japanese support. Tokyo is for now, our guardian from Moscow, but we must be wary of their ambitions in the Far East."
  
  ### LANDON
  USA_republicans_in_the_white_house: "Return of the GOP"

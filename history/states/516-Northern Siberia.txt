@@ -7,21 +7,9 @@ state = {
 	state_category = pastoral
 
 	history = {
-		victory_points = {
-			13064 2 #Norilsk
-		}
-		victory_points = {
-			4859 1 #Dudinka
-		}
-		victory_points = {
-			2972 1 #Dikson
-		}
 		owner = SOV
 		buildings = {
 			infrastructure = 1
-			2972 = {
-				naval_base = 1
-			}
 		}
 		add_core_of = SOV
 		add_core_of = TAY

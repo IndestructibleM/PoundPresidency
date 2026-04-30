@@ -93,7 +93,7 @@ country_event = {
 
 	option = { 
 		name = vr_usa.4.a
-		add_popularity = { ideology = conservative popularity = 0.03 }
+		add_popularity = { ideology = democratic popularity = 0.03 }
 		add_popularity = { ideology = democratic popularity = 0.05 }
 		add_political_power = -15
 	}
@@ -153,13 +153,13 @@ country_event = {
 
 	option = { 
 		name = vr_usa.6.b
-		add_popularity = { ideology = conservative popularity = 0.08 }
+		add_popularity = { ideology = democratic popularity = 0.08 }
 	}
 
 	option = { 
 		name = vr_usa.6.c
 		add_popularity = { ideology = democratic popularity = 0.04 }
-		add_popularity = { ideology = conservative popularity = 0.04 }
+		add_popularity = { ideology = democratic popularity = 0.04 }
 		add_political_power = -25
 	}
 }

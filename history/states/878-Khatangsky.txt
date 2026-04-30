@@ -11,9 +11,6 @@ state = {
 		buildings = {
 			infrastructure = 1
 		}
-		victory_points = {
-			2900 1 #Khatanga
-		}
 		add_core_of = SOV
 		add_core_of = TAY
 	}

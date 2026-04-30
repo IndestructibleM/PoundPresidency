@@ -1781,6 +1781,7 @@ ideas = {
 			available = {
 				OR = {
 				has_government = fascism
+				has_government = reactionary
 				has_country_leader_ideology = despotism
 				}
 			}
@@ -1828,11 +1829,12 @@ ideas = {
 			cancel_if_invalid = yes
 			available = {
 				OR = {
-				has_country_leader_ideology = despotism
-				has_country_leader_ideology = oligarchism
-				has_country_leader_ideology = moderatism
-				has_country_leader_ideology = centrism
-				has_country_leader_ideology = japan_militarism_ideology
+					has_government = reactionary
+					has_country_leader_ideology = despotism
+					has_country_leader_ideology = oligarchism
+					has_country_leader_ideology = moderatism
+					has_country_leader_ideology = centrism
+					has_country_leader_ideology = japan_militarism_ideology
 				}
 			}
 			removal_cost = 0

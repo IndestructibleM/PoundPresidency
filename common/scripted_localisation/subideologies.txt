@@ -15,6 +15,12 @@ defined_text = {
 	}
 	text = {
 		trigger = {
+			has_government = reactionary
+		}
+		localization_key = "[GetSubIdeologyAth]"
+	}
+	text = {
+		trigger = {
 			has_government = fascism
 		}
 		localization_key = "[GetSubIdeologyFas]"
@@ -183,6 +189,12 @@ defined_text = {
 			has_country_leader_ideology = technocracy
 		}
 		localization_key = technocracy
+	}
+	text = {
+		trigger = {
+			has_country_leader_ideology = reactionary_junta
+		}
+		localization_key = "Reactionary Junta"
 	}
 }
 defined_text = {

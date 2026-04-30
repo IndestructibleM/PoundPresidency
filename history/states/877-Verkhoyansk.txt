@@ -4,17 +4,8 @@ state = {
 
 	history = {
 		owner = SOV
-		victory_points = {
-			12549 1 
-		}
 		buildings = {
 			infrastructure = 1
-			14712 = {
-				naval_base = 1
-			}
-		}
-		victory_points = {
-			14712 1 #Tiksi
 		}
 		add_core_of = SOV
 		add_core_of = YAK

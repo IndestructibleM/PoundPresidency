@@ -91,12 +91,28 @@ set_politics = {
 	elections_allowed = yes
 }
 
-set_popularities = {
-	reactionary = 50
-	neutrality = 20
-	democratic = 30
+add_ideas = {
+	draft2
+	FER_last_white_stand
+	FER_tokyo_guardian
+
+	state_capitalism
 }
 
+set_popularities = {
+	reactionary = 35
+	neutrality = 30
+	democratic = 25
+	fascism = 10
+}
 
+add_offsite_building = { type = arms_factory level = 3 }
+
+create_country_leader = {
+	name = "Mikhail Diterikhs"
+	desc = GRE_Paul_I_desc
+	picture = "gfx/leaders/FER/RUS_mikhail_diterikhs.png"
+	ideology = reactionary_junta
+}
 
 
