@@ -360,7 +360,7 @@ country_event = {
 
 	option = {
 		trigger = {
-			conservative > 0.25
+			always = no
 		}
 		name = usa.6.b
 		ai_chance = {
@@ -375,7 +375,7 @@ country_event = {
 			}
 		}		
 		set_politics = {
-			ruling_party = conservative 
+			ruling_party = democratic 
 		}
 		set_variable = { election_factor = random }
 		add_to_variable = { election_factor = -0.6 }

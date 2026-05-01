@@ -10476,13 +10476,14 @@
 				target = LUX
 			}
 			add_state_claim = 8
+			add_threat = 2
 		}
     }
 
     focus = {
         id = unite_with_romandy
         icon = GFX_goal_unite_with_romandy
-        x = 0
+        x = 1
         y = 3
         prerequisite = { focus = FRA_secure_luxembourg }
         relative_position_id = FRA_towards_european_hegemony
@@ -10501,24 +10502,28 @@
     focus = {
         id = the_great_lance
         icon = GFX_goal_the_great_lance
-        x = -2
+        x = -1
         y = 3
-        prerequisite = { focus = FRA_ally_poland }
+        prerequisite = { focus = FRA_secure_luxembourg }
         relative_position_id = FRA_towards_european_hegemony
         ai_will_do = {
 		    factor = 50
 		}
         available = {
+			 has_army_manpower = { size > 849999 }
         }
 		cost = 4
         completion_reward = {
-			unlock_decision_tooltip = fra_invade_hol
 			add_tech_bonus = {
     			bonus = 0.5
     			uses = 2
     			category = armor
 			}
-			custom_effect_tooltip = "The British won't take kindly to this plan..."
+			create_wargoal = {
+				target = HOL
+				type = annex_everything
+			}
+			add_threat = 2
 		}
     }
     focus = {
@@ -10584,7 +10589,7 @@
 	focus = {
         id = FRA_support_polish_revanchism
         icon = GFX_FRA_reactionary_revolution
-        x = -4
+        x = -3
         y = 3
         prerequisite = { focus = FRA_ally_poland }
         relative_position_id = FRA_towards_european_hegemony
@@ -10604,6 +10609,29 @@
 				add_state_claim = 189
 				add_state_claim = 188
 				add_ideas = fascist_assault_divisions
+			}
+		}
+	}
+	focus = {
+        id = FRA_destroy_bolshevism
+        icon = GFX_FRA_reactionary_revolution
+        x = -3
+        y = 4
+        prerequisite = { focus = FRA_support_polish_revanchism }
+        relative_position_id = FRA_towards_european_hegemony
+        ai_will_do = {
+		    factor = 50
+		}
+		available = {
+			64 = { owns_or_subject_of = yes }
+       		126 = { owns_or_subject_of = yes }
+        }
+		will_lead_to_war_with = SOV
+		cost = 3
+		completion_reward = {
+			create_wargoal = {
+				target = SOV
+				type = topple_government
 			}
 		}
 	}
@@ -10633,7 +10661,7 @@ focus = {
 focus = {
     id = FRA_beyond_natural_borders
     icon = GFX_fra_natural_borders
-    x = 2
+    x = 3
     y = 3
     prerequisite = { focus = FRA_gauls_and_gaels }
     relative_position_id = FRA_towards_european_hegemony
@@ -10655,9 +10683,9 @@ focus = {
 focus = {
     id = FRA_reconstruct_the_map_of_europe
     icon = GFX_ascendent_glory
-    x = 3
-    y = 4
-    prerequisite = { focus = FRA_beyond_natural_borders }
+    x = 1
+    y = 6
+    prerequisite = { focus = loot_our_conquests }
     relative_position_id = FRA_towards_european_hegemony
     ai_will_do = {
         factor = 50
@@ -10697,7 +10725,7 @@ focus = {
 	will_lead_to_war_with = ENG
     x = 1
     y = 4
-    prerequisite = { focus = FRA_beyond_natural_borders }
+    prerequisite = { focus = the_great_lance }
     prerequisite = { focus = unite_with_romandy }
     relative_position_id = FRA_towards_european_hegemony
     ai_will_do = {
@@ -10805,7 +10833,7 @@ focus = {
 focus = {
     id = le_nouvel_ordre
     icon = GFX_goal_le_nouvel_ordre
-    x = 0
+    x = -1
     y = 6
     prerequisite = { focus = loot_our_conquests }
     relative_position_id = FRA_towards_european_hegemony
