@@ -2,33 +2,29 @@
 state={
 	id=3
 	name="STATE_3"
-	manpower = 475600
+	manpower = 1216838
 	resources={
-	
 	}
 
-	state_category = town
+	state_category = city
 
 
 	history={
 		owner = SWI
-		victory_points = {
-			9620 5
-		}
-		victory_points = {
-			9618 2
-		}
+		victory_points = { 9638 5 }
+		victory_points = { 9620 15 }
+		victory_points = { 663 10 }
 		buildings = {
 			infrastructure = 4
-			arms_factory = 1
-			industrial_complex = 1
+			arms_factory = 3
+			industrial_complex = 3
 			air_base = 4
 		}
 		add_core_of = SWI
 	}
 
 	provinces={
-		9618 9620 11590 13969 13970
+		663 9620 9638 11590 11604 11623
 	}
 
 	local_supplies=0.0 

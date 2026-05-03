@@ -1,4 +1,5 @@
-﻿capital = 1269 # Berlin
+﻿
+capital = 64 # Berlin/Brandeburg
 
 if = {
 	limit = {
@@ -419,7 +420,6 @@ set_variable = { GER_total_control_over_domestic_affairs_focus_advisor = 0 } # T
 
 set_variable = { GER_industrialist_prevailed = 0 } #For allowing only one Industrialist advisor to work on the ME focus
 
-
 # Starting Stats of various kinds
 set_research_slots = 4
 set_convoys = 200
@@ -484,12 +484,6 @@ set_war_support = 0.3
 		autonomous_state = autonomy_puppet
 	}
 	give_military_access = SLO
-	
-	set_autonomy = {
-		target = RKH
-		autonomous_state = autonomy_puppet
-	}
-	give_military_access = RKH
 
 	# So that the war can fire immediately 
 	create_wargoal = {
@@ -1804,3 +1798,8 @@ if = {
 	#	obsolete = yes
 	#}
 }
+
+
+### VANILLAREDUX
+recruit_character = GER_erich_ludendorff
+activate_advisor = GER_erich_ludendorff_idea

@@ -4,9 +4,9 @@ state={
 	name="STATE_119"
 
 	history={
-		owner = ENG
+		owner = NIR
 		victory_points = {
-			3379 10 #Belfast
+			3379 5 
 		}
 		victory_points = {
 			385 1 # Londonderry
@@ -27,19 +27,15 @@ state={
 	}
 
 	provinces={
-		276 385 3217 3242 3329 3379 11257 14548
+		276 385 3217 3242 3329 3379 11257 
 	}
 	manpower=1198537
 	buildings_max_level_factor=1
 	state_category="city"
-
-	resources={
-		aluminium=2
-		coal = 2 #initial distribution
-	}
 	
 	resources={
 		aluminium=2
+		coal = 2 #initial distribution
 	}
 
 	local_supplies=0.0 

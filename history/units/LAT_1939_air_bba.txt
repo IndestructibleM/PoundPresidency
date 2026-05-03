@@ -1,9 +1,0 @@
-﻿
-
-air_wings = {
-	### Latvijas Gaisa Speki
-	1063 = {
-		small_plane_airframe_0 =  { owner = "LAT" amount = 30 creator = "ENG" version_name = "Gloster Gladiator"}		# Aviacijas Pulka -- Gladiator Is, Bristol Bulldogs
-	}
-}
-
