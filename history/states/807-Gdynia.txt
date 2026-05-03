@@ -1,0 +1,40 @@
+
+state={
+	id=807
+	name="STATE_807"
+	manpower = 613370
+	
+	state_category = city
+	history={
+		owner = POL
+		victory_points = {
+			9263 4 #Gdynia
+		}
+		victory_points = {
+			389 3 #Tczew
+		}
+		victory_points = {
+			334 2 #Kościerzyna
+		}
+		buildings = {
+			infrastructure = 3 #was: 6
+			arms_factory = 2
+			industrial_complex = 1
+			air_base = 2
+			9263 = {
+				naval_base = 1
+			}
+		}
+		add_core_of = POL
+		add_core_of = KSH
+		1938.3.12 = {
+			add_claim_by = GER
+		}
+	}
+
+	provinces={
+		334 389 3324 9263 14730 14733
+	}
+
+	local_supplies=0.0 
+}

@@ -1,0 +1,34 @@
+state={
+	id=1569
+	name="STATE_1569"
+
+	history={
+		owner = USA
+		buildings = {
+			infrastructure = 1
+			air_base = 1
+			14315 = {
+				naval_base = 1
+			}
+		}
+		#add_core_of = USA
+		add_core_of = AKS
+		victory_points = {
+			14315 1 #Anchorage 
+		}
+		victory_points = {
+			4848 1 #Cordova
+		}
+		victory_points = {
+			4833 1 #Seward
+		}
+	}
+
+	provinces={
+		4833 4848 14315	
+	}
+	manpower=16090
+	state_category=rural
+
+	local_supplies=0.0 
+}

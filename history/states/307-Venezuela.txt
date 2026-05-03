@@ -1,0 +1,32 @@
+
+state={
+	id=307
+	name="STATE_307" # Miranda
+	
+	state_category = large_town
+	
+	manpower = 1046010
+
+	history={
+		owner = VEN
+		buildings = {
+			infrastructure = 2
+			arms_factory = 1
+			industrial_complex = 3
+			air_base = 2
+			13523 = {
+				naval_base = 3
+			}
+		}
+		add_core_of = VEN
+		victory_points = {
+			13522 10 
+		}
+	}
+
+	provinces={
+		8113 13522 13523 13524 13527 13529
+	}
+
+	local_supplies=0.0 
+}

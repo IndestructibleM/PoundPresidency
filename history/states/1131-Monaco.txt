@@ -1,0 +1,26 @@
+
+state={
+	id=1131
+	name="STATE_1131"
+	manpower = 18140
+	
+	
+	state_category = rural
+	
+	history={
+		owner = MNC
+		buildings = {
+
+		}
+		victory_points = {
+			13677 1
+		}
+		add_core_of = MNC
+	}
+
+	provinces={
+		13677
+	}
+
+	local_supplies=0.0 
+}

@@ -1,0 +1,20 @@
+capital = 1167
+
+set_research_slots = 2
+
+add_ideas = {
+	limited_conscription
+}
+
+set_politics = {
+	ruling_party = neutrality
+	last_election = "1935.12.9"
+	election_frequency = 120
+	elections_allowed = no
+}
+set_popularities = {
+	neutrality = 100
+}
+
+recruit_character = JPS_iwai_yamori
+recruit_character = JPS_nakazawa_kunimatsu

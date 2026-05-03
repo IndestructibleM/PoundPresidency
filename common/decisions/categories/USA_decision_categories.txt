@@ -43,6 +43,7 @@ USA_congress = {
 	}
 	visible = { 
 		NOT = { has_completed_focus = USA_total_action_state } 
+		NOT = { has_completed_focus = USA_continental_director_ascendent } 
 	}
 	scripted_gui = usa_congress_decision_ui	
 

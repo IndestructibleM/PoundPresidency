@@ -1,0 +1,1021 @@
+### Stock Twilight Generic Tree By Indy
+	shared_focus = {
+		id = shared_gen_economic_modernization
+		icon = GFX_generic_cash_stimulus_plan
+		cost = 5
+		x = 25
+		y = 0
+		offset = {
+        x = 10
+        y = 0 
+        trigger = {
+			OR = {
+			tag = FRR
+			tag = FED
+			tag = ITA
+			}
+        }
+		}
+		ai_will_do = {
+			factor = 2
+		}
+		completion_reward = {
+			add_tech_bonus = {
+   			bonus = 0.6
+   			uses = 2
+			category = industry
+			}
+		}
+	}
+	shared_focus = {
+		id = shared_gen_factory_plants
+		icon = GFX_generic_improve_industry
+		relative_position_id = shared_gen_economic_modernization
+		cost = 5
+		x = -1
+		y = 1
+		ai_will_do = {
+			factor = 2
+		}
+		prerequisite = { 
+			focus = shared_gen_economic_modernization
+		}
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					is_core_of = ROOT
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				limit = {
+					is_core_of = ROOT
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+	shared_focus = {
+		id = shared_gen_military_depots
+		icon = GFX_goal_generic_construct_mil_factory
+		relative_position_id = shared_gen_economic_modernization
+		cost = 5
+		x = 1
+		y = 1
+		ai_will_do = {
+			factor = 2
+		}
+		prerequisite = { 
+			focus = shared_gen_economic_modernization
+		}
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					is_core_of = ROOT
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				limit = {
+					is_core_of = ROOT
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+	shared_focus = {
+		id = shared_gen_forges_of_nation
+		icon = GFX_generic_heavy_industry
+		relative_position_id = shared_gen_economic_modernization
+		cost = 5
+		x = -1
+		y = 2
+		ai_will_do = {
+			factor = 2
+		}
+		prerequisite = { 
+			focus = shared_gen_factory_plants
+		}
+		completion_reward = {
+			random_core_state = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_core_state = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+	shared_focus = {
+		id = shared_gen_workshops_factories
+		icon = GFX_focus_generic_mass_production
+		relative_position_id = shared_gen_economic_modernization
+		cost = 5
+		x = 1
+		y = 2
+		ai_will_do = {
+			factor = 2
+		}
+		prerequisite = { 
+			focus = shared_gen_military_depots
+		}
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					is_core_of = ROOT
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				limit = {
+					is_core_of = ROOT
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+	shared_focus = {
+		id = shared_gen_improve_our_infrastructure
+		icon = GFX_generic_railroad
+		relative_position_id = shared_gen_economic_modernization
+		cost = 5
+		x = -3
+		y = 1
+		
+		ai_will_do = {
+			factor = 2
+		}
+		prerequisite = { 
+			focus = shared_gen_economic_modernization
+		}
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					is_core_of = ROOT
+					free_building_slots = { building = infrastructure size > 0 include_locked = yes }
+					prefer_home_area_states_unless_filled_infrastructure = yes
+					is_valid_state_for_development = yes
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				limit = {
+					is_core_of = ROOT
+					free_building_slots = { building = infrastructure size > 0 include_locked = yes }
+					prefer_home_area_states_unless_filled_infrastructure = yes
+					is_valid_state_for_development = yes
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				limit = {
+					is_core_of = ROOT
+					free_building_slots = { building = infrastructure size > 0 include_locked = yes }
+					prefer_home_area_states_unless_filled_infrastructure = yes
+					is_valid_state_for_development = yes
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+	shared_focus = {
+		id = shared_gen_labor_drive
+		icon = GFX_generic_workers_rights
+		relative_position_id = shared_gen_economic_modernization
+		cost = 5
+		x = -4
+		y = 3
+		ai_will_do = {
+			factor = 2
+		}
+		prerequisite = { 
+			focus = shared_gen_development_scheme
+		}
+		completion_reward = {
+			add_timed_idea = {
+				idea= gen_labor_drive_idea
+				days = 125
+			}
+		}
+	}
+	shared_focus = {
+		id = shared_gen_development_scheme
+		icon = GFX_goal_generic_deal
+		relative_position_id = shared_gen_economic_modernization
+		cost = 5
+		x = -3
+		y = 2
+		ai_will_do = {
+			factor = 2
+		}
+		prerequisite = { 
+			focus = shared_gen_improve_our_infrastructure
+		}
+		completion_reward = {
+			capital_scope = {
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+				add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+	shared_focus = {
+		id = shared_gen_electronics_processing
+		icon = GFX_generic_lightbulb
+		relative_position_id = shared_gen_economic_modernization
+		cost = 5
+		x = 0
+		y = 3
+		ai_will_do = {
+			factor = 2
+		}
+		prerequisite = { 
+			focus = shared_gen_forges_of_nation
+		}
+		prerequisite = { 
+			focus = shared_gen_workshops_factories
+		}
+		completion_reward = {
+			add_tech_bonus = {
+   			bonus = 0.6
+   			uses = 2
+    		category = electronics
+			}
+		}
+	}
+	shared_focus = {
+		id = shared_gen_resource_prospection
+		icon = GFX_goal_generic_dig_for_wealth
+		relative_position_id = shared_gen_economic_modernization
+		cost = 5
+		x = -2
+		y = 3
+		ai_will_do = {
+			factor = 2
+		}
+		prerequisite = { 
+			focus = shared_gen_development_scheme
+		}
+
+		completion_reward = {
+			random_owned_controlled_state = {
+			add_resource = {
+    			type = steel
+   				amount = 16
+    		}
+			}
+			random_owned_controlled_state = {
+			add_resource = {
+    			type = tungsten
+   				amount = 8
+    		}
+			}
+		}
+	}
+	shared_focus = {
+		id = shared_gen_highest_science
+		icon = GFX_focus_research2
+		relative_position_id = shared_gen_economic_modernization
+		cost = 5
+		x = -1
+		y = 4
+		ai_will_do = {
+			factor = 2
+		}
+		prerequisite = { 
+			focus = shared_gen_resource_prospection
+		}
+		prerequisite = { 
+			focus = shared_gen_electronics_processing
+		}
+		completion_reward = {
+			add_research_slot = 1
+		}
+	}
+
+	shared_focus = {
+		id = shared_gen_militarization
+		icon = GFX_generic_army_training
+		cost = 5
+		x = 30
+		y = 0
+		offset = {
+        x = 10
+        y = 0 
+        trigger = {
+			OR = {
+			tag = FRR
+			tag = FED
+			tag = ITA
+			}
+        }
+		}
+		ai_will_do = {
+			factor = 2
+		}
+		completion_reward = {
+			army_experience = 30
+			add_command_power = 30
+			add_equipment_to_stockpile = {
+   			 	type = infantry_equipment
+    			amount = 3000
+    			producer = ROOT
+			}
+		}
+	}
+	shared_focus = {
+		id = shared_gen_weapons_research
+		icon = GFX_generic_military_equipment
+		relative_position_id = shared_gen_militarization
+		cost = 5
+		x = -2
+		y = 1
+		ai_will_do = {
+			factor = 2
+		}
+		prerequisite = { 
+			focus = shared_gen_militarization
+		}
+		completion_reward = {
+			add_tech_bonus = {
+				bonus = 0.8
+				uses = 2
+				category = infantry_weapons
+				category = artillery
+			}
+		}
+	}
+	shared_focus = {
+		id = shared_gen_wargames_field_tests
+		icon = GFX_generic_army_junta
+		relative_position_id = shared_gen_militarization
+		cost = 5
+		x = 2
+		y = 1
+		ai_will_do = {
+			factor = 2
+		}
+		prerequisite = { 
+			focus = shared_gen_militarization
+		}
+		completion_reward = {
+			army_experience = 50
+			add_tech_bonus = {
+				bonus = 0.5
+				uses = 1
+				category = armor
+			}
+		}
+	}
+	shared_focus = {
+		id = shared_gen_planes_trains_automobiles
+		icon = GFX_generic_mechanized_infantry
+		relative_position_id = shared_gen_militarization
+		cost = 5
+		x = 0
+		y = 1
+		ai_will_do = {
+			factor = 2
+		}
+		prerequisite = { 
+			focus = shared_gen_militarization
+		}
+		completion_reward = {
+			add_tech_bonus = {
+				bonus = 0.5
+				uses = 2
+				category = air_equipment
+			}
+			add_equipment_to_stockpile = {
+    			type = motorized_equipment
+    			amount = 100
+    			producer = ROOT
+			}
+			add_equipment_to_stockpile = {
+    			type = train_equipment
+    			amount = 20
+    			producer = ROOT
+			}
+			add_tech_bonus = {
+				bonus = 0.6
+				uses = 1
+				category = armor
+			}
+		}
+	}
+	shared_focus = {
+		id = shared_gen_quantity_doctrine
+		icon = GFX_generic_join_faction
+		relative_position_id = shared_gen_militarization
+		cost = 5
+		x = -1
+		y = 2
+		ai_will_do = {
+			factor = 2
+		}
+		mutually_exclusive = { focus = shared_gen_quality_doctrine }
+		prerequisite = { 
+			focus = shared_gen_planes_trains_automobiles
+		}
+		prerequisite = { 
+			focus = shared_gen_weapons_research
+			focus = shared_gen_wargames_field_tests
+		}
+		completion_reward = {
+			add_doctrine_cost_reduction = {
+            cost_reduction = 0.5
+            uses = 2
+            category = land_doctrine
+        	}
+		}
+	}
+	shared_focus = {
+		id = shared_gen_quality_doctrine
+		icon = GFX_generic_corporatism
+		relative_position_id = shared_gen_militarization
+		cost = 5
+		x = 1
+		y = 2
+		ai_will_do = {
+			factor = 2
+		}
+		mutually_exclusive = { focus = shared_gen_quantity_doctrine }
+		prerequisite = { 
+			focus = shared_gen_planes_trains_automobiles
+		}
+		prerequisite = { 
+			focus = shared_gen_weapons_research
+			focus = shared_gen_wargames_field_tests
+		}
+		completion_reward = {
+			add_doctrine_cost_reduction = {
+            cost_reduction = 0.5
+            uses = 2
+            category = land_doctrine
+        	}
+		}
+	}
+	shared_focus = {
+		id = shared_gen_man_thousand_bullets
+		icon = GFX_generic_artillery_factories
+		relative_position_id = shared_gen_militarization
+		cost = 5
+		x = -1
+		y = 3
+		ai_will_do = {
+			factor = 2
+		}
+		prerequisite = { 
+			focus = shared_gen_quantity_doctrine
+		}
+		completion_reward = {
+			add_unit_bonus = {
+ 				category_all_infantry = {
+				supply_consumption = -0.04
+				default_morale = 0.02
+  				}
+			}			
+		}
+	}
+
+	shared_focus = {
+		id = shared_gen_thousand_bullets_man
+		icon = GFX_generic_evil_skull
+		relative_position_id = shared_gen_militarization
+		cost = 5
+		x = 1
+		y = 3
+		ai_will_do = {
+			factor = 2
+		}
+		prerequisite = { 
+			focus = shared_gen_quality_doctrine
+		}
+		completion_reward = {
+			add_unit_bonus = {
+ 				category_all_infantry = {
+				max_organisation = 10
+				breakthrough = 0.05
+  				}
+			}	
+		}
+	}
+	shared_focus = {
+		id = shared_gen_armor_of_masses
+		icon = GFX_generic_mechanized_wave
+		relative_position_id = shared_gen_militarization
+		cost = 5
+		x = -1
+		y = 4
+		ai_will_do = {
+			factor = 2
+		}
+		prerequisite = { 
+			focus = shared_gen_man_thousand_bullets
+		}
+		completion_reward = {
+			add_unit_bonus = {
+ 				light_armor = {
+				maximum_speed = 0.10
+  				}
+				category_all_armor = {
+					build_cost_ic = -0.15
+				}
+			}	
+		}
+	}
+	shared_focus = {
+		id = shared_gen_armor_of_gods
+		icon = GFX_generic_tank
+		relative_position_id = shared_gen_militarization
+		cost = 5
+		x = 1
+		y = 4
+		ai_will_do = {
+			factor = 2
+		}
+		prerequisite = { 
+			focus = shared_gen_thousand_bullets_man
+		}
+		completion_reward = {
+			add_unit_bonus = {
+ 				heavy_armor = {
+					breakthrough = 0.15
+  				}
+				category_all_armor = {
+					hardness = 0.10
+				}
+			}	
+		}
+	}
+	shared_focus = {
+		id = shared_gen_common_soldier
+		icon = GFX_generic_helmet_soldier
+		relative_position_id = shared_gen_militarization
+		cost = 5
+		x = -3
+		y = 4
+		ai_will_do = {
+			factor = 2
+		}
+		prerequisite = { 
+			focus = shared_gen_man_thousand_bullets
+		}
+		completion_reward = {
+			add_manpower = 85000
+			add_war_support = 0.05
+		}
+	}
+	shared_focus = {
+		id = shared_gen_warrior_soldier
+		icon = GFX_generic_sparta_helmet
+		relative_position_id = shared_gen_militarization
+		cost = 5
+		x = 3
+		y = 4
+		ai_will_do = {
+			factor = 2
+		}
+		prerequisite = { 
+			focus = shared_gen_thousand_bullets_man
+		}
+		completion_reward = {
+			add_unit_bonus = {
+ 				category_light_infantry = {
+				soft_attack = 0.1
+  				}
+			}	
+		}
+	}
+	
+	shared_focus = {
+		id = shared_gen_skies_and_seas
+		icon = GFX_generic_sea_and_air
+		cost = 5
+		x = 35
+		y = 0
+		offset = {
+        x = 10
+        y = 0 
+        trigger = {
+			OR = {
+			tag = FRR
+			tag = FED
+			tag = ITA
+			}
+        }
+		}
+		ai_will_do = {
+			factor = 2
+		}
+		completion_reward = {
+			add_tech_bonus = {
+				bonus = 0.8
+				uses = 1
+				category = light_air
+			}
+			add_equipment_to_stockpile = {
+    			type = convoy
+    			amount = 30
+    			producer = ROOT
+			}
+		}
+	}
+	shared_focus = {
+		id = shared_gen_combat_support_roles
+		icon = GFX_generic_air_CAS_new
+		relative_position_id = shared_gen_skies_and_seas
+		cost = 5
+		x = -1
+		y = 1
+		ai_will_do = {
+			factor = 2
+		}
+		prerequisite = {
+			focus = shared_gen_skies_and_seas 
+		}
+		completion_reward = {
+			add_tech_bonus = {
+				bonus = 0.8
+				uses = 2
+				category = cas_bomber
+				category = cat_air_bombs
+			}
+		}
+	}
+	shared_focus = {
+		id = shared_gen_dockyard_buildup
+		icon = GFX_generic_naval_industry
+		relative_position_id = shared_gen_skies_and_seas
+		cost = 5
+		x = 1
+		y = 1
+		available = {
+			any_owned_state = {
+        	is_coastal = yes
+    		}
+		}
+		ai_will_do = {
+			factor = 2
+		}
+		prerequisite = {
+			focus = shared_gen_skies_and_seas 
+		}
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					is_coastal = yes
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = dockyard
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				limit = {
+					is_coastal = yes
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = dockyard
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+	shared_focus = {
+		id = shared_gen_capitol_airbase
+		icon = GFX_generic_airports
+		relative_position_id = shared_gen_skies_and_seas
+		cost = 5
+		x = 3
+		y = 1
+		ai_will_do = {
+			factor = 2
+		}
+		prerequisite = {
+			focus = shared_gen_skies_and_seas 
+		}
+		completion_reward = {
+			capital_scope = {
+				add_building_construction = {
+					type = air_base
+					level = 3
+					instant_build = yes
+				}
+			}
+		}
+	}
+	shared_focus = {
+		id = shared_gen_submarine_effort
+		icon = GFX_generic_naval_submarine2
+		relative_position_id = shared_gen_skies_and_seas
+		cost = 5
+		x = 1
+		y = 2
+		ai_will_do = {
+			factor = 2
+		}
+		prerequisite = {
+			focus = shared_gen_dockyard_buildup
+		}
+		completion_reward = {
+			add_tech_bonus = {
+				bonus = 0.5
+				uses = 2
+				category = ss_tech
+			}
+		}
+	}
+	shared_focus = {
+		id = shared_gen_jets_copters
+		icon = GFX_generic_air_jet_2
+		relative_position_id = shared_gen_skies_and_seas
+		cost = 5
+		x = -1
+		y = 2
+		ai_will_do = {
+			factor = 2
+		}
+		prerequisite = {
+			focus = shared_gen_combat_support_roles 
+		}
+		completion_reward = {
+			add_tech_bonus = {
+				bonus = 0.8
+				uses = 1
+				category = jet_technology
+			}
+			add_tech_bonus = {
+				bonus = 0.8
+				uses = 1
+				category = helicopter_tech
+			}
+		}
+	}
+	shared_focus = {
+		id = shared_gen_destroyers_cruisers
+		icon = GFX_generic_naval_cruiser2
+		relative_position_id = shared_gen_skies_and_seas
+		cost = 5
+		x = 2
+		y = 3
+		ai_will_do = {
+			factor = 2
+		}
+		prerequisite = {
+			focus = shared_gen_submarine_effort 
+		}
+		completion_reward = {
+			add_tech_bonus = {
+				bonus = 0.5
+				uses = 1
+				category = dd_tech
+			}
+			add_tech_bonus = {
+				bonus = 0.5
+				uses = 1
+				category = ca_tech
+			}
+		}
+	}
+	shared_focus = {
+		id = shared_gen_dogfight_training
+		icon = GFX_generic_air_command
+		relative_position_id = shared_gen_skies_and_seas
+		cost = 5
+		x = 3
+		y = 2
+		ai_will_do = {
+			factor = 2
+		}
+		prerequisite = {
+			focus = shared_gen_capitol_airbase 
+		}
+		completion_reward = {
+			air_experience = 50
+			add_doctrine_cost_reduction = {
+				cost_reduction = 0.5
+				uses = 2
+				category = air_doctrine
+			}
+		}
+	}
+	shared_focus = {
+		id = shared_gen_highseas_excersizes
+		icon = GFX_generic_sea_focused_navy2
+		relative_position_id = shared_gen_skies_and_seas
+		cost = 5
+		x = 0
+		y = 3
+		ai_will_do = {
+			factor = 2
+		}
+		prerequisite = {
+			focus = shared_gen_submarine_effort 
+		}
+		completion_reward = {
+			navy_experience = 50
+			add_doctrine_cost_reduction = {
+				cost_reduction = 0.5
+				uses = 2
+				category = naval_doctrine
+			}
+		}
+	}
+	shared_focus = {
+		id = shared_gen_fuel_control
+		icon = GFX_focus_generic_stockpile_fuel
+		relative_position_id = shared_gen_skies_and_seas
+		cost = 5
+		x = 4
+		y = 3
+		ai_will_do = {
+			factor = 2
+		}
+		prerequisite = {
+			focus = shared_gen_dogfight_training 
+		}
+		completion_reward = {
+			modify_building_resources = {
+    			building = synthetic_refinery
+    			resource = oil
+    			amount = 1
+			}
+			add_tech_bonus = {
+				bonus = 0.50
+				uses = 2
+				category = synth_resources
+			}
+		}
+	}
+	shared_focus = {
+		id = shared_gen_plan_ports
+		icon = GFX_generic_naval_base
+		relative_position_id = shared_gen_skies_and_seas
+		cost = 5
+		x = 1
+		y = 4
+		ai_will_do = {
+			factor = 2
+		}
+		prerequisite = {
+			focus = shared_gen_destroyers_cruisers 
+		}
+		prerequisite = {
+			focus = shared_gen_highseas_excersizes 
+		}
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					is_coastal = yes
+				}
+				add_building_construction = {
+    				type = naval_base
+    				level = 3
+    				instant_build = yes
+    				province = {
+        			all_provinces = yes
+        			limit_to_coastal = yes
+        			limit_to_victory_point > 1
+   					}
+				}
+			}
+			add_equipment_to_stockpile = {
+    			type = convoy
+    			amount = 35
+    			producer = ROOT
+			}
+		}
+	}
+	shared_focus = {
+		id = shared_gen_forward_development
+		icon = GFX_goal_generic_industrial_planning
+		relative_position_id = shared_gen_militarization
+		cost = 5
+		x = -2
+		y = 5
+		ai_will_do = {
+			factor = 2
+		}
+		available = { 
+			date > 1960.1.1
+			num_of_owned_factories > 24
+			num_of_controlled_states > 9
+		}
+		prerequisite = {
+			focus = shared_gen_common_soldier 
+			focus = shared_gen_warrior_soldier
+		}
+		prerequisite = { focus = shared_gen_highest_science }
+		prerequisite = { focus = shared_gen_plan_ports }
+		completion_reward = {
+			upgrade_dvl_law = yes
+		}
+	}
+	shared_focus = {
+		id = shared_gen_become_death
+		icon = GFX_generic_big_fuckoff_nuke_explosion
+		relative_position_id = shared_gen_militarization
+		cost = 5
+		x = 0
+		y = 5
+		ai_will_do = {
+			factor = 2
+		}
+		prerequisite = {
+			focus = shared_gen_armor_of_gods 
+			focus = shared_gen_armor_of_masses
+		}
+		prerequisite = { focus = shared_gen_highest_science }
+		prerequisite = { focus = shared_gen_plan_ports }
+		completion_reward = {
+			add_tech_bonus = {
+				bonus = 1.5
+				uses = 1
+				category = WMD
+			}
+		}
+	}
+	shared_focus = {
+		id = shared_gen_boundless_military_science
+		icon = GFX_focus_generic_socialist_science
+		relative_position_id = shared_gen_militarization
+		cost = 5
+		x = 2
+		y = 5
+		ai_will_do = {
+			factor = 2
+		}
+		prerequisite = {
+			focus = shared_gen_common_soldier 
+			focus = shared_gen_warrior_soldier
+		}
+		prerequisite = { focus = shared_gen_highest_science }
+		prerequisite = { focus = shared_gen_plan_ports }
+		completion_reward = {
+		}
+	}
+	

@@ -1,0 +1,42 @@
+state={
+	id=976
+	name="STATE_976"
+	manpower = 875630
+	
+	state_category = town
+	
+	resources = {
+		steel = 15 # was: 8
+		aluminium = 1 # was: 1
+	}
+
+	history = {
+
+		owner = AUS
+		add_core_of = AUS
+
+		buildings = {
+			infrastructure = 3 
+			industrial_complex = 2
+		}
+		victory_points = {
+			3673 3 #Klagenfurt
+		}
+		victory_points = {
+			14484 3 #Villach
+		}
+		add_core_of = AUS
+
+		1938.3.12 = {
+			owner = GER
+			controller = GER
+			add_core_of = GER
+		}
+	}
+
+	provinces={
+		671 668 3673 3674 14484 14485 14486 14487
+	}
+
+	local_supplies=0.0 
+}

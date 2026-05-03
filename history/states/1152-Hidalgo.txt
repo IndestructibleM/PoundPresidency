@@ -1,0 +1,34 @@
+
+state={
+	id=1152
+	name="STATE_1152"
+	manpower = 2360
+	
+	state_category = pastoral
+	
+	resources={
+		oil=1
+	}
+
+	history={
+		owner = USA
+		buildings = {
+			infrastructure = 2
+		}
+		victory_points = {
+			14825 1 #Silver City
+		}
+		victory_points = {
+			5044 1 #Deming
+		}
+		add_core_of = USA
+		add_core_of = NMS
+	}
+
+	provinces={
+		5044 13701 14824 14825
+	}
+	
+
+	local_supplies=0.0 
+}

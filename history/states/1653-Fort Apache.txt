@@ -1,0 +1,27 @@
+
+state={
+	id=1653
+	name="STATE_1653"
+	manpower = 3520
+	
+	state_category = wasteland
+
+	history={
+		owner = USA
+		buildings = {
+			infrastructure = 1
+		}
+		victory_points = {
+			14818 1 #Whiteriver
+		}
+		add_core_of = USA
+		add_core_of = AZS
+		add_core_of = WMA
+	}
+
+	provinces={
+		14818
+	}
+
+	local_supplies=0.0 
+}

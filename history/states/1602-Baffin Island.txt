@@ -1,0 +1,26 @@
+state = {
+	id = 1602
+	name = "STATE_1602"
+	manpower = 1851
+
+	history = {
+
+		owner = CAN
+		add_core_of = CAN
+
+		buildings = {
+			infrastructure = 1
+			#3691 = {
+			#	naval_base = 1
+			#}
+		}
+
+	}
+
+	provinces = {
+		3691 7813 14438 14439 14440 14441 14442 14443 14444 14445 14446 14447 14448 14449 14450 14451 14452 14453 14454 14455 14456 14457 15360
+	}
+	
+	state_category = wasteland
+	local_supplies = 0.000
+}

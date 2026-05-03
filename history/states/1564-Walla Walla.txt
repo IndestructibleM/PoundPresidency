@@ -1,0 +1,27 @@
+
+state={
+	id=1564
+	name="STATE_1564"
+	manpower = 41230
+	
+	state_category = pastoral
+
+	history={
+		owner = USA
+		buildings = {
+			infrastructure = 3 #was: 6
+		}
+		victory_points = {
+			10687 2 #Walla Walla
+		}
+		add_core_of = USA
+		add_core_of = WAS
+		add_core_of = CSC
+	}
+
+	provinces={
+		10687 
+	}
+
+	local_supplies=0.0 
+}

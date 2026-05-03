@@ -1,0 +1,23 @@
+
+state={
+	id=1138
+	name="STATE_1138" #Avshalom
+	manpower = 8920
+	
+	state_category = pastoral
+
+	history={
+		owner = PAL
+		buildings = {
+			infrastructure = 3
+		}
+		add_core_of = PAL
+		add_claim_by = ISR
+	}
+
+	provinces={
+		13686
+	}
+
+	local_supplies=0.0 
+}

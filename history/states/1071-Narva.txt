@@ -1,0 +1,28 @@
+
+state={
+	id=1071
+	name="STATE_1071"
+
+	history={
+		owner = EST
+		victory_points = {
+			4640 3 #Narva
+		}
+		buildings = {
+			infrastructure = 3 #was: 5
+			4640 = {
+				naval_base = 1
+			}
+
+		}
+		add_core_of = EST
+
+	}
+
+	provinces={
+		4640
+	}
+	manpower=25300
+	buildings_max_level_factor=1.000
+	state_category=rural
+}

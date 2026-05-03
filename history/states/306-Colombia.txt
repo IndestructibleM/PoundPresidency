@@ -1,0 +1,34 @@
+
+state={
+	id=306
+	name="STATE_306"
+	manpower = 3701049
+	
+	state_category = large_town
+	
+	history={
+		owner = COL
+		buildings = {
+			infrastructure = 2
+			arms_factory = 1
+			industrial_complex = 3
+			air_base = 2
+		}
+		add_core_of = COL
+		victory_points = {
+			13454 10
+		}
+		victory_points = {
+			13452 3
+		}
+		victory_points = {
+			12845 3
+		}
+	}
+
+	provinces={
+		7993 10747 12845 13452 13453 13454 13455 13456 13457
+	}
+
+	local_supplies=4.0 
+}

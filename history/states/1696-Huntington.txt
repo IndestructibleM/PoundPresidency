@@ -1,0 +1,23 @@
+state={
+	id=1696
+	name="STATE_1696"
+	state_category = rural
+	history={
+		owner = USA
+		
+		buildings = {
+			industrial_complex = 1
+			infrastructure = 3
+		}
+		victory_points = {
+			6971 4 #Huntington
+		}
+		add_core_of = USA
+		add_core_of = WVS
+	}
+	provinces={
+		6971 10441 
+	}
+	manpower=456320
+	buildings_max_level_factor=1.000
+}

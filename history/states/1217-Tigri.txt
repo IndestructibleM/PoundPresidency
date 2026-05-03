@@ -1,0 +1,26 @@
+state={
+	id=1217
+	name="STATE_1217"
+	resources={
+
+	}
+	
+	state_category = pastoral
+
+	history={
+		owner = ENG
+		buildings = {
+			infrastructure = 1
+		}
+		add_core_of = GYA
+		add_claim_by = SUR
+	}
+
+	provinces={
+		13720
+	}
+	manpower=2560
+	buildings_max_level_factor=1.000
+
+	local_supplies=0.0 
+}

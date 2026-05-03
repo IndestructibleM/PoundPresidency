@@ -1,0 +1,34 @@
+
+state={
+	id=1518
+	name="STATE_1518"
+	manpower = 712560
+	#Paris 2,870,000
+	
+	state_category = rural
+	
+
+	history={
+		owner = FRA
+		victory_points = {
+			11491 1
+		}
+		buildings = {
+			infrastructure = 4
+			industrial_complex = 1
+		}
+		add_core_of = FRA
+		1939.1.1 = {
+			buildings = {
+				arms_factory = 1
+				industrial_complex = 2
+			}
+		}
+	}
+
+	provinces={
+		6949 11491 13983
+	}
+
+	local_supplies=0.0 
+}

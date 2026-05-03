@@ -1,0 +1,34 @@
+﻿capital = 527
+
+oob = "DPK_1936"
+
+# Starting tech
+set_technology = {
+	infantry_weapons = 1
+	tech_trucks = 1
+}
+
+set_grand_doctrine = mass_assault
+
+set_convoys = 5
+
+set_politics = {
+	ruling_party = communism
+	last_election = "1936.1.1"
+	election_frequency = 48
+	elections_allowed = no
+}
+set_popularities = {
+	democratic = 10
+	fascism = 0
+	communism = 80
+	neutrality = 10
+}
+
+recruit_character = DPK_democratic_leader
+recruit_character = DPK_neutrality_leader
+recruit_character = DPK_fascism_leader
+recruit_character = DPK_kim_il_sung
+recruit_character = DPK_terenty_shtykov
+recruit_character = DPK_gao_gang
+ 

@@ -1,0 +1,32 @@
+
+state={
+	id=48
+	name="STATE_48"
+	manpower = 1465989
+	resources={
+		aluminium = 2
+		coal = 1 #initial distribution
+	}
+	
+	
+	state_category = city
+
+	history={
+		owner = BUL
+		victory_points = {
+			949 9 #Sofia
+		}
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 5
+			air_base = 3
+		}
+		add_core_of = BUL
+	}
+
+	provinces={
+		935 949 3908 3971 14603
+	}
+
+	local_supplies=0.0 
+}

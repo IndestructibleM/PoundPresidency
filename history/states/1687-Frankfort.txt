@@ -1,0 +1,26 @@
+
+state={
+	id=1687
+	name="STATE_1687"
+	manpower = 32260
+	
+	state_category = wasteland
+
+	history={
+		owner = USA
+		buildings = {
+			infrastructure = 3
+		}
+		victory_points = {
+			14834 2 #Frankfort
+		}
+		add_core_of = USA
+		add_core_of = KYS
+	}
+
+	provinces={
+		14834
+	}
+
+	local_supplies=0.0 
+}

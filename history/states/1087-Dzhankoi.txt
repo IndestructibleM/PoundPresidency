@@ -1,0 +1,26 @@
+
+state={
+	id=1087
+	name="STATE_1087"
+	manpower = 92300
+	
+	state_category = rural
+
+	history={
+		owner = SOV
+		buildings = {
+			infrastructure = 3
+		}
+		victory_points = {
+			11649 3 #Yevpatoriya
+		}
+		add_core_of = SOV
+		add_core_of = CRI
+	}
+
+	provinces={
+		3722 11649
+	}
+
+	local_supplies=0.0 
+}

@@ -1,0 +1,39 @@
+
+state={
+	id=1105
+	name="STATE_1105"
+	manpower = 1032600
+	
+	state_category = town
+	resources={
+		steel=4
+	}
+
+	history={
+		owner = SOV
+		victory_points = {
+			6414 3 
+		}
+		buildings = {
+			infrastructure = 4 #was: 8
+			arms_factory = 2
+			industrial_complex = 1
+		}
+		add_core_of = SOV
+		1939.1.1 = {
+			buildings = {
+				industrial_complex = 2
+				arms_factory = 3
+				3391 = {
+					land_facility = 1 # Mytischi
+				}
+			}
+		}
+	}
+
+	provinces={
+		401 3327 3391 6290 6348 6414 9282 9348 
+	}
+
+	local_supplies=0.0 
+}

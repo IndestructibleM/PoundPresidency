@@ -1,0 +1,21 @@
+state={
+	id=1578
+	name="STATE_1578"
+
+	history={
+		owner = USA
+		buildings = {
+			infrastructure = 1
+		}
+		#add_core_of = USA
+		add_core_of = AKS
+	}
+
+	provinces={
+		14337 14338 14339 14340 
+	}
+	manpower=2410
+	state_category=pastoral
+
+	local_supplies=0.0 
+}

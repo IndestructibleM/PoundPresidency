@@ -10,22 +10,7 @@ characters = {
 			ideology = socfash
 		}
 	}
-	
-	USA_Ernest_Hemmingway = {
-		name = "Ernest Hemmingway"
-		portraits = {
-			civilian = {
-				large = "gfx/leaders/USA/Portrait_Ernest_Hemmingway.png"
-			}
-		}
-		country_leader = {
-			ideology = utopian_socialism
-		}
-		country_leader = {
-			ideology = socdem
-		}
-	}
-	
+
 	USA_George_Christians = {
 		name = "George W. Christians"
 		portraits = {
@@ -87,8 +72,69 @@ characters = {
 		}
 	}
 	
-	### ADVISORS ####
+	### ADVISORS ###
+    ## Generic SIC ##
 
+	Generic_dem_SIC = {
+		name = "Empowered Legislature"
+		portraits = {
+			civilian = {
+				small = "gfx/interface/advisors/Generic_SIC.png"
+			}
+		}
+		advisor = {
+			slot = second_command
+			idea_token = Generic_dem_sic_token
+			available = { has_government = democratic }
+			traits = { dem_sic_trait }
+		}
+	}
+	
+	Generic_auth_SIC = {
+		name = "Empowered Executive"
+		portraits = {
+			civilian = {
+				small = "gfx/interface/advisors/Generic_SIC.png"
+			}
+		}
+		advisor = {
+			slot = second_command
+			idea_token = Generic_auth_sic_token
+			available = { OR = { has_government = neutrality has_government = reactionary } }
+			traits = { auth_sic_trait }
+		}
+	}
+	
+	Generic_com_SIC = {
+		name = "Supreme Soviet"
+		portraits = {
+			civilian = {
+				small = "gfx/interface/advisors/Generic_SIC.png"
+			}
+		}
+		advisor = {
+			slot = second_command
+			idea_token = Generic_com_sic_token
+			available = { OR = { has_government = communism has_government = socialist } }
+			traits = { com_sic_trait }
+		}
+	}
+	
+	Generic_fash_SIC = {
+		name = "Leader Principle"
+		portraits = {
+			civilian = {
+				small = "gfx/interface/advisors/Generic_SIC.png"
+			}
+		}
+		advisor = {
+			slot = second_command
+			idea_token = Generic_fash_sic_token
+			available = { OR = { has_government = fascism } }
+			traits = { fash_sic_trait }
+		}
+	}
+	
 	USA_willis_carto = {
 		name = "Willis Carto"
 		portraits = {
@@ -102,6 +148,48 @@ characters = {
 			available = { has_completed_focus = USA_rise_of_authority }
 			visible = { has_completed_focus = USA_rise_of_authority }
 			traits = { ideological_crusader }
+		}
+	}
+	
+	USA_george_sutherland = {
+		name = "George Sutherland"
+		portraits = {
+			civilian = {
+				small = "gfx/interface/advisors/USA/USA_george_sutherland.png"
+			}
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = USA_george_sutherland_advisor
+			can_be_fired = no
+			traits = { conservative_judge }
+			available = {
+				OR = {
+					has_government = democratic
+					has_government = conservative
+				}
+			}
+		}
+	}
+
+	USA_john_n_garner = {
+		name = "John Nance Garner"
+		portraits = {
+			civilian = {
+				small = "gfx/interface/advisors/USA/USA_john_nance_garner.png"
+			}
+		}
+		advisor = {
+			slot = second_command
+			idea_token = USA_john_n_garner_sic
+			can_be_fired = no
+			traits = { conservative_grandee }
+			available = {
+				has_country_leader = {
+					ruling_only = yes
+					character = USA_franklin_delano_roosevelt
+				}
+			}
 		}
 	}
 	
@@ -155,10 +243,9 @@ characters = {
 			ideology = technocracy
 		}
 		advisor = {
-			slot = political_advisor
+			slot = second_command
 			idea_token = USA_howard_scott_idea
 			available = { has_completed_focus = USA_invite_technocratic_management }
-			visible = { has_completed_focus = USA_2nd_american_revolution }
 			traits = { technocratic_corporatist }
 		}
 	}
@@ -185,6 +272,33 @@ characters = {
 			traits = { youth_vanguard }
 		}
 	}
+
+	#### 
+	#### ITALY
+	####
+
+	ITA_filippo_marinetti = {
+		name = "Filippo T. Marinetti"
+		portraits = {
+			civilian = {
+				small = "gfx/interface/advisors/ITA/ITA_filippo_marinetti.png"
+			}
+			civilian = {
+				large = "gfx/leaders/ITA/Portrait_filippo_marinetti.png"
+			}
+		}
+		country_leader = {
+			ideology = futurism
+		}
+		advisor = {
+			slot = second_command
+			idea_token = ITA_filippo_marinetti_SiC
+			available = {
+				has_government = fascism
+			}
+			traits = { youth_vanguard }
+		}
+	}
 	
 	USA_lawrence_dennis = {
 		name = "Lawrence Dennis"
@@ -200,11 +314,8 @@ characters = {
 			ideology = fascism_ideology
 		}
 		advisor = {
-			slot = political_advisor
+			slot = second_command
 			idea_token = USA_lawrence_dennis_idea
-			visible = {
-				has_completed_focus = USA_2nd_american_revolution
-			}
 			available = {
 				has_completed_focus = USA_supraproduction_syndicalism
 			}
@@ -220,13 +331,10 @@ characters = {
 			}
 		}
 		advisor = {
-			slot = political_advisor
+			slot = second_command
 			idea_token = USA_upton_sinclair_idea
-			visible = {
-				has_completed_focus = USA_natural_revolution
-			}
 			available = {
-				has_completed_focus = USA_natural_revolution
+				has_completed_focus = USA_communism_as_american_apple_pie
 			}
 			traits = { socialist_justice }
 		}
@@ -292,7 +400,7 @@ characters = {
 				has_completed_focus = USA_artistic_imperialism
 			}
 			slot = army_chief
-			idea_token = george_patton
+			idea_token = george_patton_tpp
 			ledger = army
 			allowed = {
 				original_tag = USA

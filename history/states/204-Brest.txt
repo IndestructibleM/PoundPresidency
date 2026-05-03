@@ -1,0 +1,32 @@
+
+state={
+	id=204
+	name="STATE_204" # Bobruysk
+	manpower = 1041084
+	
+	state_category = rural
+
+	history={
+		victory_points = {
+			3350 4 #Bobruisk
+		}
+		victory_points = {
+			6373 2 #Zhlobin
+		}
+		victory_points = {
+			386 1 #Osipovichi
+		}
+		owner = SOV
+		buildings = {
+			infrastructure = 3 #was: 5
+		}
+		add_core_of = SOV
+		add_core_of = BLR
+	}
+
+	provinces={
+		331 360 386 3350 6373 14748
+	}
+
+	local_supplies=0.0 
+}

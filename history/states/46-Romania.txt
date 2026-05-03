@@ -1,0 +1,36 @@
+
+state={
+	id=46
+	name="STATE_46" # Muntenia
+	manpower = 2461400
+	resources={
+		oil=17 # was: 70
+	}
+
+	state_category = city
+
+	history={
+		owner = ROM
+		victory_points = {
+			9617 15 #Bucuresti
+		}
+		victory_points = {
+			3663 3 #Ploiesti
+		}
+		victory_points = {
+			3639 3 #Pitesti
+		}
+		buildings = {
+			infrastructure = 3
+			arms_factory = 2
+			industrial_complex = 1
+		}
+		add_core_of = ROM
+	}
+
+	provinces={
+		660 818 3636 3639 3663 6658 6695 9617 11619 14606 14607 14608
+	}
+
+	local_supplies=0.0 
+}

@@ -1,0 +1,33 @@
+
+state={
+	id=291
+	name="STATE_291"
+	manpower = 479230
+	
+	state_category = town
+	
+	resources={
+		oil=6
+	}
+
+	history={
+		owner = IRQ
+		victory_points = {
+			2097 10
+		}
+		buildings = {
+			infrastructure = 3 #was: 5
+			arms_factory = 1
+			industrial_complex = 1
+			air_base = 4
+		}
+		add_core_of = IRQ
+		add_claim_by = KUR
+	}
+
+	provinces={
+		2097
+	}
+
+	local_supplies=6.0 
+}

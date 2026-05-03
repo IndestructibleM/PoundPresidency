@@ -1,0 +1,77 @@
+﻿division_template = {
+	name = "Silesian Infantry"
+	template_counter = 3 # The Crossed Rifles
+	division_names_group = GER_Inf_01
+
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 1 y = 2 }
+	}
+}
+
+units = {
+	division = {
+		name = "1. Silesian Infantry"
+		location = 9570
+		division_template = "Silesian Infantry"
+	}
+	division = {
+		name = "2. Silesian Infantry"
+		location = 9570
+		division_template = "Silesian Infantry"
+	}
+	division = {
+		name = "3. Silesian Infantry"
+		location = 9570 # Ulm
+		division_template = "Silesian Infantry"
+	}
+	division = {
+		name = "4. Silesian Infantry"
+		location = 9570
+		division_template = "Silesian Infantry"
+	}
+	division = {
+		name = "5. Silesian Infantry"
+		location = 9570
+		division_template = "Silesian Infantry"
+	}
+	division = {
+		name = "6. Silesian Infantry"
+		location = 9570
+		division_template = "Silesian Infantry"
+	}
+	division = {
+		name = "7. Silesian Infantry"
+		location = 552
+		division_template = "Silesian Infantry"
+	}
+	division = {
+		name = "8. Silesian Infantry"
+		location = 552
+		division_template = "Silesian Infantry"
+	}
+	division = {
+		name = "9. Silesian Infantry"
+		location = 552  # Frankfurt
+		division_template = "Silesian Infantry"
+	}
+	division = {
+		name = "10. Silesian Infantry"
+		location = 552
+		division_template = "Silesian Infantry"
+	}
+	division = {
+		name = "11. Silesian Infantry"
+		location = 552
+		division_template = "Silesian Infantry"
+	}
+	division = {
+		name = "12. Silesian Infantry"
+		location = 552
+		division_template = "Silesian Infantry"
+	}
+}

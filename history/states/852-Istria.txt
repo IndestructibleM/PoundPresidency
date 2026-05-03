@@ -1,0 +1,39 @@
+
+state = {
+	id = 852
+	name = "STATE_852"
+	manpower = 51230
+
+	state_category = rural
+
+	resources = {
+		coal = 2 #initial distribution
+	}
+
+	history = {
+		owner = ITA
+		victory_points = { #Pula
+			11735 1 
+		}
+		buildings = {
+			infrastructure = 3
+			dockyard = 1
+			11735 = {
+				naval_base = 2
+			}
+		}
+		add_core_of = ITA
+		add_core_of = YUG
+		add_core_of = CRO
+		add_core_of = LBV
+
+		#CONTROLLED BY ITALY AT GAME START -> ITALIAN NAMES
+		set_province_name = { id = 11564 name = VICTORY_POINTS_11564_ITA }
+	}
+
+	provinces = {
+		11564 11735
+	}
+
+	local_supplies = 0.0 
+}

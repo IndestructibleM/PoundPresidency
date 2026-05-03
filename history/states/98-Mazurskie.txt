@@ -1,0 +1,23 @@
+state={
+	id=98
+	name="STATE_98"
+	manpower = 812100
+	
+	state_category = rural
+	history={
+		victory_points = {
+			3230 3 #Płock
+		}
+		owner = POL
+		buildings = {
+			infrastructure = 3
+		}
+		add_core_of = POL
+	}
+
+	provinces={
+		3230 6259 6321 14728
+	}
+
+	local_supplies=7.0 
+}

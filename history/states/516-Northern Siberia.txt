@@ -1,0 +1,23 @@
+
+state = {
+	id = 516
+	name = "STATE_516" # Taymyria / Dudinka
+	manpower = 6004
+	impassable = yes
+	state_category = pastoral
+
+	history = {
+		owner = SOV
+		buildings = {
+			infrastructure = 1
+		}
+		add_core_of = SOV
+		add_core_of = TAY
+	}
+
+	provinces = {
+		2923 2972 3336 4692 4733 4859 10607 10635 11261 11328 12643 13064 15441 15442 15443 15444 15445 15446 15447 15448 15449 15450 15451 15452 15453 15488 15489 15490 15491 15492 15493 15494 15495 15496 15497 15498 15499 15500
+	}
+
+	local_supplies = 0.0 
+}

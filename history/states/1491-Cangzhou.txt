@@ -1,0 +1,49 @@
+
+state={
+	id=1491
+	name="STATE_1491"
+	manpower = 7125600
+	
+	state_category = town
+
+	history={
+		owner = CHI
+		add_core_of = CHI
+		add_core_of = PRC
+		
+		1936.1.1 = {
+			IF = {
+				limit = {
+					has_dlc = "No Compromise, No Surrender"
+				}
+				transfer_state_to = HBC
+				add_core_of = HBC
+			}
+		}
+		
+		buildings = {
+			infrastructure = 2
+		}
+		
+		victory_points = {
+			11996 3 #Cangzhou
+		}
+		victory_points = {
+			10003 3 #Hengshui
+		}
+		victory_points = {
+			9969 2 #Dacheng
+		}
+
+		1938.10.25 = {
+			owner = CHI
+			controller = JAP
+		}
+	}
+
+	provinces={
+		1134 9969 10003 10022 11996 
+	}
+
+	local_supplies=0.0 
+}

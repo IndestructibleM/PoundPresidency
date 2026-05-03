@@ -1,0 +1,30 @@
+
+state={
+	id=1507
+	name="STATE_1507"
+	manpower = 241200
+	resources={
+	
+	}
+
+	state_category = rural
+
+
+	history={
+		owner = SWI
+		victory_points = {
+			9638 5 
+		}
+		buildings = {
+			infrastructure = 4
+			industrial_complex = 1
+		}
+		add_core_of = SWI
+	}
+
+	provinces={
+		9638
+	}
+
+	local_supplies=0.0 
+}

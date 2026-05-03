@@ -1,0 +1,26 @@
+
+state={
+	id=1204
+	name="STATE_1204" # Zulia
+	manpower = 94230
+	
+	state_category = pastoral
+
+	history={
+		owner = VEN
+		buildings = {
+			infrastructure = 2
+		}
+		add_core_of = VEN
+		victory_points = {
+			13477 1 
+		}
+
+	}
+
+	provinces={
+		1997 2052 13476 13477
+	}
+
+	local_supplies=0.0 
+}

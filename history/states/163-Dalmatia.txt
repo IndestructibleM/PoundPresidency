@@ -1,0 +1,31 @@
+state = {
+	id = 163
+	name = "STATE_163"
+	manpower = 223200
+	
+	state_category = pastoral
+	
+	history = {
+		owner = ITA
+		victory_points = { #Zara/Zadar
+			11901 5 
+		}
+		buildings = {
+			infrastructure = 3 #was: 5
+			11901 = {
+				naval_base = 1
+			}
+		}
+		add_core_of = YUG
+		add_core_of = CRO
+		add_core_of = DAL
+		add_core_of = LBV
+		start_resistance = CRO #Yugoslavia shouldn't resist occupation
+		set_compliance = 70 #TODO_Manu: Check if this is okay when it comes to collab government
+	}
+	provinces = {	
+		11901
+	}
+
+	local_supplies = 0.0 
+}

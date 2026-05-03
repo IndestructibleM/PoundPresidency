@@ -1,0 +1,22 @@
+state={
+	id=1467
+	name="STATE_1467"
+	provinces={
+		1781 1855 4858 10560 10563 10634 10695 12614 
+	}
+
+	history={
+		owner = MON
+		buildings = {
+			infrastructure = 1
+		}
+		add_core_of = MON
+		victory_points = {
+			10695 1
+		}
+	}
+	manpower=13032
+	buildings_max_level_factor=1.000
+	state_category = pastoral
+	local_supplies=0.000
+}

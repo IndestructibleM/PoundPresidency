@@ -1,0 +1,25 @@
+
+state={
+	id=205
+	name="STATE_205" # Kaluga
+	manpower = 723600
+	
+	state_category = town
+
+	history={
+		owner = SOV
+		buildings = {
+			infrastructure = 3 #was: 5
+		}
+		add_core_of = SOV
+		victory_points = {
+			382 3
+		}
+	}
+
+	provinces={
+		274 382 3263 3308 3377 11300 
+	}
+
+	local_supplies=10.0 
+}

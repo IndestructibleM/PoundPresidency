@@ -1,0 +1,32 @@
+
+state={
+	id=1606
+	name="STATE_1606"
+	manpower = 234000
+	
+	state_category = rural
+
+	history={
+		victory_points = {
+			14496 4 #Kherson
+		}
+		owner = SOV
+		buildings = {
+			infrastructure = 3 #was: 5
+			dockyard = 1
+		}
+		add_core_of = SOV
+		add_core_of = UKR
+		1939.1.1 = {
+			buildings = {
+				dockyard = 2
+			}
+		}
+	}
+
+	provinces={
+		11715 14495 14496
+	}
+
+	local_supplies=0.0 
+}

@@ -1,0 +1,29 @@
+state={
+	id=1477
+	name="STATE_1477"
+
+	history={
+		owner = YUG
+		buildings = {
+			infrastructure = 3
+		}
+		add_core_of = YUG
+		add_core_of = SER
+
+		victory_points = {
+			9621 4 #Subotica
+		}
+		victory_points = {
+			3623 3 #Sombor
+		}
+	}
+
+	provinces={
+		3623 9621
+	}
+	manpower=364230
+	buildings_max_level_factor=1.000
+	state_category=rural
+
+	local_supplies=0.0 
+}

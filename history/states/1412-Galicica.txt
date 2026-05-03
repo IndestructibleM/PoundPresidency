@@ -1,0 +1,26 @@
+state={
+	id=1412
+	name="STATE_1412"
+	resources={
+		chromium=4
+		aluminium=2
+	}
+
+	history={
+		owner = YUG
+		buildings = {
+			infrastructure = 2
+		}
+		add_core_of = YUG
+		add_core_of = MAC
+	}
+
+	provinces={
+		13883
+	}
+	manpower=32120
+	buildings_max_level_factor=1.000
+	state_category=wasteland
+
+	local_supplies=0.0 
+}

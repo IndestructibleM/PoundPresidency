@@ -1,0 +1,26 @@
+state=
+{
+	id=1291
+	name="STATE_1291"
+	manpower = 46780
+	
+	state_category = wasteland
+	
+	history= {
+		add_core_of = UKR
+		add_claim_by = MOL
+		owner = ROM
+		victory_points = {
+			3407 1 #Hotin
+		}
+		buildings = {
+			infrastructure = 2
+		}
+		add_core_of = ROM
+	}
+	provinces=
+	{
+		3407 
+	}
+	local_supplies=0.0 
+}

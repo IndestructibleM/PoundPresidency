@@ -1,0 +1,19 @@
+
+state={
+	id=1215
+	name="STATE_1215"
+	manpower = 18852
+	
+	state_category = wasteland
+	
+	history={
+		owner = PAN
+		add_core_of = PAN
+	}
+
+	provinces={
+		10482 13539
+	}
+
+	local_supplies=0.0 
+}

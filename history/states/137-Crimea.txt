@@ -1,0 +1,33 @@
+
+state={
+	id=137
+	name="STATE_137"
+	manpower = 590607
+	
+	state_category = large_town
+
+	history={
+		owner = SOV
+		victory_points = {
+			705 5 #Simferopol
+		}
+		victory_points = {
+			9718 2 #Dzhankoi
+		}
+		victory_points = {
+			6704 1 #Yalta
+		}
+		buildings = {
+			infrastructure = 3
+			air_base = 3
+		}
+		add_core_of = SOV
+		add_core_of = CRI
+	}
+
+	provinces={
+		705 6704 6724 9677 9718
+	}
+
+	local_supplies=0.0 
+}

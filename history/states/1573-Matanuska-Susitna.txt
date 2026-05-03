@@ -1,0 +1,24 @@
+state={
+	id=1573
+	name="STATE_1573"
+
+	history={
+		owner = USA
+		buildings = {
+			infrastructure = 1
+		}
+		#add_core_of = USA
+		add_core_of = AKS
+		victory_points = {
+			14313 1 #Talkeetna
+		}
+	}
+
+	provinces={
+		10679 14307 14308 14309 14310 14311 14312 14313 14314
+	}
+	manpower=4150
+	state_category=pastoral
+
+	local_supplies=0.0 
+}

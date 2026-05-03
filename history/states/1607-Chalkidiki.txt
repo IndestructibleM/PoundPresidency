@@ -1,0 +1,23 @@
+
+state={
+	id=1607
+	name="STATE_1607"
+
+	history={
+		owner = GRE
+		buildings = {
+			infrastructure = 2
+		}
+		add_core_of = GRE
+		add_claim_by = BUL
+
+	}
+
+	provinces={
+		895 3526 3936 11818 
+	}
+	manpower=318600
+	state_category=rural
+
+	local_supplies=0.0 
+}

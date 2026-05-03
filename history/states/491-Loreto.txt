@@ -1,0 +1,22 @@
+
+state={
+	id=491
+	name="STATE_491"
+	manpower = 97626
+
+	state_category = rural
+
+	history={
+		owner = PRU
+		buildings = {
+			infrastructure = 2
+		}
+		add_core_of = PRU
+	}
+
+	provinces={
+		5162 13400 13401 13402 13403
+	}
+
+	local_supplies=0.0 
+}

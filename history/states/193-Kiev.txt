@@ -1,0 +1,27 @@
+
+state={
+	id=193
+	name="STATE_193" # Chernihiv
+	manpower = 873637
+	
+	state_category = large_town
+
+	history={
+		victory_points = {
+			3568 4 #Chernigov
+		}
+		owner = SOV
+		buildings = {
+			infrastructure = 3 #was: 5
+			air_base = 8
+		}
+		add_core_of = SOV
+		add_core_of = UKR
+	}
+
+	provinces={
+		238 489 546 3225 3568 6589
+	}
+
+	local_supplies=0.0 
+}

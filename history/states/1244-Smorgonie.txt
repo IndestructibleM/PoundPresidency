@@ -1,0 +1,27 @@
+state={
+	id=1244
+	name="STATE_1244"
+	manpower = 119820
+	
+	state_category = rural
+	
+	history={
+		victory_points = {
+			6340 2 #Smorgonie
+		}
+		owner = POL
+		buildings = {
+			infrastructure = 2
+		}
+		add_core_of = POL
+		add_core_of = BLR
+		add_core_of = RCL
+		add_claim_by = LIT
+	}
+
+	provinces={
+		6340 6413 11391 13745 13746
+	}
+
+	local_supplies=0.0 
+}

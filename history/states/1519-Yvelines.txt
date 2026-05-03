@@ -1,0 +1,35 @@
+
+state={
+	id=1519
+	name="STATE_1519"
+	manpower = 2454500
+	
+	state_category = town
+	
+
+	history={
+		owner = FRA
+		victory_points = {
+			9523 3 
+		}
+		buildings = {
+			infrastructure = 4
+			arms_factory = 1
+			industrial_complex = 1
+			air_base = 5
+		}
+		add_core_of = FRA
+		1939.1.1 = {
+			buildings = {
+				arms_factory = 2
+				industrial_complex = 2
+			}
+		}
+	}
+
+	provinces={
+		6547 9507 9523 9725
+	}
+
+	local_supplies=0.0 
+}

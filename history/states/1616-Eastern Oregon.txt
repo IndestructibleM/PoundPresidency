@@ -1,0 +1,27 @@
+
+state={
+	id=1616
+	name="STATE_1616"
+	manpower = 145630
+	
+	state_category = rural
+
+	history={
+		owner = USA
+		buildings = {
+			infrastructure = 3
+		}
+		victory_points = {
+			7865 1 #La Grande
+		}
+		add_core_of = USA
+		add_core_of = ORS
+		add_core_of = CSC
+	}
+
+	provinces={
+		7865 10305 10625 13711 14772 14774
+	}
+
+	local_supplies=0.0 
+}

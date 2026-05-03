@@ -1,0 +1,37 @@
+
+state={
+	id=1350
+	name="STATE_1350"
+	manpower = 156300
+	
+	
+	state_category = rural
+	
+	resources={
+		aluminium=4
+	}
+
+
+	history={
+		owner = USA
+		buildings = {
+			infrastructure = 3 #was: 6
+			industrial_complex = 1
+		}
+		add_core_of = USA
+		add_core_of = CSA
+		add_core_of = TEX
+		victory_points = {
+			13805 3 #Wichita Falls
+		}
+		victory_points = {
+			5001 3 #Texarkana
+		}
+	}
+
+	provinces={
+		5001 6968 9829 13804 13805 13806
+	}
+
+	local_supplies=0.0 
+}

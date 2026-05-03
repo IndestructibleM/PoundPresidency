@@ -1,0 +1,22 @@
+
+state={
+	id=1210
+	name="STATE_1210"
+	manpower = 48250
+	
+	state_category = pastoral
+
+	history={
+		owner = VEN
+		buildings = {
+			infrastructure = 1
+		}
+		add_core_of = VEN
+	}
+
+	provinces={
+		1981 13506 13507
+	}
+
+	local_supplies=0.0 
+}

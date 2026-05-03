@@ -1,0 +1,30 @@
+
+state={
+	id=241
+	name="STATE_241" # Gomel
+	manpower = 588900
+	
+	state_category = rural
+
+	history={
+		owner = SOV
+		victory_points = {
+			289 1 #Krychaw
+		}
+		victory_points = {
+			9371 1 #Chachersk
+		}
+		buildings = {
+			infrastructure = 3 #was: 5
+			air_base = 3
+		}
+		add_core_of = SOV
+		add_core_of = BLR
+	}
+
+	provinces={
+		289 6233 6344 6354 9247 9351 9371 11271
+	}
+
+	local_supplies=0.0 
+}

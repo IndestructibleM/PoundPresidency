@@ -1,0 +1,30 @@
+
+state = {
+	id = 637
+	name = "STATE_637" #Kamchatka
+
+	history = {
+		owner = SOV
+		buildings = {
+			infrastructure = 1
+			12207 = {
+				naval_base = 1
+
+			}
+		}
+		victory_points = {
+			4728 1 #Petropavlovsk-Kamchatsky
+		}
+		add_core_of = SOV
+		add_core_of = FER
+	}
+
+	provinces = {
+		1823 1839 1863 4728 7878 12207 12522 14632 14633 14634 14635 14636 14637 14638 14639
+	}
+	manpower = 31256
+	buildings_max_level_factor = 1
+	state_category = "pastoral"
+
+	local_supplies = 0.0 
+}

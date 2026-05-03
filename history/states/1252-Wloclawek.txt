@@ -1,0 +1,29 @@
+state={
+	id=1252
+	name="STATE_1252"
+	manpower = 215489
+	
+	state_category = rural
+	history={
+		victory_points = {
+			6401 4 #Włocławek
+		}
+		victory_points = {
+			11515 2 #Konin
+		}
+		victory_points = {
+			548 2 #Gostynin
+		}
+		owner = POL
+		buildings = {
+			infrastructure = 3
+		}
+		add_core_of = POL
+	}
+
+	provinces={
+		548 6401 11515
+	}
+
+	local_supplies=0.0 
+}

@@ -1,0 +1,29 @@
+
+state={
+	id=1264
+	name="STATE_1264"
+	manpower =  717854
+	
+	state_category = rural
+
+	history={
+		owner = SOV
+		victory_points = {
+			6220 2 #Lepel
+		}
+		victory_points = {
+			9241 1 #Beshankovichy
+		}
+		buildings = {
+			infrastructure = 3
+		}
+		add_core_of = SOV
+		add_core_of = BLR
+	}
+
+	provinces={
+		3331 6220 6371 9241 
+	}
+
+	local_supplies=0.0 
+}

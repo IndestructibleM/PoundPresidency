@@ -15,6 +15,12 @@ defined_text = {
 	}
 	text = {
 		trigger = {
+			has_government = reactionary
+		}
+		localization_key = "[GetSubIdeologyAth]"
+	}
+	text = {
+		trigger = {
 			has_government = fascism
 		}
 		localization_key = "[GetSubIdeologyFas]"
@@ -22,6 +28,12 @@ defined_text = {
 	text = {
 		trigger = {
 			has_government = communism
+		}
+		localization_key = "[GetSubIdeologyCom]"
+	}
+	text = {
+		trigger = {
+			has_government = socialist
 		}
 		localization_key = "[GetSubIdeologyCom]"
 	}
@@ -47,6 +59,12 @@ defined_text = {
 			has_country_leader_ideology = socialism
 		}
 		localization_key = socialism
+	}
+	text = {
+		trigger = {
+			has_country_leader_ideology = populism
+		}
+		localization_key = populism
 	}
 	text = {
 		trigger = {
@@ -172,6 +190,12 @@ defined_text = {
 		}
 		localization_key = technocracy
 	}
+	text = {
+		trigger = {
+			has_country_leader_ideology = reactionary_junta
+		}
+		localization_key = "Reactionary Junta"
+	}
 }
 defined_text = {
 	name = GetSubIdeologyFas
@@ -248,6 +272,12 @@ defined_text = {
 		}
 		localization_key = neosoc
 	}
+	text = {
+		trigger = {
+			has_country_leader_ideology = new_deal_ideology
+		}
+		localization_key = new_deal_ideology
+	}
 	
 }
 defined_text = {
@@ -289,5 +319,10 @@ defined_text = {
 		}
 		localization_key = juche
 	}
-	
+	text = {
+		trigger = {
+			has_country_leader_ideology = democratic_socialism
+		}
+		localization_key = "Reformist Marxism"
+	}
 }

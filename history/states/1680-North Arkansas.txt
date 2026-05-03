@@ -1,0 +1,33 @@
+
+state={
+	id=1680
+	name="STATE_1680"
+	manpower = 724481
+	
+	state_category = rural
+	
+	resources={
+		aluminium=14
+	}
+
+
+	history={
+		owner = USA
+		buildings = {
+			infrastructure = 2
+			industrial_complex = 1
+		}
+		victory_points = {
+			4625 2 #Jonesboro
+		}
+		add_core_of = USA
+		add_core_of = CSA
+		add_core_of = ARS
+	}
+
+	provinces={
+		1646 4444 4567 4597 4625 7586 10477 
+	}
+
+	local_supplies=0.0 
+}

@@ -1,0 +1,24 @@
+state={
+	id=1664
+	name="STATE_1664"
+	manpower = 4780
+	
+	state_category = wasteland
+
+	history={
+		owner = USA
+		buildings = {
+			infrastructure = 1
+		}
+		add_core_of = USA
+		add_core_of = NMS
+		add_core_of = NVJ
+	}
+
+	provinces={
+		14830
+	}
+	
+
+	local_supplies=0.0 
+}

@@ -1,0 +1,28 @@
+﻿capital = 1628 #Duck Valley
+
+#oob = "SPT_1936"
+
+# Starting tech
+set_technology = {
+	infantry_weapons = 1
+	tech_support = 1		
+	tech_engineers = 1
+	tech_trucks = 1
+	gw_artillery = 1
+	interwar_antiair = 1
+}
+
+set_politics = {
+	ruling_party = neutrality
+	last_election = "1934.2.11"
+	election_frequency = 48
+	elections_allowed = yes
+}
+set_popularities = {
+	democratic = 20
+	communism = 5
+	neutrality = 70
+	fascism = 5
+}
+
+recruit_character = SPT_shoshone_paiute_council

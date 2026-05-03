@@ -1,0 +1,43 @@
+spriteTypes = {
+
+	spriteType = {
+		name = "GFX_history_window_bg"
+		texturefile = "gfx/interface/history/history_window_bg.dds"
+	}
+
+	spriteType = {
+		name = "GFX_info_flag_background_bg"
+		texturefile = "gfx/interface/history/info_flag_background_bg.dds"
+	}
+
+	spriteType = {
+		name = "GFX_history_button"
+		texturefile = "gfx/interface/history/history_button.dds"
+		noOfFrames = 2
+	}
+
+	spriteType = {
+		name = "GFX_icon_steam"
+		texturefile = "gfx/interface/history/icon_steam.dds"
+	}
+
+	spriteType = {
+		name = "GFX_icon_wikipedia"
+		texturefile = "gfx/interface/history/icon_wikipedia.dds"
+	}
+
+	spriteType = {
+		name = "GFX_open_button_mod10"
+		texturefile = "gfx/interface/history/open_button.dds"
+	}
+
+	spriteType = {
+		name = "GFX_numbers_bg"
+		texturefile = "gfx/interface/history/numbers_bg.dds"
+	}
+
+	spriteType = {
+		name = "GFX_mod10achievement_bg"
+		texturefile = "gfx/interface/history/_mod10achievement_bg.dds"
+	}
+}

@@ -1,0 +1,21 @@
+state={
+	id=1052
+	name="STATE_1052"
+	manpower = 92320
+	
+	state_category = pastoral
+
+	history={
+		owner = JOR
+		buildings = {
+			infrastructure = 1
+		}
+		add_core_of = JOR
+	}
+	
+	provinces={
+		4562 4603  
+	}
+
+	local_supplies=0.0 
+}

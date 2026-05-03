@@ -1,0 +1,39 @@
+
+state={
+	id=382
+	name="STATE_382"
+	manpower = 520790
+	resources={
+		oil=14 # was: 20
+	}
+	
+	state_category = town
+
+	history={
+		owner = USA
+		buildings = {
+			infrastructure = 2
+			industrial_complex = 1
+		}
+		victory_points = {
+			1827 9 #Denver
+		}
+		victory_points = {
+			1809 3 #Pueblo
+		}
+		victory_points = {
+			10588 3 #Colorado Springs
+		}
+		victory_points = {
+			7780 2 #Greeley
+		}
+		add_core_of = USA
+		add_core_of = CLS
+	}
+
+	provinces={
+		1809 1827 3869 7780 10588 12642
+	}
+
+	local_supplies=8.0 
+}

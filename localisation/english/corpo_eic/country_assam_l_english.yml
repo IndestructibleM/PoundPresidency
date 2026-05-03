@@ -1,0 +1,24 @@
+﻿l_english:
+ASM_democratic:5 "Assam"
+ASM_democratic_DEF:5 "Assam"
+ASM_democratic_ADJ:5 "Assamese"
+ASM_democratic_party:0 ""
+ASM_democratic_party_long:0 ""
+
+ASM_fascism:5 "Assam"
+ASM_fascism_DEF:5 "Assam"
+ASM_fascism_ADJ:5 "Assamese"
+ASM_fascism_party:0 ""
+ASM_fascism_party_long:0 ""
+
+ASM_communism:5 "Assam"
+ASM_communism_DEF:5 "Assam"
+ASM_communism_ADJ:5 "Assamese"
+ASM_communism_party:0 ""
+ASM_communism_party_long:0 ""
+
+ASM_neutrality:5 "Assam Clique"
+ASM_neutrality_DEF:5 "The Assam Clique"
+ASM_neutrality_ADJ:5 "Assamese"
+ASM_neutrality_party:0 "Insurrectional Union"
+ASM_neutrality_party_long:0 ""

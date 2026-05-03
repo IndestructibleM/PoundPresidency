@@ -1,0 +1,90 @@
+capital = 1292
+
+oob = "ROT_1936"
+
+set_research_slots = 2
+
+add_ideas = {
+	limited_conscription
+}
+
+set_technology = {
+	infantry_weapons = 1
+}
+
+set_politics = {
+	ruling_party = democratic
+	last_election = "1935.12.9"
+	election_frequency = 120
+	elections_allowed = yes
+}
+set_popularities = {
+	democratic = 85
+	fascism = 0
+	communism = 10
+	neutrality = 5
+}
+
+1939.1.1 = {
+	set_politics = {
+		ruling_party = democratic
+		last_election = "1936.6.10"
+		election_frequency = 120
+		elections_allowed = yes
+	}
+}
+
+create_country_leader = {
+	name = "Pieter Droogleever Fortuyn"
+	desc = ""
+	picture = "GFX_Portrait_hungary_friedrich_franz"
+	expire = "1939.1.1"
+	ideology = liberalism
+	traits = {
+		#
+	}
+}
+
+create_country_leader = {
+	name = "Pieter Oud"
+	desc = ""
+	picture = "GFX_Portrait_Europe_Generic_1"
+	expire = "1941.6.1"
+	ideology = liberalism
+	traits = {
+		#
+	}
+}
+
+create_country_leader = {
+	name = "Henk-Jan Eldering"
+	desc = ""
+	picture = "GFX_portrait_europe_generic_land_13"
+	expire = "1965.1.1"
+	ideology = despotism
+	traits = {
+		#
+	}
+}
+
+create_country_leader = {
+	name = "Martijn Smallenburg"
+	desc = ""
+	picture = "GFX_Portrait_Europe_Generic_1"
+	expire = "1965.1.1"
+	ideology = marxism
+	traits = {
+		#
+	}
+}
+
+create_country_leader = {
+	name = "Egbert Haitjema"
+	desc = ""
+	picture = "GFX_portrait_europe_generic_4"
+	expire = "1965.1.1"
+	ideology = nazism
+	traits = {
+		#
+	}
+}

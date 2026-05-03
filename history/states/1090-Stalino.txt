@@ -1,0 +1,39 @@
+
+state={
+	id=1090
+	name="STATE_1090"
+	manpower = 1062300
+
+	resources = {
+		coal = 82 # initial distribution
+	}
+	
+	state_category = rural
+
+	history={
+		owner = SOV
+		buildings = {
+			infrastructure = 3 #was: 5
+		}
+		victory_points = {
+			6474 10 #Donetsk
+		}
+		victory_points = {
+			3491 4 #Kramatorsk
+		}
+		victory_points = {
+			3479 4 #Gorlovka
+		}
+		victory_points = {
+			3466 3 #Postyshevo
+		}
+		add_core_of = SOV
+		add_core_of = UKR
+	}
+
+	provinces={
+		502 3466 3479 3491 6474
+	}
+
+	local_supplies=0.0 
+}

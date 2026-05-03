@@ -1,0 +1,22 @@
+
+state={
+	id=1514
+	name="STATE_1514"
+	manpower = 185412
+	state_category = rural
+	history={
+		owner = SWI
+		victory_points = {
+			6666 5 
+		}
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 1
+		}
+		add_core_of = SWI
+	}
+	provinces={
+		6666
+	}
+	local_supplies=0.0 
+}

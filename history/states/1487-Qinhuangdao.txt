@@ -1,0 +1,43 @@
+
+state={
+	id=1487
+	name="STATE_1487"
+	manpower = 2423650
+	
+	state_category = town
+
+	history={
+		owner = JAP
+		#add_core_of = EHE
+		add_core_of = CHI
+		add_core_of = PRC
+		buildings = {
+			infrastructure = 3 #was: 5
+			arms_factory = 1
+			3900 = {
+				naval_base = 2
+				
+				#landmark_great_wall_section = {
+				#    level = 1
+				#    allowed = {
+				#        has_dlc = "No Compromise, No Surrender"
+				#    }
+				#}
+			}
+		}
+		victory_points = {
+			3900 4 #Qinhuangdao
+		}
+		
+		1938.2.1 = {
+			owner = JAP
+			controller = JAP
+		}
+	}
+
+	provinces={
+		3900 15504
+	}
+
+	local_supplies=0.0 
+}

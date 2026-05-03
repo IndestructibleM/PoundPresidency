@@ -1,0 +1,32 @@
+
+state={
+	id=1158
+	name="STATE_1158"
+	manpower = 93100
+	state_category = rural
+	resources={
+		tungsten=4
+	}
+
+	history={
+		owner = USA
+		buildings = {
+			infrastructure = 2
+		}
+		victory_points = {
+			6742 2 #Missoula
+		}
+		victory_points = {
+			4838 1 #Kalispell
+		}
+		add_core_of = USA
+		add_core_of = MTS
+		add_core_of = CSC
+	}
+
+	provinces={
+		1854 1857 4838 6742 7779 12676 
+	}
+
+	local_supplies=0.0 
+}

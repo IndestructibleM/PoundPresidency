@@ -1,0 +1,24 @@
+state={
+	id=1242
+	name="STATE_1242"
+
+	history={
+		owner = POL
+		buildings = {
+			infrastructure = 3
+		}
+		add_core_of = POL
+		add_claim_by = LIT
+		
+		victory_points = {
+			400 2 #Augustow
+		}
+	}
+
+	provinces={
+		400
+	}
+	manpower=48950
+	buildings_max_level_factor=1.000
+	state_category=rural
+}

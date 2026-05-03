@@ -1,0 +1,22 @@
+
+state={
+	id=1206
+	name="STATE_1206"
+	manpower = 2950
+	
+	state_category = wasteland
+
+	history={
+		owner = VEN
+		buildings = {
+			infrastructure = 1
+		}
+		add_core_of = VEN
+	}
+
+	provinces={
+		8050 13493 13494 13495
+	}
+
+	local_supplies=0.0 
+}

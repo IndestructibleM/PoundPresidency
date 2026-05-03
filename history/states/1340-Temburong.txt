@@ -1,0 +1,26 @@
+state=
+{
+	id=1340
+	name="STATE_1340"
+	manpower = 4920
+	resources={
+		rubber=2
+	}
+	
+	state_category = pastoral
+
+	history=
+	{
+		owner = ENG
+		buildings = {
+			infrastructure = 1
+		}
+		add_core_of = BRN
+	}
+
+	provinces={
+		13781
+	}
+
+	local_supplies=0.0 
+}

@@ -1,0 +1,33 @@
+
+state = {
+	id = 408
+	name = "STATE_408"
+	manpower = 235210
+	
+	state_category = town
+
+	history={
+		owner = SOV
+		victory_points = {
+			957 5
+		}
+		buildings = {
+			infrastructure = 2
+			dockyard = 1
+			air_base = 5
+			957 = {
+				naval_base = 8
+				coastal_bunker = 3
+			}
+		}
+		add_core_of = SOV
+		add_core_of = FER
+		add_core_of = VLA
+	}
+
+	provinces = {
+		957
+	}
+
+	local_supplies = 0.0 
+}

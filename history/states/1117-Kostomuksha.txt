@@ -1,0 +1,25 @@
+state={
+	id=1117
+	name="STATE_1117"
+	resources={
+		steel=4
+	}
+
+	history={
+		owner = SOV
+		buildings = {
+			infrastructure = 2
+		}
+		add_core_of = SOV
+		add_core_of = KAR
+	}
+
+	provinces={
+		6175 9074
+	}
+	manpower=31200
+	
+	state_category = pastoral
+
+	local_supplies=0.0 
+}

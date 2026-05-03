@@ -1,0 +1,30 @@
+
+state={
+	id=1181
+	name="STATE_1181"
+	manpower = 252500
+
+	state_category = rural
+
+	resources={
+		chromium=7
+	}
+
+	history={
+		victory_points = {
+			11905 1 
+		}
+		owner = GRE
+		buildings = {
+			infrastructure = 1
+		}
+		add_core_of = GRE
+		add_claim_by = BUL
+	}
+
+	provinces={
+		11774 11905
+	}
+
+	local_supplies=9.0 
+}

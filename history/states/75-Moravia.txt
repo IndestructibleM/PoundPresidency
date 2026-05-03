@@ -1,0 +1,46 @@
+state={
+	id=75
+	name="STATE_75"
+	manpower = 2598400
+	resources={
+		steel=4 # was: 6
+		oil = 2 # was: 4
+	}
+
+	state_category = city
+
+	history={
+		owner = CZE
+		victory_points = {
+			3569 8 #Brno
+		}
+		victory_points = {
+			6562 4 #Olomouc
+		}
+		victory_points = {
+			569 3 #Jihlava
+		}
+		victory_points = {
+			6576 3 #Zlin
+		}
+		buildings = {
+			infrastructure = 4
+			industrial_complex = 4
+			air_base = 5
+
+		}
+		add_core_of = CZE
+		add_core_of = MRV
+
+		1939.3.14 = {
+			owner = RKH
+			controller = RKH
+		}
+	}
+
+	provinces={
+		569 3553 3569 6562 6576 6590 9551 11511 14522
+	}
+
+	local_supplies=3.0 
+}

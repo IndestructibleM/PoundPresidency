@@ -1,0 +1,25 @@
+
+state={
+	id=1359
+	name="STATE_1359"
+	manpower = 8920
+	state_category = wasteland
+	
+	history={
+		owner = USA
+		buildings = {
+			infrastructure = 2
+		}
+		victory_points = {
+			13819 2 #Helena
+		}
+		add_core_of = USA
+		add_core_of = MTS
+	}
+
+	provinces={
+		1736 13819
+	}
+
+	local_supplies=0.0 
+}

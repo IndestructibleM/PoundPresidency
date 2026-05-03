@@ -1,0 +1,19 @@
+guiTypes = {
+
+	containerWindowType = {
+		name = "history_window_open_button"
+		position = { x = -59 y = -270 }	
+		size = { width = 30 height= 30 }
+		orientation = LOWER_RIGHT
+		moveable = no
+
+		buttonType = {
+			name = "open_button"
+			position = { x = 0 y = 0 }
+			spriteType ="GFX_open_button_mod10"
+			Orientation = "UPPER_RIGHT"
+			clicksound = click_close
+			pdx_tooltip = "OPEN"
+		}
+	}
+}

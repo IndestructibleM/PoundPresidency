@@ -1,0 +1,35 @@
+
+state={
+	id=1263
+	name="STATE_1263"
+	manpower =  326590
+	
+	state_category = town
+
+	history={
+		owner = SOV
+		victory_points = {
+			9289 5 #Mogilev
+		}
+		victory_points = {
+			294 2 #Borisov
+		}
+		victory_points = {
+			11322 1 #Berezino
+		}
+		victory_points = {
+			3378 1 #Bykhov
+		}
+		buildings = {
+			infrastructure = 3 #was: 5
+		}
+		add_core_of = SOV
+		add_core_of = BLR
+	}
+
+	provinces={
+		216 294 342 3378 6292 9289 11322
+	}
+
+	local_supplies=0.0 
+}

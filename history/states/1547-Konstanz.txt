@@ -1,0 +1,35 @@
+state={
+	id=1547
+	name="STATE_1547"
+	resources={
+		aluminium=6
+	}
+
+	state_category = town
+	history={
+		owner = GER
+		victory_points = {
+			3679 1
+		}
+		buildings = {
+			infrastructure = 4
+			arms_factory = 1
+
+		}
+		add_core_of = GER
+		add_core_of = WUR
+		1939.1.1 = {
+			buildings = {
+				arms_factory = 4
+				industrial_complex = 1
+			}
+		}
+	}
+
+	provinces={
+		3679 3690 6934 9655 13126 
+	}
+	manpower=723590
+
+	local_supplies=0.0 
+}

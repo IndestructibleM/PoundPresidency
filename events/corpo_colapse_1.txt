@@ -1,0 +1,79 @@
+###########################
+# RAJ GOE Events
+###########################
+
+add_namespace = RAJ_effondrement
+
+country_event = {
+    id = RAJ_effondrement.1 #Strike against unfair price controls (Rising cost of living and worsening food crisis)
+    title = RAJ_effondrement.1.t    
+    desc = RAJ_effondrement.1.desc    
+    picture = GFX_report_event_generic_strike
+    
+    is_triggered_only = yes
+
+    option = { 
+        name = RAJ_effondrement.1.a
+        ai_chance = {
+            base = 1
+        }
+
+        RAJ = {
+            add_ideas = POL_great_peasants_strike   
+        }
+    }
+}
+country_event = {
+    id = RAJ_effondrement.2 #The strike turns into a riot
+    title = RAJ_effondrement.2.t    
+    desc = RAJ_effondrement.2.desc    
+    picture = GFX_report_event_generic_riot
+    
+    is_triggered_only = yes
+
+    option = { 
+        name = RAJ_effondrement.2.a
+        ai_chance = {
+            base = 1
+        }
+
+        RAJ = {
+swap_ideas = {
+remove_idea = POL_great_peasants_strike
+add_idea = FRA_factory_strikes
+        }
+    }
+}
+}
+
+country_event = {
+    id = RAJ_effondrement.3 #Death of Raj Leader
+    title = RAJ_effondrement.3.t    
+    desc = RAJ_effondrement.3.desc    
+    picture = GFX_report_event_generic_funeral
+    
+    is_triggered_only = yes
+
+    option = { 
+        name = RAJ_effondrement.3.a
+        ai_chance = {
+            base = 1
+        }
+
+        RAJ = {
+            kill_country_leader
+        }
+            create_country_leader = {
+	name = "Conseil exécutif de l'Inde"
+	desc = ""
+	picture = "Portrait_Executive_Council_of_India.dds"
+	expire = "1965.1.1"
+	ideology = oligarchism
+	traits = { }
+}
+    hidden_effect = {
+        set_country_flag = RAJ_VICE_ROI_MORT
+    }
+    }
+}
+

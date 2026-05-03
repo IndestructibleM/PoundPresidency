@@ -1494,7 +1494,7 @@ ideas = {
 			allowed_to_remove = {
 				NOT = { has_idea = undisturbed_isolation }
 			}
-			ai_will_do = { factor = 80 }
+			ai_will_do = { factor = 120 }
 		}
 		draft3 = {
 			name = "2-Year Draft"
@@ -1510,7 +1510,7 @@ ideas = {
 				has_war_support > 0.2
 				NOT = { has_idea = undisturbed_isolation }
 			}
-			ai_will_do = { factor = 100 }
+			ai_will_do = { factor = 125 }
 		}
 		draft4 = {
 			name = "3-Year Draft"
@@ -1534,7 +1534,7 @@ ideas = {
 					}
 				}
 			}
-			ai_will_do = { factor = 120 }
+			ai_will_do = { factor = 125 }
 		}
 		draft5 = {
 			name = "4-Year Draft"
@@ -1585,5 +1585,5 @@ ideas = {
 			ai_will_do = { factor = 120 }
 		}
 	}
-
 }
+

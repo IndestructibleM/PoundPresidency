@@ -1,0 +1,41 @@
+
+state={
+	id=388
+	name="STATE_388"
+	manpower = 415900
+	state_category = rural
+	resources={
+		tungsten=7 # was: 16
+		coal = 7 # initial distribution = with infra 12.6 / 1280 total
+	}
+
+	history={
+		owner = USA
+		buildings = {
+			infrastructure = 2
+		}
+		victory_points = {
+			4860 3 #Great Falls
+		}
+		victory_points = {
+			13709 2 #Billings
+		}
+		victory_points = {
+			10593 1 #Havre
+		}
+		victory_points = {
+			1767 1 #Miles City
+		}
+		victory_points = {
+			12572 1 #Lewiston
+		}
+		add_core_of = USA
+		add_core_of = MTS
+	}
+
+	provinces={
+		1767 4857 4860 4863 7760 7880 7883 10587 10593 10624 10706 11712 12572 13708 13709 
+	}
+
+	local_supplies=0.0 
+}

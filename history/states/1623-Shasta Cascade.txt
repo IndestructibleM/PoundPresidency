@@ -1,0 +1,37 @@
+
+state={
+	id=1623
+	name="STATE_1623"
+	manpower = 265890
+	
+	state_category = rural
+	
+	resources={
+		aluminium=1
+	}
+
+	history={
+		owner = USA
+		buildings = {
+			infrastructure = 3
+			610 = {
+				naval_base = 1
+			}
+		}
+		add_core_of = USA
+		add_core_of = CAL
+		add_core_of = JES
+		victory_points = {
+			9697 2 #Chico
+		}
+		victory_points = {
+			781 1 #Redding
+		}
+	}
+
+	provinces={
+		610 766 768 781 3588 6757 6772 9697 9730 10159 11698 
+	}
+
+	local_supplies=0.0 
+}

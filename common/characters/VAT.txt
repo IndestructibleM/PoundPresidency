@@ -1,0 +1,27 @@
+characters = {
+	VAT_nicola_canali = {
+		name = "Nicola Canali"
+		portraits = {
+			civilian = {
+				small = GFX_VAT_idea_nicola_canali
+			}
+		}
+		advisor={
+			slot = political_advisor
+			idea_token = VAT_nicola_canali
+			allowed = {
+				original_tag = VAT
+			}
+			available = {
+				has_government = fascism
+			}
+			traits = {
+				KSR_crusade_mobilization
+			}
+			ai_will_do = {
+				factor = 1
+			}
+		}
+	}
+}
+	

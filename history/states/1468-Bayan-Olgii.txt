@@ -1,0 +1,22 @@
+state={
+	id=1468
+	name="STATE_1468"
+	provinces={
+		4751 7843 10539 13939
+	}
+
+	history={
+		owner = MON
+		buildings = {
+			infrastructure = 1
+		}
+		victory_points = {
+			7843 1 #Ulaangom
+		}
+		add_core_of = MON
+	}
+	manpower=24079
+	buildings_max_level_factor=1.000
+	state_category=pastoral
+	local_supplies=0.000
+}

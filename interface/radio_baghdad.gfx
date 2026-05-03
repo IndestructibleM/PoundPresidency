@@ -1,0 +1,12 @@
+spriteTypes = {
+	spriteType = {
+		name = "GFX_radio_baghdad_cover"
+		textureFile = "gfx/radio_baghdad_cover.dds"
+		noOfFrames = 2
+	}
+	spriteType = {
+		name = "GFX_radio_cairo_cover"
+		textureFile = "gfx/radio_cairo_cover.dds"
+		noOfFrames = 2
+	}
+}

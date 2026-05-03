@@ -1,0 +1,29 @@
+state={
+	id=1481
+	name="STATE_1481"
+	manpower = 695896
+	
+	state_category = rural
+	history={
+		owner = POL
+		buildings = {
+			infrastructure = 3
+		}
+		victory_points = {
+			9439 4 #Kalisz
+		}
+		add_core_of = POL
+
+		1939.1.1 = {
+			buildings = {
+				air_base = 3
+			}
+		}
+	}
+
+	provinces={
+		584 9439 9546 
+	}
+
+	local_supplies=0.0 
+}

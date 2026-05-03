@@ -1,0 +1,30 @@
+ideas = {
+	country = {
+		FER_last_white_stand = {
+			name = "The Motherland's Last Hope"
+			picture = SOV_the_true_tsars
+			allowed = { always = no }
+			modifier = {
+				conscription = 0.02
+				army_morale_factor = 0.075
+				army_defence_factor = 0.075
+				send_volunteers_tension = -0.5
+			}
+		}
+		FER_tokyo_guardian  = {
+			name = "Under Tokyo's Guardianship"
+			picture = KOR_1910_korean_japanese_treaty_idea
+			allowed = { always = no }
+			modifier = {
+				generate_wargoal_tension = 1
+				justify_war_goal_time = 1
+				local_resources_factor = 0.1
+			}
+			targeted_modifier = {
+				TAG = JAP
+				trade_cost_for_target_factor = -0.5
+			}
+		}
+	}
+}
+

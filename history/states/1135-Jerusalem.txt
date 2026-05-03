@@ -1,0 +1,26 @@
+
+state={
+	id=1135
+	name="STATE_1135" #Jerusalem
+	manpower = 180650
+	
+	state_category = pastoral
+
+	history={
+		owner = PAL
+		buildings = {
+			infrastructure = 3 #was: 5
+		}
+		victory_points = {
+			13682 5 
+		}
+		add_core_of = PAL
+		add_claim_by = ISR
+	}
+
+	provinces={
+		13682 13688
+	}
+
+	local_supplies=0.0 
+}

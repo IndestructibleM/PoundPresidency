@@ -1,0 +1,29 @@
+
+state={
+	id=1063
+	name="STATE_1063"
+	manpower = 123560
+	
+	state_category = rural
+	
+	history={
+		owner = LAT
+		victory_points = {
+			11222 1
+		}
+		victory_points = {
+			3298 1 #Aluksne
+		}
+		buildings = {
+			infrastructure = 3
+			air_base = 3
+		}
+		add_core_of = LAT
+	}
+
+	provinces={
+		3298 11222 11302
+	}
+
+	local_supplies=0.0 
+}

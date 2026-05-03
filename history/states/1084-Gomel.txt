@@ -1,0 +1,26 @@
+
+state={
+	id=1084
+	name="STATE_1084"
+	manpower = 275300
+	
+	state_category = rural
+
+	history={
+		owner = SOV
+		victory_points = {
+			9288 5 #Gomel
+		}
+		buildings = {
+			infrastructure = 3 #was: 5
+		}
+		add_core_of = SOV
+		add_core_of = BLR
+	}
+
+	provinces={
+		9288 9342 11355 14506
+	}
+
+	local_supplies=0.0 
+}

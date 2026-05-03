@@ -1,0 +1,27 @@
+
+state={
+	id=1286
+	name="STATE_1286"
+	manpower = 286560
+	
+	state_category = rural
+
+	history={
+		owner = TUR
+		
+		victory_points = {
+			10472 2 #Kars
+		}
+		buildings = {
+			infrastructure = 2
+		}
+		add_core_of = TUR
+		add_claim_by = ARM
+	}
+
+	provinces={
+		7454 10403 10472 13739 13740 13741 14482
+	}
+
+	local_supplies=0.0 
+}

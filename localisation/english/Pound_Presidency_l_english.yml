@@ -1,6 +1,93 @@
 ﻿l_english:
+### FOCUS TREE ###
+ USA_1936_presidential_campaign: "The 1936 Presidential Campaign"
+ USA_defend_the_administration: "Defend the Administration"
+ USA_win_liberal_republicans: "Win Over Liberal Republicans"
+ USA_rally_new_deal_coalition: "Rally the New Deal Coalition"
+ USA_wpa: "The Works Progress Administration"
+ USA_fair_labor_standards_act: "The Fair Labor Standards Act"
+ USA_social_security_act: "The Social Security Act"
+ USA_wagner_act_enforcement: "Enforce the Wagner Act"
+ USA_united_states_housing_act: "United States Housing Act"
+ USA_farm_security_administration: "The Farm Security Administration"
+ 
+ USA_consolidate_the_dem_majority: "Consolidate the Democratic Majority"
+ 
+ USA_bonneville_power_administration: "The Bonneville Power Administration"
+ USA_the_reorganization_act: "The Reorganization Act"
+ USA_reassure_american_business: "Reassure American Business"
+ 
+ USA_expand_white_house_staff: "Expand the White House Staff"
+ USA_administrative_management_bill: "Administrative Management Bill"
+ 
+ USA_yet_another_4_more_years: "Keep Roosevelt the Candidate"
+ 
+ USA_breaking_the_two_term_tradition:0 "Breaking the Two-Term Tradition"
+ USA_breaking_the_two_term_tradition_desc:0 "With the world in crisis and democracy under threat, the nation turns once more to familiar leadership. Though unprecedented, a third term is justified as a necessary measure to ensure continuity and stability."
+
+ USA_smith_act_enforcement:0 "Enforce the Smith Act"
+ USA_smith_act_enforcement_desc:0 "The Smith Act grants the government new tools to investigate and prosecute subversive activity. Strengthening its enforcement will help safeguard national security as global tensions rise."
+
+ USA_war_production_board_formation:0 "War Production Board Formation"
+ USA_war_production_board_formation_desc:0 "To coordinate the nation’s vast industrial potential, a centralized War Production Board must be established. Through unified planning, America can become the true Arsenal of Democracy."
+
+ USA_patrol_greenlands_waters:0 "Patrol Greenland’s Waters"
+ USA_patrol_greenlands_waters_desc:0 "Greenland’s strategic position in the North Atlantic makes it vital to hemispheric defense. Expanding naval patrols in the region will secure shipping lanes and deter hostile activity."
+
+ USA_the_4th_term:0 "The Fourth Term"
+ USA_the_4th_term_desc:0 "In the midst of global war, the American people have once again chosen continuity. Roosevelt begins an unprecedented fourth term, determined to guide the nation through the final trials of the conflict."
+
+ USA_war_reconversion_act:0 "The War Reconversion Act"
+ USA_war_reconversion_act_desc:0 "Victory is on the horizon, and preparations must begin for the transition to a peacetime economy. The War Mobilization and Reconversion Act lays the groundwork for postwar prosperity."
+
+ USA_propose_united_nations_charter:0 "Propose the United Nations Charter"
+ USA_propose_united_nations_charter_desc:0 "The foundations of a new international order must be laid before the war ends. By advancing the United Nations Charter, we can help ensure lasting peace and global cooperation."
+
+ USA_the_final_orders:0 "The Closing Orders"
+ USA_the_final_orders_desc:0 "As the war nears its end, the administration issues a final series of directives to secure victory, stabilize the home front, and shape the world that will emerge from the conflict."
+
+ FER_reactionary_party: "Zemskaya Rat"
+ FER_last_white_stand_desc: "Near the end of the Russian Civil War, the Zemskaya Rat emerged as a last bastion of resistance against the Bolshevik regime. Composed of former nobles and military officers, they seek to restore the old Russia and slay the Soviet monster."
+
+ FER_tokyo_guardian_desc: "Unable to protect ourselves alone, our army clique is almost entirely reliant on Japanese support. Tokyo is for now, our guardian from Moscow, but we must be wary of their ambitions in the Far East."
+ 
+ ### LANDON
+ USA_republicans_in_the_white_house: "Return of the GOP"
+ USA_the_sunflower_president: "The Sunflower President"
+ USA_a_buisnessmans_administration: "A Businessman's Administration"
+ USA_gradual_economic_recovery: "Gradual Economic Recovery"
+ USA_a_partnership_with_industry: "A Partnership with Industry"
+ USA_the_responsible_new_deal: "The Responsible New Deal"
+ USA_keep_what_works: "Keep What Works"
+ USA_reach_across_the_aisle: "Reach Across the Aisle"
+ USA_trust_the_american_entrepreneur: "Trust the American Entrepreneur"
+ USA_the_buisness_recovery_act: "The Business Recovery Act"
+ USA_aid_the_american_farmer: "Aid the American Farmer"
+ USA_the_landon_coalition: "The Landon Coalition"
+ USA_calm_the_labor_question: "Calm the Labor Question"
+ USA_rebuild_american_industry: "Rebuild American Industry"
+ USA_expand_rural_credit: "Expand Rural Credit"
+ USA_the_american_comeback: "The American Comeback"
+ USA_a_strong_dollar_and_a_strong_nation: "A Strong Dollar and a Strong Nation"
+ USA_american_prosperity_returns: "American Prosperity Returns"
+
+ ### WILKIE
+ USA_a_new_republican_era: "A New Republican Era"
+ USA_unite_the_party: "Unite the Party"
+ USA_keep_the_good_cut_the_waste: "Keep the Good, Cut the Waste"
+ USA_corporate_extension_programs: "Corporate Partnership Programs"
+ USA_expand_national_infastructure: "Expand National Infrastructure"
+ USA_responsible_federal_spending: "Responsible Federal Spending"
+ USA_encourage_national_investment: "Encourage National Investment"
+ USA_reject_isolationism: "Reject Isolationism"
+ USA_strenghten_the_atlantic_fleet: "Empower the Atlantic Fleet"
+ USA_a_liberal_republican_party: "Strenghen the Liberal Wing"
+ USA_support_anti_lynching_legislation: "Pass Anti-Lynching Legislation"
+ USA_the_war_industries_board: "The War Industries Board"
+ USA_international_doctrine: "The Wilkie International Doctrine"
+ USA_america_leads_the_free_world: "America, Leader of the Free World!"
+
  ##### POUND ###
- ### Focus
  USA_towards_national_utopia: "Towards National Utopia!"
  USA_towards_national_utopia_desc: "Towards National Utopia!"
  USA_obliterate_the_banks: "Obliterate the Banks"
@@ -58,7 +145,7 @@
  USA_spices_and_spirits: "Spices of the Spiritual Well"
  USA_spices_and_spirits_desc: "Spices of the Spiritual Well"
  USA_new_fascist_woman: "New Fascist Woman"
- USA_new_fascist_woman_desc: "New Fascist Woman"
+ USA_new_fascist_woman_desc: "The American woman was a proud matriarch who tended to the hearth and on the homestead, kept a rifle by her side to fire at any forsaken savage. She reared her children through her own virile maternal instincts, forging each generation of American. The time has come - Maternity leave and property and voting rights, along with necessary fertility programs shall be granted by Commander Pound."
  USA_artistic_imperialism: "Artistic Imperialism"
  USA_artistic_imperialism_desc: "Artistic Imperialism"
  USA_reimagine_world_order: "All the World a Canvas"
@@ -117,11 +204,267 @@
  USA_escalate_the_finance_war: "Escalate the War on Finance"
  USA_the_golden_rule: "The Golden Rule, not Rule of Gold"
  USA_the_death_of_tyranny: "The Death of Tyranny"
+
+ USA_revolt_of_engineers:0 "Revolt of the Engineers"
+ USA_revolt_of_engineers_desc:0 "The economic collapse has demonstrated the inability of price-based political administration to manage a modern industrial system. Engineers and technical specialists now recognize that the operation of a continental-scale production network cannot be left to political improvisation. A new administrative structure must be established, placing the direction of industry in the hands of those trained to understand its physical processes."
+
+ USA_geothermal_evolution:0 "Geothermal Evolution"
+ USA_geothermal_evolution_desc:0 "Industrial civilization rests fundamentally upon energy conversion. Expanding the study and application of geothermal and large-scale energy systems will allow the Technate to evaluate its total productive capacity. Accurate measurement of energy flows is the first requirement for the rational administration of a modern economy."
+
+ USA_scientific_corporatism:0 "Scientific Corporatism"
+ USA_scientific_corporatism_desc:0 "Production must be organized along functional lines corresponding to the technical structure of industry. Instead of competing firms operating in isolation, entire sectors of production can be coordinated under specialized technical administrations responsible for efficiency, output, and maintenance of continental supply systems."
+
+ USA_dictatorship_of_logos:0 "Dictatorship of Logos"
+ USA_dictatorship_of_logos_desc:0 "In a technological society, authority must derive from competence and verified knowledge. Decisions concerning production, transportation, and distribution must be based on measured data and engineering analysis rather than political negotiation. Administrative control will therefore rest with those capable of interpreting the operational requirements of the industrial system."
+
+ USA_energy_credit_system:0 "Energy Credit System"
+ USA_energy_credit_system_desc:0 "The price system no longer reflects the physical realities of modern production. Technocratic theory proposes the use of energy accounting, in which the total energy capacity of the continent determines the level of distribution available to the population. Energy certificates would replace currency, ensuring that consumption corresponds directly to measurable industrial output."
+
+ USA_rationalize_the_production:0 "Rationalize Production"
+ USA_rationalize_the_production_desc:0 "The continental industrial network contains numerous inefficiencies inherited from the competitive market system. By reorganizing production schedules, transportation routes, and resource allocation according to engineering analysis, it is possible to significantly increase productive efficiency while reducing unnecessary labor."
+
+ USA_continental_autarky:0 "Continental Autarky"
+ USA_continental_autarky_desc:0 "North America contains sufficient natural resources, industrial plant, and energy capacity to sustain a complete technological civilization. A coordinated continental system would eliminate the instability created by global trade fluctuations and allow long-term planning based on physical resource availability."
+
+ USA_a_new_work_week:0 "A New Work Week"
+ USA_a_new_work_week_desc:0 "Advances in mechanization have drastically increased industrial output per worker. Under a technocratic system, this increased productivity can be translated into reduced labor requirements rather than unemployment. Shorter work cycles would distribute industrial participation across the population while maintaining high levels of production."
+
+ USA_win_the_troops_desc:0 "The armed forces represent one of the most technically organized institutions within the nation. Their logistical expertise and familiarity with large-scale coordination make them natural partners in the transition to a continental administrative system."
+
+ USA_reinstate_prohibition:0 "Reinstate Prohibition"
+ USA_reinstate_prohibition_desc:0 "Periods of structural reorganization require social stability and disciplined participation in industrial activity. Limiting alcohol consumption may reduce disruptions while the technocratic system establishes new administrative procedures."
+
+ USA_tech_inc_mass_party:0 "Technocracy Inc. as a Mass Movement"
+ USA_tech_inc_mass_party_desc:0 "Technocracy Inc. will expand its organizational structure to educate and mobilize the population in support of the transition toward continental administration. Public lectures, study groups, and technical demonstrations will introduce citizens to the principles of energy accounting and functional industrial design."
+
+ USA_study_guide_in_every_hand:0 "A Study Guide in Every Hand"
+ USA_study_guide_desc:0 "The successful operation of a Technate requires a population familiar with its scientific foundations. Educational materials explaining the structure of continental production systems, energy measurement, and technological management will be widely distributed."
+
+ USA_homo_technus:0 "Homo Technus"
+ USA_homo_technus_desc:0 "The development of a technological civilization inevitably produces new social habits and expectations. Through education and industrial participation, the population will gradually adapt to the requirements of a system organized around efficiency, measurement, and coordinated production."
+
+ USA_continental_director_ascendent:0 "The Continental Director Ascendant"
+ USA_continental_director_ascendent_desc:0 "A continental-scale production system requires centralized coordination. The office of the Continental Director will supervise the various functional sequences responsible for energy production, transportation, agriculture, manufacturing, and distribution."
+
+ USA_wonders_of_mankind:0 "Wonders of Mankind"
+ USA_wonders_of_mankind_desc:0 "Scientific research conducted under a coordinated industrial system can proceed without the limitations imposed by commercial profitability. Major technological projects—ranging from advanced energy systems to new transportation infrastructure—can be undertaken on a continental scale."
+
+ USA_liberation_of_science:0 "Liberation of Science"
+ USA_liberation_of_science_desc:0 "Research institutions must be expanded and integrated into the broader industrial framework of the Technate. Freed from the constraints of commercial funding and political oversight, scientific work can focus entirely on practical technological advancement."
+
+ USA_panama_to_pole:0 "From Panama to the North Pole"
+ USA_panama_to_pole_desc:0 "Technocracy has long maintained that the natural operating unit of modern industrial civilization is the North American continent. Integrating infrastructure, energy networks, and resource management from Panama to the Arctic would create a unified technological system capable of sustained prosperity."
+
+ USA_request_north_american_dominionship:0 "Request North American Dominionship"
+ USA_request_north_american_dominionship_desc:0 "Diplomatic arrangements may provide a path toward the administrative consolidation of the continent. Cooperation with existing authorities could allow the gradual expansion of technocratic management across North America."
+
+ USA_kick_out_redcoats:0 "Kick Out the Redcoats"
+ USA_kick_out_redcoats_desc:0 "External control over portions of the continent prevents the full implementation of a unified production system. Removing these foreign administrative barriers may become necessary if continental integration is to proceed."
+
+ USA_neutralize_mexican_chaos:0 "Neutralize Mexican Chaos"
+ USA_neutralize_mexican_chaos_desc:0 "Persistent instability in Mexico complicates the planning of continental transportation, energy distribution, and resource extraction networks. Stabilizing the region would allow it to be incorporated into the broader industrial system."
+
+ USA_tectonic_integration:0 "Tectonic Integration"
+ USA_tectonic_integration_desc:0 "Territories incorporated into the Technate must be reorganized according to the functional requirements of the continental production system. Infrastructure, transportation, and industrial facilities will be aligned with existing technocratic administrative sequences."
+
+ USA_the_banana_wars:0 "The Banana Wars"
+ USA_the_banana_wars_desc:0 "The economies of Central America remain fragmented and dependent on unstable commodity markets. Integrating these regions into the continental industrial framework would allow their resources and infrastructure to be managed more efficiently."
+
+ USA_demand_cuban_oversight:0 "Demand Cuban Oversight"
+ USA_demand_cuban_oversight_desc:0 "Cuba occupies a strategic location within the Caribbean transportation network. Direct oversight would allow the island's ports, railways, and energy facilities to operate as part of the broader continental system."
+
+ USA_crush_the_yellow_empire:0 "Crush the Yellow Empire"
+ USA_crush_the_yellow_empire_desc:0 "The expansion of rival industrial powers in the Pacific threatens the stability of the global technological balance. Strategic measures may be required to prevent hostile powers from disrupting continental development."
+
+ USA_secure_greenland:0 "Secure Greenland"
+ USA_secure_greenland_desc:0 "Greenland provides a key location for transatlantic aviation routes, weather monitoring, and potential mineral development. Control of the island would strengthen the logistical network of the Technate."
+ 
+ ### BROWDER
+ USA_the_workers_candidate:0 "The Workers' Candidate"
+ USA_communism_as_american_apple_pie:0 "Communism as American as Apple Pie"
+ USA_lincolns_america:0 "Lincoln's America"
+ USA_end_segregation:0 "End Segregation"
+ USA_the_peoples_deal:0 "The People's Deal"
+ USA_american_recovery_program:0 "The American Recovery Program"
+ USA_industrial_democracy:0 "Industrial Democracy"
+ USA_national_planning_councils:0 "National Planning Councils"
+ USA_public_industry:0 "Public Industry"
+ USA_entrentch_the_popular_front:0 "Entrench the Popular Front"
+ USA_alliance_with_new_dealers:0 "Alliance with the New Dealers"
+ USA_suspend_the_persecution:0 "Suspend the Persecution"
+ USA_force_CIO_AFL_merger:0 "Force an AFL-CIO Merger"
+ USA_empower_the_voice_of_labor:0 "Empower the Voice of Labor"
+ USA_socialism_the_american_way:0 "Socialism the American Way"
+ USA_federal_congress_of_labor:0 "Federal Congress of Labor"
+ USA_peoples_unity_government:0 "People's Unity Government"
+ USA_a_popular_mandate:0 "A Popular Mandate"
+ USA_farm_supply_stations:0 "State Farm Supply Stations"
+ USA_a_brighter_shade_of_crimson:0 "A Brighter Shade of Crimson"
+ USA_red_american_dream:0 "A Red American Dream"
+ 
+ ### FOSTER
+  USA_red_november:0 "Towards Soviet America"
+  USA_red_november_desc:0 "The long‑awaited revolutionary crisis arrives. As Foster predicted, the contradictions of capitalism erupt, opening the path toward a Soviet America."
+
+  USA_establish_workers_councils:0 "Establish Workers' Councils"
+  USA_establish_workers_councils_desc:0 "Following the model outlined in *Towards Soviet America*, workers’ councils become the foundation of a new proletarian democracy, replacing the hollow institutions of bourgeois rule."
+
+  USA_central_executive_committee:0 "Found the Central Executive Committee"
+  USA_central_executive_committee_desc:0 "A centralized revolutionary authority is formed to coordinate the transition to socialism, guided by the disciplined leadership of the Communist Party."
+
+  USA_principle_of_recall:0 "Principle of Recall"
+  USA_principle_of_recall_desc:0 "All officials must remain accountable to the workers. As Foster argued, the right of immediate recall is essential to prevent the rise of a new exploiting class."
+
+  USA_smash_bourgouise_consitution:0 "Smash the Bourgeois Constitution"
+  USA_smash_bourgouise_consitution_desc:0 "The capitalist constitution is an instrument of class oppression. It must be abolished and replaced with a workers’ constitution rooted in class power."
+
+  USA_strike_the_establishment:0 "Strike the Establishment"
+  USA_strike_the_establishment_desc:0 "The capitalist state apparatus must be dismantled. Foster insisted that the old ruling class cannot be reformed — it must be defeated."
+
+  USA_reorganization_of_industry:0 "Reorganization of Industry"
+  USA_reorganization_of_industry_desc:0 "Industry is reorganized under workers’ control, with each sector governed by its corresponding industrial union, forming the backbone of the new planned economy."
+
+  USA_establish_new_govs:0 "Establish New Governments"
+  USA_establish_new_govs_desc:0 "Local and state governments are replaced with soviet‑style councils, ensuring that political authority flows upward from the workers themselves."
+
+  USA_red_army_of_america:0 "Red Army of America"
+  USA_red_army_of_america_desc:0 "A revolutionary army is formed to defend the Workers’ Republic from counterrevolution and imperialist aggression, just as Foster envisioned."
+
+  USA_state_schooling_revolution:0 "State Schooling Revolution"
+  USA_state_schooling_revolution_desc:0 "Education is transformed into a tool of proletarian enlightenment, replacing bourgeois indoctrination with scientific socialism and collective values."
+
+  USA_culture_of_proletariat:0 "Culture of the Proletariat"
+  USA_culture_of_proletariat_desc:0 "A cultural revolution begins, sweeping away capitalist decadence and fostering a new culture rooted in labor, equality, and socialist humanism."
+
+  USA_council_of_commissars:0 "The Council of Commissars"
+  USA_council_of_commissars_desc:0 "A council of political commissars is established to ensure ideological unity and guide the revolutionary transformation of society."
+
+  USA_accomplish_the_new_world_revolutions:0 "Accomplish the New World Revolutions"
+  USA_accomplish_the_new_world_revolutions_desc:0 "The American Workers’ Republic embraces its historic mission: to ignite socialist revolutions across the Western Hemisphere."
+
+  USA_centralized_industrial_planning:0 "Centralized Industrial Planning"
+  USA_centralized_industrial_planning_desc:0 "A national planning apparatus is created to direct production, eliminate waste, and build the foundations of a socialist economy."
+
+  USA_state_farm_program:0 "The State Farm Program"
+  USA_state_farm_program_desc:0 "Agriculture is collectivized into state farms and cooperative units, ending the chaos of capitalist farming and ensuring food security for all."
+
+  USA_eliminate_market_anarchy:0 "Eliminate Market Anarchy"
+  USA_eliminate_market_anarchy_desc:0 "The irrationality of the market is abolished. Production is now guided by a unified national plan serving the needs of the working class."
+
+  USA_bolshevism_against_bankers:0 "Bolshevism Against the Bankers"
+  USA_bolshevism_against_bankers_desc:0 "The financial oligarchy is dismantled. Banks are nationalized and integrated into the socialist planning system."
+
+  USA_american_comintern:0 "The American Section of the Comintern"
+  USA_american_comintern_desc:0 "The United States becomes the center of a new revolutionary international, fulfilling Foster’s vision of America as a leader of world socialism."
+
+  USA_solidarity_with_soviets:0 "Solidarity with the Soviets"
+  USA_solidarity_with_soviets_desc:0 "Strengthen ties with the Soviet Union, uniting the two great workers’ republics in common struggle against global capitalism."
+
+  USA_towards_continental_union:0 "Towards a Continental Union"
+  USA_towards_continental_union_desc:0 "Advance toward a united socialist federation of the Americas — a continental workers’ union envisioned as the next stage of the world revolution."
+
+  USA_black_self_determination: "Self-Determination for the Black Belt"
+  USA_arsenal_of_socialism: "The Arsenal of Socialism"
+  USA_confront_global_reaction: "Confront Global Reaction"
+ 
+ ### PELLEY 
+  USA_silver_shirts_march:0 "Silver Shirts March on Washington!"
+  USA_silver_shirts_march_desc:0 "The Silver Legion takes to the streets, demonstrating its strength and resolve."
+
+  USA_purify_the_nation:0 "Purify the Nation"
+  USA_purify_the_nation_desc:0 "A campaign to cleanse the nation of perceived corruption and moral decay."
+
+  USA_legionary_administrators:0 "Install Legionary Administrators"
+  USA_legionary_administrators_desc:0 "Install loyal Silver Legion members into key administrative positions."
+
+  USA_american_revelation:0 "American Revelation"
+  USA_american_revelation_desc:0 "A new ideological awakening sweeps across the nation, reshaping its destiny."
+
+  USA_national_christian_state:0 "National-Christian State"
+  USA_national_christian_state_desc:0 "Establish a state guided by Christian nationalism and strict moral doctrine."
+
+  USA_a_new_gold_standard:0 "Implement the Ward System"
+
+  USA_legionary_labor_battalions:0 "Legionary Labor Battalions"
+  USA_legionary_labor_battalions_desc:0 "Organize labor forces into disciplined battalions to rebuild the nation."
+
+  USA_a_christian_economic_miracle:0 "A Christian Economic Miracle"
+  USA_a_christian_economic_miracle_desc:0 "Harness faith, discipline, and national unity to spark an economic revival."
+
+  USA_denounce_godless_commnism:0 "Denounce Godless Communism"
+  USA_denounce_godless_commnism_desc:0 "Launch a nationwide crusade against the threat of atheistic communism."
+
+  USA_legionary_civil_service:0 "Legionary Civil Service"
+  USA_legionary_civil_service_desc:0 "Restructure the civil service to ensure loyalty to the new order."
+
+  USA_corporatist_reconstruction:0 "Corporatist Reconstruction"
+  USA_corporatist_reconstruction_desc:0 "Rebuild the economy along corporatist lines, uniting labor and industry."
+
+  USA_the_crusader_army:0 "The Crusader Army"
+  USA_the_crusader_army_desc:0 "Forge a new army infused with religious zeal and nationalistic fervor."
+
+  USA_restore_american_spirit:0 "Restore the American Spirit"
+  USA_restore_american_spirit_desc:0 "Revitalize national pride through cultural and moral renewal."
+
+  USA_legionary_armed_forces:0 "Legionary Armed Forces"
+  USA_legionary_armed_forces_desc:0 "Transform the military into a force aligned with Legionary ideology."
+
+  USA_a_continental_destiny:0 "A Continental Destiny"
+  USA_a_continental_destiny_desc:0 "Embrace a bold vision for America’s rightful place on the continent."
+
+  USA_managed_democracy:0 "Managed Democracy"
+  USA_managed_democracy_desc:0 "Maintain the appearance of democracy while ensuring political stability."
+
+  USA_christian_youth_movement:0 "The Christian Youth Movement"
+  USA_christian_youth_movement_desc:0 "Shape the next generation through faith‑based youth organizations."
+
+  USA_moral_reconstruction_campaign:0 "Moral Reconstruction Campaign"
+  USA_moral_reconstruction_campaign_desc:0 "A sweeping effort to enforce moral discipline across society."
+
+  USA_rebuild_small_town_nation:0 "Rebuild the Small-Town Nation"
+  USA_rebuild_small_town_nation_desc:0 "Revitalize rural America and restore traditional community life."
+
+  USA_astral_citizenship:0 "Astral Citizenship"
+  USA_astral_citizenship_desc:0 "The nation transcends the material plane, recognizing a higher spiritual identity for all true believers."
+
+  USA_crusade_against_materialism:0 "Crusade Against Materialism"
+  USA_crusade_against_materialism_desc:0 "Reject the hollow temptations of the material world and rally the nation around spiritual purpose."
+
+  USA_walk_the_sevenfold_path:0 "Walk the Sevenfold Path"
+  USA_walk_the_sevenfold_path_desc:0 "A sacred doctrine outlines seven steps toward national enlightenment and personal transformation."
+
+  USA_a_government_of_adepts:0 "A Government of Adepts"
+  USA_a_government_of_adepts_desc:0 "Elevate the spiritually awakened to positions of authority, ensuring governance guided by higher wisdom."
+
+  USA_the_hidden_masters:0 "The Hidden Masters"
+  USA_the_hidden_masters_desc:0 "A clandestine circle of enlightened leaders emerges, shaping the nation from behind the veil."
+
+  USA_the_silver_initiates:0 "The Silver Initiates"
+  USA_the_silver_initiates_desc:0 "A new order of initiates is formed, sworn to uphold the esoteric truths of the American Revelation."
+
+  USA_the_new_millenium_state:0 "The New Millennium State"
+  USA_the_new_millenium_state_desc:0 "Proclaim the dawn of a new age — a millennium defined by spiritual unity and national rebirth."
+
+  USA_the_soulcraft_awakening:0 "The Soulcraft Awakening"
+  USA_the_soulcraft_awakening_desc:0 "A movement dedicated to reshaping the American soul, forging a people aligned with divine destiny."
+
+  USA_warriors_of_destiny:0 "Warriors of Destiny"
+  USA_warriors_of_destiny_desc:0 "Train elite warriors whose loyalty is not merely patriotic, but metaphysical in nature."
+
+  USA_americas_spiritual_destiny:0 "America’s Spiritual Destiny"
+  USA_americas_spiritual_destiny_desc:0 "Declare America the chosen vessel for a global spiritual transformation."
+
+  USA_the_silver_crusade:0 "The Silver Crusade"
+  USA_the_silver_crusade_desc:0 "Unleash a crusade to spread the Revelation, uniting the continent under a banner of divine purpose."
+  
+  USA_mine_eyes_have_seen_the_glory: "Mine Eyes Have Seen the Glory!"
+
+
  # Scott
  USA_revolt_of_engineers: "Revolt of the Engineers"
  USA_geothermal_evolution: "Geothermal Evolution"
  USA_dictatorship_of_logos: "Dictatorship of Logos"
- USA_hierarchical_meritocracy: "Hierarchical Meritocracy"
+ USA_win_the_troops: "Win Over the Troops"
  USA_energy_credit_system: "Energy Credit System"
  USA_sober_up_and_study: "Sober Up and Study!"
  USA_wonders_of_mankind: "Wonders of Mankind"
@@ -132,6 +475,10 @@
  ### Ideas
  USA_war_against_degeneration: "§RTHE SECOND AMERICAN REVOLUTION§!"
  USA_we_are_the_sun: "§CWe are the Sun§!"
+ USA_status_of_army: "The United States Armed Forces"
+ USA_status_of_army_desc: "The United States army remains undermanned, undertrained, and reliant on outdated doctrines from the Great War. Years of budget cuts and diplomatic isolation have left the military unprepared for modern mechanized warfare, limiting our capacity to fight a war."
+ 
+ USA_rise_of_pound_desc: "After the failure of the Emergency Banking Act, the hope and promise of the FDR administration vanished, and America sank back into malaise and discontent. Not long after, the famed artsman and poet Ezra Pound began forming his own fascist political party in an attempt to resolve the economic crisis himself. Labor agitation has also risen, with the CPUSA reporting higher membership every month. With the establishment in rapid decline, the politics of the United States are more uncertain than ever before."
  
  ### Country and Cosmetic Names
  ASR: "American Social Republic"
@@ -142,8 +489,8 @@
  ASR_utopia_DEF: "the Imperium of Utopia"
  ASR_kingdom: "Supreme Kingdom of Heroic America"
  ASR_kingdom_DEF: "the Supreme Kingdom of Heroic America"
- ASR_virtue: "Greater Republic of Virtue"
- ASR_virtue_DEF: "the Greater Republic of Virtue"
+ ASR_virtue: "National Commonwealth of Americana"
+ ASR_virtue_DEF: "the National Commonwealth of Americana"
  
  YOCK: "Provisional Western Imperium"
  YOCK_ADJ: "Imperial American"
@@ -168,7 +515,8 @@
  Imperium_DEF: "the Imperium of Faustian Europe"
  Imperium_ADJ: "Imperium"
  
- earthrepublic: "Peoples' Republic of Earth"
+ FDR_imperial: "The Sovereign State"
+ FDR_supreme: "Universal Republic of Supreme Virtue"
  
  QUE_USA_fascism_subject: "Borelian State of Quebec"
  QUE_USA_fascism_subject_DEF: "Borelian State of Quebec"
@@ -197,8 +545,11 @@
  falsemaskoffreedom: "§BWe must subordinate our appetites, our passions and our egoism to the wholeness of the National interest. This way we will be a really free people, otherwise anarchy and indiscipline will reign over us under the false mask of freedom.§!"
  shizobolgang: "§RMine eyes have seen the glory of the coming of the Lord \n\nHe is trampling out the vintage where the grapes of wrath are stored \n\nHe hath loosed the fateful lightning of His terrible swift sword \n\nHis truth is marching on§!"
  bashthefash: "§RThe Fascists in our Government will be Rooted Out - Once and for all!§!"
+ tt_depression_gone: "Has fully removed the Great Depression"
  USA_pap_ink_revolution_cat: "The Paper and Ink Revolution"
  
+ conservative_judge: "Conservative Judge"
+
  ### BoP
  USA_power_balance: "Struggle of the New American Gods"
  USA_pound_range: "Ezra Absolutism"
@@ -227,15 +578,23 @@
  pound.16.d: "§RNOTICE: The War with Britain has begun.§! While you may try to fight the British and defeat them conventionally, there is in-fact a scripted peace deal which will allow you to force a surrender from London. These are the following requirements to get the scripted peace event: \n\nYour navy must be 2x the size as Britain's. \nYour army must be at least the same size as Britain's. \nYou must have inflicted over 200,000 casualties on Britain. \nEITHER any core state of Britain is controlled by you, OR Bermuda, Belize, Suez, Gibralter, and Malta are NOT controlled by Britain. \nEITHER Canada must have capitulated already, OR does not exist on-map. \nYou must have at least 80 ships in both the English Channel and Western Approaches. \nFinally, all of YOUR core states must be controlled by you (USA tag). \nWait around 20 days, and the event should fire."
  yock.1.d: "The state of the national media immediately prior to Francis Parker Yockey’s ascension to power could only have been described as frantic. The various leftists and minorities who had enjoyed an uncertain existence under the Poet-king now faced a certain and imminent threat, for Yockey and his Vanguad had made it abundantly clear there would be no room for undesirables in his austere ethnocultural empire. However, after Yockey’s inauguration, the news abruptly went silent for a period of several weeks. When it resumed, it was eerily altered. Every paper, from local bulletins to the national presses spoke in the same hollow, obsequious tone, singing the praises of Yockey and the glory he would bring to America. The fates of Yockey’s left-wing opposition, the formerly popular George W. Christians and Ernest Hemingway, were glossed over in no more than a few short paragraphs. Christians had been declared insane and swallowed into the labyrinth of America’s psychiatric-industrial complex. While Hemingway had been charged with treason and an execution squad dispatched to his lodge in Idaho. It appears the great writer didn’t go down without the fight, as the names of eight slain Vanguard troopers were listed alongside the statement."
  yock.2.d: "They gathered not in reverence, but in rapture. The Capitol no longer housed democracy, but divinity—a state reborn in black and bronze. On a raised plinth, beneath fluttering banners stitched with the solar eagle and the iron fasces, Francis Parker Yockey addressed the American people. \n\n“We stand at the frontier—not of geography, but of destiny. The old republic is dead, its bones scattered from San Francisco to the Potomac. In its place, something greater rises. A state not built on votes or commerce, but on spirit, hierarchy, and vision. \n\nThis is not a war of armies alone. It is a war of metaphysics. London—the rotting core of Anglo-financial hypocrisy—shall burn. Moscow—the barbarian forge of materialist decadence—shall be ground to ash. Against both, we declare not opposition, but annihilation. \n\nYou, Americans of the Imperium, will become the sword. You will know hardship, yes. But from it, glory. Total Mobilization. Absolute devotion. Every hand forges victory; every voice affirms truth. \n\nWe are no longer a nation. We are an idea with steel sinews, marching across the continents. \n\nLet them call us mad. Let them call us monsters. They are not wrong. For only monsters can tear down the world that was. And only monsters, tempered in will and faith, can forge the world to come. \n\nAnd when they ask what we fight for, what we believe, what we dream—tell them: \n\nMore than anything you can even yet imagine.” \n\nThe crowd did not cheer—they howled. They chanted. \n“Imperium! Imperium! Imperium!” \n\nThe black banners of America marched toward total war."
- #butler.1.d: "Patience runs dry. No amount of sing-songy or artsy-fartsy display of national brilliance nor pride can win the masses if you do not provide their beloved bread and circuses. Pound's arrogance has caught up with him, and with a seeming inability to fix the great depression and "Surpass material strife", the people are more than outraged. The last straw came when Pound revealed several war plans, including potential alliances with fascist powers. While MacArthur and Patton were eager to hear Pound's ambitions, Smedley Butler was horrified; After an intense argument, Butler was sacked from the American Legion - A mistake no fool should make. The noble wrath of now not just the people, but the military and veterans who had supported Pound now too turn on him. \n\nThe people march down the Streets of the capitol shouting "Utopia? I don't give a damn!" to mock the fascist party. Now, Butler approaches with 10,000 American Legion men, the military and police tipped off and uncaring for the madman about to be deposed. As Butler Strode into the "Commander's Palace" - a decadent construction made for Pound's ego - He wondered how he might be remembered in history. He was doing the right thing, no? Yet now he was likely to be dictator - Roosevelt and the previous adminsitration lay dead or are missing persons, and the thought of so much power, so much responsibility irked the old Smedley. \n\n It was easy. Pound broke down as soon as the battalions broke into his quarters. He was grabbed and beat. Then held on the ground and handcuffed. "Former President- Forgive me God for saying this- Former 'Commander' of America, Ezra Loomis Pound, you are under arrest and sentenced to trial before the supreme court of the United States. You know what you have done, and we believe the power of popular will to be of due justice to you. You have the right to remain silent." \n\nPound didn't speak, merely staring down. It was over. And it was not coming back."
+  
+ vr_usa.1.t: "American Political Chaos Event 1"
+ vr_usa.2.t: "Formation of the Popular Front"
+ vr_usa.2.d: "In one of the darkest moments in American history, while the grip of reactionary forces ightened around the fragile neck of old Uncle Sam, a new force emerged to resist the rising tide of fascism. As had occurred in other nations before, the American "Popular Front" had been formed: an alliance of diverse organizations united in the hope of safeguarding many more. From the IWW unions to the ever-ready CIO, and from the CPUSA to the SPA, the Popular Front stands as the final instrument of defense for the worker, the farmer, and the unemployed across the United States. \n\nYet any serious organization requires a capable leader, someone able to guide a project of such magnitude. That figure was found within the ranks of the Communist Party: Earl Russell Browder. A charismatic Kansan, former member of the Socialist Party of America, and now a prominent figure within the CPUSA, Browder had earned a reputation as both a diligent organizer and a committed socialist. His rise to leadership was far from effortless. \n\nNevertheless, through a combination of personal charm and his vision of a “Socialism as American as Apple Pie”, Browder built a broad base of support. He has succeeded in uniting moderates and radicals alike, promising stability, prosperity for the people, and a government in which every voice would be heard. With the people in his heart and the call of “Workers of America, unite!” on his lips, Browder now stands at the forefront of the most ambitious left-wing project undertaken since the founding of the nation: The Popular Front!"
+ vr_usa.2.a: "So left, two, three, so left, two, three, to the work that we must do..."
+ vr_usa.3.t: "American Political Chaos Event 3"
+ vr_usa.4.t: "American Political Chaos Event 4"
+ vr_usa.5.t: "American Political Chaos Event 5"
+ vr_usa.6.t: "American Political Chaos Event 6"
+ 
  
  
  collaborator_gov: "Collaborator Government"
  sister_republic: "Sister Republic"
  
  PoundDead: "Commander Pound is No More"
- theunitedfront: "The United Front"
- pactofrome: "Pact of Rome"
+ PopularFront: "Popular Front"
  
  # Ideologies
  socfash: "Revolutionary Fascism"
@@ -245,6 +604,7 @@
  neosoc: "Neosocialism"
  technocracy: "Technocracy"
  toteur: "Totalitarian Europeanism"
+ new_deal_ideology: "New Deal System"
 
  
  ### New Tags
@@ -255,12 +615,12 @@
  RBR_ADJ: "Briton"
 
 ### LAWS ####
+assorted_laws: "Assorted Laws"
 ministers_slots: "Government Ministers"
 economy_model: "Economic Model"
 government_type: "Government Type"
 draft: "Draft Law"
 second_command: "Second-in-Command"
-
 protectionism: "Trade Protectionism"
 
 oligarchy: "Oligarchy"
@@ -274,6 +634,48 @@ soviet_democracy: "Soviet Democracy"
 partystate: "Party-State"
 totalitarianism: "Totalitarianism"
 
+ taxation: "Taxation Policy"
+ taxation1: "Low Taxation"
+ taxation2: "Moderate Taxation"
+ taxation3: "Expanded Taxation"
+ taxation4: "Heavy Taxation"
+ taxation5: "Extreme Taxation"
+
+ segregation: "Status of Segregation"
+ segregation1: "Legal and Economic Equality"
+ segregation2: "Minority Enfranchisement"
+ segregation3: "Seperate But Equal"
+ segregation4: "Institutional Segregation"
+ segregation5: "Racial Apartheid"
+
+ education_development: "Education Development"
+ education1: "Poor Education System"
+ education2: "Basic Public Schooling"
+ education3: "Expanded National Education"
+ education4: "Advanced Academic Institutions"
+ education5: "Subsidized Higher Education"
+
+ labor_regulations: "Labor Regulations"
+ labor1: "Minimal Labor Regulations"
+ labor2: "Basic Labor Standards"
+ labor3: "Standardized Labor Protections"
+ labor4: "Expanded Labor Code"
+ labor5: "Comprehensive Labor Rights"
+
+ welfare: "Welfare Policy"
+ welfare1: "Minimal Social Assistance"
+ welfare2: "Basic Welfare Programs"
+ welfare3: "Expanded Social Safety Net"
+ welfare4: "Extensive Welfare State"
+ welfare5: "Comprehensive Welfare State"
+
+ religion_status: "Status of Religion"
+ religion1: "State Atheism"
+ religion2: "State Secularism"
+ religion3: "Freedom of Worship"
+ religion4: "State Religion"
+ religion5: "Theocratic State"
+
 ###### STATES ###
 STATE_1047:0 "Eastern Rhineland"
 
@@ -286,5 +688,156 @@ cost_AirXP_100_tooltip: "It costs £aai_experience  §Y100§! to take the decisi
 cost_NavXP_100: "£navy_experience  §Y100§!"
 cost_NavXP_100_blocked: "£navy_experience  §R100§!"
 cost_NavXP_100_tooltip: "It costs £navy_experience  §Y100§! to take the decision"
+Release_decisions_1: "Release [FROM.GetNameDef] as a Puppet"
 
 reactionary_marshal: "Reactionary Marshal"
+
+
+
+### ROOSEVELT LIVES
+ Roosevelt_Lived: "§CRoosevelt Lived!§!"
+
+ USA_roosevelt_lives: "Roosevelt Lives!"
+ USA_overwhelming_executive_orders: "Overwhelming Executive Orders"
+ USA_declare_martial_law: "Declare Martial Law"
+ USA_pack_the_supreme_court: "Pack the Supreme Court"
+ USA_godels_loophole: "Gödel's Loophole"
+ USA_rule_by_executive_decree: "Rule by Executive Decree"
+ USA_republic_without_democracy: "A Republic Without Democracy"
+ USA_nationalize_military_industry: "Nationalize all Military Industry"
+ USA_COMMAND_OVERSEER: "§tCOMMANDMENT: OVERSEER§!"
+ USA_COMMAND_TITAN: "§tCOMMANDMENT: TITAN§!"
+ USA_ford_herald_of_smokestacks: "Ford, Herald of Smokestacks"
+ USA_institute_of_military_industrial_expansion: "Institute of Heroic Capitalism"
+ USA_perkins_mother_of_labor: "Perkins, Mother of Labor"
+ USA_the_cornucopia: "The Cornucopia"
+ USA_COMMAND_PRAETOR: "§tCOMMANDMENT: PRAETOR§!"
+ USA_leahy_american_poseidon: "Leahy, American Poseidon"
+ USA_unleash_the_kraken: "Unleash the Kraken"
+ USA_byrnes_lord_of_the_machine: "Byrnes, Operator of the Machine"
+ USA_a_perfectly_obediant_state: "A Perfectly Obedient State"
+ USA_J_hoover_all_seeing_eye: "J. Edgar Hoover, The All-Seeing Eye"
+ USA_CIA_FBI_merger: "CIA–FBI Merger"
+ USA_marshall_god_of_war: "Marshall, God of War"
+ USA_army_commissars: "Army Commissars"
+ USA_our_new_industrial_revolution: "Our New Industrial Revolution"
+ USA_workers_of_the_state: "Workers of the State"
+ USA_for_pax_americana: "For Pax Americana"
+ USA_panem_et_circenses:0 "Panem et Circenses"
+ USA_the_pure_soveriengty:0 "The Pure Sovereignty"
+ USA_legions_of_the_republic:0 "Legions of the Republic"
+ USA_my_will_is_absolute:0 "My Will Is Absolute"
+ USA_my_body_is_full_of_life:0 "My Body Is Full of Life"
+ USA_I_am_stronger_than_ever:0 "My Power is Almighty"
+
+USA_roosevelt_lives_desc:0 "The whispers of weakness have been silenced forever. By miracle or destiny, Franklin Delano Roosevelt has risen renewed, standing upright before a stunned nation. America now witnesses not merely recovery, but resurrection. Roosevelt lives, and through him the Republic itself is reborn."
+
+USA_overwhelming_executive_orders_desc:0 "The nation demands action, not hesitation. The President's will shall flow through the state like a great current, sweeping aside obstruction and doubt. With decisive orders, the machinery of America will move with unity and purpose."
+
+USA_declare_martial_law_desc:0 "In times of uncertainty, the nation must close ranks behind its leader. Discipline and order will replace confusion and unrest. Under martial law, the Republic stands vigilant, guarded by the strength of its defenders."
+
+USA_pack_the_supreme_court_desc:0 "The law must serve the living nation, not the dead weight of outdated interpretation. New guardians of justice will take their seats upon the bench. The courts shall now reflect the spirit of Roosevelt’s America."
+
+USA_godels_loophole_desc:0 "Even the oldest charters contain hidden paths. With wisdom and foresight, the President has discovered the means to guide the Republic beyond the paralysis of old constraints. Through law itself, a new destiny will unfold."
+
+USA_rule_by_executive_decree_desc:0 "The voice of the President speaks for the unity of the nation. Where once there was delay and division, there will now be clarity and command. His decrees will guide America forward without hesitation."
+
+USA_republic_without_democracy_desc:0 "The Republic will endure, but it shall no longer be shackled by chaos and faction. The people remain united under a higher form of national order. Guided by Roosevelt, America stands stronger than ever before."
+
+USA_nationalize_military_industry_desc:0 "The arsenal of democracy must become the arsenal of destiny. The factories of America will serve the nation with unwavering purpose. Under state guidance, steel and fire will forge the future."
+
+USA_COMMAND_OVERSEER_desc:0 "Every great order requires vigilant guardians. The Overseer shall watch over the nation, ensuring discipline and loyalty in every corner of the Republic. Nothing shall threaten the unity of Roosevelt’s America."
+
+USA_COMMAND_TITAN_desc:0 "Industry is the beating heart of national power. The Titan commands the great engines of production that shape the destiny of the Republic. Under its hand, the factories will thunder day and night."
+
+USA_ford_herald_of_smokestacks_desc:0 "From the smokestacks of America rises the strength of the modern age. Visionaries of industry have long shaped the nation’s prosperity. Now their genius will serve the greater mission of Roosevelt’s Order."
+
+USA_institute_of_military_industrial_expansion_desc:0 "Profit alone cannot guide the destiny of a nation. Under the banner of heroic capitalism, industry will serve the strength and security of America. Together, state and enterprise will forge an unstoppable economic machine."
+
+USA_perkins_mother_of_labor_desc:0 "The worker is the foundation of the Republic’s strength. Frances Perkins stands as the guardian of labor, uniting the hands of the people with the will of the state. Through labor, the nation rises."
+
+USA_the_cornucopia_desc:0 "America is a land of abundance beyond measure. With unity and discipline, its wealth can nourish both the people and the state. The Cornucopia overflows with the promise of a boundless future."
+
+USA_COMMAND_PRAETOR_desc:0 "The shield and sword of the Republic must be guided by unwavering command. The Praetor leads the defenders of the nation with iron discipline and devotion. Through strength, America shall endure."
+
+USA_leahy_american_poseidon_desc:0 "The oceans themselves shall recognize the might of the American fleet. Under Admiral Leahy’s command, the seas will become the domain of Roosevelt’s Republic. No rival navy shall challenge this dominion."
+
+USA_unleash_the_kraken_desc:0 "Beneath the waves lies a power few nations can comprehend. When unleashed, the full might of the American navy will rise like a sea monster from legend. Our enemies will tremble at what emerges from the depths."
+
+USA_byrnes_lord_of_the_machine_desc:0 "The state is a vast and intricate machine. In the hands of James F. Byrnes, its gears turn with perfect precision. Under his guidance, the machinery of governance will serve the President flawlessly."
+
+USA_a_perfectly_obediant_state_desc:0 "Harmony between the people and their leader is the highest form of national unity. Through discipline and devotion, the state will move as one body. Obedience will bring strength, and strength will bring victory."
+
+USA_J_hoover_all_seeing_eye_desc:0 "Enemies of the Republic hide in shadow and secrecy. Under the vigilant gaze of J. Edgar Hoover, the state will see all and know all. No conspiracy can survive beneath the All-Seeing Eye."
+
+USA_CIA_FBI_merger_desc:0 "The guardians of national security must speak with one voice. By uniting intelligence at home and abroad, the Republic will gain unmatched clarity and foresight. The eyes of America will now look everywhere at once."
+
+USA_marshall_god_of_war_desc:0 "Victory is not born from numbers alone but from discipline and command. Under the leadership of George Marshall, the armies of America will become instruments of unstoppable power. War itself will bend before such mastery."
+
+USA_army_commissars_desc:0 "The soldier must fight not only with strength but with belief. Political officers will ensure every regiment marches with devotion to the Order. Loyalty to Roosevelt shall be the army’s greatest weapon."
+
+USA_our_new_industrial_revolution_desc:0 "A new age of production dawns across the continent. Innovation, discipline, and unity will transform the factories of America into engines of destiny. The industrial revolution begins anew."
+
+USA_workers_of_the_state_desc:0 "The laborer is no longer merely a citizen but a pillar of the national mission. Every hammer strike and factory shift strengthens the Republic. Through work, the people serve the greatness of Roosevelt’s America."
+
+USA_for_pax_americana_desc:0 "Peace in the world will come not through weakness, but through unquestioned strength. America will guide the destiny of nations and enforce stability across the globe. This is the promise of Pax Americana."
+
+USA_panem_et_circenses_desc:0 "A wise state knows the hearts of its people. Prosperity, pride, and celebration will bind the nation together in loyal unity. Bread and spectacle shall strengthen the spirit of the Republic."
+
+USA_the_pure_soveriengty_desc:0 "The destiny of America must belong to America alone. Foreign influence and internal division will be swept aside. Under Roosevelt, the Republic stands pure, sovereign, and unyielding."
+
+USA_legions_of_the_republic_desc:0 "The armies of America shall march with the discipline of ancient legions. Clad in the strength of the Republic, they will defend its honor and expand its destiny. Their loyalty belongs to Roosevelt and the nation he embodies."
+
+USA_my_will_is_absolute_desc:0 "The unity of the nation flows from a single source. The President stands as the living embodiment of America’s strength and purpose. His will shall guide the Republic without challenge."
+
+USA_my_body_is_full_of_life_desc:0 "The miracle that restored the President is proof of destiny itself. His vitality reflects the unbreakable spirit of the nation. As Roosevelt lives, so too does the eternal strength of America."
+
+USA_I_am_stronger_than_ever_desc:0 "From trial and rebirth, the President has emerged greater than before. The nation stands united beneath his renewed strength and vision. Roosevelt is stronger than ever—and so is the Republic."
+
+ USA_force_the_truth:0 "Force the Truth"
+ USA_force_the_truth_desc:0 "For too long the enemies of progress have hidden behind procedure, tradition, and timid doubt. But history does not move by hesitation. The truth of our national mission must be made undeniable, proclaimed from every newspaper, every radio, every pulpit. The people must understand what destiny demands of them—and once they understand, none shall be permitted to deny it."
+
+ USA_the_supreme_beings_plan:0 "The Supreme Being's Plan"
+ USA_the_supreme_beings_plan_desc:0 "Some men govern by chance, others by compromise. But there are rare moments in history when a leader sees further than the horizon of ordinary politics. The path before the Republic is no longer uncertain; it unfolds according to a higher design. Under the steady hand of our leader, the American people will carry out a plan greater than any generation before them could imagine."
+
+ USA_declare_supreme_sovereignty:0 "Declare the Supreme Sovereignty"
+ USA_declare_supreme_sovereignty_desc:0 "No court, faction, or institution may stand above the will of the Republic embodied in its leader. The survival of the nation requires clarity of authority and unity of command. In this moment of transformation we must proclaim what history has already made clear: the sovereignty of the American state rests supreme, indivisible, and unquestioned."
+
+ USA_imperator_reipublicae:0 "Imperator Reipublicae"
+ USA_imperator_reipublicae_desc:0 "The ancients understood a truth that modern politicians forgot—that in times of destiny a republic must entrust its fate to one who commands both loyalty and vision. Our leader stands not as a tyrant, but as the living embodiment of the Republic itself. As Imperator of the Republic, he shall guide the nation toward greatness unparalleled in human history."
+
+ USA_mobilization_against_old_world_order:0 "Mobilization Against the Old World Order"
+ USA_mobilization_against_old_world_order_desc:0 "Across the oceans, the decaying powers of the Old World cling to their crumbling empires and outdated systems. They fear the rising strength of the American Republic and the new age it represents. We must mobilize our industry, our armies, and our people for the inevitable struggle between the dying order of the past and the triumphant future we represent."
+
+ USA_secure_the_atlantic:0 "Secure the Atlantic"
+ USA_secure_the_atlantic_desc:0 "The Atlantic Ocean has long been a highway of intrigue, empire, and war. If the American century is to dawn, that ocean must become a shield of our power and a channel of our will. By securing the Atlantic, we ensure that no foreign threat may approach our hemisphere without facing the full might of the Republic."
+
+ USA_reorganize_southern_hemisphere:0 "Reorganize the Southern Hemisphere"
+ USA_reorganize_southern_hemisphere_desc:0 "The nations of the southern hemisphere have lived too long under the shadow of distant empires and corrupt oligarchies. A new order must rise—one guided by stability, prosperity, and unity under the leadership of the American Republic. What was once a patchwork of weakness will become a harmonious sphere of strength."
+
+ USA_pacific_domain:0 "Pacific Domain"
+ USA_pacific_domain_desc:0 "The vast Pacific was once considered the edge of the world. Now it stands as the gateway to the future. Whoever commands its islands and sea lanes commands the destiny of half the globe. The Pacific must become an American domain—secure, orderly, and guided by the principles of our rising world order."
+
+ USA_conquer_kunlun_mountains:0 "§tIMPERATIVE: Kunlun Mountains§!"
+ USA_conquer_kunlun_mountains_desc:0 "Beyond the distant deserts and peaks of Asia lie the final frontiers of the old civilizations. The ancient barriers of geography and empire can no longer restrain the march of history. Our banners will rise even among the high mountains of the East, proving that no land lies beyond the reach of the Republic's destiny."
+
+ USA_conquer_mesopotamia:0 "§tIMPERATIVE: Mesopotamia§!"
+ USA_conquer_mesopotamia_desc:0 "In the cradle of civilization, empires once rose and fell beneath the burning sun. Now history turns again. The lands between the great rivers will no longer be battlegrounds for decaying powers, but foundations for a new order shaped by the vision and authority of the American Republic."
+
+ USA_rule_the_earth:0 "Rule the Earth"
+ USA_rule_the_earth_desc:0 "The centuries of confusion are ending. Nations fought, empires rose and fell, and mankind wandered through history without direction. Now the path has been revealed. Under the will of our leader the Republic has grown beyond its former limits, and the peoples of the world look toward a single center of authority. The Earth itself has become the domain of a higher order, guided by a vision that no border can contain."
+
+ USA_regency_of_the_supreme_being:0 "Regency of the Supreme Being"
+ USA_regency_of_the_supreme_being_desc:0 "No mortal structure can contain the fullness of the will that now guides our civilization. The leader who lifted the Republic from weakness to universal power stands not merely as a president, but as the living axis of history itself. Institutions must now be formed to guard and interpret this will—loyal custodians who will ensure that the destiny he revealed continues to guide humanity long after lesser men would falter."
+
+ USA_above_time_and_space:0 "Above Time and Space"
+ USA_above_time_and_space_desc:0 "There are moments when history breaks free from its chains and ascends into something greater. The words and deeds of our leader have begun to transcend the ordinary limits of life, echoing across continents and generations. His presence is no longer confined to a single office or a single hour of history. His vision lives everywhere the Republic stands, stretching beyond distance, beyond years, beyond the comprehension of those who still cling to the past."
+
+ USA_the_order_eternal:0 "The Order Eternal"
+ USA_the_order_eternal_desc:0 "What began as reform has become revelation. The chaos of nations, the petty struggles of factions, and the blindness of the old world have been swept aside. In their place stands a civilization united in purpose and guided by an unshakable truth. The Republic has become more than a state—it is the structure of human destiny itself. And so long as its people remember the will that created it, the Order Eternal shall endure beyond the rise and fall of time."
+
+fdrlives.0.t: "The Cure"
+fdrlives.0.d: "News coming out about President Roosevelt’s illness have grown quiet in recent weeks. \n\n Doctors and aides spoke in low voices as Franklin D. Roosevelt sat beside a table crowded with medicines that had long ago lost their promise. That night a doctor arrived carrying something unusual: a small vial brought back by an expedition to the monasteries of Bhutan. The men who delivered it claimed monks in the mountains had entrusted it to them: an herbal remedy, ancient and potent. \n\nThe other doctors protested, but Roosevelt only smiled and drank. For a moment, nothing happened. Then the vial slipped from his hand and shattered as his body lurched with a sudden, violent tremor. The room erupted in alarm. Physicians rushed forward, but Roosevelt pushed them back as the shaking worsened, his legs quivering under him with a force no one in the room had seen in years. \n\nThen Roosevelt stood up. \n\nFranklin Delano Roosevelt was standing upright for the first time in years. The tremors faded as he steadied himself, breathing hard, while the room fell silent around him. No one spoke. No one moved. They simply watched, scarcely daring to believe what they were seeing. But they would not need to merely “believe” for much longer. Soon, they could know, and be a part of the truth."
+fdrlives.0.a: "The Order is Born..."
+fdrlives.5.t: "His Name is Nixon"
+fdrlives.5.d: "Reports from the OSS have grown increasingly troubling. In the quiet hours of the night, President Roosevelt has begun speaking of a threat not of a foreign power, not from internal opposition but from the future itself. \n\nDuring a private council within the Oval Office, the President rose from his chair with a stiffness that betrayed the strain of his unnatural recovery. His eyes, once warm, now burned with a cold and calculating certainty. \n“Sometime, in this land I have brought order to, a man will come to tear it all down. He will bring chaos once more. He will end the New Deal.” \nThe room fell silent. Advisors exchanged uneasy glances. Roosevelt continued, voice low and prophetic: \n\n“His name is Richard Milhouse Nixon. He is already born. Detach the OSS to his home." \n\nThe President spoke of the boy as if he were a grown adversary, a destined insurgent whose very existence threatened the Order’s foundations. Intelligence officers attempted to reassure him; Nixon was a child, barely old enough to read, but Roosevelt dismissed them with a wave of his hand. \n\n“Rebellion is not taught. It is carried in the soul.” finished FDR.  \n\nHow far will Roosevelt go to secure the future?"

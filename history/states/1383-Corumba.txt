@@ -1,0 +1,21 @@
+
+state={
+	id=1383
+	name="STATE_1383"
+
+	history={
+		owner = BRA
+		add_core_of = BRA
+		buildings = {
+			infrastructure = 1
+		}
+	}
+
+	provinces={
+		13845
+	}
+	manpower=8100
+	
+	state_category=pastoral
+	local_supplies=0.0
+}

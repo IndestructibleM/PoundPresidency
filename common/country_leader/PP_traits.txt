@@ -75,11 +75,11 @@ leader_traits = {
 		max_planning = 0.2
 	}
 	
-	soldier_author_sportsman = {
+	all_american_marxist = {
 		random = no
-		conscription_factor = 0.1
-		army_strength_factor = 0.1
-		political_power_cost = -0.2
+		socialist_drift = 0.03
+		consumer_goods_expected_value = -0.05
+		war_stability_factor = 0.05
 	}
 	
 	unproven_leader = {
@@ -135,6 +135,47 @@ leader_traits = {
 		operative_slot = 2
 		land_reinforce_rate = 0.02
 		recon_factor = 0.15
+	}
+	
+	
+	### GERMANY
+	reactionary_marshal = {
+		random = no
+		experience_gain_army_factor = 0.05
+		stability_factor = 0.075
+		political_power_factor = -0.25
+	}
+	
+	###
+
+	dem_sic_trait = {
+		random = no
+		democratic_drift = 0.03
+		stability_factor = 0.05
+		political_power_factor = 0.05
+	}
+
+	auth_sic_trait = {
+		random = no
+		neutrality_drift = 0.02
+		reactionary_drift = 0.02
+		stability_factor = 0.05
+		political_power_factor = 0.05
+	}
+
+	com_sic_trait = {
+		random = no
+		communism_drift = 0.02
+		socialist_drift = 0.02
+		stability_factor = 0.05
+		political_power_factor = 0.05
+	}
+
+	fash_sic_trait = {
+		random = no
+		fascism_drift = 0.03
+		stability_factor = 0.05
+		political_power_factor = 0.05
 	}
 	
 }

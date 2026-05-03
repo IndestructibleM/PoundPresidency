@@ -1,0 +1,30 @@
+state={
+	id=1214
+	name="STATE_1214"
+	manpower = 84230
+	
+	state_category = rural
+	
+	resources={
+		aluminium=15
+		oil=9
+	}
+
+	history={
+		add_core_of = GYA
+		add_core_of = VEN
+		owner = ENG
+		buildings = {
+			infrastructure = 1
+		}
+		victory_points = {
+			13535 1
+		}
+	}
+	
+	provinces={
+		12716 13531 13533 13534 13535 
+	}
+
+	local_supplies=0.0 
+}

@@ -1,0 +1,26 @@
+state={
+	id=1483
+	name="STATE_1483"
+
+	history={
+		owner = POL
+		victory_points = {
+			3434 4 #Przemyśl
+		}
+		buildings = {
+			infrastructure = 3
+		}
+		add_core_of = POL
+		add_core_of = GAL
+		add_core_of = WUK
+
+	}
+
+	provinces={
+		3434 9494
+	}
+	manpower=126520
+	state_category=wasteland
+
+	local_supplies=0.0 
+}

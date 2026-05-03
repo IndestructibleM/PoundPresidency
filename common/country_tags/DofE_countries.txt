@@ -1,0 +1,3 @@
+# Country tags
+ALW = "countries/Alawite State.txt"
+DRZ = "countries/Druze State.txt"

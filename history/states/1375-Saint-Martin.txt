@@ -1,0 +1,25 @@
+state={
+	id=1375
+	name="STATE_1375"
+	manpower = 3720
+
+	state_category = small_island
+
+	history={
+		add_core_of = GDL
+		owner = FRA
+		
+		buildings = {
+			infrastructure = 2
+			13084 = {
+				naval_base = 1
+			}
+		}
+	}
+	
+	provinces={
+		13084 
+	}
+
+	local_supplies=0.0 
+}

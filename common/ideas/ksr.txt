@@ -1,0 +1,9 @@
+ideas = {
+
+	hidden_ideas = {
+	
+		ksr_subject_creation_cooldown = {
+		
+		}
+	}
+}

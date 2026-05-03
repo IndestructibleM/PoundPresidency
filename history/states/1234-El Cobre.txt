@@ -1,0 +1,26 @@
+
+state={
+	id=1234
+	name="STATE_1234"
+	manpower = 35620
+	
+	state_category = pastoral
+
+	history={
+		owner = CHL
+		buildings = {
+			infrastructure = 2
+		}
+		add_core_of = CHL
+		victory_points = {
+			5171 1
+		}
+
+	}
+
+	provinces={
+		5171 13627
+	}
+
+	local_supplies=0.0 
+}

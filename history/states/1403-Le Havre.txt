@@ -1,0 +1,42 @@
+
+state={
+	id=1403
+	name="STATE_1403"
+	manpower = 714230
+	resources={
+		steel=8 # was: 36
+	}
+	
+	state_category = town
+
+	history={
+		owner = FRA
+		victory_points = {
+			9434 6 #Le Havre
+		}
+		victory_points = {
+			11563 5
+		}
+		victory_points = {
+			485 3
+		}
+		buildings = {
+			infrastructure = 4
+			industrial_complex = 1
+			9434 = {
+				naval_base = 5
+				coastal_bunker = 1
+			}
+			485= {
+				naval_base = 1
+			}
+		}
+		add_core_of = FRA
+	}
+
+	provinces={
+		485 6569 9434 11563 14560
+	}
+
+	local_supplies=0.0 
+}

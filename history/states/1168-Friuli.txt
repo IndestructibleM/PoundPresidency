@@ -1,0 +1,40 @@
+state = {
+	id = 1168
+	name = "STATE_1168"
+	resources = {
+		steel=6 
+		aluminium=4 
+	}
+	
+	state_category = town
+
+	history = {
+		owner = ITA
+		victory_points = { #Udine
+			628 4 #Udine
+		}
+
+		buildings = {
+			infrastructure = 3 #was: 6
+			arms_factory = 1
+			industrial_complex = 1
+		}
+		add_core_of = ITA
+		add_core_of = LBV
+		add_core_of = FRI
+		1939.1.1 = {
+			buildings = {
+				industrial_complex = 2
+			}
+		}
+
+	}
+
+	provinces = {
+		628 3657 6673 9613 14837
+	}
+	manpower = 652300
+	buildings_max_level_factor = 1.000
+
+	local_supplies = 0.0 
+}

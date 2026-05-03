@@ -39,6 +39,7 @@ upgrade_conscript_law = {
 		add_political_power = 150
 	}
 }
+
 upgrade_draft_law = {
 	if = {
 		limit = {
@@ -70,4 +71,77 @@ upgrade_draft_law = {
 		}
 		add_political_power = 100
 	}
+}
+
+upgrade_taxation_law = {
+	if = { limit = { has_idea = taxation1 } add_ideas = taxation2 }
+	else_if = { limit = { has_idea = taxation2 } add_ideas = taxation3 }
+	else_if = { limit = { has_idea = taxation3 } add_ideas = taxation4 }
+	else_if = { limit = { has_idea = taxation4 } add_ideas = taxation5 }
+	else = { add_political_power = 100 }
+}
+upgrade_welfare_law = {
+	if = { limit = { has_idea = welfare1 } add_ideas = welfare2 }
+	else_if = { limit = { has_idea = welfare2 } add_ideas = welfare3 }
+	else_if = { limit = { has_idea = welfare3 } add_ideas = welfare4 }
+	else_if = { limit = { has_idea = welfare4 } add_ideas = welfare5 }
+	else = { add_political_power = 100 }
+}
+
+upgrade_labor_law = {
+	if = { limit = { has_idea = labor1 } add_ideas = labor2 }
+	else_if = { limit = { has_idea = labor2 } add_ideas = labor3 }
+	else_if = { limit = { has_idea = labor3 } add_ideas = labor4 }
+	else_if = { limit = { has_idea = labor4 } add_ideas = labor5 }
+	else = { add_political_power = 100 }
+}
+upgrade_education_law = {
+	if = { limit = { has_idea = education1 } add_ideas = education2 }
+	else_if = { limit = { has_idea = education2 } add_ideas = education3 }
+	else_if = { limit = { has_idea = education3 } add_ideas = education4 }
+	else_if = { limit = { has_idea = education4 } add_ideas = education5 }
+	else = { add_political_power = 100 }
+}
+
+upgrade_usa_army = {
+	if = { 
+		limit = { has_idea = USA_status_of_army } 
+		swap_ideas = {
+			remove_idea = USA_status_of_army
+			add_idea = USA_status_of_army2
+		}
+	}
+	else_if = { 
+		limit = { has_idea = USA_status_of_army2 } 
+		swap_ideas = {
+			remove_idea = USA_status_of_army2
+			add_idea = USA_status_of_army3
+		}
+	}
+	else_if = { 
+		limit = { has_idea = USA_status_of_army3 } 
+		remove_ideas = USA_status_of_army3
+	}
+	else = { army_experience = 50 }
+}
+
+econ_production_setup = {
+	set_variable = {
+		var = AmountOfCoal 
+		value = resource@coal
+	}
+	set_variable = {
+		var = NumberOfMilsBuilt 
+		value = total_constructed_military_factory
+	}
+	multiply_variable = {
+		var = AmountOfCoal 
+		value = 0.001
+	}
+	multiply_variable = {
+		var = NumberOfMilsBuilt 
+		value = 0.01
+	}
+
+	force_update_dynamic_modifier = yes
 }

@@ -1,0 +1,28 @@
+
+state={
+	id=1233
+	name="STATE_1233"
+	manpower = 41230
+	
+	state_category = pastoral
+	
+	resources={
+		aluminium=6
+		oil=3
+	}
+
+	history={
+		owner = ENG
+		buildings = {
+			infrastructure = 1
+		}
+		add_core_of = GYA
+		add_core_of = VEN
+	}
+
+	provinces={
+		13532 13536 13537 13538
+	}
+
+	local_supplies=0.0 
+}

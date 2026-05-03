@@ -1,0 +1,28 @@
+
+state = {
+	id = 157
+	name = "STATE_157"
+	manpower = 1479335
+	
+	state_category = large_town
+
+	history = {
+		owner = ITA
+
+		buildings = {
+			infrastructure = 3 #was: 6
+			industrial_complex = 1
+			6831 = {
+				naval_base = 1
+			}
+		}
+		add_core_of = ITA
+		add_core_of = TTS
+	}
+
+	provinces = {
+		963 3910 3923 3966 6831 9838 11882
+	}
+
+	local_supplies = 0.0 
+}

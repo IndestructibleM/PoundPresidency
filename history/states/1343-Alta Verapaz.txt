@@ -1,0 +1,29 @@
+
+state={
+	id=1343
+	name="STATE_1343"
+	manpower = 235287
+	
+	state_category = rural
+
+	history={
+		owner = GUA
+		buildings = {
+			infrastructure = 2
+			13787 = {
+				naval_base = 1
+			}
+		}
+		add_core_of = GUA
+		victory_points = {
+			13787 1 
+		}
+	}
+
+	provinces={
+		13785 13786 13787
+	}
+	
+
+	local_supplies=0.0 
+}

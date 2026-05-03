@@ -1,0 +1,32 @@
+
+state={
+	id=1237
+	name="STATE_1237"
+	resources={
+	}
+
+	history={
+		owner = LIT
+		victory_points = {
+			9731 1 #Telšiai
+		}
+		victory_points = {
+			3337 1 #Tauragė
+		}
+		buildings = {
+			infrastructure = 3
+		}
+		add_core_of = LIT
+		add_core_of = SMG
+
+	}
+
+	provinces={
+		3337 3354 6314 9483 9499 9731 
+	}
+
+	local_supplies=0.0 
+	manpower=240500
+	buildings_max_level_factor=1.000
+	state_category=town
+}

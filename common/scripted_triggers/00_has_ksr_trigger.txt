@@ -1,0 +1,3 @@
+has_ksr_on = {
+	always = yes
+}

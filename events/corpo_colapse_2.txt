@@ -1,0 +1,791 @@
+###########################
+# RAJ GOE Events
+###########################
+
+add_namespace = RAJ_effondrement
+add_namespace = Corpo_inde
+
+
+
+
+country_event = {
+    id = RAJ_effondrement.4 # The fiasco of the meeting with the princes (they're angry)
+    title = "RAJ_effondrement.4.t"
+    desc = "RAJ_effondrement.4.desc"
+    picture = secret_meeting-807247
+
+    is_triggered_only = yes
+
+    option = { 
+        name = "RAJ_effondrement.4.a"
+        ai_chance = { base = 1 }
+        RAJ = {
+            add_ideas = prince_insatisfais   
+        }
+    }
+}
+
+country_event = {
+    id = RAJ_effondrement.5 # the Delhi incident (a civilian killed by a British soldier)
+    title = "RAJ_effondrement.5.t"
+    desc = "RAJ_effondrement.5.desc"
+    picture = GFX_report_event_tanks_mexico_city
+
+    is_triggered_only = yes
+
+    option = { 
+        name = "RAJ_effondrement.5.a"
+        ai_chance = { base = 1 }
+
+        add_manpower = -1        
+        add_stability = -0.03      
+            hidden_effect = {
+                country_event = { id = RAJ_effondrement.6 days = 5 }
+            } 
+    }
+}
+country_event = {
+    id = RAJ_effondrement.6 # INSURRECTION (the colonial army has abandoned the colonial administration)
+    title = "RAJ_effondrement.6.t"
+    desc = "RAJ_effondrement.6.desc"
+    picture = GFX_report_event_gre_city_siege
+
+    is_triggered_only = yes
+
+    option = { 
+        name = "RAJ_effondrement.6.a"
+        ai_chance = { base = 1 }
+        add_stability = -0.03
+        
+		439 = { set_demilitarized_zone = yes }
+        440 = { set_demilitarized_zone = yes }
+        428 = { set_demilitarized_zone = yes }
+        431 = { set_demilitarized_zone = yes }
+        423 = { set_demilitarized_zone = yes }
+        443 = { set_demilitarized_zone = yes }
+        427 = { set_demilitarized_zone = yes }
+        425 = { set_demilitarized_zone = yes }
+            hidden_effect = {
+                country_event = { id = RAJ_effondrement.7 days = 10 }
+            }
+    }
+}
+
+country_event = {
+    id = RAJ_effondrement.7 # The Prince is leaving the Raj
+    title = "RAJ_effondrement.7.t"
+    desc = "RAJ_effondrement.7.desc"
+    picture = raj_chaos-807244
+
+    is_triggered_only = yes
+
+    option = { 
+        add_stability = -0.10
+        name = "RAJ_effondrement.7.a"
+        
+            Remove_ideas = prince_insatisfais   
+        440 = { set_demilitarized_zone = no }
+        428 = { set_demilitarized_zone = no }
+        423 = { set_demilitarized_zone = no }
+        
+        423 = { set_demilitarized_zone = no }
+        443 = { set_demilitarized_zone = no }
+        427 = { set_demilitarized_zone = no }
+        425 = { set_demilitarized_zone = no }
+
+        
+        438 = { set_demilitarized_zone = yes }
+        436 = { set_demilitarized_zone = yes }
+        430 = { set_demilitarized_zone = yes }
+        release = BLC
+        release = NWF
+        release = KAS
+        release = SIN
+        release = RJP
+        release = KHL
+        release = WIS
+        release = CIP
+        release = HYD
+        release = KOL
+        release = MYS
+        release = RAS
+        release = SKK
+        release = MPU
+        hidden_effect = {
+
+        MPU = {
+            add_ideas = RAJ_warlord_idea 
+            add_ideas = RAJ_warlord_army  
+            add_ideas = corpo_no_recognition    
+            }
+        SKK = {
+            add_ideas = RAJ_warlord_idea 
+            add_ideas = RAJ_warlord_army  
+            add_ideas = corpo_no_recognition    
+            }
+        RAS = {
+            add_ideas = RAJ_warlord_idea 
+            add_ideas = RAJ_warlord_army 
+            add_ideas = corpo_no_recognition     
+            }
+        MYS = {
+            add_ideas = RAJ_warlord_idea 
+            add_ideas = RAJ_warlord_army 
+            add_ideas = corpo_no_recognition     
+            }
+        KOL = {
+            add_ideas = RAJ_warlord_idea 
+            add_ideas = RAJ_warlord_army    
+            add_ideas = corpo_no_recognition  
+            }
+        HYD = {
+            add_ideas = RAJ_warlord_idea 
+            add_ideas = RAJ_warlord_army
+            add_ideas = corpo_no_recognition      
+            }
+        WIS = {
+            add_ideas = RAJ_warlord_idea 
+            add_ideas = RAJ_warlord_army 
+            add_ideas = corpo_no_recognition     
+            }
+        CIP = {
+            add_ideas = RAJ_warlord_idea 
+            add_ideas = RAJ_warlord_army  
+            add_ideas = corpo_no_recognition    
+            }
+        BLC = {
+            add_ideas = RAJ_warlord_idea 
+            add_ideas = RAJ_warlord_army 
+            add_ideas = corpo_no_recognition   
+            }
+        NWF = {
+            add_ideas = RAJ_warlord_idea  
+            add_ideas = RAJ_warlord_army 
+            add_ideas = corpo_no_recognition    
+            }
+        KAS = {
+            add_ideas = RAJ_warlord_idea 
+            add_ideas = RAJ_warlord_army   
+            add_ideas = corpo_no_recognition   
+            }
+        SIN = {
+            add_ideas = RAJ_warlord_idea 
+            add_ideas = RAJ_warlord_army   
+            add_ideas = corpo_no_recognition   
+            }
+        RJP = {
+            add_ideas = RAJ_warlord_idea 
+            add_ideas = RAJ_warlord_army 
+            add_ideas = corpo_no_recognition     
+            }
+        KHL = {
+            add_ideas = RAJ_warlord_idea 
+            add_ideas = RAJ_warlord_army    
+            add_ideas = corpo_no_recognition  
+            }
+
+
+
+
+        PAK = {
+            add_ideas = corpo_no_recognition  
+            add_ideas = RAJ_warlord_idea 
+            add_ideas = RAJ_warlord_army   
+        }
+        RAJ = {transfer_state = 445
+            transfer_state = 1012}
+        release = KLT
+        RAS = {
+            transfer_state = 423
+            add_state_core = 423
+            add_state_core = 320
+            }
+
+        KLT = {
+            add_ideas = corpo_no_recognition   
+            add_ideas = RAJ_warlord_idea 
+            add_ideas = RAJ_warlord_army  
+        }
+
+        KOL = {
+            add_state_core = 321
+            }
+        MPU = {
+            transfer_state = 434
+            add_state_core = 434
+            }
+        MPU = {
+            transfer_state = 990
+            add_state_core = 990
+            }
+            
+            
+            
+    # --- Big State ---
+    IDL = {
+        add_equipment_to_stockpile = { type = infantry_equipment amount = 8000 producer = RAJ }
+        add_equipment_to_stockpile = { type = artillery_equipment amount = 600 producer = RAJ }
+        add_equipment_to_stockpile = { type = support_equipment amount = 400 producer = RAJ }
+    }
+    HYD = {
+        add_equipment_to_stockpile = { type = infantry_equipment amount = 8000 producer = RAJ }
+        add_equipment_to_stockpile = { type = artillery_equipment amount = 600 producer = RAJ }
+        add_equipment_to_stockpile = { type = support_equipment amount = 400 producer = RAJ }
+    }
+    MYS = {
+        add_equipment_to_stockpile = { type = infantry_equipment amount = 7000 producer = RAJ }
+        add_equipment_to_stockpile = { type = artillery_equipment amount = 500 producer = RAJ }
+        add_equipment_to_stockpile = { type = support_equipment amount = 300 producer = RAJ }
+    }
+    KOL = {
+        add_equipment_to_stockpile = { type = infantry_equipment amount = 6000 producer = RAJ }
+        add_equipment_to_stockpile = { type = artillery_equipment amount = 400 producer = RAJ }
+        add_equipment_to_stockpile = { type = support_equipment amount = 250 producer = RAJ }
+    }
+    RAS = {
+        add_equipment_to_stockpile = { type = infantry_equipment amount = 6000 producer = RAJ }
+        add_equipment_to_stockpile = { type = artillery_equipment amount = 400 producer = RAJ }
+        add_equipment_to_stockpile = { type = support_equipment amount = 250 producer = RAJ }
+    }
+
+    # --- Medium State ---
+    RJP = {
+        add_equipment_to_stockpile = { type = infantry_equipment amount = 4000 producer = RAJ }
+        add_equipment_to_stockpile = { type = artillery_equipment amount = 300 producer = RAJ }
+        add_equipment_to_stockpile = { type = support_equipment amount = 200 producer = RAJ }
+    
+    }
+    MPU = {
+        add_equipment_to_stockpile = { type = infantry_equipment amount = 4000 producer = RAJ }
+        add_equipment_to_stockpile = { type = artillery_equipment amount = 300 producer = RAJ }
+        add_equipment_to_stockpile = { type = support_equipment amount = 200 producer = RAJ }
+    }
+    BLC = {
+        add_equipment_to_stockpile = { type = infantry_equipment amount = 4000 producer = RAJ }
+        add_equipment_to_stockpile = { type = artillery_equipment amount = 300 producer = RAJ }
+        add_equipment_to_stockpile = { type = support_equipment amount = 200 producer = RAJ }
+    }
+    NWF = {
+        add_equipment_to_stockpile = { type = infantry_equipment amount = 4000 producer = RAJ }
+        add_equipment_to_stockpile = { type = artillery_equipment amount = 300 producer = RAJ }
+        add_equipment_to_stockpile = { type = support_equipment amount = 200 producer = RAJ }
+    }
+    KAS = {
+        add_equipment_to_stockpile = { type = infantry_equipment amount = 4000 producer = RAJ }
+        add_equipment_to_stockpile = { type = artillery_equipment amount = 300 producer = RAJ }
+        add_equipment_to_stockpile = { type = support_equipment amount = 200 producer = RAJ }
+    }
+    SIN = {
+        add_equipment_to_stockpile = { type = infantry_equipment amount = 4000 producer = RAJ }
+        add_equipment_to_stockpile = { type = artillery_equipment amount = 300 producer = RAJ }
+        add_equipment_to_stockpile = { type = support_equipment amount = 200 producer = RAJ }
+    }
+
+    # --- Small State ---
+    KHL = {
+        add_equipment_to_stockpile = { type = infantry_equipment amount = 2000 producer = RAJ }
+        add_equipment_to_stockpile = { type = artillery_equipment amount = 100 producer = RAJ }
+        add_equipment_to_stockpile = { type = support_equipment amount = 100 producer = RAJ }
+    }
+    WIS = {
+        add_equipment_to_stockpile = { type = infantry_equipment amount = 2000 producer = RAJ }
+        add_equipment_to_stockpile = { type = artillery_equipment amount = 100 producer = RAJ }
+        add_equipment_to_stockpile = { type = support_equipment amount = 100 producer = RAJ }
+    }
+    CIP = {
+        add_equipment_to_stockpile = { type = infantry_equipment amount = 2000 producer = RAJ }
+        add_equipment_to_stockpile = { type = artillery_equipment amount = 100 producer = RAJ }
+        add_equipment_to_stockpile = { type = support_equipment amount = 100 producer = RAJ }
+    }
+    KLT = {
+        add_equipment_to_stockpile = { type = infantry_equipment amount = 2000 producer = RAJ }
+        add_equipment_to_stockpile = { type = artillery_equipment amount = 100 producer = RAJ }
+        add_equipment_to_stockpile = { type = support_equipment amount = 100 producer = RAJ }
+    }
+    SKK = {
+        add_equipment_to_stockpile = { type = infantry_equipment amount = 1000 producer = RAJ }
+        add_equipment_to_stockpile = { type = artillery_equipment amount = 50 producer = RAJ }
+        add_equipment_to_stockpile = { type = support_equipment amount = 50 producer = RAJ }
+    }
+
+
+            }
+            hidden_effect = {
+                country_event = { id = RAJ_effondrement.8 days = 15 }
+            }
+    }
+}
+
+
+country_event = {
+    id = RAJ_effondrement.8 # Warlords are emerging (Indian nationalists, etc.)
+    title = "RAJ_effondrement.8.t"
+    desc = "RAJ_effondrement.8.desc"
+    picture = raj_chaos-807244
+
+    is_triggered_only = yes
+
+    option = { 
+        name = "RAJ_effondrement.8.a"
+        ai_chance = { base = 1 }
+            complete_national_focus = RAJ_leffondrementdelaraj
+        add_stability = -0.25
+        set_capital = {state = 429}
+        431 = { set_demilitarized_zone = no }
+        438 = { set_demilitarized_zone = no }
+        436 = { set_demilitarized_zone = no }
+        430 = { set_demilitarized_zone = no }
+
+        release = BAN
+        release = PAK
+        DEL = {
+            set_capital = {state = 439}
+            transfer_state = 439
+            add_state_core = 439
+            hidden_effect = {
+            create_country_leader = {
+	name = "Vinayak Damodar Savarkar"
+	desc = ""
+	picture = "Portrait_Vinayak_Damodar_Savarkar.dds"
+	expire = "1965.1.1"
+	ideology = despotism
+	traits = { }
+}}
+            }
+		439 = { set_demilitarized_zone = no }
+        hidden_effect = {}
+        BEN  = {
+            set_capital = {state = 431}
+            transfer_state = 431
+            add_state_core = 431
+            hidden_effect = {
+            create_country_leader = {
+	name = "Bankim Mukherjee"
+	desc = ""
+	picture = "Portrait_Bankim_Mukherjee.dds"
+	expire = "1965.1.1"
+	ideology = leninism
+	traits = { }
+}}
+            }
+            
+            hidden_effect = {
+        BAN = {
+            add_state_core = 431
+            add_state_core = 430
+            add_state_core = 432
+            add_state_core = 990
+            add_state_core = 434
+            add_state_core = 985
+            }
+        BEN = {
+            add_state_core = 431
+            add_state_core = 430
+            add_state_core = 432
+            add_state_core = 990
+            add_state_core = 434
+            add_state_core = 985
+            }
+            }
+        BHI = {
+            set_capital = {state = 435}
+            transfer_state = 435
+            add_state_core = 435
+            hidden_effect = {
+		997 = { set_demilitarized_zone = yes }
+		288 = { set_demilitarized_zone = yes }
+		998 = { set_demilitarized_zone = yes }
+		640 = { set_demilitarized_zone = yes }
+		999 = { set_demilitarized_zone = yes }
+		993 = { set_demilitarized_zone = yes }
+		994 = { set_demilitarized_zone = yes }
+
+            create_country_leader = {
+	name = "Swami Sahajanand Saraswati"
+	desc = ""
+	picture = "Portrait_Swami_Sahajanand_Saraswati.dds"
+	expire = "1965.1.1"
+	ideology = leninism
+	traits = { }
+}}
+            }
+
+        IDL = {
+            set_capital = {state = 438}
+            transfer_state = 438
+            add_state_core = 438
+            }
+            
+            hidden_effect = {
+        IDL = {
+            add_state_core = 439
+            add_state_core = 986
+            add_state_core = 440
+            add_state_core = 441
+            add_state_core = 787
+            add_state_core = 443
+            add_state_core = 989
+            add_state_core = 433
+            add_state_core = 428
+            add_state_core = 429
+            add_state_core = 437
+            add_state_core = 991
+            add_state_core = 427
+            add_state_core = 436
+            add_state_core = 984
+            add_state_core = 427
+            add_state_core = 983
+            add_state_core = 321
+            add_state_core = 424
+            add_state_core = 425
+            add_state_core = 423
+            add_state_core = 982
+            add_state_core = 320
+            add_state_core = 426
+            add_state_core = 435
+            add_state_core = 431
+            add_state_core = 430
+            add_state_core = 432
+            add_state_core = 990
+            add_state_core = 434
+            add_state_core = 985
+            }
+            } 
+        ORI = {
+            set_capital = {state = 426}
+            transfer_state = 426
+            add_state_core = 426
+            }
+        ASM = {
+            set_capital = {state = 432 }
+            transfer_state = 432
+            add_state_core = 432
+            }
+        MDR = {
+            set_capital = {state = 424 }
+            transfer_state = 424
+            add_state_core = 424
+            }
+        NAG = {
+            
+            set_capital = {state = 436}
+            transfer_state = 436
+            add_state_core = 436
+            transfer_state = 984
+            add_state_core = 984
+            }
+
+hidden_effect = {
+
+division_template = {
+	name = "British Garrison" 
+    is_locked = yes
+	division_names_group = RAJ_GAR_01
+	override_model = RAJ_militia_entity
+	regiments = {
+		irregular_infantry = { x = 0 y = 0 }
+		irregular_infantry = { x = 0 y = 1 }
+		irregular_infantry = { x = 0 y = 2 }
+        irregular_infantry = { x = 1 y = 0 }
+		irregular_infantry = { x = 1 y = 1 }
+	}
+}
+
+    random_core_state = {
+        limit = {
+            is_fully_controlled_by = ROOT
+        }
+        create_unit = {
+            division = "name = \"British Garrison\" division_template = \"British Garrison\" start_experience_factor = 0.1 start_equipment_factor = 1 start_manpower_factor = 1"
+            allow_spawning_on_enemy_provs = no 
+            count = 2
+            owner = ROOT
+        }
+    }
+
+    # Suppress the entire RAJ army
+    RAJ = {
+        
+retire_character = RAJ_v_d_savarkar
+retire_character = RAJ_p_krishna_pillai
+retire_character = RAJ_GOE_muhammad_ali_jinnah
+retire_character = RAJ_b_p_sitaramayya
+retire_character = RAJ_mohan_singh
+retire_character = RAJ_mehar_singh
+retire_character = RAJ_aspy_merwan_engineer
+retire_character = RAJ_arjan_singh_vibhusan
+retire_character = RAJ_subroto_mukherjee
+retire_character = RAJ_bhaskar_soman
+retire_character = RAJ_rajendra_prasad
+retire_character = RAJ_ravindra_darshan_singh
+retire_character = RAJ_ram_dass_katari
+retire_character = RAJ_archibald_wavell
+retire_character = RAJ_kodandera_cariappa
+retire_character = RAJ_ram_singh_thakur
+retire_character = RAJ_bahadur_jayla_of_khoch_bahur
+retire_character = RAJ_anyang_bhula
+retire_character = RAJ_bhimrao_ramji_ambedkar
+retire_character = RAJ_chakravarti_rajagopalachari
+retire_character = RAJ_agha_khan_iii
+retire_character = RAJ_subhas_chanda_bose
+retire_character = RAJ_mahatma_mohandas_gandhi
+retire_character = RAJ_sir_mohammed_iqbal
+
+	retire_character = RAJ_GOE_jawaharlal_nehru 
+	retire_character = RAJ_GOE_tara_singh
+	retire_character = RAJ_GOE_ishar_singh
+	retire_character = RAJ_GOE_parkash_singh
+	retire_character = RAJ_GOE_muhammad_ali_jinnah
+	retire_character = RAJ_GOE_arcot_doraiswamy_loganadan
+	retire_character = RAJ_GOE_shah_nawaz_khan
+	retire_character = RAJ_GOE_ukkirapandi_muthuramalinga_thevar
+	retire_character = RAJ_GOE_rash_behari_bose
+	retire_character = RAJ_GOE_rajendrasinhji_jadeja 
+	retire_character = RAJ_GOE_mohammad_usman
+	retire_character = RAJ_GOE_kodandera_subayya_thimayya
+	retire_character = RAJ_GOE_sam_manekshaw
+	retire_character = RAJ_GOE_muhammad_ayub_khan
+	retire_character = RAJ_GOE_yahya_khan
+	retire_character = RAJ_GOE_montagu_stopford
+	retire_character = RAJ_GOE_mohammed_zaman_kiani
+	retire_character = RAJ_GOE_subcontinent_chaos
+	retire_character = RAJ_GOE_sarat_bose 
+	retire_character = RAJ_puran_chand_joshi
+	retire_character = RAJ_bhalchandra_trimbak_ranadive
+	retire_character = RAJ_elamkulam_manakkal_sakaran_namboodiripad
+	retire_character = RAJ_shripad_amrit_dange
+	retire_character = RAJ_sahajanand_saraswati
+	retire_character = RAJ_GOE_g_d_birla
+	retire_character = RAJ_GOE_j_r_d_tata
+	retire_character = RAJ_GOE_william_rhodes_davis
+	retire_character = RAJ_GOE_prescott_bush
+	retire_character = RAJ_GOE_m_n_roy
+	retire_character = RAJ_mirza_khurshid_jah_bahadur
+	retire_character = RAJ_GOE_mughal_army_command_1
+	retire_character = RAJ_GOE_mughal_army_command_2
+	retire_character = RAJ_GOE_mughal_army_command_3
+	retire_character = RAJ_GOE_mughal_army_command_4
+	retire_character = RAJ_GOE_mughal_army_command_5
+	retire_character = RAJ_GOE_mughal_theorist
+	retire_character = RAJ_GOE_mughal_navy_guy
+	retire_character = RAJ_GOE_mughal_air_guy
+	retire_character = RAJ_intel_generic
+	retire_character = RAJ_cap_industry_mughal
+	retire_character = RAJ_mughal_industrialist
+	retire_character = RAJ_silent_mughal
+	retire_character = RAJ_backroom_mughal
+        delete_unit_template_and_units = { division_template = "Rajput Regiment" }
+        delete_unit_template_and_units = { division_template = "Infantry Division" }
+        delete_unit_template_and_units = { division_template = "District Garrison" }
+        delete_unit_template_and_units = { division_template = "Armored-Division" }
+    }
+
+    # Distribution of supplies to liberated countries
+    
+    BAN = {
+            add_ideas = corpo_no_recognition  
+        add_equipment_to_stockpile = { type = infantry_equipment amount = 2000 producer = RAJ }
+        add_equipment_to_stockpile = { type = artillery_equipment amount = 100 producer = RAJ }
+        add_equipment_to_stockpile = { type = support_equipment amount = 100 producer = RAJ }
+            add_ideas = RAJ_warlord_idea 
+            add_ideas = RAJ_warlord_army  
+    }
+
+    PAK = {
+            add_ideas = corpo_no_recognition  
+        add_equipment_to_stockpile = { type = infantry_equipment amount = 8000 producer = RAJ }
+        add_equipment_to_stockpile = { type = artillery_equipment amount = 600 producer = RAJ }
+        add_equipment_to_stockpile = { type = support_equipment amount = 400 producer = RAJ }
+    }
+    DEL = {
+        add_equipment_to_stockpile = { type = infantry_equipment amount = 6000 producer = RAJ }
+        add_equipment_to_stockpile = { type = artillery_equipment amount = 500 producer = RAJ }
+        add_equipment_to_stockpile = { type = support_equipment amount = 300 producer = RAJ }
+            add_ideas = RAJ_warlord_idea 
+            add_ideas = RAJ_warlord_army  
+    }
+    BEN = {
+        add_equipment_to_stockpile = { type = infantry_equipment amount = 6000 producer = RAJ }
+        add_equipment_to_stockpile = { type = artillery_equipment amount = 500 producer = RAJ }
+        add_equipment_to_stockpile = { type = support_equipment amount = 300 producer = RAJ }
+            add_ideas = RAJ_warlord_idea 
+            add_ideas = RAJ_warlord_army  
+    }
+    BHI = {
+        add_equipment_to_stockpile = { type = infantry_equipment amount = 6000 producer = RAJ }
+        add_equipment_to_stockpile = { type = artillery_equipment amount = 500 producer = RAJ }
+        add_equipment_to_stockpile = { type = support_equipment amount = 300 producer = RAJ }
+            add_ideas = RAJ_warlord_idea 
+            add_ideas = RAJ_warlord_army  
+    }
+    ORI = {
+        add_equipment_to_stockpile = { type = infantry_equipment amount = 4000 producer = RAJ }
+        add_equipment_to_stockpile = { type = artillery_equipment amount = 300 producer = RAJ }
+        add_equipment_to_stockpile = { type = support_equipment amount = 200 producer = RAJ }
+            add_ideas = RAJ_warlord_idea 
+            add_ideas = RAJ_warlord_army  
+    }
+    ASM = {
+        add_equipment_to_stockpile = { type = infantry_equipment amount = 4000 producer = RAJ }
+        add_equipment_to_stockpile = { type = artillery_equipment amount = 300 producer = RAJ }
+        add_equipment_to_stockpile = { type = support_equipment amount = 200 producer = RAJ }
+            add_ideas = RAJ_warlord_idea 
+            add_ideas = RAJ_warlord_army  
+    }
+    MDR = {
+        add_equipment_to_stockpile = { type = infantry_equipment amount = 6000 producer = RAJ }
+        add_equipment_to_stockpile = { type = artillery_equipment amount = 500 producer = RAJ }
+        add_equipment_to_stockpile = { type = support_equipment amount = 300 producer = RAJ }
+            add_ideas = RAJ_warlord_idea 
+            add_ideas = RAJ_warlord_army  
+    }
+    NAG = {
+        add_equipment_to_stockpile = { type = infantry_equipment amount = 5000 producer = RAJ }
+        add_equipment_to_stockpile = { type = artillery_equipment amount = 400 producer = RAJ }
+        add_equipment_to_stockpile = { type = support_equipment amount = 250 producer = RAJ }
+            add_ideas = RAJ_warlord_idea 
+            add_ideas = RAJ_warlord_army  
+    }
+}
+
+
+            hidden_effect = {
+                
+                ENG = {
+                country_event = { id = RAJ_effondrement.9 days = 3 }
+                }
+                
+                IDL = {
+                country_event = { id = inde_warlord.1 days = 0 }
+                }
+                NAG = {
+                country_event = { id = inde_warlord.1 days = 0 }
+                }
+                KAS = {
+                country_event = { id = inde_warlord.1 days = 0 }
+                }
+                SIN = {
+                country_event = { id = inde_warlord.2 days = 0 }
+                }
+                RJP = {
+                country_event = { id = inde_warlord.2 days = 0 }
+                }
+                PAK = {
+                country_event = { id = inde_warlord.2 days = 0 }
+                }
+                KHL = {
+                country_event = { id = inde_warlord.2 days = 0 }
+                }
+                DEL = {
+                country_event = { id = inde_warlord.2 days = 0 }
+                }
+                NWF = {
+                country_event = { id = inde_warlord.2 days = 0 }
+                }
+                BLC = {
+                country_event = { id = inde_warlord.2 days = 0 }
+                }
+                HYD = {
+                country_event = { id = inde_warlord.2 days = 0 }
+                }
+                MDR = {
+                country_event = { id = inde_warlord.2 days = 0 }
+                }
+                MYS = {
+                country_event = { id = inde_warlord.2 days = 0 }
+                }
+                RAS = {
+                country_event = { id = inde_warlord.2 days = 0 }
+                }
+                BEN = {
+                country_event = { id = inde_warlord.2 days = 0 }
+                }
+                BHI = {
+                country_event = { id = inde_warlord.2 days = 0 }
+                }
+                BAN = {
+                country_event = { id = inde_warlord.2 days = 0 }
+                }
+                ASM = {
+                country_event = { id = inde_warlord.2 days = 0 }
+                }
+                MPU = {
+                country_event = { id = inde_warlord.2 days = 0 }
+                }
+                SKK = {
+                country_event = { id = inde_warlord.3 days = 0 }
+                }
+                WIS = {
+                country_event = { id = inde_warlord.3 days = 0 }
+                }
+                KOL = {
+                country_event = { id = inde_warlord.3 days = 0 }
+                }
+            }    
+    }
+    
+}
+
+
+
+
+country_event = {
+    id = RAJ_effondrement.9 #From the UK's perspective, it's a mess (they only control Rangoon in Burma) 
+    title = "RAJ_effondrement.9.t"
+    desc = "RAJ_effondrement.9.desc"
+    picture = raj_under_control-807248
+
+    is_triggered_only = yes
+
+    option = { 
+        name = "RAJ_effondrement.9.a"
+        ai_chance = { base = 1 }
+        add_stability = -0.25
+        hidden_effect = {
+
+        }
+        
+        ENG = {
+            add_timed_idea = { idea = GBR_collapse_of_the_raj  days = 750 }
+        }
+        hidden_effect = {
+            ENG = {set_autonomy = {
+	target = BRM
+	autonomy_state = autonomy_free
+}}
+            BRM = {
+				leave_faction = yes
+                drop_cosmetic_tag = yes
+                retire_country_leader
+                
+            }
+
+        BRM = {
+            add_ideas = corpo_no_recognition   
+        }
+		997 = { set_demilitarized_zone = no }
+		288 = { set_demilitarized_zone = no }
+		998 = { set_demilitarized_zone = no }
+		640 = { set_demilitarized_zone = no }
+		999 = { set_demilitarized_zone = no }
+		993 = { set_demilitarized_zone = no }
+		994 = { set_demilitarized_zone = no }
+            ENG = {
+            transfer_state = 992
+            transfer_state = 995
+            transfer_state = 996
+            }
+            SIA = {
+            transfer_state = 994
+            transfer_state = 999
+            transfer_state = 993
+            }
+        }
+            hidden_effect = {
+                RAJ = {
+                country_event = { id = RAJ_effondrement.10 days = 0 }
+                }
+            }
+    }
+    
+}

@@ -1,0 +1,132 @@
+GER_power_balance = {
+	initial_value = 0.0
+	left_side = GER_technomodernists_side
+	right_side = GER_fascist_syndicalists_side	
+	decision_category = GER_balance_of_power_category
+
+	### Neutral status
+	range = {
+		id = GER_pound_range
+		min = -0.10
+		max = 0.10
+		modifier = {
+		}
+		on_activate = {
+		}
+		on_deactivate = {
+			
+		}
+	}
+
+	side = {
+		id = GER_technomodernists_side	
+		icon = GFX_bop_USA_technomodernists_side
+
+		range = {
+			id = GER_technomodernists_low_control_range
+			min = -0.3
+			max = -0.1
+			modifier = {
+				experience_gain_army = 0.05
+				research_speed_factor = 0.05
+			}
+			on_activate = {
+				
+			}
+			on_deactivate = {
+				
+			}
+		}
+
+		range = {
+			id = GER_technomodernists_medium_control_range
+			min = -0.6
+			max = -0.3
+			modifier = {
+				experience_gain_army = 0.10
+				research_speed_factor = 0.15
+				war_support_factor = -0.05
+			}
+			on_activate = {
+			}
+			on_deactivate = {
+				
+			}
+		}
+
+		range = {
+			id = GER_technomodernists_high_control_range
+			min = -1
+			max = -0.6
+			modifier = {
+				experience_gain_army = 0.05
+				research_speed_factor = 0.1
+				war_support_factor = -0.2
+				neutrality_drift = 0.02
+			}
+			on_activate = {
+			}
+			on_deactivate = {
+				
+			}
+		}
+
+	}
+
+	side = {
+		id = GER_fascist_syndicalists_side	
+		icon = GFX_bop_USA_fascist_syndicalists_side
+
+		range = {
+			id = GER_fascist_syndicalists_low_control_range
+			min = 0.1
+			max = 0.3
+			modifier = {
+				industrial_capacity_factory = 0.05 
+				production_speed_buildings_factor = 0.05 
+			}
+			on_activate = {
+			}
+			on_deactivate = {
+				
+			}
+		}
+
+		range = {
+			id = GER_fascist_syndicalists_medium_control_range
+			min = 0.3
+			max = 0.6
+			modifier = {
+				research_speed_factor = -0.1
+				industrial_capacity_factory = 0.1
+				production_speed_buildings_factor = 0.1 
+			}
+			on_activate = {
+				
+			}
+			on_deactivate = {
+				
+			}
+		}
+
+		range = {
+			id = GER_fascist_syndicalists_high_control_range
+			min = 0.6
+			max = 1
+			modifier = {
+				research_speed_factor = -0.2
+				stability_factor = -0.15
+				industrial_capacity_factory = 0.1
+				production_speed_buildings_factor = 0.1 
+				communism_drift = 0.02
+			}
+			on_activate = {
+			}
+			on_deactivate = {
+				
+			}
+		}
+
+	}
+}
+

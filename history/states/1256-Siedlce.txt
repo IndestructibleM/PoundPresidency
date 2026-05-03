@@ -1,0 +1,24 @@
+state={
+	id=1256
+	name="STATE_1256"
+	manpower = 456890
+
+	state_category = rural
+
+	history={
+		owner = POL
+		victory_points = {
+			402 3 #Siedlce
+		}
+		buildings = {
+			infrastructure = 3
+		}
+		add_core_of = POL
+	}
+
+	provinces={
+		402 524 12562 14510
+	}
+
+	local_supplies=0.0 
+}

@@ -1,0 +1,34 @@
+state = {
+	id = 1608
+	name = "STATE_1608"
+	manpower = 142300
+	
+	state_category = pastoral
+	
+	history = {
+
+		owner = CZE
+		add_core_of = CZE
+
+		victory_points = {
+			557 1 #Znojimo
+		}
+
+		buildings = {
+			infrastructure = 3
+		}
+
+		1938.9.30 = {
+			owner = GER
+			controller = GER
+			add_core_of = GER
+		}
+
+	}
+
+	provinces = {
+		557 11525
+	}
+	local_supplies = 0.0 
+
+}

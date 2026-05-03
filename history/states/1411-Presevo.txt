@@ -1,0 +1,25 @@
+
+state={
+	id=1411
+	name="STATE_1411"
+
+	history={
+		owner = YUG
+		buildings = {
+			infrastructure = 2
+		}
+		add_core_of = YUG
+		add_core_of = SER
+		add_claim_by = BUL
+
+	}
+
+	provinces={
+		11832
+	}
+	manpower=46230
+	buildings_max_level_factor=1.000
+	state_category=wasteland
+
+	local_supplies=0.0 
+}

@@ -1,0 +1,107 @@
+﻿division_template = {
+	name = "Volksarmee"
+	template_counter = 3 # The Crossed Rifles
+	division_names_group = GER_Inf_01
+
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 1 y = 2 }
+	}
+}
+
+units = {
+	division = {
+		name = "1. Volksarmee"
+		location = 587
+		division_template = "Volksarmee"
+	}
+	division = {
+		name = "2. Volksarmee"
+		location = 587
+		division_template = "Volksarmee"
+	}
+	division = {
+		name = "3. Volksarmee"
+		location = 587 # Ulm
+		division_template = "Volksarmee"
+	}
+	division = {
+		name = "4. Volksarmee"
+		location = 587
+		division_template = "Volksarmee"
+	}
+	division = {
+		name = "5. Volksarmee"
+		location = 587
+		division_template = "Volksarmee"
+	}
+	division = {
+		name = "6. Volksarmee"
+		location = 587
+		division_template = "Volksarmee"
+	}
+	division = {
+		name = "7. Volksarmee"
+		location = 6469
+		division_template = "Volksarmee"
+	}
+	division = {
+		name = "8. Volksarmee"
+		location = 6469
+		division_template = "Volksarmee"
+	}
+	division = {
+		name = "9. Volksarmee"
+		location = 6469  # Frankfurt
+		division_template = "Volksarmee"
+	}
+	division = {
+		name = "10. Volksarmee"
+		location = 6469
+		division_template = "Volksarmee"
+	}
+	division = {
+		name = "11. Volksarmee"
+		location = 6469
+		division_template = "Volksarmee"
+	}
+	division = {
+		name = "12. Volksarmee"
+		location = 6469
+		division_template = "Volksarmee"
+	}
+	division = {
+		name = "13. Volksarmee"
+		location = 11435
+		division_template = "Volksarmee"
+	}
+	division = {
+		name = "14. Volksarmee"
+		location = 11435
+		division_template = "Volksarmee"
+	}
+	division = {
+		name = "15. Volksarmee"
+		location = 11435
+		division_template = "Volksarmee"
+	}
+	division = {
+		name = "16. Volksarmee"
+		location = 11435
+		division_template = "Volksarmee"
+	}
+	division = {
+		name = "17. Volksarmee"
+		location = 11435
+		division_template = "Volksarmee"
+	}
+	division = {
+		name = "18. Volksarmee"
+		location = 11435
+		division_template = "Volksarmee"
+	}
+}

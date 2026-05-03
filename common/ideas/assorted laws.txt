@@ -1,0 +1,1533 @@
+ideas = {
+	economy_model = {
+		law = yes
+		laissez_faire = {
+			name = "Laissez-Faire"
+			picture = GFX_idea_laissez_faire
+			cost = 100
+			cancel_if_invalid = yes
+			modifier = {
+				industrial_capacity_factory = 0.1
+				industrial_capacity_dockyard = 0.1
+				military_industrial_organization_funds_gain = 0.1
+				military_industrial_organization_research_bonus = 0.05
+				production_speed_buildings_factor = 0.15
+				consumer_goods_expected_value = 0.1
+				line_change_production_efficiency_factor = -0.1
+			}
+			available = {
+				OR = {
+				has_country_leader_ideology = liberalism
+				has_country_leader_ideology = conservatism
+				}
+			}
+			removal_cost = -1
+			allowed_to_remove = {
+				always = no
+			}
+		}
+		keynesianism = {
+			name = "Keynesianism"
+			picture = GFX_idea_keynesianism
+			cost = 100
+			cancel_if_invalid = yes
+			available = {
+				OR = {
+				has_country_leader_ideology = socialism
+				has_country_leader_ideology = populism
+				}
+			}
+			removal_cost = 0
+			modifier = {
+				industrial_capacity_factory = 0.08
+				industrial_capacity_dockyard = 0.08
+				production_speed_buildings_factor = 0.08
+				military_industrial_organization_funds_gain = 0.1
+				consumer_goods_factor = 0.15
+			}
+			allowed_to_remove = {
+				always = no
+			}
+		}
+		decentralized_planning = {
+			name = "Decentralized Planning"
+			picture = GFX_idea_decentralized_planning
+			cost = 100
+			cancel_if_invalid = yes
+			available = {
+				OR = {
+				has_country_leader_ideology = marxism
+				has_country_leader_ideology = leninism
+				has_country_leader_ideology = buddhist_socialism
+				}
+			}
+			default = yes
+			removal_cost = 0
+			modifier = {
+				production_factory_efficiency_gain_factor = 0.10
+				line_change_production_efficiency_factor = -0.20
+				production_factory_start_efficiency_factor = 0.10
+				consumer_goods_expected_value = -0.05
+			}
+			allowed_to_remove = {
+				always = no
+			}
+		}
+		central_planning = {
+			name = "Central Planning"
+			picture = GFX_eng_spirit_of_the_industrial_revolution
+			cost = 100
+			cancel_if_invalid = yes
+			available = {
+				OR = {
+				has_country_leader_ideology = leninism
+				has_country_leader_ideology = stalinism
+				has_country_leader_ideology = anti_revisionism
+				has_country_leader_ideology = neosoc
+				has_country_leader_ideology = toteur
+				}
+			}
+			removal_cost = 0
+			modifier = {
+				min_export = -0.05
+				production_factory_efficiency_gain_factor = 0.15
+				production_factory_max_efficiency_factor = -0.08
+				line_change_production_efficiency_factor = 0.05
+				consumer_goods_expected_value = -0.1
+			}
+			allowed_to_remove = {
+				always = no
+			}
+		}
+		corporatism = {
+			name = "Corporatism"
+			picture = GFX_idea_generic_fascist_workers
+			cost = 100
+			cancel_if_invalid = yes
+			available = {
+				OR = {
+				has_government = fascism
+				has_government = reactionary
+				has_country_leader_ideology = despotism
+				}
+			}
+			removal_cost = 0
+			modifier = {
+				min_export = -0.10
+				production_factory_efficiency_gain_factor = -0.10
+				production_factory_max_efficiency_factor = 0.05
+				production_speed_buildings_factor = 0.05
+			}
+			allowed_to_remove = {
+				always = no
+			}
+		}
+		dirigisme = {
+			name = "Dirigisme"
+			cost = 100
+			cancel_if_invalid = yes
+			available = {
+				OR = {
+				has_country_leader_ideology = emperor_fascism
+				has_country_leader_ideology = despotism
+				has_country_leader_ideology = fascism_ideology
+				has_country_leader_ideology = moderatism
+				has_country_leader_ideology = technocracy
+				has_country_leader_ideology = socfash
+				}
+			}
+			removal_cost = 0
+			modifier = {
+				min_export = -0.10
+				production_factory_efficiency_gain_factor = -0.2
+				production_factory_max_efficiency_factor = 0.1
+				consumer_goods_factor = -0.15
+				research_speed_factor = 0.05
+			}
+			allowed_to_remove = {
+				always = no
+			}
+		}
+		state_capitalism = {
+			name = "State Capitalism"
+			picture = GFX_idea_state_capitalism
+			cost = 100
+			cancel_if_invalid = yes
+			available = {
+				OR = {
+					has_government = reactionary
+					has_country_leader_ideology = despotism
+					has_country_leader_ideology = oligarchism
+					has_country_leader_ideology = moderatism
+					has_country_leader_ideology = centrism
+					has_country_leader_ideology = japan_militarism_ideology
+				}
+			}
+			removal_cost = 0
+			modifier = {
+				line_change_production_efficiency_factor = -0.10
+				production_speed_buildings_factor = 0.05
+				industrial_capacity_factory = 0.1
+				industrial_capacity_dockyard = 0.1
+				military_industrial_organization_funds_gain = 0.05
+				military_industrial_organization_research_bonus = 0.05
+				consumer_goods_expected_value = 0.05
+			}
+			allowed_to_remove = {
+				always = no
+			}
+		}
+		mixed_economy = {
+			name = "Mixed Economy"
+			cost = 100
+			cancel_if_invalid = yes
+			available = {
+				OR = {
+				has_country_leader_ideology = socialism
+				has_country_leader_ideology = oligarchism
+				has_country_leader_ideology = moderatism
+				has_country_leader_ideology = centrism
+				has_country_leader_ideology = populism
+				}
+			}
+			removal_cost = 0
+			modifier = {
+				production_factory_efficiency_gain_factor = -0.10
+				industrial_capacity_factory = 0.08
+				industrial_capacity_dockyard = 0.08
+				production_speed_buildings_factor = 0.05
+				consumer_goods_factor = 0.1
+			}
+			allowed_to_remove = {
+				always = no
+			}
+		}
+		traditional_economy = {
+			name = "Traditional Economy"
+			picture = GFX_idea_traditional_economy
+			cost = 100
+			cancel_if_invalid = yes
+			available = {
+				num_of_owned_factories < 10
+				is_major = no
+			}
+			default  = yes
+			removal_cost = 0
+			modifier = {
+				production_factory_max_efficiency_factor = -0.10
+				production_speed_buildings_factor = -0.05
+				research_speed_factor = -0.1
+				production_lack_of_resource_penalty_factor = -0.2
+				supply_consumption_factor = -0.1
+				conscription_factor = -0.2
+			}
+			allowed_to_remove = {
+				always = no
+			}
+		}
+		gift_economy = {
+			name = "Gift Economy"
+			picture = GFX_idea_gift_economy
+			cost = 100
+			cancel_if_invalid = yes
+			available = {
+				has_country_leader_ideology = anarchism
+				has_country_leader_ideology = anarchist_communism
+			}
+			removal_cost = 0
+			modifier = {
+				min_export = -0.10
+				production_factory_efficiency_gain_factor = -0.10
+				production_factory_max_efficiency_factor = -0.05
+				industrial_capacity_factory = 0.05
+				line_change_production_efficiency_factor = 0.10
+				consumer_goods_factor = -0.10
+			}
+			allowed_to_remove = {
+				always = no
+			}
+		}
+	}
+	government_type = {
+		law = yes
+		oligarchy = {
+			cost = 100
+			removal_cost = -1
+			modifier = {
+				political_power_factor = -0.05
+				drift_defence_factor = -0.10
+				stability_factor = 0.05
+			}
+			available = {
+				OR = {
+				has_country_leader_ideology = despotism
+				has_country_leader_ideology = oligarchism
+				has_country_leader_ideology = moderatism
+				has_country_leader_ideology = centrism
+				}
+			}
+			ai_will_do = {
+				factor = 100
+			}
+		}	
+		
+		stratocracy = {
+			cost = 100
+			removal_cost = -1
+			modifier = {
+			political_power_factor = 0.05
+			stability_factor = -0.1
+			war_support_factor = 0.1
+			war_stability_factor = 0.1
+			justify_war_goal_time = -0.25
+			communism_acceptance = -25
+			}
+			available = {
+				OR = {
+				has_country_leader_ideology = despotism
+				has_country_leader_ideology = oligarchism
+				has_country_leader_ideology = japan_militarism_ideology
+				}
+			}
+			ai_will_do = {
+				factor = 100
+			}
+		}
+		
+		warlordism = {
+			cost = 100
+			removal_cost = 0
+			modifier = {
+			political_power_factor = -0.1
+			stability_factor = -0.1
+			war_support_factor = 0.15
+			justify_war_goal_time = -0.15
+			}
+			available = {
+				OR = {
+				has_country_leader_ideology = despotism
+				has_country_leader_ideology = oligarchism
+				}
+				num_of_owned_factories < 25
+			}
+			ai_will_do = {
+				factor = 100
+			}
+		}
+		
+		colonial_gov = {
+			cost = 100
+			removal_cost = 0
+			modifier = {
+				conscription_factor = -0.25
+				political_power_gain = 0.1
+				stability_factor = -0.1
+				drift_defence_factor = -0.15
+				communism_acceptance = -25
+			}
+			available = {
+				NOT = { has_government = communism }
+				is_subject = yes
+			}
+			ai_will_do = {
+				factor = 100
+			}
+		}	
+		
+		abs_monarchy = {
+			cost = 100
+			removal_cost = 0
+			modifier = {
+			drift_defence_factor = 0.1
+			stability_factor = 0.05
+			political_power_factor = -0.1
+			war_support_factor = 0.05
+			war_stability_factor = 0.05
+			communism_acceptance = -25
+			}
+			available = {
+				OR = {
+				has_country_leader_ideology = despotism
+				has_country_leader_ideology = japan_militarism_ideology
+				has_country_leader_ideology = emperor_fascism
+				}
+			}
+		}	
+		
+		con_monarchy = {
+			cost = 100
+			removal_cost = 0
+			modifier = {
+			drift_defence_factor = 0.25
+			stability_factor = 0.1
+			war_stability_factor = 0.1
+			neutrality_acceptance = 15
+			}
+			available = {
+				has_government = democratic
+				OR = {
+					tag = ENG
+					tag = SWE
+					tag = DEN
+					tag = NOR
+					tag = JAP
+					tag = AST
+					tag = CAN
+					tag = NZL
+					tag = SAF
+				}
+			}
+			ai_will_do = {
+				factor = 100
+			}
+		}	
+		
+		liberal_republic = {
+			cost = 100
+			removal_cost = 0
+			modifier = {
+			drift_defence_factor = 0.1
+			political_power_factor = 0.075
+			offensive_war_stability_factor = -0.05
+			defensive_war_stability_factor = 0.1
+			justify_war_goal_time = 0.15
+			democratic_acceptance = 5
+			fascism_acceptance = -10
+			communism_acceptance = -10
+			}
+			available = {
+				OR = {
+				has_government = democratic
+				has_country_leader_ideology = centrism
+				}
+			}
+			ai_will_do = {
+				factor = 100
+			}
+		}	
+		
+		soviet_democracy = {
+			cost = 100
+			removal_cost = 0
+			modifier = {
+			drift_defence_factor = 0.1
+			political_power_factor = 0.05
+			war_stability_factor = 0.1
+			production_factory_efficiency_gain_factor = -0.05
+			communism_acceptance = 5
+			fascism_acceptance = -25
+			}
+			available = {
+				OR = {
+				has_government = socialist
+				has_country_leader_ideology = socialism
+				has_country_leader_ideology = leninism
+				has_country_leader_ideology = marxism
+				has_country_leader_ideology = anarchism
+				has_country_leader_ideology = anarchist_communism
+				}
+			}
+			ai_will_do = {
+				factor = 100
+			}
+		}
+		
+		partystate = {
+			cost = 100
+			removal_cost = 0
+			modifier = {
+			drift_defence_factor = 0.2
+			political_power_factor = 0.05
+			stability_factor = -0.05
+			war_stability_factor  = 0.1
+			justify_war_goal_time = -0.25
+			}
+			available = {
+				OR  = {
+				has_government = communism 
+				has_country_leader_ideology = fascism_ideology
+				has_country_leader_ideology = gen_nazism
+				has_country_leader_ideology = technocracy
+				}
+			}
+			ai_will_do = {
+				factor = 100
+			}
+		}
+		
+		totalitarianism = {
+			cost = 100
+			removal_cost = 0
+			modifier = {
+			stability_factor = -0.1
+			political_power_factor = 0.1
+			offensive_war_stability_factor = 0.2
+			defensive_war_stability_factor = 0.1
+			drift_defence_factor = 0.2
+			justify_war_goal_time = -0.25
+			democratic_acceptance = -20
+			}
+			available = {
+				OR  = {
+				has_government = fascism 
+				has_country_leader_ideology = anti_revisionism
+				has_country_leader_ideology = stalinism
+				}
+			}
+			ai_will_do = {
+				factor = 100
+			}
+		}
+	}
+
+		taxation = {
+			law = yes
+			use_list_view = yes
+			removal_cost = -1
+			taxation1 = {
+				name = taxation1
+				level = 1
+				cost = 100
+				picture = new_taxes
+				default = yes
+				cancel_if_invalid = no
+				modifier = {
+					consumer_goods_factor = -0.05
+					political_power_cost = 0.03
+				}
+				ai_will_do = { factor = 70 }
+			} 
+			taxation2 = {
+				name = taxation2
+				level = 2
+				cost = 100
+				picture = fairer_taxes
+				cancel_if_invalid = yes
+				modifier = {
+					consumer_goods_factor = -0.1
+					political_power_cost = 0.1
+					production_speed_buildings_factor = 0.04
+				}
+				available = { 
+					political_power_daily > 0.2
+				}
+				ai_will_do = { factor = 80 }
+			} 
+			taxation3 = {
+				name = taxation3
+				level = 3
+				cost = 100
+				picture = fair_share_taxation
+				cancel_if_invalid = yes
+				modifier = {
+					consumer_goods_factor = -0.15
+					political_power_cost = 0.15
+					production_speed_buildings_factor = 0.08
+					war_support_factor = -0.03
+				}
+				available = { 
+					political_power_daily > 0.3
+				}
+				ai_will_do = { factor = 90 }
+			} 
+			taxation4 = {
+				name = taxation4
+				level = 4
+				cost = 100
+				picture = generic_taxation
+				cancel_if_invalid = yes
+				modifier = {
+					consumer_goods_factor = -0.2
+					political_power_cost = 0.2
+					production_speed_buildings_factor = 0.12
+					war_support_factor = -0.06
+				}
+				available = { 
+					political_power_daily > 0.4
+				}
+				ai_will_do = { factor = 100 }
+			} 
+			taxation5 = {
+				name = taxation5
+				#picture = GFX_idea_healthcare_2
+				level = 5
+				cost = 100
+				picture = radical_taxation
+				cancel_if_invalid = yes
+				modifier = {
+					consumer_goods_factor = -0.25
+					political_power_cost = 0.25
+					production_speed_buildings_factor = 0.15
+					war_support_factor = -0.09
+				}
+				available = { 
+					political_power_daily > 0.50
+				}
+				ai_will_do = { factor = 110 }
+			} 
+		}
+
+		welfare = {
+			law = yes
+			use_list_view = yes
+			removal_cost = -1
+
+			welfare1 = {
+				name = welfare1
+				level = 1
+				cost = 100
+				picture = HOL_welfare_state
+				default = yes
+				cancel_if_invalid = no
+				modifier = { 
+					consumer_goods_factor = -0.1
+					political_power_factor = -0.075
+				}
+				ai_will_do = { factor = 70 }
+			}
+
+			welfare2 = {
+				name = welfare2
+				level = 2
+				cost = 100
+				picture = DSR_Welfare
+				cancel_if_invalid = yes
+				modifier = {
+					stability_factor = 0.025
+					consumer_goods_factor = 0.06
+					political_power_factor = 0.035
+					monthly_population = 0.025
+					weekly_casualties_war_support = 0.001
+				}
+				ai_will_do = { factor = 80 }
+			}
+
+			welfare3 = {
+				name = welfare3
+				level = 3
+				cost = 100
+				picture = HUN_social_welfare_idea
+				cancel_if_invalid = yes
+				modifier = {
+					stability_factor = 0.05
+					consumer_goods_factor = 0.12
+					monthly_population = 0.05
+					political_power_factor = 0.075
+					weekly_casualties_war_support = 0.003
+				}
+	
+				ai_will_do = { factor = 90 }
+			}
+
+			welfare4 = {
+				name = welfare4
+				level = 4
+				cost = 100
+				picture = liberal_welfare_2
+				cancel_if_invalid = yes
+				modifier = {
+					stability_factor = 0.075
+					consumer_goods_factor = 0.18
+					monthly_population = 0.075
+					political_power_factor = 0.10
+					weekly_casualties_war_support = 0.005
+				}
+				
+				ai_will_do = { factor = 100 }
+			}
+
+			welfare5 = {
+				name = welfare5
+				level = 5
+				cost = 100
+				picture = generic_welfare_state
+				cancel_if_invalid = yes
+				modifier = {
+					stability_factor = 0.1
+					consumer_goods_factor = 0.24
+					monthly_population = 0.10
+					political_power_factor = 0.125
+					weekly_casualties_war_support = 0.0075
+				}
+			
+				ai_will_do = { factor = 110 }
+			}
+		}
+
+		labor_regulations = {
+		law = yes
+		use_list_view = yes
+		removal_cost = -1
+
+		labor1 = {
+			name = labor1
+			level = 1
+			cost = 100
+			picture = forced_labor_economy
+			cancel_if_invalid = no
+			modifier = {
+				stability_factor = -0.075
+				production_factory_efficiency_gain_factor = 0.08
+				line_change_production_efficiency_factor = 0.08
+				production_factory_max_efficiency_factor = 0.04
+				political_power_gain = -0.06
+			}
+			ai_will_do = { factor = 70 }
+		}
+
+		labor2 = {
+			name = labor2
+			level = 2
+			cost = 100
+			default = yes
+			picture = labor_camps_2
+			cancel_if_invalid = yes
+			modifier = {
+				stability_factor = -0.05
+				production_factory_efficiency_gain_factor = 0.04
+				line_change_production_efficiency_factor = 0.04
+				production_factory_max_efficiency_factor = 0.02
+				political_power_gain = -0.02
+			}
+			ai_will_do = { factor = 80 }
+		}
+
+		labor3 = {
+			name = labor3
+			level = 3
+			cost = 100
+			picture = new_labor_standards
+			cancel_if_invalid = yes
+			modifier = {
+				stability_factor = 0.025
+				production_factory_efficiency_gain_factor = 0.02
+				line_change_production_efficiency_factor = 0.02
+				production_factory_max_efficiency_factor = -0.02
+				political_power_gain = 0.02
+			}
+			ai_will_do = { factor = 90 }
+		}
+
+		labor4 = {
+			name = labor4
+			level = 4
+			cost = 100
+			picture = mixed_economy
+			cancel_if_invalid = yes
+			modifier = {
+				stability_factor = 0.05
+				production_factory_efficiency_gain_factor = -0.04
+				production_factory_max_efficiency_factor = -0.04
+				production_factory_start_efficiency_factor = 0.04
+				political_power_gain = 0.04
+			}
+			ai_will_do = { factor = 100 }
+		}
+
+		labor5 = {
+			name = labor5
+			level = 5
+			cost = 100
+			picture = labor_econ
+			cancel_if_invalid = yes
+			modifier = {
+				stability_factor = 0.075
+				production_factory_efficiency_gain_factor = -0.08
+				line_change_production_efficiency_factor = -0.04
+				production_factory_start_efficiency_factor = 0.08
+				production_factory_max_efficiency_factor = -0.08
+				political_power_gain = 0.06
+			}
+			ai_will_do = { factor = 110 }
+		}
+		}
+
+		education_development = {
+		law = yes
+		use_list_view = yes
+		removal_cost = -1
+
+		education1 = {
+			name = education1
+			level = 1
+			cost = 100
+			picture = schools_burnt
+			cancel_if_invalid = no
+			modifier = {
+				equipment_conversion_speed = -0.08
+				research_speed_factor = -0.075
+				monthly_population = 0.1
+				experience_gain_factor = -0.10		
+			}
+			research_bonus = {
+				industry = -0.1
+				electronics = -0.1
+			}
+			ai_will_do = { factor = 70 }
+		}
+
+		education2 = {
+			name = education2
+			level = 2
+			cost = 100
+			default = yes
+			picture = rural_school
+			cancel_if_invalid = yes
+			modifier = {
+				equipment_conversion_speed = -0.05
+				research_speed_factor = -0.05
+				monthly_population = 0.075
+				experience_gain_factor = -0.08	
+				political_power_cost = 0.03	
+			}
+			research_bonus = {
+				industry = -0.05
+				electronics = -0.05
+			}
+			ai_will_do = { factor = 80 }
+		}
+
+		education3 = {
+			name = education3
+			level = 3
+			cost = 100
+			picture = generic_education
+			cancel_if_invalid = yes
+			modifier = {
+				equipment_conversion_speed = -0.025
+				research_speed_factor = -0.025
+				monthly_population = 0.035
+				experience_gain_factor = -0.04	
+				political_power_cost = 0.06	
+			}
+			research_bonus = {
+				industry = 0.025
+				electronics = -0.025
+			}
+			ai_will_do = { factor = 90 }
+		}
+
+		education4 = {
+			name = education4
+			level = 4
+			cost = 100
+			picture = educational_spending
+			cancel_if_invalid = yes
+			modifier = {
+				equipment_conversion_speed = 0.025
+				research_speed_factor = 0.03
+				monthly_population = -0.035
+				experience_gain_factor = 0.04	
+				political_power_cost = 0.09		
+			}
+			research_bonus = {
+				industry = 0.05
+				electronics = 0.05
+			}
+			ai_will_do = { factor = 100 }
+		}
+
+		education5 = {
+			name = education5
+			level = 5
+			cost = 100
+			picture = proletarian_religion_idea
+			cancel_if_invalid = yes
+			modifier = {
+				equipment_conversion_speed = 0.05
+				research_speed_factor = 0.08
+				monthly_population = -0.075
+				experience_gain_factor = 0.08	
+				political_power_cost = 0.12	
+			}
+			research_bonus = {
+				industry = 0.1
+				electronics = 0.1
+			}
+			ai_will_do = { factor = 110 }
+		}
+		}
+
+		segregation = {
+		law = yes
+		use_list_view = yes
+		removal_cost = -1
+
+		segregation1 = {
+			name = segregation1
+			level = 1
+			cost = 100
+			picture = ARG_maintain_neutrality
+			cancel_if_invalid = no
+			modifier = {
+				stability_factor = 0.05
+				resistance_target = -0.02
+			}
+			ai_will_do = { factor = 70 }
+		}
+
+		segregation2 = {
+			name = segregation2
+			level = 2
+			cost = 100
+			picture = LIB_whiter_pale
+			cancel_if_invalid = yes
+			modifier = {
+				stability_factor = 0.02
+				resistance_target = 0.01
+			}
+			ai_will_do = { factor = 80 }
+		}
+
+		segregation3 = {
+			name = segregation3
+			level = 3
+			cost = 100
+			default = yes
+			picture = local_segregation
+			cancel_if_invalid = yes
+			modifier = {
+				stability_factor = -0.02
+				resistance_target = 0.03
+			}
+			ai_will_do = { factor = 90 }
+		}
+
+		segregation4 = {
+			name = segregation4
+			level = 4
+			cost = 100
+			picture = ZAM_segregation_idea
+			cancel_if_invalid = yes
+			modifier = {
+				stability_factor = -0.05
+				resistance_target = 0.06
+				war_support_factor = 0.025
+			}
+			available = {
+				NOT = {
+					has_government = socialist
+					has_government = communism
+				}
+			}
+			ai_will_do = { factor = 100 }
+		}
+
+		segregation5 = {
+			name = segregation5
+			level = 5
+			cost = 100
+			picture = SAF_Apartheid_2
+			cancel_if_invalid = yes
+			modifier = {
+				stability_factor = -0.08
+				resistance_target = 0.1
+				war_support_factor = 0.05
+			}
+			available = {
+				NOT = {
+					has_government = socialist
+					has_government = communism
+				}
+			}
+			ai_will_do = { factor = 110 }
+		}
+		}
+
+		religion_status = {
+		law = yes
+		use_list_view = yes
+		removal_cost = -1
+
+		religion1 = {
+			name = religion1
+			level = 1
+			cost = 100
+			picture = ARG_state_atheism
+			cancel_if_invalid = no
+			modifier = { }
+			ai_will_do = { factor = 70 }
+		}
+
+		religion2 = {
+			name = religion2
+			level = 2
+			cost = 100
+			picture = IRE_secular
+			cancel_if_invalid = yes
+			modifier = {
+				stability_factor = 0.02
+			}
+			ai_will_do = { factor = 80 }
+		}
+
+		religion3 = {
+			name = religion3
+			level = 3
+			cost = 100
+			default = yes
+			picture = religious_freedom
+			cancel_if_invalid = yes
+			modifier = {
+				stability_factor = 0.04
+				war_support_factor = 0.02
+			}
+			available = {
+				NOT = {
+					has_government = communism
+				}
+			}
+			ai_will_do = { factor = 90 }
+		}
+
+		religion4 = {
+			name = religion4
+			level = 4
+			cost = 100
+			cancel_if_invalid = yes
+			picture = YUG_orthodox_church_support
+			modifier = {
+				stability_factor = 0.06
+				war_support_factor = 0.04
+			}
+			available = {
+				NOT = {
+					has_government = socialist
+					has_government = communism
+				}
+			}
+			ai_will_do = { factor = 100 }
+		}
+
+		religion5 = {
+			name = religion5
+			level = 5
+			cost = 100
+			picture = church_of_all_religions
+			cancel_if_invalid = yes
+			modifier = {
+				stability_factor = 0.08
+				war_support_factor = 0.06
+			}
+			available = {
+				NOT = {
+					has_government = socialist
+					has_government = communism
+				}
+			}
+			ai_will_do = { factor = 110 }
+		}
+	}
+	army_professionalism = {
+		law = yes
+		use_list_view = yes
+		removal_cost = -1
+
+		professionalism1 = {
+			name = professionalism1
+			level = 1
+			cost = 100
+			cancel_if_invalid = no
+			modifier = {
+				division_training_time_factor = -0.125
+				experience_gain_army_factor = -0.15
+				org_loss_when_moving = 0.08
+			}
+			ai_will_do = { factor = 70 }
+		}
+
+		professionalism2 = {
+			name = professionalism2
+			level = 2
+			cost = 100
+			cancel_if_invalid = yes
+			modifier = {
+				division_training_time_factor = -0.06
+				experience_gain_army_factor = -0.05
+				org_loss_when_moving = 0.04
+			}
+			available = {
+				#political_power_daily > 0.1
+			}
+			ai_will_do = { factor = 85 }
+		}
+
+		professionalism3 = {
+			name = professionalism3
+			level = 3
+			cost = 100
+			default = yes
+			cancel_if_invalid = no
+			modifier = {
+				experience_gain_army_factor = 0.025
+				max_planning_factor = 0.025
+			}
+			ai_will_do = { factor = 100 }
+		}
+
+		professionalism4 = {
+			name = professionalism4
+			level = 4
+			cost = 100
+			cancel_if_invalid = yes
+			modifier = {
+				experience_gain_army_factor = 0.05
+				max_planning_factor = 0.075
+				army_attack_factor = 0.025
+				army_defence_factor = 0.025
+				training_time_army_factor = 0.05
+			}
+			available = {
+			#political_power_daily > 0.25
+			}
+			ai_will_do = { factor = 95 }
+		}
+
+		professionalism5 = {
+			name = professionalism5
+			level = 5
+			cost = 100
+			cancel_if_invalid = yes
+			modifier = {
+				experience_gain_army_factor = 0.075
+				max_planning_factor = 0.10
+				army_attack_factor = 0.05
+				army_defence_factor = 0.05
+				training_time_army_factor = 0.10
+				conscription_factor = -0.03
+			}
+			available = {
+				#political_power_daily > 0.4
+			}
+			ai_will_do = { factor = 80 }
+		}
+
+		professionalism6 = {
+			name = professionalism6
+			level = 6
+			cost = 100
+			cancel_if_invalid = yes
+			modifier = {
+				experience_gain_army_factor = 0.10
+				max_planning_factor = 0.125
+				army_attack_factor = 0.075
+				army_defence_factor = 0.075
+				org_loss_when_moving = -0.05
+				training_time_army_factor = 0.125
+				conscription_factor = -0.06
+			}
+			available = {
+				#political_power_daily > 0.55
+			}
+			ai_will_do = { factor = 70 }
+		}
+	}
+
+	womens_rights = {
+		law = yes
+		use_list_view = yes
+		removal_cost = -1
+
+		special_protections = {
+			name = "special_protections"
+			picture = GFX_idea_special_protections
+			level = 1
+			cost = 75
+			cancel_if_invalid = yes
+			modifier = {
+				conscription_factor = 0.08
+				consumer_goods_expected_value = 0.08
+				industrial_capacity_factory = 0.1
+				monthly_population = -0.05
+				female_random_army_leader_chance = 0.06
+			}
+			available = { 
+				has_idea = special_protections
+			}
+			allowed_to_remove = {
+
+			}
+			ai_will_do = { factor = 80 }
+		}
+
+		total_equality = {
+			name = "total_equality"
+			picture = GFX_idea_total_equality
+			level = 2
+			cost = 75
+			cancel_if_invalid = yes
+			modifier = {
+				conscription_factor = 0.08
+				consumer_goods_expected_value = 0.05
+				industrial_capacity_factory = 0.05
+				female_random_army_leader_chance = 0.03
+			}
+			available = { 
+				has_idea = total_equality
+			}
+			allowed_to_remove = {
+				
+			}
+			ai_will_do = { factor = 80 }
+		}
+
+		partial_rights = {
+			name = "partial_rights"
+			picture = GFX_idea_partial_rights
+			level = 3
+			cost = 75
+			cancel_if_invalid = yes
+			modifier = {
+				conscription_factor = 0.03
+				stability_factor = 0.04
+				production_factory_efficiency_gain_factor = 0.05
+				line_change_production_efficiency_factor = 0.05
+			}
+			available = { 
+				has_idea = partial_rights
+			}
+			allowed_to_remove = {
+				
+			}
+			ai_will_do = { factor = 80 }
+		}
+		
+		restricted_rights = {
+			name = "restricted_rights"
+			picture = GFX_idea_restricted_rights
+			level = 4
+			cost = 75
+			default = yes
+			cancel_if_invalid = yes
+			modifier = {
+				consumer_goods_expected_value = -0.05
+				stability_factor = 0.03
+				line_change_production_efficiency_factor = 0.05
+			}
+			available = { 
+				has_idea = restricted_rights
+			}
+			allowed_to_remove = {
+				
+			}
+			ai_will_do = { factor = 80 }
+		}
+		
+		patriarchy = {
+			name = "patriarchy"
+			picture = GFX_idea_patriarchy
+			level = 5
+			cost = 75
+			cancel_if_invalid = yes
+			modifier = {
+				consumer_goods_expected_value = -0.05
+				war_stability_factor = 0.1
+				line_change_production_efficiency_factor = 0.05
+				conscription_factor = -0.1
+			}
+			available = { 
+				has_idea = patriarchy
+			}
+			allowed_to_remove = {
+			
+			}
+			ai_will_do = { factor = 80 }
+		}
+	}
+	
+	occupation_standards = {
+		law = yes
+		use_list_view = yes
+		removal_cost = -1
+		
+		occupation_standards1 = {
+			name = occupation_standards1
+			picture = GFX_idea_soci_dev1
+			level = 1
+			cost = 100
+			cancel_if_invalid = yes
+			modifier = {
+				resistance_decay = -0.10
+				army_org_factor = -0.05
+				required_garrison_factor = -0.075
+				resistance_target = 0.06
+				compliance_growth = -0.08
+				army_attack_factor = 0.05
+			}
+			on_add = {
+				econ_raise_debt1 = yes
+				set_temp_variable = {
+					var = payment_value
+					value = 0.15
+				}
+				pay_reserves = yes
+			}
+		}
+		occupation_standards2 = {
+			name = occupation_standards2
+			picture = GFX_idea_soci_dev1
+			level = 2
+			cost = 100
+			default = yes
+			cancel_if_invalid = yes
+			modifier = {
+				resistance_decay = -0.06
+				army_org_factor = -0.03
+				required_garrison_factor = -0.05
+				resistance_target = 0.04
+				compliance_growth = -0.06
+				army_attack_factor = 0.025
+			}
+			on_add = {
+				econ_raise_debt1 = yes
+				set_temp_variable = {
+					var = payment_value
+					value = 0.15
+				}
+				pay_reserves = yes
+			}
+			
+		}
+		occupation_standards3 = {
+			name = occupation_standards3
+			picture = GFX_idea_soci_dev1
+			level = 3
+			cost = 100
+			cancel_if_invalid = yes
+			modifier = {
+				resistance_decay = -0.02
+				army_org_factor = -0.015
+				required_garrison_factor = -0.025
+				resistance_target = 0.02
+				compliance_growth = -0.02
+				army_attack_factor = 0.01
+			}
+			on_add = {
+				econ_raise_debt1 = yes
+				set_temp_variable = {
+					var = payment_value
+					value = 0.15
+				}
+				pay_reserves = yes
+			}
+			
+		}
+		occupation_standards4 = {
+			name = occupation_standards4
+			picture = GFX_idea_soci_dev1
+			level = 4
+			cost = 100
+			cancel_if_invalid = yes
+			modifier = {
+				resistance_decay = 0.02
+				army_org_factor = 0.015
+				required_garrison_factor = 0.025
+				resistance_target = -0.02
+				compliance_growth = 0.02
+				army_attack_factor = -0.01
+			}
+			on_add = {
+				econ_raise_debt1 = yes
+				set_temp_variable = {
+					var = payment_value
+					value = 0.15
+				}
+				pay_reserves = yes
+			}
+		}
+		occupation_standards5 = {
+			name = occupation_standards5
+			picture = GFX_idea_soci_dev1
+			level = 5
+			cost = 100
+			cancel_if_invalid = yes
+			modifier = {
+				resistance_decay = 0.02
+				army_org_factor = 0.03
+				required_garrison_factor = 0.025
+				resistance_target = -0.04
+				compliance_growth = 0.06
+				army_attack_factor = -0.025
+			}
+			on_add = {
+				econ_raise_debt2 = yes
+				set_temp_variable = {
+					var = payment_value
+					value = 0.15
+				}
+				pay_reserves = yes
+			}
+		}
+		
+		occupation_standards6 = {
+			name = occupation_standards6
+			picture = GFX_idea_soci_dev1
+			level = 6
+			cost = 100
+			cancel_if_invalid = yes
+			modifier = {
+				resistance_decay = 0.10
+				army_org_factor = 0.05
+				required_garrison_factor = 0.075
+				resistance_target = -0.06
+				compliance_growth = 0.08
+				army_attack_factor = -0.05
+			}
+			on_add = {
+				econ_raise_debt3 = yes
+				set_temp_variable = {
+					var = payment_value
+					value = 0.15
+				}
+				pay_reserves = yes
+			}
+		}
+	}
+	paramilitary_law = {
+		law = yes
+		use_list_view = yes
+		removal_cost = -1
+		paramilitary_ban = {
+			name = "Paramilitaries Banned"
+			picture = GFX_idea_paramilitary_ban
+			cost = 100
+			cancel_if_invalid = no
+			default = yes
+			level = 1
+			modifier = {
+				mobilization_speed = -0.1
+				political_power_cost = 0.05
+				stability_factor = 0.075
+				drift_defence_factor = 0.1
+			}
+		}
+		regulated_paramilitary = {
+			name = "Regulated Paramilitaries"
+			picture = GFX_idea_regulated_paramilitary
+			cost = 100
+			cancel_if_invalid = no
+			level = 2
+			modifier = {
+				stability_factor = -0.03
+				war_support_factor = 0.05
+				mobilization_speed = 0.075
+				conscription_factor = 0.035
+			}
+		}
+		legal_paramilitary = {
+			name = "Legal Party Paramilitaries"
+			picture = GFX_idea_open_paramilitary
+			cost = 100
+			cancel_if_invalid = no
+			level = 3
+			modifier = {
+				conscription_factor = 0.10
+				stability_factor = -0.05
+				war_support_factor = 0.05
+				drift_defense_factor = -0.15
+			}
+		}
+		open_paramilitary = {
+			name = "Legal Citizen's Militias"
+			picture = GFX_idea_open_paramilitary
+			cost = 100
+			cancel_if_invalid = no
+			level = 4
+			modifier = {
+				conscription_factor = 0.15
+				stability_factor = -0.075
+				war_support_factor = -0.075
+				drift_defense_factor = -0.075
+			}
+		}
+		state_paramilitary = {
+			name = "State Paramilitary"
+			picture = GFX_idea_state_paramilitary
+			cost = 100
+			cancel_if_invalid = no
+			level = 5
+			modifier = {
+				conscription = 0.0075
+				war_support_factor = 0.05
+				political_power_cost = 0.15
+			}
+		}
+	}
+	union_policy = {
+	law = yes
+	use_list_view = yes
+	removal_cost = -1
+		unions_suppressed = {
+			name = unions_suppressed
+			level = 1
+			cost = 75
+			default = yes
+			cancel_if_invalid = yes
+			modifier = {
+				stability_factor = -0.05
+				production_factory_efficiency_gain_factor = 0.10
+				industrial_capacity_factory = 0.05
+				industrial_capacity_dockyard = 0.05
+				political_power_factor = -0.05
+			}
+			available = {
+				has_socialist_government = no
+			}
+			ai_will_do = { factor = 100 }
+		}
+
+		unions_restricted = {
+			name = unions_restricted
+			level = 2
+			cost = 75
+			cancel_if_invalid = yes
+			modifier = {
+				production_factory_efficiency_gain_factor = 0.05
+				political_power_factor = -0.02
+				production_factory_max_efficiency_factor = 0.02
+			}
+			ai_will_do = { factor = 80 }
+		}
+
+		unions_legal = {
+			name = unions_legal
+			level = 3
+			cost = 75
+			cancel_if_invalid = yes
+			modifier = {
+				political_power_factor = 0.03
+				line_change_production_efficiency_factor = -0.10
+				production_factory_max_efficiency_factor = 0.03
+			}
+			ai_will_do = { factor = 60 }
+		}
+
+		unions_empowered = {
+			name = unions_empowered
+			level = 4
+			cost = 75
+			cancel_if_invalid = yes
+			modifier = {
+				political_power_factor = 0.05
+				industrial_capacity_factory = 0.05
+				industrial_capacity_dockyard = 0.03
+				production_factory_efficiency_gain_factor = -0.15
+			}
+			ai_will_do = { factor = 50 }
+		}
+
+		state_unions = {
+			name = state_unions
+			level = 5
+			cost = 75
+			cancel_if_invalid = yes
+			modifier = {
+				production_factory_max_efficiency_factor = 0.05
+				production_factory_efficiency_gain_factor = -0.10
+				political_power_cost = 0.05
+				line_change_production_efficiency_factor = 0.10
+			}
+			ai_will_do = { factor = 50 }
+		}
+	}
+}

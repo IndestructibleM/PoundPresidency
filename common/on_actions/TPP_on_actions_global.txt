@@ -154,4 +154,11 @@ on_actions = {
 			}
 		}
 	}
+	on_monthly = {
+		effect = {
+			every_country = {
+				econ_production_setup = yes
+			}
+		}
+	}
 }

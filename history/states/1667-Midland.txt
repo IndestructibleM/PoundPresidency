@@ -1,0 +1,38 @@
+
+state={
+	id=1667
+	name="STATE_1667"
+	manpower = 125630
+	
+	
+	state_category = rural
+	
+	resources={
+		oil=25
+		aluminium=6
+	}
+
+
+	history={
+		owner = USA
+		buildings = {
+			infrastructure = 3 #was: 6
+			industrial_complex = 1
+		}
+		add_core_of = USA
+		add_core_of = CSA
+		add_core_of = TEX
+		victory_points = {
+			4955 2 #Odessa
+		}
+		victory_points = {
+			1998 2 #Midland
+		}
+	}
+
+	provinces={
+		1998 4955 6798 8064 12728 
+	}
+
+	local_supplies=0.0 
+}

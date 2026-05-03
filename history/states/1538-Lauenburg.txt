@@ -1,0 +1,31 @@
+
+state={
+	id=1538
+	name="STATE_1538"
+	manpower = 189620
+	resources={
+		steel=5 # was: 36
+		aluminium=2 # was: 12
+	}
+	
+	state_category = rural
+
+	history={
+		owner = GER
+		victory_points = {
+			11343 2 #Lauenburg
+		}
+		buildings = {
+			infrastructure = 3
+		}
+		add_core_of = GER
+		add_core_of = PRE
+		add_core_of = KSH
+	}
+
+	provinces={
+		9252 11260 11288 11316 11343 
+	}
+
+	local_supplies=0.0 
+}

@@ -1,0 +1,24 @@
+﻿l_english:
+BHI_democratic:5 "Bihar"
+BHI_democratic_DEF:5 "Bihar"
+BHI_democratic_ADJ:5 "Bihari"
+BHI_democratic_party:0 ""
+BHI_democratic_party_long:0 ""
+
+BHI_fascism:5 "Bihar"
+BHI_fascism_DEF:5 "Bihar"
+BHI_fascism_ADJ:5 "Bihari"
+BHI_fascism_party:0 ""
+BHI_fascism_party_long:0 ""
+
+BHI_communism:5 "Peasant Army of Bihar"
+BHI_communism_DEF:5 "The Peasant Army of Bihar"
+BHI_communism_ADJ:5 "Bihari"
+BHI_communism_party:0 "Peasant Army"
+BHI_communism_party_long:0 ""
+
+BHI_neutrality:5 "Bihar"
+BHI_neutrality_DEF:5 "Bihar"
+BHI_neutrality_ADJ:5 "Bihari"
+BHI_neutrality_party:0 ""
+BHI_neutrality_party_long:0 ""

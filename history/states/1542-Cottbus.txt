@@ -1,0 +1,38 @@
+
+state={
+	id=1542
+	name="STATE_1542"
+	manpower = 1256300
+
+	state_category = town
+
+
+	history={
+		owner = GER
+		victory_points = {
+			11415 3
+		}
+		victory_points = {
+			9496 1 # Seelow
+		}
+		buildings = {
+			infrastructure = 4
+			industrial_complex = 1
+		}
+		add_core_of = GER
+		add_core_of = PRE
+
+		1939.1.1 = {
+			buildings = {
+				arms_factory = 3
+				industrial_complex = 2
+			}
+		}
+	}
+
+	provinces={
+		478 9496 9428 11415 11444 11505
+	}
+
+	local_supplies=0.0 
+}

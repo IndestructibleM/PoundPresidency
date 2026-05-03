@@ -1,0 +1,21 @@
+state={
+	id=1049
+	name="STATE_1049"
+	manpower = 92560
+	
+	state_category = wasteland
+
+	history={
+		owner = IRQ
+		buildings = {
+			infrastructure = 1
+		}
+		add_core_of = IRQ
+	}
+	
+	provinces={
+		10744 12879 13368
+	}
+
+	local_supplies=0.0 
+}

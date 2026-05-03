@@ -1,0 +1,22 @@
+state = {
+	id = 877
+	name = "STATE_877" # Verkhoyansk
+
+	history = {
+		owner = SOV
+		buildings = {
+			infrastructure = 1
+		}
+		add_core_of = SOV
+		add_core_of = YAK
+	}
+
+	provinces = {
+		1745 2877 4878 6211 12549 12634 14693 14694 14695 14696 14697 14698 14699 14700 14701 14702 14703 14704 14705 14706 14707 14708 14709 14710 14711 14712 14713
+	}
+	manpower = 13055
+	buildings_max_level_factor = 1
+	state_category = pastoral
+	impassable = yes
+	local_supplies = 0.0 
+}

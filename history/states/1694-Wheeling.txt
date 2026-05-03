@@ -1,0 +1,22 @@
+state={
+	id=1694
+	name="STATE_1694"
+	manpower=86230
+	state_category = wasteland
+	history={
+		owner = USA
+		
+		buildings = {
+			infrastructure = 3
+		}
+		victory_points = {
+			6850 4 #Wheeling
+		}
+		add_core_of = USA
+		add_core_of = WVS
+	}
+	provinces={
+		6850
+	}
+	buildings_max_level_factor=1.000
+}

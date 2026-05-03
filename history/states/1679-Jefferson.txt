@@ -1,0 +1,27 @@
+
+state={
+	id=1679
+	name="STATE_1679"
+	manpower = 76200
+	
+	state_category = pastoral
+
+	history={
+		owner = USA
+		buildings = {
+			infrastructure = 3
+		}
+		
+		victory_points = {
+			12361 2 #Jefferson City
+		}
+		add_core_of = USA
+		add_core_of = MOS
+	}
+
+	provinces={
+		12361
+	}
+
+	local_supplies=0.0 
+}

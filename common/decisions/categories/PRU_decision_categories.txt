@@ -1,0 +1,22 @@
+
+PRU_pastaza_conflict = {
+	allowed = {
+		original_tag = PRU
+	}
+
+	icon = GFX_decision_category_border_conflicts
+	priority = 100 
+
+	visible = {
+		OR = {
+			NOT = { owns_state = 490 }
+			NOT = { owns_state = 1182 }
+			NOT = { owns_state = 1188 }
+			NOT = { owns_state = 1395 }
+			NOT = { owns_state = 1396 }
+			NOT = { owns_state = 1398 }
+		}
+		is_subject = no
+	}
+}
+

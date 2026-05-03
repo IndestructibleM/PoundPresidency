@@ -1,0 +1,26 @@
+state = {
+
+	id=1315
+	name="STATE_1315"
+	manpower = 1062300
+	
+	state_category = rural
+	history=
+	{
+		owner = JAP
+		buildings = {
+			infrastructure = 2
+		}
+		victory_points = {
+			11992 1
+		}
+
+		add_core_of = KOR
+
+	}
+	provinces={
+		7175 11992
+	}
+
+	local_supplies=0.0 
+}

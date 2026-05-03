@@ -1,0 +1,28 @@
+
+state={
+	id=1630
+	name="STATE_1630"
+	manpower = 728
+	
+	state_category = wasteland
+
+	history={
+		owner = USA
+		buildings = {
+			infrastructure = 1
+		}
+		victory_points = {
+			14784 1 #Plummer
+		}
+		add_core_of = USA
+		add_core_of = IDS
+		add_core_of = CSC
+		add_core_of = CDA
+	}
+
+	provinces={
+		14784
+	}
+
+	local_supplies=0.0 
+}

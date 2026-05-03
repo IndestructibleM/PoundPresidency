@@ -1,0 +1,39 @@
+
+state={
+	id=609
+	name="STATE_609" # East Hebei
+	manpower = 1875370
+
+	resources = {
+		coal = 2 # local bituminous coal being developed in a factory
+	}
+	
+	state_category = town
+
+	history={
+		owner = JAP
+		#add_core_of = EHE
+		add_core_of = CHI
+		add_core_of = PRC
+		buildings = {
+			infrastructure = 3 #was: 5
+		}
+		victory_points = {
+			11822 3
+		}
+		victory_points = {
+			6969 1
+		}
+		
+		1938.2.1 = {
+			owner = JAP
+			controller = JAP
+		}
+	}
+
+	provinces={
+		900 11761 11822 15508
+	}
+
+	local_supplies=0.0 
+}

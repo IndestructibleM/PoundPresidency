@@ -1,0 +1,16 @@
+characters = {
+	NCS_john_c_b_ehringhaus = {
+		name = "John C. B. Ehringhaus"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/Europe/portrait_europe_generic_land_13.dds"
+			}
+		}
+		country_leader = {
+			ideology = liberalism
+			expire = "1950.1.1.1"
+			id = -1
+		}
+	}
+}
+	

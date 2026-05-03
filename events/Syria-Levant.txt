@@ -1,0 +1,51 @@
+###########################
+# Syria Events
+###########################
+
+add_namespace = SYR_political_events
+add_namespace = SYR_news
+# Ibrahim Hanunu Memorial Service
+country_event = {
+	id = SYR_political_events.1
+	title = SYR_political_events.1.t
+	desc = SYR_political_events.1.d
+	picture = GFX_report_event_syria_ibrahim_hanunu 
+
+	fire_only_once = yes
+
+	is_triggered_only = yes
+
+	immediate = {
+		hidden_effect = {
+			country_event = {
+				id = SYR_political_events.2
+				days = 7
+			}
+		}
+		
+	}
+	option = {
+		name = SYR_political_events.1.a
+		add_stability = 0.05
+		FRA={
+		    add_political_power = -25
+		}
+	}
+}
+country_event = {
+	id = SYR_political_events.2
+	title = SYR_political_events.2.t
+	desc = SYR_political_events.2.d
+	picture = GFX_report_event_syria_ibrahim_hanunu 
+
+	fire_only_once = yes
+
+	is_triggered_only = yes
+
+	option = {
+		name = SYR_political_events.2.a
+		FRA={
+		    add_political_power = -25
+		}
+	}
+}

@@ -1,0 +1,27 @@
+state={
+	id=1372
+	name="STATE_1372"
+	manpower=44250
+	state_category = small_island
+
+	history={
+		add_core_of = STV
+		add_core_of = BAS
+		owner = ENG
+		buildings = {
+			infrastructure = 2
+			379 = {
+				naval_base = 1
+			}
+		}
+		victory_points = {
+			379 1
+		}
+	}
+	
+	provinces={
+		379
+	}
+
+	local_supplies=0.0 
+}

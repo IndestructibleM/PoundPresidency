@@ -1,0 +1,25 @@
+state = {
+	id = 1125
+	name = "STATE_1125"
+
+	history = {
+		owner = SOV
+		victory_points = {
+			654 1
+		}
+		buildings = {
+			infrastructure = 2
+		}
+		add_core_of = SOV
+		add_core_of = GEO
+	}
+
+	provinces = {
+		654 772 3656 3658 9626 9632 13673 14483
+	}
+	manpower = 502356
+	buildings_max_level_factor = 1.000
+	state_category = rural
+
+	local_supplies = 0.0 
+}

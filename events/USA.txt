@@ -4,7 +4,93 @@
 
 add_namespace = usa
 
-# Amelia Eartharts wants to join the USAAC
+add_namespace = fdrlives
+
+country_event = {
+	id = fdrlives.0
+	title = fdrlives.0.t
+	desc = fdrlives.0.d
+
+	fire_only_once = yes
+	
+	is_triggered_only = yes 
+
+	option = { 
+		name = fdrlives.0.a
+		add_popularity = { ideology = fascism popularity = 0.05 }
+		set_country_flag = Roosevelt_Lived
+		mark_focus_tree_layout_dirty = yes
+	}
+}
+
+country_event = {
+	id = fdrlives.1
+	title = fdrlives.1.t
+	desc = fdrlives.1.d
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = { 
+		name = fdrlives.1.a
+		ai_chance = { factor = 100 }
+	}
+	option = { 
+		name = fdrlives.1.b
+		ai_chance = { factor = 0 }
+		add_political_power = -200
+		hidden_effect = { 
+			country_event = { id = fdrlives.2 days = 60 } 
+		}
+	}
+}
+
+country_event = {
+	id = fdrlives.2
+	title = fdrlives.2.t
+	desc = fdrlives.2.d
+
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+
+	option = { 
+		name = fdrlives.2.a
+		add_political_power = 100
+		ai_chance = { factor = 100 }
+	}
+	option = { 
+		name = fdrlives.2.b
+		ai_chance = { factor = 0 }
+		add_political_power = -100
+		hidden_effect = { 
+			country_event = { id = fdrlives.0 days = 60 } 
+		}
+	}
+}
+
+country_event = {
+	id = fdrlives.5
+	title = fdrlives.5.t
+	desc = fdrlives.5.d
+
+	fire_only_once = yes
+	
+	is_triggered_only = yes
+
+	option = { 
+		name = fdrlives.5.a
+		ai_chance = { factor = 100 }
+	}
+	option = { 
+		name = fdrlives.5.b
+		ai_chance = { factor = 0 }
+	}
+	option = { 
+		name = fdrlives.5.c
+		ai_chance = { factor = 0 }
+	}
+}
 country_event = {
 	id = usa.1
 	title = usa.1.t
@@ -210,6 +296,14 @@ country_event = {
 	immediate = {
 		hidden_effect = {
 		remove_ideas = USA_rise_of_pound
+		set_temp_variable = {
+			 var = PopFrontSupport
+			 value = party_popularity@socialist
+		}
+		add_to_temp_variable = {
+			var = PopFrontSupport
+			value = party_popularity@communism
+		}
 			if = {
 				limit = {
 					OR = {
@@ -226,6 +320,9 @@ country_event = {
 	}
 
 	option = { 	
+		trigger = {
+			democratic > 0.25
+		}
 		name = usa.6.a
 		ai_chance = {
 			factor = 75
@@ -262,6 +359,9 @@ country_event = {
 	}
 
 	option = {
+		trigger = {
+			always = no
+		}
 		name = usa.6.b
 		ai_chance = {
 			factor = 25
@@ -274,7 +374,9 @@ country_event = {
 				}
 			}
 		}		
-		set_party_name = { ideology = democratic long_name = USA_republican_party name = USA_republican_party }
+		set_politics = {
+			ruling_party = democratic 
+		}
 		set_variable = { election_factor = random }
 		add_to_variable = { election_factor = -0.6 }
 		USA_election_senate = yes
@@ -308,6 +410,9 @@ country_event = {
 	}
 	option = {
 		name = "Lightning Strikes this Election!"
+		trigger = {
+			fascism > 0.25
+		}
 		ai_chance = {
 			factor = 20
 			modifier = {
@@ -324,7 +429,7 @@ country_event = {
 			elections_allowed = no
 			last_election = "1936.11.5"
 			election_frequency = 48
-			long_name = "American National Action Front "
+			long_name = "American National Action Front"
 			name = "ANAF"
 		}
 		hidden_effect = {
@@ -335,6 +440,43 @@ country_event = {
 			popularity = 0.1	
 		}
 		promote_character = USA_Ezra_Pound
+	}
+	option = {
+		trigger = {
+			check_variable = {
+				PopFrontSupport > 0.25
+			}
+		}
+		name = "The Popular Front Wins the Vote!"
+		ai_chance = {
+			factor = 10
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+				has_game_rule = {
+					rule = USA_ai_behavior
+					option = DEFAULT
+				}
+			}
+		}		
+		set_politics = {
+			ruling_party = socialist
+			elections_allowed = no
+			last_election = "1936.11.5"
+			election_frequency = 48
+		}
+		hidden_effect = {
+			set_cosmetic_tag = USA_democratic
+		}
+		add_popularity = {
+			ideology = socialist
+			popularity = 0.1	
+		}
+		add_popularity = {
+			ideology = communism
+			popularity = 0.05	
+		}
+		promote_character = USA_earl_browder
 	}
 }
 
@@ -800,6 +942,7 @@ country_event = {
 		date > 1945.3.29
 		has_idea = new_deal
 		has_government = democratic
+		NOT = { has_country_flag = Roosevelt_Lived }
 	}
 
 	fire_only_once = yes
@@ -1686,157 +1829,7 @@ country_event = {
 	}
 }
 # senator wants investment in their state - hidden dispatch event
-country_event = {
-	id = usa.60
-	hidden = yes
-	is_triggered_only = yes
-	trigger = {
-		tag = USA
-		NOT = {
-			OR = {
-				has_completed_focus = USA_voter_registration_act
-				has_completed_focus = USA_union_representation_act
-				has_completed_focus = USA_total_action_state
-			}
-		}
-	}
 
-	immediate = {
-		set_country_flag = USA_congress_investment
-		if = {
-			limit = { has_event_target = USA_congress_investment_state }
-			clear_global_event_target = USA_congress_investment_state
-		}
-		random_list = {
-			25 = {
-				modifier = {
-					NOT = {
-						any_owned_state = {
-							is_core_of = ROOT
-							is_controlled_by = ROOT
-							free_building_slots = {
-								building = industrial_complex
-								size > 0
-								include_locked = no
-							}
-						}
-					}
-					factor = 0
-				}
-				random_owned_state = {
-					limit = {
-						is_core_of = ROOT
-						is_controlled_by = ROOT
-						free_building_slots = {
-							building = industrial_complex
-							size > 0
-							include_locked = no
-						}
-					}
-					
-					save_global_event_target_as = USA_congress_investment_state
-					state_event = { id = usa.61 trigger_for = controller }
-				}
-			}
-			25 = {
-				modifier = {
-					NOT = {
-						any_owned_state = {
-							is_core_of = ROOT
-							is_controlled_by = ROOT
-							free_building_slots = {
-								building = arms_factory
-								size > 0
-								include_locked = no
-							}
-						}
-					}
-					factor = 0
-				}
-				modifier = {
-					has_completed_focus = USA_military_construction
-					factor = 2
-				}
-				random_owned_state = {
-					limit = {
-						is_core_of = ROOT
-						is_controlled_by = ROOT
-						free_building_slots = {
-							building = arms_factory
-							size > 0
-							include_locked = no
-						}
-					}
-					save_global_event_target_as = USA_congress_investment_state
-					state_event = { id = usa.62 trigger_for = controller }
-				}
-			}
-			25 = { 
-				modifier = {
-					NOT = {
-						any_owned_state = {
-							is_core_of = ROOT
-							is_controlled_by = ROOT
-							is_coastal = yes
-							free_building_slots = {
-								building = dockyard
-								size > 0
-								include_locked = no
-							}
-						}
-					}
-					factor = 0
-				}
-				random_owned_state = {
-					limit = {
-						is_core_of = ROOT
-						is_controlled_by = ROOT
-						free_building_slots = {
-							building = dockyard
-							size > 0
-							include_locked = no
-						}
-					}
-					save_global_event_target_as = USA_congress_investment_state
-					state_event = { id = usa.64 trigger_for = controller }
-				}
-			}
-			25 = {
-				modifier = {
-					NOT = {
-						any_owned_state = {
-							is_core_of = ROOT
-							free_building_slots = {
-								building = infrastructure
-								size > 0
-							}
-						}
-					}
-					factor = 0
-				}
-				modifier = {
-					has_completed_focus = USA_USACE_projects
-					factor = 2
-				}
-				random_owned_state = {
-					limit = {
-						is_core_of = ROOT
-						is_controlled_by = ROOT
-						free_building_slots = {
-							building = infrastructure
-							size > 0
-						}
-					}
-					save_global_event_target_as = USA_congress_investment_state
-					state_event = { id = usa.63 trigger_for = controller }
-				}
-			}
-		}
-		hidden_effect = {
-			country_event = { id = usa.50 days = 70 random_days = 10 }
-		}
-	}
-}
 # senator wants investment in civilian factory
 country_event = {
 	id = usa.61

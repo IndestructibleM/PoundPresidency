@@ -1,0 +1,22 @@
+
+state={
+	id=1080
+	name="STATE_1080" # Voronezh
+	manpower = 685600
+	
+	state_category = rural
+
+	history={
+		owner = SOV
+		buildings = {
+			infrastructure = 3 #was: 5
+		}
+		add_core_of = SOV
+	}
+
+	provinces={
+		3469 6494 6591 11412 11475 
+	}
+
+	local_supplies=0.0 
+}

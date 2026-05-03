@@ -1,0 +1,25 @@
+﻿l_english:
+
+MDR_democratic:5 "Dravidian"
+MDR_democratic_DEF:5 "Dravidian"
+MDR_democratic_ADJ:5 "Dravidian"
+MDR_democratic_party:0 ""
+MDR_democratic_party_long:0 ""
+
+MDR_fascism:5 "Dravidian"
+MDR_fascism_DEF:5 "Dravidian"
+MDR_fascism_ADJ:5 "Dravidian"
+MDR_fascism_party:0 ""
+MDR_fascism_party_long:0 ""
+
+MDR_communism:5 "Dravidian Republic"
+MDR_communism_DEF:5 "The Dravidian Republic"
+MDR_communism_ADJ:5 "Dravidian"
+MDR_communism_party:0 ""
+MDR_communism_party_long:0 ""
+
+MDR_neutrality:5 "Dravidian"
+MDR_neutrality_DEF:5 "Dravidian"
+MDR_neutrality_ADJ:5 "Dravidian"
+MDR_neutrality_party:0 ""
+MDR_neutrality_party_long:0 ""

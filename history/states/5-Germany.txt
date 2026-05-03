@@ -1,0 +1,27 @@
+
+state={
+	id=5
+	name="STATE_5"
+	manpower = 112300
+	state_category = rural
+
+	history={
+		victory_points = {
+			9346 1
+		}
+		owner = GER
+		controller = GER
+		
+		buildings = {
+			infrastructure = 3
+		}
+		add_core_of = GER
+		add_core_of = PRE
+	}
+
+	provinces={
+		3351 9346 
+	}
+
+	local_supplies=0.0 
+}

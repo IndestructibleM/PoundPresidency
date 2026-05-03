@@ -1,0 +1,27 @@
+state={
+	id=1374
+	name="STATE_1374"
+	manpower = 216790
+
+	state_category = rural
+
+	history={
+		add_core_of = GDL
+		owner = FRA
+		victory_points = {
+			177 3
+		}
+		buildings = {
+			infrastructure = 2
+			177 = {
+				naval_base = 1
+			}
+		}
+	}
+	
+	provinces={
+		177
+	}
+
+	local_supplies=0.0 
+}

@@ -1,0 +1,28 @@
+
+state={
+	id=1065
+	name="STATE_1065" # Nevel
+	manpower = 120133
+	
+	state_category = rural
+
+	history={
+		owner = SOV
+		buildings = {
+			infrastructure = 3 #was: 5
+		}
+		add_core_of = SOV
+		victory_points = {
+			3333 1
+		}
+		victory_points = {
+			11259 1
+		}
+	}
+
+	provinces={
+		3310 3333 11259
+	}
+
+	local_supplies=0.0 
+}

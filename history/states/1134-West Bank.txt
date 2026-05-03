@@ -1,0 +1,27 @@
+
+state={
+	id=1134
+	name="STATE_1134" #West Bank
+	manpower = 312650
+	
+	state_category = rural
+
+	history={
+		owner = PAL
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 1
+		}
+		victory_points = {
+			1086 1 
+		}
+		add_core_of = PAL
+		add_claim_by = ISR
+	}
+
+	provinces={
+		1086 13681
+	}
+
+	local_supplies=0.0 
+}

@@ -1,0 +1,22 @@
+state={
+	id=1432
+	name="STATE_1432"
+	provinces={
+		13916
+	}
+	manpower=1450
+	buildings_max_level_factor=1.000
+	state_category = wasteland
+	history={
+		owner = MAN
+		add_core_of = CHI
+		add_core_of = MAN
+		add_core_of = PRC
+		buildings = {
+			infrastructure = 2
+		}
+
+	}
+
+	local_supplies=0.0 
+}

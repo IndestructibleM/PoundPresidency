@@ -1,0 +1,42 @@
+
+state={
+	id=391
+	name="STATE_391"
+	manpower = 956300
+	state_category = town
+
+	resources={
+		steel=90
+	}
+
+	history={
+		owner = USA
+		buildings = {
+			infrastructure = 3 #was: 6
+			industrial_complex = 2
+		}
+		victory_points = {
+			1719 8 #Saint Paul
+		}
+		victory_points = {
+			1734 5 #Duluth
+		}
+		victory_points = {
+			7896 2 #Hibbing
+		}
+		victory_points = {
+			6827 1 #Brainerd
+		}
+		victory_points = {
+			12597 1 #Crookston
+		}
+		add_core_of = USA
+		add_core_of = MNS
+	}
+
+	provinces={
+		1719 1734 6767 6827 7896 10618 10719 11667 12550 12588 12597 
+	}
+
+	local_supplies=0.0 
+}

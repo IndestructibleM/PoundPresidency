@@ -1,0 +1,43 @@
+
+state = {
+	id = 1308
+	name = "STATE_1308"
+	manpower = 1054300
+	
+	state_category = large_town
+	resources = {
+		steel = 6
+		aluminium = 4
+	}
+
+	history = {
+		owner = ITA
+		victory_points = {
+			6788 15 #Genoa
+		}
+		buildings = {
+			infrastructure = 4 #was: 7
+			arms_factory = 2
+			industrial_complex = 1
+			dockyard = 2
+			6788 = {
+				naval_base = 8
+			}
+		}
+		add_core_of = ITA
+		add_core_of = SPM
+		1939.1.1 = {
+			buildings = {
+				arms_factory = 2
+				industrial_complex = 1
+				dockyard = 3
+			}
+		}
+	}
+
+	provinces = {
+		3772 6788 11891 14597
+	}
+
+	local_supplies = 0.0 
+}

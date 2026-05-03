@@ -1,0 +1,56 @@
+
+state={
+	id=608
+	name="STATE_608"
+	manpower = 2748400
+	
+	state_category = city
+
+	history={
+		owner = CHI
+		add_core_of = CHI
+		add_core_of = PRC
+		
+		1936.1.1 = {
+			IF = {
+				limit = {
+					has_dlc = "No Compromise, No Surrender"
+				}
+				transfer_state_to = HBC
+				add_core_of = HBC
+			}
+		}
+		
+		buildings = {
+			infrastructure = 3 #was: 5
+			industrial_complex = 1
+			air_base = 3
+			
+			9843 = {
+                landmark_forbidden_city = {
+                    level = 1
+                    allowed = {
+                        has_dlc = "No Compromise, No Surrender"
+                    }
+                }
+			}
+		}
+		victory_points = {
+			9843 30 #Beijing
+		}
+		victory_points = {
+			15507 2 #Langfang
+		}
+
+		1938.10.25 = {
+			owner = CHI
+			controller = JAP
+		}
+	}
+
+	provinces={
+		9843 15507
+	}
+
+	local_supplies=1.0 
+}

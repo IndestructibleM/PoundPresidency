@@ -1,0 +1,31 @@
+﻿capital = 1677
+
+set_research_slots = 2
+set_stability = 0.60
+set_war_support = 0.25
+
+# Starting tech
+set_technology = {
+	infantry_weapons = 1
+	infantry_weapons1 = 1
+}
+
+set_politics = {
+	ruling_party = democratic
+	last_election = "1932.11.8"
+	election_frequency = 48
+	elections_allowed = yes
+}
+set_popularities = {
+	democratic = 65
+	communism = 5
+	neutrality = 30
+}
+
+add_ideas = {
+	civilian_economy
+	volunteer_only
+	free_trade
+}
+
+recruit_character = SDS_tom_berry

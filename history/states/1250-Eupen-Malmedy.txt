@@ -1,0 +1,29 @@
+
+state={
+	id=1250
+	name="STATE_1250"
+	manpower = 42560
+	
+	state_category = rural
+
+	history={
+		owner = BEL
+		buildings = {
+			infrastructure = 3
+			
+			# Gileppe Dam
+			3488 = { dam = 1 }
+		}
+		add_core_of = BEL
+		add_core_of = WAL
+		add_core_of = GER
+		add_core_of = RHI
+		add_core_of = PRE
+	}
+
+	provinces={
+		3488
+	}
+
+	local_supplies=0.0 
+}

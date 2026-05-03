@@ -1,0 +1,49 @@
+
+state={
+	id=386
+	name="STATE_386"
+	manpower = 1139135
+	
+	state_category = town
+
+	history={
+		owner = USA
+		buildings = {
+			infrastructure = 3 #was: 6
+			arms_factory = 1
+			industrial_complex = 1
+			dockyard = 1
+			air_base = 5
+			7315 = {
+				naval_base = 3
+			}
+		}
+		victory_points = {
+			7315 10 #Seattle
+		}
+		victory_points = {
+			7386 5 #Tacoma
+		}
+		victory_points = {
+			10157 3 #Bellingham
+		}
+		victory_points = {
+			10155 3 #Yakima 
+		}
+		victory_points = {
+			10271 2 #Vancouver
+		}
+		victory_points = {
+			12214 1 #Wenatchee
+		}
+		add_core_of = USA
+		add_core_of = WAS
+		add_core_of = CSC
+	}
+
+	provinces={
+		1320 7255 7315 7386 7414 7442 10155 10157 10271 10690 12155 12214 13712 14765 14766
+	}
+
+	local_supplies=0.0 
+}

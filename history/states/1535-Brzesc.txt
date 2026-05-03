@@ -1,0 +1,29 @@
+state={
+	id=1535
+	name="STATE_1535"
+
+	history={
+		owner = POL
+		buildings = {
+			infrastructure = 2
+
+		}
+		victory_points = {
+			3392 4 #Brześć nad Bugiem/Brest
+		}
+		victory_points = {
+			11528 2 #Kobryń/Kobryn
+		}
+		add_core_of = POL
+		add_core_of = BLR
+	}
+
+	provinces={
+		3392 11528 13994 14503
+	}
+	manpower=199235
+	buildings_max_level_factor=1.000
+	state_category=rural
+
+	local_supplies=0.0 
+}

@@ -1,0 +1,40 @@
+
+state={
+	id=200
+	name="STATE_200" # Zaporozhe
+	manpower = 1294082
+	state_category = town
+
+	history={
+		owner = SOV
+		victory_points = {
+			11405 8 #Zaporozhye
+		}
+		victory_points = {
+			6596 4 #Melitopol
+		}
+		victory_points = {
+			9571 4 #Berdiansk
+		}
+		buildings = {
+			infrastructure = 3 #was: 5
+			air_base = 3
+			
+			# Dnieprostroi Hydroelectric Station
+			11405 = { dam = 1 }
+		}
+		add_core_of = SOV
+		add_core_of = UKR
+		1939.1.1 = {
+			buildings = {
+				industrial_complex = 1
+			}
+		}
+	}
+
+	provinces={
+		429 472 588 3399 3767 6596 9571 9729 11405 11700 14518 14761
+	}
+
+	local_supplies=0.0 
+}

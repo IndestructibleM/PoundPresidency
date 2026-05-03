@@ -1,0 +1,22 @@
+
+state={
+	id=1394
+	name="STATE_1394"
+	manpower = 12420
+
+	state_category = pastoral
+
+	history={
+		owner = FRA
+		add_core_of = CAY
+		buildings = {
+			infrastructure = 1
+		}
+	}
+
+	provinces={
+		4934 13854
+	}
+
+	local_supplies=0.0 
+}

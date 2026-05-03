@@ -1,0 +1,41 @@
+
+state={
+	id=1476
+	name="STATE_1476"
+	manpower = 814200
+	
+	state_category = rural
+
+	history={
+		owner = MEN
+		add_core_of = MEN
+		
+		add_core_of = CHI
+		add_core_of = PRC
+		
+		1936.1.1 = {
+			IF = {
+				limit = {
+					has_dlc = "No Compromise, No Surrender"
+				}
+				add_core_of = HBC
+			}
+		}
+		
+		buildings = {
+			infrastructure = 2
+		}
+		
+		1936.5.12 = {
+			owner = MEN
+			controller = MEN
+			add_core_of = MEN
+		}
+	}
+
+	provinces={
+		828 952 1489 4495 10397 13379
+	}
+
+	local_supplies=0.0 
+}

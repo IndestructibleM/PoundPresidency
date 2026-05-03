@@ -1,0 +1,26 @@
+state={
+	id=1482
+	name="STATE_1482"
+	manpower = 432100
+	
+	state_category = rural
+	history={
+		victory_points = {
+			9316 2 #Ostrołęka
+		}
+		victory_points = {
+			6567 2 #Pułtusk
+		}
+		owner = POL
+		buildings = {
+			infrastructure = 3
+		}
+		add_core_of = POL
+	}
+
+	provinces={
+		6567 9290 9316
+	}
+
+	local_supplies=0.0 
+}

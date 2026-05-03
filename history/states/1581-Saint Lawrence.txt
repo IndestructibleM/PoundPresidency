@@ -1,0 +1,21 @@
+state={
+	id=1581
+	name="STATE_1581"
+
+	history={
+		owner = USA
+		buildings = {
+			infrastructure = 1
+		}
+		#add_core_of = USA
+		add_core_of = AKS
+	}
+
+	provinces={
+		14353
+	}
+	manpower=1205
+	state_category=tiny_island
+
+	local_supplies=0.0 
+}

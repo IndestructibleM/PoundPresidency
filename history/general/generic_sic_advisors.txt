@@ -1,0 +1,203 @@
+
+# Generic 2ICs
+every_possible_country = {
+	generate_character = {
+		token_base = empowered_legislative 
+		name = "Empowered Legislature"
+		advisor = {
+			slot = second_command
+			idea_token = Generic_dem_sic
+			traits = { dem_sic_trait }
+			cost = 50
+			can_be_fired = no
+			available = { OR = { has_government = democratic has_government = conservative } }
+		}
+		portraits = {
+			army = { small = GFX_idea_generic_empowered_legislature }
+		}
+	}
+	generate_character = {
+		token_base = supreme_soviet 
+		name = "Supreme Soviet"
+		advisor = {
+			slot = second_command
+			idea_token = Generic_com_sic
+			traits = { com_sic_trait }
+			cost = 50
+			available = { OR = { has_government = socialist has_government = communism } }
+			can_be_fired = no
+		}
+		portraits = {
+			army = { small = GFX_idea_generic_empowered_executive }
+		}
+	}
+	generate_character = {
+		token_base = empowered_executive 
+		name = "Empowered Executive"
+		advisor = {
+			slot = second_command
+			idea_token = Generic_auth_sic
+			traits = { auth_sic_trait }
+			cost = 50
+			available = { OR = { has_government = neutrality has_government = reactionary } }
+			can_be_fired = no
+		}
+		portraits = {
+			army = { small = GFX_idea_generic_empowered_trade_unions }
+		}
+	}
+	generate_character = {
+		token_base = leaer_principle 
+		name = "Leader Principle"
+		advisor = {
+			slot = second_command
+			idea_token = Generic_fash_sic
+			traits = { fash_sic_trait }
+			cost = 50
+			can_be_fired = no
+			available = { OR = { has_government = fascism } }
+		}
+		portraits = {
+			army = { small = GFX_idea_generic_empowered_trade_unions }
+		}
+	}
+}
+
+ENG = {
+	set_autonomy = {
+		target = MAL
+		autonomous_state = autonomy_colony
+	}
+	set_autonomy = {
+		target = RAJ
+		autonomous_state = autonomy_puppet
+		freedom_level = 0.35
+	}
+	set_autonomy = {
+		target = OMA
+		autonomous_state = autonomy_colony
+		freedom_level = 0.35
+	}
+	set_autonomy = {
+		target = CAN
+		autonomous_state = autonomy_dominion
+		freedom_level = 0.4
+	}
+	set_autonomy = {
+		target = SAF
+		autonomous_state = autonomy_dominion
+		freedom_level = 0.4
+	}
+	set_autonomy = {
+		target = AST
+		autonomous_state = autonomy_dominion
+		freedom_level = 0.2
+	}
+	set_autonomy = {
+		target = NZL
+		autonomous_state = autonomy_dominion
+		freedom_level = 0.2
+	}
+	set_autonomy = {
+		target = BRM
+		autonomous_state = autonomy_colony
+		freedom_level = 0.2
+	}
+	set_autonomy = {
+		target = EGY
+		autonomous_state = autonomy_dominion
+		freedom_level = 0.2
+	}
+	set_autonomy = {
+		target = PAL
+		autonomous_state = autonomy_colony
+		freedom_level = 0.5
+	}
+	set_autonomy = {
+		target = JOR
+		autonomous_state = autonomy_dominion
+		freedom_level = 0.2
+	}
+	set_autonomy = {
+		target = KUW
+		autonomous_state = autonomy_colony
+		freedom_level = 0.5
+	}
+	set_autonomy = {
+		target = NIR
+		autonomous_state = autonomy_integrated_puppet
+		freedom_level = 0.2
+	}
+	
+	add_to_tech_sharing_group = commonwealth_research
+}
+
+EGY = {
+	set_politics = { ruling_party = reactionary }
+	set_popularities = {
+		neutrality = 25
+		fascism = 20
+		communism = 5
+		reactionary = 50
+	}
+}
+
+CAN = {
+	set_popularities = {
+		democratic = 46
+		conservative = 30
+		reactionary = 4
+		socialist = 10
+		neutrality = 9
+		communism = 1
+	}
+}
+AST = {
+	set_popularities = {
+		democratic = 36
+		conservative = 14
+		reactionary = 5
+		socialist = 41
+		neutrality = 3
+		communism = 1
+	}
+}
+NZL = {
+	set_popularities = {
+		democratic = 17
+		conservative = 21
+		reactionary = 8
+		socialist = 51
+		neutrality = 2
+		communism = 1
+	}
+}
+SAF = {
+	set_popularities = { #using 1938 results
+		democratic = 6
+		conservative = 54
+		reactionary = 31
+		socialist = 6
+		neutrality = 3
+	}
+}
+
+RAJ = {
+	set_politics = { ruling_party = neutrality }
+	add_popularity = { ideology = neutrality popularity = 0.35 }
+}
+
+MAL = {
+	set_politics = { ruling_party = neutrality }
+	add_popularity = { ideology = neutrality popularity = 0.35 }
+}
+
+PAL = {
+	set_politics = { ruling_party = neutrality }
+	add_popularity = { ideology = neutrality popularity = 0.35 }
+}
+
+RHI = {
+	recruit_character = GER_ernst_thalmann_VR
+	promote_character = GER_ernst_thalmann_VR
+}

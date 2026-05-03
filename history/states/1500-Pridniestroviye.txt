@@ -1,0 +1,25 @@
+state=
+{
+	id=1500
+	name="STATE_1500"
+	manpower = 235600
+	
+	state_category = rural
+	
+	history= {
+		add_core_of = SOV
+		add_core_of = MOL
+		add_core_of = PDN
+		owner = SOV
+		victory_points = {
+			13644 3 #Tiraspol
+		}
+		buildings = {
+			infrastructure = 2
+		}
+	}
+	provinces = {
+		13644 13645 13646
+	}
+	local_supplies=0.0 
+}

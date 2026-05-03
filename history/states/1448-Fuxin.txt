@@ -1,0 +1,27 @@
+
+state={
+	id=1448
+	name="STATE_1448"
+	manpower = 3514230
+	
+	state_category = large_town
+
+	history={
+		owner = MAN
+		add_core_of = CHI
+		add_core_of = MAN
+		add_core_of = PRC
+		buildings = {
+			infrastructure = 2
+		}
+		victory_points = {
+			9788 6 #Fuxin
+		}
+	}
+
+	provinces={
+		846 6893 6951 9788 11815
+	}
+
+	local_supplies=0.0 
+}

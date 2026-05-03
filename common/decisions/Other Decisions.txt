@@ -1,3 +1,85 @@
+political_actions = {
+	USA_address_great_depression = {
+		name = "Address the Great Depression"
+		fire_only_once = yes
+		icon = GFX_decision_generic_welfare
+		allowed = { tag = USA }
+		activation = {
+			OR = {
+				has_completed_focus = USA_towards_national_utopia
+				has_completed_focus = USA_republicans_in_the_white_house
+				has_completed_focus = USA_communism_as_american_apple_pie
+			}
+		}
+		days_mission_timeout = 300
+		ai_will_do = {
+			factor = 80
+		}
+		available = {
+			NOT = {
+				has_idea = great_depression
+				has_idea = great_depression_2
+			}
+		}
+		is_good = no
+		complete_effect = {
+			add_stability = 0.05
+		}
+		timeout_effect = {
+			custom_effect_tooltip = "To Do: Consequences Depend on Path"
+			if = {
+				limit = { has_government = conservative }
+				release = TEX
+				release = JES
+				release = CAL
+				release = ORS
+				release = VAS
+				release = NSC
+				release = SCS
+				release = FLS
+				release = LSS
+				release = KSS
+				release = MCS
+				release = OHS
+				release = WCS
+				release = MNS
+				release = MTS
+				release = TNS
+				release = ARS
+				release = OKS
+				release = CSA
+			}
+			if = {
+				limit = { has_government = fascism }
+				country_event = pound.18
+			}
+		}
+	}
+	USA_temporary_austerity_measures = {
+		name = "Temporary Austerity Measures"
+		#icon = GFX_decision_generic_welfare
+		allowed = { tag = USA }
+		visible = {
+			has_active_mission = USA_address_great_depression
+		}
+		days_remove = 30
+		ai_will_do = {
+			factor = 80
+		}
+		cost = 25
+		complete_effect = {
+			add_days_mission_timeout = {
+				mission = USA_address_great_depression
+				days = -25
+			}
+		}
+		modifier = {
+			consumer_goods_expected_value = -0.075
+			stability_factor = -0.10
+		}
+	}
+}
+
 foreign_politics = {
 	USA_towards_world_unity = {
 	name = "Towards 20/20ths of the World!"
@@ -462,12 +544,13 @@ foreign_politics = {
 			is_owned_by = USA
 			is_claimed_by = USA
 			NOT = { is_core_of = USA }
+			is_on_continent = north_america
 			}
 		}
 		visible = {
 			tag = USA
 			has_government = neutrality 
-			has_completed_focus = USA_panama_to_pole
+			has_completed_focus = USA_tectonic_integration
 		}
 		fire_only_once = yes
 		on_map_mode = map_only
@@ -478,11 +561,11 @@ foreign_politics = {
 		days_remove = 20
 		available = { 
 			FROM = {
-				resistance < 10
-				compliance > 15
+				resistance < 15
+				compliance > 30
 			}
 		}
-		modifier = { political_power_factor = -0.2 }
+		modifier = { political_power_factor = -0.1 }
 		ai_will_do = {
 			factor = 90
 		}
@@ -494,19 +577,20 @@ foreign_politics = {
 		}
 	}
 	SCOT_towards_north_american_self_sufficiency = {
-		name = "Towards American Self-Sufficiency: [FROM.GetNameDEF]"
+		name = "Banana Wars Target: [FROM.GetNameDEF]"
 		fire_only_once = yes
 		icon = GFX_decision_generic_form_nation
 		allowed = { tag = USA }
-		targets = { CAN MEX VEN COL CUB HAI DOM PAN HON GUA NIC COS ELS ENG }
-		visible = { has_completed_focus = USA_panama_to_pole }
+		targets = {  VEN COL HAI DOM PAN HON GUA NIC COS ELS }
+		visible = { has_completed_focus = USA_the_banana_wars }
 		ai_will_do = {
 			factor = 100
 		}
-		days_remove = 20
-		cost = 25
-		complete_effect = {
-			add_command_power = 25
+		days_remove = 30
+		cost = 30
+		modifier = {
+			planning_speed = 0.15
+			army_speed_factor = 0.05
 		}
 		remove_effect = {
 			declare_war_on = {

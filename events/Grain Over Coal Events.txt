@@ -7,8 +7,8 @@ country_event = {
 	
 	trigger = {
         has_resources_in_country = {
-            resource = coal
-            amount < 4
+            resource = grain
+            amount < 1
             extracted = no
         }
         num_of_owned_factories > 9
@@ -41,8 +41,8 @@ country_event = {
 	
 	trigger = {
         has_resources_in_country = {
-            resource = coal
-            amount < 4
+            resource = grain
+            amount < 1
             extracted = no
         }
         num_of_owned_factories > 9

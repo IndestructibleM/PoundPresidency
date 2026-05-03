@@ -27,9 +27,9 @@ ideas = {
 			name = "Party Divide"
 			picture = FRA_party_divide
 			modifier = {
-				stability_weekly = -0.005
+				stability_weekly = -0.0035
 				political_power_factor = -0.20
-				disabled_ideas = 1
+				political_advisor_cost_factor = 1
 			}
 		}
 		

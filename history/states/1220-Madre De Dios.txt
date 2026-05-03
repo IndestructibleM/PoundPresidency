@@ -1,0 +1,26 @@
+
+state={
+	id=1220
+	name="STATE_1220"
+	manpower = 42530
+	
+	state_category = wasteland
+	
+
+	history={
+		owner = PRU
+		buildings = {
+			infrastructure = 2
+		}
+		victory_points = {
+			8191 1
+		}
+		add_core_of = PRU
+	}
+
+	provinces={
+		8191 13559 
+	}
+
+	local_supplies=0.0 
+}

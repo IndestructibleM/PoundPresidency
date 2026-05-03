@@ -1,0 +1,41 @@
+
+state={
+	id=54
+	name="STATE_54"
+	manpower = 1708159
+
+	state_category = large_town
+
+	resources = {
+
+		coal = 8 #initial distribution
+	}
+
+	history={
+		owner = GER
+		buildings = {
+			infrastructure = 4
+			industrial_complex = 1
+		}
+		victory_points = {
+			11544 10 #Nurnberg
+		}
+		victory_points = {
+			9557 2 # Würzburg
+		}
+		add_core_of = GER
+		add_core_of = BAY
+
+		1939.1.1 = {
+			buildings = {
+				air_base = 3
+			}
+		}
+	}
+
+	provinces={
+		561 6540 9416 9557 9572 11529 11544
+	}
+
+	local_supplies=0.0 
+}

@@ -1,13 +1,19 @@
 ideas = {
 	country = {
 		USA_rise_of_pound = {
-			name = "An American Iliad"
+			name = "An American Odyssey"
 			allowed_civil_war = {
 				always = yes
 			}
 			modifier = {
 				stability_factor = -0.25
-				fascism_drift = 0.08
+				fascism_drift = 0.04
+				socialist_drift = 0.04
+				reactionary_drift = 0.03
+				communism_drift = 0.03
+			}
+			on_remove = {
+				add_stability = -0.25
 			}
 		}
 		USA_war_against_degeneration = {

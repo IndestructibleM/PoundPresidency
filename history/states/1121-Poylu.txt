@@ -1,0 +1,22 @@
+state={
+	id=1121
+	name="STATE_1121"
+
+	history={
+		owner = SOV
+		buildings = {
+			infrastructure = 2
+		}
+		add_core_of = SOV
+		add_core_of = AZR
+
+	}
+
+	provinces={
+		13670
+	}
+	manpower=21322
+	state_category=wasteland
+
+	local_supplies=0.0 
+}

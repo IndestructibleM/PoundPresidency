@@ -1,0 +1,32 @@
+
+state={
+	id=1102
+	name="STATE_1102"
+	manpower = 356050
+	resources={
+		oil=2 # was: 14
+		aluminium=1 # was: 12
+	}
+	
+	state_category = town
+
+	history={
+		owner = SOV
+		victory_points = {
+			504 4 #Belaya Tserkov
+		}
+		buildings = {
+			infrastructure = 3
+			arms_factory = 1
+			industrial_complex = 1
+		}
+		add_core_of = SOV
+		add_core_of = UKR
+	}
+
+	provinces={
+		504 3494 6497 9465 9543
+	}
+
+	local_supplies=0.0 
+}

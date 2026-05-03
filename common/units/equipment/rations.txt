@@ -18,13 +18,13 @@ equipments = {
 		supply_consumption = -0.05
 		build_cost_ic = 0.10
 		resources = {
-			coal = 2
+			grain = 2
 		}
 	}
 
 	rations_eq = {
 		archetype = rations
-		priority = 200
+		priority = 600
 		active = yes
 	}
 

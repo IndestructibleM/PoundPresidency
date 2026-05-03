@@ -1,0 +1,36 @@
+
+state={
+	id=104
+	name="STATE_104"
+	manpower =690200
+	
+	
+	state_category = town
+	
+	resources={
+		aluminium=7 # was: 10
+		coal = 2 # initial distribution
+	}
+
+	history={
+		owner = YUG
+		victory_points = {
+			11899 4 #Sarajevo 
+		}
+		victory_points = {
+			6799 1 
+		}
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 1
+		}
+		add_core_of = YUG
+		add_core_of = BOS
+	}
+
+	provinces={
+		606 982 6799 11572 11741 11899 
+	}
+
+	local_supplies=7.0 
+}

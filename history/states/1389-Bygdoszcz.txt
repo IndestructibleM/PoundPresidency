@@ -1,0 +1,45 @@
+state={
+	id=1389
+	name="STATE_1389"
+	manpower = 769505
+	
+	
+	state_category = town
+	history={
+		owner = POL
+		victory_points = {
+			279 5 #Bydgoszcz
+		}
+		victory_points = {
+			243 3 #Inowrocław
+		}
+		victory_points = {
+			3381 3 #Gniezno
+		}
+		victory_points = {
+			11232 2 #Wągrowiec
+		}
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 1
+			11232 = {
+				bunker = 1
+
+			}
+			3381 = {
+				bunker = 1
+
+			}
+		}
+		add_core_of = POL
+		1938.3.12 = {
+			add_claim_by = GER
+		}
+	}
+
+	provinces={
+		17 243 279 388 3381 11232
+	}
+
+	local_supplies=0.0 
+}

@@ -1,0 +1,38 @@
+
+state={
+	id=1521
+	name="STATE_1521"
+	manpower = 561230
+	
+	state_category = town
+	
+	resources={
+		aluminium=3
+	}
+
+	history={
+		owner = FRA
+		victory_points = {
+			3652 4 #Dijon
+		}
+		victory_points = {
+			817 1 
+		}
+		buildings = {
+			infrastructure = 4
+			industrial_complex = 1
+		}
+		add_core_of = FRA
+		1939.1.1 = {
+			buildings = {
+				industrial_complex = 2
+			}
+		}
+	}
+
+	provinces={
+		680 817 3652 
+	}
+
+	local_supplies=0.0 
+}

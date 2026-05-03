@@ -1,0 +1,25 @@
+﻿l_english:
+
+IDL_democratic:5 "India"
+IDL_democratic_DEF:5 "The Provisional Indian Republic"
+IDL_democratic_ADJ:5 "Indian"
+IDL_democratic_party:0 "Indian National Congress"
+IDL_democratic_party_long:0 "Indian National Congress"
+
+IDL_fascism:5 "India"
+IDL_fascism_DEF:5 "India"
+IDL_fascism_ADJ:5 "Indian"
+IDL_fascism_party:0 ""
+IDL_fascism_party_long:0 ""
+
+IDL_communism:5 "India"
+IDL_communism_DEF:5 "India"
+IDL_communism_ADJ:5 "Indian"
+IDL_communism_party:0 ""
+IDL_communism_party_long:0 ""
+
+IDL_neutrality:5 "India"
+IDL_neutrality_DEF:5 "India"
+IDL_neutrality_ADJ:5 "Indian"
+IDL_neutrality_party:0 ""
+IDL_neutrality_party_long:0 ""

@@ -1,0 +1,26 @@
+
+state={
+	id=1133
+	name="STATE_1133" #Gaza
+	manpower = 67560
+	
+	state_category = pastoral
+
+	history={
+		owner = PAL
+		buildings = {
+			infrastructure = 3
+		}
+		victory_points = {
+			13680 1 
+		}
+		add_core_of = PAL
+		add_claim_by = ISR
+	}
+
+	provinces={
+		13680
+	}
+
+	local_supplies=0.0 
+}

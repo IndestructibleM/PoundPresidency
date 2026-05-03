@@ -1,0 +1,37 @@
+
+state={
+	id=1561
+	name="STATE_1561"
+	manpower = 271230
+	
+	state_category = rural
+
+	history = {
+		owner = USA
+		buildings = {
+			infrastructure = 3 #was: 5
+			industrial_complex = 1
+			12211 = {
+				naval_base = 3
+			}
+		}
+		victory_points = {
+			12211 9 #Portland
+		}
+		victory_points = {
+			10183 1 #Astoria
+		}
+		victory_points = {
+			4380 1 #Corvallis
+		}
+		add_core_of = USA
+		add_core_of = ORS
+		add_core_of = CSC
+	}
+
+	provinces={
+		4380 10183 12211 12281
+	}
+
+	local_supplies=0.0 
+}

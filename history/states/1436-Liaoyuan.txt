@@ -1,0 +1,27 @@
+
+state={
+	id=1436
+	name="STATE_1436"
+	manpower = 220262
+	
+	state_category = rural
+
+	history={
+		owner = MAN
+		add_core_of = CHI
+		add_core_of = MAN
+		add_core_of = PRC
+		buildings = {
+			infrastructure = 2
+		}
+		victory_points = {
+			3913 3 #Liaoyuan
+		}
+	}
+
+	provinces={
+		3913
+	}
+
+	local_supplies=0.0 
+}
