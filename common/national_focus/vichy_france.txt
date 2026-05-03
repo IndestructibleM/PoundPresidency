@@ -573,6 +573,7 @@
 		completion_reward = {
 			add_ideas = { FRA_legionary_service_order }
 			hidden_effect = { add_named_threat = { threat = 10 name = VIC_the_legionary_service_order } }
+			recruit_character = VIC_Joseph_Darnand
 		}
 	}
 	focus = {
@@ -921,6 +922,7 @@
 			has_completed_focus = VIC_form_the_milice
 		}
 		completion_reward = {
+			promote_character = VIC_Joseph_Darnand
 		}
 	}
 
@@ -1047,7 +1049,7 @@
 
 	focus = {
 		id = VIC_a_taste_of_their_own_medicine
-		icon = GFX_goal_generic_army_doctrines
+		icon = GFX_focus_GER_german_army_invincible
 		prerequisite = { focus = VIC_unleash_military_buildup }
 		relative_position_id = VIC_la_milice_coup_detat
 		x = 7
@@ -1059,7 +1061,7 @@
 
 	focus = {
 		id = VIC_legacy_of_napoleon
-		icon = GFX_goal_generic_major_war
+		icon = GFX_focus_focus_fra_third_empire
 		prerequisite = { focus = VIC_unleash_military_buildup }
 		relative_position_id = VIC_la_milice_coup_detat
 		x = 10
@@ -1071,7 +1073,7 @@
 
 	focus = {
 		id = VIC_embrace_combined_arms
-		icon = GFX_goal_generic_combined_arms
+		icon = GFX_focus_generic_armored_air_support
 		prerequisite = { focus = VIC_unleash_military_buildup }
 		relative_position_id = VIC_la_milice_coup_detat
 		x = 13
@@ -1143,7 +1145,7 @@
 
 	focus = {
 		id = VIC_perfection_of_armor
-		icon = GFX_goal_generic_army_tanks
+		icon = GFX_focus_generic_heavy_tank
 		prerequisite = { focus = VIC_a_taste_of_their_own_medicine }
 		relative_position_id = VIC_la_milice_coup_detat
 		x = 6
@@ -1155,7 +1157,7 @@
 
 	focus = {
 		id = VIC_perfection_of_speed
-		icon = GFX_goal_generic_motorized
+		icon = GFX_focus_generic_army_tanks2
 		prerequisite = { focus = VIC_a_taste_of_their_own_medicine }
 		relative_position_id = VIC_la_milice_coup_detat
 		x = 8
@@ -1167,7 +1169,7 @@
 
 	focus = {
 		id = VIC_rain_hell
-		icon = GFX_goal_generic_air_fighter
+		icon = GFX_goal_generic_CAS
 		prerequisite = { focus = VIC_embrace_combined_arms }
 		relative_position_id = VIC_la_milice_coup_detat
 		x = 12
@@ -1179,7 +1181,7 @@
 
 	focus = {
 		id = VIC_ground_support_strategy
-		icon = GFX_goal_generic_air_bomber
+		icon = GFX_focus_generic_cas_aircraft
 		prerequisite = { focus = VIC_embrace_combined_arms }
 		relative_position_id = VIC_la_milice_coup_detat
 		x = 14
@@ -1263,7 +1265,7 @@
 
 	focus = {
 		id = VIC_perfection_of_production
-		icon = GFX_goal_generic_production
+		icon = GFX_focus_generic_license_production
 		prerequisite = { focus = VIC_perfection_of_armor }
 		prerequisite = { focus = VIC_perfection_of_speed }
 		relative_position_id = VIC_la_milice_coup_detat
@@ -1276,7 +1278,7 @@
 
 	focus = {
 		id = VIC_levee_en_masse
-		icon = GFX_goal_generic_allies_build_infantry
+		icon = GFX_focus_generic_limited_social_mobilization
 		prerequisite = { focus = VIC_legacy_of_napoleon }
 		relative_position_id = VIC_la_milice_coup_detat
 		x = 10
@@ -1288,7 +1290,7 @@
 
 	focus = {
 		id = VIC_eagles_of_the_final_france
-		icon = GFX_goal_generic_air_fighter2
+		icon = GFX_focus_generic_aircraft_production
 		prerequisite = { focus = VIC_rain_hell }
 		prerequisite = { focus = VIC_ground_support_strategy }
 		relative_position_id = VIC_la_milice_coup_detat
@@ -1326,7 +1328,7 @@
 
 	focus = {
 		id = VIC_military_infrastructure
-		icon = GFX_goal_generic_construct_infrastructure
+		icon = GFX_focus_generic_road_investment
 		prerequisite = { focus = VIC_perfection_of_production }
 		relative_position_id = VIC_la_milice_coup_detat
 		x = 7
@@ -1350,7 +1352,7 @@
 
 	focus = {
 		id = VIC_air_base_expansion
-		icon = GFX_goal_generic_air_base
+		icon = GFX_focus_generic_air_defense
 		prerequisite = { focus = VIC_eagles_of_the_final_france }
 		relative_position_id = VIC_la_milice_coup_detat
 		x = 13
@@ -1399,20 +1401,8 @@
 	}
 
 	focus = {
-		id = VIC_form_the_wpc
-		icon = GFX_goal_generic_construct_military
-		prerequisite = { focus = VIC_military_infrastructure }
-		relative_position_id = VIC_la_milice_coup_detat
-		x = 8
-		y = 6
-		cost = 5
-		completion_reward = {
-		}
-	}
-
-	focus = {
 		id = VIC_rapid_promotions
-		icon = GFX_goal_generic_army_doctrines
+		icon = GFX_focus_CZE_army_reform
 		prerequisite = { focus = VIC_army_of_lightning }
 		relative_position_id = VIC_la_milice_coup_detat
 		x = 10
@@ -1424,10 +1414,12 @@
 
 	focus = {
 		id = VIC_an_army_marches_on_its_stomach
-		icon = GFX_goal_generic_supply
+		icon = GFX_focus_generic_supply_line
 		prerequisite = { focus = VIC_air_base_expansion }
+		prerequisite = { focus = VIC_military_infrastructure }
+		prerequisite = { focus = VIC_rapid_promotions }
 		relative_position_id = VIC_la_milice_coup_detat
-		x = 12
+		x = 11
 		y = 6
 		cost = 5
 		completion_reward = {
@@ -1496,13 +1488,14 @@
 
 	focus = {
 		id = VIC_grande_armee_fasciste
-		icon = GFX_goal_generic_army_doctrines
-		prerequisite = { focus = VIC_form_the_wpc }
+		icon = GFX_focus_SOV_the_glory_of_the_red_army_alternative
+		
+		prerequisite = { focus = VIC_air_base_expansion }
+		prerequisite = { focus = VIC_military_infrastructure }
 		prerequisite = { focus = VIC_rapid_promotions }
-		prerequisite = { focus = VIC_an_army_marches_on_its_stomach }
 		relative_position_id = VIC_la_milice_coup_detat
-		x = 10
-		y = 7
+		x = 9
+		y = 6
 		cost = 5
 		completion_reward = {
 		}
@@ -1522,7 +1515,7 @@
 
 	focus = {
 		id = VIC_a_gun_for_every_man
-		icon = GFX_goal_generic_small_arms
+		icon = GFX_focus_AFG_against_kabul
 		prerequisite = { focus = VIC_request_the_return_of_paris }
 		relative_position_id = VIC_la_milice_coup_detat
 		x = 1
@@ -1534,7 +1527,7 @@
 
 	focus = {
 		id = VIC_ideological_purification_of_the_military
-		icon = GFX_goal_generic_political_pressure
+		icon = GFX_focus_generic_conspiracy
 		prerequisite = { focus = VIC_prepare_the_neo_maginot }
 		relative_position_id = VIC_la_milice_coup_detat
 		x = -1
@@ -1546,7 +1539,7 @@
 
 	focus = {
 		id = VIC_every_man_a_soldier
-		icon = GFX_goal_generic_allies_build_infantry
+		icon = GFX_focus_generic_army_attack
 		prerequisite = { focus = VIC_a_gun_for_every_man }
 		relative_position_id = VIC_la_milice_coup_detat
 		x = 1
@@ -1558,7 +1551,7 @@
 
 	focus = {
 		id = VIC_everything_for_the_country
-		icon = GFX_goal_generic_national_unity
+		icon = GFX_focus_generic_public_works
 		prerequisite = { focus = VIC_ideological_purification_of_the_military }
 		prerequisite = { focus = VIC_every_man_a_soldier }
 		relative_position_id = VIC_la_milice_coup_detat
@@ -1597,7 +1590,7 @@
 
 	focus = {
 		id = VIC_hey_allemagne
-		icon = GFX_focus_ger_oppose_hitler
+		icon = GFX_FRA_master_of_the_continent
 		prerequisite = { focus = VIC_banish_the_wehrmacht_and_ss }
 		prerequisite = { focus = VIC_prepare_for_unrestrained_warfare }
 		prerequisite = { focus = VIC_everything_for_the_country }
@@ -1606,6 +1599,10 @@
 		y = 11
 		cost = 5
 		completion_reward = {
+			declare_war_on = {
+				target = GER
+				type = annex_everything
+			}
 		}
 	}
 

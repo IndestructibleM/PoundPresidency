@@ -11,6 +11,21 @@ characters = {
 		}
 	}
 	
+	VIC_Joseph_Darnand = {
+		name = "Joseph Darnand"
+		portraits = {
+			civilian = {
+				large = "gfx/leaders/FRA/Portrait_Joseph_Darnand_VIC.png"
+			}
+		}
+		country_leader = {
+			ideology = fascism_ideology
+			traits = {
+				literally_charlemange
+			}
+		}
+	}
+	
 	FRA_marcel_deat_leader = {
 		name = "Marcel Deat"
 		portraits = {
