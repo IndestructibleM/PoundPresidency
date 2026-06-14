@@ -13,37 +13,37 @@ on_actions = {
 			every_country = { country_event = { id = pound.0 days = 0 } }
 			18 = {
 				add_resource = {
-					type = grain 
+					type = coal 
 					amount = 50
 				}
 			}
 			383 = {
 				add_resource = {
-					type = grain 
+					type = coal 
 					amount = 50
 				}
 			}
 			447 = {
 				add_resource = {
-					type = grain 
+					type = coal 
 					amount = 30
 				}
 			}
 			221 = {
 				add_resource = {
-					type = grain 
+					type = coal 
 					amount = 60
 				}
 			}
 			161 = {
 				add_resource = {
-					type = grain 
+					type = coal 
 					amount = 20
 				}
 			}
 			620 = {
 				add_resource = {
-					type = grain 
+					type = coal 
 					amount = 30
 				}
 			}
@@ -152,13 +152,6 @@ on_actions = {
 					transfer_state = 5
 					add_state_claim = 5
 				}
-			}
-		}
-	}
-	on_monthly = {
-		effect = {
-			every_country = {
-				econ_production_setup = yes
 			}
 		}
 	}

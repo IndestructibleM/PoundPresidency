@@ -29,6 +29,7 @@ idea_categories = {
 		slot = economy
 		slot = economy_model
 		slot = government_type
+		slot = draft
 		
 		ledger = civilian
 		
@@ -41,11 +42,10 @@ idea_categories = {
 		character_slot = political_advisor
 		character_slot = political_advisor
 		character_slot = political_advisor
-		character_slot = political_advisor
 		
 		ledger = civilian
 		
-		cost = 100
+		cost = 125
 	}
 	
 	research_production = {
@@ -84,19 +84,6 @@ idea_categories = {
 		slot = segregation
 		slot = religion_status
 		
-		ledger = civilian
-		
-		cost = 100
-		removal_cost = -1
-	}
-	
-	assorted_laws_2 = {
-		slot = draft
-		slot = army_professionalism
-		slot = occupation_standards
-		slot = paramilitary_law
-		slot = womens_rights
-		slot = union_policy		
 		ledger = civilian
 		
 		cost = 100

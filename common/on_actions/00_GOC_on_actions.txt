@@ -4,23 +4,23 @@ on_actions = {
 			every_country = {
 				if = { 
 					limit = { 
-						num_of_owned_factories > 20
+						coal < 6
 					}
 					capital_scope = {
 						add_resource = {
-    					type = grain
-    					amount = 60
+    					type = coal
+    					amount = 4
 						}
 					}
 				}
 				else_if = { 
 					limit = { 
-						grain < 6
+						num_of_owned_factories > 30
 					}
 					capital_scope = {
 						add_resource = {
-    					type = grain
-    					amount = 60
+    					type = coal
+    					amount = 4
 						}
 					}
 				}

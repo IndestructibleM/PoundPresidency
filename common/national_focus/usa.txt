@@ -8992,7 +8992,7 @@ focus_tree = {
 	
 	focus = {
 		id = USA_roosevelt_lives
-		x = 0
+		x = 4
 		y = 10
 		allow_branch = {
 			has_country_flag = Roosevelt_Lived
@@ -9037,7 +9037,7 @@ focus_tree = {
 
 	focus = {
 		id = USA_overwhelming_executive_orders
-		x = -2
+		x = 2
 		y = 11
 		#allow_branch = {
 		#	has_country_flag = Roosevelt_Lived
@@ -9065,7 +9065,7 @@ focus_tree = {
 	}
 	focus = {
 		id = USA_declare_martial_law
-		x = 0
+		x = 4
 		y = 11
 		#allow_branch = {
 		#	has_country_flag = Roosevelt_Lived
@@ -9100,7 +9100,7 @@ focus_tree = {
 	}
 	focus = {
 		id = USA_pack_the_supreme_court
-		x = 2
+		x = 6
 		y = 11
 		#allow_branch = {
 		#	has_country_flag = Roosevelt_Lived
@@ -9128,7 +9128,7 @@ focus_tree = {
 	}
 	focus = {
 		id = USA_godels_loophole
-		x = 0
+		x = 4
 		y = 12
 		#allow_branch = {
 		#	has_country_flag = Roosevelt_Lived
@@ -9160,7 +9160,7 @@ focus_tree = {
 	}
 	focus = {
 		id = USA_rule_by_executive_decree
-		x = -2
+		x = 2
 		y = 13
 		#allow_branch = {
 		#	has_country_flag = Roosevelt_Lived
@@ -9192,7 +9192,7 @@ focus_tree = {
 
 	focus = {
 		id = USA_republic_without_democracy
-		x = 2
+		x = 6
 		y = 13
 		#allow_branch = {
 		#	has_country_flag = Roosevelt_Lived
@@ -9223,7 +9223,7 @@ focus_tree = {
 	}
 	focus = {
 		id = USA_nationalize_military_industry
-		x = 0
+		x = 4
 		y = 13
 		#allow_branch = {
 		#	has_country_flag = Roosevelt_Lived
@@ -9252,7 +9252,7 @@ focus_tree = {
 	}
 	focus = {
 		id = USA_COMMAND_OVERSEER
-		x = -4
+		x = 0
 		y = 14
 		#allow_branch = {
 		#	has_country_flag = Roosevelt_Lived
@@ -9288,7 +9288,7 @@ focus_tree = {
 	
 	focus = {
 		id = USA_COMMAND_TITAN
-		x = 0
+		x = 4
 		y = 14
 		#allow_branch = {
 		#	has_country_flag = Roosevelt_Lived
@@ -9324,7 +9324,7 @@ focus_tree = {
 	
 	focus = {
 		id = USA_ford_herald_of_smokestacks
-		x = -1
+		x = 3
 		y = 15
 		#allow_branch = {
 		#	has_country_flag = Roosevelt_Lived
@@ -9354,7 +9354,7 @@ focus_tree = {
 	
 	focus = {
 		id = USA_institute_of_military_industrial_expansion
-		x = -1
+		x = 3
 		y = 16
 		#allow_branch = {
 		#	has_country_flag = Roosevelt_Lived
@@ -9384,7 +9384,7 @@ focus_tree = {
 
 	focus = {
 		id = USA_our_new_industrial_revolution
-		x = -1
+		x = 3
 		y = 17
 		#allow_branch = {
 		#	has_country_flag = Roosevelt_Lived
@@ -9414,7 +9414,7 @@ focus_tree = {
 	
 	focus = {
 		id = USA_perkins_mother_of_labor
-		x = 1
+		x = 5
 		y = 15
 		#allow_branch = {
 		#	has_country_flag = Roosevelt_Lived
@@ -9444,7 +9444,7 @@ focus_tree = {
 	
 	focus = {
 		id = USA_the_cornucopia
-		x = 1
+		x = 5
 		y = 16
 		#allow_branch = {
 		#	has_country_flag = Roosevelt_Lived
@@ -9474,7 +9474,7 @@ focus_tree = {
 
 	focus = {
 		id = USA_workers_of_the_state
-		x = 1
+		x = 5
 		y = 17
 		#allow_branch = {
 		#	has_country_flag = Roosevelt_Lived
@@ -9504,7 +9504,7 @@ focus_tree = {
 	
 	focus = {
 		id = USA_COMMAND_PRAETOR
-		x = 4
+		x = 8
 		y = 14
 		#allow_branch = {
 		#	has_country_flag = Roosevelt_Lived
@@ -9540,7 +9540,7 @@ focus_tree = {
 	
 	focus = {
 		id = USA_leahy_american_poseidon
-		x = 3
+		x = 7
 		y = 15
 		#allow_branch = {
 		#	has_country_flag = Roosevelt_Lived
@@ -9570,7 +9570,7 @@ focus_tree = {
 	
 	focus = {
 		id = USA_unleash_the_kraken
-		x = 3
+		x = 7
 		y = 16
 		#allow_branch = {
 		#	has_country_flag = Roosevelt_Lived
@@ -9600,7 +9600,7 @@ focus_tree = {
 
 	focus = {
 		id = USA_for_pax_americana
-		x = 3
+		x = 7
 		y = 17
 		#allow_branch = {
 		#	has_country_flag = Roosevelt_Lived
@@ -9630,7 +9630,7 @@ focus_tree = {
 	
 	focus = {
 		id = USA_byrnes_lord_of_the_machine
-		x = -3
+		x = 1
 		y = 15
 		#allow_branch = {
 		#	has_country_flag = Roosevelt_Lived
@@ -9660,7 +9660,7 @@ focus_tree = {
 
 	focus = {
 		id = USA_a_perfectly_obediant_state
-		x = -3
+		x = 1
 		y = 16
 		#allow_branch = {
 		#	has_country_flag = Roosevelt_Lived
@@ -9690,7 +9690,7 @@ focus_tree = {
 	
 	focus = {
 		id = USA_panem_et_circenses
-		x = -3
+		x = 1
 		y = 17
 		#allow_branch = {
 		#	has_country_flag = Roosevelt_Lived
@@ -9720,7 +9720,7 @@ focus_tree = {
 	
 	focus = {
 		id = USA_the_pure_soveriengty
-		x = -5
+		x = -1
 		y = 17
 		#allow_branch = {
 		#	has_country_flag = Roosevelt_Lived
@@ -9750,7 +9750,7 @@ focus_tree = {
 	
 	focus = {
 		id = USA_J_hoover_all_seeing_eye
-		x = -5
+		x = -1
 		y = 15
 		#allow_branch = {
 		#	has_country_flag = Roosevelt_Lived
@@ -9780,7 +9780,7 @@ focus_tree = {
 
 	focus = {
 		id = USA_CIA_FBI_merger
-		x = -5
+		x = -1
 		y = 16
 		#allow_branch = {
 		#	has_country_flag = Roosevelt_Lived
@@ -9810,7 +9810,7 @@ focus_tree = {
 	
 	focus = {
 		id = USA_marshall_god_of_war
-		x = 5
+		x = 9
 		y = 15
 		#allow_branch = {
 		#	has_country_flag = Roosevelt_Lived
@@ -9840,7 +9840,7 @@ focus_tree = {
 
 	focus = {
 		id = USA_army_commissars
-		x = 5
+		x = 9
 		y = 16
 		#allow_branch = {
 		#	has_country_flag = Roosevelt_Lived
@@ -9870,7 +9870,7 @@ focus_tree = {
 
 	focus = {
 		id = USA_legions_of_the_republic
-		x = 5
+		x = 9
 		y = 17
 		#allow_branch = {
 		#	has_country_flag = Roosevelt_Lived
@@ -9900,7 +9900,7 @@ focus_tree = {
 	
 	focus = {
 		id = USA_my_will_is_absolute
-		x = -4
+		x = 0
 		y = 18
 		#allow_branch = {
 		#	has_country_flag = Roosevelt_Lived
@@ -9933,7 +9933,7 @@ focus_tree = {
 
 	focus = {
 		id = USA_my_body_is_full_of_life
-		x = 0
+		x = 4
 		y = 18
 		#allow_branch = {
 		#	has_country_flag = Roosevelt_Lived
@@ -9965,7 +9965,7 @@ focus_tree = {
 	}
 	focus = {
 		id = USA_I_am_stronger_than_ever
-		x = 4
+		x = 8
 		y = 18
 		#allow_branch = {
 		#	has_country_flag = Roosevelt_Lived
@@ -9998,7 +9998,7 @@ focus_tree = {
 
 	focus = {
 		id = USA_force_the_truth
-		x = -2
+		x = 2
 		y = 19
 		#allow_branch = {
 		#	has_country_flag = Roosevelt_Lived
@@ -10030,7 +10030,7 @@ focus_tree = {
 	
 	focus = {
 		id = USA_the_supreme_beings_plan
-		x = -4
+		x = 0
 		y = 20
 		#allow_branch = {
 		#	has_country_flag = Roosevelt_Lived
@@ -10062,7 +10062,7 @@ focus_tree = {
 
 	focus = {
 		id = USA_declare_supreme_sovereignty
-		x = 2
+		x = 6
 		y = 19
 		#allow_branch = {
 		#	has_country_flag = Roosevelt_Lived
@@ -10094,7 +10094,7 @@ focus_tree = {
 	
 	focus = {
 		id = USA_imperator_reipublicae
-		x = 4
+		x = 8
 		y = 20
 		#allow_branch = {
 		#	has_country_flag = Roosevelt_Lived
@@ -10126,7 +10126,7 @@ focus_tree = {
 
 	focus = {
 		id = USA_mobilization_against_old_world_order
-		x = 0
+		x = 4
 		y = 20
 		#allow_branch = {
 		#	has_country_flag = Roosevelt_Lived
@@ -10160,7 +10160,7 @@ focus_tree = {
 
 	focus = {
 		id = USA_secure_the_atlantic
-		x = 0
+		x = 4
 		y = 21
 		#allow_branch = {
 		#	has_country_flag = Roosevelt_Lived
@@ -10191,7 +10191,7 @@ focus_tree = {
 	
 	focus = {
 		id = USA_reorganize_southern_hemisphere
-		x = -2
+		x = 2
 		y = 21
 		#allow_branch = {
 		#	has_country_flag = Roosevelt_Lived
@@ -10222,7 +10222,7 @@ focus_tree = {
 	
 	focus = {
 		id = USA_pacific_domain
-		x = 2
+		x = 6
 		y = 21
 		#allow_branch = {
 		#	has_country_flag = Roosevelt_Lived
@@ -10253,7 +10253,7 @@ focus_tree = {
 	
 	focus = {
 		id = USA_conquer_kunlun_mountains
-		x = 1
+		x = 5
 		y = 22
 		#allow_branch = {
 		#	has_country_flag = Roosevelt_Lived
@@ -10287,7 +10287,7 @@ focus_tree = {
 	
 	focus = {
 		id = USA_conquer_mesopotamia
-		x = -1
+		x = 3
 		y = 22
 		#allow_branch = {
 		#	has_country_flag = Roosevelt_Lived
@@ -10322,7 +10322,7 @@ focus_tree = {
 	
 	focus = {
 		id = USA_rule_the_earth
-		x = 0
+		x = 4
 		y = 23
 		#allow_branch = {
 		#	has_country_flag = Roosevelt_Lived
@@ -10356,7 +10356,7 @@ focus_tree = {
 	
 	focus = {
 		id = USA_regency_of_the_supreme_being
-		x = 0
+		x = 4
 		y = 25
 		#allow_branch = {
 		#	has_country_flag = Roosevelt_Lived
@@ -10387,7 +10387,7 @@ focus_tree = {
 
 	focus = {
 		id = USA_above_time_and_space
-		x = 1
+		x = 5
 		y = 24
 		#allow_branch = {
 		#	has_country_flag = Roosevelt_Lived
@@ -10419,7 +10419,7 @@ focus_tree = {
 
 	focus = {
 		id = USA_the_order_eternal
-		x = -1
+		x = 3
 		y = 24
 		#allow_branch = {
 		#	has_country_flag = Roosevelt_Lived
