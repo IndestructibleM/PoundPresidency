@@ -2,11 +2,6 @@ SND_balance_of_power_cat = {
     allowed = { tag = SND }
 }
 
-
-Vanillaredux_decisions_cat = {
-    visible = { is_ai = no }
-}
-
 Vanillaredux_GCW_cat = {
     allowed = {
         OR = {

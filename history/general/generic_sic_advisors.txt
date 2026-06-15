@@ -10,7 +10,7 @@ every_possible_country = {
 			traits = { dem_sic_trait }
 			cost = 50
 			can_be_fired = no
-			available = { OR = { has_government = democratic has_government = conservative } }
+			available = { has_government = democratic }
 		}
 		portraits = {
 			army = { small = GFX_idea_generic_empowered_legislature }
@@ -24,7 +24,7 @@ every_possible_country = {
 			idea_token = Generic_com_sic
 			traits = { com_sic_trait }
 			cost = 50
-			available = { OR = { has_government = socialist has_government = communism } }
+			available = { has_government = communism }
 			can_be_fired = no
 		}
 		portraits = {
@@ -39,8 +39,7 @@ every_possible_country = {
 			idea_token = Generic_auth_sic
 			traits = { auth_sic_trait }
 			cost = 50
-			available = { OR = { has_government = neutrality has_government = reactionary } }
-			can_be_fired = no
+			available = { has_government = neutrality }
 		}
 		portraits = {
 			army = { small = GFX_idea_generic_empowered_trade_unions }

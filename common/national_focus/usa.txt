@@ -511,6 +511,7 @@ focus_tree = {
 		available_if_capitulated = no
 		search_filters = {FOCUS_FILTER_POLITICAL}
 		completion_reward = {
+			USA_great_depression_level_down = yes
 		}
 	}
 
@@ -735,6 +736,7 @@ focus_tree = {
 		available_if_capitulated = no
 		search_filters = {FOCUS_FILTER_POLITICAL}
 		completion_reward = {
+			USA_great_depression_level_down = yes
 		}
 	}
 
@@ -767,6 +769,7 @@ focus_tree = {
 		available_if_capitulated = no
 		search_filters = {FOCUS_FILTER_POLITICAL}
 		completion_reward = {
+			USA_great_depression_level_down = yes
 		}
 	}
 	
@@ -796,6 +799,7 @@ focus_tree = {
 		available_if_capitulated = no
 		search_filters = {FOCUS_FILTER_POLITICAL}
 		completion_reward = {
+			USA_great_depression_level_down = yes
 		}
 	}
 
@@ -1644,7 +1648,7 @@ focus_tree = {
 		available_if_capitulated = no
 		search_filters = {FOCUS_FILTER_POLITICAL}
 		completion_reward = {
-			
+			USA_great_depression_level_down = yes
 		}
 	}
 
@@ -1671,7 +1675,7 @@ focus_tree = {
 		available_if_capitulated = no
 		search_filters = {FOCUS_FILTER_POLITICAL}
 		completion_reward = {
-			
+			USA_great_depression_level_down = yes
 		}
 	}
 	
@@ -1698,7 +1702,7 @@ focus_tree = {
 		available_if_capitulated = no
 		search_filters = {FOCUS_FILTER_POLITICAL}
 		completion_reward = {
-			
+			USA_great_depression_level_down = yes
 		}
 	}
 	
