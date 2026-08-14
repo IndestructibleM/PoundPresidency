@@ -29,7 +29,6 @@ idea_categories = {
 		slot = economy
 		slot = economy_model
 		slot = government_type
-		slot = draft
 		
 		ledger = civilian
 		
