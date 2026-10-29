@@ -1,6 +1,5 @@
-﻿capital = 798
+﻿capital = 989
 
-oob = "ORO_1936"
 
 set_research_slots = 4
 
@@ -49,7 +48,6 @@ set_technology = {
 	complete_national_focus = construction_effort
 	complete_national_focus = production_effort
 
-	oob = "ORO_1939"
 	set_technology = {
 		fighter1 = 1
 		cv_fighter1 = 1

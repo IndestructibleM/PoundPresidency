@@ -14,7 +14,7 @@ country_event = {
 
 	option = { 
 		name = vr_usa.1.a
-		add_popularity = { ideology = fascism popularity = -0.04 }
+		add_popularity = { ideology = fascism popularity = -0.05 }
 	}
 
 	option = { 
@@ -37,9 +37,9 @@ country_event = {
 
 	option = { 
 		name = vr_usa.2.a
-		add_popularity = { ideology = communism popularity = 0.08 }
+		add_popularity = { ideology = communism popularity = 0.05 }
 		set_party_name = {
-			ideology = socialist
+			ideology = communism
 			long_name = PopularFront
 			name = PopularFront
 		}

@@ -563,7 +563,7 @@ MTM = {
 	color_ui = rgb { 0 38 186 }
 }
 
-NEN = {
+NBR = {
 	color = rgb { 178 0 255 }
 	color_ui = rgb { 178 0 255 }
 }
@@ -613,12 +613,12 @@ OKO = {
 	color_ui = rgb { 255 0 0 }
 }
 
-ORO = {
+ORE = {
 	color = rgb { 255 101 0 }
 	color_ui = rgb { 255 101 0 }
 }
 
-PAP = {
+PNS = {
 	color = rgb { 183 183 183 }
 	color_ui = rgb { 183 183 183 }
 }

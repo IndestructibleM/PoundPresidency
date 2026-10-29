@@ -231,7 +231,7 @@ USA_congress = {
 				check_variable = { representatives_support < representatives_total }
 			}
 		}
-		visible = { has_completed_focus = USA_agricultural_adjustment_act }
+		visible = { always = no }
 		cost = 0
 		ai_will_do = {
 			factor = 1
@@ -255,7 +255,7 @@ USA_congress = {
 				check_variable = { representatives_support < representatives_total }
 			}
 		}
-		visible = { has_completed_focus = USA_income_tax_reform }
+		visible = { always = no }
 		cost = 0
 		ai_will_do = {
 			factor = 1

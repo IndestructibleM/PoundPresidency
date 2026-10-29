@@ -59,12 +59,7 @@ focus_tree = {
 		}
 		prerequisite = { focus = AME_the_first_FROM_constitutional_convention }
 		available = {
-			OR = {
-				has_government = socdem
-				has_government = soclib
-				has_government = marklib
-				has_government = condem
-			}
+			has_government = democratic
 		}
 		completion_reward = {
 			add_popularity = {
@@ -101,10 +96,7 @@ focus_tree = {
 		x = -3
 		y = 2
 		available = {
-		OR = {
-			has_government = socdem
-			has_government = soclib
-		}
+			has_government = democratic
 		}
 		ai_will_do = {
 			factor = 2
@@ -121,10 +113,7 @@ focus_tree = {
 		relative_position_id = AME_the_first_FROM_constitutional_convention
 		mutually_exclusive = { focus = AME_begin_welfare }
 		available = {
-			OR = {
-				has_government = marklib
-				has_government = condem
-			}
+			has_government = democratic
 		}
 		x = -5
 		y = 2

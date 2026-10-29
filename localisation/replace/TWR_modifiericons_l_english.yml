@@ -95,7 +95,7 @@ KZA_Viktor_trait:0 "\nModifier:\n§HParty Disciplinarian§!\n§G$MODIFIER_CONSUM
  KRA_Koysginomics_Devolve_the_GOSPLAN_tt:0 "Modify §YKoysginomics§! by\n$MODIFIER_PRODUCTION_SPEED_BUILDINGS_FACTOR$: §R-5.00§!"
  KRA_Koysginomics_Evolve_the_GOSPLAN_tt:0 "Modify §YKoysginomics§! by\n$MODIFIER_PRODUCTION_SPEED_BUILDINGS_FACTOR$: §G+5.00§!"
  KRA_Koysginomics_Produce_More_Commodities_tt:0 "Modify §YKoysginomics§! by\n$MODIFIER_CONSUMER_GOODS_FACTOR$: §Y6.0%§!\n$stability_good_modifier$: §G+15.00%§!\n$war_support_modifier$: §G+5.00%§!"
- KRA_Koysginomics_Renovating_Marxist_Economics_tt:0 "Modify §YKoysginomics§! by\n$socialist_drift$: §G+6.00%§!\n$marxist_leninist_acceptance$: §R-75§!\n$bolshevik_leninist_acceptance$: §R-75§!"
+ KRA_Koysginomics_Renovating_Marxist_Economics_tt:0 "Modify §YKoysginomics§! by\n$communism_drift$: §G+6.00%§!\n$marxist_leninist_acceptance$: §R-75§!\n$bolshevik_leninist_acceptance$: §R-75§!"
 
 #TWR_operatives_l_english
  OPERATIVE_MISSION_PROPAGANDA_DESC:2 "§LDestabilize internal politics in the country to lower their stability and war support§!.\n§H£stability_texticon  Daily Stability drift: -$BASE_STABILITY|2%$§!\n  Base: §G-§!$BASE_STABILITY|2%G$\n§H£war_support_modifiericons_texticon  Daily War Support drift: -$BASE_WAR_SUPPORT|2%$§!\n  Base: §G-§!$BASE_STABILITY|2%G$"
@@ -103,7 +103,6 @@ KZA_Viktor_trait:0 "\nModifier:\n§HParty Disciplinarian§!\n§G$MODIFIER_CONSUM
  OPERATIVE_MISSION_PROPAGANDA_WAR_SUPPORT_DRIFT:0 "$war_support_modifier$ drift: $DRIFT|+2%$/day"
 
 #TWR_Parties_l_english
-socialist_drift:0 "£boost_popularity_texticon  Daily Socialism Support"
 marxist_leninist_drift:0 "£boost_popularity_texticon  Daily Marxism-Leninism Support"
 fascist_drift:0 "£boost_popularity_texticon  Daily Fascism Support"
 national_socialist_drift:0 "£boost_popularity_texticon  Daily National Socialism Support"

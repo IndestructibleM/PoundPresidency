@@ -45,7 +45,7 @@ add_to_faction = VTV
 add_to_faction = CTC
 add_to_faction = NYN
 add_to_faction = NJN
-add_to_faction = PAP
+add_to_faction = PNS
 add_to_faction = DED
 add_to_faction = MDM
 add_to_faction = WVW
@@ -60,7 +60,7 @@ add_to_faction = IAI
 add_to_faction = MOM
 add_to_faction = KSK
 add_to_faction = NVN
-add_to_faction = ORO
+add_to_faction = ORE
 add_to_faction = CAC
 }
 

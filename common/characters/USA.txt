@@ -107,7 +107,7 @@ characters={
 			}
 			do_effect  = {
 				NOT  = {
-					has_government  = socialist
+					has_government  = communism
 				}
 			}
 			ai_will_do  = {
@@ -1270,7 +1270,7 @@ characters={
 				original_tag = USA
 			}
 			available = {
-				has_completed_focus = USA_send_lindbergh_to_germany
+				always = no
 			}
 			cost = 100.000
 			# TODO [AB] add support for equipment bonuses
@@ -1480,7 +1480,7 @@ characters={
 					}
 					AND = {
 						SWE_refuge_for_revolutionaries_trigger = yes
-						USA = { has_completed_focus = USA_america_first }
+						USA = { always = no }
 					}
 				}
 			visible  = {
@@ -1527,7 +1527,7 @@ characters={
 					}
 					AND = {
 						SWE_refuge_for_revolutionaries_trigger = yes
-						USA = { has_completed_focus = USA_america_first }
+						USA = { always = no }
 					}
 				}
 			}
@@ -1567,7 +1567,7 @@ characters={
 					limit  = {
 						has_dlc = "Man the Guns"
 					}
-					has_completed_focus  = USA_america_first
+					always = no
 				}
 			}
 			visible  = {
@@ -1608,7 +1608,7 @@ characters={
 					limit  = {
 						has_dlc = "Man the Guns"
 					}
-					has_completed_focus  = USA_america_first
+					always = no
 				}
 			}
 			visible  = {
@@ -1686,7 +1686,7 @@ characters={
 					limit  = {
 						has_dlc = "Man the Guns"
 					}
-					has_completed_focus  = USA_america_first
+					always = no
 					NOT  = {
 						focus_progress  = {
 							focus  = USA_neutrality_act
@@ -1778,7 +1778,7 @@ characters={
 				original_tag  = USA
 			}
 			available  = {
-				has_completed_focus  = USA_empower_the_huac
+				always = no
 			}
 			traits  = {
 				anti_communist_crusader

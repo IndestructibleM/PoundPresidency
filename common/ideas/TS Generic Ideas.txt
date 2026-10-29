@@ -20,13 +20,6 @@ ideas = {
         			build_cost_ic = 0.5
     			}
 			}
-			cancel = {
-				has_resources_in_country = {
-					resource = grain
-					amount > 4
-					extracted = no
-				}
-			}
 		}
 
 		gen_labor_drive_idea = {

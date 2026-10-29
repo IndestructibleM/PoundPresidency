@@ -79,7 +79,7 @@ war_measures = {
 		}
 
 		available = {
-			has_completed_focus = USA_ally_with_the_silver_shirts
+			always = no
 		}
 		visible = {
 			has_civil_war = yes
@@ -152,7 +152,7 @@ war_measures = {
 			}
 		}
 		visible = {
-			has_completed_focus = USA_recruit_the_free_corps
+			always = no
 			not = { has_country_flag = USA_free_corps_raised }
 			not = { has_government = democratic }
 		}
@@ -1216,7 +1216,7 @@ USA_foreign_support = {
 			has_war = no
 		}
 		visible = {
-			has_completed_focus = USA_invite_foreign_support
+			always = no
 			has_war = no
 		}
 		target_trigger = {
@@ -1245,7 +1245,7 @@ USA_foreign_support = {
 			has_war = no
 		}
 		visible = {
-			has_completed_focus = USA_invite_foreign_support
+			always = no
 			has_war = no
 
 		}
@@ -1275,7 +1275,7 @@ USA_foreign_support = {
 			has_war = no
 		}
 		visible = {
-			has_completed_focus = USA_invite_foreign_support
+			always = no
 			has_war = no
 		}
 		target_trigger = {
@@ -1305,7 +1305,7 @@ USA_foreign_support = {
 			has_war = no
 		}
 		visible = {
-			has_completed_focus = USA_invite_foreign_support
+			always = no
 			has_war = no
 		}
 		target_trigger = {
@@ -1337,7 +1337,7 @@ USA_foreign_support = {
 			has_war = no
 		}
 		visible = {
-			has_completed_focus = USA_invite_foreign_support
+			always = no
 			has_war = no
 		}
 		target_trigger = {
@@ -1549,7 +1549,7 @@ economy_decisions = {
 			}
 		}
 		visible = {
-			has_completed_focus = USA_communal_property_act
+			always = no
 		}
 		cost = 50
 		ai_will_do = {
@@ -1722,7 +1722,7 @@ foreign_politics = {
 				has_war = yes
 				is_in_faction_with = USA
 			}
-			has_completed_focus = USA_unholy_alliance
+			always = no
 		}
 		available = {
 			SOV = {

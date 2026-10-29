@@ -77,7 +77,7 @@ leader_traits = {
 	
 	all_american_marxist = {
 		random = no
-		socialist_drift = 0.03
+		communism_drift = 0.03
 		consumer_goods_expected_value = -0.05
 		war_stability_factor = 0.05
 	}
@@ -157,16 +157,14 @@ leader_traits = {
 
 	auth_sic_trait = {
 		random = no
-		neutrality_drift = 0.02
-		reactionary_drift = 0.02
+		neutrality_drift = 0.04
 		stability_factor = 0.05
 		political_power_factor = 0.05
 	}
 
 	com_sic_trait = {
 		random = no
-		communism_drift = 0.02
-		socialist_drift = 0.02
+		communism_drift = 0.04
 		stability_factor = 0.05
 		political_power_factor = 0.05
 	}

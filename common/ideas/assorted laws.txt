@@ -107,7 +107,7 @@ ideas = {
 			available = {
 				OR = {
 				has_government = fascism
-				has_government = reactionary
+				has_government = neutrality
 				has_country_leader_ideology = despotism
 				}
 			}
@@ -155,7 +155,7 @@ ideas = {
 			cancel_if_invalid = yes
 			available = {
 				OR = {
-					has_government = reactionary
+					has_government = neutrality
 					has_country_leader_ideology = despotism
 					has_country_leader_ideology = oligarchism
 					has_country_leader_ideology = moderatism
@@ -419,7 +419,7 @@ ideas = {
 			}
 			available = {
 				OR = {
-				has_government = socialist
+				has_government = communism
 				has_country_leader_ideology = socialism
 				has_country_leader_ideology = leninism
 				has_country_leader_ideology = marxism
@@ -906,7 +906,7 @@ ideas = {
 			}
 			available = {
 				NOT = {
-					has_government = socialist
+					has_government = communism
 					has_government = communism
 				}
 			}
@@ -926,7 +926,7 @@ ideas = {
 			}
 			available = {
 				NOT = {
-					has_government = socialist
+					has_government = communism
 					has_government = communism
 				}
 			}
@@ -992,7 +992,7 @@ ideas = {
 			}
 			available = {
 				NOT = {
-					has_government = socialist
+					has_government = communism
 					has_government = communism
 				}
 			}
@@ -1011,7 +1011,7 @@ ideas = {
 			}
 			available = {
 				NOT = {
-					has_government = socialist
+					has_government = communism
 					has_government = communism
 				}
 			}

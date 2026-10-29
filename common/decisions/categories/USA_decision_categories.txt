@@ -30,7 +30,7 @@ USA_foreign_support = {
 	}
 	visible = {
 		OR = {
-			has_completed_focus = USA_invite_foreign_support
+			always = no
 			tag = CSA
 		}
 	}
@@ -80,7 +80,7 @@ USA_honor_the_confederacy = {
 	}
 	visible = {
 		OR = {
-			has_completed_focus = USA_honor_the_confederacy
+			always = no
 			original_tag = CSA #for civil war in communist path. CSA shouldn't get focus tree
 		}
 	}
@@ -90,7 +90,7 @@ USA_decolonisation = {
 		original_tag = USA
 	}
 	visible = {
-		has_completed_focus = USA_pacific_decolonisation
+		always = no
 	}
 }
 USA_balance_of_power_category = {
@@ -140,7 +140,7 @@ USA_fight_for_western_civilization = {
 	priority = 80
 	
 	visible = {
-		has_completed_focus = USA_destroy_cultural_distortion
+		always = no
 	}
 }
 
@@ -151,7 +151,7 @@ USA_pap_ink_revolution_cat = {
 	priority = 90
 	
 	visible = {
-		has_completed_focus = USA_paper_and_ink_revolution
+		always = no
 		has_active_mission = USA_paper_and_ink_campaign
 	}
 }

@@ -100,7 +100,7 @@ characters = {
 		advisor = {
 			slot = second_command
 			idea_token = Generic_auth_sic_token
-			available = { OR = { has_government = neutrality has_government = reactionary } }
+			available = { has_government = neutrality }
 			traits = { auth_sic_trait }
 		}
 	}
@@ -115,7 +115,7 @@ characters = {
 		advisor = {
 			slot = second_command
 			idea_token = Generic_com_sic_token
-			available = { OR = { has_government = communism has_government = socialist } }
+			available = { has_government = communism }
 			traits = { com_sic_trait }
 		}
 	}
@@ -145,8 +145,8 @@ characters = {
 		advisor = {
 			slot = political_advisor
 			idea_token = USA_willis_carto_idea
-			available = { has_completed_focus = USA_rise_of_authority }
-			visible = { has_completed_focus = USA_rise_of_authority }
+			available = { always = no }
+			visible = { always = no }
 			traits = { ideological_crusader }
 		}
 	}
@@ -164,10 +164,7 @@ characters = {
 			can_be_fired = no
 			traits = { conservative_judge }
 			available = {
-				OR = {
-					has_government = democratic
-					has_government = conservative
-				}
+				has_government = democratic
 			}
 		}
 	}
@@ -203,8 +200,8 @@ characters = {
 		advisor = {
 			slot = political_advisor
 			idea_token = USA_willis_carto_idea
-			available = { has_completed_focus = USA_rise_of_authority }
-			visible = { has_completed_focus = USA_rise_of_authority }
+			available = { always = no }
+			visible = { always = no }
 			traits = { subservient_ultranationalist }
 		}
 	}
@@ -351,10 +348,10 @@ characters = {
 			slot = political_advisor
 			idea_token = USA_max_eastman_idea
 			visible = {
-				has_completed_focus = USA_natural_revolution
+				always = no
 			}
 			available = {
-				has_completed_focus = USA_natural_revolution
+				always = no
 			}
 			traits = { IRQ_poet_of_freedom }
 		}

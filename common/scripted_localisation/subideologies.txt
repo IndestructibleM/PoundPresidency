@@ -15,7 +15,7 @@ defined_text = {
 	}
 	text = {
 		trigger = {
-			has_government = reactionary
+			has_government = neutrality
 		}
 		localization_key = "[GetSubIdeologyAth]"
 	}
@@ -33,7 +33,7 @@ defined_text = {
 	}
 	text = {
 		trigger = {
-			has_government = socialist
+			has_government = communism
 		}
 		localization_key = "[GetSubIdeologyCom]"
 	}

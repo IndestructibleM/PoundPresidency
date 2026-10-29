@@ -77,8 +77,6 @@ focus_tree = {
 		continue_if_invalid = no
 		available_if_capitulated = no
 		search_filters = {FOCUS_FILTER_POLITICAL}
-		completion_reward = {
-		}
 	}
 
 	focus = {
@@ -102,7 +100,7 @@ focus_tree = {
 		search_filters = {FOCUS_FILTER_POLITICAL}
 		completion_reward = {
 			add_political_power = 50
-			add_popularity = { ideology = democratic popularity = 0.06 }
+			add_popularity = { ideology = democratic popularity = 0.075 }
 		}
 	}
 
@@ -129,9 +127,9 @@ focus_tree = {
 		available_if_capitulated = no
 		search_filters = {FOCUS_FILTER_POLITICAL}
 		completion_reward = {
-			add_popularity = { ideology = socialist popularity = 0.03 }
-			add_popularity = { ideology = democratic popularity = 0.06 }
-			add_political_power = party_popularity_100@socialist
+			add_popularity = { ideology = communism popularity = 0.02 }
+			add_popularity = { ideology = democratic popularity = 0.075 }
+			add_political_power = party_popularity_100@communism
 		}
 	}
 
@@ -158,9 +156,8 @@ focus_tree = {
 		available_if_capitulated = no
 		search_filters = {FOCUS_FILTER_POLITICAL}
 		completion_reward = {
-			add_popularity = { ideology = democratic popularity = 0.03 }
-			add_popularity = { ideology = conservative popularity = 0.06 }
-			add_political_power = party_popularity_100@conservative
+			add_popularity = { ideology = democratic popularity = 0.1 }
+			add_political_power = party_popularity_100@democratic
 		}
 	}
 
@@ -182,23 +179,13 @@ focus_tree = {
 			factor = 1
 		}
 
-		allow_branch = {
-			if = {
-				limit = {
-					has_game_rule = {
-						rule = obsolete_focus_branches_visibility
-						option = HIDE
-					}
-				}
-				NOT = {
-					has_completed_focus = USA_reestablish_the_gold_standard
-				}
-			}
-		}
-
 		available = {
 			has_government = democratic
 			date > 1936.11.8
+			has_country_leader = {
+				character = USA_franklin_delano_roosevelt
+				ruling_only = yes
+			}
 		}
 		
 		bypass = {
@@ -237,10 +224,7 @@ focus_tree = {
 			factor = 1
 		}
 		available = {
-			OR = {
-				has_government = communism
-				has_government = socialist
-			}
+			has_government = communism
 			date > 1936.11.8
 		}
 		
@@ -271,10 +255,7 @@ focus_tree = {
 			factor = 1
 		}
 		available = {
-			OR = {
-				has_government = communism
-				has_government = socialist
-			}
+			has_government = communism
 		}
 
 		cancel_if_invalid = yes
@@ -298,10 +279,7 @@ focus_tree = {
 			factor = 1
 		}
 		available = {
-			OR = {
-				has_government = communism
-				has_government = socialist
-			}
+			has_government = communism
 		}
 
 		cancel_if_invalid = yes
@@ -665,7 +643,7 @@ focus_tree = {
 		search_filters = {FOCUS_FILTER_POLITICAL}
 		completion_reward = {
 			start_civil_war = {
-				ideology = reactionary
+				ideology = neutrality
 				size = 0.25
 				capital = 365
 				states = {
@@ -944,7 +922,7 @@ focus_tree = {
 			factor = 1
 		}
 		available = {
-			has_government = socialist
+			has_government = communism
 		}
 		
 		bypass = {
@@ -1492,7 +1470,7 @@ focus_tree = {
 			factor = 1
 		}
 		available = {
-			has_government = reactionary
+			has_government = neutrality
 			date > 1936.11.8
 		}
 
@@ -1518,7 +1496,7 @@ focus_tree = {
 			factor = 1
 		}
 		available = {
-			has_government = reactionary
+			has_government = neutrality
 			date > 1936.11.8
 		}
 
@@ -1545,7 +1523,7 @@ focus_tree = {
 			factor = 1
 		}
 		available = {
-			has_government = reactionary
+			has_government = neutrality
 			date > 1936.11.8
 		}
 
@@ -1578,7 +1556,7 @@ focus_tree = {
 			focus = USA_national_christian_state
 		}
 		available = {
-			has_government = reactionary
+			has_government = neutrality
 			date > 1936.11.8
 		}
 
@@ -1611,7 +1589,7 @@ focus_tree = {
 			factor = 1
 		}
 		available = {
-			has_government = reactionary
+			has_government = neutrality
 			date > 1936.11.8
 		}
 
@@ -1639,7 +1617,7 @@ focus_tree = {
 			factor = 1
 		}
 		available = {
-			has_government = reactionary
+			has_government = neutrality
 			date > 1936.11.8
 		}
 
@@ -1666,7 +1644,7 @@ focus_tree = {
 			factor = 1
 		}
 		available = {
-			has_government = reactionary
+			has_government = neutrality
 			date > 1936.11.8
 		}
 
@@ -1693,7 +1671,7 @@ focus_tree = {
 			factor = 1
 		}
 		available = {
-			has_government = reactionary
+			has_government = neutrality
 			date > 1936.11.8
 		}
 
@@ -1728,7 +1706,7 @@ focus_tree = {
 			factor = 1
 		}
 		available = {
-			has_government = reactionary
+			has_government = neutrality
 			date > 1936.11.8
 		}
 
@@ -1755,7 +1733,7 @@ focus_tree = {
 			factor = 1
 		}
 		available = {
-			has_government = reactionary
+			has_government = neutrality
 			date > 1936.11.8
 		}
 
@@ -1782,7 +1760,7 @@ focus_tree = {
 			factor = 1
 		}
 		available = {
-			has_government = reactionary
+			has_government = neutrality
 			date > 1936.11.8
 		}
 
@@ -1809,7 +1787,7 @@ focus_tree = {
 			factor = 1
 		}
 		available = {
-			has_government = reactionary
+			has_government = neutrality
 			date > 1936.11.8
 		}
 
@@ -1835,7 +1813,7 @@ focus_tree = {
 			factor = 1
 		}
 		available = {
-			has_government = reactionary
+			has_government = neutrality
 			date > 1936.11.8
 		}
 
@@ -1862,7 +1840,7 @@ focus_tree = {
 			factor = 1
 		}
 		available = {
-			has_government = reactionary
+			has_government = neutrality
 			date > 1936.11.8
 		}
 
@@ -1889,7 +1867,7 @@ focus_tree = {
 			factor = 1
 		}
 		available = {
-			has_government = reactionary
+			has_government = neutrality
 			date > 1936.11.8
 		}
 
@@ -1916,7 +1894,7 @@ focus_tree = {
 			factor = 1
 		}
 		available = {
-			has_government = reactionary
+			has_government = neutrality
 			date > 1936.11.8
 		}
 
@@ -1943,7 +1921,7 @@ focus_tree = {
 			factor = 1
 		}
 		available = {
-			has_government = reactionary
+			has_government = neutrality
 			date > 1936.11.8
 		}
 
@@ -1970,7 +1948,7 @@ focus_tree = {
 			factor = 1
 		}
 		available = {
-			has_government = reactionary
+			has_government = neutrality
 			date > 1936.11.8
 		}
 
@@ -1998,7 +1976,7 @@ focus_tree = {
 			factor = 1
 		}
 		available = {
-			has_government = reactionary
+			has_government = neutrality
 			date > 1936.11.8
 		}
 
@@ -2025,7 +2003,7 @@ focus_tree = {
 			factor = 1
 		}
 		available = {
-			has_government = reactionary
+			has_government = neutrality
 			date > 1936.11.8
 		}
 
@@ -2052,7 +2030,7 @@ focus_tree = {
 			factor = 1
 		}
 		available = {
-			has_government = reactionary
+			has_government = neutrality
 			date > 1936.11.8
 		}
 
@@ -2079,7 +2057,7 @@ focus_tree = {
 			factor = 1
 		}
 		available = {
-			has_government = reactionary
+			has_government = neutrality
 			date > 1936.11.8
 		}
 
@@ -2106,7 +2084,7 @@ focus_tree = {
 			factor = 1
 		}
 		available = {
-			has_government = reactionary
+			has_government = neutrality
 			date > 1936.11.8
 		}
 
@@ -2133,7 +2111,7 @@ focus_tree = {
 			factor = 1
 		}
 		available = {
-			has_government = reactionary
+			has_government = neutrality
 			date > 1936.11.8
 		}
 
@@ -2160,7 +2138,7 @@ focus_tree = {
 			factor = 1
 		}
 		available = {
-			has_government = reactionary
+			has_government = neutrality
 			date > 1936.11.8
 		}
 
@@ -2187,7 +2165,7 @@ focus_tree = {
 			factor = 1
 		}
 		available = {
-			has_government = reactionary
+			has_government = neutrality
 			date > 1936.11.8
 		}
 
@@ -2214,7 +2192,7 @@ focus_tree = {
 			factor = 1
 		}
 		available = {
-			has_government = reactionary
+			has_government = neutrality
 			date > 1936.11.8
 		}
 
@@ -2241,7 +2219,7 @@ focus_tree = {
 			factor = 1
 		}
 		available = {
-			has_government = reactionary
+			has_government = neutrality
 			date > 1936.11.8
 		}
 
@@ -2268,7 +2246,7 @@ focus_tree = {
 			factor = 1
 		}
 		available = {
-			has_government = reactionary
+			has_government = neutrality
 			date > 1936.11.8
 		}
 
@@ -2295,7 +2273,7 @@ focus_tree = {
 			factor = 1
 		}
 		available = {
-			has_government = reactionary
+			has_government = neutrality
 			date > 1936.11.8
 		}
 
@@ -2322,7 +2300,7 @@ focus_tree = {
 			factor = 1
 		}
 		available = {
-			has_government = reactionary
+			has_government = neutrality
 			date > 1936.11.8
 		}
 
@@ -2498,21 +2476,6 @@ focus_tree = {
 		available_if_capitulated = no
 		search_filters = {FOCUS_FILTER_POLITICAL}
 		completion_reward = {
-			add_ideas = USA_farm_security_administration_idea
-			392 = {
-				add_building_construction = {
-					type = farm
-					level = 1
-					instant_build = yes
-				}
-			}
-			396 = {
-				add_building_construction = {
-					type = farm
-					level = 1
-					instant_build = yes
-				}
-			}
 		}
 	}
 	
@@ -2746,7 +2709,7 @@ focus_tree = {
 			factor = 1
 		}
 		available = {
-
+			
 		}
 		
 
@@ -2773,6 +2736,10 @@ focus_tree = {
 		}
 		available = {
 			has_government = democratic
+			has_country_leader = {
+				character = USA_franklin_delano_roosevelt
+				ruling_only = yes
+			}
 			date > 1940.11.8
 		}
 		
@@ -2876,6 +2843,10 @@ focus_tree = {
 		}
 		available = {
 			has_government = democratic
+			has_country_leader = {
+				character = USA_franklin_delano_roosevelt
+				ruling_only = yes
+			}
 			date > 1944.11.8
 		}
 		
@@ -7099,7 +7070,6 @@ focus_tree = {
 			factor = 1
 		}
 		mutually_exclusive = { 
-			focus = USA_sign_pact_of_rome
 			focus = USA_vanguard_of_new_utopia
 		}
 		available = {
@@ -7141,7 +7111,6 @@ focus_tree = {
 		}
 		mutually_exclusive = { 
 			focus = USA_berlin_overtures
-			focus = USA_sign_pact_of_rome
 		}
 		available = {
 			has_government = fascism
@@ -7621,7 +7590,11 @@ focus_tree = {
 			focus = USA_continue_the_new_deal
 		}
 		available = {
-			has_government = conservative
+			has_government = democratic
+			has_country_leader = {
+				name = "Alf Landon"
+				ruling_only = yes
+			}
 			date > 1936.11.8
 		}
 		x = 14
@@ -7985,8 +7958,12 @@ focus_tree = {
 		x = 0
 		y = 1
 		available = {
-			has_government = conservative
+			has_government = democratic
 			date > 1940.11.8
+			has_country_leader = {
+				name = "Wendell Wilkie"
+				ruling_only = yes
+			}
 		}
 		relative_position_id = USA_american_prosperity_returns
 		cost = 5

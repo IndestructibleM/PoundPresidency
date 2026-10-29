@@ -138,10 +138,7 @@ country_event = {
 	trigger = {
 		tag = JAP
 		USA = {
-			focus_progress = {
-				focus = USA_pearl_harbor_gambit
-				progress > 0.1
-			}
+			always = no
 		}
 	}
 
@@ -150,10 +147,7 @@ country_event = {
 		modifier = {
 			factor = 0.5
 			USA = {
-				focus_progress = {
-					focus = USA_pearl_harbor_gambit
-					progress > 0.6
-				}
+				always = no
 			}
 		}
 	}
@@ -296,19 +290,10 @@ country_event = {
 	immediate = {
 		hidden_effect = {
 		remove_ideas = USA_rise_of_pound
-		set_temp_variable = {
-			 var = PopFrontSupport
-			 value = party_popularity@socialist
-		}
-		add_to_temp_variable = {
-			var = PopFrontSupport
-			value = party_popularity@communism
-		}
 			if = {
 				limit = {
 					OR = {
-						has_completed_focus = USA_voter_registration_act
-						has_completed_focus = USA_union_representation_act
+						always = no
 					}
 				}
 				country_event = { id = usa.32 days = 730 } # midterms
@@ -342,8 +327,8 @@ country_event = {
 		if = {
 			limit = {
 				OR = {
-					has_completed_focus = USA_voter_registration_act
-					has_completed_focus = USA_union_representation_act
+					always = no
+					always = no
 				}
 			}
 			country_event = usa.32
@@ -360,7 +345,7 @@ country_event = {
 
 	option = {
 		trigger = {
-			always = no
+			democratic > 0.40
 		}
 		name = usa.6.b
 		ai_chance = {
@@ -374,9 +359,6 @@ country_event = {
 				}
 			}
 		}		
-		set_politics = {
-			ruling_party = democratic 
-		}
 		set_variable = { election_factor = random }
 		add_to_variable = { election_factor = -0.6 }
 		USA_election_senate = yes
@@ -443,9 +425,7 @@ country_event = {
 	}
 	option = {
 		trigger = {
-			check_variable = {
-				PopFrontSupport > 0.25
-			}
+			communism > 0.25
 		}
 		name = "The Popular Front Wins the Vote!"
 		ai_chance = {
@@ -460,7 +440,7 @@ country_event = {
 			}
 		}		
 		set_politics = {
-			ruling_party = socialist
+			ruling_party = communism
 			elections_allowed = no
 			last_election = "1936.11.5"
 			election_frequency = 48
@@ -469,12 +449,8 @@ country_event = {
 			set_cosmetic_tag = USA_democratic
 		}
 		add_popularity = {
-			ideology = socialist
-			popularity = 0.1	
-		}
-		add_popularity = {
 			ideology = communism
-			popularity = 0.05	
+			popularity = 0.1	
 		}
 		promote_character = USA_earl_browder
 	}
@@ -502,8 +478,8 @@ country_event = {
 			if = {
 				limit = {
 					OR = {
-						has_completed_focus = USA_voter_registration_act
-						has_completed_focus = USA_union_representation_act
+						always = no
+						always = no
 					}
 				}
 				country_event = { id = usa.32 days = 730 } # midterms
@@ -522,8 +498,8 @@ country_event = {
 		if = {
 			limit = {
 				OR = {
-					has_completed_focus = USA_voter_registration_act
-					has_completed_focus = USA_union_representation_act
+					always = no
+					always = no
 				}
 			}
 			country_event = usa.32
@@ -593,8 +569,8 @@ country_event = {
 			if = {
 				limit = {
 					OR = {
-						has_completed_focus = USA_voter_registration_act
-						has_completed_focus = USA_union_representation_act
+						always = no
+						always = no
 					}
 				}
 				country_event = { id = usa.32 days = 730 } # midterms
@@ -611,8 +587,8 @@ country_event = {
 		if = {
 			limit = {
 				OR = {
-					has_completed_focus = USA_voter_registration_act
-					has_completed_focus = USA_union_representation_act
+					always = no
+					always = no
 				}
 			}
 			country_event = usa.32
@@ -656,8 +632,8 @@ country_event = {
 			if = {
 				limit = {
 					OR = {
-						has_completed_focus = USA_voter_registration_act
-						has_completed_focus = USA_union_representation_act
+						always = no
+						always = no
 					}
 				}
 				country_event = { id = usa.32 days = 730 } # midterms
@@ -685,8 +661,8 @@ country_event = {
 		if = {
 			limit = {
 				OR = {
-					has_completed_focus = USA_voter_registration_act
-					has_completed_focus = USA_union_representation_act
+					always = no
+					always = no
 				}
 			}
 			country_event = usa.32
@@ -746,8 +722,8 @@ country_event = {
 			if = {
 				limit = {
 					OR = {
-						has_completed_focus = USA_voter_registration_act
-						has_completed_focus = USA_union_representation_act
+						always = no
+						always = no
 					}
 				}
 				country_event = { id = usa.32 days = 730 } # midterms
@@ -771,8 +747,8 @@ country_event = {
 		if = {
 			limit = {
 				OR = {
-					has_completed_focus = USA_voter_registration_act
-					has_completed_focus = USA_union_representation_act
+					always = no
+					always = no
 				}
 			}
 			country_event = usa.32
@@ -820,8 +796,8 @@ country_event = {
 			if = {
 				limit = {
 					OR = {
-						has_completed_focus = USA_voter_registration_act
-						has_completed_focus = USA_union_representation_act
+						always = no
+						always = no
 					}
 				}
 				country_event = { id = usa.32 days = 730 } # midterms
@@ -852,8 +828,8 @@ country_event = {
 		if = {
 			limit = {
 				OR = {
-					has_completed_focus = USA_voter_registration_act
-					has_completed_focus = USA_union_representation_act
+					always = no
+					always = no
 				}
 			}
 			country_event = usa.32
@@ -1364,8 +1340,8 @@ country_event = {
 	is_triggered_only = yes
 	trigger = {
 		OR = {
-			has_completed_focus = USA_voter_registration_act
-			has_completed_focus = USA_union_representation_act
+			always = no
+			always = no
 			has_completed_focus = USA_total_action_state
 		}
 	}
@@ -1391,8 +1367,8 @@ country_event = {
 			limit = {
 				NOT = {
 					OR = {
-						has_completed_focus = USA_voter_registration_act
-						has_completed_focus = USA_union_representation_act
+						always = no
+						always = no
 						has_completed_focus = USA_total_action_state
 					}
 				}
@@ -1437,8 +1413,8 @@ country_event = {
 		tag = USA
 		NOT = {
 			OR = {
-				has_completed_focus = USA_voter_registration_act
-				has_completed_focus = USA_union_representation_act
+				always = no
+				always = no
 				has_completed_focus = USA_total_action_state
 			}
 		}
@@ -1465,8 +1441,8 @@ country_event = {
 		tag = USA
 		NOT = {
 			OR = {
-				has_completed_focus = USA_voter_registration_act
-				has_completed_focus = USA_union_representation_act
+				always = no
+				always = no
 				has_completed_focus = USA_total_action_state
 			}
 		}
@@ -1495,8 +1471,8 @@ country_event = {
 		tag = USA
 		NOT = {
 			OR = {
-				has_completed_focus = USA_voter_registration_act
-				has_completed_focus = USA_union_representation_act
+				always = no
+				always = no
 				has_completed_focus = USA_total_action_state
 			}
 		}
@@ -1523,8 +1499,8 @@ country_event = {
 		tag = USA
 		NOT = {
 			OR = {
-				has_completed_focus = USA_voter_registration_act
-				has_completed_focus = USA_union_representation_act
+				always = no
+				always = no
 				has_completed_focus = USA_total_action_state
 			}
 		}
@@ -1552,8 +1528,8 @@ country_event = {
 		tag = USA
 		NOT = {
 			OR = {
-				has_completed_focus = USA_voter_registration_act
-				has_completed_focus = USA_union_representation_act
+				always = no
+				always = no
 				has_completed_focus = USA_total_action_state
 			}
 		}
@@ -1580,8 +1556,8 @@ country_event = {
 		tag = USA
 		NOT = {
 			OR = {
-				has_completed_focus = USA_voter_registration_act
-				has_completed_focus = USA_union_representation_act
+				always = no
+				always = no
 				has_completed_focus = USA_total_action_state
 			}
 		}
@@ -1609,8 +1585,8 @@ country_event = {
 		tag = USA
 		NOT = {
 			OR = {
-				has_completed_focus = USA_voter_registration_act
-				has_completed_focus = USA_union_representation_act
+				always = no
+				always = no
 				has_completed_focus = USA_total_action_state
 			}
 		}
@@ -1637,8 +1613,8 @@ country_event = {
 		tag = USA
 		NOT = {
 			OR = {
-				has_completed_focus = USA_voter_registration_act
-				has_completed_focus = USA_union_representation_act
+				always = no
+				always = no
 				has_completed_focus = USA_total_action_state
 			}
 		}
@@ -1663,8 +1639,8 @@ country_event = {
 		tag = USA
 		NOT = {
 			OR = {
-				has_completed_focus = USA_voter_registration_act
-				has_completed_focus = USA_union_representation_act
+				always = no
+				always = no
 				has_completed_focus = USA_total_action_state
 			}
 		}
@@ -1748,8 +1724,8 @@ country_event = {
 		tag = USA
 		NOT = {
 			OR = {
-				has_completed_focus = USA_voter_registration_act
-				has_completed_focus = USA_union_representation_act
+				always = no
+				always = no
 				has_completed_focus = USA_total_action_state
 			}
 		}

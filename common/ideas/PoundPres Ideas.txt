@@ -8,9 +8,8 @@ ideas = {
 			modifier = {
 				stability_factor = -0.25
 				fascism_drift = 0.04
-				socialist_drift = 0.04
-				reactionary_drift = 0.03
-				communism_drift = 0.03
+				communism_drift = 0.04
+				neutrality_drift = 0.03
 			}
 			on_remove = {
 				add_stability = -0.25
