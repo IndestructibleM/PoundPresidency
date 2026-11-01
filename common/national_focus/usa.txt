@@ -306,6 +306,7 @@ focus_tree = {
 		}
 		available = {
 			has_government = communism
+			always = no
 		}
 		
 		bypass = {
@@ -317,6 +318,7 @@ focus_tree = {
 		available_if_capitulated = no
 		search_filters = {FOCUS_FILTER_POLITICAL}
 		completion_reward = {
+			custom_effect_tooltip = "This isn't available in the developer's"
 		}
 	}
 
@@ -1472,6 +1474,10 @@ focus_tree = {
 		available = {
 			has_government = neutrality
 			date > 1936.11.8
+			has_country_leader = {
+				character = USA_william_dudley_pelley
+				ruling_only = yes
+			}
 		}
 
 		cancel_if_invalid = yes
@@ -2561,14 +2567,14 @@ focus_tree = {
 					instant_build = yes
 				}
 			}
-			1561 = {
+			387 = {
 				add_building_construction = {
 					type = energy_infrastructure
 					level = 1
 					instant_build = yes
 				}
 			}
-			1167 = {
+			386 = {
 				add_building_construction = {
 					type = energy_infrastructure
 					level = 1
@@ -4096,7 +4102,7 @@ focus_tree = {
  	focus = {
 		id = USA_war_plans_division
 		icon = GFX_goal_generic_position_armies
-		x = 58
+		x = 52
 		y = 0
 		
 		cost = 8

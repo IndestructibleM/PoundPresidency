@@ -43,11 +43,6 @@ country_event = {
 			long_name = PopularFront
 			name = PopularFront
 		}
-		set_party_name = {
-			ideology = communism
-			long_name = PopularFront
-			name = PopularFront
-		}
 		add_political_power = -25
 		custom_effect_tooltip = generic_skip_one_line_tt
 		custom_effect_tooltip = "Remember, you are a worker, too."
@@ -109,7 +104,7 @@ country_event = {
 
 country_event = {
 	id = vr_usa.5
-	title = vr_usa.3.t
+	title = vr_usa.5.t
 	desc = desc.temp.d
 
 	fire_only_once = yes
@@ -171,7 +166,7 @@ country_event = {
 
 	option = { 
 		name = vr_usa.7.a
-		add_popularity = { ideology = democratic popularity = 0.03 }
+		add_popularity = { ideology = democratic popularity = 0.04 }
 		add_popularity = { ideology = neutrality popularity = 0.06 }
 	}
 
@@ -190,7 +185,7 @@ country_event = {
 	fire_only_once = yes
 	
 	trigger = {
-		has_idea = great_depression4
+		has_idea = great_depression_4
 		any_enemy_country = {
 			is_major = yes
 		}
@@ -199,7 +194,7 @@ country_event = {
 
 	option = { 
 		name = vr_usa.30.a
-		remove_ideas = great_depression4
+		remove_ideas = great_depression_4
 	}
 
 }
