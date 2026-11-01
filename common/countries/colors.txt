@@ -433,370 +433,78 @@ D15 = {
 
 #USA State Mod
 
-ALA = {
-	color = rgb { 0 38 186 }
-	color_ui = { 0 38 186 }
-}
-
-AKA = {
-	color = rgb { 0 59 111 }
-	color_ui = rgb { 0 59 111 }
-}
-
-AZA = {
-	color = rgb { 255 216 0 }
-	color_ui = rgb { 255 216 0 }
-}
-
-ARA = {
-	color = rgb { 30 150 34 }
-	color_ui = rgb { 30 150 34 }
-}
-
-CAC = {
-	color = rgb { 255 0 0 }
-	color_ui = rgb { 255 0 0 }
-}
-
-COC = {
-	color = rgb { 255 106 0 }
-	color_ui = rgb { 255 106 0 }
-}
-
-CTC = {
-	color = rgb { 183 183 183 }
-	color_ui = rgb { 183 183 183 }
-}
-
-DED = {
-	color = rgb { 30 150 34 }
-	color_ui = rgb { 30 150 34 }
-}
-
-FLF = {
-	color = rgb { 255 221 0 }
-	color_ui = rgb { 255 221 0 }
-}
-
-GAG = {
-	color = rgb { 178 0 255 }
-	color_ui = rgb { 178 0 255 }
-}
-
-HIH = {
-	color = rgb { 128 23 238 }
-	color_ui = rgb { 128 23 238 }
-}
-
-IDI = {
-	color = rgb { 255 216 0 }
-	color_ui = rgb { 255 216 0 }
-}
-
-ILI = {
-	color = rgb { 0 38 186 }
-	color_ui = rgb { 0 38 186 }
-}
-
-INI = {
-	color = rgb { 178 0 255 }
-	color_ui = rgb { 178 0 255 }
-}
-
-IAI = {
-	color = rgb { 255 101 0 }
-	color_ui = rgb { 255 1011 0 }
-}
-
-KSK = {
-	color = rgb { 255 216 0 }
-	color_ui = rgb { 255 216 0 }
-}
-
-KYK = {
-	color = rgb { 30 150 34 }
-	color_ui = rgb { 30 150 34 }
-}
-
-LAL = {
-	color = rgb { 255 221 0 }
-	color_ui = rgb { 255 221 0 }
-}
-
-MEM = {
-	color = rgb { 255 221 0 }
-	color_ui = rgb { 255 221 0 }
-}
-
-MDM = {
-	color = rgb { 178 0 255 }
-	color_ui = rgb { 178 0 255 }
-}
-
-MAM = {
-	color = rgb { 255 0 0 }
-	color_ui = rgb { 255 0 0 }
-}
-
-MIM = {
-	color = rgb { 0 148 255 }
-	color_ui = rgb { 0 148 255 }
-}
-
-MNM = {
-	color = rgb { 183 183 183 }
-	color_ui = rgb { 183 183 183 }
-}
-
-MSM = {
-	color = rgb { 255 101 0 }
-	color_ui = rgb { 255 101 0 }
-}
-
-MOM = {
-	color = rgb { 0 148 255 }
-	color_ui = rgb { 0 148 255 }
-}
-
-MTM = {
-	color = rgb { 0 38 186 }
-	color_ui = rgb { 0 38 186 }
-}
-
-NBR = {
-	color = rgb { 178 0 255 }
-	color_ui = rgb { 178 0 255 }
-}
-
-NVN = {
-	color = rgb { 183 183 183 }
-	color_ui = rgb { 183 183 183 }
-}
-
-NHN = {
-	color = rgb { 0 148 255 }
-	color_ui = rgb { 0 148 255 }
-}
-
-NJN = {
-	color = rgb { 0 148 255 }
-	color_ui = rgb { 0 148 255 }
-}
-
-NMN = {
-	color = rgb { 178 0 255 }
-	color_ui = rgb { 178 0 255 }
-}
-
-NYN = {
-	color = rgb { 0 38 186 }
-	color_ui = rgb { 0 38 186 }
-}
-
-NCN = {
-	color = rgb { 255 0 0 }
-	color_ui = rgb { 255 0 0 }
-}
-
-NDN = {
-	color = rgb { 0 148 255 }
-	color_ui = rgb { 0 148 255 }
-}
-
-OHO = {
-	color = rgb { 255 0 0 }
-	color_ui = rgb { 255 0 0 }
-}
-
-OKO = {
-	color = rgb { 255 0 0 }
-	color_ui = rgb { 255 0 0 }
-}
-
-ORE = {
-	color = rgb { 255 101 0 }
-	color_ui = rgb { 255 101 0 }
-}
-
-PNS = {
-	color = rgb { 183 183 183 }
-	color_ui = rgb { 183 183 183 }
-}
-
-RIR = {
-	color = rgb { 255 106 0 }
-	color_ui = rgb { 255 106 0 }
-}
-
-SCS = {
-	color = rgb { 0 148 255 }
-	color_ui = rgb { 0 148 255 }
-}
-
-SDS = {
-	color = rgb { 255 0 0 }
-	color_ui = rgb { 255 0 0 }
-}
-
-TNT = {
-	color = rgb { 183 183 183 }
-	color_ui = rgb { 183 183 183 }
-}
-
-TXT = {
-	color = rgb { 0 38 159 }
-	color_ui = rgb { 0 38 159 }
-}
-
-UTU = {
-	color = rgb { 0 148 255 }
-	color_ui = rgb { 0 148 255 }
-}
-
-VTV = {
-	color = rgb { 30 150 34 }
-	color_ui = { 30 150 34 }
-}
-
-VAV = { 
-	color = rgb { 255 221 0 }
-	color_ui = rgb { 255 221 0 }
-}
-
-WAW = {
-	color = rgb { 30 150 34 }
-	color_ui = rgb { 30 150 34 }
-}
-
-WVW = {
-	color = rgb { 255 101 0 }
-	color_ui = rgb { 255 101 0 }
-}
-
-WIW = {
-	color = rgb { 30 150 34 }
-	color_ui = rgb { 30 150 34 }
-}
-
-WYW = {
-	color = rgb { 30 150 34 }
-	color_ui = rgb { 30 150 34 }
-}
-
-PRP = {
-	color = rgb { 255 0 0 }
-	color_ui = rgb { 255 0 0 }
-}
-
-UVU = {
-	color = rgb { 183 183 183 }
-	color_ui = rgb { 183 183 183 }
-}
-
-LIL = {
-	color = rgb { 0 148 255 }
-	color_ui = rgb { 0 148 255 }
-}
-
-PIP = {
-	color = rgb { 255 0 0 }
-	color_ui = rgb { 255 0 0 }
-}
-
-ASA = {
-	color = rgb { 0 38 159 }
-	color_ui = rgb { 0 38 159 }
-}
-
-JAJ = {
-	color = rgb { 255 216 0 }
-	color_ui = rgb { 255 216 0 }
-}
-
-MWM = {
-	color = rgb { 0 148 255 }
-	color_ui = rgb { 0 148 255 }
-}
-
-GUG = {
-	color = rgb { 30 150 34 }
-	color_ui = rgb { 30 150 34 }
-}
-
-WKW = {
-	color = rgb { 0 38 159 }
-	color_ui = rgb { 0 38 159 }
-}
-
-PCP = {
-	color = rgb { 67 123 237 }
-	color_ui = rgb { 87 160 255 }
-}
-
-BCB = {
-	color = rgb { 0 38 159 }
-	color_ui = rgb { 87 160 255 }
-}
-
-ABA = {
-	color = rgb { 0	59 111 }
-	color_ui = rgb { 87 160 255 }
-}
-
-MBM = {
-	color = rgb { 30 150 34 }
-	color_ui = rgb { 87 160 255 }
-}
-
-NBN = {
-	color = rgb { 30 150 34 }
-	color_ui = rgb { 87 160 255 }
-}
-
-NLN = {
-	color = rgb { 183 183 183 }
-	color_ui = rgb { 87 160 255 }
-}
-
-NSN = {
-	color = rgb { 255 101 0 }
-	color_ui = rgb { 87 160 255 }
-}
-
-NTN = {
-	color = rgb { 255 0 0 }
-	color_ui = rgb { 87 160 255 }
-}
-
-NUN = {
-	color = rgb { 183 183 183 }
-	color_ui = rgb { 87 160 255 }
-}
-
-PEP = {
-	color = rgb { 0 148 255 }
-	color_ui = rgb { 87 160 255 }
-}
-
-QCQ = {
-	color = rgb { 0 59 111 }
-	color_ui = rgb { 87 160 255 }
-}
-
-SKS = {
-	color = rgb { 255 101 0 }
-	color_ui = rgb { 87 160 255 }
-}
-
-YTY = {
-	color = rgb { 0 148 255 }
-	color_ui = rgb { 87 160 255 }
-} 
-
-ONO = {
-	color = rgb { 255 221 0 }
-	color_ui = rgb { 87 160 255 }
-}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 MAN = {
 	color = rgb { 255 120 71 }

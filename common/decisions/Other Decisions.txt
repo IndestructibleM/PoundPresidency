@@ -1,4 +1,4 @@
-﻿political_actions = {
+political_actions = {
 	USA_address_great_depression = {
 		name = "Address the Great Depression"
 		fire_only_once = yes
@@ -35,7 +35,6 @@
 				release = ORS
 				release = VAS
 				release = NSC
-				release = SCS
 				release = FLS
 				release = LSS
 				release = KSS

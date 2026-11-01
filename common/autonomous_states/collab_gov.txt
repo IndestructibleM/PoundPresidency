@@ -39,6 +39,7 @@ autonomy_state = {
 	allowed = {
 		overlord = {
 			has_government = fascism
+			tag = USA
 		}
 	}
 }

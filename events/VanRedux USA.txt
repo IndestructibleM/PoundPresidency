@@ -187,7 +187,7 @@ country_event = {
 	id = vr_usa.30
 	title = vr_usa.30.t
 	desc = desc.temp.d
-	is_triggered_only = yes
+	fire_only_once = yes
 	
 	trigger = {
 		has_idea = great_depression4
